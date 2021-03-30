@@ -29,6 +29,8 @@ function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 // Desafio 6
+
+let vetor = [9, 1, 2, 3, 9, 5, 7];
 function highestCount(array) {
 
   function highestNumber(array){
@@ -49,6 +51,8 @@ function highestCount(array) {
     }
     return count;
   }
+
+  console.log(highestCount(vetor))
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
