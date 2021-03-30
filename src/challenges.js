@@ -14,14 +14,14 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // duvidas
+function splitSentence(string) {
+  return string.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
-  let firstIndex = array [ 0 ];
-  let lastIndex = array [ array.length - 1];
+  let firstIndex = array [0];
+  let lastIndex = array [array.length - 1];
   return (lastIndex + ', ' + firstIndex);
 }
 
@@ -32,13 +32,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let checkHighestNumber = Math.max(array);
+  for(let index = 0; index < array.length; index =+1) {
+    let checkRepetition = index;
+    if (array[index] === index) {
+      index +=1;
+      return checkRepetition
+    }    
+  }   
 }
-
+ 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  
 }
 
 // Desafio 8
