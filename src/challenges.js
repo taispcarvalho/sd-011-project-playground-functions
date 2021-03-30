@@ -27,18 +27,18 @@ console.log(splitSentence('go Trybe'));
 // Desafio 4
 function concatName(strArr) {
   let strGenerated = '';
-  for (let index = 0; index < strArr.length; index += 1){
-    if (index === 0){
+  for (let index = strArr.length - 1; index >= 0; index -= 1){
+    if (index === strArr.length - 1){
       strGenerated = strGenerated + strArr[index];
       strGenerated = strGenerated + ', ';
-    } else if ( index === strArr.length - 1) {
+    } else if (index === 0) {
       strGenerated = strGenerated + strArr[index];
+      break;
     }
   } return strGenerated;
-  
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -51,9 +51,28 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(14, 8));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestNumberFinder (arrNumbers){
+  let highestNumber = 0;
+  for (let index = 0; index < arrNumbers.length; index += 1){    
+      if (arrNumbers[index] > arrNumbers[index + 1]){
+        highestNumber = arrNumbers[index]
+      }        
+  } return highestNumber;
 }
+console.log(highestNumberFinder([9, 1, 2, 3, 9, 5, 7]));
+
+function highestCount(arrNumbers2) {
+  let highestNumber = highestNumberFinder(arrNumbers2);
+  let count = 0;
+  for (let index = 0; index < arrNumbers2.length; index += 1){
+    if (arrNumbers2[index] === highestNumber){
+      count += 1;
+    }
+  }
+  return count;  
+}
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
