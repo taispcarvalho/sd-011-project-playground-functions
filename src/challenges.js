@@ -56,7 +56,7 @@ function highestCount(arrayD6) {
 // console.log(highestCount(testArrayD6))
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = mouse - cat1;
   let distCat2 = mouse - cat2;
   switch (true) {
@@ -70,7 +70,7 @@ function catAndMouse(cat1, cat2, mouse) {
     break;
   }
 }
-console.log(catAndMouse(1, 2, 3));
+console.log(catAndMouse(3, 2, 2));
 
 // Desafio 8
 function fizzBuzz() {
