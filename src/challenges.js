@@ -1,11 +1,12 @@
 // Desafio 1
 function compareTrue(pinky, cerebro) {
-  if (pinky === true && cerebro === true) {
+  if (pinky && cerebro) {
     return true;
   } else {
     return false;
   }
 }
+
 
 // Desafio 2
 function calcArea(base, height) {
@@ -71,7 +72,7 @@ function fizzBuzz(numbers) {
     }
     
 }
- console.log(fizzBuzz([2, 15, 7, 9, 45]));
+ 
 // Desafio 9
 function encode() {
   
