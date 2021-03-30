@@ -37,7 +37,7 @@ function highestCount(array) {
   }
   for (let index2 = 0; index2 < array.length; index2 += 1) {
     if (array[index2] === maiorindice) {
-      contador = contador + 1;
+      contador += 1;
     }
   }
   return contador;
@@ -49,11 +49,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat2 = Math.abs(cat2 - mouse);
   if (distanciaCat1 > distanciaCat2) {
     return 'cat2';
-  } else if (distanciaCat1 < distanciaCat2) {
+  } if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -74,12 +73,44 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu codigo aqui 
-}
+function encode(string) {
+  let encoded = [];
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 'a') {
+      encoded += '1';
+    } else if (string[index] === 'e') {
+      encoded += '2';
+    } else if (string[index] === 'i') {
+      encoded += '3';
+    } else if (string[index] === 'o') {
+      encoded += '4';
+    } else if (string[index] === 'u') {
+      encoded += '5';
+    } else {
+      encoded += string[index];
+    }
+  }
+  return encoded;
+} 
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let decoded = [];
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === '1') {
+      decoded += 'a';
+    } else if (string[index] === '2') {
+      decoded += 'e';
+    } else if (string[index] === '3') {
+      decoded += 'i';
+    } else if (string[index] === '4') {
+      decoded += 'o';
+    } else if (string[index] === '5') {
+      decoded += 'u';
+    } else {
+      decoded += string[index];
+    }
+  }
+  return decoded;
 }
 
 module.exports = {
