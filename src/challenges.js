@@ -24,7 +24,7 @@ function splitSentence(sentence, separator) {
   return arrayOfStrings;
 }
 
-let string= "Desafio 3";
+let string= "go Trybe";
 let space = " ";
 console.log(splitSentence(string, space))
 
@@ -34,7 +34,7 @@ function concatName(param) {
   return newArray;
 }
 
-let names = ["Walter", "Lucas", "Matheus", "Cadu"];
+let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 console.log(concatName(names));
 
 // Desafio 5
