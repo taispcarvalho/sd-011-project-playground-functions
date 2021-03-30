@@ -11,10 +11,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 //  O método split() divide uma String em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array. A divisão é feita procurando um padrão, onde o padrão é fornecido como o primeiro parâmetro na chamada do método, o padrao na função foi (' '), significa que a cada espaço ' ' ele vai dividir uma string.
+//  link utilizado: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 function splitSentence(arr) {
   return arr.split(' ');
 }
 
+//  Link sobre templates string que foram utilizados neste exercicio: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals
 // Desafio 4
 function concatName(arr) {
   return `${arr[arr.length - 1]}, ${arr[0]}`;
@@ -27,6 +29,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 //  Math.max retorna o maior numero, e os 3 dots significa que pode vir mais de um argumento, ou seja um array.
+//  link sobre Math.max(): https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 function highestCount(arr) {
   let highestNumberInArray = Math.max(...arr);
   let timesRepeat = 0;
@@ -67,6 +70,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+// link sobre o metodo replace utilizado neste exercicio: https://www.w3schools.com/jsref/jsref_replace.asp
 function encode(str) {
   let replaced = str.replace(/a/g, 1);
   replaced = replaced.replace(/e/g, 2);

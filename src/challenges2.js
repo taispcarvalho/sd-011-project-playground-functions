@@ -1,4 +1,5 @@
 // Desafio 10
+//  .sort() ordena os elementos, link sobre o metodo sort utilizado para este exercicio: https://www.w3schools.com/jsref/jsref_sort.asp
 function techList(arr, name) {
   let arrayOrdenada = arr.sort();
   let obj = [];
