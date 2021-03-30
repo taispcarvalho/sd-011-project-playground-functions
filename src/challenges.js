@@ -87,21 +87,21 @@ function encode(string) {
   let array = string.split('');
   for(let index = 0; index < array.length; index += 1){
     switch (array[index]) {
-      case 'a':
-        array[index] = '1';
-        break;
-      case 'e':
-        array[index] = '2';
-        break;
-      case 'i':
-        array[index] = '3';
-        break;
-      case 'o':
-        array[index] = '4';
-        break;
-      case 'u':
-        array[index] = '5';
-        break;
+    case 'a':
+      array[index] = '1';
+      break;
+    case 'e':
+      array[index] = '2';
+      break;
+    case 'i':
+      array[index] = '3';
+      break;
+    case 'o':
+      array[index] = '4';
+      break;
+    case 'u':
+      array[index] = '5';
+      break;
     }
   }
   return array.join('');
@@ -111,21 +111,21 @@ function decode(string) {
   let array = string.split('');
   for(let index = 0; index < array.length; index += 1){
     switch (array[index]) {
-      case '1':
-        array[index] = 'a';
-        break;
-      case '2':
-        array[index] = 'e';
-        break;
-      case '3':
-        array[index] = 'i';
-        break;
-      case '4':
-        array[index] = 'o';
-        break;
-      case '5':
-        array[index] = 'u';
-        break;
+    case '1':
+      array[index] = 'a';
+      break;
+    case '2':
+      array[index] = 'e';
+      break;
+    case '3':
+      array[index] = 'i';
+      break;
+    case '4':
+      array[index] = 'o';
+      break;
+    case '5':
+      array[index] = 'u';
+      break;
     }
   }
   return array.join('');
