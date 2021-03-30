@@ -18,13 +18,13 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(stringArr) {
-  let arr = [stringArr.pop(stringArr), stringArr.shift(stringArr)]
-  return arr.join(', ')
+  let arr = [stringArr.pop(stringArr), stringArr.shift(stringArr)];
+  return arr.join(', ');
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
