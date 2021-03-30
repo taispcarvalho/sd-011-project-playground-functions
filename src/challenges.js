@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue() {
-  
+function compareTrue(a, b) {
+  return a && b; //&& só é verdadeiro caso todos param sejam verdadeiros
 }
 
 // Desafio 2
