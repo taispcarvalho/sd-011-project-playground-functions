@@ -28,7 +28,7 @@ function concatName(array) {
   let lastFirst = '';
   let first = array[0];
   let last = array[array.length - 1];
-  lastFirst = last + ', ' + first;
+  lastFirst = `${last}, ${first}`; // O mesmo que dizer last + ',' + first;
   return lastFirst;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
