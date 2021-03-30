@@ -22,6 +22,7 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
+
 function getHighest(array) {
   let max = array[0];
   for (let index in array) {
@@ -31,6 +32,7 @@ function getHighest(array) {
   }
   return max;
 }
+
 function countApearences(num, array) {
   let counter = 0;
   for (let index in array) {
@@ -40,6 +42,7 @@ function countApearences(num, array) {
   }
   return counter;
 }
+
 // Desafio 6
 function highestCount(array) {
   let max = getHighest(array);
@@ -47,9 +50,21 @@ function highestCount(array) {
   return repeated;
 }
 
+function calcDist(mouse, cat) {
+  let dist = Math.abs(mouse - cat);
+  return dist;
+}
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let dist1 = calcDist(mouse, cat1);
+  let dist2 = calcDist(mouse, cat2);
+  if (dist1 < dist2) {
+    return 'cat1';
+  }
+  if (dist2 < dist1) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
