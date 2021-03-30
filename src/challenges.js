@@ -22,22 +22,37 @@ function concatName(strArray) {
   return `${strArray[strArray.length - 1]}, ${strArray[0]}`;
 }
 
-// Desafio 5
-function footballPoints(wins, ties) {
-  let totalPoints = 0;
+// part of Desafio 5
+function winPoints(wins) {
+  let winsPoints = 0;
   if (wins !== 0) {
     for (let i = 0; i < wins; i += 1) {
-      totalPoints += 3;
+      winsPoints += 3;
     }
   }
+  return winsPoints;
+}
+
+// part of Desafio 5
+function tiePoints(ties) {
+  let tiesPoints = 0;
 
   if (ties !== 0) {
     for (let j = 0; j < ties; j += 1) {
-      totalPoints += 1;
+      tiesPoints += 1;
     }
   }
-  return totalPoints;
+  return tiesPoints
 }
+
+// Desafio 5
+function footballPoints(wins, ties) {
+  return winPoints(wins) + tiePoints(ties);
+}
+
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
 
 // part of Desafio 6
 function higherNumber (valueArray) {
