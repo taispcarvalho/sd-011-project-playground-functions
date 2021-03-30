@@ -23,11 +23,14 @@ function concatName(array) {
   let finalArray = [];
   finalArray.push(array[array.length - 1]);
   finalArray.push(array[0]);
+  return finalArray;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winsPoints = wins * 3;
+  let total = winsPoints + ties;
+  return total;
 }
 
 // Desafio 6
