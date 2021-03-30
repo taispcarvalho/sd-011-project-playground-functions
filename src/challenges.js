@@ -13,11 +13,9 @@ function splitSentence(str) {
   return str.split(' ');
 }
 
-console.log(splitSentence('foguete'));
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings) {
+  return [arrayStrings[arrayStrings.length - 1], arrayStrings[0]];
 }
 
 // Desafio 5
