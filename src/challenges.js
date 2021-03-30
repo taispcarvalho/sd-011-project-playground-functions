@@ -62,9 +62,24 @@ function highestCount(array) {
   }
   return (counter);
 }
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function getsAbsoluteValue(number) {
+  if (number < 0) {
+    number *= -1;
+  }
+  return (number);
+}
+
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = getsAbsoluteValue(mouse - cat1);
+  let distanceCat2 = getsAbsoluteValue(mouse - cat2);
+  if (distanceCat1 === distanceCat2) {
+    return ('os gatos trombam e o rato foge');
+  } if (distanceCat1 < distanceCat2) {
+    return ('cat1');
+  }
+  return ('cat2');
 }
 
 // Desafio 8
