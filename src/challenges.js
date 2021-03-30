@@ -10,10 +10,10 @@ function calcArea(a, b) {
 }
 
 // Desafio 3
-function splitSentence(string) {
+function splitSentence(string, separador) {
   let separador = ',';
-  return (splitSentece(string, separador));
-
+  let arraySplit = string.split(separador);
+  return (arraySplit);
 }
 
 // Desafio 4 - ok
