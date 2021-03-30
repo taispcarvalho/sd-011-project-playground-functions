@@ -106,16 +106,6 @@ console.log(catAndMouse(0, 6, 12));
 console.log(catAndMouse(0, 6, -6));
 
 // Desafio 8
-function fizzBuzz(intArray) {
-  let fizzBuzzArray = [];
-
-  for (let num of intArray) {
-    fizzBuzzArray.push(singleFizzBuzz(num));
-  }
-
-  return fizzBuzzArray;
-}
-
 function singleFizzBuzz(int) {
   if (int % 15 === 0) {
     return 'fizzBuzz';
@@ -131,6 +121,17 @@ function singleFizzBuzz(int) {
 
   return 'bug!';
 }
+
+function fizzBuzz(intArray) {
+  let fizzBuzzArray = [];
+
+  for (let num of intArray) {
+    fizzBuzzArray.push(singleFizzBuzz(num));
+  }
+
+  return fizzBuzzArray;
+}
+
 
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
