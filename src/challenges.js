@@ -27,7 +27,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let ordemArray = array.sort(function orderArray(a, b) { return a - b; } );
+  let ordemArray = array.sort((a, b) => { return a - b; });
 
   let sumRepeatLargestNumber = 0;
 
@@ -45,19 +45,17 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   } else if ((cat1 - mouse) > (cat2 - mouse)) {
     return cat2;
-  } else {
-    return cat1;
-  }
+  } 
+  return cat1;
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   let result = [];
   for (let i = 0; i < array.length; i += 1) {
-    if (i % 3 === 0) {
-      if (i % 5 === 0) {
-        result.push('FizzBuzz');
-      }
+    if (i % 15 === 0) {
+      result.push('FizzBuzz');
+    } else if (i % 3 === 0) {
       result.push('Fizz');
     } else if (i % 5 === 0) {
       result.push('Buzz');
@@ -70,15 +68,14 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  const letterChange = {a : 1, e : 2, i : 3, o : 4, u : 5};
+  const letterChange = { a: 1, e: 2, i: 3, o: 4, u: 5};
   return string.replace(/[a e i o u]/g, match => letterChange[match]);
 }
 
 // Desafio 10
-function decode(tech, name) {
-  let ordenArray = tech.sort()
+function decode() {
+
 }
-console.log(decode(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
 
 module.exports = {
   calcArea,
