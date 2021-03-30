@@ -16,9 +16,6 @@ function splitSentence(frase, separator) {
   let fraseParaSeparar = frase.split(separator);
   return fraseParaSeparar;
 }
-let space = ' ';
-let fraseNaoSeparada = 'foguete'
-console.log(fraseNaoSeparada, space);
 
 // Desafio 4
 function concatName() {
