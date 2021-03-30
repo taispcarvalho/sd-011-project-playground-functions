@@ -24,12 +24,26 @@ function concatName(array2 = []) {
 function footballPoints(wins, ties) {
   return wins * 3 + ties;
 }
-console.log(footballPoints(5, 2));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+let array3 = [9, 1, 2, 3, 9, 5, 7];
+function highestCount(param) {
+  let maiorNum = 0;
+  for (let i = 0; i < param.length; i+=1) {
+    if(param[i] > maiorNum){
+      maiorNum += param[i];
+    }
+  }
+  let qtd = 0;
+  for (let i = 0; i < param.length; i+=1) {    
+    if (param[i] === maiorNum){
+      qtd ++;
+    }
+  }
+  return qtd;
 }
+console.log(highestCount(array3));
 
 // Desafio 7
 function catAndMouse() {
