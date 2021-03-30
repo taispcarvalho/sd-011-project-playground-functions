@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  param1 && param2; return true
+  if (param1 && param2) return true
 }
 
 // Desafio 2
@@ -18,8 +18,7 @@ function splitSentence(string) {
 function concatName(string) {
   let lastName = string[string.length - 1];
   let firstName = string[0];
-  let newArray = [lastName, firstName];
-  return newArray;
+  return `${lastName} ${firstName}`;
 }
 let string = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 console.log(concatName(string));
