@@ -41,9 +41,8 @@ console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winPoints = 3;
-  let tiePoints = 1;
-  let totalPoints = (winPoints * (wins)) + (tiePoints * (ties));
+  let winPoints = 3;  
+  let totalPoints = (winPoints * (wins)) + (ties);
   return totalPoints;
 }
 
@@ -144,7 +143,7 @@ function decode(str) {
   }
   return str2;
 }
-console.log(decode("h3 th2r2!"));
+console.log(decode('h3 th2r2!'));
 module.exports = {
   calcArea,
   catAndMouse,
