@@ -20,7 +20,7 @@ function splitSentence(text) {
 function concatName(array) {
   let firstItem = array[0];
   let lastItem = array[array.length - 1];
-  let finalConcat = lastItem + ', ' + firstItem;
+  let finalConcat = `${lastItem}, ${firstItem}`;
   return finalConcat;
 }
 
