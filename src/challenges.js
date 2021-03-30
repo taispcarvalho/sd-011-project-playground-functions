@@ -27,29 +27,15 @@ function splitSentence(value3) {
 
 
 // Desafio 5
+
 function footballPoints(wins, ties) {
-
-//     let winsValue = 3;
-//     let pontos1 = 0;
-//     if (wins < 0){
-//       let pontos1 = wins * winsValue;
-
-
-
-
-//     let tiesValue = 1;
-//     let pontos2 = 0;
-//     if (ties < 0){
-//       let pontos2 = ties * tiesValue;
-//     }
-  
-
-
-//     let points = pontos1 + pontos2;
-//     return points 
+  let pWins = 3;
+  let pTies = 1;
+  let quantidadeDeVitorias = wins * pWins;
+  let quantidadeDeEmpates = ties * pTies;
+  let somaDePontos = quantidadeDeEmpates + quantidadeDeVitorias;
+  return somaDePontos;
 }
-
-// console.log(footballPoints(1,2));
 
 // Desafio 6
 function highestCount() {
