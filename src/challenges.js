@@ -3,7 +3,7 @@ function compareTrue(boolValue1, boolValue2) {
   if (boolValue1 && boolValue2) {
     return true;
   }
-    return false;
+  return false;
 }
 
 // Desafio 2
