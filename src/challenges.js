@@ -15,8 +15,9 @@ function splitSentence() {
 }
 
 // Desafio 4
-let pessoa = [];
+
 function concatName(pessoa) {
+pessoa = [];
 for (let i = 0; i < pessoa.length; i+=1) {
     if (pessoa[i] === pessoa[pessoa.length - 1]) {
       let ultimoNome = pessoa[i];
@@ -24,11 +25,11 @@ for (let i = 0; i < pessoa.length; i+=1) {
     if (pessoa[i] === pessoa[0]) {
       let primeiroNome = pessoa[i];
     }
+  concatName(ultimoNome + ', ' + primeiroNome);
   return (ultimoNome + ', ' + primeiroNome)
   }
-  concatName(ultimoNome + ', ' + primeiroNome);
-  console.log(ultimoNome + ', ' + primeiroNome);
-
+  
+  
 
 // Desafio 5
 let wins = 14;
