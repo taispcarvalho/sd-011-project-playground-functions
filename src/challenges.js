@@ -29,9 +29,13 @@ let space = " ";
 console.log(splitSentence(string, space))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(param) {
+  let newArray= [param[0],param[param.length-1]];
+  return newArray;
 }
+
+let names = ["Walter", "Lucas", "Matheus", "Cadu"];
+console.log(concatName(names));
 
 // Desafio 5
 function footballPoints() {
