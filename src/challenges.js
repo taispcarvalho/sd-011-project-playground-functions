@@ -1,10 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  
+function compareTrue(valorA, valorB) {
+  return valorA && valorB;
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
 }
 
