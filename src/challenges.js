@@ -24,7 +24,7 @@ function splitSentence(string) {
 function concatName(array) {
   let first = array[0];
   let last = array[array.length - 1];
-  let result = first.concat(', ', last);
+  let result = last.concat(', ', first);
   return result;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
