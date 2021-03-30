@@ -35,17 +35,13 @@ function concatName(arrStr) {
   return strConcatenated;
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins * 3 + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount() {}
 
 // Desafio 7
 function catAndMouse() {
