@@ -10,7 +10,7 @@ function calcArea(a, b) {
 
 // Desafio 3
 function splitSentence(name) {
-  return name.split("");
+  return name.split(' ');
 }
 
 // Desafio 4
