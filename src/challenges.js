@@ -26,9 +26,18 @@ function splitSentence(str) {
 console.log(splitSentence('Go Trybe'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(strArray) {
+  let strNames = '';
+  for(let i = 0; i < strArray.length; i += 1) {
+    if(i === 0 || i === strArray.length - 1) {
+      strNames = strArray[strArray.length - 1] + ', ' + strArray[0];
+    }
+  }
+  return strNames;
 }
+
+let namesArray = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+console.log(concatName(namesArray));
 
 // Desafio 5
 function footballPoints() {
