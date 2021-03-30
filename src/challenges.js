@@ -4,9 +4,8 @@ function compareTrue(firstValue, secondValue) {
 }
 console.log(compareTrue(true, true));
 
-
 // Desafio 2
-function calcArea(firstValue, secondValue) {
+function calcArea() {
   // seu código aqui
 }
 
