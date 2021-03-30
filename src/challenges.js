@@ -1,10 +1,6 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 && param2 === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return param1 && param2 === true;
 }
 console.log(compareTrue(true, true));
 // Desafio 2
@@ -22,25 +18,27 @@ function splitSentence(frase) {
 console.log(splitSentence('go Trybe'));
 // Desafio 4
 function concatName(array) {
-  let fraseConcatenada = '';
-  fraseConcatenada += array[array.length - 1];
-  fraseConcatenada += ', ';
-  fraseConcatenada += array[0];
+  let fraseConcatenada = array[array.length - 1] + ', ' + array[0];
   return fraseConcatenada;
 }
 console.log(concatName(['captain', 'my', 'captain']));
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winPoints = 3 * wins;
-  let tiePoints = 1 * ties;
-  let teamPoints = winPoints + tiePoints;
-  return teamPoints;
+  let winPoints = (3 * wins) + ties;
+  return winPoints;
 }
-console.log(footballPoints(14, 8));
+console.log(footballPoints(2, 1));
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+  let maiorNumero = '';
+  for (let index = 0; index < arr.length; index += 1) {
+    if (arr[index] > arr[index + 1]) {
+      maiorNumero = arr[index]
+    }
 }
+
+let listaDeNumeros = [9, 1, 2, 3, 9, 5, 7]
+console.log(highestCount(listaDeNumeros));
 // Desafio 7
 function catAndMouse(mousePosition, catOnePosition, catTwoPosition) {
   let distanciaCat1 = Math.abs(catOnePosition - mousePosition);
@@ -60,15 +58,15 @@ console.log(catAndMouse(10, 4, 22));
 // Desafio 8
 function fizzBuzz(arr) {
   let array = [];
-  for (let index = 0; index < arr.length; index += 1){
+  for (let index = 0; index < arr.length; index += 1) {
     if (arr[index] % 3 === 0 && arr[index] % 5 === 0) {
-      array.push('fizzBuzz')
+      array.push('fizzBuzz');
     } else if (arr[index] % 5 === 0) {
       array.push('buzz');
     } else if (arr[index] % 3 === 0) {
       array.push('fizz');
     } else {
-      array.push('bug!')
+      array.push('bug!');
     }
   }
   return array;
