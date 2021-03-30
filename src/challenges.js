@@ -7,16 +7,24 @@ console.log(compareTrue(true, true));
 function calcArea(base, height) {
   return ((base * height) / 2);
 }
-console.log(calcArea(10, 50));
+console.log(calcArea(51, 1));
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
+  let array = [];
+  for(index in string){
+    if(string[index])
+    array.push(string[index]);
+  }
+  return array;
   // seu código aqui
 }
+console.log(splitSentence('go Trybe'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return (array[array.length - 1] + ', ' + array[0])
 }
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints() {
