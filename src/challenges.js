@@ -18,16 +18,19 @@ function splitSentence(frase) {
 splitSentence('go Trybe');
 
 // Desafio 4
+let final = 0;
 function concatName(listaNomes) {
- let listaNomesFinal = (listaNomes[listaNomes.length -1] + ',' + listaNomes[0]);
- return listaNomesFinal;
- }
+  // seu código aqui
+}
 concatName(['foguete', 'não', 'tem', 'ré']);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = (wins * 3 + ties * 1);
+  return pontos;
 }
+footballPoints(1, 2);
+
 
 // Desafio 6
 function highestCount() {
