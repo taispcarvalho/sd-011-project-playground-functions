@@ -28,20 +28,20 @@ function highestCount(arrayNumbers) {
   let higherNumber = arrayNumbers[0];
   let repeater = 0;
 
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
+for (let index = 0; index < arrayNumbers.length; index += 1) {
 
     if (arrayNumbers[index] > higherNumber) {
-        higherNumber = arrayNumbers[index];
+      higherNumber = arrayNumbers[index];
     }
-  };
+  }
 
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
+for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] === higherNumber) {
-        repeater += 1;  
+      repeater += 1;
     }
-  };
+  }
 
-  return repeater
+  return repeater;
 }
 
 // Desafio 7
