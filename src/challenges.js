@@ -25,7 +25,7 @@ function splitSentence(stringToSplit) {
 // Desafio 4
 
 function concatName(arraystr) {
-  arrayfl = arraystr[arraystr.length -1 + arraystr [0]];
+  arrayfl = arraystr[arraystr.length -1] + ", " + [arraystr [0]];
   return arrayfl;
 }
 
