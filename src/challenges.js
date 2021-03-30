@@ -20,7 +20,7 @@ function concatName(stringArray) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + ties;
+  return wins * 3 + ties;
 }
 
 // Desafio 6
@@ -52,11 +52,22 @@ function catAndMouse(mouse, cat1, cat2) {
   return cat1 - mouse < cat2 - mouse ? 'cat1' : 'cat2';
 }
 
-console.log(catAndMouse(1, 8, 8));
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function getFizzBuzz(number) {
+  if (number % 3 === 0 && number % 5 === 0) return 'fizzBuzz';
+  if (number % 3 === 0) return 'fizz';
+  if (number % 5 === 0) return 'buzz';
+  return 'bug!';
+}
+
+function fizzBuzz(numberArray) {
+  let result = [];
+
+  for (let number of numberArray) {
+    result.push(getFizzBuzz(number));
+  }
+
+  return result;
 }
 
 // Desafio 9
