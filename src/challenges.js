@@ -60,16 +60,17 @@ console.log(highestCount(numberr));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let finish = '';
-  let m = mouse;
+  let finish;
 
-  let calc1 = m - cat1;
-  let calc2 = m - cat2;
+  let calc1 = cat1 - mouse;
+  let calc2 = cat2 - mouse;
+
+  console.log(calc1, calc2);
 
   if (calc1 > calc2) {
-    finish = 'cat1';
-  } else if (calc2 > calc1) {
     finish = 'cat2';
+  } else if (calc2 > calc1) {
+    finish = 'cat1';
   } else {
     finish = 'os gatos trombam e o rato foge';
   }
