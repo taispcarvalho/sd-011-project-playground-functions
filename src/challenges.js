@@ -112,61 +112,60 @@ console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode(string) {
-  let newMensage = '';
-
+  let encodedMessage = '';
   for (let index = 0; index < string.length; index += 1) {
     if (string[index].toLowerCase() === string[index]) {
       switch (string[index]) {
         case 'a':
-          newMensage += '1';
+          encodedMessage += '1';
           break;
         case 'e':
-          newMensage += '2';
+          encodedMessage += '2';
           break;
         case 'i':
-          newMensage += '3';
+          encodedMessage += '3';
           break;
         case 'o':
-          newMensage += '4';
+          encodedMessage += '4';
           break;
         case 'u':
-          newMensage += '5';
+          encodedMessage += '5';
           break;
         default:
-          newMensage += string[index];
+          encodedMessage += string[index];
       }
     }
   }
-  return newMensage;
+  return encodedMessage;
 }
 
 console.log(encode('hi, there'));
 
 function decode(number) {
-  let newMensage = '';
+  let decodedMessage = '';
 
-  for (let index = 0; index < number.length; index += 1) {
+  for (let index = 0; index < number.length; index += 1) {   
     switch (number[index]) {
       case '1':
-        newMensage += 'a';
+        decodedMessage += 'a';
         break;
       case '2':
-        newMensage += 'e';
+        decodedMessage += 'e';
         break;
       case '3':
-        newMensage += 'i';
+        decodedMessage += 'i';
         break;
       case '4':
-        newMensage += 'o';
+        decodedMessage += 'o';
         break;
       case '5':
-        newMensage += 'u';
+        decodedMessage += 'u';
         break;
       default:
-        newMensage += number[index];
+        decodedMessage += number[index];
     }
   }
-  return newMensage;
+  return decodedMessage;
 }
 
 console.log(decode('h3, th2r2'));
