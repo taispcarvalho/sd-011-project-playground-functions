@@ -14,16 +14,18 @@ function createObject(techs, name) {
   return arrayObject;
 }
 
-function sortByTech(arrayObject) {
-  arrayObject.sort(function(a, b) {
-    if(a.tech < b.tech) {
-      return -1;
-    } else {
-      return true;
-    }
-  });
+function sortByTech(a, b) {
+  let result;
 
-  return arrayObject;
+  if(a.tech < b.tech) {
+    result = -1;
+  } else if (a.tech > b.tech) {
+    result = 1;
+  } else {
+    result = 0;
+  }
+
+  return result;
 }
 
 function techList(techs, name) {
@@ -35,14 +37,12 @@ function techList(techs, name) {
     arrayObject = createObject(techs, name);
   }
 
-  arrayObject = sortByTech(arrayObject);
-
-  return arrayObject;
+  return arrayObject.sort(sortByTech);
 }
 
-// let tech1 = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-// let name1 = 'Lucas';
-// console.log(techList(tech1, name1));
+let tech1 = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let name1 = 'Lucas';
+console.log(techList(tech1, name1));
 
 // Desafio 11
 function generatePhoneNumber() {
