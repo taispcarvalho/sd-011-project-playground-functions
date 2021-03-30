@@ -32,8 +32,14 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(arrayOfNumbers) {
-  return countRepetition(verifyHighest(arrayOfNumbers), arrayOfNumbers);
+function countRepetition(value, arrayOfNumbers) {
+  let count = 0;
+  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
+    if (value === arrayOfNumbers[index]) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 function verifyHighest(arrayOfNumbers) {
@@ -43,14 +49,8 @@ function verifyHighest(arrayOfNumbers) {
   return max;
 }
 
-function countRepetition(value, arrayOfNumbers) {
-  let count = 0;
-  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
-    if (value === arrayOfNumbers[index]) {
-      count += 1;
-    }
-  }
-  return count;
+function highestCount(arrayOfNumbers) {
+  return countRepetition(verifyHighest(arrayOfNumbers), arrayOfNumbers);
 }
 
 // Desafio 7
@@ -66,6 +66,19 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+
+function divisible3and5(number) {
+  if (number % 3 === 0 && number % 5 !== 0) {
+    return 'fizz';
+  } else if (number % 3 !== 0 && number % 5 === 0) {
+    return 'buzz';
+  } else if (number % 3 === 0 && number % 5 === 0) {
+    return 'fizzBuzz';
+  } else if (number % 3 !== 0 && number % 5 !== 0) {
+    return 'bug!';
+  }
+}
+
 function fizzBuzz(arrayOfNumbers) {
   let nonSenseArray = [];
   for (let index = 0; index < arrayOfNumbers.length; index += 1) {
@@ -73,19 +86,6 @@ function fizzBuzz(arrayOfNumbers) {
   }
   return nonSenseArray;
 }
-
-function divisible3and5(number) {
-  if (number % 3 === 0 && number % 5 !== 0) {
-    return "fizz";
-  } else if (number % 3 !== 0 && number % 5 === 0) {
-    return "buzz";
-  } else if (number % 3 === 0 && number % 5 === 0) {
-    return "fizzBuzz";
-  } else if (number % 3 !== 0 && number % 5 !== 0) {
-    return "bug!";
-  }
-}
-
 
 // Desafio 9
 function encode() {
