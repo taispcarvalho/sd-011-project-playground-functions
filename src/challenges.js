@@ -4,28 +4,32 @@ function compareTrue(firstBool, secondBool) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  return sentence.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arr) {
+  let firstValue = arr[0];
+  let lastValue = arr[arr.length - 1];
+  return [firstValue, lastValue];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  const winMultiplier = 3;
+  return (wins * winMultiplier) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+  let highestNumber = Math.max(...arr);
+  return arr.filter((value) => value === highestNumber).length;
 }
 
 // Desafio 7
