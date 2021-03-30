@@ -1,3 +1,4 @@
+//José Henrique Margraf Melo
 // Desafio 1
 function compareTrue() {
   // seu código aqui
