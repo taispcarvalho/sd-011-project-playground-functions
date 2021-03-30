@@ -1,6 +1,6 @@
 // Desafio 1 - #VQV
-function compareTrue() {
-  // seu código aqui
+function compareTrue(bol1, bol2) {
+  return bol1 && bol2;
 }
 
 // Desafio 2
