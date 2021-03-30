@@ -7,8 +7,11 @@ function compareTrue(bool1, bool2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  if (base > 0 && height > 0) {
+    return (base*height)/2;
+  }
+  return 'erro';
 }
 
 // Desafio 3
