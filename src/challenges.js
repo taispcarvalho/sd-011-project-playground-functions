@@ -15,7 +15,7 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(array) {
-  return (array.pop() + ', ' + array.shift());
+  return array.pop() + ', ' + array.shift();
 }
 
 // Desafio 5
@@ -26,17 +26,16 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   let countNumber = 0;
-
+  
   function findHighestNumber() {
-  let highestNumber = array[0];
+    let highestNumber = array[0];
     for (let index in array) {
       if (array[index] > highestNumber) {
         highestNumber = array[index];
       }
-    return highestNumber;
     }
+    return highestNumber;
   }
-
   function countingHighestNumber() {
     for (let index in array) {
       if (findHighestNumber() === array[index]) {
@@ -45,19 +44,20 @@ function highestCount(array) {
     }
     return countNumber;
   }
-  
   return countingHighestNumber()
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let result = ''
   if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
-    return 'os gatos trombam e o rato foge';
+    result = 'os gatos trombam e o rato foge';
   } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
-    return 'cat2';
+    result = 'cat2';
   } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
-    return 'cat1';
+    result = 'cat1';
   }
+  return result;
 }
 
 // Desafio 8
@@ -119,9 +119,6 @@ function decode(str) {
 }
 
 let myStr = 'hello'
-
-console.log(encode(myStr));
-console.log(decode(myStr));
 
 module.exports = {
   calcArea,
