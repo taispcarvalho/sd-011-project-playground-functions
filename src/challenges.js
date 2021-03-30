@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(older18, hasLicense) {
+  return older18 && hasLicense;
 }
 
 // Desafio 2
