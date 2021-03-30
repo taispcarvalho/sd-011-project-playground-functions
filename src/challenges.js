@@ -29,9 +29,16 @@ console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let newArray = array.shift();
+  let arrayReverse = array.reverse();
+  let newArray2 = arrayReverse.shift();
+  return newArray2 + ' ' + newArray; 
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+console.log(concatName(['foguete', 'não', 'tem', 'ré']))
+console.log(concatName(['captain', 'my', 'captain']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -64,8 +71,8 @@ console.log(catAndMouse(3, 2, 1));
 
 // Desafio 8
 function fizzBuzz(array) {
-  var newArray = [];
-  for (let index = 0; index < array.length; index++) {
+  let newArray = [];
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       newArray.push('fizzBuzz');
     } else if (array[index] % 3 === 0) {
