@@ -25,9 +25,8 @@ function splitSentence(string) {
 console.log(splitSentence('go trybe'));
 
 // Desafio 4
-function concatName(arrayDeStrings) {
-  let stringConcat = [arrayDeStrings[0], arrayDeStrings[arrayDeStrings.length - 1]];
-
+function concatName(arrayOfStrings) {
+  let stringConcat = [arrayOfStrings[arrayOfStrings.length - 1], arrayOfStrings[0]];
   return stringConcat;
 }
 
