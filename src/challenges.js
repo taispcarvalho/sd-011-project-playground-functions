@@ -23,16 +23,28 @@ function concatName(nomes) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties * 1
+  return wins * 3 + ties * 1;
 }
-console.log(footballPoints(50, 2));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let highestNumber = 0;
+  for (let index in array) {
+    if (array[index] > highestNumber) {
+      highestNumber = array[index];
+    }
+  }
+  let count = 0;
+  for (let index2 in array) {
+    if (highestNumber === array[index2]) {
+      count += 1;
+    }
+  }
+  return count;
 }
+console.log(highestCount([9, 9, 2, 3, 9, 5, 7, 9]));
 
-// Desafio 7
+  // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
