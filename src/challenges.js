@@ -21,13 +21,9 @@ function concatName(pessoas) {
   for (let i = 0; i < pessoas.length; i += 1) {
     let primeiro = pessoas[0];
     let ultimo = pessoas[pessoas.length - 1];
-    if (pessoas = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) {
+    if (pessoas = []) {
       let resultado1 = ultimo + ',' + primeiro;
-    } else if ( pessoas = ['foguete', 'não', 'tem', 'ré']) {
-      let resultado2 = ultimo + ',' + primeiro;
-    } else if (pessoas = ['captain', 'my', 'captain']) {
-      let resultado3 = ultimo + ',' + primeiro;
-    }
+    } 
     return (ultimo + ',' + primeiro);
   }
   console.log(ultimo + ',' + primeiro);
