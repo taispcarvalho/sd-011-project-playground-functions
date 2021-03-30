@@ -1,6 +1,9 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(expression) {
+  if (expression === true) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 2
