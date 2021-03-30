@@ -39,7 +39,21 @@ console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
+  let score = 0;
+
+  if(wins){
+    score += wins * 3;
+  }
+
+  if (ties){
+    score += ties * 1;
+  }
+
+  return score;
 }
+console.log(footballPoints(14,8));
+console.log(footballPoints(1,2));
+console.log(footballPoints(0,0));
 
 // Desafio 6
 function highestCount() {
