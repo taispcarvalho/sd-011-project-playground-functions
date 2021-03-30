@@ -24,8 +24,8 @@ function splitSentence(phrase) {
       word = '';
     } else {
       word += phrase[index];
-    } 
-  }return array
+    }
+  } return array
 }
 
 // Desafio 4
@@ -42,8 +42,9 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let result = (wins * 3) + ties;
+  return result;
 }
 
 // Desafio 6
