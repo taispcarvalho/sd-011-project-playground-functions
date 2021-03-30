@@ -14,8 +14,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings) {
+  let lastIndex = arrayStrings.length-1;
+  let lastFirst = arrayStrings[lastIndex] + ', ' + arrayStrings[0];
+  return lastFirst;
 }
 
 // Desafio 5
