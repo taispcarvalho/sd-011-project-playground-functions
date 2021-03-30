@@ -5,10 +5,10 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2;
+  return (base * height) /2;
 }
 
-let triangulo = calcArea(10, 50);
+let triangulo = calcArea(5, 2);
 console.log(triangulo);
 
 // Desafio 3
