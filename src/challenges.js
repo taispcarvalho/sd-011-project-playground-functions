@@ -6,12 +6,12 @@ function compareTrue(value1, value2) {
     return false;
   }
 }
-console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
+  return (base * heigth) / 2;
 }
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence() {
