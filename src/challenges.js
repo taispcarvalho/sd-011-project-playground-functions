@@ -51,8 +51,21 @@ function catAndMouse(mousePosition, cat1Position, cat2Position) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  return numbers.map((n) => {
+    const isDivisibleBy3 = (n % 3) === 0;
+    const isDivisibleBy5 = (n % 5) === 0;
+    if (isDivisibleBy3 && isDivisibleBy5) {
+      return 'fizzBuzz';
+    }
+    if (isDivisibleBy3) {
+      return 'fizz';
+    }
+    if (isDivisibleBy5) {
+      return 'buzz';
+    }
+    return 'bug!';
+  });
 }
 
 // Desafio 9
