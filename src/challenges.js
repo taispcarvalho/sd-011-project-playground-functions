@@ -9,7 +9,7 @@ console.log(compareTrue('True', 'True'));
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  return (base*height)/2
+  return (base * height) / 2
 }
 
 console.log(calcArea(10, 10));
