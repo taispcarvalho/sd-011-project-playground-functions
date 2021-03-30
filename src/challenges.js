@@ -43,7 +43,7 @@ function highestCount(arra) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  console.log(catAndMouse(1,4,3))
+  
   
 }
 
