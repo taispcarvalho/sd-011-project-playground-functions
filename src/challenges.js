@@ -7,7 +7,7 @@ console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, altura) {
-  return base * altura / 2;
+  return (base * altura) / 2;
 }
 
 console.log(calcArea(5, 2));
@@ -36,12 +36,26 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(7, 2));
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrNumber) {
+  let nMaior = 0;
+  let qRepeat = 0;
 
+  for (let i = 0; i < arrNumber.length; i += 1) {
+    if (arrNumber[i] >= nMaior) {
+      nMaior = arrNumber[i];
+    }
+  }
+
+  for (let i = 0; i < arrNumber.length; i += 1) {
+    if (nMaior === arrNumber[i]) {
+      qRepeat += 1;
+    }
+  }
+
+  return qRepeat;
 }
 
 let numberr = [0, 4, 4, 4, 9, 2, 1];
-
 console.log(highestCount(numberr));
 
 // Desafio 7
