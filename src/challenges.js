@@ -66,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumber) {
   let arrayResult = [];
-  for(let firstIndex = 0; firstIndex < arrayNumber.length; firstIndex += 1) {
+  for (let firstIndex = 0; firstIndex < arrayNumber.length; firstIndex += 1) {
     if (arrayNumber[firstIndex] % 3 === 0 && arrayNumber[firstIndex] % 5 !== 0) {
       arrayResult.push('fizz');
     } else if (arrayNumber[firstIndex] % 3 !== 0 && arrayNumber[firstIndex] % 5 === 0) {
@@ -75,7 +75,7 @@ function fizzBuzz(arrayNumber) {
       arrayResult.push('fizzBuzz');
     } else {
       arrayResult.push('bug!');
-    } 
+    }
   }
   return arrayResult;
 }
@@ -83,7 +83,7 @@ function fizzBuzz(arrayNumber) {
 // Desafio 9
 function encode(string) {
   let array = string.split('');
-  for(let index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     switch (array[index]) {
     case 'a':
       array[index] = '1';
@@ -100,6 +100,8 @@ function encode(string) {
     case 'u':
       array[index] = '5';
       break;
+    default:
+      break;
     }
   }
   return array.join('');
@@ -107,7 +109,7 @@ function encode(string) {
 
 function decode(string) {
   let array = string.split('');
-  for(let index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     switch (array[index]) {
     case '1':
       array[index] = 'a';
@@ -123,6 +125,8 @@ function decode(string) {
       break;
     case '5':
       array[index] = 'u';
+      break;
+    default:
       break;
     }
   }
