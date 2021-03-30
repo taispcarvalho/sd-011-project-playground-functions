@@ -21,7 +21,7 @@ function concatName(nameArray) {
   let lastNameArrayPosition = nameArray.length - 1;
   let lastName = nameArray[lastNameArrayPosition];
 
-  return lastName + ', ' + firstName;
+  return `${lastName}, ${firstName}`;
 }
 
 // Desafio 5
