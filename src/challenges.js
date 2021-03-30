@@ -16,18 +16,32 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(fullName) {
+  let signatureName = [];
+  signatureName.push(fullName[fullName.length - 1], fullName[0]);
+
+  return signatureName.join(', ');
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return 3 * wins + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  // achar o maior --FEITO!
+  let highestNumberFrequency = 0;
+  let highestNumber = Math.max.apply(null, numbers);
+
+  // contar quantas vezes o maior aparece
+  for (const number of numbers) {
+    if (number === highestNumber) {
+      highestNumberFrequency += 1;
+    }
+  }
+
+  return highestNumberFrequency;
 }
 
 // Desafio 7
