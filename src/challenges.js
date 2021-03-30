@@ -7,35 +7,29 @@ function compareTrue(case1, case2) {
     return false;
   }
 }
-console.log(compareTrue(true, true));
-
 // Desafio 2
-
-let base = 51;
-let altura = 1;
-
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-console.log(calcArea(base, altura));
-
 // Desafio 3
-let = string = 'go Trybe'
-
 function splitSentence(frase) {
   return frase.split(" ");
 }
-console.log(splitSentence(string));
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let vetor = ['foguete', 'não', 'tem', 'ré'];
+
+function concatName(array) {
+  return array[array.length - 1] + ' , ' + array[0];
+  
 }
+console.log(concatName(vetor));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
+
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {

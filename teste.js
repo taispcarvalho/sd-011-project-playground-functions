@@ -19,8 +19,22 @@
 // console.log(calcArea(base, altura));
 
 
-let string = 'go Trybe'
-function splitSentence(frase){
-  return frase.split(" ");
+// let string = 'go Trybe'
+// function splitSentence(frase){
+//   return frase.split(" ");
+// }
+// console.log(splitSentence(string)); 
+
+// let vetor = ['foguete', 'não', 'tem', 'ré'];
+
+// function concatName(array) {
+//   return array[array.length - 1] + ' , ' + array[0];
+  
+// }
+// console.log(concatName(vetor));
+
+function footballPoints(wins, ties){
+  return (wins * 3) + ties
 }
-console.log(splitSentence(string));
+
+console.log(footballPoints(1, 2));
