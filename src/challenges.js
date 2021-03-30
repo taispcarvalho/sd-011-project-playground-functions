@@ -110,20 +110,26 @@ function fizzBuzz(intArray) {
   let fizzBuzzArray = [];
 
   for (let num of intArray) {
-    if (num % 3 === 0) {
-      if (num % 5 === 0) {
-        fizzBuzzArray.push('fizzBuzz');
-      } else {
-        fizzBuzzArray.push('fizz');
-      }
-    } else if (num % 5 === 0) {
-      fizzBuzzArray.push('buzz');
-    } else {
-      fizzBuzzArray.push('bug!');
-    }
+    fizzBuzzArray.push(singleFizzBuzz(num));
   }
 
   return fizzBuzzArray;
+}
+
+function singleFizzBuzz(int) {
+  if (int % 15 === 0) {
+    return 'fizzBuzz';
+  }
+
+  if (int % 3 === 0) {
+    return 'fizz';
+  }
+
+  if (int % 5 === 0) {
+    return 'buzz';
+  }
+
+  return 'bug!';
 }
 
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
