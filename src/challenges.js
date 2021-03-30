@@ -31,13 +31,13 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(array) {
-  let out = [];
+  let out = '';
   let last =  array.length - 1;
-  out.push(array[last])
+  out += array[last];
 
   for (let index = array.length; index >= 0; index -= 1) {
     if (index == 0) {
-      out.push(array[index]);
+      out = out + ', ' + array[index];
     }
   } return out;
 }
