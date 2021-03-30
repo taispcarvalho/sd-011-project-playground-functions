@@ -135,6 +135,8 @@ function encode(string) {
       default:
         encodedMessage += string[index];
       }
+    } else {
+      encodedMessage += message[index];
     }
   }
   return encodedMessage;
@@ -145,8 +147,8 @@ console.log(encode('hi, there'));
 function decode(number) {
   let decodedMessage = '';
 
-for (let index = 0; index < number.length; index += 1) {   
-  switch (number[index]) {
+  for (let index = 0; index < number.length; index += 1) {   
+    switch (number[index]) {
     case '1':
       decodedMessage += 'a';
       break;
