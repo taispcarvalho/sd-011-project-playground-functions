@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(num1, num2) {
-  if(num1 & num2) {
+  if (num1 & num2) {
     return true;
   } else {
     return false;
@@ -21,12 +21,12 @@ console.log(calcArea(51, 1));
 // Desafio 3
 function splitSentence(string) {
   let array = string.split(' ');
-  let newArray = [];
-  newArray.push(array);
-  return newArray;
+  return array;
 }
 
 console.log(splitSentence('Go Trybe'));
+console.log(splitSentence('vamo que vamo'));
+console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName() {
@@ -49,11 +49,11 @@ function highestCount() {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if(cat1 > cat2 ) {
+  if (cat1 > cat2) {
     return 'cat1';
   } else if (cat2 > cat1) {
     return 'cat2';
-  } else if (cat1 === cat2 && cat1 === mouse && cat2 === mouse){
+  } else if (cat1 === cat2 && cat1 === mouse && cat2 === mouse) {
     return 'Os gatos trombam e o rato foge';
   } else {
     return 'Os dois correm lado a lado empatadoooos!';
@@ -65,15 +65,15 @@ console.log(catAndMouse(3, 2, 1));
 // Desafio 8
 function fizzBuzz(array) {
   var newArray = [];
-  for( let index = 0; index < array.length; index ++) {
-  if(array[index] % 3 === 0 && array[index] % 5 === 0) {
-    newArray.push('fizzBuzz');
-  } else if (array[index] % 3 === 0) {
-    newArray.push('fizz');
-  } else if (array[index] % 5 === 0) {
-    newArray.push('buzz');
-  } else {
-    newArray.push('bug!');
+  for (let index = 0; index < array.length; index++) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      newArray.push('fizzBuzz');
+    } else if (array[index] % 3 === 0) {
+      newArray.push('fizz');
+    } else if (array[index] % 5 === 0) {
+      newArray.push('buzz');
+    } else {
+      newArray.push('bug!');
     }
   }
   return newArray;
