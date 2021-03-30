@@ -38,17 +38,22 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(value5) {
-  let contador = 0;
-  let n = 0;
-  for( let i = 0; i < value5.length;  i+=1){
-    if( contador <= value5[i]){
-      contador = value5[i];
-      n +=1
-    }
-  }
-  return n;
+function highestCount() {
+  // let value5 = [0, 1, 2, 2, 2];
+  // let contador = 0;
+  // let n;
+  // for( let i = 0; i < value5.length; i+=1){
+  //   if( contador < value5[i]){
+  //     contador = value5[i];
+  //     n = true;
+  //   }else{
+  //     n = false;
+  //   }
+  //   console.log(n);
+  // }
+  
 }
+//console.log(highestCount());
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
