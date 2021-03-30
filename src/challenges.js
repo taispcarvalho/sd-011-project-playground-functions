@@ -20,17 +20,33 @@ function concatName(string) {
   let firstName = string[0];
   return `${lastName} ${firstName}`;
 }
-let string = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(concatName(string));
 
 // Desafio 5
-function footballPoints(string) {
+function footballPoints(wins, ties) {
+  let winPoits = wins * 3;
+  let tiesPoints = ties * 1;
+  let total = winPoits + tiesPoints;
+  return total;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayOfNumbers) {
+  let highNumber = 0;
+  let repeteations = 0;
+  for (number of arrayOfNumbers) {
+    if (number > highNumber) {
+      highNumber = number;
+    }
+  }
+  for (number of arrayOfNumbers) {
+    if (highNumber == number) {
+      repeteations += 1;
+    }
+  }
+  return repeteations;
 }
+let arrayOfNumbers = [0, 0, 0];
+console.log(highestCount(arrayOfNumbers));
 
 // Desafio 7
 function catAndMouse() {
