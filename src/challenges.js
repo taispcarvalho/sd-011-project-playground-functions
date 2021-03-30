@@ -2,7 +2,7 @@
 function compareTrue(param1, param2) {
   if (param1 && param2 === true) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
@@ -30,10 +30,13 @@ function concatName(array) {
 }
 console.log(concatName(['captain', 'my', 'captain']));
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winPoints = 3 * wins;
+  let tiePoints = 1 * ties;
+  let teamPoints = winPoints + tiePoints;
+  return teamPoints;
 }
-
+console.log(footballPoints(14, 8));
 // Desafio 6
 function highestCount() {
   // seu código aqui
