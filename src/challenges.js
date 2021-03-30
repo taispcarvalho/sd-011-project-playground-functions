@@ -41,17 +41,15 @@ function highestCount(arrNumber) {
   return highestRepet;
 }
 
-console.log(highestCount([0, 0, 0]));
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = Math.abs(cat1 - mouse);
   let dist2 = Math.abs(cat2 - mouse);
   if (dist1 < dist2) {
-    return cat2;
+    return 'cat2';
   }
   if (dist1 > dist2) {
-    return cat1;
+    return 'cat1';
   }
   return 'os gatos trombam e o rato foge';
 }
