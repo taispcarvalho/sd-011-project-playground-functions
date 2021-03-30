@@ -146,24 +146,24 @@ function decode(number) {
   let newMensage = '';
 
   for (let index = 0; index < number.length; index += 1) {
-      switch (number[index]) {
-        case '1':
-          newMensage += 'a';
-          break;
-        case '2':
-          newMensage += 'e';
-          break;
-        case '3':
-          newMensage += 'i';
-          break;
-        case '4':
-          newMensage += 'o';
-          break;
-        case '5':
-          newMensage += 'u';
-          break;
-        default:
-          newMensage += number[index];
+    switch (number[index]) {
+      case '1':
+        newMensage += 'a';
+        break;
+      case '2':
+        newMensage += 'e';
+        break;
+      case '3':
+        newMensage += 'i';
+        break;
+      case '4':
+        newMensage += 'o';
+        break;
+      case '5':
+        newMensage += 'u';
+        break;
+      default:
+        newMensage += number[index];
     }
   }
   return newMensage;
