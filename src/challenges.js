@@ -1,11 +1,12 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(par, par) {
+  result (par && par);
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(a, b) {
+  let area = (a*b)/2;
+  result (area);
 }
 
 // Desafio 3
@@ -15,7 +16,11 @@ function splitSentence() {
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  let pessoa = {
+  name: 'João',
+  lastName: 'Moreira'
+  }
+  result (pessoa.name + pessoa.lastName)
 }
 
 // Desafio 5
