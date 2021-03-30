@@ -1,7 +1,7 @@
 //Matheus Antonio - Zeonnatios
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(value1, value2) {
+  return value1 && value2
 }
 
 // Desafio 2
