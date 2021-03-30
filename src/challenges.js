@@ -14,24 +14,26 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-
-function concatName(array) {
-  var primeiro = concatName[0];
-  var ultimo = concatName[concatName.length - 1];
-  console.log(ultimo, primeiro)  
+let nome = ['ola', 'tudo', 'bem', 'com', 'voce']
+function concatName(strArr) { 
+ return strArr[strArr.length - 1] +', '+ strArr[0]; 
 }
-concatName['ola', 'tudo', 'bem', 'com', 'voce']
+console.log(concatName(nome)); 
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  console.log( (wins * 3) + (ties * 1));
+  return ((wins * 3) + (ties * 1));
 }
-footballPoints(10,10)
+
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+highestCount[9, 1, 2, 3, 9, 5, 7]
+function highestCount(numbers) {
+  for (let numbers of highestCount){
+    console.log(numbers)
+  }  
 }
+
 
 // Desafio 7
 function catAndMouse() {
