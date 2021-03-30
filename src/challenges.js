@@ -16,22 +16,41 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(array) {
-  return array.split(" ")
+  
+  let newArray = array.split(" ");
+  
+  return newArray;
 }
 
 // Desafio 4
 function concatName(stringArray) {
-  return stringArray[stringArray.length - 1] + ', ' + stringArray[0];
+  
+  let string = stringArray[stringArray.length - 1] + ', ' + stringArray[0];
+  
+  return string;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, draws) {
+  let points = (wins * 3) + draws;
+
+  return points
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numberArray) {
+  
+  let highestNumber = Math.max(...numberArray);
+  let count = 0;
+
+  for(let number of numberArray){
+    if (number === highestNumber){
+      count += 1;
+    }
+  }
+
+  return count;
+
 }
 
 // Desafio 7
