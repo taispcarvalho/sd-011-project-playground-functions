@@ -5,7 +5,7 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -14,15 +14,15 @@ function splitSentence(sentence) {
   let word = '';
 
   for (let index = 0; index < sentence.length; index += 1) {
-    if (sentence[index] == ' ' || index == sentence.length - 1) {
-      if (index == sentence.length - 1) {
+    if (sentence[index] === ' ' || index === sentence.length - 1) {
+      if (index === sentence.length - 1) {
         word += sentence[index];
       }
       answer.push(word);
       word = '';
     } else {
       word += sentence[index];
-    }  
+    }
   }
 
   return answer;
@@ -30,15 +30,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(names) {
-  let answerArray = [];
-
-  for (let name of names) {
-    if (names.indexOf(name) == 0 || names.indexOf(name) == names.length - 1) {
-      answerArray.push(name);
-    }
-  }
-
-  return answerArray[1] + ', ' + answerArray[0];
+  return `${names[names.length - 1]}, ${names[0]}`;
 }
 
 // Desafio 5
@@ -51,7 +43,7 @@ function highestCount(numbers) {
   let numberFrequencies = [];
 
   for (let number of numbers) {
-    if(!numberFrequencies[number]) {
+    if (!numberFrequencies[number]) {
       numberFrequencies[number] = 1;
     } else {
       numberFrequencies[number] += 1;
@@ -63,7 +55,6 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let answer = '';
   let distanceCat1 = cat1 - mouse;
   let distanceCat2 = cat2 - mouse;
 
@@ -76,14 +67,12 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
   if (distanceCat1 < distanceCat2) {
-    answer = 'cat1';
+    return 'cat1';
   } else if (distanceCat2 < distanceCat1) {
-    answer = 'cat2';
+    return = 'cat2';
   } else {
-    answer = 'os gatos trombam e o rato foge';
+    return = 'os gatos trombam e o rato foge';
   }
-
-  return answer;
 }
 
 // Desafio 8
@@ -91,9 +80,9 @@ function fizzBuzz(numbers) {
   let answer = [];
 
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 != 0) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
       answer.push('fizz');
-    } else if (numbers[index] % 3 != 0 && numbers[index] % 5 === 0) {
+    } else if (numbers[index] % 3 !== 0 && numbers[index] % 5 === 0) {
       answer.push('buzz');
     } else if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       answer.push('fizzBuzz');
@@ -110,28 +99,24 @@ function encode(message) {
   let encodedMessage = '';
 
   for (let index = 0; index < message.length; index += 1) {
-    if (message[index].toLowerCase() === message[index]) {
-      switch (message[index]) {
-        case 'a':
-          encodedMessage += '1';
-          break;
-        case 'e':
-          encodedMessage += '2';
-          break;
-        case 'i':
-          encodedMessage += '3';
-          break;
-        case 'o':
-          encodedMessage += '4';
-          break;
-        case 'u':
-          encodedMessage += '5';
-          break;
-        default:
-          encodedMessage += message[index];
-      }
-    } else {
-      encodedMessage += message[index];
+    switch (message[index]) {
+      case 'a':
+        encodedMessage += '1';
+        break;
+      case 'e':
+        encodedMessage += '2';
+        break;
+      case 'i':
+        encodedMessage += '3';
+        break;
+      case 'o':
+        encodedMessage += '4';
+        break;
+      case 'u':
+        encodedMessage += '5';
+        break;
+      default:
+        encodedMessage += message[index];
     }
   }
 
@@ -141,7 +126,7 @@ function encode(message) {
 function decode(encodedMessage) {
   let decodedMessage = '';
 
-  for (let index = 0; index < encodedMessage.length; index += 1) {   
+  for (let index = 0; index < encodedMessage.length; index += 1) {
     switch (encodedMessage[index]) {
       case '1':
         decodedMessage += 'a';

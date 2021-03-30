@@ -1,7 +1,10 @@
 // Auxiliary function for requirement 10
 function bubbleSort(arr) {
   let arrSize = arr.length;
-  let indexA, indexB, arrElement1, arrElement2;
+  let indexA;
+  let indexB;
+  let arrElement1;
+  let arrElement2;
 
   for (indexA = 1; indexA < arrSize - 1; indexA += 1) {
     for (indexB = 0; indexB < arrSize - indexA; indexB += 1) {
@@ -21,20 +24,20 @@ function bubbleSort(arr) {
 function techList(techs, name) {
   if (techs.length === 0) {
     return 'Vazio!';
-  } else {
-    let sortedTechs = bubbleSort(techs);
-    let finalList = [];
-    let finalListObject;
-
-    for (let tech of sortedTechs) {
-      finalListObject = {};
-      finalListObject['tech'] = tech;
-      finalListObject['name'] = name;
-      finalList.push(finalListObject);
-    }
-
-    return finalList;
   }
+
+  let sortedTechs = bubbleSort(techs);
+  let finalList = [];
+  let finalListObject;
+
+  for (let tech of sortedTechs) {
+    finalListObject = {};
+    finalListObject.tech = tech;
+    finalListObject.name = name;
+    finalList.push(finalListObject);
+  }
+
+  return finalList;
 }
 
 // Desafio 11
