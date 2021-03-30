@@ -15,13 +15,10 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  array  = ['Raphael', 'o', 'errado', 'Padilha'];
   for (let index = 0; index < array.length; index += 1){
     return array = array[array.length - 1] + ', ' + array[0];
   }
-  
 }
-console.log(concatName())
 
 // Desafio 5
 function footballPoints() {
