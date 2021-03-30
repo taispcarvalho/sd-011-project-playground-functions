@@ -58,6 +58,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+
 function fizzBuzz(arr) {
   let res = [];
   for (let i = 0; i < arr.length; i += 1) {
@@ -75,11 +76,24 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let res;
+  res = str.replace(/a/g, '1');
+  res = res.replace(/e/g, '2');
+  res = res.replace(/i/g, '3');
+  res = res.replace(/o/g, '4');
+  res = res.replace(/u/g, '5');
+  return res;
 }
-function decode() {
-  // seu código aqui
+
+function decode(str) {
+  let res;
+  res = str.replace(/1/g, 'a');
+  res = res.replace(/2/g, 'e');
+  res = res.replace(/3/g, 'i');
+  res = res.replace(/4/g, 'o');
+  res = res.replace(/5/g, 'u');
+  return res;
 }
 
 module.exports = {
