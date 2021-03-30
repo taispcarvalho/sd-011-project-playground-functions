@@ -19,9 +19,13 @@ const splitSentence = (str) => {
 console.log(splitSentence('Vamo que vamo'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+const concatName = (str) => {
+  const lastStr = str[str.length - 1];
+  const firstStr = str[0]
+  return lastStr + ' ' + firstStr;
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
