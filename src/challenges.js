@@ -77,9 +77,10 @@ function fizzBuzz(list = []) {
 
 // Desafio 9
 function encode(frase) {
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index].toLowerCase() === string[index]) {
-      switch (string[index]) {
+  let encodedMessage = '';
+  for (let index = 0; index < frase.length; index += 1) {
+    if (frase[index].toLowerCase() === frase[index]) {
+      switch (frase[index]) {
       case 'a':
         encodedMessage += '1';
         break;
@@ -96,18 +97,19 @@ function encode(frase) {
         encodedMessage += '5';
         break;
       default:
-        encodedMessage += string[index];
+        encodedMessage += frase[index];
       }
     } else {
       encodedMessage += message[index];
-      encodedMessage += string[index];
+      encodedMessage += frase[index];
     }
   }
   return encodedMessage;
+}
 
 
 function decode() {
-  // seu código 
+  decodedMessage=''
   for (let index = 0; index < string.length; index += 1) {
     if (string[index].toLowerCase() === string[index]) {
       switch (string[index]) {
@@ -147,5 +149,4 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence,
-};
+  splitSentence};
