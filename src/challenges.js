@@ -18,25 +18,27 @@ function splitSentence(phrase) {
   let array = [];
   let word = '';
   let delimiter = ' ';
-  
-  for(let index = 0; index <= phrase.length; index += 1){
-    if (phrase[index] === delimiter || index == phrase.length){
+  for (let index = 0; index <= phrase.length; index += 1) {
+    if (index === phrase.length) {
+      return array
+    } else
+    if (phrase[index] === delimiter || index === phrase.length) {
       array.push(word);
       word = '';
     } else {
-      word = word + phrase[index];
-    } return array
+      word += phrase[index];
+    }
   }
 }
 
 // Desafio 4
 function concatName(array) {
   let out = '';
-  let last =  array.length - 1;
+  let last = array.length - 1;
   out += array[last];
 
   for (let index = array.length; index >= 0; index -= 1) {
-    if (index == 0) {
+    if (index === 0) {
       out = out + ', ' + array[index];
     }
   } return out;
