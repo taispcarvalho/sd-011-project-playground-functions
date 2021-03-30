@@ -18,7 +18,7 @@ function concatName(arr) {
   let res = [];
   res.push(arr[arr.length - 1]);
   res.push(arr[0]);
-  return res;
+  return res.toString();
 }
 
 // Desafio 5
