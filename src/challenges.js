@@ -16,7 +16,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arrayStrings) {
   let lastIndex = arrayStrings.length - 1;
-  let lastFirst = arrayStrings[lastIndex] + ', ' + arrayStrings[0];
+  let lastFirst = `${arrayStrings[lastIndex]}, ${arrayStrings[0]}`;
   return lastFirst;
 }
 
@@ -54,9 +54,8 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2Distance = cat2 - mouse;
   if (Math.abs(cat1Distance) === Math.abs(cat2Distance)) {
     return 'os gatos trombam e o rato foge';
-  } else {
-    return Math.abs(cat1Distance) < Math.abs(cat2Distance) ? 'cat1' : 'cat2';
   }
+  return Math.abs(cat1Distance) < Math.abs(cat2Distance) ? 'cat1' : 'cat2';
 }
 
 // Desafio 8
@@ -67,13 +66,11 @@ function checkFizzBuzzType(num) {
 
   if (isDivisibleBy3 && isDivisibleBy5) {
     return 'fizzBuzz';
-  } else if (isDivisibleBy3) {
-    return 'fizz';
-  } else if (isDivisibleBy5) {
-    return 'buzz';
-  } else {
-    return 'bug!'
   }
+  if (isDivisibleBy3 || isDivisibleBy5) {
+    return isDivisibleBy3 ? 'fizz' : 'buzz';
+  }
+  return 'bug!'
 }
 
 function fizzBuzz(numbers) {
@@ -85,11 +82,33 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function switchLetterNumber(string) {
+  let codedString = string;
+  let coding = {
+    'a': '1',
+    'e': '2',
+    'i': '3',
+    'o': '4',
+    'u': '5'
+  };
+  for (let key in coding) {
+    for (let index = 0; index < string.length; index += 1) {
+      if (coding[key] === string[index]) { // Verifica se é um dos numeros(valores) do objeto
+        codedString = codedString.split(string[index]).join(key);
+      } else if (key === string[index]) { // Verifica se é uma das letras(chaves) do objeto
+        codedString = codedString.split(string[index]).join(coding[key]);
+      }
+    }
+  }
+  return codedString;
 }
-function decode() {
-  // seu código aqui
+
+function encode(string) {
+  return switchLetterNumber(string);
+}
+
+function decode(string) {
+  return switchLetterNumber(string);
 }
 
 module.exports = {
