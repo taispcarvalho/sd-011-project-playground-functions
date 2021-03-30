@@ -10,9 +10,24 @@ function calcArea(base, heigth) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  let aux = '';
+  let index = 0;
+  let arrayStr = [];
+  for (let i = 0; i < phrase.length; i += 1) {
+    if (phrase.charAt(i) !== ' ') {
+      aux += phrase.charAt(i);
+    } else {
+      arrayStr[index] = aux;
+      aux = '';
+      index += 1;
+    }
+  }
+  arrayStr[index] = aux;
+  return arrayStr;
 }
+
+console.log(splitSentence('Vamo que Vamo'));
 
 // Desafio 4
 function concatName() {
