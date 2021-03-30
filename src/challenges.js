@@ -54,6 +54,7 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let first = mouse - cat1;
   let second = mouse - cat2;
+  let msg = '';
 
   if (first < 0) {
     first *= -1;
@@ -62,12 +63,14 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
   if (first === second) {
-    return 'os gatos trombam e o rato foge';
+    msg = 'os gatos trombam e o rato foge';
   } else if (first > second) {
-    return 'cat2';
+    msg = 'cat2';
   } else {
-    return 'cat1';
+    msg = 'cat1';
   }
+
+  return msg;
 }
 
 console.log(catAndMouse(1, 0, 2));
