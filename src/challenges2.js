@@ -1,5 +1,8 @@
 // Desafio 10
 function techList(arrTec, name) {
+  if (arrTec === 0) {
+    return 'Vazio';
+  }
   let arrObjectTech = [];
   arrTec.sort();
 
