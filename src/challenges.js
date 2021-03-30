@@ -5,17 +5,16 @@ function compareTrue(value1, value2) {
   } else {
     return false;
   }
-};
+}
 
 // Desafio 2
 function calcArea(base, height) {
- return base * altura / 2;
+ return base * height / 2;
 };
- 
+
 
 // Desafio 3
 function splitSentence(string) {
-  let string = 'Go Trybe'
   return string.split(' ')
 };
 
