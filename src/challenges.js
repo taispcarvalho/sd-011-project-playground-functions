@@ -31,9 +31,12 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let highestNumber = Math.max(...array);
+
+  return array.filter((v) => (v === highestNumber)).length;
 }
+/* https://www.javaer101.com/pt/article/2119791.html */
 
 // Desafio 7
 function catAndMouse() {
