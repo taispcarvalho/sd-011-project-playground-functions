@@ -3,14 +3,21 @@ function compareTrue(bool1, bool2) {
   if (bool1 === bool2 && bool2 === true) {
     return true;
   }
-  
+
   return false;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  if (base && height > 0) {
+    let result = (base*height)/2;
+    return result;
+  }
+
+  return 'Insira valores maiores que zero!';
 }
+
+console.log (calcArea(10,50));
 
 // Desafio 3
 function splitSentence() {
