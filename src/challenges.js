@@ -1,6 +1,7 @@
 // Desafio 1
+//&& só é verdadeiro caso todos param sejam verdadeiros
 function compareTrue(a, b) {
-  return a && b; //&& só é verdadeiro caso todos param sejam verdadeiros
+  return a && b;
 }
 
 // Desafio 2
@@ -25,8 +26,9 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+//Math.max retorna o maior numero, e os 3 dots significa que pode vir mais de um argumento, ou seja um array.
 function highestCount(arr) {
-  let highestNumberInArray = Math.max(...arr); //Math.max retorna o maior numero do array, e os 3 dots significa que pode vir mais de um argumento.
+  let highestNumberInArray = Math.max(...arr);
   let timesRepeat = 0;
   for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] === highestNumberInArray) {
@@ -37,13 +39,24 @@ function highestCount(arr) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse() {}
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let finalArray = [];
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+      finalArray.push('fizzBuzz');
+    } else if (array[i] % 3 == 0) {
+      finalArray.push('fizz');
+    } else if (array[i] % 5 == 0) {
+      finalArray.push('buzz');
+    } else {
+      finalArray.push('bug!');
+    }
+  }
+  return finalArray;
+  console.log(finalArray);
 }
 
 // Desafio 9
