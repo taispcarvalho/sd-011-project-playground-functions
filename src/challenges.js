@@ -1,13 +1,11 @@
 // Desafio 1
-let param1 = true;
-let param2 = true;
 function compareTrue(param1, param2) {
   if(param1 === true && param2 === true){
   return true;
   } 
   return false;
-  }
-console.log(compareTrue(param1, param2));
+}
+//console.log(compareTrue(true, true));
 
 // Desafio 2
 let area = 0;
@@ -15,14 +13,16 @@ function calcArea(base, height){
   area = (base * height) / 2;
   return area;
 }
-console.log(calcArea(5,2));
+//console.log(calcArea(5, 2));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(stringPhrase) {
+  let splitPhrase = stringPhrase.split(' ');
+  return splitPhrase;
 }
+console.log(splitSentence('Go Trybe'));
 
-// Desafio 4
+// Desafio 4 
 function concatName() {
   // seu código aqui
 }
