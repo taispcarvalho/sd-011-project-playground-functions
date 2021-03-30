@@ -91,11 +91,90 @@ function threeOrFive(number) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+// vou utilizar objeto para guardar o 'dicionario' --FEITO!
+// transformar phrase em array --FEITO!
+// substituir cada letra no array pelo respectivo número no dictionary
+// com um for percorrendo o array
+// chamar pela forma de colchetes
+function encode(phrase) {
+  let individualChars = phrase.split('');
+  dictionary = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+
+  for (let i = 0; i < individualChars.length; i++) {
+    switch (individualChars[i]) {
+      case 'a':
+        individualChars[i] = 1;
+        break;
+
+      case 'e':
+        individualChars[i] = 2;
+        break;
+
+      case 'i':
+        individualChars[i] = 3;
+        break;
+
+      case 'o':
+        individualChars[i] = 4;
+        break;
+
+      case 'u':
+        individualChars[i] = 5;
+        break;
+
+      default:
+        break;
+    }
+  }
+
+  return individualChars.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase) {
+  let individualChars = phrase.split('');
+  dictionary = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+
+  for (let i = 0; i < individualChars.length; i++) {
+    switch (individualChars[i]) {
+      case '1':
+        individualChars[i] = 'a';
+        break;
+
+      case '2':
+        individualChars[i] = 'e';
+        break;
+
+      case '3':
+        individualChars[i] = 'i';
+        break;
+
+      case '4':
+        individualChars[i] = 'o';
+        break;
+
+      case '5':
+        individualChars[i] = 'u';
+        break;
+
+      default:
+        break;
+    }
+  }
+
+  return individualChars.join('');
 }
 
 module.exports = {
