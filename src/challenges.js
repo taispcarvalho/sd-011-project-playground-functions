@@ -24,11 +24,9 @@ function concatName(names) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  if (totalPoints = wins * 3 + ties) {
-    return totalPoints;
-  }
+  return (wins * 3) + (ties * 1);
 }
-
+console.log(footballPoints(14, 8))
 // Desafio 6
 function highestCount() {
   // seu código aqui
