@@ -1,4 +1,4 @@
-/ Desafio 1
+// Desafio 1 ok
 //let valor1=true;
 //let valor2=true;
 function compareTrue(valor1,valor2) {
@@ -6,7 +6,7 @@ function compareTrue(valor1,valor2) {
 }
 //compareTrue(valor2,valor1);
 
-// Desafio 2
+// Desafio 2 ok
 //let base = 1;
 //let altura = 51;
 //let areaTriangulo = 0.1;
@@ -33,7 +33,7 @@ function splitSentence(frase){
 function concatName(lista){
   let primPos=lista[0];
   let ultPos=lista[lista.length-1];
-  let resposta= ultPos.concat(" ",primPos);
+  let resposta= ultPos.concat(", ",primPos);
   console.log(resposta);
   }
 //concatName(lista);
@@ -42,7 +42,7 @@ function concatName(lista){
 //let wins=0;
 //let ties=0;
 function footballPoints(wins,ties) {
-  let totalpoints=wins*3+ties*1;
+  let totalpoints=wins*3+ties;
   return(totalpoints);
 }
 //footballPoints(wins,ties);
