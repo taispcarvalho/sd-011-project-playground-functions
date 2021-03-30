@@ -14,12 +14,14 @@ function calcArea(base, height) {
 // Desafio 3 // referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 function splitSentence(string) {
   return string.split(' ');
-} 
+};
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(strings) {
+  let firstString = strings[0];
+  let laststring = strings[strings.length -1];
+  return laststring + ' ' + firstString;
+};
 
 // Desafio 5
 function footballPoints() {
