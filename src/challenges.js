@@ -1,5 +1,7 @@
 // Desafio 1
-function compareTrue() {
+// Reference used: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+function compareTrue(value1, value2) {
+  return value1 && value2;
 }
 
 // Desafio 2
