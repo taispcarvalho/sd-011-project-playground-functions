@@ -50,10 +50,6 @@ function footballPoints(wins, ties) {
   return winPoints(wins) + tiePoints(ties);
 }
 
-console.log(footballPoints(14, 8));
-console.log(footballPoints(1, 2));
-console.log(footballPoints(0, 0));
-
 // part of Desafio 6
 function higherNumber(valueArray) {
   let highNumber = 0;
@@ -78,9 +74,16 @@ function highestCount(valueArray) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceBetweenCat1 = Math.abs(mouse - cat1);
+  let distanceBetweenCat2 = Math.abs(mouse - cat2);
+
+  return distanceBetweenCat1 > distanceBetweenCat2 ? 'cat2'
+  : distanceBetweenCat1 < distanceBetweenCat2 ? 'cat1'
+  : 'os gatos trombam e o rato foge'
 }
+// exercício resolvido usando esse link como base:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 
 // Desafio 8
 function fizzBuzz() {
