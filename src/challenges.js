@@ -20,12 +20,12 @@ function splitSentence(sentence) {
 function concatName(nomes) {
   return [nomes[nomes.length - 1], nomes[0]].join(', ');
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins * 3 + ties * 1
 }
+console.log(footballPoints(50, 2));
 
 // Desafio 6
 function highestCount() {
