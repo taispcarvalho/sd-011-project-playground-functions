@@ -46,10 +46,46 @@ function footballPoints(wins, ties) {
   return wins * 3 + ties;
 }
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+// Auxiliar function for Desafio 6
+// Written by myself for day 4.4 exercises
+function getBiggestNumberIndex(numbers) {
+  let biggestNumber;
+  let biggestNumberIndex;
+
+  if (numbers.length == 0) {
+    biggestNumberIndex = null;
+  } else {
+    for (var index = 0; !numbers[index]; index += 1) ;
+    biggestNumber = numbers[index];
+    biggestNumberIndex = index;
+    for (let number of numbers) {
+      if (numbers[numbers.indexOf(number)] > biggestNumber) {
+        biggestNumberIndex = numbers.indexOf(number);
+      }
+    }
+  }
+
+  return biggestNumberIndex;
 }
+
+// Desafio 6
+function highestCount(numbers) {
+  let numberFrequencies = [];
+
+  for (let number of numbers) {
+    if(!numberFrequencies[number]) {
+      numberFrequencies[number] = 1;
+    } else {
+      numberFrequencies[number] += 1;
+    }
+  }
+
+  return numberFrequencies[numberFrequencies.length - 1];
+}
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
