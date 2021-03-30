@@ -15,7 +15,7 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arr) {
-  return arr.join(', ')
+  return arr[arr.length -1] + ', ' + arr[0]
 }
 
 // Desafio 5
