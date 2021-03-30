@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(nameTech, nome) {
+function techList(nameTech, name) {
   let arrTechs = [];
   if (!nameTech) {
     return [];
@@ -7,11 +7,13 @@ function techList(nameTech, nome) {
   for (let index = 0; index < nameTech.length; index += 1) {
     arrTechs.push({
       tech: nameTech[index],
-      name: nome,
+      name: name,
     });
   }
   return arrTechs;
 }
+
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 function repeteNumber(num, arrNumber) {
   let repete = 0;
