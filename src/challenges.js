@@ -2,34 +2,34 @@
 function compareTrue(boo1, boo2) {
   return boo1 && boo2;
 }
-console.log(compareTrue(false,true));
+//console.log(compareTrue(false,true));
 
 
 // Desafio 2 -FEITO
 function calcArea(base, height) {
   return (base * height)/2
 }
-console.log(calcArea(51,1));
+//console.log(calcArea(51,1));
 
 // Desafio 3 -FEITO
 function splitSentence(phrase) {
   let arrayPhrase = phrase.split(' ');
   return arrayPhrase;
 }
-console.log(splitSentence('go trybe'))
+//console.log(splitSentence('go trybe'))
 
 // Desafio 4 -FEITO
 function concatName(...arrayName) {
-  return arrayName[arrayName.length -1].concat(',' + arrayName[0]);
+  return arrayName[arrayName.length -1].concat(", " + arrayName[0]);
 }
-console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo'));
+//console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo'));
 
 // Desafio 5 -FEITO
 function footballPoints(wins, ties) {
   let points=(wins * 3)+ ties;
   return points;
 }
-console.log(footballPoints(0,0));
+//console.log(footballPoints(0,0));
 
 // Desafio 6 -FEITO
 function highestCount(...numberArray) {
@@ -50,7 +50,7 @@ for(let index2 = 0; index2<numberArray.length; index2+=1){
 
 return highestNumberCount;
 }
-console.log(highestCount(0, 0, 0));
+//console.log(highestCount(0, 0, 0));
 
 // Desafio 7
 function catAndMouse() {
