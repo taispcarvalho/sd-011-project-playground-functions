@@ -36,7 +36,7 @@ function concatName(array) {
 
   for (let index = array.length; index >= 0; index -= 1) {
     if (index === 0) {
-      out = out + ', ' + array[index];
+      out += ', ' + array[index];
     }
   } return out;
 }
