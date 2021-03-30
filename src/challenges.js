@@ -65,12 +65,36 @@ function highestCount(array) {
   return countHighest;
 }
 /* Teste da função */
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+/* console.log(highestCount([9, 1, 2, 3, 9, 5, 7])); */
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+/* Recebe 3 posições numericas que representa a posição de cada animal. A ideia  e ver a distancia numerica entre as posiçoes e devolver o animal que estiver amis proximo 
+Para isso tenho que comparar a distancia do gato1 com o rato, gato2 com o rato e se os gatos estão na mesma distância.
+Se gato 1 estiver mais proximo retorna gato1.
+Se gato2 estiver amsi proximo retorna gato 2.
+Se os gatos estiverem na mesma distancia retorna frase "os gatos trombam e o rato foge". */
+
+function betweenDistance (mouse, cat){
+  if (mouse === cat){
+    return 0;
+  }else{
+    return (mouse -= cat) * (-1); 
+  }    
+
 }
+/* console.log(betweenDistance(1, 8)) */
+function catAndMouse(mouse, cat1, cat2){
+  let cat1Distance = betweenDistance (mouse, cat1);
+  let cat2Distance = betweenDistance (mouse, cat2);
+  if (cat1Distance === cat2Distance){
+    return "os gatos trombam e o rato foge"
+  }else if (cat2Distance < cat1Distance){
+    return "Cat2"; 
+  }else{
+    return "cat1";
+  }
+}
+console.log(catAndMouse(7, 1, 13));
 
 // Desafio 8
 function fizzBuzz() {
