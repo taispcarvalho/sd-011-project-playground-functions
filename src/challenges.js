@@ -39,15 +39,7 @@ function footballPoints(wins, ties) {
   return totalPoints;
 }
 
-console.log(footballPoints(14, 8));
-console.log(footballPoints(1, 2));
-console.log(footballPoints(0, 0));
-
-// Desafio 6
-function highestCount(valueArray) {
-  return repeatCount(higherNumber(valueArray), valueArray);
-}
-
+// part of Desafio 6
 function higherNumber (valueArray) {
   let higherNumber = 0;
   for (let value in valueArray) {
@@ -56,12 +48,18 @@ function higherNumber (valueArray) {
   return higherNumber;
 }
 
+// part of Desafio 6
 function repeatCount (number, valueArray) {
   let repeatTime = 0;
   for (let value of valueArray) {
     if (value === number) repeatTime += 1;
   }
   return repeatTime;
+}
+
+// Desafio 6
+function highestCount(valueArray) {
+  return repeatCount(higherNumber(valueArray), valueArray);
 }
 
 // Desafio 7
