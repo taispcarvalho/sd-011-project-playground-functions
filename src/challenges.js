@@ -42,9 +42,22 @@ function footballPoints(wins, ties) {
   return points;
 }
 
+function finderBiggest(array) {
+  let biggest = array[0];
+  for (let number of array) {
+    biggest = biggest > number ? biggest : number;
+  }
+  return biggest;
+}
+
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let biggest = finderBiggest(array);
+  let count = 0;
+  for (let number of array) {
+    if (number === biggest) count += 1;
+  }
+  return count;
 }
 
 // Desafio 7
