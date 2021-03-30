@@ -5,33 +5,53 @@ function compareTrue(older18, hasLicense) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height / 2)
+  return ((base * height) / 2);
 }
-
-console.log(calcArea(10,20))
 
 // Desafio 3
 function splitSentence(sentence) {
-  return sentence.split(' ')
+  return sentence.split(' ');
 }
-
-console.log(splitSentence('foguete'))
 
 // Desafio 4
 function concatName(arrayName) {
-  return (arrayName[arrayName.length - 1] + ', ' + arrayName[0])
+  return (arrayName[arrayName.length - 1] + ', ' + arrayName[0]);
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return ((wins * 3) + (ties * 1)); 
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumbers) {
+  let numberX = calculateHighestNumber(arrayNumbers);
+  let amountHighestNumber = mostRepeatedNumber(arrayNumbers, numberX);
+
+  return amountHighestNumber;
+}
+
+console.log(highestCount([0, 0, 0]))
+
+function calculateHighestNumber(arrayNumbers) {
+  let highest = arrayNumbers[0];
+
+  for (number of arrayNumbers) {
+    if (number > highest) {
+      highest = number;
+    }
+  }
+  return highest;
+}
+
+function mostRepeatedNumber(arrayNumbers, numberX) {
+  let amountNumberX = 0;
+  for (number of arrayNumbers) {
+    if (numberX === number) {
+      amountNumberX += 1;
+    }
+  }
+  return amountNumberX;
 }
 
 // Desafio 7
