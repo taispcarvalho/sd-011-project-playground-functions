@@ -136,7 +136,7 @@ function encode(string) {
         encodedMessage += string[index];
       }
     } else {
-      encodedMessage += message[index];
+      encodedMessage += string[index];
     }
   }
   return encodedMessage;
