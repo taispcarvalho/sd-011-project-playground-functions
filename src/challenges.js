@@ -28,14 +28,15 @@ function splitSentence(frase){
 
 
 // Desafio 4
-let lista=["meu","nome","nao","e","jhonny"];
+//let lista=["meu","nome","nao","e","jhonny"];
+//console.log(lista.length);
 function concatName(lista){
   // seu código aqui
-//  let ultimo=lista[lista[lista.length]];
-  let resposta=[lista[lista.length],lista[0]];
-  console.log(resposta);
+  let ultimo=lista[lista.length-1];
+  let resposta=[ultimo,lista[0]];
+  return(resposta);
 }
-concatName(lista);
+//concatName(lista);
 
 // Desafio 5
 function footballPoints() {
