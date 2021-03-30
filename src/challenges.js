@@ -22,10 +22,10 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  for (i = 0; i < array.length; i+=1){
-  }
+  for (let i = 0; i < array.length; i += 1) {
+}
   let first = array[0];
-  let last = array[array.length-1];
+  let last = array[array.length - 1];
   let result = first.concat(', ', last);
   return result;
 }
