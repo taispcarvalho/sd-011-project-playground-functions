@@ -34,8 +34,10 @@ function triangleCheck(a, b, c) {
 }
 
 // Desafio 13
+//  utilizado metodo replace com os parametros /\D/gim, onde o g acha todas as letras em vez de parar ao achar a primera, o i ignora maiusculas e minusculas o /\D/ procurara por todos os caracteres que sao letras, explicando mais claramente agora o /\D/gi procura todas as letras na string nao importa se estao maiusculas ou minusculas e troca ela por '', ou seja no final so restará os numeros da string.
+//  segue o link: https://www.w3schools.com/jsref/jsref_regexp_digit_non.asp
 function hydrate(a) {
-  let replaced = a.replace(/\D/gim, '');
+  let replaced = a.replace(/\D/gi, '');
   let numbers = 0;
   for (let i = 0; i < replaced.length; i += 1) {
     numbers += Number(replaced[i]);
