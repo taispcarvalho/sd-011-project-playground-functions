@@ -4,16 +4,16 @@ function techList(array, name) {
     return 'Vazio!';
   }
 
-  let techListArray = [];
+  let techList = [];
   let sortedTechNamesArray = array.sort();
 
   for (let techName of sortedTechNamesArray) {
-    techListArray.push({
+    techList.push({
       tech: techName,
       name: name,
     });
   }
-  return techListArray;
+  return techList;
 }
 
 console.log(techList([]));
