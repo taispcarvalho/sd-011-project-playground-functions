@@ -69,9 +69,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let count = 0;
+  string.split('').forEach((element) => {
+    const parsed = Number.parseInt(element, 10);
+    if (!Number.isNaN(parsed)) {
+      count += parsed;
+    }
+  });
+  return count > 1 ? `${count} copos de água` : `${count} copo de água`;
 }
+
+console.log(hydrate('6 cachaça'));
 
 module.exports = {
   generatePhoneNumber,
