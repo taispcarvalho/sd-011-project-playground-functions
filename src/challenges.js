@@ -10,10 +10,11 @@ function calcArea(base, altura) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  let array = str.split(" ");
+  return array;
 }
-
+console.log(splitSentence('Eu amo Stephanie!'));
 // Desafio 4
 function concatName() {
   // seu código aqui
