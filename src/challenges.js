@@ -1,17 +1,23 @@
 // Desafio 1
-function compareTrue(parm1,parm2) {
+function compareTrue(parm1, parm2) {
   return parm1 && parm2;  
 }
 
 // Desafio 2
-function calcArea(base,altura) {
-  return  (base * altura) / 2;
+function calcArea(base, altura) {
+  return (base * altura) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  return frase.split(" "); 
 }
+
+  
+  //ler a frase
+  //separar onde esra os espaços por aspas
+  //colocar virgula onde tem espaço
+
 
 // Desafio 4
 function concatName() {
