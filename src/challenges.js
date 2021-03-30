@@ -14,12 +14,14 @@ function splitSentence(text) {
   let split = text.split(' ');
   return split;
 }
-console.log(splitSentence('vamo que vamo'))
 /* source:https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string. */
 
 // Desafio 4
 function concatName(array) {
-  
+  let firstItem = array[0];
+  let lastItem = array[array.length-1];
+  let finalConcat = lastItem + ', ' + firstItem;
+  return finalConcat;
 }
 
 // Desafio 5
