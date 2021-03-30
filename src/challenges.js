@@ -18,11 +18,10 @@ function splitSentence(frase) {
 splitSentence('go Trybe');
 
 // Desafio 4
-let final = 0;
-function concatName(listaNomes) {
+function concatName() {
   // seu código aqui
 }
-concatName(['foguete', 'não', 'tem', 'ré']);
+concatName();
 
 // Desafio 5
 function footballPoints(wins, ties) {
