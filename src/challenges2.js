@@ -6,6 +6,7 @@ function techList(array) {
   
     let techListArray = [];
     let sortedTechNamesArray = array.sort();
+    console.log(sortedTechNamesArray)
   
     for (let techName of sortedTechNamesArray) {
       techListArray.push({
@@ -13,7 +14,7 @@ function techList(array) {
         name: 'Gabriel',
       });
     }
-    console.log(techListArray)
+    return techListArray;
   }
   
   console.log(techList([]));
