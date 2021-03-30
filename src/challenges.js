@@ -21,7 +21,7 @@ console.log(splitSentence(sloganTrybe));
 
 // Desafio 4
 function concatName(arraySrc) {
-  return arraySrc[arraySrc.length - 1] + ', ' + arraySrc[0];
+  return (arraySrc[arraySrc.length - 1]) + ', ' + (arraySrc[0]);
 }
 
 let arrayConcat = ['Ivaldo', 'Costa', 'Souza'];
@@ -38,17 +38,21 @@ console.log(footballPoints(0, 0));
 function highestCount(arrayNum) {
   let higherNumber = 0;
   let cont = 0;
-  
+
   for (let index = 0; index < arrayNum.length; index += 1) {
-    if (arrayNum[index] > higherNumber) 
+    if (arrayNum[index] > higherNumber) { 
       higherNumber = arrayNum[index];
+    }
   }
-  for (let index = 0; index < arrayNum.length; index += 1) {
-    if (arrayNum[index] === higherNumber) 
+  for (let index = 0; index < num.length; index += 1) {
+    if (num[index] === numCont) {
       cont += 1;
+    }
   }
   return cont;
 }
+
+
 
 let numArray = [9, 1, 2, 9, 9, 3, 9, 5, 7];
 console.log(highestCount(numArray));
