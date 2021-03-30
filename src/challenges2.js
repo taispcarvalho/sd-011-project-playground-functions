@@ -2,12 +2,14 @@
 function techList(arrTec, name) {
   let arrObjectTech = [];
   arrTec.sort();
+
   for (let i = 0; i < arrTec.length; i += 1) {
     arrObjectTech[i] = {
       tech: arrTec[i],
-      name: name,
+      name,
     };
   }
+
   return arrObjectTech;
 }
 
