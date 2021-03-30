@@ -1,14 +1,16 @@
 // Desafio 10
 function techList(techs, name) {
 
-techs.sort()
+techs = techs.sort()
 
   let lista = []
 
-  if(techs === ['']){
+  if(techs.length === 0){
     return "Vazio!"
-  }else{
-    for(let i = 0; i < techs.length; i += 1){
+  }
+  else{
+    
+  for(let i = 0; i < techs.length; i += 1){
     
     lista[i] = { tech: techs[i], name: name}
 
@@ -19,11 +21,23 @@ techs.sort()
   
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+console.log(techList([], "Lucas"));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+
+
+  let phoneNumber = ''
+  for(let i = 0; i < 2; i += 1){
+    if(i === 0){
+      phoneNumber += '('
+      phoneNumber += numbers[i]
+    }else{
+      phoneNumber += numbers[i]
+      phoneNumber += ')'
+    }
+  }
+
 }
 
 // Desafio 12
