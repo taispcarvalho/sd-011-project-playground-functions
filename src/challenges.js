@@ -52,7 +52,17 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-
+  let div3 = false, div5 = false;
+  for (let index = 0; index < array.length; index += 1){
+    if (array[index] % 3 === 0) div3 = true;
+    if (array[index] % 5 === 0) div5 = true;
+    if (div3 && div5) array[index] = 'fizzBuzz';
+    else if (div3) array[index] = 'fizz';
+    else if (div5) array[index] = 'buzz';
+    else array[index] = 'bug!';
+    div3 = false;
+    div5 = false;
+  }
   return array;
 }
 
