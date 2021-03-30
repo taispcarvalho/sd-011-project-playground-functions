@@ -30,8 +30,8 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(input) {
+  return `${input[input.length - 1]}, ${input[0]}`;
 }
 
 // Desafio 5
