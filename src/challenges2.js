@@ -5,31 +5,31 @@ function techList(techNames, name) {
 }
 
 // Desafio 11
-function checkInvalidDigits(numbers) {
-  for (let n of numbers) {
-    if (n > 9 || n < 0) {
+function checkInvalidDigits(digitsArray) {
+  for (let digit of digitsArray) {
+    if (digit > 9 || digit < 0) {
       return true;
     }
   }
   return false;
 }
 
-function checkTooManyRepeats(numbers) {
+function checkTooManyRepeats(digitsArray) {
   const count = {};
-  for (let n of numbers) {
-    if (count[n]) {
-      count[n] += 1;
+  for (let digit of digitsArray) {
+    if (count[digit]) {
+      count[digit] += 1;
     } else {
-      count[n] = 1;
+      count[digit] = 1;
     }
   }
   const maxCount = Object.values(count).reduce((a, b) => Math.max(a, b));
   return maxCount >= 3;
 }
 
-function isValid(numbers) {
-  const hasInvalidDigits = checkInvalidDigits(numbers);
-  const hasTooManyRepeats = checkTooManyRepeats(numbers);
+function isValid(digitsArray) {
+  const hasInvalidDigits = checkInvalidDigits(digitsArray);
+  const hasTooManyRepeats = checkTooManyRepeats(digitsArray);
   if (hasInvalidDigits || hasTooManyRepeats) {
     return false;
   }
