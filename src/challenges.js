@@ -6,22 +6,23 @@ function compareTrue(param1, param2) {
     return false;
   }
 }
+console.log(compareTrue(true, true));
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
+console.log(calcArea(10, 50));
 // Desafio 3
 function splitSentence(frase, separator) {
   let fraseParaSeparar = frase.split(separator);
   return fraseParaSeparar;
 }
-
+let space = ' ';
+console.log(splitSentence('go Trybe', space));
 // Desafio 4
-function concatName() {
-  let stringConcatenada = 
+function concatName(array) {
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
