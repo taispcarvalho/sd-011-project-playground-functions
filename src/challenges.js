@@ -120,15 +120,15 @@ function encode(text) {
 
   for(let index in text){
     if (text[index] === 'a'){
-      encodeText += 1;
+      encodeText += '1';
     }else if (text[index] === 'e'){
-      encodeText += 2;
+      encodeText += '2';
     }else if (text[index] === 'i'){
-      encodeText += 3;
+      encodeText += '3';
     }else if (text[index] === 'o'){
-      encodeText += 4;
+      encodeText += '4';
     }else if (text[index] === 'u'){
-      encodeText += 5;
+      encodeText += '5';
     } else {
       encodeText += text[index];
     }
@@ -136,22 +136,21 @@ function encode(text) {
   return encodeText;
 }
 
-console.log(encode('hi there'))
+console.log(encode('how are you doing?'))
 
-function decode(text) {
-  // seu código aqui
+function decode(text){
   let decodeText = [];
 
-  for(let index in text){
-    if (decodeText[index] === '1'){
+  for (let index in text) {
+    if (text[index] === '1') {
       decodeText += 'a';
-    }else if (text[index] === '2'){
+    } else if (text[index] === '2') {
       decodeText += 'e';
-    }else if (text[index] === '3'){
+    } else if (text[index] === '3') {
       decodeText += 'i';
-    }else if (text[index] === '4'){
+    } else if (text[index] === '4') {
       decodeText += 'o';
-    }else if (text[index] === '5'){
+    } else if (text[index] === '5') {
       decodeText += 'u';
     } else {
       decodeText += text[index];
@@ -160,7 +159,10 @@ function decode(text) {
   return decodeText;
 }
 
-console.log(decode('h3 th2r2'))
+
+
+
+console.log(decode('h4w 1r2 y45 d43ng?'));
 
 module.exports = {
   calcArea,
