@@ -29,16 +29,13 @@ function isValidPhoneNumber(numbers) {
   let previous;
   let sortedNumbers = numbers.slice(0).sort();
 
-  for (let i = 0; i < sortedNumbers.length; i += 1) {
-    count = previous && previous === sortedNumbers[i] ? count + 1 : 1;
+  sortedNumbers.forEach((number) => {
+    count = previous && previous === number ? count + 1 : 1;
 
-    if (count === 3) {
-      status = false;
-      break;
-    }
+    if (count === 3) return false;
 
-    previous = sortedNumbers[i];
-  }
+    previous = number;
+  });
 
   return status;
 }
