@@ -79,51 +79,50 @@ function fizzBuzz(numbers) {
     if (num % 3 === 0 && num % 5 === 0) {
       numbersFizzBuzz.push('fizzBuzz');
     } else {
-      numbersFizzBuzz.push(checkFizzBuzzType(num));
+      numbersFizzBuzz.push(checkFizzOrBuzz(num));
     }
   }
   return numbersFizzBuzz;
 }
 
 // Desafio 9
-function switchLetterNumber(char, typeNumber) {
-  let code = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-
-  if (typeNumber) {
+function switchLetterNumber(char, code) {
+  if (char !== null) {
     for (let key in code) {
-      if (char == code[key]) {
-        return key;
-      }
-    }
-    return char;
-  } else {
-    for (let key in code) {
-      if (char == key) {
+      if (char === key) {
         return code[key];
       }
     }
-    return char;
   }
+  return char;
 }
 
 function encode(string) {
+  let coding = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  }
   let codedString = '';
   for (let index = 0; index < string.length; index += 1) {
-    codedString += switchLetterNumber(string[index], false);
+    codedString += switchLetterNumber(string[index], coding);
   }
   return codedString;
 }
 
 function decode(string) {
+  let decoding = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  }
   let decodedString = '';
   for (let index = 0; index < string.length; index += 1) {
-    decodedString += switchLetterNumber(string[index], true);
+    decodedString += switchLetterNumber(string[index], decoding);
   }
   return decodedString;
 }
