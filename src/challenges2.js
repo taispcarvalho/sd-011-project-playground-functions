@@ -122,10 +122,29 @@ console.log(triangleCheck(12, 12, 4));
 console.log(triangleCheck(15, 8, 12));
 console.log(triangleCheck(20, 4, 10));
 
+/* 
+  Como este desafio nos propõe a pesquisar, usei alguns conceitos que já conhecia e que ainda não foram apresentados no curso:
+    String.match: Usa uma Expressão Regular para encontrar substrings;
+      https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
+      https://regexr.com/
+    Array.map: Roda uma função para cada elemento de um array
+      https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+    Array.reduce: Roda uma função para cada elemento de um array, pegando o retorno da anterior como o primeiro parâmetro para a próxima
+      https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+*/
+
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(orderString) {
+  let beverageCountArray = orderString.match(/\d+/g);
+
+  beverageCountArray = beverageCountArray.map(count => parseInt(count));
+
+  let totalBeverageCount = beverageCountArray.reduce((accumulator, currentValue) => accumulator + currentValue);
+
+  return `${totalBeverageCount} copos de água`;
 }
+
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
