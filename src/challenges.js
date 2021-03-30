@@ -6,7 +6,6 @@ function compareTrue(bolean1, bolean2) {
   return false;
 }
 
-
 // Desafio 2
 function calcArea(base, heigth) {
   return (base * heigth) / 2;
@@ -74,7 +73,6 @@ function fizzBuzz(arrNumber) {
   }
   return arrNumber;
 }
-
 
 function ehVogal(char, str) {
   for (let index = 0; index < str.length; index += 1) {
