@@ -54,12 +54,13 @@ function generatePhoneNumber(arrNumber) {
   }
   return numberPhone;
 }
-console.log(generatePhoneNumber([1, 2, 2, 4, 5, 6, 7, 8, 9, 0, 1],));
-
 
 // Desafio 12
-function triangleCheck() {
-  
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
