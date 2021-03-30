@@ -10,9 +10,8 @@ function calcArea(a, b) {
 }
 
 // Desafio 3
-function splitSentence(string, separador) {
-  separador = ',';
-  let arraySplit = string.split(separador);
+function splitSentence(string) {
+  let arraySplit = string.split(',');
   return (arraySplit);
 }
 
@@ -30,8 +29,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers, count) {
+numbers = [0 , 0 , 0];
+  let higherNumber = 0;
+  count = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] > higherNumber) {
+      higherNumber = numbers[index];
+      count = count + 1;
+      console.log(count);
+    }
+    
+  }
+  return count;
 }
 
 // Desafio 7

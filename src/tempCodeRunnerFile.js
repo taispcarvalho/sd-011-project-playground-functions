@@ -1,15 +1,14 @@
-let pessoas = ['captain', 'my', 'captain'];
-let primeiro = pessoas[0];
-let ultimo = pessoas[pessoas.length - 1];
-function concatName(pessoas) {
-if ( pessoas = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) {
-  let resultado = ultimo + ',' + primeiro;
-} else if ( pessoas = ['foguete', 'não', 'tem', 'ré']) {
-  let resultado = ultimo + ',' + primeiro;
-} else if (pessoas = ['captain', 'my', 'captain']) {
-  let resultado = ultimo + ',' + primeiro;
+function highestCount(numbers, count) {
+numbers = [0 , 0 , 0];
+  let higherNumber = 0;
+  count = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] > higherNumber) {
+      higherNumber = numbers[index];
+      count = count + 1;
+      console.log(count);
+    }
+    
+  }
+  return count;
 }
-
-    return (ultimo + ',' + primeiro);
-  } 
-console.log(ultimo + ',' + primeiro);
