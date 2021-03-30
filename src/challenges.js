@@ -1,11 +1,14 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  if(value1 === true && value2 === true){
+  if(bool1=== true && bool2 === true){
     return true
-  }else{
+  }
+  else{
     return false
   }
 }
+
+compareTrue(true, false);
 
 // Desafio 2
 function calcArea() {
