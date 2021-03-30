@@ -1,4 +1,3 @@
-highestCount ([9, 1, 2, 3, 9, 5, 7])
 // Desafio 1
 function compareTrue(parameter1, parameter2) {
   return (parameter1 && parameter2);
@@ -52,8 +51,14 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    return ('cat1');
+  } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+    return ('cat2');
+  }else {
+    return ('os gatos trombam e o rato foge');
+  }
 }
 
 // Desafio 8
