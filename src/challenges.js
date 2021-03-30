@@ -6,18 +6,19 @@ function compareTrue(param1, param2) {
     return false;
   }
 }
-console.log(compareTrue(true, true));
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base*height)/2;
+  let area = (base * height) / 2;
   return area;
 }
-
-console.log(calcArea());
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase, separator) {
+  let fraseParaSeparar = frase.split(separator);
+  return fraseParaSeparar;
 }
+let space = ' ';
+let fraseNaoSeparada = 'foguete'
+console.log(fraseNaoSeparada, space);
 
 // Desafio 4
 function concatName() {
