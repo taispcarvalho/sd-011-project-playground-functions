@@ -2,7 +2,7 @@
 function techList(nameTech, name) {
   let arrTechs = [];
   nameTech = nameTech.sort();
-  if (!nameTech) {
+  if (nameTech.length === 0) {
     return 'Vazio!';
   }
   for (let index = 0; index < nameTech.length; index += 1) {
