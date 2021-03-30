@@ -2,7 +2,7 @@
 function compareTrue(valor1, valor2) {
 return valor1 && valor2
 }
-console.log(compareTrue(false,true));
+//console.log(compareTrue(false,true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -10,19 +10,21 @@ function calcArea(base, height) {
     return area
   }  
 }
-console.log(calcArea(51,1));
+//console.log(calcArea(51,1));
 
 // Desafio 3
 function splitSentence(array) {
-let texto = array.split(' ', );
+let texto = array.split(' ');
  return texto
 }
-console.log(splitSentence('foguete') );
+//console.log(splitSentence('foguete') );
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(arr) {
+ return `${arr[arr.length -1]}, ${arr[0]}`;
+}  
+let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+console.log(concatName(nomes));
 
 // Desafio 5
 function footballPoints() {
