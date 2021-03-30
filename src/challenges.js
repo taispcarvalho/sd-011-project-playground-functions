@@ -18,7 +18,7 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arr) {
-  return `${arr[arr.length - 1]}, ${arr[0]})`;
+  return `${arr[arr.length - 1]}, ${arr[0]}`;
 }
 
 // Desafio 5
@@ -121,6 +121,9 @@ function decode(str) {
   }
   return newStr;
 }
+
+console.log(encode("aeiou"));
+console.log(decode("12345"));
 
 module.exports = {
   calcArea,
