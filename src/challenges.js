@@ -14,7 +14,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
-  let palavras = frase.split(" ");
+  let palavras = frase.split(' ');
   return palavras;
 }
 
@@ -34,10 +34,10 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestNumber(numbers) {
-  maiorNum = 0;
+  let maiorNum = 0;
   for (let index = 0; index < numbers.length; index += 1) {
-    if (maiorNum < highestCount[index]) {
-      maiorNum = highestCount[index];
+    if (maiorNum < numbers[index]) {
+      maiorNum = numbers[index];
     }
   }
   return maiorNum;
@@ -58,20 +58,32 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  re1 = mouse - cat1;
-  re2 = mouse - cat2;
+  let re1 = mouse - cat1;
+  let re2 = mouse - cat2;
   if (re1 > re2) {
-    return 'cat1'
+    return 'cat1';
   } else if (re1 < re2) {
-    return 'cat2'
+    return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
+  let arrei = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    if(numbers[index] % 3 == 0) {
+      arrei.push("fizz");
+    } else if (numbers[index] % 5 == 0) {
+      arrei.push("buzz");
+    } else if (numers[index] % 3 == 0 && numbers[index] % 5 == 0) {
+      arrei.push("fizzbuzz");
+    } else {
+      arrei.push("bug!");
+    }
+  }
 }
 
 // Desafio 9
