@@ -16,17 +16,12 @@ function splitSentence() {
 
 // Desafio 4
 
-function concatName(pessoas) {
-  pessoas = [];
-  for (let i = 0; i < pessoas.length; i += 1) {
-    let primeiro = pessoas[0];
-    let ultimo = pessoas[pessoas.length - 1];
-    if (pessoas = []) {
-      let resultado1 = ultimo + ',' + primeiro;
+function concatName(Array) {
+  let frase = Array[Array.length - 1] + ',' + Array[0];
     } 
-    return (ultimo + ',' + primeiro);
+    return frase;
   }
-  console.log(ultimo + ',' + primeiro);
+  console.log(frase);
 }
 
 // Desafio 5
