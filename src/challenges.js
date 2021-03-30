@@ -62,15 +62,15 @@ function fizzBuzz(numbers) {
   let phrase = [];
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-    phrase.push('fizzBuzz');
+      phrase.push('fizzBuzz');
     } else if (numbers[index] % 3 === 0) {
-    phrase.push('fizz');
+      phrase.push('fizz');
     } else if (numbers[index] % 5 === 0) {
-    phrase.push('buzz');
+      phrase.push('buzz');
     } else {
-    phrase.push('bug!');
+      phrase.push('bug!');
     }
-    }
+  }
   return phrase;
 }
 
