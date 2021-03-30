@@ -7,10 +7,20 @@ function compareTrue(parameter1, parameter2) {
 function calcArea(base, height) {
   return (base * height / 2)
 }
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  let split = [];
+  let index = 0;
+  split [0] = '';
+  for (let char of sentence) {
+    if (char === ' ') {
+      index += 1;
+      split[index] = '';
+    } else {
+      split[index]+=char;
+    }
+  } 
+return split;
 }
 
 // Desafio 4
