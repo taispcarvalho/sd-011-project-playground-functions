@@ -66,7 +66,7 @@ console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(intArray) {
-  let sortedArray = intArray.sort().reverse();
+  let sortedArray = intArray.sort((a, b) => b - a);
   let count = 1;
   let highest = sortedArray[0];
 

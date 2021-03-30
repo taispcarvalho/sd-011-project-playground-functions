@@ -35,29 +35,37 @@ function hasNonDigitNumber(numArray) {
   return hasNonDigit;
 }
 
-function hasThriceOrMoreRepeatingValue(numArray) {
+function countRepeats(numArray, num) {
+  let sortedArray = [...numArray].sort((a, b) => a - b);
+
   let count = 1;
+  let index = sortedArray.indexOf(num);
+
+  for (let i = index + 1; i < sortedArray.length; i += 1) {
+    if (sortedArray[i] === num) {
+      count += 1;
+    }
+  }
+
+  return count;
+}
+
+function hasThriceOrMoreRepeatingValue(numArray) {
   let repeats = false;
 
-  let sortedArray = [...numArray].sort();
+  for (let num of numArray) {
+    let count = countRepeats(numArray, num);
 
-  for (let i = 1; i < sortedArray.length; i += 1) {
-    if (sortedArray[i] === sortedArray[i - 1]) {
-      count += 1;
-
-      if (count === 3) {
-        repeats = true;
-        break;
-      }
-    } else {
-      count = 1;
+    if (count >= 3) {
+      repeats = true;
+      break;
     }
   }
 
   return repeats;
 }
 
-function generatePhoneNumber(numArray) {
+function validatePhoneNumber(numArray) {
   if (numArray.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
@@ -66,22 +74,25 @@ function generatePhoneNumber(numArray) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
-  let phoneNumberString = '';
+  return numArray;
+}
 
-  // adds regional verification
-  phoneNumberString += `(${numArray[0]}${numArray[1]}) `;
-
-  // adds first part of number
-  for (let i = 2; i < 7; i += 1) {
-    phoneNumberString += numArray[i];
+function generatePhoneNumber(numArray) {
+  let validatedArray = validatePhoneNumber(numArray);
+  if (typeof validatedArray === 'string') {
+    return validatedArray;
   }
 
-  // adds separator
+  let phoneNumberString = `(${validatedArray[0]}${validatedArray[1]}) `;
+
+  for (let i = 2; i < 7; i += 1) {
+    phoneNumberString += validatedArray[i];
+  }
+
   phoneNumberString += '-';
 
-  // adds second part of number
   for (let i = 7; i < 11; i += 1) {
-    phoneNumberString += numArray[i];
+    phoneNumberString += validatedArray[i];
   }
 
   return phoneNumberString;
@@ -89,6 +100,7 @@ function generatePhoneNumber(numArray) {
 
 console.log(generatePhoneNumber([6, 4, 9, 9, 2, 5, 7, 1, 0, 5, 7]));
 console.log(generatePhoneNumber([0, 2, 3, 4]));
+console.log(generatePhoneNumber([3, 3, 3, 4, 5, 6, 7, 8, 9, 9, 4]));
 console.log(generatePhoneNumber([3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]));
 console.log(generatePhoneNumber([6, 4, 10, 9, 2, 5, 7, 1, 0, 5, 7]));
 console.log(generatePhoneNumber([6, 4, -4, 9, 2, 5, 7, 1, 0, 5, 7]));
@@ -99,15 +111,10 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
 
-  if (lineA >= lineB + lineC) {
-    return false;
-  }
+  let sortedLines = [lineA, lineB, lineC];
+  sortedLines.sort((a, b) => a - b);
 
-  if (lineB >= lineA + lineC) {
-    return false;
-  }
-
-  if (lineC >= lineA + lineB) {
+  if (sortedLines[0] + sortedLines[1] < sortedLines[2]) {
     return false;
   }
 
