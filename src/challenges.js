@@ -19,7 +19,7 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(firstArray) {
+function concatName(name) {
   return `${firstArray[firstArray.length - 1]}, ${firstArray[0]}`;
 }
 
@@ -43,29 +43,28 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
-  let distancia1;
-  let distancia2;
-  if (cat1 < mouse) {
-    distancia1 = mouse - cat1;
-  } else {
-    distancia1 = cat1 - mouse;
-  }
-  if (cat2 < mouse) {
-    distancia2 = mouse - cat2;
-  } else {
-    distancia2 = cat2 - mouse;
-  }
-  if (distancia1 < distancia2) {
-    return 'cat1';
-  } else if (distancia2 < distancia1) {
-    return 'cat2';
-  }
+let gato1 = cat1 - mouse;
+let gato2 = cat2 - mouse; 
+if (gato1 < 0) {
+  gato1 = gato1 * -1;
+}
+if (gato2 < 0) {
+  gato2 = gato2 * -1;
+}
+if(gato1 < gato2) {
+  return 'cat1';
+}else if (gato1 > gato2) {
+  return 'cat2';
+}else{
   return 'os gatos trombam e o rato foge';
 }
+}
+console.log (catAndMouse(5,3,6))
 
-console.log(catAndMouse(21, 6, 14));
+
 // Desafio 8
 function fizzBuzz(array) {
+    let newArray = [];
    for (let index = 0; index < array.length; index+=1) {
       if (array[index] % 5 === 0 && array[index] % 3 === 0) {
         newArray.push('fizzBuzz');
