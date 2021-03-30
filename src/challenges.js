@@ -52,11 +52,22 @@ function catAndMouse(mouse, cat1, cat2) {
   return resultado;
 }
 
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// Desafio 8 -FEITO
+function fizzBuzz(...arrayFizzBuzz) {
+  secondArray=[];
+  for(index=0; index<arrayFizzBuzz.length; index+=1){
+    if(arrayFizzBuzz[index]%3===0 && arrayFizzBuzz[index]%5===0){
+      secondArray.push('fizzBuzz')
+    }else if(arrayFizzBuzz[index]%5===0){
+      secondArray.push('buzz')
+    }else if (arrayFizzBuzz[index]%3===0){
+      secondArray.push('fizz')
+    }else{
+      secondArray.push('bug!')
+    }
+  }
+  return secondArray
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
