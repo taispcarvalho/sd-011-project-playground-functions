@@ -13,7 +13,6 @@ function techList(nameTech, nome) {
   return arrTechs
 }
 
-
 function checkNumberPhone (phoneNumber) {
   let repete = 0;
   if (phoneNumber.length !== 11) {
@@ -37,6 +36,7 @@ function checkNumberPhone (phoneNumber) {
     }
   }
 }
+
 // Desafio 11
 function generatePhoneNumber(arrNumber) {
   if (checkNumberPhone(arrNumber)) {
