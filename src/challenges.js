@@ -17,9 +17,9 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(array2 = []) {
-    return array2[array2.length - 1] + ', ' + array2[0];
+    return `${array2[array2.length - 1]}, ${array2[0]}`;
 }
-
+console.log(concatName(['Luís', 'Carlos', 'Seixas']));
 // Desafio 5
 function footballPoints() {
   // seu código aqui
