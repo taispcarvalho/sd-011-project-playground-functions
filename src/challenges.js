@@ -17,10 +17,9 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName(names) {
-  let firstPosition = names[0];
-  let lastPosition = names[names.length - 1];
-  return names.concat(lastPosition, firstPosition);
+// Usando Template strings
+function concatName(namesArray) {
+  return `${namesArray[namesArray.lenght - 1]}, ${namesArray[0]}`
 }
 
 // Desafio 5
