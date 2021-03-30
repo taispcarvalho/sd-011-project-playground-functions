@@ -9,8 +9,8 @@ function calcArea(a, b) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(name) {
+  return name.split("");
 }
 
 // Desafio 4
