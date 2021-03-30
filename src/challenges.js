@@ -109,7 +109,7 @@ function ehNumber(char, str) {
 }
 
 function decode(str) {
-  let vogais = '0a1e2i3o4u';
+  let vogais = 'a1e2i3o4u5';
   let newStr = '';
   for (let index = 0; index < str.length; index += 1) {
     let vogalLetra = ehNumber(str[index], vogais);
