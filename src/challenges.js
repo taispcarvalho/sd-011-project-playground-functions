@@ -73,17 +73,63 @@ function fizzBuzz(numberArray) {
       newArray.push('buzz');
     } else {
       newArray.push('bug!');
-    }  
+    }
   }
   return newArray;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let newString = '';
+  let objeto = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  for (let i = 0; i < string.length; i += 1) {
+    if (objeto[string[i]] !== undefined) {
+      newString += objeto[string[i]];
+    } else {
+      newString += string[i];
+    }
+  }
+  return newString;
 }
-function decode() {
-  // seu código aqui
+
+// function encode(string) {
+//   let newString = '';
+//   for (let i = 0; i < string.length; i += 1) {
+//     switch (string[i]) {
+//     case 'a':
+//       newString += '1';
+//       break;
+//     case 'e':
+//       newString += '2';
+//       break;
+//     case 'i':
+//       newString += '3';
+//       break;
+//     case 'o':
+//       newString += '4';
+//       break;
+//     case 'u':
+//       newString += '5';
+//       break;
+//     default:
+//       newString += string[i];
+//     }
+//   }
+//   return newString;
+// }
+// console.log(encode('hi there!'));
+
+function decode(string) {
+  let newString = '';
+  let objeto = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  for (let i = 0; i < string.length; i += 1) {
+    if (objeto[string[i]] !== undefined) {
+      newString += objeto[string[i]];
+    } else {
+      newString += string[i];
+    }
+  }
+  return newString;
 }
 
 module.exports = {
