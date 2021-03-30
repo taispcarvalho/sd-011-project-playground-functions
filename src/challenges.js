@@ -83,7 +83,7 @@ function encode(string) {
   let decodedArray = [];
 
   for (let character of charactersArray) {
-    if (array.indexOf(character) > 0) decodedArray.push(array.indexOf(character) + 1);
+    if (array.indexOf(character) >= 0) decodedArray.push(array.indexOf(character) + 1);
     else decodedArray.push(character);
   }
 
@@ -102,7 +102,7 @@ function decode(decodedString) {
   let charactersArray = [];
 
   for (let character of decodedArray) {
-    if (Object.keys(array).indexOf(character) > 0) charactersArray.push(array[character]);
+    if (Object.keys(array).indexOf(character) >= 0) charactersArray.push(array[character]);
     else charactersArray.push(character);
   }
 
