@@ -6,9 +6,13 @@ let desafio1 = compareTrue(true, true);
 console.log(desafio1);
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let step1 = base * height;
+  let step2 = step1 / 2;
+  return step2;
 }
+let desafio2 = calcArea(5, 10);
+console.log(desafio2);
 
 // Desafio 3
 function splitSentence() {
