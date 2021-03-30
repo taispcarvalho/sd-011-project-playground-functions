@@ -4,8 +4,8 @@ function compareTrue(par, impar) {
 }
 
 // Desafio 2
-function calcArea(a, b) {
-  let area = (a*b)/2;
+function calcArea(a , b) {
+  let area = (a * b) / 2;
   return (area);
 }
 
@@ -25,10 +25,12 @@ for (let i = 0; i < pessoa.length; i+=1) {
     if (pessoa[i] === pessoa[0]) {
       let primeiroNome = pessoa[i];
     }
-  concatName(ultimoNome + ', ' + primeiroNome);
-  return (ultimoNome + ', ' + primeiroNome)
-  }
   
+  return (ultimoNome + ', ' + primeiroNome)
+  concatName(pessoa);
+  
+  }
+} 
   
 
 // Desafio 5
@@ -82,4 +84,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-}
