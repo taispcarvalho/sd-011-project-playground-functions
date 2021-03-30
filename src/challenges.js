@@ -8,14 +8,17 @@ function compareTrue(value1, value2) {
 // Desafio 2
 function calcArea(width, height) {
   // calculo de um triangulo qualquer que sabemos a altura e largura
-  return width * height / 2;
+  return (width * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(frase) {
   // Quando for feita a chamada da funcão ja vai ser passada uma string então
-  // pela tipagem dinamica a string chama o metodo split que faz a separação
-  return frase.split();
+  // pela tipagem dinamica a string chama o metodo split que faz a separação    
+  let list = frase.split();
+  let finalList = [];
+  finalList.push(list);
+  return finalList;
 }
 
 // Desafio 4
@@ -35,13 +38,11 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 
-function highestCount(list = []) {
-  let number = 0;
+function highestCount(list) {
+  let largest = Math.max(...list);
   let count = 0;
-  for (let index = 0; index <= list.length; index += 1) {
-    if (number < list[index]) number = list[index];}
-  for (let o = 1; o <= list.length; o += 1) {
-    if (list[o] === number) {
+  for (let index = 0; index < list.length; index += 1) {
+    if (list[index] === largest) {
       count += 1;
     }
   }
@@ -61,26 +62,29 @@ function catAndMouse(x, y, z) {
 }
 
 // Desafio 8
-// eslint-disable-next-line complexity
-function fizzBuzz(list = []) {
+
+function fizzBuzz(list) {
+  let newList = [];
   for (let index = 0; index < list.length; index += 1) {
     if (list[index] % 3 === 0 && list[index] % 5 === 0) {
-      console.log('fizzBuzz');
-    } if (list[index] % 3 === 0) {
-      console.log('fizz');
-    } if (list[index] % 5 === 0) {
-      console.log('buzz');
+      newList.push('fizzBuzz');
+    } else if (list[index] % 3 === 0) {
+      newList.push('fizz');
+    } else if (list[index] % 5 === 0) {
+      newList.push('buzz');
+    } else {
+      newList.push('bug!');
     }
-    console.log('bug');
   }
+  return newList;
 }
 
 // Desafio 9
-function encode(frase) {
+function encode(string) {
   let encodedMessage = '';
-  for (let index = 0; index < frase.length; index += 1) {
-    if (frase[index].toLowerCase() === frase[index]) {
-      switch (frase[index]) {
+  for (let index = 0; index < frase.string; index += 1) {
+    if (string[index].toLowerCase() === string[index]) {
+      switch (string[index]) {
       case 'a':
         encodedMessage += '1';
         break;
@@ -97,22 +101,20 @@ function encode(frase) {
         encodedMessage += '5';
         break;
       default:
-        encodedMessage += frase[index];
+        encodedMessage += string[index];
       }
     } else {
-      encodedMessage += message[index];
-      encodedMessage += frase[index];
+      encodedMessage += string[index];
     }
   }
   return encodedMessage;
 }
 
-
-function decode() {
-  decodedMessage=''
+function decode(number) {
+  let decodedMessage = '';
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index].toLowerCase() === string[index]) {
-      switch (string[index]) {
+    if (number[index].toLowerCase() === number[index]) {
+      switch (number[index]) {
       case '1':
         decodedMessage += 'a';
         break;
@@ -129,11 +131,10 @@ function decode() {
         decodedMessage += 'u';
         break;
       default:
-        decodedMessage += string[index];
+        decodedMessage += number[index];
       }
     } else {
-      decodedMessage += message[index];
-      decodedMessage += string[index];
+      decodedMessage += number[index];
     }
   }
   return decodedMessage;
@@ -149,4 +150,4 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence};
+  splitSentence };
