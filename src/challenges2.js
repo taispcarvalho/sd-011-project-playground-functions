@@ -5,16 +5,21 @@ techs.sort()
 
   let lista = []
 
-
-  for(let i = 0; i < techs.length; i += 1){
+  if(techs === ['']){
+    return "Vazio!"
+  }else{
+    for(let i = 0; i < techs.length; i += 1){
     
     lista[i] = { tech: techs[i], name: name}
 
   }
 
   return lista;
+  }
+  
 }
 
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
