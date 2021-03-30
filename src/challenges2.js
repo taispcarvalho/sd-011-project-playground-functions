@@ -7,9 +7,12 @@ function myFunction(objects, index, myName) {
 }
 function techList(objects, name) {
   if (objects == null) return 'Vazio!';
-  for (let index = 0; index < objects.length; index += 1) {
+  for (let index in objects) {
     myFunction(objects, index, name);
   }
+  // for (let index = 0; index < objects.length; index += 1) {
+  //   myFunction(objects, index, name);
+  // }
   return objects;
 }
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Marcelo'));
