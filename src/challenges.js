@@ -88,9 +88,23 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let stringEncode = '';
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
+    case 'a': stringEncode += '1'; break;
+    case 'e': stringEncode += '2'; break;
+    case 'i': stringEncode += '3'; break;
+    case 'o': stringEncode += '4'; break;
+    case 'u': stringEncode += '5'; break;
+    default: stringEncode += string[index]; break;
+    }
+  }
+  return stringEncode;
 }
+
+console.log(encode('aeiou bbbb ba be bi bo bu!'));
+
 function decode() {
   // seu código aqui
 }
