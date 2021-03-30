@@ -31,7 +31,6 @@ function splitSentence(frase){
 //let lista=["meu","nome","nao","e","jhonny"];
 //console.log(lista.length);
 function concatName(lista){
-  // seu código aqui
   let ultimo=lista[lista.length-1];
   let resposta=[ultimo,lista[0]];
   return(resposta);
@@ -39,9 +38,13 @@ function concatName(lista){
 //concatName(lista);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+//let wins=0;
+//let ties=0;
+function footballPoints(wins,ties) {
+  let totalpoints=wins*3+ties*1;
+  return(totalpoints);
 }
+//footballPoints(wins,ties);
 
 // Desafio 6
 function highestCount() {
