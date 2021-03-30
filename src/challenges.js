@@ -57,25 +57,28 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   let resultString = [];
   for (let i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] % 3 === 0 && numbers[i] % 5 != 0) {
+    if (numbers[i] % 3 === 0 && numbers[i] % 5 !== 0) {
       resultString.push('fizz');
-    } else if (numbers[i] % 5 === 0 && numbers[i] % 3 != 0) {
+    } else if (numbers[i] % 5 === 0 && numbers[i] % 3 !== 0) {
       resultString.push('buzz');
     } else if (numbers[i] % 5 === 0 && numbers[i] % 3 === 0) {
-      resultString.push('fizzBuzz')
+      resultString.push('fizzBuzz');
     } else {
-      resultString.push('bug!')
+      resultString.push('bug!');
     }
   }
   return resultString;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let codeSting = str.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
+  return codeSting
 }
-function decode() {
-  // seu código aqui
+
+function decode(str) {
+  let decodeString = str.replace(/1/g,'a').replace(/2/g,'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+  return decodeString
 }
 
 module.exports = {
