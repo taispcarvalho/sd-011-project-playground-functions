@@ -27,8 +27,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let ordemArray = array.sort(function orderArray(a, b) { 
-    return a - b; } );
+  let ordemArray = array.sort(function orderArray(a, b) { return a - b; } );
 
   let sumRepeatLargestNumber = 0;
 
@@ -42,35 +41,35 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  return cat1 === cat2 ? 'os gatos trombam e o rato foge' 
-  : (cat1 - mouse) > (cat2 - mouse) ? 'cat2' 
-  : 'cat1';
+  return cat1 === cat2 ? 'os gatos trombam e o rato foge' : (cat1 - mouse) > (cat2 - mouse) 
+  ? 'cat2' : 'cat1';
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   let result = [];
   for (let i = 0; i < array.length; i += 1) {
-    if (i % 3 === 0){
+    if (i % 3 === 0) {
       if (i % 5 === 0) {
         result.push('FizzBuzz');
       }
       result.push('Fizz');
-    }
-    else if (i % 5 === 0) {
+    } else if (i % 5 === 0) {
       result.push('Buzz');
-    }
-    else {
-      result.push('bug!')
+    } else {
+      result.push('bug!');
     }
   }
   return result;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  const letterChange = {a : 1, e : 2, i : 3, o : 4, u : 5};
+  return string.replace(/[aeiou]/g, match => letterChange[match])
 }
+console.log(encode("hi there!"))
+
 function decode() {
   // seu código aqui
 }
