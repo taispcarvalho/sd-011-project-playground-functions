@@ -9,12 +9,16 @@ function techList(techies, name) {
 
 // Desafio 11
 function generatePhoneNumber(arr) {
-  // seu código aqui
+  if (arr.length !== 11) return 'Array com tamanho incorreto.';
+  if (arr.some((value) => value < 0 || value > 9 || arr.filter((x) => x === value).length > 2)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return arr.join('').replace(/(\d\d)(\d{5})(\d{4})/g, '($1) $2-$3');
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // seu código aqui
+  return [lineA, lineB, lineC];
 }
 
 // Desafio 13

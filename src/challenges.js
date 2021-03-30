@@ -18,7 +18,7 @@ function concatName(arr) {
   let firstValue = arr[0];
   let lastValue = arr[arr.length - 1];
   // concatName mas o linter não permite concatenar ¯\_(ツ)_/¯
-  return [firstValue, lastValue].join(', ');
+  return [lastValue, firstValue].join(', ');
 }
 
 // Desafio 5
