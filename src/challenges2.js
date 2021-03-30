@@ -1,13 +1,13 @@
 // Desafio 10
 function createObject(techs, name) {
   let arrayObject = [];
-  
+
   for (let index of techs) {
     let objectTech = {};
-  
-    objectTech['tech'] = index;
-    objectTech['name'] = name;
-  
+
+    objectTech.tech = index;
+    objectTech.name = name;
+
     arrayObject.push(objectTech);
   }
 
@@ -16,7 +16,7 @@ function createObject(techs, name) {
 
 function techList(techs, name) {
   let arrayObject = [];
-  
+
   if (arrayObject === []) {
     console.log('Vazio!');
   } else {
