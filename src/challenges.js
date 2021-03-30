@@ -11,8 +11,8 @@ function splitSentence(phrase) {
   let arrayPhrase = phrase.split(' ');
   return arrayPhrase;
 }
-// Desafio 4 -FEITO
-function concatName(...arrayName) {
+// Desafio 4 -FEITO - NEED REVIEW
+function concatName(arrayName) {
   return arrayName[arrayName.length -1].concat(", " + arrayName[0]);
 }
 // Desafio 5 -FEITO
@@ -20,8 +20,8 @@ function footballPoints(wins, ties) {
   let points=(wins * 3)+ ties;
   return points;
 }
-// Desafio 6 -FEITO
-function highestCount(...numberArray) {
+// Desafio 6 -FEITO - NEED REVIEW
+function highestCount(numberArray) {
   let highestNumber= 0;
   let highestNumberCount=0;
 for(let index = 0; index<numberArray.length; index+=1){
@@ -52,8 +52,8 @@ function catAndMouse(mouse, cat1, cat2) {
   return resultado;
 }
 
-// Desafio 8 -FEITO
-function fizzBuzz(...arrayFizzBuzz) {
+// Desafio 8 -FEITO - NEED REVIEW
+function fizzBuzz(arrayFizzBuzz) {
   secondArray=[];
   for(index=0; index<arrayFizzBuzz.length; index+=1){
     if(arrayFizzBuzz[index]%3===0 && arrayFizzBuzz[index]%5===0){
