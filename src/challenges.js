@@ -15,8 +15,6 @@ function splitSentence(str) {
   return stringConvert;
 }
 
-console.log(splitSentence('vamo que vamo'))
-
 // Desafio 4
 function concatName() {
   // seu código aqui
