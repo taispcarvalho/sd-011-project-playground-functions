@@ -1,12 +1,12 @@
 // Desafio 1
-function compareTrue(par,impar) {
-  result (par && par);
+function compareTrue(par, impar) {
+  return par && impar;
 }
 
 // Desafio 2
 function calcArea(a, b) {
   let area = (a*b)/2;
-  result (area);
+  return (area);
 }
 
 // Desafio 3
@@ -20,7 +20,8 @@ function concatName() {
   name: 'João',
   lastName: 'Moreira'
   }
-  result (pessoa.name + pessoa.lastName)
+  console.log(pessoa.name + pessoa.lastName)
+  return (console.log)
 }
 
 // Desafio 5
