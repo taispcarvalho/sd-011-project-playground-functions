@@ -66,11 +66,10 @@ function checkFizzBuzzType(num) {
 
   if (isDivisibleBy3 && isDivisibleBy5) {
     return 'fizzBuzz';
+  } else if (!isDivisibleBy3 && !isDivisibleBy5) {
+    return 'bug!';
   }
-  if (isDivisibleBy3 || isDivisibleBy5) {
-    return isDivisibleBy3 ? 'fizz' : 'buzz';
-  }
-  return 'bug!'
+  return isDivisibleBy3 ? 'fizz' : 'buzz';
 }
 
 function fizzBuzz(numbers) {
@@ -82,33 +81,38 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function switchLetterNumber(string) {
-  let codedString = string;
+function switchLetterNumber(string, code) {
+  for (index = 0; index < string.length; index += 1) {
+    let currentChar = string[index];
+    for (let key in code) {
+      if (key === currentChar) {
+        string = string.split(currentChar).join(code[key]);
+      }
+    } 
+  }
+  return string;
+}
+
+function encode(string) {
   let coding = {
     'a': '1',
     'e': '2',
     'i': '3',
     'o': '4',
-    'u': '5'
+    'u': '5',
   };
-  for (let key in coding) {
-    for (let index = 0; index < string.length; index += 1) {
-      if (coding[key] === string[index]) { // Verifica se é um dos numeros(valores) do objeto
-        codedString = codedString.split(string[index]).join(key);
-      } else if (key === string[index]) { // Verifica se é uma das letras(chaves) do objeto
-        codedString = codedString.split(string[index]).join(coding[key]);
-      }
-    }
-  }
-  return codedString;
-}
-
-function encode(string) {
-  return switchLetterNumber(string);
+  return switchLetterNumber(string, coding);
 }
 
 function decode(string) {
-  return switchLetterNumber(string);
+  let decoding = {
+    '1': 'a',
+    '2': 'e',
+    '3': 'i',
+    '4': 'o',
+    '5': 'u',
+  };
+  return switchLetterNumber(string, decoding);
 }
 
 module.exports = {
