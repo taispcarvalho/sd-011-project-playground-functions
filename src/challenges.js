@@ -68,11 +68,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = cat1 - mouse;
   let distanceCat2 = cat2 - mouse;
 
-  if(distanceCat1 < 0) {
+  if (distanceCat1 < 0) {
     distanceCat1 = distanceCat1 * -1;
   }
 
-  if(distanceCat2 < 0) {
+  if (distanceCat2 < 0) {
     distanceCat2 = distanceCat2 * -1;
   }
 
@@ -118,21 +118,21 @@ function encode(string) {
     if (string[index].toLowerCase() === string[index]) {
       switch (string[index]) {
         case 'a':
-          newMensage += '1'
+          newMensage += '1';
           break;
         case 'e':
-          newMensage += '2'
+          newMensage += '2';
           break;
         case 'i':
-          newMensage += '3'
+          newMensage += '3';
           break;
         case 'o':
-          newMensage += '4'
+          newMensage += '4';
           break;
         case 'u':
-          newMensage += '5'
+          newMensage += '5';
           break;
-        default: 
+        default:
           newMensage += string[index];
       }
     }
@@ -149,21 +149,21 @@ function decode(number) {
     if (number[index].toLowerCase() === number[index]) {
       switch (number[index]) {
         case '1':
-          newMensage += 'a'
+          newMensage += 'a';
           break;
         case '2':
-          newMensage += 'e'
+          newMensage += 'e';
           break;
         case '3':
-          newMensage += 'i'
+          newMensage += 'i';
           break;
         case '4':
-          newMensage += 'o'
+          newMensage += 'o';
           break;
         case '5':
-          newMensage += 'u'
+          newMensage += 'u';
           break;
-        default: 
+        default:
           newMensage += number[index];
       }
     }
