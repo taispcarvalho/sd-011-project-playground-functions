@@ -52,14 +52,37 @@ let numberTies=8;
 console.log(footballPoints(numberWins, numberTies));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maior =0;
+  let contador = 0;
+  for (let index=0; index<array.length; index +=1){
+    if(array[index]>maior){
+      maior = array[index];
+    }
+    if(maior === array[index]){
+      contador = contador +1;
+    }
+  }
+  return contador;
 }
 
+let array6 = [9, 1, 2, 3, 9, 5, 7];
+console.log(highestCount(array6));
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1,cat2) {
+  if(cat1>cat2){
+    return "cat1";
+  }
+  else{
+    return "cat2";
+  }
 }
+
+let positionMouse = 0;
+let positionCat1 =3;
+let positionCat2 = 2;
+
+console.log(catAndMouse(positionMouse,positionCat1,positionCat2));
 
 // Desafio 8
 function fizzBuzz() {
