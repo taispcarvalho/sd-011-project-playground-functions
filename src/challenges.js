@@ -3,13 +3,13 @@ function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
   } 
-    return false;
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
   return ((base * height) / 2);
-  }
+}
 
 // Desafio 3
 function splitSentence(string) {
@@ -27,8 +27,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let contador = 0;
+  let maiorindice = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > maiorindice) {
+      maiorindice = array[index];
+    }
+  }
+  for (let index2 = 0; index2 < array.length; index2 += 1) {
+    if (array[index2] === maiorindice) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
@@ -56,6 +68,7 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode() {
   // seu codigo aqui 
+}
 
 function decode() {
   // seu código aqui
