@@ -13,11 +13,13 @@ console.log(calcArea(35, 30));
 
 // Desafio 3
 function splitSentence(frase) {
-  return frase.split('');
+  let arrayFrase = frase.split(' ');
+  return arrayFrase;
 }
+//console.log(frase(arrayFrase));
 
 // Desafio 4
-function concatName() {  
+function concatName() {
   
 }
 console.log();
