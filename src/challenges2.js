@@ -1,11 +1,13 @@
 // Desafio 10
 function techList(arr, nome) {
 
+  arr = arr.sort()
+
   for (i in arr) {
     arr[i] = { tech: arr[i], name: nome }
   }
 
-  return arr
+  return arr.length === 0 ? 'Vázio' : arr
 }
 
 // Desafio 11
