@@ -66,26 +66,24 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
+function checkDividers35(num) {
+  if (num % 3 === 0 && num % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (num % 3 === 0) {
+    return 'fizz';
+  }
+  if (num % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
 
 // Desafio 8
 function fizzBuzz(array) {
-  let anwser = [];
-  for (let index in array) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      anwser.push('fizzBuzz');
-      continue;
-    }
-    if (array[index] % 3 === 0) {
-      anwser.push('fizz');
-      continue;
-    }
-    if (array[index] % 5 === 0) {
-      anwser.push('buzz');
-      continue;
-    }
-    else {
-      anwser.push('bug!');
-    }
+  let anwser;
+  for (let index = 0; index < array.length; index += 1) {
+    anwser.push(checkDividers35(array[index]));
   }
 }
 
