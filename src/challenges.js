@@ -28,9 +28,9 @@ console.log(splitSentence('Go Trybe'));
 // Desafio 4
 function concatName(strArray) {
   let strNames = '';
-  for(let i = 0; i < strArray.length; i += 1) {
-    if(i === 0 || i === strArray.length - 1) {
-      strNames = strArray[strArray.length - 1] + ', ' + strArray[0];
+  for (let i = 0; i < strArray.length; i += 1) {
+    if (i === 0 || i === strArray.length - 1) {
+      strNames = `${strArray[strArray.length - 1]}, ${strArray[0]}`; 
     }
   }
   return strNames;
