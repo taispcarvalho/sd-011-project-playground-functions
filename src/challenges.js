@@ -98,12 +98,12 @@ function encode(string1) {
       codigo.push('5');
     }
     else {
-      codigo.push(quebraDaString[i])
+      codigo.push(quebraDaString[i]);
     }        
   }  
   console.log(codigo)
 }
-encode(string1)
+encode(string1);
 
 
 function decode() {
