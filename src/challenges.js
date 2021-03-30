@@ -17,7 +17,7 @@ function splitSentence(sentence) {
 function concatName(arrayStrings) {
   let posicao1 = arrayStrings[0];
   let posicao2 = arrayStrings[arrayStrings.length-1]
-  return `${posicao1}, ${posicao2}`;
+  return `${posicao2}, ${posicao1}`;
 }
 
 // Desafio 5
