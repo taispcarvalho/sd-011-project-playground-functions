@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(firstValue, secondValue) {
-    return firstValue && secondValue;
+  return firstValue && secondValue;
 }
 console.log(compareTrue(true, true));
 
