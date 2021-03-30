@@ -7,7 +7,7 @@ function techList(arr, nome) {
     arr[i] = { tech: arr[i], name: nome };
   }
 
-  return arr.length === 0 ? 'Vázio' : arr;
+  return arr.length === 0 ? 'Vazio!' : arr;
 }
 
 // Desafio 11
