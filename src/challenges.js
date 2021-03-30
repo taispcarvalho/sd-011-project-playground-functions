@@ -30,7 +30,7 @@ console.log(splitSentence('foguete'));
 function concatName(array) {
   let first = array[0];
   let last = array[array.length - 1];
-  let concat = last + " , " + first;
+  let concat = `${last}, ${first}`;
   return concat;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -41,19 +41,19 @@ console.log(concatName(['captain', 'my', 'captain']));
 function footballPoints(wins, ties) {
   let score = 0;
 
-  if(wins){
+  if (wins) {
     score += wins * 3;
   }
 
-  if (ties){
+  if (ties) {
     score += ties * 1;
   }
 
   return score;
 }
-console.log(footballPoints(14,8));
-console.log(footballPoints(1,2));
-console.log(footballPoints(0,0));
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
