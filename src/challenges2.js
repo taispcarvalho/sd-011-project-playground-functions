@@ -19,15 +19,19 @@ function bubbleSort(arr) {
 
 // Desafio 10
 function techList(techs, name) {
-  let sortedTechs = bubbleSort(techs);
-  let finalList = [];
-  let finalListObject;
+  var finalList = [];
+  if (techs.length === 0) {
+    finaList = 'Vazio!';
+  } else {
+    let sortedTechs = bubbleSort(techs);
+    let finalListObject;
 
-  for (let tech of sortedTechs) {
-    finalListObject = {};
-    finalListObject['tech'] = tech;
-    finalListObject['name'] = name;
-    finalList.push(finalListObject);
+    for (let tech of sortedTechs) {
+      finalListObject = {};
+      finalListObject['tech'] = tech;
+      finalListObject['name'] = name;
+      finalList.push(finalListObject);
+    }
   }
 
   return finalList;
