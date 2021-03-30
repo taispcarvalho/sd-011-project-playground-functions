@@ -12,30 +12,30 @@ function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-  console.log(calcArea(10, 50));
+console.log(calcArea(10, 50));
 
 // Desafio 3
 function splitSentence(str) {
   let splStr = str.split(' ');
   return splStr;
 }
-  console.log(splitSentence('go Trybe'));
+console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(arrStr) {
   let lstFrst = arrStr[arrStr.length - 1] + ', ' + arrStr[0];
   return lstFrst;
 }
-  console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winPoints = wins = 3 * wins;
-  let tiePoints = ties = 1 * ties;
+  let winPoints = 3 * wins;
+  let tiePoints = 1 * ties;
   let points = winPoints + tiePoints;
   return points;
 }
-  console.log(footballPoints(14, 8));
+console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount(arrNmb) {
@@ -47,11 +47,11 @@ function highestCount(arrNmb) {
     }
   }
   for (let i = 0; i < arrNmb.length; i += 1) {
-    if (arrNmb[i] == highNmb) {
+    if (arrNmb[i] === highNmb) {
       contador += 1;
     }
   }
-    return contador;
+  return contador;
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
@@ -89,9 +89,17 @@ function fizzBuzz(arrNbrs) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+let encodeStr = '';
+  for (let i = 0; i < str.length; i += 1) {
+    if (str[i] === 'a') {
+      str[i] = 1;
+    }
+  }
+  return encodeStr;
 }
+console.log(encode('abacaxi'));
+
 function decode() {
   // seu código aqui
 }
