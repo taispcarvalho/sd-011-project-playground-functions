@@ -15,7 +15,6 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(array) {
-  // pegar primeiro e último caracteres do array e colocar em um novo
   let firsAndLast = [];
   for (let index = array.length - 1; index >= 0; index -= 1) {
     if (index === array.length - 1 || index === 0) {
@@ -26,8 +25,8 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
