@@ -19,9 +19,10 @@ function splitSentence(word) {
 }
 
 // Desafio 4
-// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-// Reference2: https://www.digitalocean.com/community/tutorials/how-to-work-with-strings-in-javascript
-// Reference3: https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array
+// References:
+// Literals: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+// Forms to declare string: https://www.digitalocean.com/community/tutorials/how-to-work-with-strings-in-javascript
+// Print the Last Item in Arrays: https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array
 function concatName(array) {
   return `${array[array.length - 1]}, ${array[0]}`;
 }
@@ -46,8 +47,13 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distCat1 = Math.abs(cat1 - mouse);
+  let distCat2 = Math.abs(cat2 - mouse);
+
+  if (distCat1 === distCat2) return 'os gatos trombam e o rato foge';
+  if (distCat1 < distCat2) return 'cat1';
+  if (distCat2 < distCat1) return 'cat2';
 }
 
 // Desafio 8
