@@ -16,11 +16,14 @@ function splitSentence(sentence) {
   let sentenceSplited = sentence.split(' ');
   return sentenceSplited;
 }
-console.log(splitSentence('go Trybe'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let firstPosition = array[0];
+  let lastPosition = array[array.length - 1];
+  let pontuation = ', ';
+
+  return lastPosition + pontuation + firstPosition;
 }
 
 // Desafio 5
