@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  return value1 && value2
+  return value1 && value2;
 }
 
 console.log(compareTrue(true, true));
@@ -23,9 +23,24 @@ function concatName(strArray) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totalPoints = 0;
+  if (wins !== 0) {
+    for (let i = 0; i < wins; i += 1) {
+      totalPoints += 3;
+    };
+  }
+  if (ties !== 0) {
+    for (let j =0; j < ties; j += 1) {
+      totalPoints += 1;
+    };
+  }
+  return totalPoints;
 }
+
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
