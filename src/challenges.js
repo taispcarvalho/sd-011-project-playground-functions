@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue() {
-  
+function compareTrue(bool1,bool2) {
+  return boll1 && bool2;
 }
 
 // Desafio 2
