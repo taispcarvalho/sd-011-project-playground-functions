@@ -50,7 +50,7 @@ if (gato1 < 0) {
   gato1 = gato1 * -1;
 }
 
-if (distanceCat2 < 0) {
+if (gato2 < 0) {
   gato2 = gato2 * -1;
 }
 
@@ -65,8 +65,17 @@ if (gato1 < gato2) {
 console.log(catAndMouse(3, 1, 2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+
+ for (let index = 0; index < numbers.length; index+=1) {
+
+   if (nunbers[index] == 3) {
+     nunbers[index] = 1
+   }
+   if (nunbers[index] == 5) {
+    nunbers[index] = 1
+  }
+ }
 }
 
 // Desafio 9
