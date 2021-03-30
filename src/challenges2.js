@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(techArr, name) {
   let newArrTech = [];
-  for (index = 0; index < techArr.length; index += 1) {
+  for (let index = 0; index < techArr.length; index += 1) {
     if (index < techArr.length) {
       let object = {
         tech: techArr[index],
@@ -15,8 +15,8 @@ function techList(techArr, name) {
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Matheus'));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrNumbers) {
+  
 }
 
 // Desafio 12
