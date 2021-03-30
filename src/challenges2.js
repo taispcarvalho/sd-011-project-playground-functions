@@ -14,8 +14,6 @@ function techList(nameTech, name) {
   return arrTechs;
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"].sort(), "Lucas"));
-
 function repeteNumber(num, arrNumber) {
   let repete = 0;
   for (let index = 0; index < arrNumber.length; index += 1) {
