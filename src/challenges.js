@@ -71,7 +71,7 @@ function fizzBuzz(numbers) {
     } else if ((Number.isInteger(numbers[index]/3))) {
       fizzBuzzArray[index] = 'fizz';
     } else if (Number.isInteger(numbers[index]/5)) {
-      fizzBuzzArray[index] = 'Buzz';
+      fizzBuzzArray[index] = 'buzz';
     } else {
       fizzBuzzArray[index] = 'bug!';
     }
