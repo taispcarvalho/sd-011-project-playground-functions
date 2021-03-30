@@ -18,11 +18,8 @@ function splitSentence() {
 
 function concatName(Array) {
   let frase = Array[Array.length - 1] + ',' + Array[0];
-    } 
     return frase;
   }
-  console.log(frase);
-}
 
 // Desafio 5
 function footballPoints(wins, ties) {
