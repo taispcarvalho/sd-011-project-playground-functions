@@ -8,12 +8,14 @@ function compareTrue(valueA, valueB) {
 
 // Desafio 2
 function calcArea(base, height) {
-    return (base * height) / 2
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+// O método ultilizado abaixo consta na documentação do JavaScript
+// Esse método é usado para separar uma string em um array de acordo com separador, o usado abaixo foi para espaços (" ")
+  return phrase.split(' ');
 }
 
 // Desafio 4
