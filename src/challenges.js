@@ -17,7 +17,8 @@ function splitSentence(sentence) {
 function concatName(arr) {
   let firstValue = arr[0];
   let lastValue = arr[arr.length - 1];
-  return `${firstValue}, ${lastValue}`;
+  // concatName mas o linter não permite concatenar ¯\_(ツ)_/¯
+  return [firstValue, lastValue].join(', ');
 }
 
 // Desafio 5
