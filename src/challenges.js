@@ -34,7 +34,7 @@ function concatName(lista){
   let primPos=lista[0];
   let ultPos=lista[lista.length-1];
   let resposta=ultPos.concat(" ",primPos);
-  console.log(resposta);
+  return(resposta);
   }
 //concatName(lista);
 
@@ -48,9 +48,20 @@ function footballPoints(wins,ties) {
 //footballPoints(wins,ties);
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+//let valores=[0,0,0];
+function highestCount(valores){ 
+  let arrumado=valores.sort();
+  //console.log(arrumado);
+  let maior=arrumado[arrumado.length-1];
+  let quanVezes=0;
+    for(let index=0; index<=valores.length-1;index++){
+      if(valores[index]==maior){
+          quanVezes++;
+        }  
+    }
+ return(quanVezes);
 }
+//highestCount(valores);
 
 // Desafio 7
 function catAndMouse() {
