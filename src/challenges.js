@@ -67,8 +67,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse(0, 12, 12))
-
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
 
@@ -90,15 +88,35 @@ let fizzBuzzArray = [];
   }
 
   return fizzBuzzArray;
-
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) { 
+  
+  string = string.replace(/a/g, '1');
+  string = string.replace(/e/g, '2');
+  string = string.replace(/i/g, '3');
+  string = string.replace(/o/g, '4');
+  string = string.replace(/u/g, '5');
+  
+  return string
+
 }
-function decode() {
-  // seu código aqui
+
+let palavra = encode('hi there')
+console.log(palavra);
+
+function decode(stringCoded) {
+
+  let decoded;
+
+  decoded = stringCoded.replace(/1/g, 'a');
+  decoded = stringCoded.replace(/2/g, 'e');
+  decoded = stringCoded.replace(/3/g, 'i');
+  decoded = stringCoded.replace(/4/g, 'o');
+  decoded = stringCoded.replace(/5/g, 'u');
+
+  return decoded
 }
 
 module.exports = {
