@@ -22,7 +22,7 @@ console.log(splitSentence('Vamo que vamo'));
 const concatName = (str) => {
   const lastStr = str[str.length - 1];
   const firstStr = str[0]
-  return lastStr + ' ' + firstStr;
+  return lastStr + ', ' + firstStr;
 }
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -34,7 +34,6 @@ const footballPoints = (wins, ties) => {
   return winsAmmount + tiesAmmount;
 }
 console.log(footballPoints(1, 2));
-
 
 // Desafio 6
 function highestCount() {
