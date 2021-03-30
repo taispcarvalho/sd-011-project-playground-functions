@@ -24,9 +24,22 @@ function footballPoints(w, t) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrNum) {
+  let highest = arrNum[0];
+  for (let i = 0; i < arrNum; i += 1) {
+    if (arrNum[i] > highest) {
+      highest = arrNum[i];
+    }
+  }
+  let counter = 0;
+  for (let index = 0; index < arrNum.length; index += 1) {
+    if (arrNum[index] === highest) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
