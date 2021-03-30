@@ -74,11 +74,10 @@ function fizzBuzz(numerosDesafio8) {
   }  
   return conteudoArray;    
 }
-fizzBuzz(numerosDesafio8);
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  
 }
 function decode() {
   // seu código aqui
