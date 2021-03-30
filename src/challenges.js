@@ -25,14 +25,17 @@ function concatName(strArray) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let totalPoints = 0;
-  if (wins !== 0)
+  if (wins !== 0) {
     for (let i = 0; i < wins; i += 1) {
       totalPoints += 3;
     }
-  if (ties !== 0)
+  }
+
+  if (ties !== 0) {
     for (let j = 0; j < ties; j += 1) {
       totalPoints += 1;
     }
+  }
   return totalPoints;
 }
 
