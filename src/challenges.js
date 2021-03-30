@@ -82,14 +82,24 @@ function changeNumber(number) {
   if (number === '4') {
     return 'o';
   }
-  return '5';
+  return 'u';
+}
+
+function identifyVowal(letter) {
+  let arrayVowel = ['a', 'e', 'i', 'o', 'u'];
+  for (let i = 0; i < arrayVowel.length; i += 1) {
+    if (letter === arrayVowel[i]) {
+      return letter;
+    }
+  }
 }
 
 // Desafio 9
 function encode(phrase) {
   let newString = '';
+
   for (let i = 0; i < phrase.length; i += 1) {
-    if (phrase.charAt(i) >= 1 && phrase.charAt(i) <= 5) {
+    if (identifyVowal(phrase.charAt(i))) {
       newString += changeLetter(phrase.charAt(i));
     } else {
       newString += phrase.charAt(i);
@@ -101,7 +111,7 @@ function encode(phrase) {
 function decode(phrase) {
   let newString = '';
   for (let i = 0; i < phrase.length; i += 1) {
-    if (phrase.charAt(i) >= 1 && phrase.charAt(i) <= 5) {
+    if (phrase.charAt(i) > 0 && phrase.charAt(i) < 6) {
       newString += changeNumber(phrase.charAt(i));
     } else {
       newString += phrase.charAt(i);
@@ -109,6 +119,9 @@ function decode(phrase) {
   }
   return newString;
 }
+
+console.log(encode('hi there'));
+console.log(decode('h3 th2r2'));
 
 module.exports = {
   calcArea,
