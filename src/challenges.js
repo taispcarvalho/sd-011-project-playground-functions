@@ -2,11 +2,10 @@
 function compareTrue(value1, value2) {
   // seu código aqui
   return value1 && value2;
-  }
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   // seu código aqui
   let area = (base * height) / 2;
   return area;
@@ -26,8 +25,11 @@ function concatName(itens) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let pontosVitoria = wins * 3;
+  let pontos = pontosVitoria + ties;
+  return pontos;
 }
 
 // Desafio 6
