@@ -25,14 +25,23 @@ function concatName(arrayString) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return`${(wins * 3) + ties}`;
+  return wins * 3 + ties;
 }
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+let arrayTest = [9, 1, 2, 3, 9, 5, 7];
+function highestCount(arrayNumbers) {
+  for(let i = 0; i < arrayNumbers.length; i += 1) {
+    var positionArray = arrayNumbers[i];
+    if(positionArray >= 0){
+    numberResult = numberResult + 1;
+   }
+  }
+  return numberResult;
 }
+console.log(highestCount(arrayTest));
 
 // Desafio 7
 function catAndMouse() {
