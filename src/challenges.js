@@ -1,40 +1,28 @@
 // Desafio 1
-//criar uma função compareTrue, que recebe 2 parametros (a, b)
-function compareTrue(a,b) {
-  //SE o parametro (a) E o parametro (b) forem verdadeiros;
-  if (a === true && b === true){
-    //a função retorna verdadeiro;
+function compareTrue(a, b) {
+  if (a === true && b === true) {
     return true;
-    //SE NÂO, retorna falso;
   } else {
     return false;
   }
 }
 
-
 // Desafio 2
-//criar uma função calcArea que recebe dois parametros (base, height)
 function calcArea(base, height) {
-//sabemos que para calcular a área de um triangulo devemos multiplicar o height pela base e dividir por 2 (para isso vou usar o if);
-if (calcArea = (base * height)/ 2){
-  //retornar o resultado;
-  return calcArea;
+  if (calcArea = (base * height) / 2) {
+    return calcArea;
+  }
 }
-}
-
 
 // Desafio 3
-//criar uma função splitSentence que recebe uma string como parametro;
 function splitSentence(string) {
-  // retornar um array de strings separadas na string original, para isso usamos o .split.. no caso .split(' ') faz mais sentido por que separa cada palavra. 
-  let array = string.split(" ");
-  //retornar o array com o resultado;
+  let array = string.split(' ');
   return array;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return (array[array.length - 1] + ',' + array[0]);
 }
 
 // Desafio 5
