@@ -7,12 +7,14 @@ function compareTrue(param1, param2) {
   }
 }
 console.log(compareTrue(true, true));
+
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
 console.log(calcArea(10, 50));
+
 // Desafio 3
 function splitSentence(frase) {
   let space = ' ';
@@ -20,6 +22,7 @@ function splitSentence(frase) {
   return fraseParaSeparar;
 }
 console.log(splitSentence('go Trybe'));
+
 // Desafio 4
 function concatName(array) {
   let fraseConcatenada = '';
@@ -29,6 +32,7 @@ function concatName(array) {
   return fraseConcatenada;
 }
 console.log(concatName(['captain', 'my', 'captain']));
+
 // Desafio 5
 function footballPoints(wins, ties) {
   let winPoints = 3 * wins;
@@ -37,20 +41,23 @@ function footballPoints(wins, ties) {
   return teamPoints;
 }
 console.log(footballPoints(14, 8));
-// Desafio 6
-function highestCount(array) {
-  let highestNumberTimes = '';
-  let actualHigherNumber = '';
-  for (let index = 0; index < array.length; index += 1) {
-    for (let index2 = ; index2 < array.length; index2 += 1) {
-    }
-  }
-}
 
-console.log(highestCount([1, 9, 2, 3, 9, 5, 7]));
+// Desafio 6
+// function highestCount(array) {
+//   let highestNumberTimes = '';
+//   let actualHigherNumber = '';
+//   for (let index = 0; index < array.length; index += 1) {
+//     for (let index2 = index + 1; index2 <= array.length - 1; index2 += 1) {
+//       if (array[index] > array[index2]) {
+//         actualHigherNumber += array[index];
+//       }
+//     }
+//   }
+// }
+// console.log(highestCount([1, 9, 2, 3, 9, 5, 7]));
+
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
 }
 
 // Desafio 8
