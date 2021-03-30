@@ -16,14 +16,28 @@ function calcArea(base, high) {
 console.log(calcArea(10, 50))
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(initialStr) {
+    let newArr;
+    newArr = initialStr.split(' ');
+    return newArr;
 }
 
+console.log(splitSentence('go Trybe'));
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(strArr) {
+  let strGenerated = '';
+  for (let index = 0; index <= strArr.length; index += 1){
+    if (strArr[index] === 0) {
+      strGenerated = strGenerated + strArr[index] + ' , ';
+    } else if (strArr[index] === strArr.length) {
+      strGenerated = strGenerated + strArr[index];
+    } return strGenerated;
+  } 
+  
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
