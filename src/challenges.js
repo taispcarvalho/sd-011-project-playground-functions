@@ -42,9 +42,20 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let firstDistance = mouse - cat1;
-  let secondDistance = cat2 - mouse;
-  
+  let firstDistance;
+  let secondDistance;
+  if (mouse <= cat1){
+    firstDistance = cat1 - mouse;
+  } else {
+    firstDistance = mouse - cat1;
+  }
+
+  if (mouse <= cat2){
+    secondDistance = cat2 - mouse;
+  } else {
+    secondDistance = mouse - cat1;
+  }
+
   if (firstDistance < secondDistance){
     return "cat1";
   } else if (firstDistance > secondDistance){
@@ -56,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  
 }
 
 // Desafio 9
