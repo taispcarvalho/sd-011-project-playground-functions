@@ -62,14 +62,14 @@ function catCheckDistance(mouse, cat1, cat2) {
   let catDistance2 = 0;
 
   if (mouse > cat1) {
-    catDistance1 = mouse - cat1;
-  } else {
     catDistance1 = cat1 - mouse;
+  } else {
+    catDistance1 = mouse - cat1;
   }
   if (mouse > cat2) {
-    catDistance2 = mouse - cat2;
-  } else {
     catDistance2 = cat2 - mouse;
+  } else {
+    catDistance2 = mouse - cat2;
   }
   return [catDistance1, catDistance2];
 }
@@ -85,7 +85,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'cat2';
 }
 
-console.log(catAndMouse(1, 0, 2));
+console.log(catAndMouse(0, 6, 12));
 
 // Desafio 8
 function fizzBuzz() {
