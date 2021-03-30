@@ -12,20 +12,15 @@ function calcArea(value1, value2) {
 }
 
 // Desafio 3
-function splitSentence(string) {
-  let sentence = string;
-  let words = [];
-
-
-
+function splitSentence() {
 
 }
 
 // Desafio 4
 function concatName(array) {
-  let lastItem = array[array.length -1];
+  let lastItem = array[array.length - 1];
   let firstItem = array[0];
-  let result = [ lastItem, firstItem];
+  let result = [lastItem, firstItem];
 
   return result;
 }
