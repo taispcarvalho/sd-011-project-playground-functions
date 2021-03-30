@@ -97,11 +97,10 @@ console.log(catAndMouse(12, 0, 14));
 // Desafio 8
 function fizzBuzz(arrayOfNumbers) {
   let fizzArrayStr = [];
-  
-  for (let fizzindex = 0; fizzindex < arrayOfNumbers.length; fizzindex +=1) {
-    if (arrayOfNumbers[fizzindex] % 3 === 0 && arrayOfNumbers[fizzindex] % 5 === 0 ) {
+  for (let fizzindex = 0; fizzindex < arrayOfNumbers.length; fizzindex += 1) {
+    if (arrayOfNumbers[fizzindex] % 3 === 0 && arrayOfNumbers[fizzindex] % 5 === 0) {
       fizzArrayStr.push('fizzBuzz');
-    } else if (arrayOfNumbers[fizzindex] % 5 === 0 ) {
+    } else if (arrayOfNumbers[fizzindex] % 5 === 0) {
       fizzArrayStr.push('buzz');
     } else if (arrayOfNumbers[fizzindex] % 3 === 0) {
       fizzArrayStr.push('fizz');
