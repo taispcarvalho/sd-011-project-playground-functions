@@ -80,8 +80,6 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-let word = 'hi there!';
-
 function encode(string) {
   let vogals = {
     a: 1,
@@ -91,23 +89,22 @@ function encode(string) {
     u: 5,
   };
 
-  let string2 = [];
-  let string3 = '';
+  let stringArray = [];
+  let arrayToText = '';
+
   for (let index in string) {
-    string2[index] = vogals[string[index]];
+    stringArray[index] = vogals[string[index]];
   }
 
-  for (let i = 0; i < string2.length; i += 1) {
-    if (string2[i] === undefined) {
-      string2[i] = string[i]
+  for (let i = 0; i < stringArray.length; i += 1) {
+    if (stringArray[i] === undefined) {
+      stringArray[i] = string[i]
     }
-    string3 += string2[i]
+    arrayToText += stringArray[i]
   }
 
-  return string3;
+  return arrayToText;
 }
-
-console.log(encode(word));
 
 function decode() {
   // seu código aqui
