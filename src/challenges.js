@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 === true && param2 === true){
+  if (param1 === true && param2 === true) {
     return true;
   } else {
     return false;
@@ -28,17 +28,18 @@ console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(array) {
-  let firstAndLastArray = array[array.length -1] + ', ' + array[0];
-  return firstAndLastArray;
+  let first = array[0];
+  let last = array[array.length - 1];
+  let concat = last + ', ' + first
+  return concat;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {}
+
 
 // Desafio 6
 function highestCount() {
