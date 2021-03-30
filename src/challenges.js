@@ -30,7 +30,7 @@ function footballPoints(wins, ties) {
 function highestCount(arrNumber) {
   let highestRepet = 0;
   let big = arrNumber[0];
-  for (let index = 0; index < arrNumber; index += 1) {
+  for (let index = 0; index < arrNumber.length; index += 1) {
     if (big < arrNumber[index]) {
       highestRepet = 1;
       big = arrNumber[index];
@@ -40,6 +40,8 @@ function highestCount(arrNumber) {
   }
   return highestRepet;
 }
+
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
