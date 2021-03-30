@@ -1,13 +1,8 @@
 // Desafio 1
 function compareTrue(firstValue, secondValue) {
-  if (firstValue === true && secondValue === true) {
-    return true;
-  } else {
-    return false;
-  }
-  console.log(compareTrue(a, b))
+    return firstValue && secondValue;
 }
-
+console.log(compareTrue(3, 3));
 
 
 // Desafio 2
