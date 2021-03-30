@@ -17,8 +17,7 @@ function techList(array, name) {
 }
 
 console.log(techList([]));
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
-
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber(array) {
@@ -29,7 +28,7 @@ function generatePhoneNumber(array) {
   for(let index = 0; index < array.length; index ++) {
   if(array.length === 11) {
     return mask
-  } else if (array[index] < 0 || array[index] > 9) {
+  } else if (array[index] < 0 || array[index] > 9 || array < 0) {
     return 'Não é possível gerar um numero de telefone com esses valores'
   } else {
 
@@ -49,8 +48,26 @@ console.log(generatePhoneNumber([2, 2, 2, 3, 4, 5, 6, 7, 8]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
+  if (lineA <= 0 || lineB <= 0 || lineC <= 0) {
+    return false;
+  }
 
+  if (lineA >= lineB + lineC) {
+    return false;
+  }
+
+  if (lineB >= lineA + lineC) {
+    return false;
+  }
+
+  if (lineC >= lineA + lineB) {
+    return false;
+  }
+
+  return true;
 }
+
+console.log(triangleCheck(10, 2, 9));
 
 // Desafio 13
 function hydrate() {
