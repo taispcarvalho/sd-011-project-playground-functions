@@ -81,7 +81,7 @@ function fizzBuzz(numbers) {
     }
     return newArray;
 }
-
+}
 console.log(fizzBuzz(5,12,3,4,6))
 // Desafio 9
 function encode() {
