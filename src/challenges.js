@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue(value1,value2) {
-  return ((value1 === true && value2 === true) ? true : false);
+function compareTrue(value1, value2) {
+  return (value1 === true && value2 === true ? true : false);
 }
 
 // Desafio 2
@@ -9,41 +9,43 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-
+function splitSentence(str) {
+  return str.split(" ");
 }
+// desafio 3 resolvido com base neste linked
+// https://tutorial.eyehunts.com/js/javascript-split-string-based-delimiter-comma-space/
 
 // Desafio 4
-function concatName() {
-
+function concatName(strArray) {
+  return (strArray[strArray.length - 1] + ', ' + strArray[0])
 }
 
 // Desafio 5
 function footballPoints() {
-
+  // seu código aqui
 }
 
 // Desafio 6
 function highestCount() {
-
+  // seu código aqui
 }
 
 // Desafio 7
 function catAndMouse() {
-
+  // seu código aqui
 }
 
 // Desafio 8
 function fizzBuzz() {
-
+  // seu código aqui
 }
 
 // Desafio 9
 function encode() {
-
+  // seu código aqui
 }
 function decode() {
-
+  // seu código aqui
 }
 
 module.exports = {
