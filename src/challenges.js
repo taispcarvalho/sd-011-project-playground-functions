@@ -31,8 +31,7 @@ function highestCount(numbers) {
     if (num > highest) {
       highest = num;
       count = 1;
-    }
-    if (num === highest) {
+    } else if (num === highest) {
       count += 1;
     }
   }
