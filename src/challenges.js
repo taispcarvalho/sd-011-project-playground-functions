@@ -119,15 +119,15 @@ function encode(encodeStr) {
   let encodedStr = '';
   for (let encodeI = 0; encodeI < encodeStr.length; encodeI += 1) {
     if (encodeStr[encodeI] === 'a') {
-      encodedStr += '1'; 
+      encodedStr += '1';
     } else if (encodeStr[encodeI] === 'e') {
-      encodedStr += '2'; 
+      encodedStr += '2';
     } else if (encodeStr[encodeI] === 'i') {
-      encodedStr += '3'; 
+      encodedStr += '3';
     } else if (encodeStr[encodeI] === 'o') {
-      encodedStr += '4'; 
+      encodedStr += '4';
     } else if (encodeStr[encodeI] === 'u') {
-      encodedStr += '5'; 
+      encodedStr += '5';
     } else {
       encodedStr += encodeStr[encodeI];
     }
@@ -141,15 +141,15 @@ function decode(decodeStr) {
   let decodedStr = '';
   for (let decodeI = 0; decodeI < decodeStr.length; decodeI += 1) {
     if (decodeStr[decodeI] === '1') {
-      decodedStr += 'a'; 
+      decodedStr += 'a';
     } else if (decodeStr[decodeI] === '2') {
-      decodedStr += 'e'; 
+      decodedStr += 'e';
     } else if (decodeStr[decodeI] === '3') {
-      decodedStr += 'i'; 
+      decodedStr += 'i';
     } else if (decodeStr[decodeI] === '4') {
-      decodedStr += 'o'; 
+      decodedStr += 'o';
     } else if (decodeStr[decodeI] === '5') {
-      decodedStr += 'u'; 
+      decodedStr += 'u';
     } else {
       decodedStr += decodeStr[decodeI];
     }
