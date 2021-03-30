@@ -11,8 +11,6 @@ function calcArea(base, height) {
     return (base * height) / 2
 }
 
-console.log(calcArea(5, 6));
-
 // Desafio 3
 function splitSentence() {
   // seu código aqui
