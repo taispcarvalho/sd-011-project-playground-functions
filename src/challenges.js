@@ -15,16 +15,16 @@ function splitSentence() {
 }
 
 // Desafio 4
-let pessoas = ['captain', 'my', 'captain'];
+let pessoas = [];
 let primeiro = pessoas[0];
 let ultimo = pessoas[pessoas.length - 1];
 function concatName(pessoas) {
 if ( pessoas = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) {
-  let resultado = ultimo + ',' + primeiro;
+  let resultado1 = ultimo + ',' + primeiro;
 } else if ( pessoas = ['foguete', 'não', 'tem', 'ré']) {
-  let resultado = ultimo + ',' + primeiro;
+  let resultado2 = ultimo + ',' + primeiro;
 } else if (pessoas = ['captain', 'my', 'captain']) {
-  let resultado = ultimo + ',' + primeiro;
+  let resultado3 = ultimo + ',' + primeiro;
 }
     return (ultimo + ',' + primeiro);
   } 
