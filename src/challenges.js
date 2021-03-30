@@ -9,8 +9,8 @@ function calcArea(base, height) {
 }
 console.log(calcArea(51, 1));
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(' ');
 }
 console.log(splitSentence('go Trybe'));
 
@@ -28,19 +28,19 @@ console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(array) {
-  let highestNumber = array[0];
-  let highestNumberCount = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    if (highestNumber < array[index]) {
-      highestNumber = array[index];
+  function findHighestNumber(array){
+    let highestNumber = 0;
+    for (let index = 0; index < array.length; index += 1) {
+      if (array[index] > highestNumber) {
+        highestNumber = array[index];
+      }
     }
-    if (array[index] === highestNumber) {
-      highestNumberCount += 1;
-    }
+    return highestNumber;
   }
-  return highestNumberCount;
+  function counting(findHighestNumber(array))
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if ((cat1 - mouse) < (cat2 - mouse)) {
