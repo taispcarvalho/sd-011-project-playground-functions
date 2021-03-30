@@ -106,7 +106,7 @@ function encode(string1) {
 encode(string1)
 
 
-function decode(string1) {
+function decode() {
   // seu código aqui
 }
 
