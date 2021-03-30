@@ -18,8 +18,10 @@ function concatName(arr) {
   let res = [];
   res.push(arr[arr.length - 1]);
   res.push(arr[0]);
-  return res.toString();
+  return res.join(', ');
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
