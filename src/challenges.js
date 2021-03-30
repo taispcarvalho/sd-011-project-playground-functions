@@ -65,11 +65,14 @@ console.log(highestCount([1, 2, 3, 4, 56, 56, 56, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 > cat2) {
+  cat1 = cat1 * -1;
+  cat2 = cat2 * -1;
+
+  if (cat1 < cat2) {
     return 'cat1';
-  } else if (cat2 > cat1) {
+  } else if (cat2 < cat1) {
     return 'cat2';
-  } else if (cat2 === mouse && cat1 === mouse) {
+  } else {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -100,30 +103,9 @@ console.log(fizzBuzz([2, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode(string) {
- 
-}
+function encode(string) {}
 
-function decode(number) {
-  let letters = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  let letters2 = '';
-  let i;
-  for (i in letters) {
-    while (number >= letters[i]) {
-      letters2 += i;
-      number -= letters[i];
-    }
-  }
-  return letters2;
-}
-
-console.log(decode(2));
+function decode(number) {}
 
 module.exports = {
   calcArea,
