@@ -35,6 +35,7 @@ function highestCount(arr) {
     if (arr[index] > arr[index + 1]) {
       maiorNumero = arr[index]
     }
+  }
 }
 
 let listaDeNumeros = [9, 1, 2, 3, 9, 5, 7]
