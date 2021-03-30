@@ -11,7 +11,7 @@ function splitSentence(phrase) {
   let arrayPhrase = phrase.split(' ');
   return arrayPhrase;
 }
-// Desafio 4 -FEITO - NEED REVIEW
+// Desafio 4 -FEITO 
 function concatName(arrayName) {
   return arrayName[arrayName.length -1].concat(", " + arrayName[0]);
 }
@@ -20,7 +20,7 @@ function footballPoints(wins, ties) {
   let points=(wins * 3)+ ties;
   return points;
 }
-// Desafio 6 -FEITO - NEED REVIEW
+// Desafio 6 -FEITO 
 function highestCount(numberArray) {
   let highestNumber= 0;
   let highestNumberCount=0;
@@ -52,7 +52,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return resultado;
 }
 
-// Desafio 8 -FEITO - NEED REVIEW
+// Desafio 8 -FEITO 
 function fizzBuzz(arrayFizzBuzz) {
   secondArray=[];
   for(index=0; index<arrayFizzBuzz.length; index+=1){
@@ -68,12 +68,24 @@ function fizzBuzz(arrayFizzBuzz) {
   }
   return secondArray
 }
-// Desafio 9
-function encode() {
-  // seu código aqui
+// Desafio 9 -FEITO
+function encode(encoder) {
+  result = encoder.replace(/a/g, '1');
+  result = result.replace(/e/g, '2');
+  result = result.replace(/i/g, '3');
+  result = result.replace(/o/g, '4');
+  result = result.replace(/u/g, '5');
+    
+return result
 }
-function decode() {
-  // seu código aqui
+function decode(decoder) {
+  result = decoder.replace(/1/g, 'a');
+  result = result.replace(/2/g, 'e');
+  result = result.replace(/3/g, 'i');
+  result = result.replace(/4/g, 'o');
+  result = result.replace(/5/g, 'u');
+    
+return result  
 }
 
 module.exports = {
