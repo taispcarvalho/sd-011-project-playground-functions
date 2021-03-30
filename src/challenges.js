@@ -11,19 +11,20 @@ function calcArea(base, altura) {
 
 // Desafio 3
 function splitSentence(str) {
-  let array = str.split(" ");
+  let array = str.split(' ');
   return array;
 }
 
 // Desafio 4
 function concatName(array2 = []) {
-    return `${array2[array2.length - 1]}, ${array2[0]}`;
+  return `${array2[array2.length - 1]}, ${array2[0]}`;
 }
-console.log(concatName(['Luís', 'Carlos', 'Seixas']));
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins * 3 + ties;
 }
+console.log(footballPoints(5, 2));
 
 // Desafio 6
 function highestCount() {
