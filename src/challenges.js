@@ -15,24 +15,16 @@ function splitSentence(value3) {
   return arraySentence;
 }
 
-// Desafio 4
-//let value4 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+  // Desafio 4
+  
 
  function concatName(value4) {
-// function endOfArray(value4){
-//   var last = value4[value4.length - 1];
-  //   return last;
-  // }
-  // function firstOfArray(value4){
-  //   var first = value4[0];
-  //   return first;
-  // }
-  // return endOfArray, firstOfArray;
-  // let array = []
-  // for ( let i = 0; i < value4.length; i+=1){
-  //   array.push()
-  // }
+  let lastName = value4[value4.length - 1];
+  let firstName = value4[0]
+  let fullName = lastName + ', ' + firstName;
+  return fullName;
 }
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
