@@ -30,7 +30,7 @@ function concatName(strArray) {
   let strNames = '';
   for (let i = 0; i < strArray.length; i += 1) {
     if (i === 0 || i === strArray.length - 1) {
-      strNames = `${strArray[strArray.length - 1]}, ${strArray[0]}`; 
+      strNames = `${strArray[strArray.length - 1]}, ${strArray[0]}`;
     }
   }
   return strNames;
@@ -40,9 +40,15 @@ let namesArray = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 console.log(concatName(namesArray));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = 0;
+  if (wins >= 1 || ties >= 1) {
+    points = (3 * wins) + (1 * ties);
+  }
+  return points;
 }
+
+console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount() {
