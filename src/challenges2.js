@@ -45,19 +45,19 @@ function repeatNumber(array) {
 function generatePhoneNumber(array) {
   let mask = '(xx) xxxxx-xxxx';
   array.forEach(function (item) {
-      mask = mask.replace('x', item);
+    mask = mask.replace('x', item);
   });
-  for(let index = 0; index < array.length; index ++) {
-  if(array.length === 11 && array[index] !== repeatNumber(array)) {
-    return mask
-  } else if (array[index] < 0 || array[index] > 9 || array < 0) {
-    return 'não é possível gerar um numero de telefone com esses valores'
-  } 
-  if(array.length !== 11) {
-    return 'Array com tamanho incorreto'
+  for (let index = 0; index < array.length; index++) {
+    if (array.length === 11 && array[index] !== repeatNumber(array)) {
+      return mask
+    } else if (array[index] < 0 || array[index] > 9 || array < 0) {
+      return 'não é possível gerar um numero de telefone com esses valores'
+    }
+    if (array.length !== 11) {
+      return 'Array com tamanho incorreto'
+    }
+    return arrayNotPossible;
   }
-  return arrayNotPossible;
-}
 }
 
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
@@ -101,7 +101,7 @@ function hydrate(string) {
     return '1 copo de água';
   }
 
-  return totalCount + ' copo de água';
+  return totalCount + ' copos de água';
 }
 
 console.log(hydrate('1 copo de cerva, 1 copo de pinga, 1 copo de pitu'))
