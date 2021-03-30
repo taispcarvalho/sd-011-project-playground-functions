@@ -36,14 +36,47 @@ function concatName(arrayD4) {
 function footballPoints(wins, ties) {
   // seu código aqui
   let totalPoints = (wins * 3) + ties;
-  return totalPoints; 
+  return totalPoints;
 }
 // console.log(footballPoints(0,0))
 
 // Desafio 6
-function highestCount() {
+let testArrayD6 = [0,0,0];
+// let biggest = testArrayD6[0];
+// let biggestCount = 0;
+// // Descobrir qual é o maior
+//   //Se n>n-1, maior = n
+//   for (let index = 1; index < testArrayD6.length; index +=1) {
+//     if (testArrayD6[index]>biggest) {
+//       biggest = testArrayD6[index];      
+//     }
+//   }
+//   for (index = 0; index < testArrayD6.length; index +=1) {
+//     if (testArrayD6[index] === biggest) {
+//       biggestCount +=1;
+//     }
+//   }
+//   console.log(biggest);
+//   console.log(biggestCount);
+//Contar quantas vezes se repete
+
+function highestCount(arrayD6) {
   // seu código aqui
+  let biggest = arrayD6[0];
+  let biggestCount = 0;
+    for (let index = 1; index < arrayD6.length; index +=1) {
+      if (arrayD6[index]>biggest) {
+        biggest = arrayD6[index];      
+      }
+    }
+    for (index = 0; index < arrayD6.length; index +=1) {
+      if (arrayD6[index] === biggest) {
+        biggestCount +=1;        
+      }
+    }
+    return biggestCount;  
 }
+console.log(highestCount(testArrayD6))
 
 // Desafio 7
 function catAndMouse() {
