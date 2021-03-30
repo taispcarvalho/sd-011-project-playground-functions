@@ -16,9 +16,22 @@ function techList(arr, nome) {
 function generatePhoneNumber() {}
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) {
+  let param = [a, b, c];
+  for (let i = 0; i < 3; i += 1) {
+    if (
+      param[i] < param[i + 1] + param[i + 2] &&
+      param[i] > Math.abs(param[i + 1] - param[i + 2])
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
+
+console.log(triangleCheck(234, 4, 4));
+
 // Desafio 13
 function hydrate() {
   // seu código aqui
