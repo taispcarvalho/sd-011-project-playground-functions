@@ -6,7 +6,7 @@ function compareTrue(input1, input2) {
   }
   return false;
 }
-console.log(compareTrue(true, true));
+// console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -25,9 +25,12 @@ function splitSentence(string) {
 // console.log(splitSentence('Vamo que vamo'));
 
 // Desafio 4
-function concatName() {
+// let testArrayD4 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']; // Array de teste
+function concatName(arrayD4) {
   // seu código aqui
+  return `${arrayD4[arrayD4.length - 1]}, ${arrayD4[0]}`;
 }
+// console.log(concatName(testArrayD4));
 
 // Desafio 5
 function footballPoints() {
