@@ -59,18 +59,20 @@ function fizzBuzz(array) {
   let result = [];
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (array[index] % 3 === 0) {
-      result.push('fizz');
-    } else if (array[index] % 5 === 0) {
-      result.push('Buzz');
+      result.push("fizzBuzz");
+    }
+    if (array[index] % 3 === 0) {
+      result.push("fizz");
+    }
+    if (array[index] % 5 === 0) {
+      result.push("buzz");
     } else {
-      result.push('bug!');
+      result.push("bug!");
     }
   }
   return result;
 }
-console.log(fizzBuzz([15, 45, 9, 3, 7, 20]));
+console.log((fizzBuzz([5,20,35,47,60])))
 
 // Desafio 9
 function encode() {
