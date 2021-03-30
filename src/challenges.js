@@ -31,15 +31,19 @@ function highestCount(arrayNumbers) {
   for (let index = 0; index < arrayNumbers.length; index += 1) {
 
     if (arrayNumbers[index] > higherNumber) {
-        higherNumber = arrayNumbers[index]
-      }
-    if (arrayNumbers[index] == higherNumber) {
-        repeater += 1  
+        higherNumber = arrayNumbers[index];
     }
-  }
+  };
+
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] === higherNumber) {
+        repeater += 1;  
+    }
+  };
+
   return repeater
 }
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse() {
