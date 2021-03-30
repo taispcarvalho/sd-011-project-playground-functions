@@ -1,25 +1,26 @@
-// Desafio 1
+// Desafio 1 - OK
 function compareTrue(value1, value2) {
   return value1 && value2;
 }
-console.log('teste 1')
+console.log('teste 1');
 console.log(compareTrue(true, true));
 
-// Desafio 2
+// Desafio 2 - OK
 function calcArea(base, height) {
   return ((base * height) / 2);
 }
 console.log(calcArea(35, 30));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  return frase.split('');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName() {  
+  
 }
+console.log();
 
 // Desafio 5
 function footballPoints() {
