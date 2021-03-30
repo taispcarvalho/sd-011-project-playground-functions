@@ -20,10 +20,10 @@ console.log(splitSentence('go trybe'))
 
 // Desafio 4 -FEITO
 function concatName(...arrayName) {
-  let name = arrayName[arrayName.length -1].concat(', ' + arrayName[0]);
- return name;
+  return arrayName[arrayName.length -1].concat(', ' + arrayName[0]);
+ 
 }
-console.log(concatName('captain', 'my', 'captain'));
+console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo'));
 
 // Desafio 5 -FEITO
 function footballPoints(wins, ties) {
