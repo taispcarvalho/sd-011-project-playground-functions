@@ -4,7 +4,7 @@ function techList(techNames, name) {
   if (techNames.length > 1) {
     techNames.sort();
     for (let index = 0; index < techNames.length; index += 1) {
-      let object = {};
+      let object = {tech: '', name:''};
       object.tech = techNames[index];
       object.name = name;
       allTogether.push(object);
