@@ -25,7 +25,7 @@ function concatName(array) {
   stringPhrase = lastElement + firstElement;
   return stringPhrase;
 }
-console.log(concatName(names))
+
 
 // Desafio 5
 function footballPoints() {
