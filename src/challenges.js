@@ -104,7 +104,7 @@ function fizzBuzz(arrayNumbers) {
 function testEncode(character) {
   let newCharacter = '';
 
-  switch(character) {
+  switch (character) {
     case 'a':
       newCharacter = '1';
       break;
@@ -124,20 +124,6 @@ function testEncode(character) {
       newCharacter = character;
   }
 
-  // if (character === 'a') {
-  //   newCharacter = 1;
-  // } else if (character === 'e') {
-  //   newCharacter = 2;
-  // } else if (character === 'i') {
-  //   newCharacter = 3;
-  // } else if (character === 'o') {
-  //   newCharacter = 4;
-  // } else if (character === 'u') {
-  //   newCharacter = 5;
-  // } else {
-  //   newCharacter = character;
-  // }
-
   return newCharacter;
 }
 
@@ -154,7 +140,7 @@ function encode(sentence) {
 function testDecode(character) {
   let newCharacter = '';
 
-  switch(character) {
+  switch (character) {
     case '1':
       newCharacter = 'a';
       break;
@@ -173,20 +159,6 @@ function testDecode(character) {
     default:
       newCharacter = character;
   }
-
-  // if (character === '1') {
-  //   newCharacter = 'a';
-  // } else if (character === '2') {
-  //   newCharacter = 'e';
-  // } else if (character === '3') {
-  //   newCharacter = 'i';
-  // } else if (character === '4') {
-  //   newCharacter = 'o';
-  // } else if (character === '5') {
-  //   newCharacter = 'u';
-  // } else {
-  //   newCharacter = character;
-  // }
 
   return newCharacter;
 }
