@@ -15,11 +15,11 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arrayStrings) {
-  return [arrayStrings[arrayStrings.length - 1], arrayStrings[0]];
+  return (arrayStrings[arrayStrings.length - 1] + ', ' + arrayStrings[0]);
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   let points = ((wins * 3) + (ties * 1));
   points = points || 0;
   return points;
