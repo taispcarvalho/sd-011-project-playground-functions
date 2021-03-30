@@ -79,10 +79,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceBetweenCat2 = Math.abs(mouse - cat2);
 
   return distanceBetweenCat1 > distanceBetweenCat2 ? 'cat2'
-  : distanceBetweenCat1 < distanceBetweenCat2 ? 'cat1'
-  : 'os gatos trombam e o rato foge'
+    : distanceBetweenCat1 < distanceBetweenCat2 ? 'cat1'
+    : 'os gatos trombam e o rato foge';
 }
-// exercício resolvido usando esse link como base:
+// exercício resolvido usando essa referência base:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 
 // Desafio 8
