@@ -20,11 +20,11 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(strings) {
-  return strings[strings.length -1] + ', ' +strings[0];
+  return strings[strings.length -1] + ', ' + strings[0];
 }
 // Desafio 5
 function footballPoints(wins, ties) {
-  // seu código aqui
+  return wins * 3 + ties;
 }
 
 // Desafio 6
