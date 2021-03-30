@@ -5,9 +5,9 @@ function techList(array, name) {
   }
 
   let techList = [];
-  let sortedTechNamesArray = array.sort();
+  let sortedTechNames = array.sort();
 
-  for (let techName of sortedTechNamesArray) {
+  for (let techName of sortedTechNames) {
     techList.push({
       tech: techName,
       name: name,
