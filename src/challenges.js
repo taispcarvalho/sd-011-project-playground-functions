@@ -24,8 +24,12 @@ if (calcArea = (base * height)/ 2){
 
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+//criar uma função splitSentence que recebe uma string como parametro;
+function splitSentence(string) {
+  // retornar um array de strings separadas na string original, para isso usamos o .split.. no caso .split(' ') faz mais sentido por que separa cada palavra. 
+  let array = string.split(" ");
+  //retornar o array com o resultado;
+  return array;
 }
 
 // Desafio 4
