@@ -56,13 +56,13 @@ function catAndMouse(mouse, cat1, cat2) {
   } if (distanceCat1 < distanceCat2) {
     return 'cat1';
   } if (distanceCat1 === distanceCat2) {
-    return 'gatos trobam e rato foge';
+    return 'os gatos trobam e o rato foge';
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbersofArray) {
+  
 }
 
 // Desafio 9
