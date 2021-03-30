@@ -29,7 +29,7 @@ function footballPoints(wins, ties) {
 
 let highestArray = [0, 0, 0];
 
-// Desafio 6 Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a quantidade de vezes que o maior deles se repete.
+// Desafio 6
 function highestCount(array) {
   let higherNumber = 0;
   let repeatNumber = 0;
@@ -48,35 +48,42 @@ function highestCount(array) {
   return repeatNumber;
 }
 
+// Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
 
-
-  // Desafio 7
-  function catAndMouse() {
-    // seu código aqui
+  if (Math.abs(distanceCat1) > Math.abs(distanceCat2)) {
+    return 'cat2';
+  } else if (Math.abs(distanceCat1) < Math.abs(distanceCat2)) {
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge';
   }
+}
 
-  // Desafio 8
-  function fizzBuzz() {
-    // seu código aqui
-  }
+// Desafio 8
+function fizzBuzz() {
 
-  // Desafio 9
-  function encode() {
-    // seu código aqui
-  }
-  function decode() {
-    // seu código aqui
-  }
+}
 
-  module.exports = {
-    calcArea,
-    catAndMouse,
-    compareTrue,
-    concatName,
-    decode,
-    encode,
-    fizzBuzz,
-    footballPoints,
-    highestCount,
-    splitSentence,
-  };
+// Desafio 9
+function encode() {
+  // seu código aqui
+}
+function decode() {
+  // seu código aqui
+}
+
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
+};
