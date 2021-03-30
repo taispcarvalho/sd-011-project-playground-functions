@@ -2,9 +2,11 @@
 function compareTrue(param1, param2) {
   if (param1 && param2 === true) {
     return true;
+  } else {
+    return false;
   }
 }
-console.log(compareTrue(2, 2));
+  console.log(compareTrue(true, true ));
 // Desafio 2
 function calcArea() {
   // seu código aqui
