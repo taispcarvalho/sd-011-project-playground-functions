@@ -19,8 +19,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(name) {
- return (name[1] + ", " + name[-1])
+function concatName(firstArray) {
+  return `${firstArray[firstArray.length - 1]}, ${firstArray[0]}`;
 }
 
 // Desafio 5
@@ -45,29 +45,27 @@ function highestCount(array) {
 function catAndMouse(cat1, cat2, mouse) {
 let gato1 = cat1 - mouse;
 let gato2 = cat2 - mouse; 
-
 if (gato1 < 0) {
   gato1 = gato1 * -1;
 }
-
 if (gato2 < 0) {
   gato2 = gato2 * -1;
 }
-
-if (gato1 < gato2) {
+if(gato1 < gato2) {
   return 'cat1';
-} else if (gato1 > gato2) {
+}else if (gato1 > gato2) {
   return 'cat2';
 }else{
-  return 'os gatos trombam e o rato foge'
+  return 'os gatos trombam e o rato foge';
 }
 }
+console.log (catAndMouse(5,3,6))
 
 
 // Desafio 8
 function fizzBuzz(array) {
     let newArray = [];
-    for (let index in array) {
+   for (let index = 0; index < array.length; index+=1) {
       if (array[index] % 5 === 0 && array[index] % 3 === 0) {
         newArray.push('fizzBuzz');
       } else if (array[index] % 3 === 0) {
@@ -80,8 +78,7 @@ function fizzBuzz(array) {
     }
     return newArray;
 }
-
-console.log(fizzBuzz(5,12,3,4,6))
+console.log(fizzBuzz(3,43,4,5))
 // Desafio 9
 function encode() {
   // seu código aqui
