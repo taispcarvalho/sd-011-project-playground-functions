@@ -60,9 +60,24 @@ function highestCount(array) {
   return count;
 }
 
+function counterDistance(point1, point2) {
+  let countDisctance = 0;
+  for (point1; point1 <= point2; point1 += 1) {
+    countDisctance += 1;
+  }
+  return countDisctance;
+}
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let countCat1 = counterDistance(cat1, mouse);
+  let countCat2 = counterDistance(cat2, mouse);
+
+  if (countCat1 !== countCat2) {
+    return countCat1 < countCat2 ? 'cat1' : 'cat2';
+  }
+
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
