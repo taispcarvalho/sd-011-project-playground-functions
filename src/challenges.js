@@ -81,7 +81,7 @@ function encode(str) {
 }
 
 function decode(str) {
-  let decodeString = str.replace(/12345/g,'aeiou')
+  let decodeString = str.replace(/1/g, 'a')
     .replace(/2/g, 'e')
     .replace(/3/g, 'i')
     .replace(/4/g, 'o')
