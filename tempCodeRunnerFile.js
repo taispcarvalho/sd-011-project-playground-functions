@@ -1,14 +1,12 @@
-let pessoa = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-function concatName(pessoa) {
-for (let i = 0; i < pessoa.length; i+=1) {
-    if (pessoa[i] === pessoa[pessoa.length - 1]) {
-      let ultimoNome = pessoa[i];
+let pessoas = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+function concatName(pessoas) {
+for (let i = 0; i < concatName.length; i+=1) {
+    if (concatName[i] === concatName[concatName.length - 1]) {
+      let ultimoNome = concatName[i];
     }
-    if (pessoa[i] === pessoa[0]) {
-      let primeiroNome = pessoa[i];
+    if (concatName[i] === concatName[0]) {
+      let primeiroNome = concatName[0];
     }
-  return (ultimoNome + ', ' + primeiroNome)
+  return (console.log(ultimoNome, ', ',primeiroNome));
+    } 
   }
-  concatName(ultimoNome + ', ' + primeiroNome);
-  console.log(ultimoNome + ', ' + primeiroNome);
-}
