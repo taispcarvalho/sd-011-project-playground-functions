@@ -43,8 +43,9 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
-let gato1 = cat1 - mouse
-let gato2 = cat1 - mouse
+let gato1 = cat1 - mouse;
+let gato2 = cat2 - mouse; 
+
 if (gato1 < gato2) {
   return 'cat1';
 } else if (gato1 > gato2) {
@@ -52,9 +53,8 @@ if (gato1 < gato2) {
 }else{
   return 'os gatos trombam e o rato foge'
 }
-{
 }
-}
+console.log(catAndMouse(3, 1, 2));
 
 // Desafio 8
 function fizzBuzz() {
