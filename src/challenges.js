@@ -61,8 +61,10 @@ function highestCount(array) {
 }
 
 function counterDistance(point1, point2) {
+  let smallest = point1 < point2 ? point1 : point2;
+  let biggest = point1 > point2 ? point1 : point2;
   let countDisctance = 0;
-  for (point1; point1 <= point2; point1 += 1) {
+  for (smallest; smallest <= biggest; smallest += 1) {
     countDisctance += 1;
   }
   return countDisctance;
