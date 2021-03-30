@@ -19,16 +19,13 @@ function splitSentence(phrase) {
   let word = '';
   let delimiter = ' ';
   for (let index = 0; index <= phrase.length; index += 1) {
-    if (index === phrase.length) {
-      return array
-    } else
     if (phrase[index] === delimiter || index === phrase.length) {
       array.push(word);
       word = '';
     } else {
       word += phrase[index];
-    }
-  }
+    } 
+  }return array
 }
 
 // Desafio 4
