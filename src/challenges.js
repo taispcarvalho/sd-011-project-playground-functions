@@ -30,22 +30,22 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount(nunbers) {
+function highestCount(numbers) {
   var biguer = 0
-  for (let index = 0; index < nunbers.length; index+=1) {
-    if (biguer < nunbers[index]) {
-      biguer = nunbers[index]
+  for (let index = 0; index < numbers.length; index+=1) {
+    if (numbers[index] > biguer) {
+      biguer = numbers[index];
     }
-    return biguer;
   }
+  return biguer;
 }
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
 if (cat1[index] - mouse[index] > cat2[index] - mouse[index]) {
-  return cat2
+  return 'cat2'
 }else{
-  return cat1;
+  return 'cat1';
 }
 }
 
