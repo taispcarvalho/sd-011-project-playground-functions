@@ -85,27 +85,49 @@
 
 // DESAFIO - 7
 
-function catAndMouse(mouse, cat1, cat2){
-  let distcat1 = mouse - cat1; 
-  let distcat2 = mouse - cat2;
-  if (distcat1 === distcat2){
-    return 'os gos gatos trombam e o rato foge';
-  }
-  else if (distcat1 < distcat2){
-    return 'cat1';
-  }
-  else{
-    return 'cat2'
-  }
-}
-console.log(catAndMouse(10, 2, 9));
+// function catAndMouse(mouse, cat1, cat2){
+//   let distcat1 = mouse - cat1; 
+//   let distcat2 = mouse - cat2;
+//   if (distcat1 === distcat2){
+//     return 'os gos gatos trombam e o rato foge';
+//   }
+//   else if (distcat1 < distcat2){
+//     return 'cat1';
+//   }
+//   else{
+//     return 'cat2'
+//   }
+// }
+// console.log(catAndMouse(10, 2, 9));
 
 
 
 // =================================================================================
 
 // DESAFIO - 8
+let vetor = [2, 15, 7, 9, 45];
 
+function fizzBuzz(array) {
+  let stringResult = [];
+  for(let index = 0; index < array.length; index += 1) {
+    stringResult.push(checkDivider(array[index]));
+  }
+  return stringResult;
+}
+function checkDivider(value) {
+  if (value % 3 === 0 && value % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  else if(value % 3 === 0){
+    return 'fizz';
+  }
+  else if(value % 5 === 0){
+    return 'buzz';
+  }
+  return 'bug!';
+  }
+
+console.log(fizzBuzz(vetor));
 
 
 

@@ -3,7 +3,7 @@ function compareTrue(case1, case2) {
   if (case1 && case2) {
     return true;
   }
-    return false;
+  return false;
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -11,12 +11,11 @@ function calcArea(base, height) {
 }
 // Desafio 3
 function splitSentence(frase) {
-  return frase.split(" ");
+  return frase.split(' ');
 }
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1] + ', ' + array[0];
-  
+return array[array.length - 1] + ', ' + array[0]; 
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -29,7 +28,7 @@ function highestCount(array) {
   function highestNumber(array) {
     let higherNum = 0;
     for (let index = 0; index < array.length; index += 1) {
-      if (array[index] > array[index + 1]){
+      if (array[index] > array[index + 1]) {
         higherNum = array[index];
       }
     }
@@ -55,13 +54,28 @@ function catAndMouse(mouse, cat1, cat2) {
   }
     return 'cat2'
   }
-console.log(catAndMouse(10, 4, 22))
+
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let stringResult = [];
+  for(let index = 0; index < array.length; index += 1) {
+    stringResult.push(checkDivider(array[index]));
+  }
+  return stringResult;
 }
-
+function checkDivider(value) {
+  if (value % 3 === 0 && value % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  else if(value % 3 === 0) {
+    return 'fizz';
+  }
+  else if(value % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
 // Desafio 9
 function encode() {
   // seu código aqui
