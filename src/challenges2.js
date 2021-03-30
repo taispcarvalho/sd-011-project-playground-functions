@@ -13,6 +13,8 @@ function triangleCheck() {
   // seu código aqui
 }
 
+console.log(2);
+
 // Desafio 13
 function hydrate() {
   // seu código aqui

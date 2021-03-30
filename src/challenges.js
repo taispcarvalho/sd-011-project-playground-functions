@@ -1,5 +1,5 @@
 // Desafio 1
-//&& só é verdadeiro caso todos param sejam verdadeiros
+//  && só é verdadeiro caso todos param sejam verdadeiros
 function compareTrue(a, b) {
   return a && b;
 }
@@ -10,7 +10,7 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-//O método split() divide uma String em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array. A divisão é feita procurando um padrão, onde o padrão é fornecido como o primeiro parâmetro na chamada do método, o padrao na função foi (' '), significa que a cada espaço ' ' ele vai dividir uma string.
+//  O método split() divide uma String em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array. A divisão é feita procurando um padrão, onde o padrão é fornecido como o primeiro parâmetro na chamada do método, o padrao na função foi (' '), significa que a cada espaço ' ' ele vai dividir uma string.
 function splitSentence(arr) {
   return arr.split(' ');
 }
@@ -26,7 +26,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-//Math.max retorna o maior numero, e os 3 dots significa que pode vir mais de um argumento, ou seja um array.
+//  Math.max retorna o maior numero, e os 3 dots significa que pode vir mais de um argumento, ou seja um array.
 function highestCount(arr) {
   let highestNumberInArray = Math.max(...arr);
   let timesRepeat = 0;
