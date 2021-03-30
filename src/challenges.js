@@ -88,11 +88,47 @@ function fizzBuzz(numArray2) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let vowels = ['a', 'e', 'i', 'o', 'u'];
+let vowelNumbers = ['1', '2', '3', '4', '5'];
+
+function vowelToNum(string, i) {
+  for (let i2 = 0; i2 < vowels.length; i2 += 1) {
+    if (string[i] === vowels[i2]) {
+      return vowelNumbers[i2];
+    }
+    if (i2 === vowels.length - 1) {
+      return string[i];
+    }
+  }
 }
-function decode() {
+
+function encode(string2) {
   // seu código aqui
+  let changedString = '';
+  for (let i = 0; i < string2.length; i += 1) {
+    changedString += vowelToNum(string2, i);
+  }
+  return changedString;
+}
+
+function numToVowel(string, i) {
+  for (let i2 = 0; i2 < vowelNumbers.length; i2 += 1) {
+    if (string[i] === vowelNumbers[i2]) {
+      return vowels[i2];
+    }
+    if (i2 === vowelNumbers.length - 1) {
+      return string[i];
+    }
+  }
+}
+
+function decode(string2) {
+  // seu código aqui
+  let changedString = '';
+  for (let i = 0; i < string2.length; i += 1) {
+    changedString += numToVowel(string2, i);
+  }
+  return changedString;
 }
 
 module.exports = {
