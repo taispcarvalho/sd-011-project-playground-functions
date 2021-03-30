@@ -54,11 +54,11 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encodeAux(sentence, index) {
-  if(sentence[index] === 'a') sentence[index] = '1';
-  if(sentence[index] === 'e') sentence[index] = '2';
-  if(sentence[index] === 'i') sentence[index] = '3';
-  if(sentence[index] === 'o') sentence[index] = '4';
-  if(sentence[index] === 'u') sentence[index] = '5';
+  if (sentence[index] === 'a') sentence[index] = '1';
+  if (sentence[index] === 'e') sentence[index] = '2';
+  if (sentence[index] === 'i') sentence[index] = '3';
+  if (sentence[index] === 'o') sentence[index] = '4';
+  if (sentence[index] === 'u') sentence[index] = '5';
   return sentence;
 }
 function encode(sentence) {
@@ -69,11 +69,11 @@ function encode(sentence) {
   return sentence.join('');
 }
 function decodeAux(sentence, index) {
-  if(sentence[index] === '1') sentence[index] = 'a';
-  if(sentence[index] === '2') sentence[index] = 'e';
-  if(sentence[index] === '3') sentence[index] = 'i';
-  if(sentence[index] === '4') sentence[index] = 'o';
-  if(sentence[index] === '5') sentence[index] = 'u';
+  if (sentence[index] === '1') sentence[index] = 'a';
+  if (sentence[index] === '2') sentence[index] = 'e';
+  if (sentence[index] === '3') sentence[index] = 'i';
+  if (sentence[index] === '4') sentence[index] = 'o';
+  if (sentence[index] === '5') sentence[index] = 'u';
   return sentence;
 }
 function decode(sentence) {
