@@ -19,7 +19,7 @@ function splitSentence(str) {
 function concatName(anyStr) {
   let lastName = anyStr[anyStr.length - 1];
   let firstName = anyStr[0];
-  let fullName = lastName.concat(' ', firstName)
+  let fullName = lastName.concat(', ', firstName);
   return fullName;
 }
 
