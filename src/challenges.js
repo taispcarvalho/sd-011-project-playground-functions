@@ -26,7 +26,7 @@ function splitSentence(value) {
 
 // Desafio 4
 function concatName(value) {
-  let index = value.length() - 1;
+  let index = value.length - 1;
   let ret = `${value[index]}, ${value[0]}`;
   return ret;
 }
@@ -63,8 +63,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(value) {
+  ret = [];
+  for (let index = 0; index < value.length; index += 1) {
+    if (value[index] % 3 === 0 && value[index] % 5 === 0) {
+      ret.push('fizzBuzz');
+    } else if (value[index] % 3 === 0) {
+      ret.push('fizz');
+    } else if (value[index] % 5 === 0) {
+      ret.push('buzz');
+    } else {
+      ret.push('bug!');
+    }
+  }
+  return ret;
 }
 
 // Desafio 9
