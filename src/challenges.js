@@ -1,4 +1,4 @@
- // Desafio 1
+// Desafio 1
 function compareTrue(bolean1, bolean2) {
   if (bolean1 && bolean2) {
     return true;
