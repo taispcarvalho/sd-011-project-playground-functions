@@ -30,7 +30,7 @@ console.log(splitSentence('foguete'));
 function concatName(array) {
   let first = array[0];
   let last = array[array.length - 1];
-  let concat = last + ', ' + first
+  let concat = last + " , " + first;
   return concat;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -38,8 +38,8 @@ console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
-function footballPoints(wins, ties) {}
-
+function footballPoints(wins, ties) {
+}
 
 // Desafio 6
 function highestCount() {
