@@ -23,13 +23,17 @@ function concatName(stringArray1) {
   return `${stringArray1[stringArray1.length - 1]}, ${stringArray1[0]}`;
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
-console.log(concatName(['captain', 'my', 'captain']));
-
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let points = 0;
+  for (let i = 0; i < wins; i += 1) {
+    points += 3;
+  }
+  for (let i = 0; i < ties; i += 1) {
+    points += 1;
+  }
+  return points;
 }
 
 // Desafio 6
