@@ -56,16 +56,19 @@ function fizzBuzz(array) {
     }
   }
   return finalArray;
-  console.log(finalArray);
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let replaced = str.replace(/a/g, 1);
+  replaced = replaced.replace(/e/g, 2);
+  replaced = replaced.replace(/i/g, 3);
+  replaced = replaced.replace(/o/g, 4);
+  replaced = replaced.replace(/u/g, 5);
+  return replaced;
 }
-function decode() {
-  // seu código aqui
-}
+
+function decode() {}
 
 module.exports = {
   calcArea,
