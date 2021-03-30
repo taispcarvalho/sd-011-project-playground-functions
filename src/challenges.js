@@ -27,10 +27,20 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let highestNumber = array[0];
+  let highestNumberCount = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (highestNumber < array[index]) {
+      highestNumber = array[index];
+    }
+    if (array[index] === highestNumber) {
+      highestNumberCount += 1;
+    }
+  }
+  return highestNumberCount;
 }
-
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
