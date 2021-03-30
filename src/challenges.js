@@ -102,30 +102,27 @@ function fizzBuzz(arrayNumbers) {
 
 // Desafio 9
 function testEncode(character) {
-  let newCharacter = '';
-  
   switch (character) {
   case 'a':
-    newCharacter = '1';
+    character = '1';
     break;
   case 'e':
-    newCharacter = '2';
+    character = '2';
     break;
   case 'i':
-    newCharacter = '3';
+    character = '3';
     break;
   case 'o':
-    newCharacter = '4';
+    character = '4';
     break;
   case 'u':
-    newCharacter = '5';
+    character = '5';
     break;
   default:
-    newCharacter = character;
-    break;
+    character;
   }
 
-  return newCharacter;
+  return character;
 }
 
 function encode(sentence) {
@@ -139,29 +136,27 @@ function encode(sentence) {
 }
 
 function testDecode(character) {
-  let newCharacter = '';
-
   switch (character) {
   case '1':
-    newCharacter = 'a';
+    character = 'a';
     break;
   case '2':
-    newCharacter = 'e';
+    character = 'e';
     break;
   case '3':
-    newCharacter = 'i';
+    character = 'i';
     break;
   case '4':
-    newCharacter = 'o';
+    character = 'o';
     break;
   case '5':
-    newCharacter = 'u';
+    character = 'u';
     break;
   default:
-    newCharacter = character;
+    character;
   }
 
-  return newCharacter;
+  return character;
 }
 
 function decode(sentence) {
