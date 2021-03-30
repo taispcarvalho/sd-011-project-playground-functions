@@ -3,17 +3,19 @@ function compareTrue(param1, param2) {
   return param1 && param2;
 }
 
-compareTrue(true, false);
+console.log(compareTrue(true, false));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
+console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  return str.split(' ');
 }
+console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName() {
