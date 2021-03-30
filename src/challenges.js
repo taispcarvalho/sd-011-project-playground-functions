@@ -1,30 +1,37 @@
 // Desafio 1
 function compareTrue(pinky, cerebro) {
-  if(pinky === true && cerebro === true){
+  if (pinky === true && cerebro === true){
     return true;
-  }else {
+  } else {
     return false;
   }
 }
-console.log(compareTrue(true, false));
+console.log (compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height)/2;
+  let area = (base * height) / 2;
   return area;
 }
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  
+
 }
+  
+  
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
-
+function concatName(array) {
+  
+  firstIndex = array [0];
+  lastIndex = array [array.length - 1];
+  return [lastIndex, firstIndex];
+  
+  }
+  
 // Desafio 5
 function footballPoints() {
   // seu código aqui
