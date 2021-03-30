@@ -77,14 +77,11 @@ function hydrate(str) {
   }
   if (total === 1) {
     total += ' copo de água';
-  }
-  else {
+  } else {
     total += ' copos de água';
   }
   return total;
 }
-
-console.log(hydrate("1 cachaça"))
 
 module.exports = {
   generatePhoneNumber,
