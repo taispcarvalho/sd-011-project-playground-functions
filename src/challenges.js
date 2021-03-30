@@ -24,14 +24,16 @@ function splitSentence(string) {
 function concatName(array) {
   let first = array[0];
   let last = array[array.length - 1];
-  let result = last.concat(', ', first);
+  //let result = last.concat(', ', first);
+  let result = last + ', ' + first;
   return result;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-
+  let resultWins = wins * 3;
+  return resultWins + ties;
 }
 
 // Desafio 6
