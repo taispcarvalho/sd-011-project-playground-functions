@@ -38,9 +38,10 @@ function maiorNumero(numeros) {
       numeroMaior = numeros[index];
     }
   }
+  return numeroMaior;
 };
 maiorNumero([9, 1, 2, 3, 9, 5, 7]);
-return numeroMaior;
+
 
 let vezes = 0;
 function highestCount(listaNumeros) {
@@ -49,9 +50,10 @@ function highestCount(listaNumeros) {
       vezes += 1;
     }
   }
+  return vezes;
 };
 highestCount([9, 1, 2, 3, 9, 5, 7]);
-return vezes;
+
 
 
 // Desafio 7
