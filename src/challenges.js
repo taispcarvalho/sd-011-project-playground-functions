@@ -81,19 +81,51 @@ function checkDividers35(num) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let anwser;
+  let anwser = [];
   for (let index = 0; index < array.length; index += 1) {
     anwser.push(checkDividers35(array[index]));
   }
   return anwser;
 }
 
+// function replaceVowels(char) {
+//   switch (char) {
+//     case 'a': 
+//       return '1';
+//       break;
+//     case 'e':
+//       return '2';
+//       break;
+//     case 'i':
+//       return '3';
+//       break;
+//     case 'o':
+//       return '4';
+//       break;
+//     case 'u':
+//       return '5';
+//       break;
+//     default:
+//       return char;
+//   }
+// }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  string = string.replace('a', '1');
+  string = string.replace('e', '2');
+  string = string.replace('i', '3');
+  string = string.replace('o', '4');
+  string = string.replace('u', '5');
+  return string;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  string = string.replace('1', 'a');
+  string = string.replace('2', 'e');
+  string = string.replace('3', 'i');
+  string = string.replace('4', 'o');
+  string = string.replace('5', 'u');
+  return string;
 }
 
 module.exports = {
