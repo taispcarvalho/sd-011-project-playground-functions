@@ -52,8 +52,20 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function checkSide(l1, l2, l3) {
+  const sumOfOtherSides = l2 + l3;
+  const diffOfOtherSides = Math.abs(l2 - l3);
+  if (l1 < sumOfOtherSides && l1 > diffOfOtherSides) {
+    return true;
+  }
+  return false;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  const isValidA = checkSide(lineA, lineB, lineC);
+  const isValidB = checkSide(lineB, lineA, lineC);
+  const isValidC = checkSide(lineC, lineA, lineB);
+  return isValidA && isValidB && isValidC;
 }
 
 // Desafio 13
