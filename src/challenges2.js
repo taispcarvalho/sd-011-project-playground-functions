@@ -7,15 +7,17 @@ function techList(value, name) {
     for (let index = 0; index < value.length; index += 1) {
       ret[index] = {
         tech: value[index],
-        name: name
-      }
+        name: name,
+      };
     }
     return ret;
   }
 }
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(value) {
+  if (value.length != 11) {
+    return 'Array com tamanho incorreto.'
+  }
 }
 
 // Desafio 12
