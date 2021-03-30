@@ -33,7 +33,7 @@ function concatName(array) {
   let newArray = array.shift();
   let arrayReverse = array.reverse();
   let newArray2 = arrayReverse.shift();
-  return newArray2 + ' ' + newArray; 
+  return newArray2 + ', ' + newArray; 
 }
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
@@ -50,9 +50,17 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  highestNumber(array)
+  function highestNumber(array) {
+    let containerMaxNumber = 0;
+    for (let index = 0; index < array.length; index =+ 1) {
+       containerMaxNumber = Math.max(array[index])
+    }
+  }
 }
+
+console.log(highestCount([1,2,3,4,56,7]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
