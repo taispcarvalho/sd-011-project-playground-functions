@@ -1,7 +1,24 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techNamesArray) {
+  if (techNamesArray.length === 0) {
+    return 'Vazio!';
+  }
+
+  let techListArray = [];
+  let sortedTechNamesArray = techNamesArray.sort();
+
+  for (let techName of sortedTechNamesArray) {
+    techListArray.push({
+      tech: techName,
+      name: 'Inacio',
+    });
+  }
+
+  return techListArray;
 }
+
+console.log(techList([]));
+console.log(techList(['Redux', 'C#', 'C++', 'Unity', 'Unreal Engine 5']));
 
 // Desafio 11
 function generatePhoneNumber() {
