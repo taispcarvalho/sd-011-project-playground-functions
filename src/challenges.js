@@ -16,25 +16,15 @@ function splitSentence() {
 
 // Desafio 4
 
-function concatName(Array) {
-  let frase = Array[Array.length - 1] + ',' + Array[0];
-    return frase;
+function concatName(array) {
+  let fraseFinal = array[array.length - 1] + ',' + array[0];
+    return fraseFinal;
   }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  wins = 14;
-  ties = 8;
-  let pointsWins = 0;
-  let pointsTies = 0;
-  if (wins !== 0) {
-    pointsWins = 3 * wins;
-    if (ties !== 0) {
-      pointsTies = ties * 1;
-    }
-    let soma = pointsTies + pointsWins;
-  }
-  return soma;
+let operacao = (3 * wins) + ties;
+  return operacao;
 }
 
 // Desafio 6
