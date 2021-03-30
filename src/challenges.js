@@ -17,13 +17,13 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(array) {
-  let first = array[0];
-  let last = array[array.length - 1];
-  let concatFirstLast = `${last},${first}`;
-  return concatFirstLast;
+function concatName(myArray) {
+  var firstItem = myArray[0];
+  var lastItem = myArray[myArray.length-1];
+  var outputItens = [firstItem,lastItem];
+  return outputItens;
 }
-
+console.log(concatName(['Rodel', 'Mike', 'Ronnie', 'Betus']))
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties * 1);
