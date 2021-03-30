@@ -2,7 +2,7 @@
 function compareTrue(param1, param2) {
   if (param1 && param2 === true) {
     return true;
-  } else {
+  }else{
     return false;
   }
 }
@@ -14,15 +14,16 @@ function calcArea(base, height) {
 }
 console.log(calcArea(10, 50));
 // Desafio 3
-function splitSentence(frase, separator) {
-  let fraseParaSeparar = frase.split(separator);
+function splitSentence(frase) {
+  let space = ' ';
+  let fraseParaSeparar = frase.split(space);
   return fraseParaSeparar;
 }
-let space = ' ';
-console.log(splitSentence('go Trybe', space));
+console.log(splitSentence('go Trybe'));
 // Desafio 4
-function concatName(array) {
+function concatName() {
 }
+
 // Desafio 5
 function footballPoints() {
   // seu código aqui
