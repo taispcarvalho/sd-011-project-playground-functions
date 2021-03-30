@@ -70,10 +70,24 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     result = 'os gatos trombam e o rato foge';
   }
-return result;
+  return result;
 }
 console.log(catAndMouse(1, 0, 2));
+function catAndMouse(mouse, cat1, cat2) {
+  let mouseCat1 = (cat1 - mouse) ** 2;
+  let mouseCat2 = (cat2 - mouse) ** 2;
+  let result;
 
+  if (mouseCat1 < mouseCat2) {
+    result = 'cat1';
+  } else if (mouseCat2 < mouseCat1) {
+    result = 'cat2';
+  } else {
+    result = 'os gatos trombam e o rato foge';
+  }
+  return result;
+}
+console.log(catAndMouse(1, 0, 2));
 function fizz(number) {
   if (number % 3 === 0) {
     return 'fizz'
@@ -113,10 +127,35 @@ return resultFizzBuzz;
 }
 console.log(fizzBuzz([7, 9]));
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+function letterNumber(letter) {
+  let options = {
+    letters: ['a', 'e', 'i', 'o', 'u'],
+    numbers: ['1', '2', '3', '4', '5']
+  }
+  let result = letter;
+  for (let index = 0; index < options.letters.length; index += 1) {
+    if (options.letters[index] === letter) {
+      result = options.numbers[index]
+    }
+  }
+  return result;
 }
+console.log(letterNumber('a'));
+
+// Desafio 9
+function encode(code) {
+  let letter = code.split('');
+  let result =[];
+  let theCode;
+  
+  for (let index of letter) {
+    result.push(letterNumber(index));
+    theCode = result.join('');
+  }
+  return theCode;
+}
+console.log(encode('hi there'));
+
 function decode() {
   // seu código aqui
 }
