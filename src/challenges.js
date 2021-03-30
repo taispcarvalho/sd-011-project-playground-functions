@@ -51,14 +51,14 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numeros) {
   let arrayFizzBuzz = [];
-  restoDiv3 = numeros[index] % 3;
-  restoDiv5 = numeros[index] % 5;
   for (let index = 0; index < numeros.length; index += 1) {
-    if ((div3 === 0) && (div5 === 0)) {
+    let restoDiv3 = numeros[index] % 3;
+    let restoDiv5 = numeros[index] % 5;
+    if ((restoDiv3 === 0) && (restoDiv5 === 0)) {
       arrayFizzBuzz.push('fizzBuzz');
-    } else if (div3 === 0) {
+    } if (restoDiv3 === 0) {
       arrayFizzBuzz.push('fizz');
-    } else if (div5 === 0) {
+    } if (restoDiv5 === 0) {
       arrayFizzBuzz.push('buzz');
     } arrayFizzBuzz.push('bug!');
   } return arrayFizzBuzz;
