@@ -80,10 +80,10 @@ function fizzBuzz(numerosDesafio8) {
 let string1 = ["hi there!"];
 function encode(string1) {
   let codigo = [];
-  let quebraDaString = string1.split(' ');
+  let quebraDaString = string1.split('');
   for ( let i = 0; i < quebraDaString.length; i += 1){
     if (quebraDaString[i] === 'a'){
-      codigo.push('1')
+      codigo.push('1');
     }
     else if (quebraDaString[i] === 'e'){
       codigo.push('2');
