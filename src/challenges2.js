@@ -1,7 +1,16 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techNames, name) {
+  let object = { 
+    tech: techNames[0],
+    name: name
+  }
+  
+  console.log(object);
+  // for in array
+  //push no object
 }
+
+techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Leonardo');
 
 // Desafio 11
 function generatePhoneNumber() {
