@@ -42,12 +42,16 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let c1 = 'cat1';
   let c2 = 'cat2';
+  let distanceC1 = cat1 - mouse;
+  let distanceC2 = cat2 - mouse;
   let mra = 'os gatos trombam e o rato foge';
-  if (mouse < cat1 && cat1 < cat2) {
+  if (distanceC1 < distanceC2) {
     return c1;
-  } if (mouse < cat2 && cat2 < cat1) {
+  } if (distanceC2 < distanceC1) {
     return c2;
-  } return mra;
+  } if (distanceC1 === distanceC2) {
+    return mra;
+  }
 }
 
 // Desafio 8
