@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable no-unused-vars */
 // Desafio 1
 function compareTrue(a, b) {
   return a && b;
@@ -26,8 +28,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let biggestNumber = 0;
+  let counter = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    if (biggestNumber < array[i]) {
+      biggestNumber = array[i];
+    }
+  }
+  for (let j = 0; j < array.length; j++) {
+    if (array[j] === biggestNumber) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
