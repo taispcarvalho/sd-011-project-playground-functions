@@ -9,9 +9,13 @@ function calcArea(base, altura) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // let array = [];
+function splitSentence(string) {
+  let array = []
+  array = string.split(' ');
+  return array;
 }
+
+console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(array) {
@@ -54,7 +58,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distancia1 < distancia2) {
     return 'cat1';
   } else if (distancia2 < distancia1) {
-    return 'cat 2';
+    return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
   }
