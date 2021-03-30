@@ -62,13 +62,13 @@ function generatePhoneNumber(numbers) {
 
 // Desafio 12
 function triangleCheck(...args) {
-  for (let i = 0; i < args.length; i += 1) {
+  for (let index = 0; index < args.length; index += 1) {
     let otherLines = args.slice();
-    otherLines.splice(i, 1);
+    otherLines.splice(index, 1);
 
     if (
-      args[i] < otherLines[0] + otherLines[1]
-      && args[i] > Math.abs(otherLines[0] - otherLines[1])
+      args[index] < otherLines[0] + otherLines[1]
+      && args[index] > Math.abs(otherLines[0] - otherLines[1])
     ) {
       return true;
     }
