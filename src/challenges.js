@@ -1,6 +1,16 @@
 // Desafio 1
-function compareTrue() {
+//criar uma função compareTrue, que recebe 2 parametros (a, b)
+function compareTrue(a,b) {
+  //SE o parametro (a) E o parametro (b) forem verdadeiros;
+  if (a === true && b === true){
+    //a função retorna verdadeiro;
+    return true;
+    //SE NÂO, retorna falso;
+  } else {
+    return false;
+  }
 }
+
 
 // Desafio 2
 function calcArea() {
