@@ -1,3 +1,6 @@
+/* eslint-disable complexity */
+/* eslint-disable max-lines-per-function */
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(value1, value2) {
   // como são testados dois valores booleanos e o operador && ja retorna
@@ -13,8 +16,6 @@ function calcArea(width, height) {
 
 // Desafio 3
 function splitSentence(frase) {
-  // Quando for feita a chamada da funcão ja vai ser passada uma string então
-  // pela tipagem dinamica a string chama o metodo split que faz a separação    
   let list = frase.split();
   let finalList = [];
   finalList.push(list);
@@ -63,6 +64,7 @@ function catAndMouse(x, y, z) {
 
 // Desafio 8
 
+// eslint-disable-next-line complexity
 function fizzBuzz(list) {
   let newList = [];
   for (let index = 0; index < list.length; index += 1) {
@@ -80,11 +82,12 @@ function fizzBuzz(list) {
 }
 
 // Desafio 9
-function encode(string) {
+
+function encode(frase) {
   let encodedMessage = '';
-  for (let index = 0; index < frase.string; index += 1) {
-    if (string[index].toLowerCase() === string[index]) {
-      switch (string[index]) {
+  for (let index = 0; index < frase.length; index += 1) {
+    if (frase[index].toLowerCase() === frase[index]) {
+      switch (frase[index]) {
       case 'a':
         encodedMessage += '1';
         break;
@@ -101,10 +104,10 @@ function encode(string) {
         encodedMessage += '5';
         break;
       default:
-        encodedMessage += string[index];
+        encodedMessage += frase[index];
       }
     } else {
-      encodedMessage += string[index];
+      encodedMessage += frase[index];
     }
   }
   return encodedMessage;
@@ -112,7 +115,7 @@ function encode(string) {
 
 function decode(number) {
   let decodedMessage = '';
-  for (let index = 0; index < string.length; index += 1) {
+  for (let index = 0; index < number.length; index += 1) {
     if (number[index].toLowerCase() === number[index]) {
       switch (number[index]) {
       case '1':
