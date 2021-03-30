@@ -19,11 +19,11 @@
 // console.log(calcArea(base, altura));
 
 
-// let string = 'go Trybe'
-// function splitSentence(frase){
-//   return frase.split(" ");
-// }
-// console.log(splitSentence(string)); 
+let string = 'go Trybe'
+function splitSentence(frase){
+  return frase.split(" ");
+}
+console.log(splitSentence(string)); 
 
 // let vetor = ['foguete', 'não', 'tem', 'ré'];
 

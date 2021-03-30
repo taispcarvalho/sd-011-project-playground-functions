@@ -19,7 +19,7 @@ function splitSentence(frase) {
 let vetor = ['foguete', 'não', 'tem', 'ré'];
 
 function concatName(array) {
-  return array[array.length - 1] + ' , ' + array[0];
+  return array[array.length - 1] + ', ' + array[0];
   
 }
 console.log(concatName(vetor));
@@ -28,8 +28,6 @@ console.log(concatName(vetor));
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
-
-console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
