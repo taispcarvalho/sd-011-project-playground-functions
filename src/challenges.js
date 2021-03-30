@@ -60,8 +60,15 @@ function highestCount(array) {
 function catCheckDistance(mouse, cat1, cat2) {
   let catDistance1 = 0;
   let catDistance2 = 0;
-  catDistance1 = mouse - cat1;
-  catDistance2 = mouse - cat2;
+
+  if (catDistance1 < 0) {
+    catDistance1 = (mouse - cat1) * (-1);
+  } if (catDistance2 < 0) {
+    catDistance2 = (mouse - cat2) * (-1);
+  } else {
+    catDistance1 = mouse - cat1;
+    catDistance2 = mouse - cat2;
+  }
   return [catDistance1, catDistance2];
 }
 
@@ -69,12 +76,14 @@ function catAndMouse(mouse, cat1, cat2) {
   let catDistance1 = catCheckDistance(mouse, cat1, cat2)[0];
   let catDistance2 = catCheckDistance(mouse, cat1, cat2)[1];
   if (catDistance1 > catDistance2) {
-    return 'cat2';
+    return 'cat1';
   } if (catDistance1 === catDistance2) {
     return 'os gatos trombam e o rato foge';
   }
-  return 'cat1';
+  return 'cat2';
 }
+
+console.log(catAndMouse(0, 6, 5));
 
 // Desafio 8
 function fizzBuzz() {
