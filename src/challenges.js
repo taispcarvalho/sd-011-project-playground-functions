@@ -74,7 +74,7 @@ console.log(catAndMouse(5, 3, 3));
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+
 }
 
 // Desafio 9
