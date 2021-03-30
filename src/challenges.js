@@ -14,12 +14,17 @@ function splitSentence(string) {
 
   return array;
 }
+
 console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let newArray = `${array[array.length - 1]}, ${array[0]}`;
+
+  return newArray;
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
