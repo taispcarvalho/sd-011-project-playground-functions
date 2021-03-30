@@ -33,6 +33,17 @@ function footballPoints(wins, ties) {
 }
 console.log(footballPoints(1, 2));
 
+function higherNumber(numbers) {
+  let higher = numbers[0];
+  for (number of numbers) {
+    if (number > higher){
+      higher = number;
+    }
+  }
+  return higher;
+}
+console.log(higherNumber([0, 4, 4, 4, 9, 2, 1]));
+
 // Desafio 6
 function highestCount(list) {
   let biggerNumber = higherNumber(list);
@@ -46,22 +57,20 @@ function highestCount(list) {
 }
 console.log(highestCount([0, 0, 0]));
 
-function higherNumber(numbers) {
-  let higher = numbers[0];
-  for (number of numbers) {
-    if (number > higher){
-      higher = number;
-    }
-  }
-  return higher;
-}
-console.log(higherNumber([0, 4, 4, 4, 9, 2, 1]));
-
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let mouseCat1 = cat1 - mouse;
+  let mouseCat2 = cat2 - mouse;
+
+    if (mouseCat1 > mouseCat2) {
+      return 'cat1';
+    } else if (mouseCat2 > mouseCat1) {
+      return 'cat2';
+    } else {
+      return 'os gatos trombam e o rato foge'
+    }
 }
+console.log(catAndMouse(1,5,5));
 
 // Desafio 8
 function fizzBuzz() {
