@@ -15,13 +15,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(array) {
-  let firsAndLast = [];
-  for (let index = array.length - 1; index >= 0; index -= 1) {
-    if (index === array.length - 1 || index === 0) {
-      firsAndLast.push(array[index]);
-    }
-  }
-  return firsAndLast.join();
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
