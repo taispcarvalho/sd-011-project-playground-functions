@@ -2,11 +2,24 @@
 function compareTrue(param1, param2) {
   return param1 && param2;
 }
+compareTrue(true, true);
+
+// Teste Desafio 1
+//  function compareFalse(param1, param2) {
+//    if (param1 === false && param2 === false) {
+//      console.log('false');
+//    } else {
+//      console.log('true');
+//    }
+//  }
+//compareFalse(true, true);
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return areaDoTriangulo = ([base * height] / 2);
 }
+calcArea(10, 50);
+console.log(areaDoTriangulo);
 
 // Desafio 3
 function splitSentence() {
