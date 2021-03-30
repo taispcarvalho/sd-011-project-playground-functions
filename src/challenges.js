@@ -49,7 +49,7 @@ function catAndMouse(mouse, cat1, cat2) {
     winner = 'os gatos trombam e o rato foge';
   } else if (cat2 - mouse < cat1 - mouse) {
     winner = 'cat2';
-  } else if (cat1 - mouse === cat2 - mouse) {
+  } else if (cat1 - mouse < cat2 - mouse) {
     winner = 'cat1';
   }
   return winner;
