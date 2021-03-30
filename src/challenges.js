@@ -123,7 +123,7 @@ function fizzBuzz(list) {
       resultFizzBuzz.push('bug!');
     }
   }
-return resultFizzBuzz;
+  return resultFizzBuzz;
 }
 console.log(fizzBuzz([7, 9]));
 
