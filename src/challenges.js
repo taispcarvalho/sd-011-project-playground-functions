@@ -41,7 +41,8 @@ function highestNumber(array) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let count = 0; let highNumber = highestNumber(numbers);
+  let count = 0;
+  let highNumber = highestNumber(numbers);
   for (let i in numbers) if (highNumber === numbers[i]) count += 1;
   return count;
 }
@@ -56,7 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distCat2 < distCat1) return 'cat2';
 }
 
-// D8 Auxiliary Functions
+// D8 Auxiliary Function
 function fbLoop(numbers) {
   let result = [];
   for (let i = 0; i < numbers.length; i += 1) {
