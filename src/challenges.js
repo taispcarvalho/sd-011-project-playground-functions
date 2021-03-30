@@ -1,7 +1,34 @@
 // Desafio 1
-function compareTrue() {
-  
+function compareTrue(bool1, bool2) {
+  if (bool1 === true && bool2 === true) {
+    console.log('true');
+  } else {
+    console.log('false');
+  }
 }
+compareTrue(true, true)
+
+///////////////////////////////////////
+
+let natalia = 0;
+
+function compareTrue2(bool1, bool2) {
+     natalia = bool1 && bool2;
+}
+compareTrue2(true, true)
+console.log(natalia)
+
+///////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 2
 function calcArea() {
