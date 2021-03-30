@@ -1,10 +1,10 @@
 // Desafio 1
-// Reference used: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 function compareTrue(value1, value2) {
   return value1 && value2;
 }
 
-// Example: return condition ? true : false; but booleans are not necessary in ternary conditionals.
+// Example: return condition ? true : false; but booleans are not necessary in ternary conditionals, so it's abreviate to just "return value1 && value2;".
 
 // Desafio 2
 function calcArea(base, height) {
@@ -12,8 +12,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+function splitSentence(word) {
+  word = word.split(' ');
+  return word;
 }
 
 // Desafio 4
