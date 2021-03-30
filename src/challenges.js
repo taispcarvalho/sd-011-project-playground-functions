@@ -20,8 +20,8 @@ function splitSentence(word) {
 
 // Desafio 4
 // References:
-// Literals: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-// Forms to declare string: https://www.digitalocean.com/community/tutorials/how-to-work-with-strings-in-javascript
+// Template Literals: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+// Ways to declare string: https://www.digitalocean.com/community/tutorials/how-to-work-with-strings-in-javascript
 // Print the Last Item in Arrays: https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array
 function concatName(array) {
   return `${array[array.length - 1]}, ${array[0]}`;
@@ -56,17 +56,56 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distCat2 < distCat1) return 'cat2';
 }
 
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// D8 Auxiliary Functions
+
+function fbLoop(numbers) {
+  let result = [];
+  for (let i of numbers) {
+    if (numbers[i] % 15 === 0) {
+      result.push('fizzBuzz');
+    } else if (numbers[i] % 5 === 0) {
+      result.push('buzz');
+    } else if (numbers[i] % 3 === 0) {
+      result.push('fizz');
+    } else {
+      result.push('bug!');
+    }
+  }
+  return result;
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+// Desafio 8
+function fizzBuzz(numbers) {
+  let result = fbLoop(numbers);
+  return result;
 }
-function decode() {
-  // seu código aqui
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
+// Desafio 9
+// References:
+// .replace: https://www.w3schools.com/jsref/jsref_replace.asp
+function encode(word) {
+  for (let i = 0; i < word.length; i += 1) {
+    word = word
+      .replace('a', 1)
+      .replace('e', 2)
+      .replace('i', 3)
+      .replace('o', 4)
+      .replace('u', 5);
+  }
+  return word;
+}
+function decode(word) {
+  for (let i = 0; i < word.length; i += 1) {
+    word = word
+      .replace(1, 'a')
+      .replace(2, 'e')
+      .replace(3, 'i')
+      .replace(4, 'o')
+      .replace(5, 'u');
+  }
+  return word;
 }
 
 module.exports = {
