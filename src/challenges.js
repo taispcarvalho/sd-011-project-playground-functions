@@ -9,9 +9,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(sentence) {
-  sentence = 'vamo que vamo';
-  return sentence.split(' ');
+function splitSentence(sentence, separator) {
+  return sentence.split(separator);
 }
 
 // Desafio 4
