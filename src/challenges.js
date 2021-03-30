@@ -36,7 +36,7 @@ function footballPoints(wins, ties) {
   let score;
   let pointWins = 3;
   let pointTies = 1;
-  score = `${wins * pointWins + ties * pointTies}`;
+  score = `${wins} * ${pointWins} + ${ties} * ${pointTies}`;
   return score;
 }
 
