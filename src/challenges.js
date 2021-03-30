@@ -25,7 +25,7 @@ console.log(splitSentence('Vamo que vamo!'));
 // Desafio 4
 function concatName(names) {
   // seu código aqui
-  return names[names.length - 1] + ', ' + names[0];
+  return concat(names[names.length - 1] + ', ' + names[0]);
 }
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
