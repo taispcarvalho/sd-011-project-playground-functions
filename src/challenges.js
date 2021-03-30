@@ -1,14 +1,13 @@
 // Desafio 1
-function compareTrue() {
-  if (valorOne && ValorTwo){
-    return true;
-}else {
+function compareTrue(valorOne,ValorTwo) {
+  if ( valorOne && ValorTwo)
+  return true;
   return false;
 }
-}
-valorOne= true;
-ValorTwo=true;
-console.log(compareTrue(valorOne,ValorTwo))
+
+  valorOne = true;
+  ValorTwo = true;
+  console.log(compareTrue(true,true))
 
 
 // Desafio 2
