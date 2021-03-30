@@ -139,6 +139,10 @@ function hydrate(orderString) {
 
   let totalCount = countArray.reduce((accumulator, currentValue) => accumulator + currentValue);
 
+  if (totalCount === 1) {
+    return '1 copo de água';
+  }
+
   return `${totalCount} copos de água`;
 }
 
