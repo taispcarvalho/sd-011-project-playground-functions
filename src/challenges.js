@@ -20,10 +20,8 @@ function concatName(param1) {
   return param1[param1.length -1] + ', ' + param1[0];
 }
 // Desafio 5
-let wins = 3;
-let ties = 1;
 function footballPoints(wins, ties) {
-  
+  return wins * 3 + ties * 1
 }
 
 // Desafio 6
