@@ -2,28 +2,27 @@
 function compareTrue(valorOne, ValorTwo) {
   if (valorOne && ValorTwo) {
     return true;
+  }
     return false;
   }
-}
-  valorOne = true;
-  ValorTwo = true;
-  console.log(compareTrue(true,true))
-
+let valorOne = false;
+let ValorTwo = false;
+console.log(compareTrue(valorOne, ValorTwo));
 
 // Desafio 2
 function calcArea(base,height) {
-  return(base * height)/2;
-  
+  return(base * height) /2;
 }
-base=51;
-height=1;
-console.log(calcArea(base,height));
-
+let base= 51;
+let height= 1;
+console.log(calcArea(base, height));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  return(str.split(' '));
 }
+let str= 'foguete'
+console.log(splitSentence(str));
 
 // Desafio 4
 function concatName() {
