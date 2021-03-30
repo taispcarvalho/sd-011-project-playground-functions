@@ -16,6 +16,7 @@ function splitSentence(phrase) {
   let arrayPhrase = phrase.split(' ');
   return arrayPhrase;
 }
+console.log(splitSentence('go trybe'))
 
 // Desafio 4
 function concatName() {
@@ -30,7 +31,7 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(0,0));
 
 // Desafio 6
-function highestCount(num1...num100) {
+function highestCount() {
   
 }
 
