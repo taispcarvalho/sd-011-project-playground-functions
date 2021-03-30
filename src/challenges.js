@@ -45,19 +45,15 @@ function highestCount(arr) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  
+
   cat1m = cat1 >= mouse ? cat1 - mouse : mouse - cat1
   cat2m = cat2 >= mouse ? cat2 - mouse : mouse - cat2
 
   if (cat1m < cat2m) {
     return 'cat1'
-  }
-
-  else if (cat2m < cat1) {
+  } else if (cat2m < cat1) {
     return 'cat2'
-  }
-
-  else {
+  } else {
     return 'os gatos trombam e o rato foge'
   }
 
@@ -69,14 +65,11 @@ function fizzBuzz(arr) {
 
     if (arr[i] % 3 === 0 && arr[i] % 5 === 0) {
       arr[i] = 'fizzBuzz'
-    }
-    else if (arr[i] % 3 === 0) {
+    } else if (arr[i] % 3 === 0) {
       arr[i] = 'fizz'
-    }
-    else if (arr[i] & 5 == 0) {
+    } else if (arr[i] & 5 == 0) {
       arr[i] = 'buzz'
-    }
-    else {
+    } else {
       arr[i] = 'bug!'
     }
 
@@ -86,7 +79,7 @@ function fizzBuzz(arr) {
 
 // Desafio 9
 function encode(str) {
-  let vol = {a: 1, e: 2, i: 3, o: 4, u: 5}
+  let vol = { a: 1, e: 2, i: 3, o: 4, u: 5 }
 
   for (key in vol) {
     re = eval(`/${key}/g`)
@@ -97,7 +90,7 @@ function encode(str) {
 }
 
 function decode(str) {
-  let vol = {a: 1, e: 2, i: 3, o: 4, u: 5}
+  let vol = { a: 1, e: 2, i: 3, o: 4, u: 5 }
 
   for (key in vol) {
     re = eval(`/${vol[key]}/g`)
