@@ -3,18 +3,19 @@ let param1 = true;
 let param2 = true;
 function compareTrue(param1, param2) {
   if(param1 === true && param2 === true){
-    return true;
+  return true;
   } 
-    return false;
+  return false;
   }
 console.log(compareTrue(param1, param2));
 
-// Desafio 2 
-function calcArea(base, height) {
-  let area = (base * height) / 2;
-  console.log(area);
+// Desafio 2
+let area = 0;
+function calcArea(base, height){
+  area = (base * height) / 2;
+  return area;
 }
-calcArea(51,1)
+console.log(calcArea(5,2));
 
 // Desafio 3
 function splitSentence() {
