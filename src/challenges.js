@@ -10,14 +10,12 @@ function compareTrue(bool1, bool2) {
 // Desafio 2
 function calcArea(base, height) {
   if (base && height > 0) {
-    let result = (base*height)/2;
+    let result = (base * height) / 2;
     return result;
   }
 
   return 'Insira valores maiores que zero!';
 }
-
-console.log (calcArea(10,50));
 
 // Desafio 3
 function splitSentence() {
