@@ -64,16 +64,47 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+  for (i in arr) {
+
+    if (arr[i] % 3 === 0 && arr[i] % 5 === 0) {
+      arr[i] = 'fizzBuzz'
+    }
+    else if (arr[i] % 3 === 0) {
+      arr[i] = 'fizz'
+    }
+    else if (arr[i] & 5 == 0) {
+      arr[i] = 'buzz'
+    }
+    else {
+      arr[i] = 'bug!'
+    }
+
+  }
+  return arr
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let vol = {a: 1, e: 2, i: 3, o: 4, u: 5}
+
+  for (key in vol) {
+    re = eval(`/${key}/g`)
+    str = str.replace(re, vol[key])
+  }
+
+  return str
 }
-function decode() {
-  // seu código aqui
+
+function decode(str) {
+  let vol = {a: 1, e: 2, i: 3, o: 4, u: 5}
+
+  for (key in vol) {
+    re = eval(`/${vol[key]}/g`)
+    str = str.replace(re, key)
+  }
+
+  return str
 }
 
 module.exports = {
