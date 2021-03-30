@@ -34,11 +34,16 @@ function footballPoints(wins, ties) {
   return numberOfWins + numberOfTies;
 }
 
-console.log(footballPoints(14, 8));
-
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbersArray) {
+  let biggerNumber = Math.max.apply(null, numbersArray);
+  let timesOfBiggerNumberAppears = 0;
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (biggerNumber === numbersArray[index]) {
+      timesOfBiggerNumberAppears += 1;
+    }
+  }
+  return timesOfBiggerNumberAppears;
 }
 
 // Desafio 7
