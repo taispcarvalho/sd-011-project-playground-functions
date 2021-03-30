@@ -1,13 +1,7 @@
 // Desafio 1
 function compareTrue(valorOne, ValorTwo) {
-  if (valorOne && ValorTwo) {
-    return true;
-  }
-    return false;
-  }
-let valorOne = false;
-let ValorTwo = false;
-console.log(compareTrue(valorOne, ValorTwo));
+  return valorOne && ValorTwo;    
+}
 
 // Desafio 2
 function calcArea(base,height) {
@@ -21,13 +15,18 @@ console.log(calcArea(base, height));
 function splitSentence(str) {
   return(str.split(' '));
 }
-let str= 'foguete'
-console.log(splitSentence(str));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let nameArray = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+function concatName(nameArray) {
+  var lastItem = nameArray[nameArray.length -1];
+  var firstItem = nameArray[0];
 }
+console.log (concatName(nameArray));
+  
+  
+ 
+
 
 // Desafio 5
 function footballPoints() {
