@@ -9,10 +9,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(string, array) {
-  string = 'vini cius';
-  array = string.split(" ");
-  console.log(array);
+function splitSentence(string) {
+  return string.split(" ");
 }
 
 // Desafio 4
