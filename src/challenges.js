@@ -1,9 +1,9 @@
-// Desafio 1
+// Desafio 1 - ok
 function compareTrue(par, impar) {
   return par && impar;
 }
 
-// Desafio 2
+// Desafio 2 - ok
 function calcArea(a, b) {
   let area = (a * b) / 2;
   return (area);
@@ -17,11 +17,10 @@ function splitSentence() {
 // Desafio 4
 
 function concatName(array) {
-  let fraseFinal = array[array.length - 1] + ',' + array[0];
-    return fraseFinal;
+    return array[array.length - 1] + ',' + array[0];
   }
 
-// Desafio 5
+// Desafio 5 - ok
 function footballPoints(wins, ties) {
 let operacao = (3 * wins) + ties;
   return operacao;
