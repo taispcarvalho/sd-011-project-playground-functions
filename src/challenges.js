@@ -13,11 +13,10 @@ console.log(calcArea(51,1));
 
 // Desafio 3
 function splitSentence(phrase) {
-  let arrayPhrase=[];
-  arrayPhrase.push = 'phrase';
-  return table.log(arrayPhrase);
+  let arrayPhrase = phrase.split(' ');
+  return arrayPhrase;
 }
-splitSentence('ALô')
+
 // Desafio 4
 function concatName() {
   // seu código aqui
@@ -31,8 +30,8 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(0,0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(num1...num100) {
+  
 }
 
 // Desafio 7
