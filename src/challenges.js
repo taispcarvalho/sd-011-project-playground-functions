@@ -1,29 +1,24 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(boo1, boo2) {
   // seu código aqui
-
-
+  return boo1 && boo2
 }
+
+console.log(compareTrue('True', 'True'));
 
 // Desafio 2
 function calcArea() {
   // seu código aqui
-
-
 }
 
 // Desafio 3
 function splitSentence() {
   // seu código aqui
-
-
 }
 
 // Desafio 4
 function concatName() {
   // seu código aqui
-
-  
 }
 
 // Desafio 5
