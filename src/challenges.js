@@ -1,27 +1,27 @@
-/* // Desafio 1
+// Desafio 1
 function compareTrue(param1, param2) {
   return param1 && param2;
 }
 
-console.log(compareTrue(true, false));
+/* console.log(compareTrue(true, false)); */
 
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-console.log(calcArea(51, 1));
+/* console.log(calcArea(51, 1)); */
 
 // Desafio 3
 function splitSentence(str) {
   return str.split(' ');
 }
-console.log(splitSentence('foguete'));
+/* console.log(splitSentence('foguete')); */
 
 // Desafio 4
 function concatName(array) {
   return array[array.length - 1] + ', ' + array[0];
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+/* console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])); */
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -29,7 +29,7 @@ function footballPoints(wins, ties) {
   let tiesValue = 1;
   return wins * winsValue + ties * tiesValue;
 }
-console.log(footballPoints(0, 0)); */
+/* console.log(footballPoints(0, 0));  */
 
 /* Desafio 6
  Retorne a quantidade de vezes que o maior deles se repete.
