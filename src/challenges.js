@@ -10,8 +10,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  
+function splitSentence(value3) {
+  var res = [];
+  res.push(value3.split(" "));
+  return res;
 }
 
 // Desafio 4
