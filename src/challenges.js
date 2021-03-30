@@ -1,7 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  
+function compareTrue(valorA, valorB) {
+  return valorA && valorB;
 }
+
+//    [Chamada] Desafio 1
+console.log(compareTrue(true, 0))
 
 // Desafio 2
 function calcArea() {
