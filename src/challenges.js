@@ -1,8 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true) {
-    return true;
-  }
+    return value1 === true && value2 === true ? true : false;
 }
 
 // Desafio 2
@@ -12,12 +10,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(" ");
+  return string.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
-  return array.filter((e, i) => i ===0 || i === array.length - 1);
+  return array.filter((e, i) => i === 0 || i === array.length - 1);
 }
 
 // Desafio 5
@@ -27,12 +25,12 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let ordemArray = array.sort(function orderArray(a, b) { return a - b });
+  let ordemArray = array.sort(function orderArray(a, b) { return a - b ;})
 
   let sumRepeatLargestNumber = 0;
 
-  for( let i = 1; i <= ordemArray.length; i += 1) {
-    if(ordemArray[i] === ordemArray[i + 1]) {
+  for(let i = 1; i <= ordemArray.length; i += 1) {
+    if (ordemArray[i] === ordemArray[i + 1]) {
       sumRepeatLargestNumber += 1;
     }
   }
@@ -40,8 +38,8 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  return cat1 === cat2 ? 'os gatos trombam e o rato foge' : (cat1 - mouse) > (cat2 - mouse) ? 'cat2' : 'cat1';
 }
 
 // Desafio 8
