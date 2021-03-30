@@ -44,7 +44,7 @@ console.log(desafio5);
 // Desafio 6
 function highestNumber (listOfNumbers) {
   let highNumber = 0;
-  for (i = 0; i < listOfNumbers.length; i += 1) {
+  for (let i = 0; i < listOfNumbers.length; i += 1) {
     if (listOfNumbers[i] > highNumber) {
       highNumber = listOfNumbers[i];
     }
@@ -56,7 +56,7 @@ function highestNumber (listOfNumbers) {
 function highestCount(listOfNumbers) {
   let highest = highestNumber(listOfNumbers);
   let count = 0;
-for (i = 0; i < listOfNumbers.length; i += 1) {
+for (let i = 0; i < listOfNumbers.length; i += 1) {
   if (listOfNumbers[i] === highest) {
     count += 1;
   }
@@ -67,9 +67,19 @@ for (i = 0; i < listOfNumbers.length; i += 1) {
   console.log(teste6);
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 < cat2) {
+    return 'cat1';
+  }
+  else if (cat2 < cat1) {
+    return 'cat2';
+  }
+  else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
+let desafio7 = catAndMouse(0, 12, 12);
+console.log(desafio7);
 
 // Desafio 8
 function fizzBuzz() {
