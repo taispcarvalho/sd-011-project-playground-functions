@@ -76,10 +76,37 @@ function fizzBuzz(numerosDesafio8) {
 }
 
 // Desafio 9
-function encode() {
-  
+
+let string1 = ["hi there!"];
+function encode(string1) {
+  let codigo = [];
+  let quebraDaString = string1.split(' ');
+  for ( let i = 0; i < quebraDaString.length; i += 1){
+    if (quebraDaString[i] === 'a'){
+      codigo.push('1')
+    }
+    else if (quebraDaString[i] === 'e'){
+      codigo.push('2');
+    }
+    else if (quebraDaString[i] === 'i'){
+      codigo.push('3');
+    }
+    else if (quebraDaString[i] === 'o'){
+      codigo.push('4');
+    }
+    else if (quebraDaString[i] === 'u'){
+      codigo.push('5');
+    }
+    else {
+      codigo.push(quebraDaString[i])
+    }        
+  }  
+  console.log(codigo)
 }
-function decode() {
+encode(string1)
+
+
+function decode(string1) {
   // seu código aqui
 }
 
