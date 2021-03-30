@@ -1,5 +1,4 @@
 // Desafio 1
-//  && só é verdadeiro caso todos param sejam verdadeiros
 function compareTrue(a, b) {
   return a && b;
 }
@@ -10,13 +9,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-//  O método split() divide uma String em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array. A divisão é feita procurando um padrão, onde o padrão é fornecido como o primeiro parâmetro na chamada do método, o padrao na função foi (' '), significa que a cada espaço ' ' ele vai dividir uma string.
-//  link utilizado: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 function splitSentence(arr) {
   return arr.split(' ');
 }
 
-//  Link sobre templates string que foram utilizados neste exercicio: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals
 // Desafio 4
 function concatName(arr) {
   return `${arr[arr.length - 1]}, ${arr[0]}`;
@@ -28,8 +24,6 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-//  Math.max retorna o maior numero, e os 3 dots significa que pode vir mais de um argumento, ou seja um array.
-//  link sobre Math.max(): https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 function highestCount(arr) {
   let highestNumberInArray = Math.max(...arr);
   let timesRepeat = 0;
@@ -52,11 +46,13 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
+console.log(catAndMouse(1, 3, 5));
+
 // Desafio 8
 function fizzBuzz(array) {
   let finalArray = [];
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+    if (array[i] % 15 === 0) {
       finalArray.push('fizzBuzz');
     } else if (array[i] % 3 === 0) {
       finalArray.push('fizz');
