@@ -15,7 +15,7 @@ function splitSentence(array) {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1] + ', ' + array[0];
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
@@ -46,32 +46,48 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) return 'cat2';
-  else if (Math.abs(cat2 - mouse) > Math.abs(cat1 - mouse)) return 'cat1';
-  else return 'os gatos trombam e o rato foge';
+  if (Math.abs(cat2 - mouse) > Math.abs(cat1 - mouse)) return 'cat1';
+  if (Math.abs(cat2 - mouse) === Math.abs(cat1 - mouse)) return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(array) {
-  let div3 = false, div5 = false;
-  for (let index = 0; index < array.length; index += 1){
-    if (array[index] % 3 === 0) div3 = true;
-    if (array[index] % 5 === 0) div5 = true;
-    if (div3 && div5) array[index] = 'fizzBuzz';
-    else if (div3) array[index] = 'fizz';
-    else if (div5) array[index] = 'buzz';
+  for (let index = 0; index < array.length; index += 1) {
+    if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) array[index] = 'fizzBuzz';
+    else if (array[index] % 3 === 0) array[index] = 'fizz';
+    else if (array[index] % 5 === 0) array[index] = 'buzz';
     else array[index] = 'bug!';
-    div3 = false;
-    div5 = false;
   }
   return array;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
+    case 'a': string[index] = '1'; break;
+    case 'e': string[index] = '2'; break;
+    case 'i': string[index] = '3'; break;
+    case 'o': string[index] = '4'; break;
+    case 'u': string[index] = '5'; break;
+    default: break;
+    }
+  }
+  return string;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
+    case '1': string[index] = 'a'; break;
+    case '2': string[index] = 'e'; break;
+    case '3': string[index] = 'i'; break;
+    case '4': string[index] = 'o'; break;
+    case '5': string[index] = 'u'; break;
+    default: break;
+    }
+  }
+  return string;
 }
 
 module.exports = {
