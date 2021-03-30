@@ -19,8 +19,11 @@ function splitSentence(word) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+// Reference2: https://www.digitalocean.com/community/tutorials/how-to-work-with-strings-in-javascript
+// Reference3: https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array
+function concatName(array) {
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
