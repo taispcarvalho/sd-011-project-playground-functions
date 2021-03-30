@@ -1,6 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(pinky, cerebro) {
+  if(pink === true && cerebro === true){
+    return true;
+  }else {
+    return false;
+  }
 }
 
 // Desafio 2
