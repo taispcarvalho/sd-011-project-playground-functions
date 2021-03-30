@@ -16,12 +16,17 @@ function calcArea(base, high) {
   area = (base*high)/2;
   return area;
 }
-console.log(calcArea(3,4));
+console.log(calcArea(51,1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence, separator) {
+  let arrayOfStrings = sentence.split(separator);
+  return arrayOfStrings;
 }
+
+let string= "Desafio 3";
+let space = " ";
+console.log(splitSentence(string, space))
 
 // Desafio 4
 function concatName() {
