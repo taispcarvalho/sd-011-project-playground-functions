@@ -25,9 +25,7 @@ function concatName(name) {
 
 // Desafio 5
 function footballPoints() {
-
   
-}
 }
 
 // Desafio 6
