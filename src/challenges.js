@@ -68,7 +68,14 @@ function encode(str) {
   return replaced;
 }
 
-function decode() {}
+function decode(str) {
+  let replaced = str.replace(/1/g, 'a');
+  replaced = replaced.replace(/2/g, 'e');
+  replaced = replaced.replace(/3/g, 'i');
+  replaced = replaced.replace(/4/g, 'o');
+  replaced = replaced.replace(/5/g, 'u');
+  console.log(replaced);
+}
 
 module.exports = {
   calcArea,
