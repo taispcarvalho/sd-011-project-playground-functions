@@ -24,7 +24,7 @@ function splitSentence (stringPhrase) {
 
 // Desafio 4 
 function concatName (namesList) {
-  return namesList[namesList.length - 1] + ' , ' + [namesList[0]];
+  return (namesList[namesList.length - 1]+',' + ' ' + namesList[0]);
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
@@ -32,22 +32,18 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 function footballPoints() {
   // seu código aqui
 }
-
 // Desafio 6
 function highestCount() {
   // seu código aqui
 }
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
-
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
