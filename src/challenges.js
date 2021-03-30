@@ -63,9 +63,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-
-let array1 = [9,25];
-
 function fizzBuzz(array) {
   let newArray = [];
   for (let i = 0; i < array.length; i += 1) {
@@ -82,12 +79,36 @@ function fizzBuzz(array) {
   return newArray;
 }
 
-console.log (fizzBuzz(array1))
-
 // Desafio 9
-function encode() {
-  
+let word = 'hi there!';
+
+function encode(string) {
+  let vogals = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+
+  let string2 = [];
+  let string3 = '';
+  for (let index in string) {
+    string2[index] = vogals[string[index]];
+  }
+
+  for (let i = 0; i < string2.length; i += 1) {
+    if (string2[i] === undefined) {
+      string2[i] = string[i]
+    }
+    string3 += string2[i]
+  }
+
+  return string3;
 }
+
+console.log(encode(word));
+
 function decode() {
   // seu código aqui
 }
