@@ -15,11 +15,7 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(names) {
-  let name1 = [];
-  name1.push(names[names.length - 1]);
-  name1.push(', ');
-  name1.push(names[0]);
-  return name1;
+  return names[names.length - 1] + ', ' + names[0];
 }
 
 // Desafio 5
