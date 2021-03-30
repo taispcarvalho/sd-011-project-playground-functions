@@ -19,7 +19,7 @@ function splitSentence(phrase) {
   let word = '';
   let delimiter = ' ';
   
-  for(index = 0; index <= phrase.length; index += 1){
+  for(let index = 0; index <= phrase.length; index += 1){
     if (phrase[index] === delimiter || index == phrase.length){
       array.push(word);
       word = '';
@@ -30,9 +30,10 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   let out = [];
   let last =  array.length - 1;
+  out.push(array[last])
 
   for (let index = array.length; index >= 0; index -= 1) {
     if (index == 0) {
