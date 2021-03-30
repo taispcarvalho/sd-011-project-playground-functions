@@ -62,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (dif1 < dif2) {
     return 'cat1';
   } if (dif1 === dif2) {
-    return 'Os gatos trombam e o rato foge';
+    return 'os gatos trombam e o rato foge';
   } return 'cat2';
 }
 
