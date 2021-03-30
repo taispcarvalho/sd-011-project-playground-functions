@@ -66,40 +66,30 @@ function changeLetter(letter) {
   if (letter === 'o') {
     return '4';
   }
-  if (letter === 'u') {
-    return '5';
-  }
+  return '5';
 }
 
 function changeNumber(number) {
-  if (letter === '1') {
+  if (number === '1') {
     return 'a';
   }
-  if (letter === '2') {
+  if (number === '2') {
     return 'e';
   }
-  if (letter === '3') {
+  if (number === '3') {
     return 'i';
   }
-  if (letter === '4') {
+  if (number === '4') {
     return 'o';
   }
-  if (letter === '5') {
-    return 'u';
-  }
+  return '5';
 }
 
 // Desafio 9
 function encode(phrase) {
   let newString = '';
   for (let i = 0; i < phrase.length; i += 1) {
-    if (
-      phrase.charAt(i) === 'a' ||
-      phrase.charAt(i) === 'e' ||
-      phrase.charAt(i) === 'i' ||
-      phrase.charAt(i) === 'o' ||
-      phrase.charAt(i) === 'u'
-    ) {
+    if (phrase.charAt(i) >= 1 && phrase.charAt(i) <= 5) {
       newString += changeLetter(phrase.charAt(i));
     } else {
       newString += phrase.charAt(i);
@@ -111,13 +101,7 @@ function encode(phrase) {
 function decode(phrase) {
   let newString = '';
   for (let i = 0; i < phrase.length; i += 1) {
-    if (
-      phrase.charAt(i) === '1' ||
-      phrase.charAt(i) === '2' ||
-      phrase.charAt(i) === '3' ||
-      phrase.charAt(i) === '4' ||
-      phrase.charAt(i) === '5'
-    ) {
+    if (phrase.charAt(i) >= 1 && phrase.charAt(i) <= 5) {
       newString += changeNumber(phrase.charAt(i));
     } else {
       newString += phrase.charAt(i);
