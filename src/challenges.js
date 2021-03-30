@@ -46,8 +46,8 @@ function catAndMouse(mousePosition, catOnePosition, catTwoPosition) {
   let distanciaCat1 = catOnePosition - mousePosition;
   let distanciaCat2 = catTwoPosition - mousePosition;
   if (distanciaCat1 > distanciaCat2) {
-    return 'cat2';    
-  }else if (distanciaCat2 > distanciaCat1) {
+    return 'cat2';
+  } else if (distanciaCat2 > distanciaCat1) {
     return 'cat1';
   } else {
     return 'os gatos trombam e o rato foge';
@@ -55,9 +55,23 @@ function catAndMouse(mousePosition, catOnePosition, catTwoPosition) {
 }
 console.log(catAndMouse(2, 12, 12));
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+  let array = [];
+  for (let index = 0; index < arr.length; index += 1){
+    if (arr[index] % 3 === 0 && arr[index] % 5 === 0) {
+      array.push('fizzBuzz')
+    } else if (arr[index] % 5 === 0) {
+      array.push('buzz');
+    } else if (arr[index] % 3 === 0) {
+      array.push('fizz');
+    } else {
+      array.push('bug!')
+    }
+  }
+  return array;
 }
+let lista = [9, 25];
+console.log(fizzBuzz(lista));
 // Desafio 9
 function encode() {
   // seu código aqui
@@ -77,4 +91,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
