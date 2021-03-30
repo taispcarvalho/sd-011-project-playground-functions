@@ -78,8 +78,13 @@ function triangleCheck(...args) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let stringNumbers = string.replace(/[^\d]/g, '').split('');
+
+  let numbers = stringNumbers.map((number) => parseInt(number, 10));
+  let cups = numbers.reduce((acc, number) => acc + number);
+
+  return cups === 1 ? `${cups} copo de água` : `${cups} copos de água`;
 }
 
 module.exports = {
