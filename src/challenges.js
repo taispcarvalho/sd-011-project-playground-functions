@@ -1,33 +1,32 @@
 // Desafio 1
 function compareTrue(parm1, parm2) {
-  return parm1 && parm2;  
+ return parm1 && parm2;  
 }
 
 // Desafio 2
 function calcArea(base, altura) {
-  return (base * altura) / 2;
+ return (base * altura) / 2;
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  return frase.split(" "); 
+ return frase.split(" "); 
 }
-
-  
-  //ler a frase
-  //separar onde esra os espaços por aspas
-  //colocar virgula onde tem espaço
-
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+
+function concatName(array) {
+  var primeiro = concatName[0];
+  var ultimo = concatName[concatName.length - 1];
+  console.log(ultimo, primeiro)  
 }
+concatName['ola', 'tudo', 'bem', 'com', 'voce']
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  console.log( (wins * 3) + (ties * 1));
 }
+footballPoints(10,10)
 
 // Desafio 6
 function highestCount() {
