@@ -24,12 +24,19 @@ function concatName(arr) {
  return `${arr[arr.length -1]}, ${arr[0]}`;
 }  
 let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
-console.log(concatName(nomes));
+//console.log(concatName(nomes));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+
+  if (jogos = wins * 3 + ties *1){
+  return jogos
+  }else{
+    jogos == 0 
+    return jogos
+  }
 }
+console.log(footballPoints(14,8));
 
 // Desafio 6
 function highestCount() {
