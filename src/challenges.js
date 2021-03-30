@@ -15,7 +15,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayStrings) {
-  let lastIndex = arrayStrings.length-1;
+  let lastIndex = arrayStrings.length - 1;
   let lastFirst = arrayStrings[lastIndex] + ', ' + arrayStrings[0];
   return lastFirst;
 }
@@ -26,6 +26,17 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+
+function findHigherValue(numbers) {
+  let higher = numbers[0];
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] >= higher) {
+      higher = numbers[index];
+    }
+  }
+  return higher;
+}
+
 function highestCount(numbers) {
   let repetitions = 0;
   let higherValue = findHigherValue(numbers);
@@ -37,19 +48,15 @@ function highestCount(numbers) {
   return repetitions;
 }
 
-function findHigherValue (numbers) {
-  let higher = numbers[0];
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] >= higher) {
-      higher = numbers[index];
-    }
-  }
-  return higher;
-}
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Distance = cat1 - mouse;
+  let cat2Distance = cat2 - mouse;
+  if (Math.abs(cat1Distance) === Math.abs(cat2Distance)) {
+    return 'os gatos trombam e o rato foge';
+  } else {
+    return Math.abs(cat1Distance) < Math.abs(cat2Distance) ? 'cat1' : 'cat2';
+  }
 }
 
 // Desafio 8
