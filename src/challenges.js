@@ -13,17 +13,16 @@ calcArea(10, 50);
 // Desafio 3
 function splitSentence(frase) {
   resultado = frase.split(' ');
-  console.log(resultado);
   return resultado;
 }
 splitSentence('go Trybe');
 
-
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(listaNomes) {
+  let listaNomesFinal = (listaNomes[3] + ',' + listaNomes[0]);
+  return listaNomesFinal;
 }
+concatName(['foguete', 'não', 'tem', 'ré']);
 
 // Desafio 5
 function footballPoints() {
