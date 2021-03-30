@@ -108,16 +108,17 @@ console.log(palavra);
 
 function decode(stringCoded) {
 
-  let decoded;
+  stringCoded = stringCoded.replace(/1/g, 'a');
+  stringCoded = stringCoded.replace(/2/g, 'e');
+  stringCoded = stringCoded.replace(/3/g, 'i');
+  stringCoded = stringCoded.replace(/4/g, 'o');
+  stringCoded = stringCoded.replace(/5/g, 'u');
 
-  decoded = stringCoded.replace(/1/g, 'a');
-  decoded = stringCoded.replace(/2/g, 'e');
-  decoded = stringCoded.replace(/3/g, 'i');
-  decoded = stringCoded.replace(/4/g, 'o');
-  decoded = stringCoded.replace(/5/g, 'u');
-
-  return decoded
+  return stringCoded
 }
+
+let palavraDecodificada = decode('h3 th2r2');
+console.log(palavraDecodificada);
 
 module.exports = {
   calcArea,
