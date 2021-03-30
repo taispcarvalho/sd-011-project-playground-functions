@@ -14,10 +14,10 @@ function splitSentence(str) {
   let array = str.split(" ");
   return array;
 }
-console.log(splitSentence('Eu amo Stephanie!'));
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array2 = []) {
+    return array2[array2.length - 1] + ', ' + array2[0];
 }
 
 // Desafio 5
