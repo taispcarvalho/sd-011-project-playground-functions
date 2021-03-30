@@ -77,11 +77,11 @@ function fizzBuzz(numbers) {
   let msg = [];
 
   for (let i in numbers) {
-    if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
+    if (numbers[i] % 15 === 0) {
       msg.push('fizzBuzz');
-    } else if (numbers[i] % 3 === 0 && numbers[i] % 5 !== 0) {
+    } else if (numbers[i] % 3 === 0) {
       msg.push('fizz');
-    } else if (numbers[i] % 3 !== 0 && numbers[i] % 5 === 0) {
+    } else if (numbers[i] % 5 === 0) {
       msg.push('buzz');
     } else {
       msg.push('bug!');
@@ -92,11 +92,66 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let splitString = string.split('');
+
+  for (let i in splitString) {
+    switch (splitString[i]) {
+      case 'a':
+        splitString[i] = '1';
+        break;
+
+      case 'e':
+        splitString[i] = '2';
+        break;
+
+      case 'i':
+        splitString[i] = '3';
+        break;
+
+      case 'o':
+        splitString[i] = '4';
+        break;
+
+      case 'u':
+        splitString[i] = '5';
+        break;
+    }
+  }
+
+  let joinString = splitString.join('');
+  return joinString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let splitString = string.split('');
+
+  for (let i in splitString) {
+    switch (splitString[i]) {
+      case '1':
+        splitString[i] = 'a';
+        break;
+
+      case '2':
+        splitString[i] = 'e';
+        break;
+
+      case '3':
+        splitString[i] = 'i';
+        break;
+
+      case '4':
+        splitString[i] = 'o';
+        break;
+
+      case '5':
+        splitString[i] = 'u';
+        break;
+    }
+  }
+
+  let joinString = splitString.join('');
+  return joinString;
 }
 
 module.exports = {
