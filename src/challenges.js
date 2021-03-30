@@ -10,13 +10,13 @@ function calcArea(a, b) {
 }
 
 // Desafio 3
-function splitSentence(frase) {
+function splitSentence(string) {
   let separador = ',';
-  return (frase.split(separador));
+  return (splitSentece(string, separador));
 
 }
 
-// Desafio 4
+// Desafio 4 - ok
 function concatName(array) {
     let primeiroNome = array[0];
     let ultimoNome = array[array.length - 1]
