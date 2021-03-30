@@ -15,8 +15,12 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  // Reverte a ordem de itens do array.
+  let reversedArray = array.reverse();
+
+  //Retorna o primeiro e último ítens do array.
+  return reversedArray[0] + ', ' + reversedArray[reversedArray.length - 1];
 }
 
 // Desafio 5
