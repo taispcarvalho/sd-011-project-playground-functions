@@ -20,15 +20,18 @@ console.log(splitSentence('go trybe'));
 function concatName(value) {
   let end = value.length - 1;
   let name = value[end] + ', ' + value[0];
-  
   return name;
 }
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let victory = 3;
+  let draw = 1;
+  let result = (wins * victory) + (ties * draw);
+  return result;
 }
+console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount() {
