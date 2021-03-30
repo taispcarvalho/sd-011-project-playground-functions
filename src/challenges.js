@@ -26,23 +26,27 @@ function concatName(name) {
 // Desafio 5
 function footballPoints(wins,ties) {
   var total = (wins * 3) + ties
-  return total
+  return total;
 }
 
 // Desafio 6
 function highestCount(nunbers) {
   var biguer = 0
-  for (let index = 0; index < nunbers.length; index++) {
+  for (let index = 0; index < nunbers.length; index+=1) {
     if (biguer < nunbers[index]) {
-      biguer = nunbers
+      biguer = nunbers[index]
     }
-    return biguer
+    return biguer;
   }
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1, cat2, mouse) {
+if (cat1[index] - mouse[index] > cat2[index] - mouse[index]) {
+  return cat2
+}else{
+  return cat1;
+}
 }
 
 // Desafio 8
