@@ -16,11 +16,13 @@ return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(stringToSplit) {
+  let arrayOfStrings = stringToSplit.split(" ")
+  return arrayOfStrings
 }
 
 // Desafio 4
+
 function concatName() {
   // seu código aqui
 }
