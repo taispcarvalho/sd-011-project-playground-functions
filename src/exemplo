@@ -1,0 +1,31 @@
+function palindromo (str){
+    inverteString = str.split('').reverse().join('')
+     return inverteString === str ? true : false
+}
+
+function maiorIndice (array) {
+    let maiorIndex = 0
+    let maiorNumero = 0
+
+    for(let index in array){
+        if(array[index] > maiorNumero){
+            maiorNumero = array[index]
+            maiorIndex = index
+        }
+    }
+
+    return maiorIndex
+}
+
+function maiorNome(arrayNomes){
+    let maiorNome = ''
+    
+    for(let index in arrayNomes){
+        if(arrayNomes[index].length > maiorNome.length){
+            maiorNome = arrayNomes[index]
+            console.log(maiorNome)
+        }
+    }
+
+    return maiorNome
+}
