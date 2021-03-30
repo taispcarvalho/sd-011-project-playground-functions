@@ -17,10 +17,10 @@ function splitSentence(string) {
 function concatName(arrayOfStrings) {
   let lastCommaFirst = '';
   for (let index = ((arrayOfStrings.length) - 1); index >= 0; index -= 1) {
-    if (index == ((arrayOfStrings.length) - 1)) {
-      lastCommaFirst = arrayOfStrings[index] + ', ';
-    } else if (index == 0) {
-      lastCommaFirst = lastCommaFirst + arrayOfStrings[index];
+    if (index === ((arrayOfStrings.length) - 1)) {
+      lastCommaFirst += arrayOfStrings[index] + ', ';
+    } else if (index === 0) {
+      lastCommaFirst += arrayOfStrings[index];
     }
   }
   return lastCommaFirst;
