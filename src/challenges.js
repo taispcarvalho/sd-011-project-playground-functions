@@ -13,16 +13,19 @@ console.log(triangulo);
 
 // Desafio 3
 function splitSentence(src) {
-  return src.split(" ");
+  return src.split(' ');
 }
 
 let sloganTrybe = 'go Trybe';
-console.log(splitSentence(sloganTrybe))
+console.log(splitSentence(sloganTrybe));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arraySrc) {
+  return arraySrc[arraySrc.length - 1] + ' ' + arraySrc['0'];
 }
+
+let arrayConcat = ['Ivaldo', 'Costa', 'Souza'];
+console.log(concatName(arrayConcat));
 
 // Desafio 5
 function footballPoints() {
