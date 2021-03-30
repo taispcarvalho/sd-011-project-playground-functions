@@ -34,7 +34,7 @@ function concatName(lista){
   let primPos=lista[0];
   let ultPos=lista[lista.length-1];
   let resposta= ultPos.concat(", ",primPos);
-  console.log(resposta);
+  return(resposta);
   }
 //concatName(lista);
 
@@ -69,19 +69,32 @@ function highestCount(valores){
 //let cat2=12 ;
 
 function catAndMouse(mouse,cat1,cat2) {
-  if(cat1-mouse==cat2-mouse){
-    return("Os gatos trombam e o rato foge");
-  }else if(cat1-mouse<cat2-mouse){
+  if(cat1-mouse<cat2-mouse){
     return("cat1");
-  }else{
+  }else if(cat1-mouse>cat2-mouse){
     return("cat2");
+  }else{
+    return("Os gatos trombam e o rato foge");
   }
 }
 //catAndMouse(mouse,cat1,cat2);
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayteste){
+  let arrayresposta=[0];
+  arrayresposta.pop();
+  for(let cont=0;cont<=arrayteste.length-1;){
+    if(arrayteste[cont]%3==0&arrayteste[cont]%5==0){
+      arrayresposta.push("fizzbuzz");
+    }else if(arrayteste[cont]%3==0&arrayteste[cont]%5!==0){
+      arrayresposta.push("fizz");
+    }else if(arrayteste[cont]%3!==0&arrayteste[cont]%5==0){
+      arrayresposta.push("buzz");
+    }else{
+      arrayresposta.push("bug");
+    }
+  }
+  return(arrayresposta);
 }
 
 // Desafio 9
