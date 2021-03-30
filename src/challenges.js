@@ -11,10 +11,10 @@ function calcArea(base, height) {
  return (base * height) / 2;
 };
 
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+// Desafio 3 // referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+function splitSentence(string) {
+  return string.split(' ');
+} 
 
 // Desafio 4
 function concatName() {
