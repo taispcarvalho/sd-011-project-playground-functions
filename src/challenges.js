@@ -10,19 +10,20 @@ function calcArea(a, b) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let separador = ',';
+  return splitString(frase, separador);
+
 }
 
 // Desafio 4
-
 function concatName(array) {
-    return array[array.length - 1] + ',' + array[0];
-  }
+    return (array[array.length - 1] + ',' + array[0]);
+    }
 
 // Desafio 5 - ok
 function footballPoints(wins, ties) {
-let operacao = (3 * wins) + ties;
+  let operacao = (3 * wins) + ties;
   return operacao;
 }
 
