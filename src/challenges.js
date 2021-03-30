@@ -19,9 +19,9 @@ splitSentence('go Trybe');
 
 // Desafio 4
 function concatName(listaNomes) {
-  let listaNomesFinal = (listaNomes[3] + ',' + listaNomes[0]);
-  return listaNomesFinal;
-}
+ let listaNomesFinal = (listaNomes[listaNomes.length -1] + ',' + listaNomes[0]);
+ return listaNomesFinal;
+ }
 concatName(['foguete', 'não', 'tem', 'ré']);
 
 // Desafio 5
