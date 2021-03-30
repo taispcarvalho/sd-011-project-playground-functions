@@ -22,7 +22,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(string) {
   let results = [string[string.length - 1], string[0]];
-  return results.join();
+  return results.join(', ');
 }
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
