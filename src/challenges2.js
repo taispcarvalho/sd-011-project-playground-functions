@@ -1,24 +1,23 @@
 // Desafio 10
 function techList(array) {
-    if (array.length === 0) {
-      return 'Vazio!';
-    }
-  
-    let techListArray = [];
-    let sortedTechNamesArray = array.sort();
-    console.log(sortedTechNamesArray)
-  
-    for (let techName of sortedTechNamesArray) {
-      techListArray.push({
-        tech: techName, 
-        name: 'Gabriel',
-      });
-    }
-    return techListArray;
+  if (array.length === 0) {
+    return 'Vazio!';
   }
-  
-  console.log(techList([]));
-  console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"]));
+
+  let techListArray = [];
+  let sortedTechNamesArray = array.sort();
+
+  for (let techName of sortedTechNamesArray) {
+    techListArray.push({
+      tech: techName,
+      name: 'Gabriel',
+    });
+  }
+  return techListArray;
+}
+
+console.log(techList([]));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"]));
 
 
 // Desafio 11
@@ -28,7 +27,7 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
- 
+
 }
 
 // Desafio 13
