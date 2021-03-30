@@ -4,19 +4,25 @@ function compareTrue(older18, hasLicense) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height / 2)
 }
+
+console.log(calcArea(10,20))
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  return sentence.split(' ')
 }
 
+console.log(splitSentence('foguete'))
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayName) {
+  return (arrayName[arrayName.length - 1] + ', ' + arrayName[0])
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints() {
