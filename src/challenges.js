@@ -57,17 +57,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // D8 Auxiliary Functions
-
 function fbLoop(numbers) {
   let result = [];
-  for (let i of numbers) {
-    if (numbers[i] % 15 === 0) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    switch (true) {
+    case (numbers[i] % 15 === 0):
       result.push('fizzBuzz');
-    } else if (numbers[i] % 5 === 0) {
+      break;
+    case (numbers[i] % 5 === 0):
       result.push('buzz');
-    } else if (numbers[i] % 3 === 0) {
+      break;
+    case (numbers[i] % 3 === 0):
       result.push('fizz');
-    } else {
+      break;
+    default:
       result.push('bug!');
     }
   }
