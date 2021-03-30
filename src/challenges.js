@@ -82,9 +82,36 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
+function is3Multiple(number) {
+  return number % 3 === 0;
+}
+
+function is5Multiple(number) {
+  return number % 5 === 0;
+}
+
+function is3and5Multiple(number) {
+  return is3Multiple(number) && is5Multiple(number);
+}
+
+function generateString(number) {
+  let string = '';
+  if (is3and5Multiple(number)) string = 'fizzBuzz';
+  else if (is3Multiple(number)) string = 'fizz';
+  else if (is5Multiple(number)) string = 'buzz';
+  else string = 'bug!';
+
+  return string;
+}
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let array = [];
+  for (let number of numbers) {
+    let string = generateString(number);
+    array.push(string);
+  }
+  return array;
 }
 
 // Desafio 9
