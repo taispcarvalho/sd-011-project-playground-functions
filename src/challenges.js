@@ -18,14 +18,15 @@ console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1] + ', ' + array[0];
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return 3 * wins + 1 * ties;
 }
+console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount() {
