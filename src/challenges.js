@@ -113,26 +113,27 @@ console.log(fizzBuzz([9, 25]));
 // Desafio 9
 function encode(string) {
   let encodedMessage = '';
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index].toLowerCase() === string[index]) {
-      switch (string[index]) {
-        case 'a':
-          encodedMessage += '1';
-          break;
-        case 'e':
-          encodedMessage += '2';
-          break;
-        case 'i':
-          encodedMessage += '3';
-          break;
-        case 'o':
-          encodedMessage += '4';
-          break;
-        case 'u':
+  
+for (let index = 0; index < string.length; index += 1) {
+  if (string[index].toLowerCase() === string[index]) {
+    switch (string[index]) {
+      case 'a':
+        encodedMessage += '1';
+        break;
+      case 'e':
+        encodedMessage += '2';
+        break;
+      case 'i':
+        encodedMessage += '3';
+        break;
+      case 'o':
+        encodedMessage += '4';
+        break;
+      case 'u':
           encodedMessage += '5';
           break;
-        default:
-          encodedMessage += string[index];
+      default:
+        encodedMessage += string[index];
       }
     }
   }
@@ -144,25 +145,25 @@ console.log(encode('hi, there'));
 function decode(number) {
   let decodedMessage = '';
 
-  for (let index = 0; index < number.length; index += 1) {   
-    switch (number[index]) {
-      case '1':
-        decodedMessage += 'a';
-        break;
-      case '2':
-        decodedMessage += 'e';
-        break;
-      case '3':
-        decodedMessage += 'i';
-        break;
-      case '4':
-        decodedMessage += 'o';
-        break;
-      case '5':
-        decodedMessage += 'u';
-        break;
-      default:
-        decodedMessage += number[index];
+for (let index = 0; index < number.length; index += 1) {   
+  switch (number[index]) {
+    case '1':
+      decodedMessage += 'a';
+      break;
+    case '2':
+      decodedMessage += 'e';
+      break;
+    case '3':
+      decodedMessage += 'i';
+      break;
+    case '4':
+      decodedMessage += 'o';
+      break;
+    case '5':
+      decodedMessage += 'u';
+      break;
+    default:
+      decodedMessage += number[index];
     }
   }
   return decodedMessage;
