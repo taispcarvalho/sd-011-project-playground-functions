@@ -73,6 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return result;
 }
 console.log(catAndMouse(1, 0, 2));
+
 function catAndMouse(mouse, cat1, cat2) {
   let mouseCat1 = (cat1 - mouse) ** 2;
   let mouseCat2 = (cat2 - mouse) ** 2;
