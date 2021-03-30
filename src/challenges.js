@@ -12,13 +12,22 @@ function calcArea(value1, value2) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let sentence = string;
+  let words = [];
+
+
+
+
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let lastItem = array[array.length -1];
+  let firstItem = array[0];
+  let result = [ lastItem, firstItem];
+
+  return result;
 }
 
 // Desafio 5
