@@ -31,10 +31,11 @@ function splitSentence(frase){
 //let lista=["meu","nome","nao","e","jhonny"];
 //console.log(lista.length);
 function concatName(lista){
-  let ultimo=lista[lista.length-1];
-  let resposta=[ultimo,lista[0]];
-  return(resposta);
-}
+  let primPos=lista[0];
+  let ultPos=lista[lista.length-1];
+  let resposta=ultPos.concat(" ",primPos);
+  console.log(resposta);
+  }
 //concatName(lista);
 
 // Desafio 5
