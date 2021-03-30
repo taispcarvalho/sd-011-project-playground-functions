@@ -33,7 +33,7 @@ function highestCount(numbers) {
   for(let index = 0; index < numbers.length; index += 1) {
     numMax += numbers.length[index]
   }
-
+  return numMax
 }
 
 // Desafio 7
