@@ -67,6 +67,14 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = cat1 - mouse;
   let distanceCat2 = cat2 - mouse;
 
+  if (distanceCat1 < 0) {
+    distanceCat1 *= -1;
+  }
+
+  if (distanceCat2 < 0) {
+    distanceCat2 *= -1;
+  }
+
   if (distanceCat1 < distanceCat2) {
     answer = 'cat1';
   } else if (distanceCat2 < distanceCat1) {
