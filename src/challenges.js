@@ -11,8 +11,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(value3) {
-  //a
-  return value3.split(" ");
+  return value3.split("");
 }
 
   // Desafio 4
@@ -22,7 +21,6 @@ function splitSentence(value3) {
   let fullName = lastName + ', ' + firstName;
   return fullName;
 }
-
 
 // Desafio 5
 
