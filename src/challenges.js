@@ -45,13 +45,50 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
+  if (distanceCat1 < distanceCat2) {
+    return 'cat1';
+  } else if (distanceCat2 < distanceCat1) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  // armazenar as respostas em outro array --FEITO!
+  let numbersFizzed = [];
+  // criar um for que passa por todos os elementos de numbers --FEITO!
+  for (const number of numbers) {
+    if (threeOrFive(number) === 3) {
+      numbersFizzed.push('fizz');
+    } else if (threeOrFive(number) === 5) {
+      numbersFizzed.push('buzz');
+    } else if (threeOrFive(number) === 'both') {
+      numbersFizzed.push('fizzBuzz');
+    } else {
+      numbersFizzed.push('bug!');
+    }
+  }
+  return numbersFizzed;
+}
+console.log(fizzBuzz([9, 25]));
+
+// essa função vai verificar se o número é divisível por 3 ou 5
+// retornará 3, 5, 'both' ou 'neither'
+function threeOrFive(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return 'both';
+  } else if (number % 3 === 0) {
+    return 3;
+  } else if (number % 5 === 0) {
+    return 5;
+  } else {
+    return 'neither';
+  }
 }
 
 // Desafio 9
