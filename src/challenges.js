@@ -21,11 +21,11 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(strings) {
   let strings = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
-  return strings[0] + strings[3];
+  return strings[0] + ', ' + strings[3];
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
 }
 
