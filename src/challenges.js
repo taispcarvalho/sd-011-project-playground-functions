@@ -47,7 +47,7 @@ function highestNumber(array) {
 
 // Desafio 6
 function highestCount(array) {
-  
+
 let maiorValor = highestNumber(array)
 let repetiu = 0;
 for (let j in array){
@@ -59,10 +59,24 @@ return repetiu
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2 ) {
   // seu código aqui
-}
+  let resultado = 0;
 
+  if (resultado < 0){
+    resultado = resultado * -1
+  }
+ if (mouse - cat1 < mouse - cat2){
+    resultado = cat1
+    return cat1
+  }
+  else {
+    resultado = cat2
+    return cat2
+  }
+  
+
+}
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
