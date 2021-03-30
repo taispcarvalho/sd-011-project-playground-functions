@@ -21,7 +21,10 @@ console.log(splitSentence(sloganTrybe));
 
 // Desafio 4
 function concatName(arraySrc) {
-  return arraySrc[arraySrc.length - 1] + ' ' + arraySrc['0'];
+  let aux = arraySrc[arraySrc.length - 1];
+  let aux2 = arraySrc['0'];
+  let concat = aux + ' ' + aux2;
+  return concat;
 }
 
 let arrayConcat = ['Ivaldo', 'Costa', 'Souza'];
