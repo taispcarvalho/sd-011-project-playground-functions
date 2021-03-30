@@ -11,12 +11,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(text) {
-  let split = text.split(" ")
-  let arrayText = []
-  arrayText.push(split)
-  return arrayText
+  let split = text.split(' ');
+  let arrayText = [];
+  arrayText.push(split);
+  return arrayText;
 }
-console.log(splitSentence("Olá amigo"))
+/* source:https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string. */
 
 // Desafio 4
 function concatName() {
