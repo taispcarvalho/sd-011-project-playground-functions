@@ -59,7 +59,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   }
 }
-console.log(catAndMouse(0, 3, 2))
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -79,12 +78,49 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let newStr = '';
+  for (let index in str) {
+    if (str[index] === 'a') {
+      newStr += 1;
+    } else if (str[index] === 'e') {
+      newStr += 2;
+    } else if (str[index] === 'i') {
+      newStr += 3; 
+    } else if (str[index] === 'o') {
+      newStr += 4;  
+    } else if (str[index] === 'u') {  
+      newStr += 5;
+    } else {
+      newStr += str[index];
+    }
+  }
+  return newStr
 }
-function decode() {
-  // seu código aqui
+
+function decode(str) {
+  let newStr = '';
+  for (let index in str) {
+    if (str[index] === '1') {
+      newStr += 'a';
+    } else if (str[index] === '2') {
+      newStr += 'e';
+    } else if (str[index] === '3') {
+      newStr += 'i'; 
+    } else if (str[index] === '4') {
+      newStr += 'o';  
+    } else if (str[index] === '5') {  
+      newStr += 'u';
+    } else {
+      newStr += str[index];
+    }
+  }
+  return newStr
 }
+
+let myStr = 'hi there!'
+console.log(encode(myStr));
+console.log(decode(myStr));
 
 module.exports = {
   calcArea,
