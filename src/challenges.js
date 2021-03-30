@@ -19,10 +19,11 @@ function splitSentence(phrase) {
 console.log(splitSentence('go trybe'))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(...arrayName) {
+  let name = arrayName[arrayName.length -1].concat(', ' + arrayName[0]);
+ return name;
 }
-
+console.log(concatName('captain', 'my', 'captain'));
 // Desafio 5
 function footballPoints(wins, ties) {
   let points=(wins * 3)+ ties;
