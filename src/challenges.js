@@ -42,9 +42,29 @@ let desafio5 = footballPoints(0, 0);
 console.log(desafio5);
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestNumber (listOfNumbers) {
+  let highNumber = 0;
+  for (i = 0; i < listOfNumbers.length; i += 1) {
+    if (listOfNumbers[i] > highNumber) {
+      highNumber = listOfNumbers[i];
+    }
+  }
+  return highNumber;
 }
+
+
+function highestCount(listOfNumbers) {
+  let highest = highestNumber(listOfNumbers);
+  let count = 0;
+for (i = 0; i < listOfNumbers.length; i += 1) {
+  if (listOfNumbers[i] === highest) {
+    count += 1;
+  }
+  }
+  return count;
+  }
+  let teste6 = highestCount([0, 4, 4, 4, 9, 2, 1]);
+  console.log(teste6);
 
 // Desafio 7
 function catAndMouse() {
