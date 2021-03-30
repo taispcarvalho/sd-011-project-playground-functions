@@ -1,21 +1,27 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(calculo1 , calculo2) {
+  if (calculo1 === true && calculo2 === true) {
+    return true;
+} else {
+    return false;
+}
+
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base , height) {
+  return base * height / 2
 }
-
+calcArea (10 , 50)
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(word) {
+  return word.split(" ")
 }
 
 // Desafio 4
-function concatName() {
+function concatName(nomes) {
   // seu código aqui
+  return `${nomes[nomes.length -1]}, ${nomes[0]}`
 }
 
 // Desafio 5
