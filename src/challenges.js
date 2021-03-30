@@ -1,3 +1,4 @@
+highestCount ([9, 1, 2, 3, 9, 5, 7])
 // Desafio 1
 function compareTrue(parameter1, parameter2) {
   return (parameter1 && parameter2);
@@ -14,13 +15,14 @@ function splitSentence(sentence) {
   split[0] = '';
   for (let char of sentence) {
     if (char === ' ') {
-      index =+ 1;
+      index += 1;
       split[index] = '';
     } else {
       split[index]+=char;
     }
   } 
-return split;
+  console.log (split);
+  return split;
 }
 
 // Desafio 4
@@ -34,8 +36,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let counter = 0;
+  let highest;
+  for (let currentNumber of numbers) {
+    if ((currentNumber > highest) || (highest === undefined)){
+      highest = currentNumber;
+      counter = 1;
+    } else if (currentNumber === highest) {
+      counter += 1;
+    }
+  }
+  console.log (counter);
+  return (counter);
 }
 
 // Desafio 7
