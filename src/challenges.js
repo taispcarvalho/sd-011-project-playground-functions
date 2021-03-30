@@ -1,146 +1,92 @@
 // Desafio 1
-function compareTrue(a, b) {
-  return a && b;
+function compareTrue(param1, param2) {
+  if (param1 && param2) {
+    return true;
+  }
+  return false;
 }
-
+console.log(compareTrue(true, false));
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2;
+  let triangle = (base * height) / 2;
+  return triangle;
 }
-
+console.log(calcArea(10, 50));
+console.log(calcArea(5, 2));
+console.log(calcArea(51, 1));
 // Desafio 3
-function splitSentence(phrase) {
-  return phrase.split(' ');
+function splitSentence(string) {
+  let separateString = string.split(' ');
+  return separateString;
 }
-
+console.log(splitSentence('go Trybe'));
+console.log(splitSentence('vamo que vamo'));
+console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName(array) {
-  array = [array[array.length - 1], array[0]];
-  array = array.join(', ');
-  return array;
+  let first = array[0];
+  let last = array[array.length - 1];
+  let concat = `${last}, ${first}`;
+  return concat;
 }
-
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 // Desafio 5
 function footballPoints(wins, ties) {
-  let score = wins * 3 + ties * 1;
+  let score = 0;
+  if (wins) {
+    score += wins * 3;
+  }
+  if (ties) {
+    score += ties * 1;
+  }
   return score;
 }
-
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
 // Desafio 6
-function biggestNumber(array) {
-  let bigNumber = 0;
-  for (let i = 0; i < array.length; i += 1) {
-    if (bigNumber < array[i]) {
-      bigNumber = array[i];
-    }
-  }
-  return bigNumber;
-}
-
 function highestCount(array) {
   let counter = 0;
-  for (let j = 0; j < array.length; j += 1) {
-    if (array[j] === biggestNumber(array)) {
+  let highest = Math.max(...array);
+  for (let i = 0; i <= array.length; i += 1) {
+    if (array[i] >= highest) {
       counter += 1;
     }
   }
   return counter;
 }
-
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([0, 0, 0]));
 // Desafio 7
-function module(cat, mouse) {
-  if (cat - mouse > 0) {
-    return cat - mouse;
-  }
-  return mouse - cat;
-}
-
 function catAndMouse(mouse, cat1, cat2) {
-  let bestPosition = '';
-  if (module(cat1, mouse) < module(cat2, mouse)) {
-    bestPosition = 'cat1';
-  } else if (module(cat1, mouse) > module(cat2, mouse)) {
-    bestPosition = 'cat2';
-  } else {
-    bestPosition = 'os gatos trombam e o rato foge';
+  let cat1Distance = Math.abs(cat1 - mouse);
+  let cat2Distance = Math.abs(cat2 - mouse);
+  if (cat2Distance < cat1Distance) {
+    return 'cat2';
   }
-  return bestPosition;
+  if (cat1Distance < cat2Distance) {
+    return 'cat1';
+  }
+  return 'os gatos trombam e o rato foge';
 }
-
+console.log(catAndMouse(0, 3, 2));
+console.log(catAndMouse(0, 6, 18));
+console.log(catAndMouse(10, 4, 22));
+console.log(catAndMouse(2, 0, 0));
 // Desafio 8
-
-function Div(n) {
-  let result = '';
-  if (n % 3 === 0 && n % 5 === 0) {
-    result = 'fizzBuzz';
-  } else if (n % 3 === 0) {
-    result = 'fizz';
-  } else if (n % 5 === 0) {
-    result = 'buzz';
-  } else {
-    result = 'bug!';
-  }
-  return result;
+function fizzBuzz() {
+  // seu código aqui
 }
-
-function fizzBuzz(array) {
-  for (let i = 0; i < array.length; i += 1) {
-    array[i] = Div(array[i]);
-  }
-  return array;
-}
-
 // Desafio 9
-
-function Enc(n) {
-  let alphabet = ['a', 'e', 'i', 'o', 'u'];
-  let numerals = [1, 2, 3, 4, 5];
-  for (let i = 0; i < alphabet.length; i += 1) {
-    if (n === alphabet[i]) {
-      n = numerals[i];
-    }
-  }
-  return n;
+function encode() {
+  // seu código aqui
 }
-
-function numerize(s) {
-  if (Number(s)) {
-    let n = Number(s);
-    s = n;
-  }
-  return s;
+function decode() {
+  // seu código aqui
 }
-
-function Denc(x) {
-  let n = numerize(x);
-  const numerals = [1, 2, 3, 4, 5];
-  const alphabet = ['a', 'e', 'i', 'o', 'u'];
-  for (let i = 0; i < numerals.length; i += 1) {
-    if (n === numerals[i]) {
-      n = alphabet[i];
-    }
-  }
-  return n;
-}
-
-function encode(array) {
-  array = array.split('');
-  for (let i = 0; i < array.length; i += 1) {
-    array[i] = Enc(array[i]);
-  }
-  array = array.join('');
-  return array;
-}
-
-function decode(phrase) {
-  let string = phrase.split('');
-  for (let i = 0; i < string.length; i += 1) {
-    string[i] = Denc(string[i]);
-  }
-  string = string.join('');
-  return string;
-}
-
 module.exports = {
   calcArea,
   catAndMouse,
