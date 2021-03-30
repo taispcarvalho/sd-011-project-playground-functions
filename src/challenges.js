@@ -51,16 +51,12 @@ const highestCount = (arr) => {
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-const catAndMouse = (mouse, cat1, cat2) => {
-  if (cat1 > cat2) {
-    return "cat1"
-  } else if (cat2 > cat1) {
-    return "cat2"
-  } else {
-    return "os gatos trombaram e o rato foge"
-  }
+const catAndMouse = (cat1, cat2) => {
+  if (cat1 < cat2) return "cat1";
+    else if (cat1 > cat2) return "cat2";
+    else return "os gatos trombaram e o rato foge"
 }
-console.log(catAndMouse(2, 3, 3));
+console.log(catAndMouse(3, 5));
 
 // Desafio 8
 function fizzBuzz() {
