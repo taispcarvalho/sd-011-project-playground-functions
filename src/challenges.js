@@ -2,7 +2,7 @@
 function compareTrue(firstValue, secondValue) {
     return firstValue && secondValue;
 }
-console.log(compareTrue(3, 3));
+console.log(compareTrue(true, true));
 
 
 // Desafio 2
