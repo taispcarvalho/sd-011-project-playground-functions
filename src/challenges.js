@@ -15,15 +15,35 @@ function splitSentence() {
 }
 
 // Desafio 4
-let pessoa = ['João', 'Moreira'];
-function concatName() {
-  return (pessoa);
-}
-console.log(pessoa[1] +' ,' + pessoa[0])
+let pessoa = [];
+function concatName(pessoa) {
+for (let i = 0; i < pessoa.length; i+=1) {
+    if (pessoa[i] === pessoa[pessoa.length - 1]) {
+      let ultimoNome = pessoa[i];
+    }
+    if (pessoa[i] === pessoa[0]) {
+      let primeiroNome = pessoa[i];
+    }
+  return (ultimoNome + ', ' + primeiroNome)
+  }
+  concatName(ultimoNome + ', ' + primeiroNome);
+  console.log(ultimoNome + ', ' + primeiroNome);
+
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+let wins = 14;
+let ties = 8;
+let pointsWins = 0
+let pointsTies = 0;
+function footballPoints(wins,ties) {
+if (wins !== 0) {
+  pointsWins = 3*wins;
+ if (ties !==0) {
+  pointsTies = ties*1
+ }
+let soma = pointsTies + pointsWins;
+}
+  return soma;
 }
 
 // Desafio 6

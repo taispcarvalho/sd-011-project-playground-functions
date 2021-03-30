@@ -1,5 +1,9 @@
-function concatName() {
-  let pessoa = ['João', 'Moreira'];
- 
-  return ( console.log(pessoa[1]+pessoa[0]))
+let pessoa = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+let i = 0;
+function concatName(pessoa) {
+for(i in pessoa) {
+console.log(pessoa[i] + ', ' +pessoa[0])
 }
+  return (pessoa);
+}
+console.log(pessoa[i] +' ,' + pessoa[0])
