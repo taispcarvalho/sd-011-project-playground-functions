@@ -95,19 +95,19 @@ function fizzBuzz(arrNumbers) {
   let newArrNumbers = [];
   for (let index = 0; index < arrNumbers.length; index += 1){
     if(arrNumbers[index] % 3 === 0 && arrNumbers[index] % 5 != 0) {
-      newArrNumbers = newArrNumbers.push('fizz');
+      newArrNumbers.push("fizz");
     } else if (arrNumbers[index] % 5 === 0 && arrNumbers[index] % 3 != 0) {
-      newArrNumbers = newArrNumbers.push('buzz');
+      newArrNumbers.push("buzz");
     } else if (arrNumbers[index] % 3 === 0 && arrNumbers[index] % 5 === 0) {
-      newArrNumbers = newArrNumbers.push('fizzBuzz');
+      newArrNumbers.push("fizzBuzz");
     } else {
-      newArrNumbers = newArrNumbers.push('bug!');
+      newArrNumbers.push("bug!");
     }
   } return newArrNumbers;
   
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+console.log(fizzBuzz([9, 25]))
 
 // Desafio 9
 function encode() {
