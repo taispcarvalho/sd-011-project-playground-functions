@@ -15,14 +15,11 @@ function splitSentence() {
 }
 
 // Desafio 4
+let pessoa = ['João', 'Moreira'];
 function concatName() {
-  let pessoa = {
-  name: 'João',
-  lastName: 'Moreira'
-  }
-  console.log(pessoa.name + pessoa.lastName)
-  return (console.log)
+  return (pessoa);
 }
+console.log(pessoa[1] +' ,' + pessoa[0])
 
 // Desafio 5
 function footballPoints() {

@@ -1,8 +1,5 @@
-function concatName(pesoa) {
-  let pessoa = {
-  name: 'João',
-  lastName: 'Moreira'
-  }
-  console.log(pessoa.name + pessoa.lastName)
-  return (console.log)
+function concatName() {
+  let pessoa = ['João', 'Moreira'];
+ 
+  return ( console.log(pessoa[1]+pessoa[0]))
 }
