@@ -59,7 +59,7 @@ let numberr = [0, 4, 4, 4, 9, 2, 1];
 console.log(highestCount(numberr));
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   let finish = '';
   let m = mouse;
 
