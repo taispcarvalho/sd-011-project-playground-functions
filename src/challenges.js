@@ -46,8 +46,8 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = mouse - cat1;
-  let distanceCat2 = mouse - cat2;
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
   } else if (distanceCat2 < distanceCat1) {
@@ -75,7 +75,6 @@ function fizzBuzz(numbers) {
   }
   return numbersFizzed;
 }
-console.log(fizzBuzz([9, 25]));
 
 // essa função vai verificar se o número é divisível por 3 ou 5
 // retornará 3, 5, 'both' ou 'neither'
