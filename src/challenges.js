@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if(param1 === true && param2 === true){
-    return true
+  if (param1 === true && param2 === true){
+    return true;
   } else {
     return false;
   }
@@ -10,7 +10,7 @@ console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
-  let triangle = (base*height)/2;
+  let triangle = (base * height) / 2;
   return triangle;
 }
 console.log(calcArea(10, 50));
@@ -27,9 +27,13 @@ console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let firstAndLastArray = array[array.length -1] + ', ' + array[0];
+  return firstAndLastArray;
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints() {
