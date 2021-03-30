@@ -17,8 +17,12 @@ function splitSentence(param1) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(param1) {
+  let firstName = param1[0];
+  let lastName = param1[[param1.length - 1]];
+  let espaco = ', ';
+  let fullName = lastName + espaco + firstName;
+  return fullName;
 }
 
 // Desafio 5
