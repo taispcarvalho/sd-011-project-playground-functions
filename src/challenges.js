@@ -7,14 +7,15 @@ function compareTrue(v1, v2) {
  }
 }
 // Desafio 2
-function calcArea(resul,base,height) {
- resul == (base * height)/2
+function calcArea(base,height) {
+ var resul = (base * height)/2
  return resul
 }
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  var arrayOfStrings = stringToSplit.split(" ")
+  return(arrayOfStrings.length + arrayOfStrings.join(' / '))
 }
 
 // Desafio 4
