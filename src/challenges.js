@@ -29,18 +29,23 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(14, 2));
 
 // Desafio 6
-function highestCount(array) {
+function findHighest(array) {
   let highest = array[0];
-  let count = 0;
   for (let index in array) {
     if (array[index] > highest) {
-      highest = array [index];
+      highest = array[index];
     }
   }
-  for (let index2 in array) {
-    if (array[index2] === highest) {
+  return highest;
+}
+
+function highestCount(array) {
+  let count = 0;
+  let highest = findHighest(array);
+  for (let index in array) {
+    if (array[index] === highest) {
       count += 1;
-    }    
+    }
   }
   return count;
 }
@@ -60,6 +65,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
