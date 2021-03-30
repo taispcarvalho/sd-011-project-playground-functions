@@ -18,7 +18,14 @@ function generatePhoneNumber(arr) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  return [lineA, lineB, lineC];
+  let a = triangleCheckLine(lineA, lineB, lineC);
+  let b = triangleCheckLine(lineB, lineA, lineC);
+  let c = triangleCheckLine(lineC, lineA, lineB);
+  return a && b && c;
+}
+
+function triangleCheckLine(a, b, c) {
+  return a < (b + c) && a > Math.abs(b - c);
 }
 
 // Desafio 13
