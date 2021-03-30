@@ -37,15 +37,23 @@ function highestCount(array) {
   }
   for (let index2 = 0; index2 < array.length; index2 += 1) {
     if (array[index2] === maiorindice) {
-      contador += 1;
+      contador = contador + 1;
     }
   }
   return contador;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = (cat1 - mouse);
+  let distanciaCat2 = (cat2 - mouse);
+  if (distanciaCat1 > distanciaCat2) {
+    return 'cat2';
+  } else if (distanciaCat1 < distanciaCat2) {
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
