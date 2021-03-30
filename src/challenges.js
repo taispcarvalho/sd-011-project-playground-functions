@@ -73,11 +73,9 @@ function fizzBuzz(input) {
   for (let index = 0; index < input.length; index += 1) {
     if (input[index] % 3 === 0 && input[index] % 5 !== 0) {
       result.push('fizz');
-    }
-    if (input[index] % 5 === 0 && input[index] % 3 !== 0) {
+    } else if (input[index] % 5 === 0 && input[index] % 3 !== 0) {
       result.push('buzz');
-    }
-    if (input[index] % 5 === 0 && input[index] % 3 === 0) {
+    } else if (input[index] % 5 === 0 && input[index] % 3 === 0) {
       result.push('fizzBuzz')
     } else {
       result.push('bug!');
@@ -87,11 +85,20 @@ function fizzBuzz(input) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word) {
+  let workingWord = word;
+  let translate = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+  for (let index = 0; index < word.length; index += 1) {
+    for (let indexOfTranslate in translate) {
+      if (indexOfTranslate === word[index]) {
+        workingWord[index] = translate['indexOfTranslate'];
+      }
+    }
+  }
+  return workingWord;
 }
 function decode() {
-  // seu código aqui
+
 }
 
 module.exports = {
