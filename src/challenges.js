@@ -12,7 +12,7 @@ function calcArea(a, b) {
 // Desafio 3
 function splitSentence(frase) {
   let separador = ',';
-  return splitString(frase, separador);
+  return (frase.split(separador));
 
 }
 
