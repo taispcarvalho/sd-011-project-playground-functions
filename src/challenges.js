@@ -44,8 +44,8 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distCat1 = math.abs(cat1 - mouse);
-  let distCat2 = math.abs(cat2 - mouse);
+  let distCat1 = Math.abs(cat1 - mouse);
+  let distCat2 = Math.abs(cat2 - mouse);
   if (distCat1 === distCat2) {
     return 'os gatos trombam e o rato foge'
   } else if (distCat2 > distCat1) {
@@ -54,7 +54,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2'
   }
 }
-
+0.
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
