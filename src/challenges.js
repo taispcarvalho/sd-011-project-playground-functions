@@ -6,22 +6,18 @@ function compareTrue(pinky, cerebro) {
     return false;
   }
 }
-console.log (compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(string) {
-  
+  // duvidas
 
 }
-  
-  
 
 // Desafio 4
 function concatName(array) {
