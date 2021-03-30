@@ -11,14 +11,10 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(value3) {
-  var res = [];
+  let arraySentence = [];
   value3.split(" ");
   return value3;
 }
-let aerg = 'go Trybe'
-
-;
-console.log(splitSentence(aerg));
 
 // Desafio 4
 //let value4 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
