@@ -19,7 +19,7 @@ function splitSentence(frase, separator) {
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  let stringConcatenada = 
 }
 
 // Desafio 5
