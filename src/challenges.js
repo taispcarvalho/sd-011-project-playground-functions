@@ -1,14 +1,15 @@
 // Desafio 1
-function compareTrue(boolean, boolean2) {
-  return boolean && boolean2;
-}
+const compareTrue = (boolean, boolean2) => {
+  return boolean && boolean2
+};
 
 console.log(compareTrue(false, false));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+const calcArea = (a, b) => {
+  return (a * b) / 2;
 }
+console.log(calcArea(10, 20));
 
 // Desafio 3
 function splitSentence() {
