@@ -105,11 +105,11 @@ function fizzBuzz(array) {
       }else if (array[index] % 3 === 0){
        arrayFizzBuzz.push('fizz')
       }else {
-        arrayFizzBuzz.push('bug');
+        arrayFizzBuzz.push('bug!');
       }
   }
   return arrayFizzBuzz
-  }
+}
   console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 
