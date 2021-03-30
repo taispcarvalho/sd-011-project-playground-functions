@@ -68,11 +68,10 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
-  } else if (distanceCat2 < distanceCat1) {
+  } if (distanceCat2 < distanceCat1) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -100,23 +99,23 @@ function encode(message) {
 
   for (let index = 0; index < message.length; index += 1) {
     switch (message[index]) {
-      case 'a':
-        encodedMessage += '1';
-        break;
-      case 'e':
-        encodedMessage += '2';
-        break;
-      case 'i':
-        encodedMessage += '3';
-        break;
-      case 'o':
-        encodedMessage += '4';
-        break;
-      case 'u':
-        encodedMessage += '5';
-        break;
-      default:
-        encodedMessage += message[index];
+    case 'a':
+      encodedMessage += '1';
+      break;
+    case 'e':
+      encodedMessage += '2';
+      break;
+    case 'i':
+      encodedMessage += '3';
+      break;
+    case 'o':
+      encodedMessage += '4';
+      break;
+    case 'u':
+      encodedMessage += '5';
+      break;
+    default:
+      encodedMessage += message[index];
     }
   }
 
@@ -128,23 +127,23 @@ function decode(encodedMessage) {
 
   for (let index = 0; index < encodedMessage.length; index += 1) {
     switch (encodedMessage[index]) {
-      case '1':
-        decodedMessage += 'a';
-        break;
-      case '2':
-        decodedMessage += 'e';
-        break;
-      case '3':
-        decodedMessage += 'i';
-        break;
-      case '4':
-        decodedMessage += 'o';
-        break;
-      case '5':
-        decodedMessage += 'u';
-        break;
-      default:
-        decodedMessage += encodedMessage[index];
+    case '1':
+      decodedMessage += 'a';
+      break;
+    case '2':
+      decodedMessage += 'e';
+      break;
+    case '3':
+      decodedMessage += 'i';
+      break;
+    case '4':
+      decodedMessage += 'o';
+      break;
+    case '5':
+      decodedMessage += 'u';
+      break;
+    default:
+      decodedMessage += encodedMessage[index];
     }
   }
 
