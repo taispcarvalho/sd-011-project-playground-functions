@@ -15,13 +15,13 @@ function splitSentence() {
 }
 
 // Desafio 4
-let pessoas = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+let pessoas = [];
 let primeiro = pessoas[0];
 let ultimo = pessoas[pessoas.length-1];
 function concatName(pessoas) {
-    return (ultimo + ','+primeiro);
+    return (ultimo + ',' + primeiro);
   } 
-console.log(ultimo + ','+primeiro)
+console.log(ultimo + ',' + primeiro);
   
 
 // Desafio 5
