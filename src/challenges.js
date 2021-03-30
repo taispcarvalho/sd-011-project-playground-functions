@@ -1,24 +1,22 @@
 // Desafio 1
 function compareTrue(parm1, parm2) {
- return parm1 && parm2;  
+  return parm1 && parm2;
 }
 
 // Desafio 2
 function calcArea(base, altura) {
- return (base * altura) / 2;
+  return (base * altura) / 2;
 }
 
 // Desafio 3
 function splitSentence(frase) {
- return frase.split(" "); 
+  return frase.split(" ");
 }
 
 // Desafio 4
-let nome = ['ola', 'tudo', 'bem', 'com', 'voce']
-function concatName(strArr) { 
- return strArr[strArr.length - 1] +', '+ strArr[0]; 
+function concatName(strArr) {
+  return strArr[strArr.length - 1] + ', ' + strArr[0];
 }
-console.log(concatName(nome)); 
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -27,12 +25,24 @@ function footballPoints(wins, ties) {
 
 
 // Desafio 6
-highestCount[9, 1, 2, 3, 9, 5, 7]
 function highestCount(numbers) {
-  for (let numbers of highestCount){
-    console.log(numbers)
+  let maior = 0;
+  let contador = 0;
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > maior) {
+      maior = numbers[i];
+    }
+  }
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] === maior) {
+      contador += 1;
+    }
   }  
+  return(contador);
 }
+
+
+
 
 
 // Desafio 7
