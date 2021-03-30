@@ -39,8 +39,15 @@ function highestCount(array) {
 /* https://www.javaer101.com/pt/article/2119791.html */
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let c1 = 'cat1';
+  let c2 = 'cat2';
+  let mra = 'os gatos trombam e o rato foge';
+  if (mouse < cat1 && cat1 < cat2) {
+    return c1;
+  } if (mouse < cat2 && cat2 < cat1) {
+    return c2;
+  } return mra;
 }
 
 // Desafio 8
