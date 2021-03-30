@@ -1,5 +1,3 @@
-concatName (['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
-
 // Desafio 1
 function compareTrue(parameter1, parameter2) {
   return (parameter1 && parameter2);
@@ -31,8 +29,8 @@ function concatName(nameArray) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return ((wins * 3) + ties)
 }
 
 // Desafio 6
