@@ -130,6 +130,8 @@ function encode(message) {
         default:
           encodedMessage += message[index];
       }
+    } else {
+      encodedMessage += message[index];
     }
   }
 
