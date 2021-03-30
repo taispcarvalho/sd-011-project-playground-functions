@@ -4,9 +4,11 @@ function compareTrue(value1, value2) {
   return value1 && value2;
 }
 
+// Example: return condition ? true : false; but booleans are not necessary in ternary conditionals.
+
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
