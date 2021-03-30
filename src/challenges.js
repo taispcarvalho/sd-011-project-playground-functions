@@ -86,9 +86,22 @@ console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Dist = Math.abs(cat1 - mouse);
+  let cat2Dist = Math.abs(cat2 - mouse);
 
+  if (cat1Dist === cat2Dist) {
+    return 'os gatos trombam e o rato foge';
+  } else if (cat1Dist > cat2Dist) {
+    return 'cat1';
+  } else {
+    return 'cat2';
+  }
 }
+
+console.log(catAndMouse(0, 3, 2));
+console.log(catAndMouse(0, 6, 12));
+console.log(catAndMouse(0, 6, -6));
 
 // Desafio 8
 function fizzBuzz() {
@@ -103,3 +116,16 @@ function encode() {
 function decode() {
 
 }
+
+module.exports = {
+  compareTrue,
+  calcArea,
+  splitSentence,
+  concatName,
+  footballPoints,
+  highestCount,
+  catAndMouse,
+  fizzBuzz,
+  encode,
+  decode,
+};
