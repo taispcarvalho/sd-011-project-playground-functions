@@ -104,17 +104,23 @@ function fizzBuzz(arrayNumbers) {
 function testEncode(character) {
   switch (character) {
   case 'a':
-    character = '1';
+    let newCharacter = '1';
+    break;
   case 'e':
-    character = '2';
+    let newCharacter = '2';
+    break;
   case 'i':
-    character = '3';
+    let newCharacter = '3';
+    break;
   case 'o':
-    character = '4';
+    let newCharacter = '4';
+    break;
   case 'u':
-    character = '5';
+    let newCharacter = '5';
+    break;
   default:
-    character = character;
+    let newCharacter = character;
+    break;
   }
 
   return newCharacter;
