@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(par, par) {
+function compareTrue(par,impar) {
   result (par && par);
 }
 
