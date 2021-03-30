@@ -1,6 +1,11 @@
 // Desafio 1
 function compareTrue(value1,value2) {
-  return value1, value2
+  if(value1 === true && value2 === true){
+    return true
+  }
+  else {
+    return false
+  }
 }
 
 // Desafio 2
@@ -14,10 +19,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return array.filter((e, i) => i==0 || i==array.length-1)
 }
-
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 // Desafio 5
 function footballPoints() {
   // seu código aqui
