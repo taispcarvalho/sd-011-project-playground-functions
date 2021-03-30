@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(array) {
+function techList(array, name) {
   if (array.length === 0) {
     return 'Vazio!';
   }
@@ -10,14 +10,14 @@ function techList(array) {
   for (let techName of sortedTechNamesArray) {
     techListArray.push({
       tech: techName,
-      name: 'Gabriel',
+      name: name,
     });
   }
   return techListArray;
 }
 
 console.log(techList([]));
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"]));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
 
 
 // Desafio 11
