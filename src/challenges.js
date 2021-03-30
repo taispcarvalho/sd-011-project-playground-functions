@@ -102,24 +102,26 @@ function fizzBuzz(arrayNumbers) {
 
 // Desafio 9
 function testEncode(character) {
+  let newCharacter = '';
+  
   switch (character) {
   case 'a':
-    let newCharacter = '1';
+    newCharacter = '1';
     break;
   case 'e':
-    let newCharacter = '2';
+    newCharacter = '2';
     break;
   case 'i':
-    let newCharacter = '3';
+    newCharacter = '3';
     break;
   case 'o':
-    let newCharacter = '4';
+    newCharacter = '4';
     break;
   case 'u':
-    let newCharacter = '5';
+    newCharacter = '5';
     break;
   default:
-    let newCharacter = character;
+    newCharacter = character;
     break;
   }
 
