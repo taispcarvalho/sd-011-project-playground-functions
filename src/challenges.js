@@ -26,23 +26,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// https://stackoverflow.com/a/35101824
 function highestCount(array) {
-  let counts = [];
-  let compare = 0;
-  let highestCount = 0;
+  let highest = 0;
+  const aCount = new Map([...new Set(array)].map(
+    x => [x, array.filter(y => y === x).length]));
   
-  for (let index = 0, len = array.length; index < len; index += 1) {
-    let number = array[index];
-      
-    if (counts[number] === undefined) counts[number] = 1;
-    else counts[number] = counts[number] + 1;
-    if(counts[number] > compare) {
-      compare = counts[number];
-      highestCount += 1;
+  for (let index = 0; index < 10; index += 1){
+    if (aCount.get(index) > highest) {
+      highest = aCount.get(index);
     }
   }
 
-  return highestCount;
+  return highest;
 }
 
 // Desafio 7
