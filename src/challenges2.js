@@ -23,7 +23,6 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
 // Desafio 11
 function generatePhoneNumber(array) {
   let mask = '(xx) xxxxx-xxxx';
-  let arrayNotPossible = [];
   array.forEach(function (item) {
       mask = mask.replace('x', item);
   });
@@ -31,13 +30,13 @@ function generatePhoneNumber(array) {
   if(array.length === 11) {
     return mask
   } else if (array[index] < 0 || array[index] > 9) {
-    arrayNotPossible.push('Não é possível gerar um numero de telefone com esses valores')
+    return 'Não é possível gerar um numero de telefone com esses valores'
   } else {
 
     } 
   }
-  if(array.length < 11) {
-    arrayNotPossible.push('Array com tamanho incorreto')
+  if(array.length !== 11) {
+    return 'Array com tamanho incorreto'
   }
   return arrayNotPossible;
 }
