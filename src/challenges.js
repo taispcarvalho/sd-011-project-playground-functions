@@ -22,9 +22,13 @@ let desafio3 = splitSentence('go trybe');
 console.log(desafio3);
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(listaDeNomes) {
+  for (let i of listaDeNomes) {
+    return listaDeNomes[listaDeNomes.length - 1] + ', ' + listaDeNomes[0];
+  }
 }
+let desafio4 = concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+console.log(desafio4);
 
 // Desafio 5
 function footballPoints() {
