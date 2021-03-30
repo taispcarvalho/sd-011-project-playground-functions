@@ -2,7 +2,7 @@
 function techList(arrayTec, name) {
   let arrayResult = [];
   let arrayOrdenado = arrayTec.sort();
-  for(let index = 0; index < arrayOrdenado.length; index += 1){
+  for(let index = 0; index < arrayOrdenado.length; index += 1) {
     let object = {
       tech: arrayOrdenado[index],
       name: name
@@ -10,7 +10,7 @@ function techList(arrayTec, name) {
     arrayResult.push(object);
   }
 
-  if(arrayTec.length === 0){
+  if(arrayTec.length === 0) {
     return 'Vazio!';
   } else {
     return arrayResult;
