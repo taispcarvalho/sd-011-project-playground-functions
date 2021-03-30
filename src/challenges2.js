@@ -1,6 +1,16 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(nameTech, nome) {
+  let arrTechs = [];
+  if (!nameTech) {
+    return [];
+  }
+  for (let index = 0; index < nameTech.length; index += 1) {
+    arrTechs.push({
+      tech: nameTech[index], 
+      name: nome
+    })
+  }
+  return arrTechs
 }
 
 // Desafio 11
