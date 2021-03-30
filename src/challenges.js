@@ -17,6 +17,9 @@ function splitSentence(string) {
     if (string[index] === ' ') {
       array.push(stringCache);
       stringCache = '';
+    } else if (index === string.length - 1) {
+      stringCache += string[index];
+      array.push(stringCache);
     } else {
       stringCache += string[index];
     }
@@ -26,8 +29,11 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let firstElement = array[0];
+  let lastElement = array[array.length - 1];
+  let response = `${lastElement}, ${firstElement}`;
+  return response;
 }
 
 // Desafio 5
