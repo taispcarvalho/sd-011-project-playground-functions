@@ -67,7 +67,7 @@ console.log(highestCount([1, 2, 3, 4, 56, 56, 56, 7]));
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = cat1 - mouse;
   let distanceCat2 = cat2 - mouse;
-  
+
   if(distanceCat1 < 0) {
     distanceCat1 = distanceCat1 * -1;
   }
@@ -111,9 +111,67 @@ console.log(fizzBuzz([2, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode(string) {}
+function encode(string) {
+  let newMensage = '';
 
-function decode(number) {}
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index].toLowerCase() === string[index]) {
+      switch (string[index]) {
+        case 'a':
+          newMensage += '1'
+          break;
+        case 'e':
+          newMensage += '2'
+          break;
+        case 'i':
+          newMensage += '3'
+          break;
+        case 'o':
+          newMensage += '4'
+          break;
+        case 'u':
+          newMensage += '5'
+          break;
+        default: 
+          newMensage += string[index];
+      }
+    }
+  }
+  return newMensage;
+}
+
+console.log(encode('hi, there'));
+
+function decode(number) {
+  let newMensage = '';
+
+  for (let index = 0; index < number.length; index += 1) {
+    if (number[index].toLowerCase() === number[index]) {
+      switch (number[index]) {
+        case '1':
+          newMensage += 'a'
+          break;
+        case '2':
+          newMensage += 'e'
+          break;
+        case '3':
+          newMensage += 'i'
+          break;
+        case '4':
+          newMensage += 'o'
+          break;
+        case '5':
+          newMensage += 'u'
+          break;
+        default: 
+          newMensage += number[index];
+      }
+    }
+  }
+  return newMensage;
+}
+
+console.log(decode('h3, th2r2'));
 
 module.exports = {
   calcArea,
