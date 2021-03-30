@@ -1,37 +1,53 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
   if (bool1 === true && bool2 === true) {
-    console.log('true');
+    return 'true';
   } else {
-    console.log('false');
+    return 'false';
   }
 }
-compareTrue(true, true)
+console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base,height) {
   return (base * height)/2
 }
-console.log(calcArea(5, 10))
-
-
-
-
-
-
-
-
-
+console.log(calcArea(5, 10));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+
+let letter = '';
+
+function splitSentence(sentence) {
+  for (index = 0; index < sentence.lenght; index += 1) {
+    letter = sentence[index];
+    if (letter = ' ') {
+      sentenceSplitted.push 
+    }
+  }
+
+
+
 }
 
+
+
+
+var test = [1, 2, 3, 4]
+
+console.log (test);
+
+var index = test[1];
+console.log(index);
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+// https://www.devmedia.com.br/javascript-concat-concatenando-arrays-e-strings/37964
+
+function concatName(names) {
+  return (names[names.length-1] + ', ' +names[0]);
 }
+console.log(concatName(['Vivian', 'Maria', 'Braga']));
+
 
 // Desafio 5
 function footballPoints() {
