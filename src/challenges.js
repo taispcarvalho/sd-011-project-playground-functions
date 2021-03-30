@@ -57,9 +57,18 @@ function highestCount() {
 // console.log(highestCount([1, 9, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mousePosition, catOnePosition, catTwoPosition) {
+  let distanciaCat1 = catOnePosition - mousePosition;
+  let distanciaCat2 = catTwoPosition - mousePosition;
+  if (distanciaCat1 > distanciaCat2) {
+    return 'cat2';    
+  }else if (distanciaCat2 > distanciaCat1) {
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
-
+console.log(catAndMouse(2, 12, 12));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
@@ -84,4 +93,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
