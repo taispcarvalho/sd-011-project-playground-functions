@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(par, impar){
+function compareTrue(par, impar) {
   return par && impar;
 }
 
@@ -18,34 +18,34 @@ function splitSentence() {
 
 function concatName(pessoas) {
   pessoas = [];
-  for (let i = 0; i <pessoas.length; i += 1){
+  for (let i = 0; i < pessoas.length; i += 1) {
     let primeiro = pessoas[0];
     let ultimo = pessoas[pessoas.length - 1];
-    if ( pessoas = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) {
+    if (pessoas = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) {
       let resultado1 = ultimo + ',' + primeiro;
-    }else if ( pessoas = ['foguete', 'não', 'tem', 'ré']) {
+    } else if ( pessoas = ['foguete', 'não', 'tem', 'ré']) {
       let resultado2 = ultimo + ',' + primeiro;
-    }else if (pessoas = ['captain', 'my', 'captain']) {
+    } else if (pessoas = ['captain', 'my', 'captain']) {
       let resultado3 = ultimo + ',' + primeiro;
     }
-      return (ultimo + ',' + primeiro);
-  } 
-console.log(ultimo + ',' + primeiro);
-}  
+    return (ultimo + ',' + primeiro);
+  }
+  console.log(ultimo + ',' + primeiro);
+}
 
 // Desafio 5
 function footballPoints(wins, ties) {
-wins = 14;
-ties = 8;
-let pointsWins = 0;
-let pointsTies = 0;
-if (wins !== 0) {
-  pointsWins = 3*wins;
- if (ties !==0) {
-  pointsTies = ties*1;
- }
-let soma = pointsTies + pointsWins;
-}
+  wins = 14;
+  ties = 8;
+  let pointsWins = 0;
+  let pointsTies = 0;
+  if (wins !== 0) {
+    pointsWins = 3 * wins;
+    if (ties !== 0) {
+      pointsTies = ties * 1;
+    }
+    let soma = pointsTies + pointsWins;
+  }
   return soma;
 }
 
