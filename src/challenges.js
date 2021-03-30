@@ -97,16 +97,63 @@ function fizzBuzz(numbers) {
   return answer;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-console.log(fizzBuzz([7, 9]));
-console.log(fizzBuzz([9, 25]));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(message) {
+  let encodedMessage = '';
+
+  for (let index = 0; index < message.length; index += 1) {
+    if (message[index].toLowerCase() === message[index]) {
+      switch (message[index]) {
+        case 'a':
+          encodedMessage += '1';
+          break;
+        case 'e':
+          encodedMessage += '2';
+          break;
+        case 'i':
+          encodedMessage += '3';
+          break;
+        case 'o':
+          encodedMessage += '4';
+          break;
+        case 'u':
+          encodedMessage += '5';
+          break;
+        default:
+          encodedMessage += message[index];
+      }
+    }
+  }
+
+  return encodedMessage;
 }
-function decode() {
-  // seu código aqui
+
+function decode(encodedMessage) {
+  let decodedMessage = '';
+
+  for (let index = 0; index < encodedMessage.length; index += 1) {   
+    switch (encodedMessage[index]) {
+      case '1':
+        decodedMessage += 'a';
+        break;
+      case '2':
+        decodedMessage += 'e';
+        break;
+      case '3':
+        decodedMessage += 'i';
+        break;
+      case '4':
+        decodedMessage += 'o';
+        break;
+      case '5':
+        decodedMessage += 'u';
+        break;
+      default:
+        decodedMessage += encodedMessage[index];
+    }
+  }
+
+  return decodedMessage;
 }
 
 module.exports = {
