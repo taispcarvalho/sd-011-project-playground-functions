@@ -12,19 +12,18 @@ console.log(calcArea(10, 50));
 
 // Desafio 3
 function splitSentence(frase) {
-  return frase.split(" ");
+  return frase.split(' ');
 }
-console.log(splitSentence('go trybe'))
+console.log(splitSentence('go trybe'));
 
 // Desafio 4
 function concatName(value) {
-  let name = [];
   let end = value.length - 1;
-  name.push(value[end]);
-  name.push(value[0]);
+  let name = value[end] + ', ' + value[0];
+  
   return name;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints() {
