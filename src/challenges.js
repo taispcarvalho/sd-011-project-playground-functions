@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  return (value1 && value2 ? true : false);
+  return ((value1 && value2) ? true : false);
 }
 
 // Desafio 2
@@ -17,7 +17,7 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(strArray) {
-  return (strArray[strArray.length - 1] + ', ' + strArray[0]);
+  return `${strArray[strArray.length - 1]}, ${strArray[0]}`;
 }
 
 // Desafio 5
