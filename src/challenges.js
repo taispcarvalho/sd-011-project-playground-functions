@@ -16,8 +16,11 @@ function splitSentence(str) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(anyStr) {
+  let lastName = anyStr[anyStr.length - 1];
+  let firstName = anyStr[0];
+  let fullName = lastName + ' ' + firstName;
+  return fullName;
 }
 
 // Desafio 5
