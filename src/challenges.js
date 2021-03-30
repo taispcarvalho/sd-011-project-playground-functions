@@ -19,12 +19,17 @@ function splitSentence(string) {
   let result = string.split(' ');
   return result;
 }
-console.log(splitSentence('Amandha Barok'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  for (i = 0; i < array.length; i+=1){
+  }
+  let first = array[0];
+  let last = array[array.length-1];
+  let result = first.concat(', ', last);
+  return result;
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
