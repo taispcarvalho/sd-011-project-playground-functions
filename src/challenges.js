@@ -4,13 +4,28 @@ function compareTrue(value1, value2) {
 }
 
 // Desafio 2
-function calcArea(base, altura) {
-  return base * altura / 2;
+function calcArea(base, height) {
+  return base * height / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  let answer = [];
+  let word = '';
+
+  for (let index = 0; index < sentence.length; index += 1) {
+    if (sentence[index] == ' ' || index == sentence.length - 1) {
+      if (index == sentence.length - 1) {
+        word += sentence[index];
+      }
+      answer.push(word);
+      word = '';
+    } else {
+      word += sentence[index];
+    }  
+  }
+
+  return answer;
 }
 
 // Desafio 4
