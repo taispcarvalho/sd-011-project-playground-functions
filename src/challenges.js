@@ -48,9 +48,6 @@ function highestCount(var1) {
 console.log(highestCount())
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  mouse = 10
-  cat1 = 5
-  cat2 = 5
   if (mouse - cat1 < mouse - cat2){
     return 'cat1';
   } else if (mouse - cat1 === mouse - cat2) {
@@ -60,7 +57,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   
 }
-console.log(catAndMouse());
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
