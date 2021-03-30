@@ -19,7 +19,7 @@ function splitSentence(sentence) {
 // Desafio 4
 // Usando Template strings
 function concatName(namesArray) {
-  return `${namesArray[namesArray.lenght - 1]}, ${namesArray[0]}`;
+  return `${namesArray[namesArray.length- 1]}, ${namesArray[0]}`;
 }
 
 // Desafio 5
