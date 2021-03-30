@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === false && value2 === false) {
-    return false;
+  if (value1 == true && value2 == true) {
+    return true;
   }
-  return true
+  return false;
 }
 
 // Desafio 2
@@ -18,7 +18,10 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  return array.filter((e, i) => i === 0 || i === array.length - 1);
+  let first = array[0];
+  let last = array[array.length - 1];
+  let concatFirstLast = `${last},${first}`;
+  return concatFirstLast;
 }
 
 // Desafio 5
