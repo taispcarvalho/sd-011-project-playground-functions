@@ -40,21 +40,19 @@ function highestCount(arrayNum) {
   let cont = 0;
 
   for (let index = 0; index < arrayNum.length; index += 1) {
-    if (arrayNum[index] > higherNumber) { 
+    if (arrayNum[index] > higherNumber) {
       higherNumber = arrayNum[index];
     }
   }
-  for (let index = 0; index < num.length; index += 1) {
-    if (num[index] === numCont) {
+  for (let index = 0; index < arrayNum.length; index += 1) {
+    if (arrayNum[index]  === higherNumber) {
       cont += 1;
     }
   }
   return cont;
 }
 
-
-
-let numArray = [9, 1, 2, 9, 9, 3, 9, 5, 7];
+let numArray = [9, 1, 2, 9, 3, 9, 5, 7];
 console.log(highestCount(numArray));
 
 // Desafio 7
