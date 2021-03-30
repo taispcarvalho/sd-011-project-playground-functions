@@ -18,24 +18,23 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arr) {
-  return arr[arr.length-1] + ', ' + arr[0];
+  return `${arr[arr.length - 1]}, ${arr[0]})`;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins*3) + ties;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
 function highestCount(arrNumber) {
   let highestRepet = 0;
-  big = arrNumber[0];
+  let big = arrNumber[0];
   for (let index = 0; index < arrNumber; index += 1) {
-    if(big < arrNumber[index]) {
+    if (big < arrNumber[index]) {
       highestRepet = 1;
       big = arrNumber[index];
-    }
-    else if (big === arrNumber[index]) {
+    } else if (big === arrNumber[index]) {
       highestRepet += 1;
     }
   }
@@ -46,38 +45,40 @@ function highestCount(arrNumber) {
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = Math.abs(cat1 - mouse);
   let dist2 = Math.abs(cat2 - mouse);
-  if(dist1 < dist2) {
+  if (dist1 < dist2) {
     return cat2;
   }
-  else if (dist1 > dist2) {
+  if (dist1 > dist2) {
     return cat1;
   }
   return 'os gatos trombam e o rato foge';
 }
 
+function checkDivisor(num) {
+  let frase = '';
+  if (num % 3 === 0 && num % 5 === 0) {
+    frase = 'fizzBuzz';
+  } else if (num % 3 === 0) {
+    frase = 'fizz';
+  } else if (num % 5 === 0) {
+    frase = 'buzz';
+  } else {
+    frase = 'bug!';
+  }
+  return frase;
+}
 // Desafio 8
 function fizzBuzz(arrNumber) {
-  for(let index in arrNumber) {
-    if (arrNumber[index] % 3 === 0 && arrNumber[index] % 5 === 0) {
-      arrNumber[index] = 'fizzBuzz';
-    }
-    else if (arrNumber[index] % 3 === 0) {
-      arrNumber[index] = 'fizz';
-    }
-    else if (arrNumber[index] % 5 === 0) {
-      arrNumber[index] = 'buzz';
-    }
-    else {
-      arrNumber[index] = 'bug!';
-    }
+  for (let index = 0; index < arrNumber.length; index += 1) {
+    arrNumber[index] = checkDivisor(arrNumber[index]);
   }
   return arrNumber;
 }
 
 function ehVogal(char, str) {
   for (let index = 0; index < str.length; index += 1) {
-    if(char === str[index]) {
-      return index+1;
+    if (char === str[index]) {
+      return index + 1;
     }
   }
   return false;
@@ -87,12 +88,11 @@ function ehVogal(char, str) {
 function encode(str) {
   let vogais = 'aeiou';
   let newStr = '';
-  for (let index in str) {
-    let vogalLetra = ehVogal(str[index], vogais)
+  for (let index = 0; index < str.length; index += 1) {
+    let vogalLetra = ehVogal(str[index], vogais);
     if (vogalLetra) {
       newStr += vogalLetra;
-    }
-    else {
+    } else {
       newStr += str[index];
     }
   }
@@ -101,8 +101,8 @@ function encode(str) {
 
 function ehNumber(char, str) {
   for (let index = 0; index < str.length; index += 1) {
-    if(char === str[index]) {
-      return str[index-1];
+    if (char === str[index]) {
+      return str[index - 1];
     }
   }
   return false;
@@ -111,12 +111,11 @@ function ehNumber(char, str) {
 function decode(str) {
   let vogais = '0a1e2i3o4u';
   let newStr = '';
-  for (let index in str) {
-    let vogalLetra = ehNumber(str[index], vogais)
+  for (let index = 0; index < str.length; index += 1) {
+    let vogalLetra = ehNumber(str[index], vogais);
     if (vogalLetra) {
       newStr += vogalLetra;
-    }
-    else {
+    } else {
       newStr += str[index];
     }
   }

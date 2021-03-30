@@ -6,33 +6,37 @@ function techList(nameTech, nome) {
   }
   for (let index = 0; index < nameTech.length; index += 1) {
     arrTechs.push({
-      tech: nameTech[index], 
-      name: nome
-    })
+      tech: nameTech[index],
+      name: nome,
+    });
   }
-  return arrTechs
+  return arrTechs;
 }
 
-function checkNumberPhone (phoneNumber) {
+function repeteNumber(num, arrNumber) {
   let repete = 0;
+  for (let index = 0; index < arrNumber.length; index += 1) {
+    if (num === arrNumber[index]) {
+      repete += 1;
+    }
+    if (repete >= 3) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function menor0Maior9(num) {
+  return num < 0 || num > 9;
+}
+
+function checkNumberPhone(phoneNumber) {
   if (phoneNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for (let index in phoneNumber) {
-    if (phoneNumber[index] < 0){
-      return 'não é possível gerar um número de telefone com esses valores, seja menor que 0';
-    }
-    if (phoneNumber[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores, maior que 9';
-    }
-    repete = 0;
-    for (let repeteIndex = 0; repeteIndex < phoneNumber.length; repeteIndex += 1) {
-      if (phoneNumber[index] === phoneNumber[repeteIndex]) {
-        repete += 1;
-      }
-      if (repete >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores, repete 3 vezes ou mais'
-      }
+  for (let index = 0; index < phoneNumber.length; index += 1) {
+    if (menor0Maior9(phoneNumber[index]) || repeteNumber(phoneNumber[index], phoneNumber)) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 }
@@ -44,10 +48,9 @@ function generatePhoneNumber(arrNumber) {
   }
   let numberPhone = '(';
   for (let index = 0; index < arrNumber.length; index += 1) {
-    if(numberPhone.length === 3) {
+    if (numberPhone.length === 3) {
       numberPhone += ') ';
-    }
-    else if(numberPhone.length === 10) {
+    } else if (numberPhone.length === 10) {
       numberPhone += '-';
     }
     numberPhone += arrNumber[index];
@@ -70,7 +73,8 @@ function hydrate(str) {
   for (let index = 0; index < agua.length; index += 1) {
     total += +agua[index];
   }
-  return total + ' copos de água';
+  total += ' copos de água';
+  return total;
 }
 
 module.exports = {
