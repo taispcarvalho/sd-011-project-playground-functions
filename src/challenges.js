@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(par, impar) {
+function compareTrue(par, impar){
   return par && impar;
 }
 
@@ -15,10 +15,11 @@ function splitSentence() {
 }
 
 // Desafio 4
-let pessoas = [];
+
+function concatName(pessoas) {
+pessoas = [];
 let primeiro = pessoas[0];
 let ultimo = pessoas[pessoas.length - 1];
-function concatName(pessoas) {
 if ( pessoas = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) {
   let resultado1 = ultimo + ',' + primeiro;
 } else if ( pessoas = ['foguete', 'não', 'tem', 'ré']) {
