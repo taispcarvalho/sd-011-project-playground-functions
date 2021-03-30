@@ -33,8 +33,8 @@ function splitSentence(frase){
 function concatName(lista){
   let primPos=lista[0];
   let ultPos=lista[lista.length-1];
-  let resposta=ultPos.concat(" ",primPos);
-  return(resposta);
+  let resposta= ultPos.concat(" ",primPos);
+  console.log(resposta);
   }
 //concatName(lista);
 
@@ -64,9 +64,20 @@ function highestCount(valores){
 //highestCount(valores);
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+//let mouse=6;
+//let cat1=13;
+//let cat2=12 ;
+
+function catAndMouse(mouse,cat1,cat2) {
+  if(cat1-mouse==cat2-mouse){
+    return("Os gatos trombam e o rato foge");
+  }else if(cat1-mouse<cat2-mouse){
+    return("cat1");
+  }else{
+    return("cat2");
+  }
 }
+//catAndMouse(mouse,cat1,cat2);
 
 // Desafio 8
 function fizzBuzz() {
