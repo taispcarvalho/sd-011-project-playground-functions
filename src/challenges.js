@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  return valor1 === valor2
+  return valor1 && valor2;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, altura) {
+  return base * altura;
 }
 
 // Desafio 3
