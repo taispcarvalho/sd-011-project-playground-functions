@@ -16,8 +16,11 @@ function splitSentence(frase) {
 console.log(splitSentence('go trybe'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arryNames) {
+  let lastItemCheck = arryNames.length - 1;
+  let lastItem = arryNames[lastItemCheck];
+  let firstItem = arryNames[0];
+  return `${lastItem}, ${firstItem}`;
 }
 
 // Desafio 5
