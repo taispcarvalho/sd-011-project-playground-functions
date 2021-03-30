@@ -26,7 +26,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let firstLine = triangleCheckLine(lineA, lineB, lineC);
   let secondLine = triangleCheckLine(lineB, lineA, lineC);
   let thirdLine = triangleCheckLine(lineC, lineA, lineB);
-  return firstLine && secondLine && thirdLine;
+  return firstLine || secondLine || thirdLine;
 }
 
 // Desafio 13
