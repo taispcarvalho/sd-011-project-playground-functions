@@ -7,13 +7,15 @@ function compareTrue(valor1,valor2) {
 //compareTrue(valor2,valor1);
 
 // Desafio 2
-let base=10;
-let altura=50;
-areaTriangulo=Number;
-function calcArea(base,atura) {
-  areaTriangulo=(base*altura)/2;
+//let base = 1;
+//let altura = 51;
+//let areaTriangulo = 0.1;
+function calcArea(base,altura) {
+  areaTriangulo = base * altura / 2;
+  console.log(areaTriangulo);
 }
-console.log(areaTriangulo);
+//calcArea(base,altura);
+//console.log(areaTriangulo);
 
 // Desafio 3
 function splitSentence() {
