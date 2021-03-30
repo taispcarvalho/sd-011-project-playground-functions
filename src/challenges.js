@@ -1,3 +1,4 @@
+console.log (fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 1
 function compareTrue(parameter1, parameter2) {
   return (parameter1 && parameter2);
@@ -62,8 +63,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let fizzBuzzArray = [];
+  for (let index = 0; index < numbers.length; index +=1) {
+    if ((Number.isInteger(numbers[index]/3)) && (Number.isInteger(numbers[index]/5))) {
+      fizzBuzzArray[index] = 'fizzBuzz';
+    } else if ((Number.isInteger(numbers[index]/3))) {
+      fizzBuzzArray[index] = 'fizz';
+    } else if (Number.isInteger(numbers[index]/5)) {
+      fizzBuzzArray[index] = 'Buzz';
+    } else {
+      fizzBuzzArray[index] = 'bug!';
+    }
+  }
+  return (fizzBuzzArray);
 }
 
 // Desafio 9
