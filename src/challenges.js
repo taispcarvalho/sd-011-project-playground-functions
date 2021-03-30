@@ -5,7 +5,6 @@ function compareTrue(a, b) {
 
   return a && b;
 }
-console.log(compareTrue(false, true));
 
 // Desafio 2
 function calcArea(a, b) {
@@ -15,8 +14,8 @@ function calcArea(a, b) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  return sentence.split(" ");
 }
 
 // Desafio 4
