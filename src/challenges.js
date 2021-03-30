@@ -17,8 +17,17 @@ function splitSentence(value3) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+
+function concatName(value4) {
+  // function endOfArray(value4){
+  //   var last = value4[value4.length - 1];
+  //   return last;
+  // }
+  // function firstOfArray(value4){
+  //   var first = value4[0];
+  //   return first;
+  // }
+  // return endOfArray, firstOfArray;
 }
 
 // Desafio 5
