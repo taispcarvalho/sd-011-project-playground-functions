@@ -17,27 +17,28 @@ function splitSentence() {
 // Desafio 4
 
 function concatName(pessoas) {
-pessoas = [];
-let primeiro = pessoas[0];
-let ultimo = pessoas[pessoas.length - 1];
-if ( pessoas = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) {
-  let resultado1 = ultimo + ',' + primeiro;
-} else if ( pessoas = ['foguete', 'não', 'tem', 'ré']) {
-  let resultado2 = ultimo + ',' + primeiro;
-} else if (pessoas = ['captain', 'my', 'captain']) {
-  let resultado3 = ultimo + ',' + primeiro;
-}
-    return (ultimo + ',' + primeiro);
+  pessoas = [];
+  for (let i = 0; i <pessoas.length; i += 1){
+    let primeiro = pessoas[0];
+    let ultimo = pessoas[pessoas.length - 1];
+    if ( pessoas = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) {
+      let resultado1 = ultimo + ',' + primeiro;
+    }else if ( pessoas = ['foguete', 'não', 'tem', 'ré']) {
+      let resultado2 = ultimo + ',' + primeiro;
+    }else if (pessoas = ['captain', 'my', 'captain']) {
+      let resultado3 = ultimo + ',' + primeiro;
+    }
+      return (ultimo + ',' + primeiro);
   } 
 console.log(ultimo + ',' + primeiro);
-  
+}  
 
 // Desafio 5
-let pointsWins = 0;
-let pointsTies = 0;
 function footballPoints(wins, ties) {
 wins = 14;
 ties = 8;
+let pointsWins = 0;
+let pointsTies = 0;
 if (wins !== 0) {
   pointsWins = 3*wins;
  if (ties !==0) {
