@@ -15,9 +15,7 @@ function splitSentence(array) {
 
 // Desafio 4
 function concatName(array) {
-  let firstItem = array[0];
-  let lastItem = array[array.length - 1];
-  return '${lastItem}, ${firstItem}';
+  return array[array.length - 1] + ', ' + array[0];
 }
 
 // Desafio 5
@@ -36,7 +34,7 @@ function highestCount(array) {
     }
   }
 
-  for (index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] === highest) {
       count += 1;
     }
@@ -45,11 +43,11 @@ function highestCount(array) {
   return count;
 }
 
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if ((mouse - cat1) > (mouse - cat2)) return 'cat2';
+  else if ((mouse - cat2) > (mouse - cat1)) return 'cat1';
+  else return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
