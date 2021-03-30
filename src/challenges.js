@@ -1,3 +1,5 @@
+concatName (['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
+
 // Desafio 1
 function compareTrue(parameter1, parameter2) {
   return (parameter1 && parameter2);
@@ -5,16 +7,16 @@ function compareTrue(parameter1, parameter2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height / 2)
+  return ((base * height) / 2);
 }
 // Desafio 3
 function splitSentence(sentence) {
   let split = [];
   let index = 0;
-  split [0] = '';
+  split[0] = '';
   for (let char of sentence) {
     if (char === ' ') {
-      index += 1;
+      index =+ 1;
       split[index] = '';
     } else {
       split[index]+=char;
@@ -24,8 +26,8 @@ return split;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nameArray) {
+  return (nameArray[(nameArray.length - 1)]+ ', ' + nameArray[0]);
 }
 
 // Desafio 5
