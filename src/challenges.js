@@ -33,7 +33,7 @@ function concatName(array) {
   let newArray = array.shift();
   let arrayReverse = array.reverse();
   let newArray2 = arrayReverse.shift();
-  return newArray2 + ', ' + newArray; 
+  return newArray2 + ', ' + newArray;
 }
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -55,32 +55,28 @@ function highestCount(array) {
   let quantidade = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === largest) {
-      quantidade+= 1;
+      quantidade += 1;
     }
   }
   return quantidade;
-
 }
 
-console.log(highestCount([1, 2, 3, 4, 56,56 ,56 ,7]));
+console.log(highestCount([1, 2, 3, 4, 56, 56, 56, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = cat1 - mouse;
-  let distanceCat2 = cat2 - mouse;
-
-  if (distanceCat1 < distanceCat2) {
+  if (cat1 > cat2) {
     return 'cat1';
-  } else if (distanceCat2 < distanceCat1) {
+  } else if (cat2 > cat1) {
     return 'cat2';
-  } else {
+  } else if (cat2 === mouse && cat1 === mouse) {
     return 'os gatos trombam e o rato foge';
   }
 }
 
 console.log(catAndMouse(3, 1, 2));
 console.log(catAndMouse(3, 2, 1));
-console.log(catAndMouse(3, 1, 1));
+console.log(catAndMouse(3, 3, 3));
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -105,19 +101,29 @@ console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode(string) {
+ 
+}
+
+function decode(number) {
   let letters = {
     a: 1,
     e: 2,
     i: 3,
     o: 4,
     u: 5,
+  };
+  let letters2 = '';
+  let i;
+  for (i in letters) {
+    while (number >= letters[i]) {
+      letters2 += i;
+      number -= letters[i];
+    }
   }
-
-
+  return letters2;
 }
-function decode(number) {
-  // seu código aqui
-}
+
+console.log(decode(2));
 
 module.exports = {
   calcArea,
