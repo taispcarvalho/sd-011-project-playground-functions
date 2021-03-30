@@ -6,12 +6,13 @@ function compareTrue(bolean1, bolean2) {
   return false;
 }
 
-console.log(compareTrue(false, false))
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
+  return (base * heigth) / 2;
 }
+
+console.log(calcArea(3,4))
 
 // Desafio 3
 function splitSentence() {
