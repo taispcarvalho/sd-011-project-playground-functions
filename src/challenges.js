@@ -22,10 +22,29 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
-
+function getHighest(array) {
+  let max = array[0];
+  for (let index in array) {
+    if (array[index] > max) {
+      max = array[index];
+    }
+  }
+  return max;
+}
+function countApearences(num, array) {
+  let counter = 0;
+  for (let index in array) {
+    if (num === array[index]) {
+      counter += 1;
+    }
+  }
+  return counter;
+}
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let max = getHighest(array);
+  let repeated = countApearences(max, array);
+  return repeated;
 }
 
 // Desafio 7
