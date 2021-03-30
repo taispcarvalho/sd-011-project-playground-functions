@@ -1,4 +1,3 @@
-//José Henrique Margraf Melo
 // Desafio 10
 function techList() {
   // seu código aqui
