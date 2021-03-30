@@ -2,7 +2,7 @@
 //let valor1=true;
 //let valor2=true;
 function compareTrue(valor1,valor2) {
-  console.log(valor1&&valor2);
+  return(valor1&&valor2);
 }
 //compareTrue(valor2,valor1);
 
@@ -12,7 +12,7 @@ function compareTrue(valor1,valor2) {
 //let areaTriangulo = 0.1;
 function calcArea(base,altura) {
   areaTriangulo = base * altura / 2;
-  console.log(areaTriangulo);
+  return(areaTriangulo);
 }
 //calcArea(base,altura);
 //console.log(areaTriangulo);
@@ -21,15 +21,21 @@ function calcArea(base,altura) {
 //let frase="Wilquer Figueiredo Alves"
 function splitSentence(frase){
   let separado=frase.split(" ");
-  console.log(separado);}
+  return(separado);
+}
 //splitSentence(frase);
   // seu código aqui
 
 
 // Desafio 4
-function concatName() {
+let lista=["meu","nome","nao","e","jhonny"];
+function concatName(lista){
   // seu código aqui
+//  let ultimo=lista[lista[lista.length]];
+  let resposta=[lista[lista.length],lista[0]];
+  console.log(resposta);
 }
+concatName(lista);
 
 // Desafio 5
 function footballPoints() {
