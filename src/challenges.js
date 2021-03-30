@@ -24,9 +24,12 @@ function concatName(array) {
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+ let winsValue = 3;
+ let tiesValue = 1;
+ return (wins * winsValue) + (ties * tiesValue);
 }
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
