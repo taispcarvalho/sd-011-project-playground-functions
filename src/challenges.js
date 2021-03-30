@@ -16,8 +16,8 @@ function splitSentence(param1) {
 // console.log(splitSentence(param1));
 
 // Desafio 4
-function concatName() {
-  
+function concatName(param1) {
+  return param1[0], param1.length-1;
 }
 
 // Desafio 5
