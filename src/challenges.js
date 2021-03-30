@@ -129,13 +129,50 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
+let cryptoDictionary = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5,
+  '1': 'a',
+  '2': 'e',
+  '3': 'i',
+  '4': 'o',
+  '5': 'u',
+};
 
+function encode(sentence) {
+  let encodedSentence = '';
+
+  for (let char of sentence) {
+    if (cryptoDictionary[char]) {
+      encodedSentence += cryptoDictionary[char];
+    } else {
+      encodedSentence += char;
+    }
+  }
+
+  return encodedSentence;
 }
 
-function decode() {
+console.log(encode('hi there!'));
 
+function decode(sentence) {
+  let decodedSentence = '';
+
+  for(let char of sentence) {
+    if(parseInt(char) < 6 && parseInt(char) > 0) {
+      decodedSentence += cryptoDictionary[char];
+    } else {
+      decodedSentence += char;
+    }
+  }
+
+  return decodedSentence;
 }
+
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   compareTrue,
