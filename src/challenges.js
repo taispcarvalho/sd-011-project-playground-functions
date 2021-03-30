@@ -25,10 +25,11 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
+  let lastFirst = '';
   let first = array[0];
   let last = array[array.length - 1];
-  last += first;
-  return last;
+  lastFirst = last + ', ' + first;
+  return lastFirst;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
