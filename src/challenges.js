@@ -9,27 +9,22 @@ function calcArea(base, height) {
 }
 console.log(calcArea(51, 1));
 // Desafio 3
-function splitSentence(string) {
-  let array = [];
-  for(index in string){
-    if(string[index])
-    array.push(string[index]);
-  }
-  return array;
+function splitSentence() {
   // seu código aqui
 }
 console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(array) {
-  return (array[array.length - 1] + ', ' + array[0])
+  return (`${array[array.length - 1]}, ${array[0]}`);
 }
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return ((wins * 3) + ties);
 }
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
