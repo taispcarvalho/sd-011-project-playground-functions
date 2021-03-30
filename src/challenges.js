@@ -36,12 +36,35 @@ function footballPoints(wins, ties) {
     return jogos
   }
 }
-console.log(footballPoints(14,8));
+//console.log(footballPoints(14,8));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+
+let contador =  0
+let numeroMaior = maximoNumero(arr);
+  for (let index = 0; index < arr.length; index += 1) {
+    if (numeroMaior === arr[index] ){
+    contador += 1
+    }
+
+  }
+  return contador;
+} 
+
+function maximoNumero(arr) {
+  let numeroMaior = arr[0];
+  for (let index = 1; index < arr.length; index += 1) {  
+    if(numeroMaior < arr[index]){
+      numeroMaior = arr[index];
+    }
+  }
+ return numeroMaior
 }
+
+let arr = [9, 1, 2, 3, 9, 5, 7]
+//console.log(highestCount(arr));
+
 
 // Desafio 7
 function catAndMouse() {
