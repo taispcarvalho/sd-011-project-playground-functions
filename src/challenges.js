@@ -6,28 +6,23 @@ function compareTrue(value1, value2) {
     return false;
   }
 }
+compareTrue(true, true);
 
 // Desafio 2
 function calcArea(base, heigth) {
   return (base * heigth) / 2;
 }
-//console.log(calcArea(51, 1));
+calcArea(51, 1);
 
 
 // Desafio 3
 function splitSentence(param1) {
     return param1.split(' ');
 }
-//console.log(splitSentence('go Trybe'));
+splitSentence('go Trybe');
 
 // Desafio 4
-function concatName() {
-  let concatenaLetras = '';
-  for (let index = string.length - 1; index >= 0, index += 1) {
-    return [string];
-  }
-}
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+function concatName() 
 
 // Desafio 5
 function footballPoints() {
