@@ -4,12 +4,11 @@ function compareTrue(value1,value2) {
 }
 
 // Desafio 2
-let base = 51
-let height=1
+let base = 10
+let height= 5
 function calcArea() {
   return  base*height/2
 }
-console.log(calcArea(base*height/2))
 // Desafio 3
 function splitSentence() {
   // seu código aqui
