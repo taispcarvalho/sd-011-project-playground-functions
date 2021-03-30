@@ -62,22 +62,27 @@ if (gato1 < gato2) {
   return 'os gatos trombam e o rato foge'
 }
 }
-console.log(catAndMouse(3, 1, 2));
+
 
 // Desafio 8
 function fizzBuzz(numbers) {
-
- for (let index = 0; index < numbers.length; index+=1) {
-
-   if (nunbers[index] == 3) {
-     nunbers[index] = 1
-   }
-   if (nunbers[index] == 5) {
-    nunbers[index] = 1
-  }
- }
+  function fizzBuzz(array) {
+    let newArray = [];
+    for (let index in array) {
+      if (array[index] % 5 === 0 && array[index] % 3 === 0) {
+        newArray.push('fizzBuzz');
+      } else if (array[index] % 3 === 0) {
+        newArray.push('fizz');
+      } else if (array[index] % 5 === 0) {
+        newArray.push('buzz');
+      } else {
+        newArray.push('bug!');
+      }
+    }
+    return newArray;
 }
 
+console.log(fizzBuzz(5,12,3,4,6))
 // Desafio 9
 function encode() {
   // seu código aqui
