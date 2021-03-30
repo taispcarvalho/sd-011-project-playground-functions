@@ -13,14 +13,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  let arrayofstrings = sentence.split(' ');
-  return arrayofstrings;
+  return sentence.split(' ');
 }
 
 // Desafio 4
 function concatName(nomes) {
-  let result = [nomes[nomes.length - 1] , nomes[0]];
-  return result;
+  return [nomes[nomes.length - 1], nomes[0]].join(', ');
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
