@@ -19,11 +19,11 @@
 // console.log(calcArea(base, altura));
 
 
-let string = 'go Trybe'
-function splitSentence(frase){
-  return frase.split(" ");
-}
-console.log(splitSentence(string)); 
+// let string = 'go Trybe'
+// function splitSentence(frase){
+//   return frase.split(" ");
+// }
+// console.log(splitSentence(string)); 
 
 // let vetor = ['foguete', 'não', 'tem', 'ré'];
 
@@ -33,8 +33,32 @@ console.log(splitSentence(string));
 // }
 // console.log(concatName(vetor));
 
-function footballPoints(wins, ties){
-  return (wins * 3) + ties
-}
+// function footballPoints(wins, ties){
+//   return (wins * 3) + ties
+// }
 
-console.log(footballPoints(1, 2));
+// console.log(footballPoints(1, 2));
+let vetor = [0, 0, 0];
+
+// function highestCount (array){
+  function highestNumber(array){
+    let higherNum = 0;
+    for (let index = 0; index < array.length; index += 1){
+      if (array[index] > array[index + 1]){
+        higherNum = array[index];
+      }
+    }
+    return higherNum;
+  }
+  function countHigherNumber(array){
+    let count = 0;
+    for (let secondIndex = 0; secondIndex < array.length; secondIndex += 1){
+      if (array[secondIndex] === highestNumber(vetor)){
+        count += 1;
+      }
+    }
+    return count;
+  }
+
+  console.log(countHigherNumber(vetor))
+  
