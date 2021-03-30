@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  return (value1 === true && value2 === true ? true : false);
+  return (value1 && value2  ? true : false);
 }
 
 // Desafio 2
@@ -10,7 +10,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(str) {
-  return str.split(" ");
+  return str.split(' ');
 }
 // desafio 3 resolvido com base neste linked
 // https://tutorial.eyehunts.com/js/javascript-split-string-based-delimiter-comma-space/
