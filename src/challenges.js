@@ -69,14 +69,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function divisible3and5(number) {
   if (number % 3 === 0 && number % 5 !== 0) {
-    return 'fizz';
+    let word = 'fizz';
+    break;
   } else if (number % 3 !== 0 && number % 5 === 0) {
-    return 'buzz';
+    let word = 'buzz';
+    break;
   } else if (number % 3 === 0 && number % 5 === 0) {
-    return 'fizzBuzz';
+    let word = 'fizzBuzz';
+    break;
   } else if (number % 3 !== 0 && number % 5 !== 0) {
-    return 'bug!';
+    let word = 'bug!';
+    break;
   }
+  return word;
 }
 
 function fizzBuzz(arrayOfNumbers) {
