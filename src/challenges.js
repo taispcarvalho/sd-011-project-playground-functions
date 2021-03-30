@@ -18,9 +18,13 @@ function calcArea(base,altura) {
 //console.log(areaTriangulo);
 
 // Desafio 3
-function splitSentence() {
+//let frase="Wilquer Figueiredo Alves"
+function splitSentence(frase){
+  let separado=frase.split(" ");
+  console.log(separado);}
+splitSentence(frase);
   // seu código aqui
-}
+
 
 // Desafio 4
 function concatName() {
