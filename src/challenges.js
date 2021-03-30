@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue(value1,value2) {
-  if(value1 === true && value2 === true){
+function compareTrue(value1, value2) {
+  if ( value1 === true && value2 === true ){
     return true
   }
   else {
@@ -9,7 +9,7 @@ function compareTrue(value1,value2) {
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   return (base * height) / 2
 }
 
@@ -20,12 +20,12 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  return array.filter((e, i) => i==0 || i==array.length-1)
+  return array.filter((e, i) => i ===0 || i === array.length - 1)
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + (ties * 1)
 }
 
 // Desafio 6
