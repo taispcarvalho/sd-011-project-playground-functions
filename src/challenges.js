@@ -20,7 +20,7 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(text) {
   // seu código aqui
   let listText = text.split(' ');
   return listText;
@@ -31,7 +31,7 @@ function concatName(array) {
   // seu código aqui
   let firstIndex = array[0];
   let lastIndex = array[array.length - 1];
-  let textConcat = lastIndex + ' , ' + firstIndex;
+  let textConcat = lastIndex + ', ' + firstIndex;
   return textConcat;
 }
 
@@ -55,17 +55,34 @@ function highestCount(array) {
   }
 
   for(let index = 0; index < array.length; index+=1){
-    countNumber+=1;
+    if (array[index] === biggerNumber){
+      countNumber+=1;
+    }
+    
   }
 
   return countNumber;
 }
 
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let longCat1 = mouse - cat1;
-  let longCat2 = mouse - cat2;
+  let longCat1 = 0;
+  let longCat2 = 0;
+
+  if(mouse>cat1){
+    longCat1 = mouse - cat1;
+  }else {
+    longCat1 = cat1 - mouse;
+  }
+
+  if (mouse>cat2){
+    longCat2 = mouse - cat2;
+  }else {
+    longCat2 = cat2 - mouse;
+  }
 
   if (longCat1 < longCat2){
     return('cat2');
