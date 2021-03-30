@@ -21,33 +21,11 @@ function splitSentence(str) {
 function concatName(strArray) {
   return `${strArray[strArray.length - 1]}, ${strArray[0]}`;
 }
-
-// part of Desafio 5
-function winPoints(wins) {
-  let winsPoints = 0;
-  if (wins !== 0) {
-    for (let i = 0; i < wins; i += 1) {
-      winsPoints += 3;
-    }
-  }
-  return winsPoints;
-}
-
-// part of Desafio 5
-function tiePoints(ties) {
-  let tiesPoints = 0;
-
-  if (ties !== 0) {
-    for (let j = 0; j < ties; j += 1) {
-      tiesPoints += 1;
-    }
-  }
-  return tiesPoints;
-}
+// solution based on https://eslint.org/docs/rules/prefer-template
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return winPoints(wins) + tiePoints(ties);
+  return (wins * 3) + ties;
 }
 
 // part of Desafio 6
