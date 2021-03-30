@@ -5,11 +5,14 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, height) {
- return base * height / 2;
+  return base * height / 2;
 }
 
 // Desafio 3
-function splitSentence() {
+  let jb = 'go Trybe';
+  let jc = 'vamo que vamo';
+  let jd = 'foguete';
+function splitSentence(jb, jc, jd) {
   return splitSentence.split(' ');
 }
 
