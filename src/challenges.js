@@ -22,8 +22,6 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  for (let i in array) {
-  }
   let first = array[0];
   let last = array[array.length - 1];
   let result = first.concat(', ', last);
