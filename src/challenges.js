@@ -60,21 +60,18 @@ return repetiu
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2 ) {
-  // seu código aqui
-  let resultado = 0;
+  let difMouseCat1 = Math.abs(mouse - cat1)
+  let difMouseCat2 = Math.abs(mouse - cat2)
 
-  if (resultado < 0){
-    resultado = resultado * -1
+  if (difMouseCat1 > difMouseCat2){
+    return 'cat2'
   }
- if (mouse - cat1 < mouse - cat2){
-    resultado = cat1
-    return cat2
+  else if (difMouseCat1 === difMouseCat2){
+    return 'os gatos trombam e o rato foge'
   }
-  else {
-    resultado = cat2
-    return cat1
-  }
-  
+  else{
+    return 'cat1'
+  } 
 
 }
 // Desafio 8
