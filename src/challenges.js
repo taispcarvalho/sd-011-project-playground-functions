@@ -41,11 +41,11 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if ((cat1 - mouse) < (cat2 - mouse)) {
-    return "cat1";
+    return 'cat1';
   } else if ((cat1 - mouse) > (cat2 - mouse)) {
-    return "cat2";
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
   // calcular distância entre mouse-cat1 e mouse-cat2
   // se mc1 < mc2 -> return "cat1"
@@ -54,8 +54,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let resultString = [];
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] % 3 === 0 && numbers[i] % 5 != 0) {
+      resultString.push('fizz');
+    } else if (numbers[i] % 5 === 0 && numbers[i] % 3 != 0) {
+      resultString.push('buzz');
+    } else if (numbers[i] % 5 === 0 && numbers[i] % 3 === 0) {
+      resultString.push('fizzBuzz')
+    } else {
+      resultString.push('bug!')
+    }
+  }
+  return resultString;
 }
 
 // Desafio 9
