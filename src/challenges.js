@@ -37,6 +37,7 @@ function highestCount(array) {
     }
     return highestNumber;
   }
+  highestNumber = findHighestNumber(array);
   function counting(findHighestNumber(array))
 }
 
