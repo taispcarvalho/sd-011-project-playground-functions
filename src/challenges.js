@@ -30,9 +30,18 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumbers) {
+  let ordNumbers = arrayNumbers.sort((a, b) => a - b);
+  let bigNumber = ordNumbers[ordNumbers.length - 1];
+  let numberRepeat = 0;
+  for (let index = 0; index < ordNumbers.length; index += 1) {
+    if (ordNumbers[index] === bigNumber) {
+      numberRepeat += 1;
+    }
+  }
+  return numberRepeat;
 }
+// A arrow function para realizar a ordenação dos números foi retirada de "https://www.digitalocean.com/community/tutorials/js-array-sort-numbers"
 
 // Desafio 7
 function catAndMouse() {
