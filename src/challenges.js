@@ -7,7 +7,7 @@ function compareTrue(num1, num2) {
   }
 }
 
-console.log(compareTrue(true, true))
+console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -35,7 +35,7 @@ function concatName() {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties * 1
+  return wins * 3 + ties * 1;
 }
 
 console.log(footballPoints(14, 8));
@@ -48,9 +48,19 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if(cat1 > cat2 ) {
+    return 'cat1';
+  } else if (cat2 > cat1) {
+    return 'cat2';
+  } else if (cat1 === cat2 && cat1 === mouse && cat2 === mouse){
+    return 'Os gatos trombam e o rato foge';
+  } else {
+    return 'Os dois correm lado a lado empatadoooos!';
+  }
 }
+
+console.log(catAndMouse(3, 2, 1));
 
 // Desafio 8
 function fizzBuzz() {
