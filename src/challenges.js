@@ -69,11 +69,25 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+const codeTable = {
+  a: '1',
+  e: '2',
+  i: '3',
+  o: '4',
+  u: '5',
+};
+
+function encode(str) {
+  return str.split('').map((char) => (
+    codeTable[char] ? codeTable[char] : char
+  )).join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(str) {
+  return str.split('').map((char) => {
+    const index = Object.values(codeTable).findIndex((value) => value === char);
+    return index >= 0 ? Object.keys(codeTable)[index] : char;
+  }).join('');
 }
 
 module.exports = {
