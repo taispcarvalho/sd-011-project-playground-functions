@@ -33,7 +33,7 @@ function calculateHighestNumber(arrayNumbers) {
     }
   }
 
-  return highest;
+  return highestNumber;
 }
 
 function mostRepeatedNumber(arrayNumbers, numberX) {
@@ -131,7 +131,7 @@ function decode(sentence) {
       decodedSentence += sentence[index];
     }
   }
-  
+
   return decodedSentence
 }
 
