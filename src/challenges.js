@@ -82,15 +82,15 @@ function encode(str) {
   let newStr = '';
   for (let index in str) {
     if (str[index] === 'a') {
-      newStr += 1;
+      newStr += '1';
     } else if (str[index] === 'e') {
-      newStr += 2;
+      newStr += '2';
     } else if (str[index] === 'i') {
-      newStr += 3; 
+      newStr += '3'; 
     } else if (str[index] === 'o') {
-      newStr += 4;  
+      newStr += '4';  
     } else if (str[index] === 'u') {  
-      newStr += 5;
+      newStr += '5';
     } else {
       newStr += str[index];
     }
@@ -118,7 +118,8 @@ function decode(str) {
   return newStr
 }
 
-let myStr = 'hi there!'
+let myStr = 'hello'
+
 console.log(encode(myStr));
 console.log(decode(myStr));
 
