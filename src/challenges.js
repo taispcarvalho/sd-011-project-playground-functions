@@ -25,9 +25,29 @@ function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 
+// função auxiliar Desafio 6
+function findBiggestNumber(array) {
+  let biggestNumber = array[0];
+  for (let index = 0; index < array.length; index += 1) {
+    if (biggestNumber < array[index]) {
+      biggestNumber = array[index];
+    }
+  }
+  return biggestNumber;
+}
+
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  let biggestNumber = findBiggestNumber(array);
+  let times = 0;
+
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === biggestNumber) {
+      times += 1;
+    }
+  }
+  return times;
 }
 
 // Desafio 7
