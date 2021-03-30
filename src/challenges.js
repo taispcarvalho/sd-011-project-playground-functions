@@ -28,9 +28,9 @@ function footballPoints(wins, ties) {
 
 function highestCount(array) {
 
-  function highestNumber(array){
+  function highestNumber(array) {
     let higherNum = 0;
-    for (let index = 0; index < array.length; index += 1){
+    for (let index = 0; index < array.length; index += 1) {
       if (array[index] > array[index + 1]){
         higherNum = array[index];
       }
@@ -38,7 +38,7 @@ function highestCount(array) {
     return higherNum;
   }
   let count = 0;
-    for (let secondIndex = 0; secondIndex < array.length; secondIndex += 1){
+    for (let secondIndex = 0; secondIndex < array.length; secondIndex += 1) {
       if (array[secondIndex] === highestNumber(array)){
         count += 1;
       }
@@ -50,15 +50,15 @@ function catAndMouse(mouse, cat1, cat2) {
   let distcat1 = Math.abs(mouse - cat1); 
   let distcat2 = Math.abs(mouse - cat2);
   if (distcat1 === distcat2){
-    return 'os gos gatos trombam e o rato foge';
+    return 'os gatos trombam e o rato foge';
   }
   else if (distcat1 < distcat2){
     return 'cat1';
   }
     return 'cat2'
   }
-
 console.log(catAndMouse(10, 4, 22))
+
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
