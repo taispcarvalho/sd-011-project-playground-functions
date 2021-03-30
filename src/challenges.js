@@ -16,8 +16,12 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nameArray) {
+  let firstName = nameArray[0];
+  let lastNameArrayPosition = nameArray.length - 1;
+  let lastName = nameArray[lastNameArrayPosition];
+
+  return lastName + ', ' + firstName;
 }
 
 // Desafio 5
