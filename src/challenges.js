@@ -19,12 +19,14 @@ return area;
 function splitSentence(stringToSplit) {
   let arrayOfStrings = stringToSplit.split(" ")
   return arrayOfStrings
+
 }
 
 // Desafio 4
 
-function concatName() {
-  // seu código aqui
+function concatName(arraystr) {
+  arrayfl = arraystr[arraystr.length -1 + arraystr [0]];
+  return arrayfl;
 }
 
 // Desafio 5
