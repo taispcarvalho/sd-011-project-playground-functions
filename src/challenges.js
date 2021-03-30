@@ -84,15 +84,15 @@ function encode(value) {
   let aux = 0;
   let value1 = '';
   for (let letras of value) {
-    if (letras == 'a') {
+    if (letras === 'a') {
       value1 += '1';
-    } else if (letras == 'e') {
-      value1+= '2';
-    } else if (letras == 'i') {
+    } else if (letras === 'e') {
+      value1 += '2';
+    } else if (letras === 'i') {
       value1 += '3';
-    } else if (letras == 'o') {
+    } else if (letras === 'o') {
       value1 += '4';
-    } else if (letras == 'u') {
+    } else if (letras === 'u') {
       value1 += '5';
     } else {
       value1 += value[aux];
@@ -106,15 +106,15 @@ function decode(value) {
   let aux = 0;
   let value1 = '';
   for (let letras of value) {
-    if (letras == '1') {
+    if (letras === '1') {
       value1 += 'a';
-    } else if (letras == '2') {
-      value1+= 'e';
-    } else if (letras == '3') {
+    } else if (letras === '2') {
+      value1 += 'e';
+    } else if (letras === '3') {
       value1 += 'i';
-    } else if (letras == '4') {
+    } else if (letras === '4') {
       value1 += '0';
-    } else if (letras == '5') {
+    } else if (letras === '5') {
       value1 += 'u';
     } else {
       value1 += value[aux];
