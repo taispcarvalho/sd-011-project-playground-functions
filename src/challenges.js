@@ -48,19 +48,13 @@ function highestCount(arr) {
 }
 
 // Desafio 7
+/* Souce: https://www.youtube.com/watch?v=jxWxJ4JbzPI */
 function catAndMouse(mouse, cat1, cat2) {
-  mouse += 1000;
-  cat1 += 1000;
-  cat2 += 1000;
-  if (cat1 + mouse < cat2 + mouse) {
-    return 'cat1';
-  }
-  if (cat2 + mouse < cat1 + mouse) {
-    return 'cat2';
-  }
-  if (cat1 + mouse === cat2 + mouse) {
-    return 'os gatos trombam e o rato foge';
-  }
+  let distCat1FromM = Math.abs(mouse - cat1);
+  let distCat2FromM = Math.abs(mouse - cat2);
+  if (distCat1FromM < distCat2FromM) return 'cat1';
+  if (distCat1FromM > distCat2FromM) return 'cat2';
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
