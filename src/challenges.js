@@ -37,6 +37,16 @@ O que será verificado:
 Retorne 2 quando o parâmetro passado na funcão highestCount seja [9, 1, 2, 3, 9, 5, 7]
 Retorne 1 quando o parâmetro passado na funcão highestCount seja [0, 4, 4, 4, 9, 2, 1]
 Retorne 3 quando o parâmetro passado na funcão highestCount seja [0, 0, 0] */
+function findHighestNumber ( array) {
+  let highestNumber = 0;
+  for (index = 0; index <= array.length; index +=1){
+    if (array[index] > highestNumber) {highestNumber = array[index];}
+  }
+  return highestNumber;
+}
+/* teste da função */
+console.log(findHighestNumber([10, 120, 0]));
+
 function highestCount(array) {
   /*Primeiro achar o maior numero
   1 - Criar uma variável highestNumber = 0.
@@ -48,10 +58,10 @@ function highestCount(array) {
   Se forem iguais acrescenta um no contador de maior e passa.
   7 - return countHighest
   */
-  let highestNumber = 0;
+  
   let countHighest = 1;
-  for (index = 0; index <= array.length; index +=1){
-    if (array[index] > highestNumber) {highestNumber = array[index];}
+  
+
     if (array[index] === highestNumber){countHighest += 1;} 
   }
   return countHighest;
