@@ -20,8 +20,8 @@ function splitSentence(string) {
 function concatName(myArray) {
   var firstItem = myArray[0];
   var lastItem = myArray[myArray.length-1];
-  var outputItens = [firstItem,lastItem];
-  return outputItens;
+  // var outputItens = lastItem;firstItem;
+  return lastItem + ', ' + firstItem
 }
 console.log(concatName(['Rodel', 'Mike', 'Ronnie', 'Betus']))
 // Desafio 5
