@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-    return value1 && value2;
+  return value1 && value2;
 }
 
 // Desafio 2
@@ -15,12 +15,11 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(myArray) {
-  var firstItem = myArray[0];
-  var lastItem = myArray[myArray.length-1];
-  // var outputItens = lastItem;firstItem;
-  return lastItem + ', ' + firstItem
+  let firstItem = myArray[0];
+  let lastItem = myArray[myArray.length - 1];
+  return lastItem + ', ' + firstItem;
 }
-console.log(concatName(['Rodel', 'Mike', 'Ronnie', 'Betus']))
+
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties * 1);
@@ -28,13 +27,14 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let ordemArray = array.sort((a, b) => { return a - b; });
-
+  let ordemArray = array.sort((a, b) => { return b - a; });
+  console.log(ordemArray)
   let sumRepeatLargestNumber = 0;
 
-  for (let i = 1; i <= ordemArray.length; i += 1) {
+  for (let i = 0; i < ordemArray.length; i += 1) {
     if (ordemArray[i] === ordemArray[i + 1]) {
       sumRepeatLargestNumber += 1;
+      break;
     }
   }
   return sumRepeatLargestNumber;
