@@ -14,11 +14,12 @@ function splitSentence(value3) {
   return value3.split(' ');
 }
 
-  // Desafio 4
- function concatName(value4) {
+// Desafio 4
+function concatName(value4) {
   let lastName = value4[value4.length - 1];
-  let firstName = value4[0]
-  let fullName = lastName + ', ' + firstName;
+  let firstName = value4[0];
+  let virgula = ', ';
+  let fullName = lastName + virgula + firstName;
   return fullName;
 }
 
