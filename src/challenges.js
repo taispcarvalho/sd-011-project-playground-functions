@@ -62,12 +62,30 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
     return 'os gatos trombam e o rato foge';
   }
+  return 0;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayOfNumbers) {
+  let nonSenseArray = [];
+  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
+    nonSenseArray.push(divisible3and5(index));
+  }
+  return nonSenseArray;
 }
+
+function divisible3and5(number) {
+  if (number % 3 === 0 && number % 5 !== 0) {
+    return 'fizz';
+  } else if (number % 3 !== 0 && number % 5 === 0) {
+    return 'buzz';
+  } else if (number % 3 === 0 && number % 5 === 0) {
+    return 'fizzBuzz';
+  } else if (number % 3 !== 0 && number % 5 !== 0) {
+    return 'bug!';
+  }
+}
+
 
 // Desafio 9
 function encode() {
