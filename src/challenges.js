@@ -30,9 +30,17 @@ function concatName(arraystr) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {
+  if (wins > 0 || ties > 0){
+    let points = (wins * 3) + ties 
+  }
+
+  else {
+    points === 0
+  }
+  
+  return points
+  }
 
 // Desafio 6
 function highestCount() {
