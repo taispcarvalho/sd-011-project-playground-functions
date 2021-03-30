@@ -45,12 +45,12 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let winner = '';
-  if (cat1 - mouse < cat2 - mouse) {
-    winner = 'cat1';
+  if (cat1 - mouse === cat2 - mouse) {
+    winner = 'os gatos trombam e o rato foge';
   } else if (cat2 - mouse < cat1 - mouse) {
     winner = 'cat2';
   } else if (cat1 - mouse === cat2 - mouse) {
-    winner = 'os gatos trombam e o rato foge';
+    winner = 'cat1';
   }
   return winner;
 }
