@@ -31,7 +31,7 @@ function footballPoints(wins, ties) {
 function highestCount(arrNumber) {
   let highestRepet = 0;
   big = arrNumber[0];
-  for (let index in arrNumber) {
+  for (let index = 0; index < arrNumber; index += 1) {
     if(big < arrNumber[index]) {
       highestRepet = 1;
       big = arrNumber[index];
@@ -75,12 +75,54 @@ function fizzBuzz(arrNumber) {
   return arrNumber;
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+
+function ehVogal(char, str) {
+  for (let index = 0; index < str.length; index += 1) {
+    if(char === str[index]) {
+      return index+1;
+    }
+  }
+  return false;
 }
-function decode() {
-  // seu código aqui
+
+// Desafio 9
+function encode(str) {
+  let vogais = 'aeiou';
+  let newStr = '';
+  for (let index in str) {
+    let vogalLetra = ehVogal(str[index], vogais)
+    if (vogalLetra) {
+      newStr += vogalLetra;
+    }
+    else {
+      newStr += str[index];
+    }
+  }
+  return newStr;
+}
+
+function ehNumber(char, str) {
+  for (let index = 0; index < str.length; index += 1) {
+    if(char === str[index]) {
+      return str[index-1];
+    }
+  }
+  return false;
+}
+
+function decode(str) {
+  let vogais = '0a1e2i3o4u';
+  let newStr = '';
+  for (let index in str) {
+    let vogalLetra = ehNumber(str[index], vogais)
+    if (vogalLetra) {
+      newStr += vogalLetra;
+    }
+    else {
+      newStr += str[index];
+    }
+  }
+  return newStr;
 }
 
 module.exports = {
