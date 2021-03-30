@@ -22,14 +22,27 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + ties
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array, resultado) {
+    resultado = 0;
+  for (let index1 = 0; index1 < array.length; index1 += 1) {
+    if (findNumber() === array[index1]) {
+      resultado += 1;
+    }
+  }
+  return resultado;
 }
-
+function findNumber(array){
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > array[index + 1]) {
+      array = array[index];
+    }
+  }
+  return array;
+}
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
