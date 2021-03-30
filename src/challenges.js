@@ -24,9 +24,10 @@ function concatName(array) {
   
   firstIndex = array [0];
   lastIndex = array [array.length - 1];
-  return [lastIndex, firstIndex];
+  return lastIndex + ', ' + firstIndex;
   
   }
+  console.log(concatName(['foguete', 'não', 'tem', 'ré']));
   
 // Desafio 5
 function footballPoints() {
