@@ -2,9 +2,8 @@
 function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
-  } else{
+  } 
     return false;
-  }
 }
 
 // Desafio 2
@@ -19,14 +18,14 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(names) {
-  return (names[names.length - 1] + ',' + names[0]);
+  return names[names.length - 1] + ',' + names[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties * 1);
 }
-console.log(footballPoints(14, 8))
+
 // Desafio 6
 function highestCount() {
   // seu código aqui
@@ -56,8 +55,8 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
-}
+  // seu codigo aqui 
+
 function decode() {
   // seu código aqui
 }
