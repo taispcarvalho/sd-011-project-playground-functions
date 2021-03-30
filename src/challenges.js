@@ -24,11 +24,11 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
+function highestCount() {
   let countNumber = 0;
   return countingHighestNumber()
 }
-function findHighestNumber() {
+function findHighestNumber(array) {
   let highestNumber = array[0];
   for (let index in array) {
     if (array[index] > highestNumber) {
@@ -37,7 +37,8 @@ function findHighestNumber() {
   }
   return highestNumber;
 }
-function countingHighestNumber() {
+function countingHighestNumber(array) {
+  let countNumber
   for (let index in array) {
     if (findHighestNumber() === array[index]) {
       countNumber += 1;
@@ -48,12 +49,12 @@ function countingHighestNumber() {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let result = ''
+  let result = '';
   if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     result = 'os gatos trombam e o rato foge';
-  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
+  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     result = 'cat2';
-  } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
+  } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     result = 'cat1';
   }
   return result;
@@ -61,10 +62,10 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let newArray = []
+  let newArray = [];
   for (let index in array) {
     if (array[index] % 5 === 0 && array[index] % 3 === 0) {
-      newArray.push('fizzBuzz')
+      newArray.push('fizzBuzz');
     } else if (array[index] % 3 === 0) {
       newArray.push('fizz');
     } else if (array[index] % 5 === 0) {
@@ -72,7 +73,7 @@ function fizzBuzz(array) {
     } else {
       newArray.push('bug!');
     }
-  } 
+  }
   return newArray;
 }
 
@@ -85,16 +86,16 @@ function encode(str) {
     } else if (str[index] === 'e') {
       newStr += '2';
     } else if (str[index] === 'i') {
-      newStr += '3'; 
+      newStr += '3';
     } else if (str[index] === 'o') {
-      newStr += '4';  
-    } else if (str[index] === 'u') {  
+      newStr += '4';
+    } else if (str[index] === 'u') {
       newStr += '5';
     } else {
       newStr += str[index];
     }
   }
-  return newStr
+  return newStr;
 }
 
 function decode(str) {
@@ -105,19 +106,17 @@ function decode(str) {
     } else if (str[index] === '2') {
       newStr += 'e';
     } else if (str[index] === '3') {
-      newStr += 'i'; 
+      newStr += 'i';
     } else if (str[index] === '4') {
-      newStr += 'o';  
-    } else if (str[index] === '5') {  
+      newStr += 'o';
+    } else if (str[index] === '5') {
       newStr += 'u';
     } else {
       newStr += str[index];
     }
   }
-  return newStr
+  return newStr;
 }
-
-let myStr = 'hello'
 
 module.exports = {
   calcArea,
