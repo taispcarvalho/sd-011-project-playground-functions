@@ -60,59 +60,72 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 
-function checkFizzBuzzType(num) {
+function checkFizzOrBuzz(num) {
   let isDivisibleBy3 = num % 3 === 0;
   let isDivisibleBy5 = num % 5 === 0;
 
-  if (isDivisibleBy3 && isDivisibleBy5) {
-    return 'fizzBuzz';
-  } else if (!isDivisibleBy3 && !isDivisibleBy5) {
-    return 'bug!';
+  if (isDivisibleBy3) {
+    return 'fizz';
   }
-  return isDivisibleBy3 ? 'fizz' : 'buzz';
+  if (isDivisibleBy5) {
+    return 'buzz';
+  }
+  return 'bug!';
 }
 
 function fizzBuzz(numbers) {
   let numbersFizzBuzz = [];
   for (let num of numbers) {
-    numbersFizzBuzz.push(checkFizzBuzzType(num));
+    if (num % 3 === 0 && num % 5 === 0) {
+      numbersFizzBuzz.push('fizzBuzz');
+    } else {
+      numbersFizzBuzz.push(checkFizzBuzzType(num));
+    }
   }
   return numbersFizzBuzz;
 }
 
 // Desafio 9
-function switchLetterNumber(string, code) {
-  for (index = 0; index < string.length; index += 1) {
-    let currentChar = string[index];
+function switchLetterNumber(char, typeNumber) {
+  let code = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+
+  if (typeNumber) {
     for (let key in code) {
-      if (key === currentChar) {
-        string = string.split(currentChar).join(code[key]);
+      if (char == code[key]) {
+        return key;
       }
-    } 
+    }
+    return char;
+  } else {
+    for (let key in code) {
+      if (char == key) {
+        return code[key];
+      }
+    }
+    return char;
   }
-  return string;
 }
 
 function encode(string) {
-  let coding = {
-    'a': '1',
-    'e': '2',
-    'i': '3',
-    'o': '4',
-    'u': '5',
-  };
-  return switchLetterNumber(string, coding);
+  let codedString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    codedString += switchLetterNumber(string[index], false);
+  }
+  return codedString;
 }
 
 function decode(string) {
-  let decoding = {
-    '1': 'a',
-    '2': 'e',
-    '3': 'i',
-    '4': 'o',
-    '5': 'u',
-  };
-  return switchLetterNumber(string, decoding);
+  let decodedString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    decodedString += switchLetterNumber(string[index], true);
+  }
+  return decodedString;
 }
 
 module.exports = {
