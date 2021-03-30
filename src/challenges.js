@@ -68,17 +68,17 @@ for (let i = 0; i < listOfNumbers.length; i += 1) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 < cat2) {
-    return 'cat1';
-  }
-  else if (cat2 < cat1) {
-    return 'cat2';
-  }
-  else {
-    return 'os gatos trombam e o rato foge';
-  }
+  let distanceCat1 = cat1 - mouse;
+  let distanceCat2 = cat2 - mouse;
+    if (distanceCat1 < distanceCat2) {
+      return 'cat1';
+    } else if (distanceCat2 < distanceCat1) {
+      return 'cat2';
+    } else {
+      return 'os gatos trombam e o rato foge';
+    }
 }
-let desafio7 = catAndMouse(0, 12, 12);
+let desafio7 = catAndMouse(0, 6, 6);
 console.log(desafio7);
 
 // Desafio 8
