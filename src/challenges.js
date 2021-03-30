@@ -21,20 +21,36 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(itens) {
   // seu código aqui
-  return {itens[itens.length-1], itens[0]};
+  return (itens[itens.length-1], itens[0]);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
   let pontosVitoria = wins * 3;
-  let pontos = pontosVitoria + ties;
-  return pontos;
+  let pontosTotais = pontosVitoria + ties;
+  return pontosTotais;
 }
 
 // Desafio 6
-function highestCount() {
+function highestNumber(numbers) {
+  maiorNum = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+  if(maiorNum < highestCount[index]){
+    maiorNum = highestCount[index];
+  }
+  return maiorNum;
+}
+function highestCount(numbers) {
   // seu código aqui
+  let highest = highestNumber(numbers);
+  let repetition = 0;
+  for (let number of numbers) {
+    if (number === highest) {
+      repetition += 1;
+    }
+  }
+  return repetition;
 }
 
 // Desafio 7
