@@ -48,8 +48,16 @@ for (let index2 in numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
+  if (distanceCat1 === distanceCat2) {
+    return 'Os dois gatos trombam e o rato foge';
+  } else if (distanceCat1 < distanceCat2) {
+    return 'cat1';
+  } else {
+    return 'cat2';
+  }
 }
 
 // Desafio 8
