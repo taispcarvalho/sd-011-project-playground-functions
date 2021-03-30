@@ -26,12 +26,12 @@ function concatName(name) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  if (wins) {
+  if (points === wins) {
     return 3    
-  } else if (ties) {
+  } else if (points === ties) {
     return 1    
   } else {}
-  return wins + ties
+  return points = wins + ties
 }
 
 // Desafio 6
