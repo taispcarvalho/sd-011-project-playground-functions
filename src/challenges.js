@@ -16,13 +16,13 @@ function splitSentence(word) {
 // Desafio 4
 function concatName(names) {
   let firstAndLast = [];
-  firstAndLast.push(names[names.length-1],' ' + names[0]);
+  firstAndLast.push(names[names.length - 1], ' ' + names[0]);
   return firstAndLast.toString();
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  return (wins*3) + (ties)
 }
 
 // Desafio 6
