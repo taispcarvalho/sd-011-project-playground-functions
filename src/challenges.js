@@ -93,7 +93,7 @@ function testElement(number) {
 function fizzBuzz(arrayNumbers) {
   let newArray = [];
 
-  for (let number of arrayNumbers) {  
+  for (let number of arrayNumbers) {
     newArray.push(testElement(number));
   }
 
@@ -104,19 +104,39 @@ function fizzBuzz(arrayNumbers) {
 function testEncode(character) {
   let newCharacter = '';
 
-  if (character === 'a') {
-    newCharacter = 1;
-  } else if (character === 'e') {
-    newCharacter = 2;
-  } else if (character === 'i') {
-    newCharacter = 3;
-  } else if (character === 'o') {
-    newCharacter = 4;
-  } else if (character === 'u') {
-    newCharacter = 5;
-  } else {
-    newCharacter = character;
+  switch(character) {
+    case 'a':
+      newCharacter = '1';
+      break;
+    case 'e':
+      newCharacter = '2';
+      break;
+    case 'i':
+      newCharacter = '3';
+      break;
+    case 'o':
+      newCharacter = '4';
+      break;
+    case 'u':
+      newCharacter = '5';
+      break;
+    default:
+      newCharacter = character;
   }
+
+  // if (character === 'a') {
+  //   newCharacter = 1;
+  // } else if (character === 'e') {
+  //   newCharacter = 2;
+  // } else if (character === 'i') {
+  //   newCharacter = 3;
+  // } else if (character === 'o') {
+  //   newCharacter = 4;
+  // } else if (character === 'u') {
+  //   newCharacter = 5;
+  // } else {
+  //   newCharacter = character;
+  // }
 
   return newCharacter;
 }
@@ -134,21 +154,41 @@ function encode(sentence) {
 function testDecode(character) {
   let newCharacter = '';
 
-  if (character === '1') {
-    newCharacter = 'a';
-  } else if (character === '2') {
-    newCharacter = 'e';
-  } else if (character === '3') {
-    newCharacter = 'i';
-  } else if (character === '4') {
-    newCharacter = 'o';
-  } else if (character === '5') {
-    newCharacter = 'u';
-  } else {
-    newCharacter = character;
+  switch(character) {
+    case '1':
+      newCharacter = 'a';
+      break;
+    case '2':
+      newCharacter = 'e';
+      break;
+    case '3':
+      newCharacter = 'i';
+      break;
+    case '4':
+      newCharacter = 'o';
+      break;
+    case '5':
+      newCharacter = 'u';
+      break;
+    default:
+      newCharacter = character;
   }
 
-  return newCharacter; 
+  // if (character === '1') {
+  //   newCharacter = 'a';
+  // } else if (character === '2') {
+  //   newCharacter = 'e';
+  // } else if (character === '3') {
+  //   newCharacter = 'i';
+  // } else if (character === '4') {
+  //   newCharacter = 'o';
+  // } else if (character === '5') {
+  //   newCharacter = 'u';
+  // } else {
+  //   newCharacter = character;
+  // }
+
+  return newCharacter;
 }
 
 function decode(sentence) {
