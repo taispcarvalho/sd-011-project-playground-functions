@@ -49,6 +49,9 @@ function highestCount(arr) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  mouse += 1000;
+  cat1 += 1000;
+  cat2 += 1000;
   if (cat1 + mouse < cat2 + mouse) {
     return 'cat1';
   }
