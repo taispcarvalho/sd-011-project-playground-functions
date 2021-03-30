@@ -16,16 +16,17 @@ function generatePhoneNumber(arr) {
   return arr.join('').replace(/(\d\d)(\d{5})(\d{4})/g, '($1) $2-$3');
 }
 
-// Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  let a = triangleCheckLine(lineA, lineB, lineC);
-  let b = triangleCheckLine(lineB, lineA, lineC);
-  let c = triangleCheckLine(lineC, lineA, lineB);
-  return a && b && c;
-}
-
+// Função Auxiliar da triangleCheck
 function triangleCheckLine(a, b, c) {
   return a < (b + c) && a > Math.abs(b - c);
+}
+
+// Desafio 12
+function triangleCheck(lineA, lineB, lineC) {
+  let firstLine = triangleCheckLine(lineA, lineB, lineC);
+  let secondLine = triangleCheckLine(lineB, lineA, lineC);
+  let thirdLine = triangleCheckLine(lineC, lineA, lineB);
+  return firstLine && secondLine && thirdLine;
 }
 
 // Desafio 13
