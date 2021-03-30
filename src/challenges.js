@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(booleanOne, booleanTwo) {
-  if(booleanOne === true && booleanTwo === true){
+  if (booleanOne === true && booleanTwo === true) {
     return true;
   } else {
     return false;
@@ -10,16 +10,16 @@ function compareTrue(booleanOne, booleanTwo) {
 // Desafio 2
 function calcArea(base, high) {
   let area = (base * high) / 2;
-  return area;  
+  return area;
 }
 
-console.log(calcArea(10, 50))
+console.log(calcArea(10, 50));
 
 // Desafio 3
 function splitSentence(initialStr) {
-    let newArr;
-    newArr = initialStr.split(' ');
-    return newArr;
+  let newArr;
+  newArr = initialStr.split(' ');
+  return newArr;
 }
 
 console.log(splitSentence('go Trybe'));
@@ -27,7 +27,7 @@ console.log(splitSentence('go Trybe'));
 // Desafio 4
 function concatName(strArr) {
   let strGenerated = '';
-  for (let index = strArr.length - 1; index >= 0; index -= 1){
+  for (let index = strArr.length - 1; index >= 0; index -= 1) {
     if (index === strArr.length - 1){
       strGenerated = strGenerated + strArr[index];
       strGenerated = strGenerated + ', ';
@@ -44,19 +44,19 @@ console.log(concatName(['captain', 'my', 'captain']));
 function footballPoints(wins, ties) {
   let winPoints = 3;
   let tiePoints = 1;
-  let totalPoints = (winPoints * (wins) ) + (tiePoints * (ties));
+  let totalPoints = (winPoints * (wins)) + (tiePoints * (ties));
   return totalPoints;
 }
 
 console.log(footballPoints(14, 8));
 
 // Desafio 6
-function highestNumberFinder (arrNumbers){
+function highestNumberFinder(arrNumbers) {
   let highestNumber = 0;
-  for (let index = 0; index < arrNumbers.length; index += 1){    
-      if (arrNumbers[index] > arrNumbers[index + 1]){
-        highestNumber = arrNumbers[index]
-      }        
+  for (let index = 0; index < arrNumbers.length; index += 1) {
+    if (arrNumbers[index] > arrNumbers[index + 1]) {
+    highestNumber = arrNumbers[index]
+    }
   } return highestNumber;
 }
 console.log(highestNumberFinder([9, 1, 2, 3, 9, 5, 7]));
@@ -64,39 +64,38 @@ console.log(highestNumberFinder([9, 1, 2, 3, 9, 5, 7]));
 function highestCount(arrNumbers2) {
   let highestNumber = highestNumberFinder(arrNumbers2);
   let count = 0;
-  for (let index = 0; index < arrNumbers2.length; index += 1){
-    if (arrNumbers2[index] === highestNumber){
+  for (let index = 0; index < arrNumbers2.length; index += 1) {
+    if (arrNumbers2[index] === highestNumber) {
       count += 1;
     }
   }
-  return count;  
+  return count;
 }
 
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let origem = 0;
   let distanciaCat1 = (cat1 - mouse) * (cat1 - mouse);
   let distanciaCat2 = (cat2 - mouse) * (cat2 - mouse);
-  if (distanciaCat1 < distanciaCat2){
+  if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
-  } else if ( distanciaCat1 > distanciaCat2){
+  } else if ( distanciaCat1 > distanciaCat2) {
     return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
   }
 }
 
-console.log(catAndMouse(20, 15, 10))
+console.log(catAndMouse(20, 15, 10));
 
 // Desafio 8
 function fizzBuzz(arrNumbers) {
   let newArrNumbers = [];
   for (let index = 0; index < arrNumbers.length; index += 1){
-    if(arrNumbers[index] % 3 === 0 && arrNumbers[index] % 5 != 0) {
+    if (arrNumbers[index] % 3 === 0 && arrNumbers[index] % 5 !== 0) {
       newArrNumbers.push("fizz");
-    } else if (arrNumbers[index] % 5 === 0 && arrNumbers[index] % 3 != 0) {
+    } else if (arrNumbers[index] % 5 === 0 && arrNumbers[index] % 3 !== 0) {
       newArrNumbers.push("buzz");
     } else if (arrNumbers[index] % 3 === 0 && arrNumbers[index] % 5 === 0) {
       newArrNumbers.push("fizzBuzz");
@@ -106,8 +105,7 @@ function fizzBuzz(arrNumbers) {
   } return newArrNumbers;
   
 }
-
-console.log(fizzBuzz([9, 25]))
+console.log(fizzBuzz([9, 25])); 
 
 // Desafio 9
 function encode() {
