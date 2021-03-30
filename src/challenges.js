@@ -43,15 +43,22 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat2pos = mouse - cat1;
+  let cat1pos = mouse - cat2;
+  if ((cat2pos < cat1pos) * -1) {
+    return 'cat2';
+  } else if ((cat1pos < cat2pos) * -1) {
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
-
+console.log(catAndMouse(1,3,2))
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(fizzNumbers) {
 }
-
+console.log(fizzBuzz([7, 9]))
 // Desafio 9
 function encode() {
   // seu código aqui
