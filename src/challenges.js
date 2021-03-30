@@ -5,16 +5,19 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) /2;
+  return (base * height) / 2;
 }
 
 let triangulo = calcArea(5, 2);
 console.log(triangulo);
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(src) {
+  return src.split(" ");
 }
+
+let sloganTrybe = 'go Trybe';
+console.log(splitSentence(sloganTrybe))
 
 // Desafio 4
 function concatName() {
