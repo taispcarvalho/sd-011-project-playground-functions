@@ -27,7 +27,7 @@ function splitSentence(value) {
 // Desafio 4
 function concatName(value) {
   let index = value.length - 1;
-  let ret = value[index] + ', ' + value[0];
+  let ret = `${value[index]}, ${value[0]}`;
   return ret;
 }
 
