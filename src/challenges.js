@@ -40,8 +40,27 @@ function footballPoints(wins, ties) {
   return wins * 3 + ties;
 }
 
+function highestNumberArray(arr) {
+  let hgNumber = arr[0];
+  for (let i = 0; i < arr.length; i += 1) {
+    if (hgNumber < arr[i]) {
+      hgNumber = arr[i];
+    }
+  }
+  return hgNumber;
+}
+
 // Desafio 6
-function highestCount() {}
+function highestCount(arrNumbers) {
+  let highestNumber = highestNumberArray(arrNumbers);
+  let count = 0;
+  for (let i = 0; i < arrNumbers.length; i += 1) {
+    if (highestNumber === arrNumbers[i]) {
+      count += 1;
+    }
+  }
+  return count;
+}
 
 // Desafio 7
 function catAndMouse() {
@@ -119,9 +138,6 @@ function decode(phrase) {
   }
   return newString;
 }
-
-console.log(encode('hi there'));
-console.log(decode('h3 th2r2'));
 
 module.exports = {
   calcArea,
