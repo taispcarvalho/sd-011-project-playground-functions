@@ -146,7 +146,6 @@ function decode(number) {
   let newMensage = '';
 
   for (let index = 0; index < number.length; index += 1) {
-    if (number[index].toLowerCase() === number[index]) {
       switch (number[index]) {
         case '1':
           newMensage += 'a';
@@ -165,9 +164,6 @@ function decode(number) {
           break;
         default:
           newMensage += number[index];
-        }
-      } else {
-        newMensage += number[index];
     }
   }
   return newMensage;

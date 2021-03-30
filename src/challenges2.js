@@ -9,11 +9,11 @@ function techList(array) {
   
     for (let techName of sortedTechNamesArray) {
       techListArray.push({
-        tech: techName,
+        tech: techName, 
         name: 'Gabriel',
       });
     }
-    return techListArray;
+    console.log(techListArray)
   }
   
   console.log(techList([]));
