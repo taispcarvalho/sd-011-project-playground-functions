@@ -113,7 +113,7 @@ function decode(value) {
     } else if (letras === '3') {
       value1 += 'i';
     } else if (letras === '4') {
-      value1 += '0';
+      value1 += 'o';
     } else if (letras === '5') {
       value1 += 'u';
     } else {
