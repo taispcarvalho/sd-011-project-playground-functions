@@ -27,12 +27,18 @@ function splitSentence(phrase) {
       word = word + phrase[index];
     } return array
   }
-  
 }
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  let out = [];
+  let last =  array.length - 1;
+
+  for (let index = array.length; index >= 0; index -= 1) {
+    if (index == 0) {
+      out.push(array[index]);
+    }
+  } return out;
 }
 
 // Desafio 5
