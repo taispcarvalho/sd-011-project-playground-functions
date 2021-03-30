@@ -69,7 +69,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
-  
+
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       newArray.push('fizzbuzz');
@@ -78,9 +78,9 @@ function fizzBuzz(array) {
     } else if (array[index] % 3 === 0) {
       newArray.push('fizz');
     } else {
-      newArray.push('bug');
-    } 
-  } 
+      newArray.push('bug!');
+    }
+  }
   let array2 = newArray;
   return array2;
 }
