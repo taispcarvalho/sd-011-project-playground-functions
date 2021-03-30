@@ -20,10 +20,8 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(strings) {
-  let strings = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
-  return strings[0] + ', ' + strings[3];
+  return strings[strings.length -1] + ', ' +strings[0];
 }
-
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
