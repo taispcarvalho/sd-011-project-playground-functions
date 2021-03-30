@@ -62,8 +62,8 @@ console.log(highestCount(numberr));
 function catAndMouse(mouse, cat1, cat2) {
   let finish;
 
-  let calc1 = cat1 - mouse;
-  let calc2 = cat2 - mouse;
+  let calc1 = Math.abs(cat1 - mouse);
+  let calc2 = Math.abs(cat2 - mouse);
 
   console.log(calc1, calc2);
 
