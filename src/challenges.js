@@ -35,7 +35,7 @@ function findHighestNumber(array) {
   return highestNumber;
 }
 function countingHighestNumber(array) {
-  let countNumber;
+  let countNumber = 0;
   for (let index in array) {
     if (findHighestNumber() === array[index]) {
       countNumber += 1;
@@ -44,7 +44,6 @@ function countingHighestNumber(array) {
   return countNumber;
 }
 function highestCount() {
-  let countNumber = 0;
   return countingHighestNumber();
 }
 
