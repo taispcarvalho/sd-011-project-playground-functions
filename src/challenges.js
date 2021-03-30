@@ -22,10 +22,10 @@ let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName(array) {
   firstElement = array[0];
   lastElement = array[array.length - 1];
-  stringPhrase = lastElement + firstElement;
+  stringPhrase = lastElement + ' , ' + firstElement;
   return stringPhrase;
 }
-
+console.log(concatName(names))
 
 // Desafio 5
 function footballPoints() {
