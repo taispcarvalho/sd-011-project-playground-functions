@@ -77,8 +77,6 @@ function triangleCheck(...args) {
   return false;
 }
 
-console.log(triangleCheck(16, 20, 30));
-
 // Desafio 13
 function hydrate() {
   // seu código aqui
