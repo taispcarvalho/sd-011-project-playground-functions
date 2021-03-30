@@ -8,32 +8,20 @@ function compareTrue(bool1, bool2) {
 }
 compareTrue(true, true)
 
-///////////////////////////////////////
-
-let natalia = 0;
-
-function compareTrue2(bool1, bool2) {
-     natalia = bool1 && bool2;
-}
-compareTrue2(true, true)
-console.log(natalia)
-
-///////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+  return (base * height)/2
 }
+console.log(calcArea(5, 10))
+
+
+
+
+
+
+
+
+
 
 // Desafio 3
 function splitSentence() {
