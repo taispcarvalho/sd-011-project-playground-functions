@@ -13,8 +13,8 @@ function splitSentence(string) {
   let array = [];
   let stringCache = '';
 
-  for(let index = 0; index < string.length; index += 1) {
-    if ( string[index] === ' ') {
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === ' ') {
       array.push(stringCache);
       stringCache = '';
     } else {
