@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1===true && value2===true){
+  if (value1 === true && value2 === true){ 
     return true;
   }
-  else{
+  else {
     return false;
   }
 }
@@ -18,9 +18,12 @@ console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(' ');
 }
+console.log(splitSentence('go Trybe'));
+console.log(splitSentence('vamo que vamo'));
+console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName() {
