@@ -9,12 +9,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-  let jb = 'go Trybe';
-  let jc = 'vamo que vamo';
-  let jd = 'foguete';
-function splitSentence(jb, jc, jd) {
-  return splitSentence.split(' ');
+// let param1 = 'josan johnata'
+function splitSentence(param1) {
+  return param1.split(' ');
 }
+// console.log(splitSentence(param1));
 
 // Desafio 4
 function concatName() {
