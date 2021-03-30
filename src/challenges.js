@@ -41,8 +41,13 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  return cat1 === cat2 ? 'os gatos trombam e o rato foge' : (cat1 - mouse) > (cat2 - mouse) 
-  ? 'cat2' : 'cat1';
+  if (cat1 === cat2) {
+    return 'os gatos trombam e o rato foge';
+  } else if ((cat1 - mouse) > (cat2 - mouse)) {
+    return cat2;
+  } else {
+    return cat1;
+  }
 }
 
 // Desafio 8
@@ -66,13 +71,14 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   const letterChange = {a : 1, e : 2, i : 3, o : 4, u : 5};
-  return string.replace(/[aeiou]/g, match => letterChange[match])
+  return string.replace(/[a e i o u]/g, match => letterChange[match]);
 }
-console.log(encode("hi there!"))
 
-function decode() {
-  // seu código aqui
+// Desafio 10
+function decode(tech, name) {
+  let ordenArray = tech.sort()
 }
+console.log(decode(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
 
 module.exports = {
   calcArea,
