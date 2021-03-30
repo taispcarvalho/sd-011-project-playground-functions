@@ -29,9 +29,21 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  let answerArray = [];
+
+  for (let name of names) {
+    if (names.indexOf(name) == 0 || names.indexOf(name) == names.length - 1) {
+      answerArray.push(name);
+    }
+  }
+
+  return answerArray[1] + ', ' + answerArray[0];
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints() {
