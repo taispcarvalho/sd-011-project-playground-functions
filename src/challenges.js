@@ -1,6 +1,9 @@
 // Desafio 1
-function compareTrue() {
-  
+function compareTrue(input1, input2) {
+  return (input1 && input2);
+  // console.log(false&&false);
+  // console.log(true&&true);
+  // console.log(true&&false)
 }
 
 // Desafio 2
