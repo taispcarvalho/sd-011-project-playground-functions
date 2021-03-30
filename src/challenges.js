@@ -12,9 +12,11 @@ const calcArea = (a, b) => {
 console.log(calcArea(10, 20));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+const splitSentence = (str) => {
+  return str.split(" ")
 }
+
+console.log(splitSentence('Vamo que vamo'));
 
 // Desafio 4
 function concatName() {
