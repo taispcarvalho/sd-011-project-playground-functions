@@ -10,9 +10,13 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(text) {
+  let split = text.split(" ")
+  let arrayText = []
+  arrayText.push(split)
+  return arrayText
 }
+console.log(splitSentence("Olá amigo"))
 
 // Desafio 4
 function concatName() {
