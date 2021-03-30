@@ -5,20 +5,19 @@ function compareTrue(bool1, bool2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  // seu código aqui
   return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  // seu código aqui
   let stringSplited = (string.split(' '));
   return stringSplited;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let stringConcat = `${array[array.length - 1]}, ${array[0]}`;
+  return stringConcat;
 }
 
 // Desafio 5
