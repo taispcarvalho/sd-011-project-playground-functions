@@ -2,7 +2,6 @@
 function compareTrue(value1, value2) {
   return value1 && value2
 }
-console.log(compareTrue(false, false))
 
 // Desafio 2
 function calcArea() {
