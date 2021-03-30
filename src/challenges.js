@@ -45,11 +45,11 @@ function catAndMouse() {}
 function fizzBuzz(array) {
   let finalArray = [];
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       finalArray.push('fizzBuzz');
-    } else if (array[i] % 3 == 0) {
+    } else if (array[i] % 3 === 0) {
       finalArray.push('fizz');
-    } else if (array[i] % 5 == 0) {
+    } else if (array[i] % 5 === 0) {
       finalArray.push('buzz');
     } else {
       finalArray.push('bug!');
@@ -74,7 +74,7 @@ function decode(str) {
   replaced = replaced.replace(/3/g, 'i');
   replaced = replaced.replace(/4/g, 'o');
   replaced = replaced.replace(/5/g, 'u');
-  console.log(replaced);
+  return replaced;
 }
 
 module.exports = {
