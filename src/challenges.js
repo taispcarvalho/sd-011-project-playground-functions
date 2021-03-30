@@ -62,16 +62,69 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+function Div(n) {
+  if (n % 3 === 0 && n % 5 === 0) {
+    return 'fizzBuzz';
+  } else if (n % 3 === 0) {
+    return 'fizz';
+  } else if (n % 5 === 0) {
+    return 'buzz';
+  } else {
+    return 'bug!';
+  }
+}
+
+function fizzBuzz(array) {
+  for (let i = 0; i < array.length; i += 1) {
+    array[i] = Div(array[i]);
+  }
+  return array;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+function Enc(n) {
+  let alphabet = ['a', 'e', 'i', 'o', 'u'];
+  let numerals = [1, 2, 3, 4, 5];
+  for (let i = 0; i < alphabet.length; i += 1) {
+    if (n === alphabet[i]) {
+      n = numerals[i];
+    }
+  }
+  return n;
 }
-function decode() {
-  // seu código aqui
+function Denc(x) {
+  if (Number(x)) {
+    let n = Number(x);
+    const numerals = [1, 2, 3, 4, 5];
+    const alphabet = ['a', 'e', 'i', 'o', 'u'];
+    for (let i = 0; i < numerals.length; i += 1) {
+      if (n === numerals[i]) {
+        n = alphabet[i];
+      }
+    }
+    return n;
+  }
+  return x;
+}
+
+function encode(array) {
+  array = array.split('');
+  for (let i = 0; i < array.length; i += 1) {
+    array[i] = Enc(array[i]);
+  }
+  array = array.join('');
+  return array;
+}
+
+function decode(phrase) {
+  let string = phrase.split('');
+  for (let i = 0; i < string.length; i += 1) {
+    string[i] = Denc(string[i]);
+  }
+  string = string.join('');
+  return string;
 }
 
 module.exports = {
