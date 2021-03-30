@@ -1,16 +1,19 @@
 // Desafio 1
 function compareTrue(pinky, cerebro) {
-  if(pink === true && cerebro === true){
+  if(pinky === true && cerebro === true){
     return true;
   }else {
     return false;
   }
 }
+console.log(compareTrue(true, false));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height)/2;
+  return area;
 }
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence() {
