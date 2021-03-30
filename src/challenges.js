@@ -85,6 +85,7 @@ function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
     anwser.push(checkDividers35(array[index]));
   }
+  return anwser;
 }
 
 // Desafio 9
