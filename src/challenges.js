@@ -165,7 +165,9 @@ function decode(number) {
           break;
         default:
           newMensage += number[index];
-      }
+        }
+      } else {
+        newMensage += number[index];
     }
   }
   return newMensage;
