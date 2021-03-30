@@ -2,7 +2,6 @@
 function compareTrue(a, b) {
   let value1 = a;
   let value2 = b;
-
   return a && b;
 }
 
@@ -26,8 +25,9 @@ function concatName(strings) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = wins * 3 + ties;
+  return pontos;
 }
 
 // Desafio 6
