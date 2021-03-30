@@ -15,11 +15,10 @@ function splitSentence(string) {
   return array;
 }
 
-console.log(splitSentence('foguete'));
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let nameReturn = array[array.length - 1] + ', ' + array[0];
+  return nameReturn;
 }
 
 // Desafio 5
