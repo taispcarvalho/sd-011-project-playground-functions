@@ -1,6 +1,3 @@
-/* eslint-disable no-else-return */
-/* eslint-disable sonarjs/cognitive-complexity */
-/* eslint-disable no-unused-vars */
 // Desafio 1
 function compareTrue(a, b) {
   return a && b;
@@ -51,28 +48,39 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 - mouse < cat2 - mouse) {
-    return 'cat1';
-  } else if (cat2 - mouse < cat1 - mouse) {
-    return 'cat2';
-  } else if (cat1 === cat2) {
-    return 'os gatos trombam e o rato foge';
+function module(cat, mouse) {
+  if (cat - mouse > 0) {
+    return cat - mouse;
   }
+  return mouse - cat;
+}
+
+function catAndMouse(mouse, cat1, cat2) {
+  let bestPosition = '';
+  if (module(cat1, mouse) < module(cat2, mouse)) {
+    bestPosition = 'cat1';
+  } else if (module(cat1, mouse) > module(cat2, mouse)) {
+    bestPosition = 'cat2';
+  } else {
+    bestPosition = 'os gatos trombam e o rato foge';
+  }
+  return bestPosition;
 }
 
 // Desafio 8
 
 function Div(n) {
+  let result = '';
   if (n % 3 === 0 && n % 5 === 0) {
-    return 'fizzBuzz';
+    result = 'fizzBuzz';
   } else if (n % 3 === 0) {
-    return 'fizz';
+    result = 'fizz';
   } else if (n % 5 === 0) {
-    return 'buzz';
+    result = 'buzz';
   } else {
-    return 'bug!';
+    result = 'bug!';
   }
+  return result;
 }
 
 function fizzBuzz(array) {
@@ -94,19 +102,25 @@ function Enc(n) {
   }
   return n;
 }
-function Denc(x) {
-  if (Number(x)) {
-    let n = Number(x);
-    const numerals = [1, 2, 3, 4, 5];
-    const alphabet = ['a', 'e', 'i', 'o', 'u'];
-    for (let i = 0; i < numerals.length; i += 1) {
-      if (n === numerals[i]) {
-        n = alphabet[i];
-      }
-    }
-    return n;
+
+function numerize(s) {
+  if (Number(s)) {
+    let n = Number(s);
+    s = n;
   }
-  return x;
+  return s;
+}
+
+function Denc(x) {
+  let n = numerize(x);
+  const numerals = [1, 2, 3, 4, 5];
+  const alphabet = ['a', 'e', 'i', 'o', 'u'];
+  for (let i = 0; i < numerals.length; i += 1) {
+    if (n === numerals[i]) {
+      n = alphabet[i];
+    }
+  }
+  return n;
 }
 
 function encode(array) {
