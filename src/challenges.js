@@ -2,9 +2,8 @@
 function compareTrue(booleanOne, booleanTwo) {
   if (booleanOne === true && booleanTwo === true) {
     return true;
-  } else {
-    return false;
-  }
+  } 
+    return false;  
 }
 
 // Desafio 2
@@ -28,7 +27,7 @@ console.log(splitSentence('go Trybe'));
 function concatName(strArr) {
   let strGenerated = '';
   for (let index = strArr.length - 1; index >= 0; index -= 1) {
-    if (index === strArr.length - 1){
+    if (index === strArr.length - 1) {
       strGenerated = strGenerated + strArr[index];
       strGenerated = strGenerated + ', ';
     } else if (index === 0) {
@@ -55,7 +54,7 @@ function highestNumberFinder(arrNumbers) {
   let highestNumber = 0;
   for (let index = 0; index < arrNumbers.length; index += 1) {
     if (arrNumbers[index] > arrNumbers[index + 1]) {
-    highestNumber = arrNumbers[index]
+      highestNumber = arrNumbers[index];
     }
   } return highestNumber;
 }
@@ -82,9 +81,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if ( distanciaCat1 > distanciaCat2) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
-  }
+  } 
+    return 'os gatos trombam e o rato foge';  
 }
 
 console.log(catAndMouse(20, 15, 10));
@@ -105,8 +103,7 @@ function fizzBuzz(arrNumbers) {
   } return newArrNumbers;
   
 }
-console.log(fizzBuzz([9, 25])); 
-
+console.log(fizzBuzz([9, 25]));
 // Desafio 9
 function encode() {
   // seu código aqui
