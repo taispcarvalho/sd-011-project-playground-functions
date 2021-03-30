@@ -25,9 +25,11 @@ function concatName(arrayConcat) {
   let qtyElements = arrayConcat.length;
   let qtyPositionsArray = qtyElements - 1;
   let concatResult;
-  concatResult = `${arrayConcat[qtyPositionsArray], arrayConcat[0]}`;
+  concatResult = `${arrayConcat[qtyPositionsArray]}, ${arrayConcat[0]}`;
   return concatResult;
 }
+
+console.log(concatName(['raphael', 'a', 'c']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
