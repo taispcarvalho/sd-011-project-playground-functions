@@ -22,6 +22,41 @@ console.log(techList(['Redux', 'C#', 'C++', 'Unity', 'Unreal Engine 5']));
 
 // Desafio 11
 
+function hasNonDigitNumber(numArray) {
+  let hasNonDigit = false;
+
+  for (let num of numArray) {
+    if (num < 0 || num > 9) {
+      hasNonDigit = true;
+      break;
+    }
+  }
+
+  return hasNonDigit;
+}
+
+function hasThriceOrMoreRepeatingValue(numArray) {
+  let count = 1;
+  let repeats = false;
+
+  let sortedArray = [...numArray].sort();
+
+  for (let i = 1; i < sortedArray.length; i += 1) {
+    if (sortedArray[i] === sortedArray[i - 1]) {
+      count += 1;
+
+      if (count === 3) {
+        repeats = true;
+        break;
+      }
+    } else {
+      count = 1;
+    }
+  }
+
+  return repeats;
+}
+
 function generatePhoneNumber(numArray) {
   if (numArray.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -58,42 +93,6 @@ console.log(generatePhoneNumber([3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]));
 console.log(generatePhoneNumber([6, 4, 10, 9, 2, 5, 7, 1, 0, 5, 7]));
 console.log(generatePhoneNumber([6, 4, -4, 9, 2, 5, 7, 1, 0, 5, 7]));
 
-function hasNonDigitNumber(numArray) {
-  let hasNonDigit = false;
-
-  for (let num of numArray) {
-    if (num < 0 || num > 9) {
-      hasNonDigit = true;
-      break;
-    }
-  }
-
-  return hasNonDigit;
-}
-
-function hasThriceOrMoreRepeatingValue(numArray) {
-  let count = 1;
-  let repeats = false;
-
-  let sortedArray = [...numArray].sort();
-
-  for (let i = 1; i < sortedArray.length; i += 1) {
-    if (sortedArray[i] === sortedArray[i - 1]) {
-      count += 1;
-
-      if (count === 3) {
-        repeats = true;
-        break;
-      }
-    } else {
-      count = 1;
-    }
-  }
-
-  return repeats;
-}
-
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA <= 0 || lineB <= 0 || lineC <= 0) {
@@ -122,7 +121,7 @@ console.log(triangleCheck(12, 12, 4));
 console.log(triangleCheck(15, 8, 12));
 console.log(triangleCheck(20, 4, 10));
 
-/* 
+/*
   Como este desafio nos propõe a pesquisar, usei alguns conceitos que já conhecia e que ainda não foram apresentados no curso:
     String.match: Usa uma Expressão Regular para encontrar substrings;
       https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
@@ -132,19 +131,18 @@ console.log(triangleCheck(20, 4, 10));
     Array.reduce: Roda uma função para cada elemento de um array, pegando o retorno da anterior como o primeiro parâmetro para a próxima
       https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 */
-
 // Desafio 13
 function hydrate(orderString) {
-  let beverageCountArray = orderString.match(/\d+/g);
+  let countArray = orderString.match(/\d+/g);
 
-  beverageCountArray = beverageCountArray.map(count => parseInt(count));
+  countArray = countArray.map((count) => parseInt(count, 10));
 
-  let totalBeverageCount = beverageCountArray.reduce((accumulator, currentValue) => accumulator + currentValue);
+  let totalCount = countArray.reduce((accumulator, currentValue) => accumulator + currentValue);
 
-  return `${totalBeverageCount} copos de água`;
+  return `${totalCount} copos de água`;
 }
 
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,

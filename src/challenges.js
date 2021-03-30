@@ -33,7 +33,7 @@ function splitSentence(sentence) {
       currentWord += sentence[i];
     }
   }
-  
+
   return wordArray;
 }
 
@@ -70,8 +70,8 @@ function highestCount(intArray) {
   let count = 1;
   let highest = sortedArray[0];
 
-  for(let i = 1; i < sortedArray.length; i += 1) {
-    if(sortedArray[i] === highest) {
+  for (let i = 1; i < sortedArray.length; i += 1) {
+    if (sortedArray[i] === highest) {
       count += 1;
     } else {
       break;
@@ -92,11 +92,13 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (cat1Dist === cat2Dist) {
     return 'os gatos trombam e o rato foge';
-  } else if (cat1Dist > cat2Dist) {
-    return 'cat2';
-  } else {
-    return 'cat1';
   }
+
+  if (cat1Dist > cat2Dist) {
+    return 'cat2';
+  }
+
+  return 'cat1';
 }
 
 console.log(catAndMouse(0, 3, 2));
@@ -135,11 +137,11 @@ let cryptoDictionary = {
   i: 3,
   o: 4,
   u: 5,
-  '1': 'a',
-  '2': 'e',
-  '3': 'i',
-  '4': 'o',
-  '5': 'u',
+  1: 'a',
+  2: 'e',
+  3: 'i',
+  4: 'o',
+  5: 'u',
 };
 
 function encode(sentence) {
@@ -161,9 +163,9 @@ console.log(encode('hi there!'));
 function decode(sentence) {
   let decodedSentence = '';
 
-  for(let char of sentence) {
-    if(parseInt(char) < 6 && parseInt(char) > 0) {
-      decodedSentence += cryptoDictionary[char];
+  for (let char of sentence) {
+    if (parseInt(char, 10) < 6 && parseInt(char, 10) > 0) {
+      decodedSentence += cryptoDictionary[parseInt(char, 10)];
     } else {
       decodedSentence += char;
     }
