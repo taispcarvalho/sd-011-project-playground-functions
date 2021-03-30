@@ -32,7 +32,7 @@ function isValidPhoneNumber(numbers) {
   sortedNumbers.forEach((number) => {
     count = previous && previous === number ? count + 1 : 1;
 
-    if (count === 3) return false;
+    if (count === 3) status = false;
 
     previous = number;
   });
@@ -45,7 +45,7 @@ function applyPhoneNumberMask(numbers) {
   let firsPart = numbers.slice(2, 7).join('');
   let secondPart = numbers.slice(7, 12).join('');
 
-  return `(${ddd})${firsPart}-${secondPart}`;
+  return `(${ddd}) ${firsPart}-${secondPart}`;
 }
 
 function generatePhoneNumber(numbers) {
