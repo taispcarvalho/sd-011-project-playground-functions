@@ -1,17 +1,21 @@
 // Desafio 1
-function compareTrue() {
-
+function compareTrue(param1, param2) {
+  return param1 && param2;
 }
 
 // Desafio 2
-function calcArea() {
-
+function calcArea(base, height) {
+  let totalArea = ((base * height)/2);
+  return totalArea;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  array = string.split(' ');
+  return array;
 }
+
+console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName() {
