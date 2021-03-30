@@ -56,8 +56,12 @@ let arrRandom = [0, 0, 0];
 console.log(highestCount(arrRandom));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 >= mouse && cat1 < cat2) {
+    return 'cat1';
+  } if (cat1 === cat2) {
+    return 'Os gatos trombam e o rato foge';
+  } return 'cat2';
 }
 
 // Desafio 8
