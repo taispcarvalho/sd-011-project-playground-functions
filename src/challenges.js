@@ -44,11 +44,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 console.log(catAndMouse(0, 5, 6));
 // Desafio 8
-function fizzBuzz(array) {
-  let newArray = [];
-  for (let index = 0; index < array.length; index += 1) {
-
-  }
+function fizzBuzz() {
 }
 
 // Desafio 9
