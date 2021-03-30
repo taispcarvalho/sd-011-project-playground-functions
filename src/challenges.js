@@ -1,15 +1,19 @@
 // Desafio 1
-let valor1=true;
-let valor2=true;
+//let valor1=true;
+//let valor2=true;
 function compareTrue(valor1,valor2) {
   console.log(valor1&&valor2);
 }
-compareTrue(valor2,valor1);
+//compareTrue(valor2,valor1);
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+let base=10;
+let altura=50;
+areaTriangulo=Number;
+function calcArea(base,atura) {
+  areaTriangulo=(base*altura)/2;
 }
+console.log(areaTriangulo);
 
 // Desafio 3
 function splitSentence() {
