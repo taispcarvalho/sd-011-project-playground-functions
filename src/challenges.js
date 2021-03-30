@@ -13,9 +13,15 @@ function compareTrue(a,b) {
 
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+//criar uma função calcArea que recebe dois parametros (base, height)
+function calcArea(base, height) {
+//sabemos que para calcular a área de um triangulo devemos multiplicar o height pela base e dividir por 2 (para isso vou usar o if);
+if (calcArea = (base * height)/ 2){
+  //retornar o resultado;
+  return calcArea;
 }
+}
+
 
 // Desafio 3
 function splitSentence() {
