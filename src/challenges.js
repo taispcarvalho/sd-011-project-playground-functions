@@ -25,10 +25,9 @@ function concatName(arrayString) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let wins = wins * 3;
-  let ties = 1;
-  let winning = 
+  return`${(wins * 3) + ties}`;
 }
+
 
 // Desafio 6
 function highestCount() {
