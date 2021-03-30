@@ -9,7 +9,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {}
+//O método split() divide uma String em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array. A divisão é feita procurando um padrão, onde o padrão é fornecido como o primeiro parâmetro na chamada do método, o padrao na função foi (' '), significa que a cada espaço ' ' ele vai dividir uma string.
+function splitSentence(arr) {
+  return arr.split(' ');
+}
 
 // Desafio 4
 function concatName(arr) {
