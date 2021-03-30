@@ -46,7 +46,7 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(cat1 - mouse);
   let distCat2 = Math.abs(cat2 - mouse);
-  let winner = ''
+  let winner = '';
   if (distCat1 === distCat2) {
     winner = 'os gatos trombam e o rato foge';
   } else if (distCat2 > distCat1) {
@@ -58,9 +58,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz (numbers) { 
+  let phrase = []
+  for (let index = 0; index < numbers.length; index +=1) {
+    if (numbers[index] %3 === 0 && numbers[index] %5 === 0) {
+      phrase.push ('fizzBuzz');
+    } else if (numbers[index] %3 === 0) {
+      phrase.push ('fizz');
+    } else if (numbers[index] %5 === 0) {
+      phrase.push ('buzz')
+    } else {
+      phrase.push ('bug!')
+    }
+  
+    }
+    return phrase
+  }
 
 // Desafio 9
 function encode() {
