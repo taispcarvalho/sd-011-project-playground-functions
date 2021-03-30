@@ -17,8 +17,10 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  
+function concatName(names) {
+  let firstPosition = names[0];
+  let lastPosition = names[names.length - 1];
+  return names.concat(lastPosition, firstPosition);
 }
 
 // Desafio 5
