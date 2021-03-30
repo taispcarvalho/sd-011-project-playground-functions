@@ -51,13 +51,37 @@ function fizzBuzz(numbers) {
   }
   return numbers;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encodeAux(sentence, index) {
+  if(sentence[index] === 'a') sentence[index] = '1';
+  if(sentence[index] === 'e') sentence[index] = '2';
+  if(sentence[index] === 'i') sentence[index] = '3';
+  if(sentence[index] === 'o') sentence[index] = '4';
+  if(sentence[index] === 'u') sentence[index] = '5';
+  return sentence;
 }
-function decode() {
-  // seu código aqui
+function encode(sentence) {
+  sentence = sentence.split('');
+  for (let index = 0; index < sentence.length; index += 1) {
+    sentence = encodeAux(sentence, index);
+  }
+  return sentence.join('');
+}
+function decodeAux(sentence, index) {
+  if(sentence[index] === '1') sentence[index] = 'a';
+  if(sentence[index] === '2') sentence[index] = 'e';
+  if(sentence[index] === '3') sentence[index] = 'i';
+  if(sentence[index] === '4') sentence[index] = 'o';
+  if(sentence[index] === '5') sentence[index] = 'u';
+  return sentence;
+}
+function decode(sentence) {
+  sentence = sentence.split('');
+  for (let index = 0; index < sentence.length; index += 1) {
+    sentence = decodeAux(sentence, index);
+  }
+  return sentence.join('');
 }
 
 module.exports = {
