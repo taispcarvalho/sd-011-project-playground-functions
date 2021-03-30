@@ -44,16 +44,16 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat2pos = mouse - cat1;
-  let cat1pos = mouse - cat2;
+  let cat2pos = Math.abs(mouse - cat1);
+  let cat1pos = Math.abs(mouse - cat2);
 
-  if ((cat2pos < cat1pos) * -1) {
+  if (cat2pos > cat1pos) {
     return 'cat2';
   }
-  if ((cat1pos < cat2pos) * -1) {
+  if (cat1pos > cat2pos) {
     return 'cat1';
   }
-  if (cat1pos === cat2pos) {
+  if (cat1pos == cat2pos) {
     return 'os gatos trombam e o rato foge';
   }
 }
