@@ -65,8 +65,7 @@ if (gato1 < gato2) {
 
 
 // Desafio 8
-function fizzBuzz(numbers) {
-  function fizzBuzz(array) {
+function fizzBuzz(array) {
     let newArray = [];
     for (let index in array) {
       if (array[index] % 5 === 0 && array[index] % 3 === 0) {
@@ -81,7 +80,7 @@ function fizzBuzz(numbers) {
     }
     return newArray;
 }
-}
+
 console.log(fizzBuzz(5,12,3,4,6))
 // Desafio 9
 function encode() {
