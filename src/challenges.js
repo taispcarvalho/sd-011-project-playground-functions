@@ -21,7 +21,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(itens) {
   // seu código aqui
-  return (itens[itens.length-1], itens[0]);
+  return (itens[itens.length - 1], itens[0]);
 }
 
 // Desafio 5
@@ -36,11 +36,13 @@ function footballPoints(wins, ties) {
 function highestNumber(numbers) {
   maiorNum = 0;
   for (let index = 0; index < numbers.length; index += 1) {
-  if(maiorNum < highestCount[index]){
-    maiorNum = highestCount[index];
+    if (maiorNum < highestCount[index]) {
+      maiorNum = highestCount[index];
+    }
   }
   return maiorNum;
 }
+
 function highestCount(numbers) {
   // seu código aqui
   let highest = highestNumber(numbers);
@@ -54,8 +56,17 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  re1 = mouse - cat1;
+  re2 = mouse - cat2;
+  if (re1 > re2) {
+    return 'cat1'
+  } else if (re1 < re2) {
+    return 'cat2'
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
