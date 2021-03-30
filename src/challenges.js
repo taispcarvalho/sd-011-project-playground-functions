@@ -90,7 +90,7 @@ function fizzBuzz(array) {
 
 // function replaceVowels(char) {
 //   switch (char) {
-//     case 'a': 
+//     case 'a':
 //       return '1';
 //       break;
 //     case 'e':
@@ -111,20 +111,20 @@ function fizzBuzz(array) {
 // }
 // Desafio 9
 function encode(string) {
-  string = string.replace('a', '1');
-  string = string.replace('e', '2');
-  string = string.replace('i', '3');
-  string = string.replace('o', '4');
-  string = string.replace('u', '5');
+  string = string.replace(/a/g, '1');
+  string = string.replace(/e/g, '2');
+  string = string.replace(/i/g, '3');
+  string = string.replace(/o/g, '4');
+  string = string.replace(/u/g, '5');
   return string;
 }
 
 function decode(string) {
-  string = string.replace('1', 'a');
-  string = string.replace('2', 'e');
-  string = string.replace('3', 'i');
-  string = string.replace('4', 'o');
-  string = string.replace('5', 'u');
+  string = string.replace(/1/g, 'a');
+  string = string.replace(/2/g, 'e');
+  string = string.replace(/3/g, 'i');
+  string = string.replace(/4/g, 'o');
+  string = string.replace(/5/g, 'u');
   return string;
 }
 
