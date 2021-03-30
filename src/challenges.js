@@ -74,30 +74,91 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function testElement(number) {
+  let newElement = '';
+
+  if (number % 3 === 0 && number % 5 === 0) {
+    newElement = 'fizzBuzz';
+  } else if (number % 3 === 0) {
+    newElement = 'fizz';
+  } else if (number % 5 === 0) {
+    newElement = 'buzz';
+  } else {
+    newElement = 'bug!';
+  }
+
+  return newElement;
+}
+
 function fizzBuzz(arrayNumbers) {
   let newArray = [];
 
-  for (let number of arrayNumbers) {
-    if (number % 3 === 0 && number % 5 === 0) {
-      newArray.push('fizzBuzz');
-    } else if (number % 3 === 0) {
-      newArray.push('fizz');
-    } else if(number % 5 === 0) {
-      newArray.push('buzz');
-    } else {
-      newArray.push('bug!');
-    }
+  for (let number of arrayNumbers) {  
+    newArray.push(testElement(number));
   }
 
   return newArray;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function testEncode(character) {
+  let newCharacter = '';
+
+  if (character === 'a') {
+    newCharacter = 1;
+  } else if (character === 'e') {
+    newCharacter = 2;
+  } else if (character === 'i') {
+    newCharacter = 3;
+  } else if (character === 'o') {
+    newCharacter = 4;
+  } else if (character === 'u') {
+    newCharacter = 5;
+  } else {
+    newCharacter = character;
+  }
+
+  return newCharacter;
 }
-function decode() {
-  // seu código aqui
+
+function encode(sentence) {
+  let newSentence = '';
+
+  for (let character of sentence) {
+    newSentence += testEncode(character);
+  }
+
+  return newSentence;
+}
+
+function testDecode(character) {
+  let newCharacter = '';
+
+  if (character === '1') {
+    newCharacter = 'a';
+  } else if (character === '2') {
+    newCharacter = 'e';
+  } else if (character === '3') {
+    newCharacter = 'i';
+  } else if (character === '4') {
+    newCharacter = 'o';
+  } else if (character === '5') {
+    newCharacter = 'u';
+  } else {
+    newCharacter = character;
+  }
+
+  return newCharacter; 
+}
+
+function decode(sentence) {
+  let newSentence = '';
+
+  for (let character of sentence) {
+    newSentence += testDecode(character);
+  }
+
+  return newSentence;
 }
 
 module.exports = {
