@@ -9,7 +9,6 @@ function compareTrue(case1, case2) {
 }
 console.log(compareTrue(true, true));
 
-
 // Desafio 2
 
 let base = 51;
@@ -21,9 +20,12 @@ function calcArea(base, height) {
 console.log(calcArea(base, altura));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+let = string = 'go Trybe'
+
+function splitSentence(frase) {
+  return frase.split(" ");
 }
+console.log(splitSentence(string));
 
 // Desafio 4
 function concatName() {

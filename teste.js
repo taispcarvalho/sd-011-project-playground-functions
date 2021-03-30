@@ -10,10 +10,17 @@
 // console.log(compareTrue(true, true));
 
 
-let base = 51;
-let altura = 1;
+// let base = 51;
+// let altura = 1;
 
-function calcArea(base, height){
-  return (base * height) / 2;
+// function calcArea(base, height){
+//   return (base * height) / 2;
+// }
+// console.log(calcArea(base, altura));
+
+
+let string = 'go Trybe'
+function splitSentence(frase){
+  return frase.split(" ");
 }
-console.log(calcArea(base, altura));
+console.log(splitSentence(string));
