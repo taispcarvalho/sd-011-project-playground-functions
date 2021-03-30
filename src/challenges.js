@@ -70,37 +70,71 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayFizzBuzzNumbers) {
   let arrayFizzBuzz = [];
 
+
   for (let number of arrayFizzBuzzNumbers) {
-    if (number % 3 === 0 && number % 5 !== 0) {
-      arrayFizzBuzz.push('fizz');
-    } else if (number % 3 !== 0 && number % 5 === 0) {
+    let isDivisibleBy3 = number % 3 === 0
+    let isDivisibleBy5 = number % 5 === 0
+
+    if (isDivisibleBy3) {
+      if (isDivisibleBy5) {
+        arrayFizzBuzz.push('fizzBuzz');
+      } else {
+        arrayFizzBuzz.push('fizz');
+      }
+    } else if (isDivisibleBy5) {
       arrayFizzBuzz.push('buzz');
-    } else if (number % 3 === 0 && number % 5 === 0) {
-      arrayFizzBuzz.push('fizzBuzz');
     } else {
       arrayFizzBuzz.push('bug!');
     }
   }
+
   return arrayFizzBuzz;
 }
 
 // Desafio 9
-function turnVowelIntoNumbers (sentence, vowel, numberY){
-  if (vowel === 'a'){
-    vowel = numberY;
-  }
-}
 function encode(sentence) {
-  let encodedSentence = sentence.replace('a', '1').replace('e', '2').replace('i', '3').replace('o', '4').replace('u', '5')
+  let encodedSentence = ''
 
+  for (let index = 0; index < sentence.length; index += 1) {
+    if (sentence[index] === 'a') {
+      encodedSentence += '1';
+    } else if (sentence[index] === 'e') {
+      encodedSentence += '2';
+    } else if (sentence[index] === 'i') {
+      encodedSentence += '3';
+    } else if (sentence[index] === 'o') {
+      encodedSentence += '4';
+    } else if (sentence[index] === 'u') {
+      encodedSentence += '5';
+    } else {
+      encodedSentence += sentence[index];
+    }
+  }
   return encodedSentence
 }
 
-console.log(encode("hi there!"));
+function decode(sentence) {
+  let decodedSentence = ''
 
-function decode() {
-  // seu código aqui
+  for (let index = 0; index < sentence.length; index += 1) {
+    if (sentence[index] === '1') {
+      decodedSentence += 'a';
+    } else if (sentence[index] === '2') {
+      decodedSentence += 'e';
+    } else if (sentence[index] === '3') {
+      decodedSentence += 'i';
+    } else if (sentence[index] === '4') {
+      decodedSentence += 'o';
+    } else if (sentence[index] === '5') {
+      decodedSentence += 'u';
+    } else {
+      decodedSentence += sentence[index];
+    }
+  }
+  
+  return decodedSentence
 }
+
 
 module.exports = {
   calcArea,
