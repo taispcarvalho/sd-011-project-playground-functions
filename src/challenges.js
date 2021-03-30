@@ -19,8 +19,7 @@ console.log(splitSentence('Go Trybe'));
 
 function concatName(array) {
   array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-  let concat = `${array[array.length - 1]} + ' ' + ${array[0]}`;
-  return concat;
+  return `${array[array.length - 1]} + ' ' + ${array[0]}`;
 }
 // Desafio 5
 function footballPoints() {
