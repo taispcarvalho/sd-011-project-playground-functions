@@ -42,7 +42,7 @@ function tiePoints(ties) {
       tiesPoints += 1;
     }
   }
-  return tiesPoints
+  return tiesPoints;
 }
 
 // Desafio 5
@@ -55,16 +55,16 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // part of Desafio 6
-function higherNumber (valueArray) {
-  let higherNumber = 0;
+function higherNumber(valueArray) {
+  let highNumber = 0;
   for (let value in valueArray) {
-    if (valueArray[value] > higherNumber) higherNumber = valueArray[value];
+    if (valueArray[value] > highNumber) highNumber = valueArray[value];
   }
-  return higherNumber;
+  return highNumber;
 }
 
 // part of Desafio 6
-function repeatCount (number, valueArray) {
+function repeatCount(number, valueArray) {
   let repeatTime = 0;
   for (let value of valueArray) {
     if (value === number) repeatTime += 1;
