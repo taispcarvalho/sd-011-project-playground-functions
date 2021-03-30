@@ -36,7 +36,6 @@ function findNumber(valor){
 }
 
 function highestCount(array, resultado) {
-  array = [];
     resultado = 0;
   for (let index1 = 0; index1 < array.length; index1 += 1) {
     if (findNumber() === array[index1]) {
@@ -45,7 +44,7 @@ function highestCount(array, resultado) {
   }
   return resultado;
 }
-
+console.log(highestCount())
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (mouse - cat1 > mouse - cat2){
