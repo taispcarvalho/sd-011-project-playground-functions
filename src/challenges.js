@@ -4,7 +4,7 @@
 function compareTrue(valor1,valor2) {
   console.log(valor1&&valor2);
 }
-//compareTrue(valor2,valor1);
+compareTrue(valor2,valor1);
 
 // Desafio 2
 //let base = 1;
@@ -14,7 +14,7 @@ function calcArea(base,altura) {
   areaTriangulo = base * altura / 2;
   console.log(areaTriangulo);
 }
-//calcArea(base,altura);
+calcArea(base,altura);
 //console.log(areaTriangulo);
 
 // Desafio 3
