@@ -86,15 +86,13 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function switchLetterNumber(char, code) {
-  if (char !== null) {
-    for (let key in code) {
-      if (char === key) {
-        return code[key];
-      }
+function switchLetterNumber(currentChar, code) {
+  for (let key in code) {
+    if (currentChar === key) {
+      return code[key];
     }
   }
-  return char;
+  return currentChar;
 }
 
 function encode(string) {
@@ -104,7 +102,7 @@ function encode(string) {
     i: '3',
     o: '4',
     u: '5',
-  }
+  };
   let codedString = '';
   for (let index = 0; index < string.length; index += 1) {
     codedString += switchLetterNumber(string[index], coding);
@@ -119,7 +117,7 @@ function decode(string) {
     3: 'i',
     4: 'o',
     5: 'u',
-  }
+  };
   let decodedString = '';
   for (let index = 0; index < string.length; index += 1) {
     decodedString += switchLetterNumber(string[index], decoding);
