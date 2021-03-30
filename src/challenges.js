@@ -35,8 +35,8 @@ console.log(footballPoints(1, 2));
 
 function higherNumber(numbers) {
   let higher = numbers[0];
-  for (number of numbers) {
-    if (number > higher){
+  for (let number of numbers) {
+    if (number > higher) {
       higher = number;
     }
   }
@@ -48,7 +48,7 @@ console.log(higherNumber([0, 4, 4, 4, 9, 2, 1]));
 function highestCount(list) {
   let biggerNumber = higherNumber(list);
   let count = 0;
-  for (index of list) {
+  for (let index of list) {
     if (index === biggerNumber) {
       count += 1;
     }
@@ -62,15 +62,15 @@ function catAndMouse(mouse, cat1, cat2) {
   let mouseCat1 = cat1 - mouse;
   let mouseCat2 = cat2 - mouse;
 
-    if (mouseCat1 > mouseCat2) {
-      return 'cat1';
-    } else if (mouseCat2 > mouseCat1) {
-      return 'cat2';
-    } else {
-      return 'os gatos trombam e o rato foge'
-    }
+  if (mouseCat1 > mouseCat2) {
+    return 'cat1';
+  } else if (mouseCat2 > mouseCat1) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
-console.log(catAndMouse(1,5,5));
+console.log(catAndMouse(1, 5, 5));
 
 // Desafio 8
 function fizzBuzz() {
