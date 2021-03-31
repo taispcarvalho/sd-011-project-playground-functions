@@ -2,20 +2,21 @@
 function createTechObjects(list, name) {
   let array = [];
   let objects = {};
-  for(let technology of list) {
+  for (let technology of list) {
     // Source: https://stackoverflow.com/questions/2383484/how-to-create-a-dynamic-object-in-a-loop
-    objects = {tech: technology, name: name};
+    objects = { tech: technology, name: name };
     array.push(objects);
   }
   return array;
 }
 
 function techList(listDevTech, name) {
+  if (listDevTech.length <= 0) {
+    return 'Vazio!';
+  }
   let sortedListDevTech = listDevTech.sort();
   return createTechObjects(sortedListDevTech, name);
 }
-
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
