@@ -65,31 +65,60 @@ function catAndMouse(mousePosition, catOnePosition, catTwoPosition) {
 }
 console.log(catAndMouse(10, 4, 22));
 // Desafio 8
-function fizzBuzz(arr) {
-  let array = [];
-  for (let index = 0; index < arr.length; index += 1) {
-    if (arr[index] % 3 === 0 && arr[index] % 5 === 0) {
-      array.push('fizzBuzz');
-    } else if (arr[index] % 5 === 0) {
-      array.push('buzz');
-    } else if (arr[index] % 3 === 0) {
-      array.push('fizz');
-    } else {
-      array.push('bug!');
-    }
-  }
-  return array;
+function fizzBuzzElement(number) {
+  if (number % 15 === 0) return 'fizzBuzz';
+  if (number % 3 === 0) return 'fizz';
+  if (number % 5 === 0) return 'buzz';
+  return 'bug!';
 }
+
+function fizzBuzz(arr) {
+  let newArr = [];
+  for (let index = 0; index < arr.length; index += 1) {
+    newArr.push(fizzBuzzElement(arr[index]));
+  }
+  return newArr;
+}
+
 let lista = [2, 15, 7, 9, 45];
 console.log(fizzBuzz(lista));
 // Desafio 9
-function encode() {
-
+function encodeElement(letter) {
+  if (letter === 'a') return '1';
+  if (letter === 'e') return '2';
+  if (letter === 'i') return '3';
+  if (letter === 'o') return '4';
+  if (letter === 'u') return '5';
+  return letter;
 }
-function decode() {
-  // seu código aqui
+
+function encode(string) {
+  let newArray = '';
+  for (let letter of string) {
+    newArray += encodeElement(letter);
+  }
+  return newArray;
 }
 
+function decodeElement(letter) {
+  if (letter === '1') return 'a';
+  if (letter === '2') return 'e';
+  if (letter === '3') return 'i';
+  if (letter === '4') return 'o';
+  if (letter === '5') return 'u';
+  return letter;
+}
+
+function decode(string) {
+  let newArray = '';
+  for (let letter of string) {
+    newArray += decodeElement(letter);
+  }
+  return newArray;
+}
+
+console.log(decode('h3, th2r2'));
+console.log(encode('hi, there'));
 module.exports = {
   calcArea,
   catAndMouse,
