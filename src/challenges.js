@@ -23,7 +23,6 @@ function concatName(array) {
   let result = last.concat(', ', first);
   return result;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -66,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   }
   if (distanciaDoMouseParaCat2 < distanciaDoMouseParaCat1) {
-   return 'cat2';
+    return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
 }
@@ -75,7 +74,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let result = [];
   for (let index in array) {
-    if (array[index] % 3 === 0 && array[index] % 5 ===0) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       result.push('fizzBuzz');
     } else if (array[index] % 5 === 0) {
       result.push('buzz');
@@ -89,11 +88,77 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// function encodeUsingIf(string) {
+//   let newString = '';
+//   for (let index in string) {
+//     if (string[index] === 'a') {
+//       newString = newString.concat ('1')
+//     } else if (string[index] === 'e') {
+//       newString = newString.concat ('2')
+//     } else if (string[index] === 'i') {
+//       newString = newString.concat ('3')
+//     } else if (string[index] === 'o') {
+//       newString = newString.concat ('4')
+//     } else if (string[index] === 'u') {
+//       newString = newString.concat ('5')
+//     } else {
+//       newString = newString.concat (string[index])
+//     }
+//   }
+//   return newString;
+// }
+// console.log(encodeUsingIf('hi there!'));
+
+function encode(string) {
+  let result = [];
+  for (let index in string) {
+    switch (string[index]) {
+      case 'a':
+        result.push('1');
+        break;
+      case 'e':
+        result.push('2');
+        break;
+      case 'i':
+        result.push('3');
+        break;
+      case 'o':
+        result.push('4');
+        break;
+      case 'u':
+        result.push('5');
+        break;
+      default:
+        result.push(string[index]);
+    }
+  }
+  return result.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let result = [];
+  for (let index in string) {
+    switch (string[index]) {
+      case '1':
+        result.push('a');
+        break;
+      case '2':
+        result.push('e');
+        break;
+      case '3':
+        result.push('i');
+        break;
+      case '4':
+        result.push('o');
+        break;
+      case '5':
+        result.push('u');
+        break;
+      default:
+        result.push(string[index]);
+    }
+  }
+  return result.join('');
 }
 
 module.exports = {
