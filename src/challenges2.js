@@ -2,9 +2,12 @@
 function techList(arrayOfTechnologies, name) {
   let technologiesObjects = [];
   for (let key in arrayOfTechnologies) {
-    technologiesObjects.push({
-      tech: arrayOfTechnologies[key], name: name
-    });
+    if (key < arrayOfTechnologies.length) {
+      technologiesObjects.push({
+        tech: arrayOfTechnologies[key], 
+        name: name
+      });
+    }
   }
   return technologiesObjects;
 }
