@@ -123,9 +123,7 @@ function encode(string) {
   }
   return nStr;
 }
-
-let string = ['hi there!', 'h3 th2r2!'];
-console.log(encode(string[0]));
+console.log(encode('hi there!'));
 
 function decode(string) {
   // seu código aqui
@@ -135,8 +133,8 @@ function decode(string) {
 
   for (let index = 0; index < str.length; index += 1) {
     for (let vIndex = 1; vIndex < vog.length; vIndex += 1) {
-      if (str[index] === vog[vIndex]) {
-        str[index] = vog[vIndex];
+      if (str[index] == vIndex) {
+        str[index] = vog[vIndex - 1];
       }
     }
     nStr += str[index];
@@ -144,7 +142,7 @@ function decode(string) {
   return nStr;
 }
 
-console.log(decode(string[0]));
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
