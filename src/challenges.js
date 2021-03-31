@@ -34,12 +34,11 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   cat1 = Math.abs(cat1 - mouse);
-  cat2 = Math.abs(cat2 - mouse)
+  cat2 = Math.abs(cat2 - mouse);
   if (cat1 === cat2) return 'os gatos trombam e o rato foge';
   if (cat1 < cat2) return 'cat1';
   if (cat2 < cat1) return 'cat2';
 }
-console.log(catAndMouse(0,-3,3));
 
 // Desafio 8
 function fizzBuzzAux(numbers, index) {
@@ -58,7 +57,6 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encodeAux(sentence, index) {
-  if (sentence[index] === 'a') sentence[index] = '1';
   if (sentence[index] === 'e') sentence[index] = '2';
   if (sentence[index] === 'i') sentence[index] = '3';
   if (sentence[index] === 'o') sentence[index] = '4';
@@ -68,12 +66,12 @@ function encodeAux(sentence, index) {
 function encode(sentence) {
   sentence = sentence.split('');
   for (let index = 0; index < sentence.length; index += 1) {
+    if (sentence[index] === 'a') sentence[index] = '1';
     sentence = encodeAux(sentence, index);
   }
   return sentence.join('');
 }
 function decodeAux(sentence, index) {
-  if (sentence[index] === '1') sentence[index] = 'a';
   if (sentence[index] === '2') sentence[index] = 'e';
   if (sentence[index] === '3') sentence[index] = 'i';
   if (sentence[index] === '4') sentence[index] = 'o';
@@ -83,6 +81,7 @@ function decodeAux(sentence, index) {
 function decode(sentence) {
   sentence = sentence.split('');
   for (let index = 0; index < sentence.length; index += 1) {
+    if (sentence[index] === '1') sentence[index] = 'a';
     sentence = decodeAux(sentence, index);
   }
   return sentence.join('');
