@@ -3,7 +3,7 @@ function techList(arr, nome) {
   arr = arr.sort();
 
   for (let i = 0; i < arr.length; i += 1) {
-    arr[i] = { tech: arr, name: nome };
+    arr[i] = { tech: arr[i], name: nome };
   }
 
   return arr.length === 0 ? 'Vazio!' : arr;

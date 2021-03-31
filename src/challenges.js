@@ -24,14 +24,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(arr) {
+
+function highestList(arr) {
   let highest = 0;
-  let count = 0;
   for (const num of arr) {
     if (num > highest) {
       highest = num;
     }
-    if (num === highest) {
+  }
+  return highest;
+}
+
+function highestCount(arr) {
+  let count = 0;
+  for (const num of arr) {
+    if (num === highestList(arr)) {
       count += 1;
     }
   }
@@ -59,12 +66,12 @@ function fizzBuzz(arr) {
     arr[i] = '';
     if (n % 3 === 0) {
       arr[i] += 'fizz';
-    } else if (n % 5 === 0) {
+    }
+    if (n % 5 === 0) {
       arr[i] += 'buzz';
-    } else {
-      arr[i] += 'bug!';
     }
     arr[i] = arr[i].replace('fizzbuzz', 'fizzBuzz');
+    arr[i] = arr[i].replace(/^$/, 'bug!');
   }
   return arr;
 }
