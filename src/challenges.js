@@ -52,7 +52,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distance1 < distance2) {
     return 'cat2';
   } else {
-    return 'cat1'
+    return 'cat1';
   }
   // seu código aqui
 }
