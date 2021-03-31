@@ -26,21 +26,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-//https://www.geeksforgeeks.org/c-program-find-largest-element-array/
+// https://www.geeksforgeeks.org/c-program-find-largest-element-array/
 function highestCount(listOfNumbers) {
 let count = 0;
 let highestNumber = listOfNumbers[0];
-  for (let index = 1; index < listOfNumbers.length; index +=1) {
-  if (listOfNumbers[index] > highestNumber) {
-  highestNumber = listOfNumbers[index];
+  for (let index = 1; index < listOfNumbers.length; index += 1) {
+    if (listOfNumbers[index] > highestNumber) {
+      highestNumber = listOfNumbers[index];
+    }
   }
-}
-
-for ( let index = 0; index < listOfNumbers.length; index +=1) {
-  if (listOfNumbers[index] == highestNumber) {
-    count +=1;
+  for (let index = 0; index < listOfNumbers.length; index += 1) {
+    if (listOfNumbers[index] === highestNumber) {
+      count += 1;
+    }
   }
-}
   return count;
 }
 
