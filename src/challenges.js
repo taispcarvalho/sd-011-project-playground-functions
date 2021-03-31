@@ -70,9 +70,9 @@ function highestCount(valores){
 
 function catAndMouse(mouse,cat1,cat2) {
   if(cat1&&cat2<mouse){
-    if(mouse-cat1<mouse-cat2){
+    if(cat1>cat2){
       return("cat1");
-      }else if (mouse-cat2<mouse-cat1){
+      }else if (cat2>cat1){
         return("cat2");
       }else{
         return("Os gatos trombam e o rato foge");
