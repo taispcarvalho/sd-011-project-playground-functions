@@ -50,6 +50,7 @@ function highestCount(numbersArray) {
   }  
   return largestAccountant;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 
 // Desafio 7
