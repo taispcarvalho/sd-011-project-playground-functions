@@ -35,13 +35,14 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount() {
-
+  let arrayTeste = [0,1,2,2,2];
+  let contador = 0;
 }
 
-// Desafio 7 - com problemas
+// Desafio 7 - com problemas- fiscal não curtiu
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Mouse = Math.abs(cat1 - mouse);
-  let cat2Mouse = Math.abs(cat2 - mouse);
+  let cat1Mouse = Math.abs(mouse - cat1);
+  let cat2Mouse = Math.abs(mouse - cat2);
 
   if (cat1Mouse < cat2Mouse) {
     return 'cat1';
