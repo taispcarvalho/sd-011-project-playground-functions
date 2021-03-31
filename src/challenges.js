@@ -76,11 +76,11 @@ function fizzBuzz(numberArray) {
 // Desafio 9
 function encode(string) {
   let charactersArray = string.split('');
-  let array = ['a', 'e', 'i', 'o', 'u'];
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
   let decodedArray = [];
 
   for (let character of charactersArray) {
-    if (array.indexOf(character) >= 0) decodedArray.push(array.indexOf(character) + 1);
+    if (vowels.indexOf(character) >= 0) decodedArray.push(vowels.indexOf(character) + 1);
     else decodedArray.push(character);
   }
 
@@ -89,7 +89,7 @@ function encode(string) {
 
 function decode(decodedString) {
   let decodedArray = decodedString.split('');
-  let array = {
+  let vowels = {
     1: 'a',
     2: 'e',
     3: 'i',
@@ -99,7 +99,7 @@ function decode(decodedString) {
   let charactersArray = [];
 
   for (let character of decodedArray) {
-    if (Object.keys(array).indexOf(character) >= 0) charactersArray.push(array[character]);
+    if (Object.keys(vowels).indexOf(character) >= 0) charactersArray.push(vowels[character]);
     else charactersArray.push(character);
   }
 
