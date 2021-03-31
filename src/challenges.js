@@ -49,14 +49,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let catMouse2 = Math.abs(mouse - cat2);
   if (catMouse1 === catMouse2) {
     return 'os gatos trombam e o rato foge';
-  }
-  if (catMouse1 < catMouse2) {
+  } if (catMouse1 < catMouse2) {
     return 'cat 1';
   } if (catMouse1 > catMouse2) {
     return 'cat 2';
   }
 }
-// Talvez de certo
 
 // Desafio 8
 function fizzBuzz() {
