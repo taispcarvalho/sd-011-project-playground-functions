@@ -35,16 +35,19 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount(numbersArray) {
+function seekGreaterNumber(numbersArray) {
   let higherNumber = 0;
-  let largestAccountant = 0;
-  for (let index in numbersArray) {
-    if (numbersArray[index] >= higherNumber) {
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] > higherNumber) {
       higherNumber = numbersArray[index];
     }
   }
-  for (let counter in numbersArray) {
-    if (higherNumber === numbersArray[counter]) {
+  return higherNumber;
+}
+function highestCount(numbersArray) {
+  let largestAccountant = 0;
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] === seekGreaterNumber(numbersArray)) {
       largestAccountant += 1;
     }
   }
