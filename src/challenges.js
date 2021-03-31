@@ -28,7 +28,7 @@ function footballPoints(wins, ties) {
   return operacao;
 }
 
-// Desafio 6
+// Desafio 6 - ok
 
 function highestCount(array) {
   let maiorNumero = array[0];
@@ -68,7 +68,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return resultado;
 }
-console.log(catAndMouse(1, 0, 2));
+console.log(catAndMouse());
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
