@@ -43,16 +43,15 @@ function highestCount(aNumbers) {
   let majorNumber = [];
   let score = 0;
   let sequence = aNumbers.sort();
-  majorNumber = sequence[aNumbers.length -1];
+  majorNumber = sequence[aNumbers.length - 1];
   for (let index in aNumbers) {
     if (aNumbers[index] === majorNumber) {
       score += 1;
-   }
-}
+    }
+  }
 
   return score;
 }
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 
 // Desafio 7
 function catAndMouse() {
