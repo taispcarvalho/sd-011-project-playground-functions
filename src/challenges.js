@@ -43,33 +43,31 @@ function highestCount(arrayN) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = mouse - cat1;
   let distanceCat2 = mouse - cat2;
-  if(Math.abs(distanceCat1) < Math.abs(distanceCat2)){
+  if (Math.abs(distanceCat1) < Math.abs(distanceCat2)) {
     return 'cat1';
-  }else if(Math.abs(distanceCat2) < Math.abs(distanceCat1)){
+  } else if (Math.abs(distanceCat2) < Math.abs(distanceCat1)) {
     return 'cat2';
-  }else if (Math.abs(distanceCat2) == Math.abs(distanceCat1)){
+  } else if (Math.abs(distanceCat2) == Math.abs(distanceCat1)) {
     return 'os gatos trombam e o rato foge';
   }
-
 }
-
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let newArray = [];
   for (const key of numbers) {
-           if(key % 3 === 0 &&  key % 5 === 0){
-            newArray.push('fizzBuzz');
-         }else if(key % 3 === 0){
-           newArray.push('fizz');
-        }else if (key % 5 === 0){
-          newArray.push('buzz');
-        }else{
-          newArray.push('bug!');
-        }
-        }
-      return newArray;
-      }
+    if (key % 3 === 0 &&  key % 5 === 0) {
+      newArray.push('fizzBuzz');
+    } else if (key % 3 === 0) {
+      newArray.push('fizz');
+    } else if (key % 5 === 0) {
+      newArray.push('buzz');
+    } else {
+      newArray.push('bug!');
+    }
+  }
+  return newArray;
+}
 
 // Desafio 9
 function encode(string) {
@@ -85,7 +83,6 @@ function encode(string) {
   return newString
 }*/
 }
-
 
 function decode() {
   // seu código aqui
