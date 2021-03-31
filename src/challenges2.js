@@ -5,12 +5,12 @@ function techList(arrayOfTechnologies, name) {
     if (key < arrayOfTechnologies.length) {
       technologiesObjects.push({
         tech: arrayOfTechnologies[key],
-        name
+        name,
       });
     }
-    if (arrayOfTechnologies === []) {
-      return 'Vazio!';
-    }
+  }
+  if (arrayOfTechnologies.length === 0) {
+    return 'Vazio!';
   }
   return technologiesObjects;
 }
