@@ -34,7 +34,7 @@ function highestCount() {
 function catAndMouse(mouse, cat1, cat2) {
   if (mouse - cat1 === mouse - cat2){
     return 'os gatos trombam e o rato foge';
-  } else if (mouse - cat1 < mouse - cat2) {
+  } else if (mouse - cat1 > mouse - cat2) {
     return 'cat1';
   } else {
     return 'cat2';
