@@ -28,10 +28,10 @@ function concatName(strArr) {
   let strGenerated = '';
   for (let index = strArr.length - 1; index >= 0; index -= 1) {
     if (index === strArr.length - 1) {
-      strGenerated = strGenerated + strArr[index];
-      strGenerated = strGenerated + ', ';
+      strGenerated += strArr[index];
+      strGenerated += ', ';
     } else if (index === 0) {
-      strGenerated = strGenerated + strArr[index];
+      strGenerated += strArr[index];
       break;
     }
   } return strGenerated;
@@ -41,7 +41,7 @@ console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winPoints = 3;  
+  let winPoints = 3;
   let totalPoints = (winPoints * (wins)) + (ties);
   return totalPoints;
 }
@@ -78,10 +78,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat2 = (cat2 - mouse) * (cat2 - mouse);
   if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
-  } else if ( distanciaCat1 > distanciaCat2) {
+  } if (distanciaCat1 > distanciaCat2) {
     return 'cat2';
-  } 
-  return 'os gatos trombam e o rato foge';  
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 console.log(catAndMouse(20, 15, 10));
@@ -89,36 +89,35 @@ console.log(catAndMouse(20, 15, 10));
 // Desafio 8
 function fizzBuzz(arrNumbers) {
   let newArrNumbers = [];
-  for (let index = 0; index < arrNumbers.length; index += 1){
+  for (let index = 0; index < arrNumbers.length; index += 1) {
     if (arrNumbers[index] % 3 === 0 && arrNumbers[index] % 5 !== 0) {
-      newArrNumbers.push("fizz");
+      newArrNumbers.push('fizz');
     } else if (arrNumbers[index] % 5 === 0 && arrNumbers[index] % 3 !== 0) {
-      newArrNumbers.push("buzz");
+      newArrNumbers.push('buzz');
     } else if (arrNumbers[index] % 3 === 0 && arrNumbers[index] % 5 === 0) {
-      newArrNumbers.push("fizzBuzz");
+      newArrNumbers.push('fizzBuzz');
     } else {
-      newArrNumbers.push("bug!");
+      newArrNumbers.push('bug!');
     }
   } return newArrNumbers;
-  
 }
 console.log(fizzBuzz([9, 25]));
 // Desafio 9
 function encode(str) {
   let str2 = '';
-  for (let index = 0; index < str.length; index += 1){
+  for (let index = 0; index < str.length; index += 1) {
     if (str[index] === 'a') {
-      str2 = str2 + 1;
+      str2 += 1;
     } else if (str[index] === 'e') {
-      str2 = str2 + 2;
+      str2 += 2;
     } else if (str[index] === 'i') {
-      str2 = str2 + 3;
+      str2 += 3;
     } else if (str[index] === 'o') {
-      str2 = str2 + 4;
+      str2 += 4;
     } else if (str[index] === 'u') {
-      str2 = str2 + 5;    
+      str2 += 5;
     } else {
-      str2 = str2 + str[index];
+      str2 += str[index];
     }
   }
   return str2;
@@ -126,19 +125,19 @@ function encode(str) {
 console.log(encode('hi there!'));
 function decode(str) {
   let str2 = '';
-  for (let index = 0; index < str.length; index += 1){
+  for (let index = 0; index < str.length; index += 1) {
     if (str[index] === '1') {
-      str2 = str2 + 'a';
+      str2 += 'a';
     } else if (str[index] === '2') {
-      str2 = str2 + 'e';
+      str2 += 'e';
     } else if (str[index] === '3') {
-      str2 = str2 + 'i';
+      str2 += 'i';
     } else if (str[index] === '4') {
-      str2 = str2 + 'o';
+      str2 += 'o';
     } else if (str[index] === '5') {
-      str2 = str2 + 'u';    
+      str2 += 'u';
     } else {
-      str2 = str2 + str[index];
+      str2 += str[index];
     }
   }
   return str2;
