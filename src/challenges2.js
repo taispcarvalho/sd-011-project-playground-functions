@@ -53,13 +53,13 @@ function generatePhoneNumber(arrayPhone) {
   let negOrBiggNine = checkNegativeNineNumber(arrayPhone);
   let repeatedNumber = checkRepeatedNumber(arrayPhone);
   let sizePhone = checkSizePhoneNumber(arrayPhone);
-  if (negOrBiggNine || repeatedNumber ) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
   if (sizePhone) {
     return 'Array com tamanho incorreto.';
   }
-  return `(${arrayPhone[0]}${arrayPhone[1]}) ${arrayPhone[2]}${arrayPhone[3]}${arrayPhone[4]}${arrayPhone[5]}-${arrayPhone[6]}${arrayPhone[7]}${arrayPhone[8]}${arrayPhone[9]}${arrayPhone[10]}`;
+  if (negOrBiggNine || repeatedNumber ) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return `(${arrayPhone[0]}${arrayPhone[1]}) ${arrayPhone[2]}${arrayPhone[3]}${arrayPhone[4]}${arrayPhone[5]}${arrayPhone[6]}-${arrayPhone[7]}${arrayPhone[8]}${arrayPhone[9]}${arrayPhone[10]}`;
 }
 
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
