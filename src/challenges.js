@@ -55,7 +55,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   }
 }
-// Talvez vá
+// Talvez vá teste 2
 
 // Desafio 8
 function fizzBuzz() {
