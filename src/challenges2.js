@@ -9,6 +9,7 @@ function techList(techArray, name) {
       name,
     });
   }
+  return techListArray;
 }
 
 // Desafio 11
