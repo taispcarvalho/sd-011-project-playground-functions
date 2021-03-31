@@ -32,16 +32,14 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let highestNumber = 0;
   let counter = 0;
-  for (let index2 in array) {
-    for (let index of array) {
-      if (index > highestNumber) {
-        highestNumber = index;
-      }
-    }
-    if (array[index2] === highestNumber) {
+  for (let index of array) {
+    if (index > highestNumber) {
+      highestNumber = index;
+      counter = 1;
+    } else if (index === highestNumber) {
       counter += 1;
+    }
   }
-}
   return counter;
 }
 
