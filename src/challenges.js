@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true){
-    return true
-  }  else{
-    return false
+if (value1 === true && value2 === true){
+  return true
+}  else{
+  return false
   }                                                                                                                                                                           
 } //console.log( compareTrue(true,true))
 
@@ -25,7 +25,7 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3 ) + ties
-} console.log(footballPoints(14,8))
+} //console.log(footballPoints(14,8))
 
 // Desafio 6
 function highestCount(arra) {
@@ -39,7 +39,7 @@ function highestCount(arra) {
   }
   return cont
   
-} console.log( highestCount([ 9, 1, 2, 3, 9, 5, 7 ]))
+} //console.log( highestCount([ 9, 1, 2, 3, 9, 5, 7 ]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -51,12 +51,24 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2'
   } else { return`"os gatos trombam e o rato foge"`};
   
-} console.log(catAndMouse(5, 2, 3))
+} //console.log(catAndMouse(5, 2, 3))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(numero) {
+  let resultado = []
+  for (let chave in numero) {
+    if ((numero[chave] % 3 === 0) && (numero[chave] % 5 ===0)) {
+      resultado.push('fizzBuzz');
+    } else if (numero[chave] % 3 === 0) {
+      resultado.push('fizz');
+    } else if (numero[chave] % 5 === 0) {
+      resultado.push('buzz');
+    } else {
+      resultado.push('bug')
+    }
+  }
+  return resultado
+} //console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode() {
