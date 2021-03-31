@@ -26,7 +26,7 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "Java"], "Lucas"));
 function generatePhoneNumber(numbers) {
   // seu código aqui
   if (numbers.length !== 11) {
-    return 'Array com tamanho incorreto'
+    return 'Array com tamanho incorreto.'
   }
   for (const key of numbers) {
     let contador = 0;
@@ -42,7 +42,7 @@ function generatePhoneNumber(numbers) {
   return '(' + numbers[0] + numbers[1] + ') ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] +  numbers[9] + numbers[10];
   }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 9, 10]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
