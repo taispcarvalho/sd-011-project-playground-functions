@@ -121,7 +121,7 @@ function encode(string) {
     }
     nStr += ''.concat(str[index]);
   }
-  return nStr;
+  return ('"' + nStr + '"');
 }
 
 let string = ['hi there!', 'h3 th2r2!'];
@@ -141,7 +141,7 @@ function decode(string) {
     }
     nStr += ''.concat(str[index]);
   }
-  return nStr;
+  return ('"' + nStr + '"');
 }
 
 console.log(decode(string[0]));
