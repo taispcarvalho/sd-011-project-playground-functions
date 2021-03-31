@@ -64,25 +64,47 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(value6) {
   let numbersConter = [];
   for (let i = 0; i < value6.length; i += 1) {
-      if (value6[i] % 3 === 0 && value6[i] % 5 !== 0) {
-        numbersConter.push('fizz');
-      }
-      if (value6[i] % 3 !== 0 && value6[i] % 5 === 0) {
-        numbersConter.push('buzz');
-      }
-      if (value6[i] % 3 === 0 && value6[i] % 5 === 0) {
-        numbersConter.push('fizzBuzz');
-      }
-      if (value6[i] % 3 !== 0 && value6[i] % 5 !== 0) {
-        numbersConter.push('bug!');
-      }
+    if (value6[i] % 3 === 0 && value6[i] % 5 !== 0) {
+      numbersConter.push('fizz');
     }
+    if (value6[i] % 3 !== 0 && value6[i] % 5 === 0) {
+      numbersConter.push('buzz');
+    }
+    if (value6[i] % 3 === 0 && value6[i] % 5 === 0) {
+      numbersConter.push('fizzBuzz');
+    }
+    if (value6[i] % 3 !== 0 && value6[i] % 5 !== 0) {
+      numbersConter.push('bug!');
+    }
+  }
   return (numbersConter);
 }
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  let value7 = 'ola, tudo bem?';
+let res = value7.split('');
+
+for (let i = 0; i < res.length; i +=1){
+  if (res[i] === 'a'){
+    res[i] = 1;
+  }
+  if (res[i] === 'e'){
+    res[i] = 2;
+  }
+  if (res[i] === 'i'){
+    res[i] = 3;
+  }
+  if (res[i] === 'o'){
+    res[i] = 4;
+  }
+  if (res[i] === 'u'){
+    res[i] = 5;
+  }
+}
+let code = res.join('');
+
+return code;
 }
 
 function decode() {
