@@ -105,29 +105,29 @@
 // =================================================================================
 
 // DESAFIO - 8
-let vetor = [2, 15, 7, 9, 45];
+// let vetor = [2, 15, 7, 9, 45];
 
-function fizzBuzz(array) {
-  let stringResult = [];
-  for(let index = 0; index < array.length; index += 1) {
-    stringResult.push(checkDivider(array[index]));
-  }
-  return stringResult;
-}
-function checkDivider(value) {
-  if (value % 3 === 0 && value % 5 === 0) {
-    return 'fizzBuzz';
-  }
-  else if(value % 3 === 0){
-    return 'fizz';
-  }
-  else if(value % 5 === 0){
-    return 'buzz';
-  }
-  return 'bug!';
-  }
+// function fizzBuzz(array) {
+//   let stringResult = [];
+//   for(let index = 0; index < array.length; index += 1) {
+//     stringResult.push(checkDivider(array[index]));
+//   }
+//   return stringResult;
+// }
+// function checkDivider(value) {
+//   if (value % 3 === 0 && value % 5 === 0) {
+//     return 'fizzBuzz';
+//   }
+//   else if(value % 3 === 0){
+//     return 'fizz';
+//   }
+//   else if(value % 5 === 0){
+//     return 'buzz';
+//   }
+//   return 'bug!';
+//   }
 
-console.log(fizzBuzz(vetor));
+// console.log(fizzBuzz(vetor));
 
 
 
@@ -136,7 +136,29 @@ console.log(fizzBuzz(vetor));
 
 // DESAFIO - 9
 
+function encode(string) {
+    
+    string = string.replace(/a/g, '1');
+    string = string.replace(/e/g, '2');
+    string = string.replace(/i/g, '3');
+    string = string.replace(/o/g, '4');
+    string = string.replace(/u/g, '5');
+    return string;
+  
+}
+console.log(encode('hi there'))
 
+function decode(string) {
+    
+  string = string.replace(/1/g, 'a');
+  string = string.replace(/2/g, 'e');
+  string = string.replace(/3/g, 'i');
+  string = string.replace(/4/g, 'o');
+  string = string.replace(/5/g, 'u');
+  return string;
+
+}
+console.log(decode('h3 th2r2'))
 
 
 // =================================================================================
