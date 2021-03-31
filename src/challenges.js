@@ -15,7 +15,7 @@ function splitSentence(frase) {
 }
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1]+', '+array[0]; 
+  return array[array.length - 1] + ', ' + array[0];
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -24,11 +24,11 @@ function footballPoints(wins, ties) {
 // Desafio 6
 
 function highestCount(array) {
-  function highestNumber(array) {
+  function highestNumber(vetor) {
     let higherNum = 0;
-    for (let index = 0; index < array.length; index += 1) {
-      if (array[index] > array[index + 1]) {
-        higherNum = array[index];
+    for (let index = 0; index < vetor.length; index += 1) {
+      if (vetor[index] > vetor[index + 1]) {
+        higherNum = vetor[index];
       }
     }
     return higherNum;
