@@ -1,3 +1,5 @@
+const { configs } = require("eslint-plugin-sonarjs");
+
 // Desafio 1 - okay
 function compareTrue(value1, value2) {
   return value1 && value2;
@@ -34,12 +36,18 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  let arrayTeste = [0,1,2,2,2];
-  let contador = 0;
+function highestCount(value5) {
+  let highestNumber = Math.max(...value5);
+  let conter = 0;
+  for (let i = 0; i < value5.length; i += 1){
+    if (highestNumber === avalue5[i]){
+      conter += 1;
+    }
+  }
+  return conter;
 }
 
-// Desafio 7 - com problemas- fiscal não curtiu
+// Desafio 7 - okay
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Mouse = Math.abs(mouse - cat1);
   let cat2Mouse = Math.abs(mouse - cat2);
