@@ -62,12 +62,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let message;
   if (cat1 === cat2) {
     message = 'os gatos trombam e o rato foge';
-  } else if ((mouse - cat2) < (mouse - cat1)){
+  } else if ((mouse - cat2) < (mouse - cat1)) {
     message = 'cat2';
   } else {
     message = 'cat1';
   }
-  return message
+  return message;
 }
 console.log(catAndMouse(4, 1, 2));
 console.log(catAndMouse(18, 12, 6));
