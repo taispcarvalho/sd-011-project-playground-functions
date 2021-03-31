@@ -22,8 +22,6 @@ function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 // Desafio 6
-
-let teste = [9, 1, 2, 3, 9, 5, 7];
 function highestNumber(vetor) {
   let higherNum = 0;
   for (let index = 0; index < vetor.length; index += 1) {
@@ -46,8 +44,6 @@ function bigerCount(array) {
 function highestCount(teste) {
   return bigerCount(teste);
 }
-console.log(highestCount(teste));
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distcat1 = Math.abs(mouse - cat1);
