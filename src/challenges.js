@@ -73,12 +73,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayOfNumbers) {
   return arrayOfNumbers.map((number) => {
     if (number % 3 === 0) {
-      if (number % 5 !== 0)
+      if (number % 5 !== 0) {
         return 'fizz';
+      }
       return 'fizzBuzz';
     }
-    if (number % 5 === 0)
+    if (number % 5 === 0) {
       return 'buzz';
+    }
     return 'bug!';
   });
 }
