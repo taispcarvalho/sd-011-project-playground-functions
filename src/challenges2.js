@@ -18,9 +18,8 @@ function generatePhoneNumber(numbers) {
   let condition = repeatTimes(numbers[i], numebers)
 
   for(let i = 0; i < numbers.length; i += 1){
-    let condition = repeatTimes(numbers[i], numebers)
 
-    if(numbers[i] > 9 || numbers[i] < 0 || condition == true){
+    if(numbers[i] > 9 || numbers[i] < 0 ||){
       return 'não é possível gerar um número de telefone com esses valores';
     } else if (numbers.length !== 11){
       return 'Array com tamanho incorreto.'
