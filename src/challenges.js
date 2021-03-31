@@ -84,11 +84,59 @@ function fizzBuzz(arrayNumbers) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encodeString = '';
+  string.toLowerCase();
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
+    case 'a':
+      encodeString += '1';
+      break;
+    case 'e':
+      encodeString += '2';
+      break;
+    case 'i':
+      encodeString += '3';
+      break;
+    case 'o':
+      encodeString += '4';
+      break;
+    case 'u':
+      encodeString += '5';
+      break;
+    default:
+      encodeString += string[index];
+      break;
+    }
+  }
+  return encodeString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let decodeString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
+    case '1':
+      decodeString += 'a';
+      break;
+    case '2':
+      decodeString += 'e';
+      break;
+    case '3':
+      decodeString += 'i';
+      break;
+    case '4':
+      decodeString += 'o';
+      break;
+    case '5':
+      decodeString += 'u';
+      break;
+    default:
+      decodeString += string[index];
+      break;
+    }
+  }
+  return decodeString;
 }
 
 module.exports = {
