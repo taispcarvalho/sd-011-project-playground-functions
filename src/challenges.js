@@ -74,12 +74,15 @@ function fizzBuzz(array) {
   }
   return finalArray;
 }
-let arr = [2, 15, 7, 9, 45]
-console.log(fizzBuzz(arr))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let vowel = 'aeiou'
+  let newString = ''
+  for(let index = 0; index < string.length; index += 1) {
+    
+  }
+
 }
 function decode() {
   // seu código aqui
