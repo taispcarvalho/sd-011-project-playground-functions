@@ -85,28 +85,29 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode(vowels) {
-  for (let index = 0; index < vowels.length; index += 1) {
-    vowels = vowels.replace('a', 1);
-    vowels = vowels.replace('e', 2);
-    vowels = vowels.replace('i', 3);
-    vowels = vowels.replace('o', 4);
-    vowels = vowels.replace('u', 5);
+function encode(encodeVowels) {
+  for (let index = 0; index < encodeVowels.length; index += 1) {
+    encodeVowels = encodeVowels.replace('a', 1);
+    encodeVowels = encodeVowels.replace('e', 2);
+    encodeVowels = encodeVowels.replace('i', 3);
+    encodeVowels = encodeVowels.replace('o', 4);
+    encodeVowels = encodeVowels.replace('u', 5);
   }
 
   return vowels;
 }
 
-function decode(vowels) {
-  for (let index = 0; index < vowels.length; index += 1) {
-    vowels = vowels.replace(1, 'a');
-    vowels = vowels.replace(2, 'e');
-    vowels = vowels.replace(3, 'i');
-    vowels = vowels.replace(4, 'o');
-    vowels = vowels.replace(5, 'u');
+function decode(decodeVowels) {
+  for (let index = 0; index < decodeVowels.length; index += 1) {
+    decodeVowels = decodeVowels.replace(1, 'a');
+    decodeVowels = decodeVowels.replace(2, 'e');
+    decodeVowels = decodeVowels.replace(3, 'i');
+    decodeVowels = decodeVowels.replace(4, 'o');
+    decodeVowels = decodeVowels.replace(5, 'u');
   }
-  return vowels;
+  return decodeVowels;
 }
+
 
 module.exports = {
   calcArea,
