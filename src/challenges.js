@@ -56,11 +56,11 @@ function fizzBuzz(numeros) {
     let restoDiv5 = numeros[index] % 5;
     if ((restoDiv3 === 0) && (restoDiv5 === 0)) {
       arrayFizzBuzz.push('fizzBuzz');
-    } if (restoDiv3 === 0) {
+    } else if (restoDiv3 === 0) {
       arrayFizzBuzz.push('fizz');
-    } if (restoDiv5 === 0) {
+    } else if (restoDiv5 === 0) {
       arrayFizzBuzz.push('buzz');
-    } arrayFizzBuzz.push('bug!');
+    } else { arrayFizzBuzz.push('bug!'); }
   } return arrayFizzBuzz;
 }
 
