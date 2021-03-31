@@ -53,30 +53,40 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let result = [];
-  for (let index = 0; index < array.length; index += 1) {
-    if (index % 15 === 0) {
-      result.push('FizzBuzz');
-    } else if (index % 3 === 0) {
-      result.push('Fizz');
-    } else if (index % 5 === 0) {
-      result.push('Buzz');
-    } else {
-      result.push('bug!');
+  for (let i = 0; i < array.length; i += 1) {
+    //var f = i % 3 == 0, b = i % 5 == 0;
+    //console.log(f ? b ? "FizzBuzz" : "Fizz" : b ? "Buzz" : i);
+    if (i%15===0) {
+      console.log("FizzBuzz");
+      }
+      
+      else if (i%3===0) {
+      console.log("Fizz");
+      }
+      
+      else if (i%5===0) {
+      console.log("Buzz");
+      }
+      
+      else {
+      console.log(i);
+      }
     }
-  }
-  return result;
+    return result;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
-function encode(string) {
+function encode(str) {
   const letterChange = { a: 1, e: 2, i: 3, o: 4, u: 5};
-  return string.replace(/[a e i o u]/g, match => letterChange[match]);
+  return str.replace(/[aeiou]/g, match => letterChange[match]);
 }
+console.log(encode("H4w 1r2 y45 t4d1y?"))
 
-// Desafio 10
-function decode() {
-
+function decode(str) {
+  return str.replace(/\d/g, match => 'Zaeiou'[match]);
 }
+console.log(decode("H4w 1r2 y45 t4d1y?"))
 
 module.exports = {
   calcArea,
