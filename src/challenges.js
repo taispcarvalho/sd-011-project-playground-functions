@@ -1,5 +1,3 @@
-const { configs } = require("eslint-plugin-sonarjs");
-
 // Desafio 1 - okay
 function compareTrue(value1, value2) {
   return value1 && value2;
@@ -39,8 +37,8 @@ function footballPoints(wins, ties) {
 function highestCount(value5) {
   let highestNumber = Math.max(...value5);
   let conter = 0;
-  for (let i = 0; i < value5.length; i += 1){
-    if (highestNumber === avalue5[i]){
+  for (let i = 0; i < value5.length; i += 1) {
+    if (highestNumber === value5[i]) {
       conter += 1;
     }
   }
