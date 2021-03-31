@@ -22,7 +22,6 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(list) {
-  // seu código aqui
   let newList = list.shift();
   let listReverse = list.reverse();
   let newList2 = listReverse.shift();
@@ -50,15 +49,15 @@ function highestCount(list) {
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
-  let x = Math.abs(mouse - cat1);
-  let y = Math.abs(mouse - cat2);
-  if (x > y) {
-    return 'cat2';
-  } if (x < y) {
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Dist = Math.abs(mouse - cat1);
+  let cat2Dist = Math.abs(mouse - cat2);
+  if (cat1Dist === cat2Dist) {
+    return 'os gatos trombam e o rato foge';
+  } if (cat1Dist < cat2Dist) {
     return 'cat1';
   }
-  return 'os gatos trombam e o rato foge';
+  return 'cat2';
 }
 
 // Desafio 8
