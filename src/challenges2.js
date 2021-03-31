@@ -45,6 +45,7 @@ function checkSizePhoneNumber(arraySize) {
   if (arraySize.length !== 11) {
     return true;
   }
+  return false;
 }
 
 // Desafio 11
