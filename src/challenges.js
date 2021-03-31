@@ -85,18 +85,18 @@ function fizzBuzz(arrayNumeros) {
   // return mensagemRetorno;
 
   for(let index in arrayNumeros){
-    if (arrayNumeros[index] % 5 === 0 && arrayNumeros[index] % 3 === 0){
+    if (arrayNumeros[index] % 15 === 0 ){
       mensagemRetorno.push("fizzbuzz");
-    } else if (arrayNumeros[index] % 5 === 0){
-      mensagemRetorno.push("buzz");
     } else if (arrayNumeros[index] % 3 === 0){
+      mensagemRetorno.push("buzz");
+    } else if (arrayNumeros[index] % 5 === 0){
       mensagemRetorno.push("fizz");
     } else {
       mensagemRetorno.push("bug!")
     }
-  }
-
+  }  
   return mensagemRetorno
+
 }
 
 // Desafio 9
