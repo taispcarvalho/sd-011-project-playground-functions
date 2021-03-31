@@ -30,7 +30,7 @@ function concatName(arrWords) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  
+  let hits = 0;
   return hits = (3 * wins) + ties;
 }
 
@@ -53,6 +53,7 @@ function highestCount(arrNum) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   
+  let whoCatches = '';
   if ((cat1 - mouse) < (cat2 - mouse)) {
     whoCatches = 'cat1';
   }
