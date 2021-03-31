@@ -73,7 +73,7 @@ function fizzBuzz(arrayNumbers) {
 function encode(stringEncode) {
   for (let index = 0; index < stringEncode.length; index += 1) {
     switch (stringEncode[index]) {
-      case 'a ':
+      case 'a':
         stringEncode = stringEncode.replace('a','1');
         break;
       case 'e':
@@ -94,8 +94,28 @@ function encode(stringEncode) {
   }
   return stringEncode;
 }
-function decode() {
-  // seu código aqui
+function decode(stringDecode) {
+  for (let index2 = 0; index2 < stringDecode.length; index2 += 1) {
+    switch (stringDencode[index]) {
+      case '1':
+        stringDencode = stringDencode.replace('1','a');
+        break;
+      case '2':
+        stringDencode = stringDencode.replace('2', 'e');
+        break;
+      case '3':
+        stringDencode = stringDencode.replace('3','i');
+        break;
+      case '4':
+        stringDencode = stringDencode.replace('4','o');
+        break;
+      case '5':
+        strinDeEncode = stringDencode.replace('5','u');
+        break;
+      default:
+        break;
+    }
+  }
 }
 
 module.exports = {
