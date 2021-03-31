@@ -82,7 +82,7 @@ function fizzBuzz(value6) {
 
 // Desafio 9
 function encode(value7) {
-let res = value7.split('');
+  let res = value7.split('');
 
 for (let i = 0; i < res.length; i +=1) {
   if (res[i] === 'a') {
@@ -110,19 +110,19 @@ function decode(value8) {
 let res = value8.split('');
 
 for (let i = 0; i < res.length; i +=1){
-  if (res[i] == '1'){
+  if (res[i] === '1'){
     res[i] = 'a';
   }
-  if (res[i] == '2'){
+  if (res[i] === '2'){
     res[i] = 'e';
   }
-  if (res[i] == '3'){
+  if (res[i] === '3'){
     res[i] = 'i';
   }
-  if (res[i] == '4'){
+  if (res[i] === '4'){
     res[i] = 'o';
   }
-  if (res[i] == '5'){
+  if (res[i] === '5'){
     res[i] = 'u';
   }
 }
