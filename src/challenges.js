@@ -42,7 +42,6 @@ function findHighestNumber(arrNum) {
   }
   return counter;
 }
-console.log(findHighestNumber([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -54,10 +53,10 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'cat2';
 }
-
+console.log(catAndMouse(3, 1, 1))
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  
 }
 
 // Desafio 9
