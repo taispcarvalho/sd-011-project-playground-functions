@@ -43,17 +43,17 @@ function verifyDigit(arrayOfNumbers) {
 }
 
 function verifyRepetition(arrayOfNumbers) {
-  let countRepetition = 0;
-  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
-    for (let index2 = 0; index2 < arrayOfNumbers.length; index2 += 1) {
-      if (arrayOfNumbers[index] === arrayOfNumbers[index2]) {
+  arrayOfNumbers.map((number, index) => {
+    let countRepetition = 0;
+    for (index = 0; index < arrayOfNumbers.length; index += 1) {
+      if (arrayOfNumbers[number] === arrayOfNumbers[index]) {
         countRepetition += 1;
       }
-      if (countRepetition >= 4) {
+      if (countRepetition >= 3) {
         return false;
       }
     }
-  }
+  });
   return true;
 }
 
