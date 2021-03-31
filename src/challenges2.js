@@ -48,18 +48,6 @@ function checkSizePhoneNumber(numbersArray) {
   return false;
 }
 
-function checkConditionals(arrayNumbers) {
-  let negOrBiggNine = checkNegativeNineNumber(arrayNumbers);
-  let repeatedNumber = checkRepeatedNumber(arrayNumbers);
-  let sizePhone = checkSizePhoneNumber(arrayNumbers);
-  if (negOrBiggNine || repeatedNumber ) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-  if (sizePhone) {
-    return 'Array com tamanho incorreto.';
-  }
-}
-
 // Desafio 11
 function generatePhoneNumber(arrayPhone) {
   let negOrBiggNine = checkNegativeNineNumber(arrayPhone);
