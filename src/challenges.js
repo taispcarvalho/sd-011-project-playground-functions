@@ -67,23 +67,30 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
+// part of Desafio 8
+function testFizzBuzz(number) {
+  temporaryHolder = '';
+  if (number % 3 !== 0) {
+    temporaryHolder = 'bug!';
+  }
+  if (number % 3 === 0) {
+    temporaryHolder = 'fizz';
+  }
+  if (number % 5 === 0) {
+    temporaryHolder = 'buzz';
+  }
+  if (number % 3 === 0 && number % 5 === 0) {
+    temporaryHolder = 'fizzBuzz';
+  }
+  return temporaryHolder;
+}
+
 // Desafio 8
 function fizzBuzz(numArray) {
   let responseArray = [];
 
   for (let number of numArray) {
-    if (number % 3 !== 0) {
-      responseArray.push('bug!');
-    }
-    if (number % 3 === 0) {
-      responseArray.push('fizz');
-    }
-    if (number % 5 === 0) {
-      responseArray.push('buzz');
-    }
-    if (number % 3 === 0 && number % 5 === 0) {
-      responseArray.push('fizzBuzz');
-    }
+    responseArray.push(testFizzBuzz(number));
   }
   return responseArray;
 }
