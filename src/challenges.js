@@ -50,7 +50,7 @@ function arraytest() {
   if (test = [9, 1, 2, 3, 9, 5, 7]) {
     let resultado = console.log(highestCount(test));
   }
-  return arraytest
+  return arraytest;
 }
 
 // Desafio 7 -ok
@@ -67,49 +67,49 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return resultado;
 }
-  
+
 // Desafio 8 -ok
 function fizzBuzz(arrayNumbers) {
   let comparacao = [];
-    for (let index = 0; index < arrayNumbers.length; index += 1) {
-      if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
-        comparacao.push('fizzBuzz');
-      } else if (arrayNumbers[index] % 5 === 0) {
-        comparacao.push('buzz');
-      } else if (arrayNumbers[index] % 3 === 0) {
-        comparacao.push('fizz');
-      } else {
-        comparacao.push('bug!');
-      }
+   for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
+      comparacao.push('fizzBuzz');
+    } else if (arrayNumbers[index] % 5 === 0) {
+      comparacao.push('buzz');
+    } else if (arrayNumbers[index] % 3 === 0) {
+      comparacao.push('fizz');
+    } else {
+      comparacao.push('bug!');
     }
+  }
   return comparacao;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(frase) {
-  for (let index = 0; index < frase.length; index += 1){
+  for (let index = 0; index < frase.length; index += 1) {
     frase = frase.replace('a', '1');
     frase = frase.replace('e', '2');
     frase = frase.replace('i', '3');
     frase = frase.replace('o', '4');
     frase = frase.replace('u', '5');
   }
-  return frase
+  return frase;
 }
 console.log(encode('hi there!'))
 
 function decode(frase) {
-  for (let index = 0; index < frase.length; index += 1){
+  for (let index = 0; index < frase.length; index += 1) {
     frase = frase.replace('1', 'a');
     frase = frase.replace('2', 'e');
     frase = frase.replace('3', 'i');
     frase = frase.replace('4', 'o');
     frase = frase.replace('5', 'u');
   }
-  return frase
+  return frase;
 }
-console.log(decode('h3 th2r2!'))
+console.log(decode('h3 th2r2!'));
 module.exports = {
   calcArea,
   catAndMouse,

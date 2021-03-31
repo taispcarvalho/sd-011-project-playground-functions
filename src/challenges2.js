@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(array, name) {
-let test = [];
+  let test = [];
   for(let index in array)
     if (array !== []){
     test.push = {
@@ -8,10 +8,12 @@ let test = [];
     name: name,
     }
   }
-return test
+return test;
 }
-let tecnologias = ["React", "Jest", "HTML", "CSS", "JavaScript"]
-console.log(tecnologias , 'Islene')
+let tecnologias = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+
+console.log(techList(tecnologias.sort(a,z), 'Islene'));
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui

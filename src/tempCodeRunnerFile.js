@@ -9,5 +9,5 @@ let test = [];
   }
 return test
 }
-let tecnologias = ["React", "Jest", "HTML", "CSS", "JavaScript"]
-console.log(tecnologias , 'Islene')
+let tecnologias = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+console.log(techList(tecnologias.sort(a,z) , 'Islene'));
