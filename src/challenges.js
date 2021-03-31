@@ -49,15 +49,14 @@ for (let index2 in numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = mouse - cat1;
-  let distanceCat2 = mouse - cat2;
+  let distanceCat1 = Math.abs(cat1 - mouse);
+  let distanceCat2 = Math.abs(cat2 - mouse);
   if (distanceCat1 === distanceCat2) {
     return 'Os dois gatos trombam e o rato foge';
-  } else if (distanceCat1 < distanceCat2) {
-    return 'cat1';
-  } else {
+  } else if (distanceCat1 > distanceCat2) {
     return 'cat2';
   }
+  return 'cat1'; 
 }
 
 // Desafio 8
