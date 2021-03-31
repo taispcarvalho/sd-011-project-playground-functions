@@ -33,9 +33,9 @@ function footballPoints(wins, ties) {
 }
 
 // D6 Auxiliary Function
-function highestNumber(array) {
+function highestNumber(numbers) {
   let highNumber = 0;
-  for (let i in array) if (array[i] >= highNumber) highNumber = array[i];
+  for (let i in numbers) if (numbers[i] >= highNumber) highNumber = numbers[i];
   return highNumber;
 }
 
