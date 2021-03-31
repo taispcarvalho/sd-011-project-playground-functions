@@ -26,26 +26,24 @@ function footballPoints(wins, ties) {
 // Desafio 6
 let myArray = [0, 0, 0];
 function higherthNumber(arrayNumbers) {
-  let higherthNumber = arrayNumbers[0];
-  for ( let index = 0; index < arrayNumbers.length; index += 1 ) {
-  if ( arrayNumbers[index] > higherthNumber ) {
-  higherthNumber = arrayNumbers[index];
+  let bigNumber = arrayNumbers[0];
+  for(let index = 0; index < arrayNumbers.length; index += 1) {
+  if(arrayNumbers[index] > bigNumber) {
+  bigNumber = arrayNumbers[index];
   }
  }
- return higherthNumber;
+ return bigNumber;
 }
 function highestCount(arrayNumbers) {
   let timesNumberAppears = 0;
   let higherth = higherthNumber(arrayNumbers);
-  for ( let index = 0; index < arrayNumbers.length; index += 1 ) {
-  if ( arrayNumbers[index] === higherth ) {
-  timesNumberAppears = timesNumberAppears + 1;
+  for(let index = 0; index < arrayNumbers.length; index += 1) {
+  if(arrayNumbers[index] === higherth) {
+    timesNumberAppears = timesNumberAppears + 1;
   }
   }
   return timesNumberAppears;
-}
-
-console.log(highestCount(myArray))
+};
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -60,10 +58,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayNumber) {
-  for ( let index = 0; index < arrayNumber.length; index += 1 ) {
-  
-  }
-}
+  for(let index = 0; index < arrayNumber.length; index += 1)
 
 // Desafio 9
 function encode() {
