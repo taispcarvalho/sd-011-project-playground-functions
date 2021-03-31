@@ -48,8 +48,8 @@ function highestCount(arrNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Position = cat1 - mouse;
-  let cat2Position = cat2 - mouse;
+  let cat1Position = Math.abs(mouse - cat1);
+  let cat2Position = Math.abs(mouse - cat2);
 
   if (cat1Position > cat2Position) return 'cat2';
   if (cat1Position < cat2Position) return 'cat1';
@@ -57,7 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 function fbDivider(num) {
-  if (num % 3 === 0 && num % 5 === 0) return 'fizzbuzz';
+  if ((num % 3 === 0) && (num % 5 === 0)) return 'fizzbuzz';
   if (num % 3 === 0) return 'fizz';
   if (num % 5 === 0) return 'buzz';
   return 'bug!';
