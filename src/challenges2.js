@@ -95,9 +95,21 @@ function triangleCheck(lineA,lineB,lineC) {
 
 
 // Desafio 13
-function hydrate() {
+function hydrate(frase) {
   // seu código aqui
+  let agua=0;
+  for (let index in frase){
+    if (frase[index]==='1' || frase[index]==='2' || frase[index]==='3' || frase[index]==='4' || frase[index]==='5' || frase[index]==='6' || frase[index]==='7' || frase[index]==='8' || frase[index]==='9'){
+      agua = agua + parseInt(frase[index]);
+    }
+  }
+  if (agua===1){
+    return agua + ' copo de água';  
+  }else{
+    return agua + ' copos de água';
+  }
 }
+
 
 module.exports = {
   generatePhoneNumber,
