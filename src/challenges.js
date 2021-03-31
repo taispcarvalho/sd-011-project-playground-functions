@@ -16,8 +16,12 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let p;
+  let u;
+  u=array[array.length-1];    // Medium: https://medium.com/@rodrigoum/3-maneiras-de-pegar-o-primeiro-e-%C3%BAltimo-elemento-de-um-array-com-javascript-56e92e6bf3f4
+  p=array[0];
+    return u + ', ' + p;
 }
 
 // Desafio 5
