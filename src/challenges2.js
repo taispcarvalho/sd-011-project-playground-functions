@@ -18,7 +18,7 @@ function techList(techArr, name) {
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11
-function repeatedNumberFinder(arrNumbers2) {  
+function repeatedNumberFinder(arrNumbers2) {
   let count = 0;
   for (let index = 0; index < arrNumbers2.length; index += 1) {
     count = 0;
@@ -36,10 +36,10 @@ function repeatedNumberFinder(arrNumbers2) {
 function generatePhoneNumber(arrNumbers) {
   let newStr = '';
   let repeatedNumber = repeatedNumberFinder(arrNumbers);
-  for (let index = 0; index < arrNumbers.length; index += 1) {
-    if (arrNumbers.length != 11) {
-      return 'Array com tamanho incorreto.';
-    } else if (arrNumbers[index] < 0 || arrNumbers[index] > 9 || repeatedNumber === true) {
+  if (arrNumbers.length != 11) {
+    return 'Array com tamanho incorreto.';}
+  for (let index = 0; index < arrNumbers.length; index += 1) {    
+    if (arrNumbers[index] < 0 || arrNumbers[index] > 9 || repeatedNumber === true) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     if (index === 0) {
@@ -57,7 +57,7 @@ function generatePhoneNumber(arrNumbers) {
   return newStr;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([]));
 
 // Desafio 12
 function triangleCheck() {
