@@ -70,6 +70,14 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 
+function module3(number) {
+  return number % 3;
+}
+
+function module5(number) {
+  return number % 5;
+}
+
 function divisible3and5(number) {
   if (module3 === 0 && module5 !== 0) {
     return 'fizz';
@@ -84,14 +92,6 @@ function divisible3and5(number) {
     return 'bug!';
   }
   return '';
-}
-
-function module3(number) {
-  return number % 3;
-}
-
-function module5(number) {
-  return number % 5;
 }
 
 function fizzBuzz(arrayOfNumbers) {
