@@ -62,12 +62,20 @@ function fizzBuzz(x) {
   }
   return result;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let string2 = '';
+  string.split('').forEach((element) => {
+    string2 += element.replace('a', '1')
+      .replace('e', '2')
+      .replace('i', '3')
+      .replace('o', '4')
+      .replace('u', '5');
+  });
+  return string2;
 }
+
 function decode() {
   // seu código aqui
 }
