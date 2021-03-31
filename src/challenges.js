@@ -49,7 +49,6 @@ function arraytest() {
   if (test = [9, 1, 2, 3, 9, 5, 7]) {
   let resultado = console.log(highestCount(test));
   }
-
   return arraytest
 }
 
@@ -59,16 +58,18 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = cat1 - mouse;
   let distanciaCat2 = cat2 - mouse;
   let resultado = '';
-  if (distanciaCat2 > distanciaCat1) {
+  if (distanciaCat2 < distanciaCat1) {
     resultado = 'cat2';
-  } else if (distanciaCat2 < distanciaCat1) {
+  } else if (distanciaCat2 > distanciaCat1) {
     resultado = 'cat1';
   } else {
     resultado = 'os gatos trombam e o rato foge';
   }
   return resultado;
 }
-console.log(catAndMouse());
+  console.log(catAndMouse(0, 3, 2), catAndMouse(0, 6, 12), catAndMouse(0, 3, 3));
+
+
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
