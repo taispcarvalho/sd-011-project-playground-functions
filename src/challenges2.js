@@ -28,17 +28,20 @@ function isGreater9(str) {
   return str.match(/\d/g).length > 11;
 }
 
-function generatePhoneNumber(arr) {
-  if (arr.length > 11) {
-    return 'Array com tamanho incorreto.';
-  }
-
+function genNumber(arr) {
   let str = arr.join('');
   if (!isGreater9(str) && !isNegative(str) && !isNumThree(arr, str)) {
     str = str.replace(/^(\d{2})(\d{5})(\d{4})/g, '($1) $2-$3');
     return str;
   }
   return 'não é possível gerar um número de telefone com esses valores';
+}
+
+function generatePhoneNumber(arr) {
+  if (arr.length === 11) {
+    return genNumber(arr);
+  }
+  return 'Array com tamanho incorreto.';
 }
 
 // Desafio 12
