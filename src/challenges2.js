@@ -16,7 +16,7 @@ function techList(objects, name) {
   }
   return 'Vazio!';
 }
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Marcelo'));
+// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Marcelo'));
 //
 // Desafio 11
 function generatePhoneNumber() {
