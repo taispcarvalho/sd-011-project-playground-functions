@@ -26,6 +26,7 @@ function generatePhoneNumber(phone) {
   } else {
     result = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}`
     + `${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
+    
     for (let i = 0; i < phone.length; i += 1) {
       let count = 0;
       if (phone[i] > 9 || phone[i] < 0) {
@@ -62,7 +63,8 @@ function triangleCheck(lineA, lineB, lineC) {
 // Find numbers in strings: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
 // RegExp g Modifier (/g): https://www.w3schools.com/jsref/jsref_regexp_g.asp
 // Removing unnecessary zeros: https://stackoverflow.com/questions/3612744/remove-insignificant-trailing-zeros-from-a-number
-// ParseInt: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+// parseInt(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+// toString(): https://www.w3schools.com/jsref/jsref_tostring_number.asp
 // Missing Radix Parameter: https://stackoverflow.com/questions/7818903/jslint-says-missing-radix-parameter
 // Template Literals: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 function hydrate(words) {
