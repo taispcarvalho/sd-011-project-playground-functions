@@ -47,12 +47,12 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 function catAndMouse(mouse, cat1, cat2) {
   let distance1 = mouse - cat1;
   let distance2 = mouse - cat2;
-  if (distance1 > distance2) {
-    return 'cat1';
+  if (distance1 === distance2) {
+    return 'Os gatos trambaram e o rato foge';
   } else if (distance1 < distance2) {
     return 'cat2';
-  } else if (distance1 === distance2) {
-    return 'rato conseguiu fugir';
+  } else {
+    return 'cat1'
   }
   // seu código aqui
 }
