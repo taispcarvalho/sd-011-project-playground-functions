@@ -55,8 +55,8 @@ function arraytest() {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   mouse = 0;
-  let distanciaCat1 = cat1 - mouse;
-  let distanciaCat2 = cat2 - mouse;
+  let distanciaCat1 = Math.abs(cat1 - mouse);
+  let distanciaCat2 = Math.abs(cat2 - mouse);
   let resultado = '';
   if (distanciaCat2 < distanciaCat1) {
     resultado = 'cat2';
