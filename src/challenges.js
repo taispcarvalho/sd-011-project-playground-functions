@@ -60,25 +60,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+
 function fizzBuzz(value6) {
   let numbersConter = [];
   for (let i = 0; i < value6.length; i += 1) {
-    function fizz() {
       if (value6[i] % 3 === 0 && value6[i] % 5 !== 0) {
         numbersConter.push('fizz');
-      }}
-    function buzz() {
+      }
       if (value6[i] % 3 !== 0 && value6[i] % 5 === 0) {
         numbersConter.push('buzz');
-      }}
-    function fizzBuzz() {
+      }
       if (value6[i] % 3 === 0 && value6[i] % 5 === 0) {
-        return numbersConter.push('fizzBuzz');
-      }}
-    function bug() {
+        numbersConter.push('fizzBuzz');
+      }
       if (value6[i] % 3 !== 0 && value6[i] % 5 !== 0) {
-        return numbersConter.push('bug!');
-      }}
+        numbersConter.push('bug!');
+      }
     }
   return (numbersConter);
 }
