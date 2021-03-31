@@ -44,18 +44,10 @@ function generatePhoneNumber(phone) {
 function triangleCheck(lineA, lineB, lineC) {
   let result = false;
   let lines = [];
-  lines.push((Math.abs(lineA), Math.abs(lineB), Math.abs(lineC)));
-
-  let add1 = lines[0] + lines[1];
-  let add2 = lines[0] + lines[2];
-  let add3 = lines[2] + lines[1];
-  let sub1 = lines[0] - lines[1];
-  let sub2 = lines[0] - lines[2];
-  let sub3 = lines[2] - lines[1];
-
-  if (add1 > lines[2] && sub1 < lines[2]) {
-    if (add2 > lines[1] && sub2 < lines[1]) {
-      if (add3 > lines[0] && sub3 < lines[0]) {
+  lines.push(Math.abs(lineA), Math.abs(lineB), Math.abs(lineC));
+  if (lines[0] < (lines[1] + lines[2]) && lines[0] > (lines[1] - lines[2])) {
+    if (lines[1] < (lines[0] + lines[2]) && lines[1] > (lines[0] - lines[2])) {
+      if (lines[2] < (lines[0] + lines[1]) && lines[2] > (lines[0] - lines[1])) {
         result = true;
       }
     }
