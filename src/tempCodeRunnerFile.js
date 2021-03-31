@@ -1,16 +1,17 @@
-let arrayNumbers = [2, 15, 7, 9, 45];
-function fizzBuzz(arrayNumbers) {
-
-  for(let number in arrayNumbers){
-    if (number[i]%3 === 0 && number[i]%5 === 0) {
-    console.log('fizzBuzz');
-    } else if(number[i]%5 === 0) {
-    console.log('buzz');
-    } else if (number[i]%3 === 0) {
-    console.log('fizz');
-    }else {
-    console.log('bug!');
+function highestCount(n, array) {
+  n = array.length;
+  array = [n];
+  let maiorNumero = array[0];
+  let contador = 0;
+  for (let index = 1; index < n; index += 1) {
+    if (array[index] > maiorNumero){
+      maiorNumero = array[index];
     }
   }
-  return arrayNumbers
+  for (let indexCont = 1; indexCont < n; indexCont += 1) {
+    if (array[indexCont] === maiorNumero){
+      contador = contador + 1;
+    } 
+  }
+  return contador 
 }
