@@ -67,9 +67,26 @@ function catAndMouse() {
   // seu código aqui
 }
 
+function fbDivider(value1) {
+  if (value1 % 3 === 0 && value1 % 5 === 0) {
+    return 'fizzbuzz';
+  } else if (value1 % 3 === 0) {
+    return 'fizz';
+  } else if (value1 % 5 === 0) {
+    return 'buzz';
+  } else {
+    return 'bug';
+  }
+}
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrNumbers) {
+  let fizzBuzz = [];
+
+  for (let i = 0; i < arrNumbers.length; i += 1) {
+    fizzBuzz[i] = fbDivider(arrNumbers[i]);
+  }
+  return fizzBuzz;
 }
 
 function changeLetter(letter) {
