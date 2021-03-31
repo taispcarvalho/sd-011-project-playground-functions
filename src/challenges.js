@@ -83,7 +83,7 @@ function fizzBuzz(arrayNumbers) {
       } else if (arrayNumbers[index] % 3 === 0) {
         comparacao.push('fizz');
       } else {
-        comparacao.push('bug');
+        comparacao.push('bug!');
       }
     }
   }
