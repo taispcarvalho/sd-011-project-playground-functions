@@ -88,7 +88,7 @@ function fizzBuzz(arrayNumbers) {
   }
   return comparacao;
 }
-console.log(fizzBuzz());
+console.log(fizzBuzz(comparacao));
 
 // Desafio 9
 function encode() {
