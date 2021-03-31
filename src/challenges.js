@@ -45,14 +45,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = cat1 - mouse;
   let distanciaCat2 = cat2 - mouse;
   if (distanciaCat1 < distanciaCat2) {
-    return 'cat1';
-    //console.log("cat1");
+    return 'cat1';   
   } if (distanciaCat2 < distanciaCat1) {
-    return 'cat2';
-    //console.log('cat2');
+    return 'cat2';    
   } if (cat1 === cat2) {
-    return 'Os gatos trombam e o rato foge';
-    //console.log('Os gatos trombam e o rato foge');
+    return 'Os gatos trombam e o rato foge';    
   }
 }
 
