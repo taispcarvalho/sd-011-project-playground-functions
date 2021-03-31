@@ -86,19 +86,29 @@ function fizzBuzz(input) {
 
 // Desafio 9
 function encode(word) {
-  let workingWord = word;
+  let workingWord = word.split('')
   let translate = { a: 1, e: 2, i: 3, o: 4, u: 5 };
-  for (let index = 0; index < word.length; index += 1) {
+
+  for (let index = 0; index <= word.length; index += 1) {
     for (let indexOfTranslate in translate) {
       if (indexOfTranslate === word[index]) {
-        workingWord[index] = translate['indexOfTranslate'];
+        workingWord[index] = translate[indexOfTranslate];
       }
     }
   }
-  return workingWord;
+  return workingWord.join('');
 }
-function decode() {
-
+function decode(word) { // esse ta dando erro ainda
+  let workingWord = word.split('');
+  let translate = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  for (let index = 0; index < word.length; index += 1) {
+    for (let indexOfTranslate in translate) {
+      if (translate[indexOfTranslate] == word[index]) {
+        workingWord[index] = indexOfTranslate;
+      }
+    }
+  }
+  return workingWord.join('');
 }
 
 module.exports = {
