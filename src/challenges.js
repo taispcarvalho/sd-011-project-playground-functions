@@ -47,7 +47,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (Math.abs(distanceCat2) < Math.abs(distanceCat1)) {
     return 'cat2';
-  } else if (Math.abs(distanceCat2) == Math.abs(distanceCat1)) {
+  } else if (Math.abs(distanceCat2) === Math.abs(distanceCat1)) {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -56,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   let newArray = [];
   for (const key of numbers) {
-    if (key % 3 === 0 &&  key % 5 === 0) {
+    if (key % 3 === 0 && key % 5 === 0) {
       newArray.push('fizzBuzz');
     } else if (key % 3 === 0) {
       newArray.push('fizz');
@@ -71,7 +71,8 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(string) {
-  /*let newString = string;
+  /*
+  let newString = string;
   let vogals = {
     a:1, e:2, i:3, o:4, u:5
   }
@@ -81,7 +82,8 @@ function encode(string) {
      newString.push ('a' = '1');
   }
   return newString
-}*/
+}
+*/
 }
 
 function decode() {
