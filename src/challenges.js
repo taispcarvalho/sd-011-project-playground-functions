@@ -46,8 +46,9 @@ function higherNumber(numbers) {
       higher = key;
     }
   }
-  return higher
+  return higher;
 }
+
 console.log(higherNumber([9, 1, 2, 3, 9, 5, 7]));
 
 function highestCount(numbers) {
