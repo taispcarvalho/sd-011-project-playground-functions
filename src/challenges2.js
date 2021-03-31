@@ -13,31 +13,25 @@ function techList(anyArray, anyName) {
   }
   return techListArray;
 }
-console.log(techList());
 
 // Desafio 11
 function checkIfFollowTheRules(array) {
-  if (array.length !== 11) {
-    return false;
-  } else {
-    for (let index in array) {
-      let count = 0;
-      for (let number of array) {
-        if (array[index] == number) {
-          count += 1;
-          if(count > 2 || array[index] > 9 || array[index] < 0) {
-            return false;
-          }
+  let checked = true;
+  for (let index in array) {
+    let count = 0;
+    for (let number of array) {
+      if (array[index] === number) {
+        count += 1;
+        if(count > 2 || array[index] > 9 || array[index] < 0 || array.length !== 11) {
+          checked = false;
         }
       }
     }
-    return true;
   }
+  return checked;
 };
 
-function generatePhoneNumber(array) {
-
-  
+function generatePhoneNumber(array) {  
 if (checkIfFollowTheRules()) {
   let formatedPhoneNumber = '';
   for (let index = 0; index < array.length; index += 1) {
