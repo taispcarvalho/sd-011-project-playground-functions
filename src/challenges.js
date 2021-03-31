@@ -19,6 +19,7 @@ console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
 function concatName(array) {
+  // para resolver o problema de concatenacao, utilizei este material: https://eslint.org/docs/rules/prefer-template.
   let newArray = `${array[array.length - 1]}, ${array[0]}`;
 
   return newArray;
@@ -36,15 +37,20 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(14, 8));
 
 // Desafio 6
-function highestCount(array) {
+function anotherCount(array) {
   let higherValue = 0;
-  let repeatValue = 0;
-
+  // cria outra funcao para resolver o problema de refatoracao
   for (let highestIndex = 0; highestIndex < array.length; highestIndex += 1) {
     if (higherValue < array[highestIndex]) {
       higherValue = array[highestIndex];
     }
   }
+  return higherValue;
+}
+
+function highestCount(array) {
+  let higherValue = anotherCount(array);
+  let repeatValue = 0;
 
   for (let countIndex = 0; countIndex < array.length; countIndex += 1) {
     if (higherValue === array[countIndex]) {
@@ -54,9 +60,12 @@ function highestCount(array) {
   return repeatValue;
 }
 
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distance;
+  // para resolver o calculo da distancia, utilizei este material: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
   let calc1 = Math.abs(cat1 - mouse);
   let calc2 = Math.abs(cat2 - mouse);
 
@@ -71,7 +80,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return distance;
 }
 
-console.log(catAndMouse(14, 12, 15));
+console.log(catAndMouse(10, 8, 6));
 
 // Desafio 8
 function fizzBuzz() {
@@ -79,8 +88,8 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode(array) {
-
+function encode() {
+  // seu código aqui
 }
 
 function decode() {
