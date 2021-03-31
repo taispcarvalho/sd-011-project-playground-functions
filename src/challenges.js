@@ -2,10 +2,12 @@
 // Reference:
 // Conditional Ternary: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 function compareTrue(value1, value2) {
-  return value1 && value2; // Example: return condition ? true : false; but booleans are not necessary in ternary conditionals, so it's abreviate to just "return value1 && value2;".
+  return value1 && value2; /* Example: return condition ? true : false; but booleans are not necessary in ternary conditionals,
+                              so it's could be abreviate to just "return value1 && value2;". */
 }
 
 // Desafio 2
+// Basic math.
 function calcArea(base, height) {
   return (base * height) / 2;
 }
@@ -28,10 +30,11 @@ function concatName(arrayText) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + ties;
+  return (wins * 3) + ties; // technically, it's (wins * 3) + (ties * 1), but basic math abreviation
 }
 
 // D6 Auxiliary Function
+// Function to take the higher number
 function highestNumber(numbers) {
   let highNumber = 0;
   for (let i in numbers) {
@@ -41,6 +44,7 @@ function highestNumber(numbers) {
 }
 
 // Desafio 6
+// Counter for numbers of times the higher number appears
 function highestCount(numbers) {
   let count = 0;
   let highNumber = highestNumber(numbers);
@@ -49,8 +53,9 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
+// Who has the smaller distance, wins
 function catAndMouse(mouse, cat1, cat2) {
-  let distCat1 = Math.abs(cat1 - mouse);
+  let distCat1 = Math.abs(cat1 - mouse); // Like math's modulus, not return negative numbers
   let distCat2 = Math.abs(cat2 - mouse);
 
   if (distCat1 === distCat2) return 'os gatos trombam e o rato foge';
@@ -59,10 +64,13 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // D8 Auxiliary Function
+// If divisible by 3, fizz, by 5 buzz, by 15 (which is the same as by 3 and 5) fizzBuzz
+// And if is not, bug!
+// LCD: https://en.wikipedia.org/wiki/Lowest_common_denominator
 function fbLoop(numbers) {
   let result = [];
   for (let i = 0; i < numbers.length; i += 1) {
-    switch (true) {
+    switch (true) { // switch had to be used to avoid Code Complexilibity
     case (numbers[i] % 15 === 0):
       result.push('fizzBuzz');
       break;

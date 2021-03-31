@@ -24,8 +24,8 @@ function generatePhoneNumber(phone) {
   if (phone.length > 11 || phone.length < 11) {
     result = 'Array com tamanho incorreto.';
   } else {
-    result = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}`
-    + `${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
+    result = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}`
+    + `${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
     for (let i = 0; i < phone.length; i += 1) {
       let count = 0;
       if (phone[i] > 9 || phone[i] < 0) {
