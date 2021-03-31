@@ -109,14 +109,14 @@ function retunrArr(s) {
 }
 
 function encode(string) {
-  let vog = ['a', 'e', 'i', 'o', 'u'];
+  let vog = ['', 'a', 'e', 'i', 'o', 'u'];
   let str = retunrArr(string);
   let nStr = '';
 
   for (let index = 0; index < str.length; index += 1) {
-    for (let vIndex = 1; vIndex < vog.length; vIndex += 1) {
+    for (let vIndex = 0; vIndex < vog.length; vIndex += 1) {
       if (str[index] === vog[vIndex]) {
-        str[index] = vIndex + 1;
+        str[index] = vIndex;
       }
     }
     nStr += str[index];
@@ -124,6 +124,7 @@ function encode(string) {
   return nStr;
 }
 console.log(encode('hi there!'));
+console.log(encode('aeiou'));
 
 function decode(string) {
   // seu código aqui
@@ -132,9 +133,9 @@ function decode(string) {
   let nStr = '';
 
   for (let index = 0; index < str.length; index += 1) {
-    for (let vIndex = 1; vIndex < vog.length; vIndex += 1) {
+    for (let vIndex = 0; vIndex < vog.length; vIndex += 1) {
       if (str[index] === vIndex.toString()) {
-        str[index] = vog[vIndex - 1];
+        str[index] = vog[vIndex];
       }
     }
     nStr += str[index];
@@ -143,6 +144,7 @@ function decode(string) {
 }
 
 console.log(decode('h3 th2r2!'));
+console.log(decode('01234'));
 
 module.exports = {
   calcArea,
