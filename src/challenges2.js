@@ -36,7 +36,7 @@ function repeatedNumberFinder(arrNumbers2) {
 function generatePhoneNumber(arrNumbers) {
   let newStr = '';
   let repeatedNumber = repeatedNumberFinder(arrNumbers);
-  if (arrNumbers.length != 11) {
+  if (arrNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < arrNumbers.length; index += 1) {
@@ -78,7 +78,10 @@ function hydrate(str) {
       waterGlasses += (parseInt(str[index], 10));
     }
   }
-  return waterGlasses;
+  if (waterGlasses === 1) {
+    return '1 copo de água';
+  }
+  return (`${waterGlasses} copos de água`);
 }
 
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
