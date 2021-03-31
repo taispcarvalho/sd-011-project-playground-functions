@@ -101,14 +101,28 @@ function catAndMouse(mouse, cat1, cat2) {
 
 }
 
-console.log(catAndMouse(0, 3, 2));
-console.log(catAndMouse(0, 6, 12));
 console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
+  let returnArray = [];
+  for (const key of numbers) {
+  if ((key%3) === 0 && (key%5) === 0) {
+    returnArray.push('fizzBuzz');
+  } else if ((key%3) === 0 && (key%5) !== 0) {
+    returnArray.push('fizz');
+  } else if ((key%3) !== 0 && (key%5) === 0) {
+    returnArray.push('buzz');
+  } else {
+    returnArray.push('bug!')
+  }
+  }
+
+  return returnArray;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45, 25]));
 
 // Desafio 9
 function encode() {
