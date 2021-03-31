@@ -74,7 +74,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let comparacao = [];
-  if (arrayNumbers = []) {
+  if (arrayNumbers = arrayNumbers[index]) {
     for (let index = 0; index < arrayNumbers.length; index += 1) {
       if ((arrayNumbers[index] % 3 === 0) && (arrayNumbers[index] % 5 === 0)) {
         comparacao.push('fizzBuzz');
