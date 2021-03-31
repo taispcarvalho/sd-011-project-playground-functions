@@ -51,16 +51,14 @@ const highestCount = (arr) => {
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-const catAndMouse = (cat1, cat2) => {
-  if (cat1 > cat2) {
-    return "cat2";
-  } else if (cat1 < cat2) {
-    return "cat1";
-  } else {
-    return "os gatos trombam e o rato foge";
-  }
+const catAndMouse = (mouse, cat1, cat2) => {
+  const dist1FromM = Math.abs(mouse - cat1);
+  const dist2FromM = Math.abs(mouse - cat2);
+  if (dist2FromM > dist1FromM) return "cat1"
+  else if (dist2FromM < dist1FromM) return "cat2"
+  else return "os gatos trombam e o rato foge."
 }
-console.log(catAndMouse(6, 6));
+console.log(catAndMouse(6, 6, 4));
 
 // Desafio 8
 const fizzBuzz = (arr) => {
@@ -83,10 +81,10 @@ console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+   
 }
 function decode() {
-  // seu código aqui
+  
 }
 
 module.exports = {
