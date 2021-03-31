@@ -9,7 +9,7 @@ function techList(array, name) {
     };
     secondArray.push(objects);
   }
-  if (array === 0) {
+  if (array === []) {
     return 'Vazio!';
   } else {
     return secondArray;
