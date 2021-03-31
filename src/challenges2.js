@@ -105,7 +105,7 @@ function hydrate(string) {
     return count + " copos de água"
 }
 
-console.log(hydrate('2 cerveja'))
+
 
     module.exports = {
       generatePhoneNumber,
