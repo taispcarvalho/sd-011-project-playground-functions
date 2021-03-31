@@ -34,6 +34,11 @@ function generatePhoneNumber(numbers) {
         if(number === numbers[i]){
           count += 1
         }
+        
+        if(count === 3){
+          canBePhoneNumber = false;
+          break;
+        }
       }
 
       if(numbers[i] > 9 || numbers[i] < 0 || count === 3){
@@ -68,7 +73,7 @@ function generatePhoneNumber(numbers) {
 
 
 
-console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
+console.log(generatePhoneNumber([1, 2, 2, 5, 5, 5, 2, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
