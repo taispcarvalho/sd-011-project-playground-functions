@@ -35,7 +35,7 @@ function highestCount(param) {
       maiorNum = param[i];
     }
   }
-  for (let i = 0; i < param.length; i += 1) {    
+  for (let i = 0; i < param.length; i += 1) {
     if (param[i] === maiorNum) {
       qtd += 1;
     }
@@ -60,8 +60,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayParam) {
+  let numbersTested = [];
+  for (let index = 0; index < arrayParam.length; index +=1) {
+    if (arrayParam[index] % 3 === 0 && arrayParam[index] % 5 === 0) {
+      numbersTested.push('fizzBuzz');
+    }else if (arrayParam[index] % 5) {
+      numbersTested.push('buzz');
+    }else if (arrayParam[index] % 3) {
+      numbersTested.push('fizz');
+    } else {
+      numbersTested.push('bug!');
+    }  
+  }
+  return numbersTested;
 }
 
 // Desafio 9
