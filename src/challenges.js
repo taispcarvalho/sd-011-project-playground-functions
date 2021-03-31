@@ -110,19 +110,19 @@ function encode(str) {
 function decode(str) {
   for (let index in str) {
     let aux = str[index];
-    switch(aux) {
-      case '1': str = str.replace(aux, 'a');
-        break;
-      case '2': str = str.replace(aux, 'e');
-        break;
-      case '3': str = str.replace(aux, 'i');
-        break;
-      case '4': str = str.replace(aux, 'o');
-        break;
-      case '5': str = str.replace(aux, 'u');
-        break;
-      default: break;
-    }
+  switch (aux) {
+    case '1': str = str.replace(aux, 'a');
+      break;
+    case '2': str = str.replace(aux, 'e');
+      break;
+    case '3': str = str.replace(aux, 'i');
+      break;
+    case '4': str = str.replace(aux, 'o');
+      break;
+    case '5': str = str.replace(aux, 'u');
+      break;
+    default: break;
+  }
   }
   return str;
 }
