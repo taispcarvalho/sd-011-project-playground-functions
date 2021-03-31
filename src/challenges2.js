@@ -9,7 +9,9 @@ function techList(arrayOfTechnologies, name) {
       });
       return technologiesObjects;
     }
-    return 'Vazio!';
+    if (undefined) {
+      return 'Vazio!';
+    }
   }
 }
 
