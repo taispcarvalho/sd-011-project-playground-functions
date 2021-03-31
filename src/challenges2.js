@@ -3,8 +3,8 @@ function techList(array, name) {
   let lista = [];
   let object = {};
   array.sort();
-  for (let index in array) {
-    object = { tech: array[index], name };
+  for (let index of array) {
+    object = { tech: index, name };
     lista.push(object);
   }
   return lista;
