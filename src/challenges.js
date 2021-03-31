@@ -78,8 +78,7 @@ function encode(string1) {
     if (string1[i] === 'a') {
       codigo.push('1');
       console.log('teste')
-    }
-    else if (string1[i] === 'e') {
+    } else if (string1[i] === 'e') {
       codigo.push('2');
     } else if (string1[i] === 'i') {
       codigo.push('3');
