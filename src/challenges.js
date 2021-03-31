@@ -89,7 +89,7 @@ console.log(fizzBuzz(arrayOfNumbers));
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  // seu código aqu
 }
 function decode() {
   // seu código aqui
