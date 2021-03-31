@@ -58,9 +58,11 @@ function highestCount(arrayOfNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     return 'cat1';
-  } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+  }
+  if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
     return 'cat2';
-  } else if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
+  }
+  if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
     return 'os gatos trombam e o rato foge';
   }
   return 0;
@@ -71,11 +73,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function divisible3and5(number) {
   if (number % 3 === 0 && number % 5 !== 0) {
     return 'fizz';
-  } else if (number % 3 !== 0 && number % 5 === 0) {
+  }
+  if (number % 3 !== 0 && number % 5 === 0) {
     return 'buzz';
-  } else if (number % 3 === 0 && number % 5 === 0) {
+  }
+  if (number % 3 === 0 && number % 5 === 0) {
     return 'fizzBuzz';
-  } else if (number % 3 !== 0 && number % 5 !== 0) {
+  }
+  if (number % 3 !== 0 && number % 5 !== 0) {
     return 'bug!';
   }
   return '';
@@ -90,10 +95,10 @@ function fizzBuzz(arrayOfNumbers) {
 }
 
 // Desafio 9
-function encode(string) {
-  
+function encode() {
+  // seu código aqui
 }
-function decode(string) {
+function decode() {
   // seu código aqui
 }
 
