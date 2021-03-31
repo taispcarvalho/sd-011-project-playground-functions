@@ -1,11 +1,11 @@
 // Desafio 10
 function techList(arrayOfTechnologies, name) {
   let technologiesObjects = [];
-  for (let key in arrayOfTechnologies) {
+  for (let key in arrayOfTechnologies.sort()) {
     if (key < arrayOfTechnologies.length) {
       technologiesObjects.push({
         tech: arrayOfTechnologies[key],
-        name: name
+        name: name,
       });
     }
     if (arrayOfTechnologies === []) {
