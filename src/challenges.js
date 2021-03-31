@@ -11,7 +11,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  array = string.split(' ');
+  let array = string.split(' ');
   return array;
 }
 
@@ -30,6 +30,9 @@ function footballPoints(wins, ties) {
 let highestArray = [0, 0, 0];
 
 // Desafio 6
+
+let arrayExercicio = [9, 1, 2, 3, 9, 5, 7];
+
 function highestCount(array) {
   let higherNumber = 0;
   let repeatNumber = 0;
@@ -79,36 +82,35 @@ function fizzBuzz(array) {
   return newArray;
 }
 
+let stringTest = 'hi there!';
 // Desafio 9
-function encode(string) {
-  let vogals = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-
-  let stringArray = [];
-  let arrayToText = '';
-
-  for (let index in string) {
-    stringArray[index] = vogals[string[index]];
+function encode(word) {
+  for (let index = 0; index < word.length; index += 1) {
+    word = word
+      .replace('a', 1)
+      .replace('e', 2)
+      .replace('i', 3)
+      .replace('o', 4)
+      .replace('u', 5);
   }
-
-  for (let i = 0; i < stringArray.length; i += 1) {
-    if (stringArray[i] === undefined) {
-      stringArray[i] = string[i]
-    }
-    arrayToText += stringArray[i]
-  }
-
-  return arrayToText;
+  return word;
 }
 
-function decode() {
-  // seu código aqui
+function decode(word) {
+  for (let index = 0; index < word.length; index += 1) {
+    word = word
+      .replace(1, 'a')
+      .replace(2, 'e')
+      .replace(3, 'i')
+      .replace(4, 'o')
+      .replace(5, 'u');
+  }
+  return word;
 }
+
+console.log(encode(stringTest))
+console.log(decode(stringTest))
+
 
 module.exports = {
   calcArea,
