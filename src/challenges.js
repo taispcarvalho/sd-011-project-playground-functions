@@ -30,8 +30,18 @@ console.log(footballPoints(14, 8));
 
 // Desafio 6
 
-function highestCount() {
+function highestCount(number) {
+  let maxNumber = Math.max.apply(null, number);
+  let repeatNumber = 0;
+  for (let index = 0; index < number.length; index += 1) {
+    if (number[index] === maxNumber) {
+      repeatNumber += 1;
+    }
+  }
+  return repeatNumber;
 }
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
