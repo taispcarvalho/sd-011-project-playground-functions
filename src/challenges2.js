@@ -48,23 +48,26 @@ function checkSizePhoneNumber(numbersArray) {
   return false;
 }
 
-// Desafio 11
-function generatePhoneNumber(arrayPhone) {
-  if (checkNegativeNineNumber(arrayPhone) 
-  || checkNegativeNineNumber(arrayPhone) || checkRepeatedNumber(arrayPhone)) {
+function checkConditionals(arrayNumbers) {
+  let negOrBiggNine = checkNegativeNineNumber(arrayNumbers);
+  let repeatedNumber = checkRepeatedNumber(arrayNumbers);
+  let sizePhone = checkSizePhoneNumber(arrayNumbers);
+  if (negOrBiggNine || repeatedNumber ) {
     return 'não é possível gerar um número de telefone com esses valores';
-  } if (checkSizePhoneNumber(arrayPhone)) {
+  }
+  if (sizePhone) {
     return 'Array com tamanho incorreto.';
   }
+}
+
+// Desafio 11
+function generatePhoneNumber(arrayPhone) {
+  checkConditionals(arrayPhone);
   return `(${arrayPhone[0]}${arrayPhone[1]}) ${arrayPhone[2]}${arrayPhone[3]}${arrayPhone[4]}
   ${arrayPhone[5]}-${arrayPhone[6]}${arrayPhone[7]}${arrayPhone[8]}${arrayPhone[9]}${arrayPhone[10]}`;
 }
 
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
-console.log(checkRepeatedNumber([1, 2, 1, 1, 5, 6, 7, 8, 9, 0, 1, 0]));
-console.log(checkNegativeNineNumber([1, -2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 0]));
-console.log(checkSizePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 0]));
 
 // Desafio 12
 function triangleCheck() {
