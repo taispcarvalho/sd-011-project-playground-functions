@@ -66,6 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
+// Desafio 8
 function checkDividers35(num) {
   if (num % 3 === 0 && num % 5 === 0) {
     return 'fizzBuzz';
@@ -79,7 +80,6 @@ function checkDividers35(num) {
   return 'bug!';
 }
 
-// Desafio 8
 function fizzBuzz(array) {
   let anwser = [];
   for (let index = 0; index < array.length; index += 1) {
@@ -88,27 +88,6 @@ function fizzBuzz(array) {
   return anwser;
 }
 
-// function replaceVowels(char) {
-//   switch (char) {
-//     case 'a':
-//       return '1';
-//       break;
-//     case 'e':
-//       return '2';
-//       break;
-//     case 'i':
-//       return '3';
-//       break;
-//     case 'o':
-//       return '4';
-//       break;
-//     case 'u':
-//       return '5';
-//       break;
-//     default:
-//       return char;
-//   }
-// }
 // Desafio 9
 function encode(string) {
   string = string.replace(/a/g, '1');

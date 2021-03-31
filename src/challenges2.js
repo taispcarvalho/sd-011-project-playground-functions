@@ -26,7 +26,7 @@ function checkValidity(array) {
     }
     counter[array[index]] += 1;
   }
-  if (Math.max(counter) >= 3) {
+  if (Math.max(...counter) >= 3) {
     return false;
   }
   return true;
@@ -43,8 +43,7 @@ function generatePhoneNumber(tel) {
   let lastFour = `-${tel[7]}${tel[8]}${tel[9]}${tel[10]}`;
   return `${areaCode}${firstFive}${lastFour}`;
 }
-// let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-// console.log(`(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`);
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
