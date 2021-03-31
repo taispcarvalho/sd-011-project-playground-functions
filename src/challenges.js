@@ -67,22 +67,14 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// part of Desafio 8
 function testFizzBuzz(number) {
-  temporaryHolder = '';
-  if (number % 3 !== 0) {
-    temporaryHolder = 'bug!';
-  }
-  if (number % 3 === 0) {
-    temporaryHolder = 'fizz';
-  }
-  if (number % 5 === 0) {
-    temporaryHolder = 'buzz';
-  }
-  if (number % 3 === 0 && number % 5 === 0) {
-    temporaryHolder = 'fizzBuzz';
-  }
-  return temporaryHolder;
+  let temporaryHolder = '';
+  
+  return (number % 3 !== 0) ? temporaryHolder = 'bug!'
+       : (number % 3 === 0 && number % 5 === 0) ? temporaryHolder = 'fizzBuzz'
+       : (number % 3 !== 0 && number % 5 === 0) ? temporaryHolder = 'buzz'
+       : (number % 3 === 0 && number % 5 !== 0) ? temporaryHolder = 'fizz'
+       : temporaryHolder = 'none';
 }
 
 // Desafio 8
