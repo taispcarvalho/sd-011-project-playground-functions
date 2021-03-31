@@ -75,22 +75,50 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbers) {
-  let answer = [];
+// function fizzBuzz(numbers) {
+//   let answer = [];
 
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
-      answer.push('fizz');
-    } else if (numbers[index] % 3 !== 0 && numbers[index] % 5 === 0) {
-      answer.push('buzz');
-    } else if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      answer.push('fizzBuzz');
-    } else {
-      answer.push('bug!');
-    }
+//   for (let index = 0; index < numbers.length; index += 1) {
+//     if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
+//       answer.push('fizz');
+//     } else if (numbers[index] % 3 !== 0 && numbers[index] % 5 === 0) {
+//       answer.push('buzz');
+//     } else if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+//       answer.push('fizzBuzz');
+//     } else {
+//       answer.push('bug!');
+//     }
+//   }
+
+//   return answer;
+// }
+
+function isDivisible(dividend, divisor) {
+  if (dividend % divisor === 0) {
+    return true;
   }
 
-  return answer;
+  return false;
+}
+
+function numberToFizzBuzz(number) {
+  if (isDivisible(15, number)) {
+    return 'fizzBuzz';
+  }
+  if (isDivisible(5, number)) {
+    return 'buzz';
+  }
+  if (isDivisible(3, number)) {
+    return 'fizz';
+  }
+  return 'bug!';
+}
+
+function fizzBuzz(numbers) {
+  for (let number of numbers) {
+    let index = numbers.indexOf(number);
+    numbers[index] = numberToFizzBuzz(number);
+  }
 }
 
 // Desafio 9
