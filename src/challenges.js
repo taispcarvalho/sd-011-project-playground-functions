@@ -48,7 +48,7 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 function catAndMouse(mouse, cat1, cat2) {
   let distance1 = mouse - cat1;
   let distance2 = mouse - cat2;
-  let catMouse = [];
+  let catMouse;
 
   if (distance1 > distance2) {
     catMouse.push('cat1');
@@ -57,10 +57,11 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distance1 === distance2) {
     catMouse.push('Os gatos trambaram e o rato foge');
   }
+  console.log(catMouse);
   return catMouse;
   // seu código aqui
 }
-
+console.log(catAndMouse(12, 2, 3));
 // Desafio 8
 function fizzBuzz(array) {
   let number = 0;
