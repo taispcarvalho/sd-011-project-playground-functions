@@ -71,7 +71,6 @@ function fizzBuzz(numerosDesafio8) {
 }
 
 // Desafio 9
-let string1 = 'hi there!';
 function encode(string1) {
   let codigo = [];
   for (let i = 0; i < string1.length; i += 1) {
@@ -91,7 +90,6 @@ function encode(string1) {
   }
   return codigo.join('');
 }
-encode(string1);
 
 function decode() {
   // seu código aqui
