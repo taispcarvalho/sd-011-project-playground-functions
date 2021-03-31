@@ -17,19 +17,19 @@ function splitSentence(frase) {
   return arrayFrase;
 }
 
-// Desafio 4
+// Desafio 4 - ok - verificar
 function concatName(array) {
   let string = array[array.length - 1].concat(', ' + array[0]);
   return string;
 }
 
-// Desafio 5
+// Desafio 5 - ok
 function footballPoints(wins, ties) {
   let pontos = (wins * 3) + ties;
   return pontos;
 }
 
-// Desafio 6
+// Desafio 6 - ok - verificar
 function highestCount(array) {
   let maiorNumero = 0;
   let numeroRepetido = 0;
@@ -50,9 +50,10 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = mouse - cat1;
   let distanciaCat2 = mouse - cat2;
-  if (distanciaCat1 > distanciaCat2) {
+
+  if (math.abs(distanciaCat1) > math.abs(distanciaCat2)) {
     console.log('cat2');
-  } else if (distanciaCat1 < distanciaCat2) {
+  } else if (math.abs(distanciaCat1) < math.abs(distanciaCat2)) {
     console.log('cat1');
   } else {
     console.log('Os gatos trombam e o rato foge');
