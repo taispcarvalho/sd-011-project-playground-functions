@@ -100,7 +100,7 @@ function fizzBuzz(array) {
 function encodeA(string) {
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] === 'a') {
-      string[index] = 1;
+      string[index] = '1';
     }
   }
 }
@@ -108,7 +108,7 @@ function encodeA(string) {
 function encodeE(string) {
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] === 'e') {
-      string[index] = 2;
+      string[index] = '2';
     }
   }
 }
@@ -116,7 +116,7 @@ function encodeE(string) {
 function encodeI(string) {
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] === 'i') {
-      string[index] = 3;
+      string[index] = '3';
     }
   }
 }
@@ -124,7 +124,7 @@ function encodeI(string) {
 function encodeO(string) {
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] === 'o') {
-      string[index] = 4;
+      string[index] = '4';
     }
   }
 }
@@ -132,14 +132,14 @@ function encodeO(string) {
 function encodeU(string) {
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] === 'u') {
-      string[index] = 5;
+      string[index] = '5';
     }
   }
 }
 
 function decode1(string) {
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 1) {
+    if (string[index] === '1') {
       string[index] = 'a';
     }
   }
@@ -147,7 +147,7 @@ function decode1(string) {
 
 function decode2(string) {
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 2) {
+    if (string[index] === '2') {
       string[index] = 'e';
     }
   }
@@ -155,7 +155,7 @@ function decode2(string) {
 
 function decode3(string) {
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 3) {
+    if (string[index] === '3') {
       string[index] = 'i';
     }
   }
@@ -163,7 +163,7 @@ function decode3(string) {
 
 function decode4(string) {
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 4) {
+    if (string[index] === '4') {
       string[index] = 'o';
     }
   }
@@ -171,7 +171,7 @@ function decode4(string) {
 
 function decode5(string) {
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 5) {
+    if (string[index] === '5') {
       string[index] = 'u';
     }
   }
@@ -179,21 +179,21 @@ function decode5(string) {
 
 function encode(string) {
   let sentence = string;
-  decode1(sentence);
-  decode2(sentence);
-  decode3(sentence);
-  decode4(sentence);
-  decode5(sentence);
-  return sentence;
-}
-
-function decode(string) {
-  let sentence = string;
   encodeA(sentence);
   encodeE(sentence);
   encodeI(sentence);
   encodeO(sentence);
   encodeU(sentence);
+  return sentence;
+}
+
+function decode(string) {
+  let sentence = string;
+  decode1(sentence);
+  decode2(sentence);
+  decode3(sentence);
+  decode4(sentence);
+  decode5(sentence);
   return sentence;
 }
 
