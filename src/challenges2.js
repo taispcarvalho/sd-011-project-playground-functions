@@ -22,23 +22,23 @@ function countRepeatNumber(arrayNumbers) {
   let counts = {};
   let repeatNum = false;
 
-  arrayNumbers.forEach(function(index) {
+  arrayNumbers.forEach( function(index) {
     counts[index] = (counts[index] || 0) + 1;
   });
 
   for (let property in counts) {
     if (counts[property] >= 3) {
-      repeatNum = true
+      repeatNum = true;
     }
   }
-  return repeatNum
+  return repeatNum;
 }
 
 function generatePhoneNumber(arrayNumbers) {
   if (arrayNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  
+
   let phoneNumber = '';
 
   for (let index = 0; index < arrayNumbers.length; index += 1) {
@@ -46,7 +46,9 @@ function generatePhoneNumber(arrayNumbers) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
 
-    phoneNumber = `(${arrayNumbers.slice(0, 2).join('')}) ${arrayNumbers.slice(2, 7).join('')}-${arrayNumbers.slice(7).join('')}`;
+    phoneNumber = `(${arrayNumbers.slice(0, 2).join('')}) 
+      ${arrayNumbers.slice(2, 7).join('')}
+      -${arrayNumbers.slice(7).join('')}`;
   }
   return phoneNumber;
 }
