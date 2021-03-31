@@ -21,13 +21,27 @@ function concatName(myArray) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points= wins * 3 + ties * 1;
+  let points = wins * 3 + ties * 1;
   return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+//https://www.geeksforgeeks.org/c-program-find-largest-element-array/
+function highestCount(listOfNumbers) {
+let count = 0;
+let highestNumber = listOfNumbers[0];
+  for (let index = 1; index < listOfNumbers.length; index +=1) {
+  if (listOfNumbers[index] > highestNumber) {
+  highestNumber = listOfNumbers[index];
+  }
+}
+
+for ( let index = 0; index < listOfNumbers.length; index +=1) {
+  if (listOfNumbers[index] == highestNumber) {
+    count +=1;
+  }
+}
+  return count;
 }
 
 // Desafio 7
