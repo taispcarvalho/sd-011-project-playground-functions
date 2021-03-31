@@ -79,28 +79,122 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzzChecker(result, array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 15 === 0) {
-      result.push('fizzBuzz');
+      result[index].push('fizzBuzz');
     } else if (array[index] % 3 === 0) {
-      result.push('fizz');
+      result[index].push('fizz');
     } else if (array[index] % 5 === 0) {
-      result.push('buzz');
+      result[index].push('buzz');
     }
-    result.push('bug!');
+    result[index].push('bug!');
   }
+  return result;
 }
 
 function fizzBuzz(array) {
   let result = [];
   fizzBuzzChecker(result, array);
-  return result;
+  console.log(result);
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encodeA(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 'a') {
+      string[index] = 1;
+    }
+  }
 }
-function decode() {
-  // seu código aqui
+
+function encodeE(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 'e') {
+      string[index] = 2;
+    }
+  }
+}
+
+function encodeI(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 'i') {
+      string[index] = 3;
+    }
+  }
+}
+
+function encodeO(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 'o') {
+      string[index] = 4;
+    }
+  }
+}
+
+function encodeU(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 'u') {
+      string[index] = 5;
+    }
+  }
+}
+
+function encode(string) {
+  let sentence = string;
+  encodeA(sentence);
+  encodeE(sentence);
+  encodeI(sentence);
+  encodeO(sentence);
+  encodeU(sentence);
+  return sentence;
+}
+
+function decode1(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 1) {
+      string[index] = 'a';
+    }
+  }
+}
+
+function decode2(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 2) {
+      string[index] = 'e';
+    }
+  }
+}
+
+function decode3(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 3) {
+      string[index] = 'i';
+    }
+  }
+}
+
+function decode4(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 4) {
+      string[index] = 'o';
+    }
+  }
+}
+
+function decode5(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 5) {
+      string[index] = 'u';
+    }
+  }
+}
+
+function decode(string) {
+  let sentence = string;
+  decode1(sentence);
+  decode2(sentence);
+  decode3(sentence);
+  decode4(sentence);
+  decode5(sentence);
+  return sentence;
 }
 
 module.exports = {
