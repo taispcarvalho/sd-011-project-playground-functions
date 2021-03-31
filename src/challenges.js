@@ -51,14 +51,18 @@ const highestCount = (arr) => {
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-const catAndMouse = (mouse, cat1, cat2) => {
-  const dist1FromM = Math.abs(mouse - cat1);
-  const dist2FromM = Math.abs(mouse - cat2);
-  if (dist2FromM < dist1FromM) return "cat1"
-  else if (dist2FromM > dist1FromM) return "cat2"
-  else return "os gatos trombam e o rato foge."
+function catAndMouse(mouse, cat1, cat2) {
+  let catAPos = Math.abs(mouse - cat1);
+  let catBPos = Math.abs(mouse - cat2);
+  if (catAPos < catBPos) {
+    return "cat1";
+  } else if (catBPos < catAPos) {
+    return "cat2";
+  } else {
+    return "os gatos trombaram e o rato foge.";
+  }
 }
-console.log(catAndMouse(10, 3, 2));
+console.log(catAndMouse(10, 13, 13));
 
 // Desafio 8
 const fizzBuzz = (arr) => {
