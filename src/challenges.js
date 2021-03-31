@@ -155,7 +155,7 @@ function encode(code) {
   }
   return theCode;
 }
-console.log(encode('hi there'));
+console.log(encode('hi there!'));
 
 function decode(uncode) {
   let codedPhrase = uncode.split('');
@@ -168,7 +168,7 @@ function decode(uncode) {
   }
   return theUncode;  
 }
-console.log(decode('h3 th2r2'))
+console.log(decode('h3 th2r2!'))
 
 module.exports = {
   calcArea,
