@@ -70,23 +70,24 @@ function catAndMouse() {
 function fbDivider(value1) {
   if (value1 % 3 === 0 && value1 % 5 === 0) {
     return 'fizzbuzz';
-  } else if (value1 % 3 === 0) {
-    return 'fizz';
-  } else if (value1 % 5 === 0) {
-    return 'buzz';
-  } else {
-    return 'bug';
   }
+  if (value1 % 3 === 0) {
+    return 'fizz';
+  }
+  if (value1 % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug';
 }
 
 // Desafio 8
 function fizzBuzz(arrNumbers) {
-  let fizzBuzz = [];
+  let arrFizzBuzz = [];
 
   for (let i = 0; i < arrNumbers.length; i += 1) {
-    fizzBuzz[i] = fbDivider(arrNumbers[i]);
+    arrFizzBuzz[i] = fbDivider(arrNumbers[i]);
   }
-  return fizzBuzz;
+  return arrFizzBuzz;
 }
 
 function changeLetter(letter) {
