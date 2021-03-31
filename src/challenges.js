@@ -31,8 +31,12 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(frases) {
   // seu código aqui
+  let retorno=[];
+  retorno[0]=frases[frases.length-1];
+  retorno[1]=frases[0];
+  return retorno;
 }
 
 // Desafio 5
