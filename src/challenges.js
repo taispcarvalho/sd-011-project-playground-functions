@@ -53,26 +53,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
-  let result = [];
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      result.push('FizzBuzz');
-    } else {
-        if (array[index] % 3 === 0) {
-          result.push('Fizz');
-        } else {
-            if (array[index] % 5 === 0) {
-              result.push('Buzz');
-            } else {
-              result.push('bug!');
-            }
-          }
-    }
-
-  return result;
-
+function divideNumber(num) {
+  if (num % 15 === 0) {
+    return 'fizzBuzz';
   }
+  if (num % 3 === 0) {
+    return 'Fizz';
+  }
+  if (num % 5 === 0) {
+    return 'Buzz';
+  }
+  return 'bug!';
+}
+
+function fizzBuzz(valueArray) {
+  let result = [];
+  for (let index = 0; index < valueArray.length; index += 1) {
+    result.push(divideNumber(valueArray[index]))
+  }
+  return result;
 }
 
 // Desafio 9
