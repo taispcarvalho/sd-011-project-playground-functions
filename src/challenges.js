@@ -16,12 +16,7 @@ function splitSentence(palavra) {
   return palavra.split(' ');
 }
 
-console.log(splitSentence('go Trybe'))
-
-
-
 // Desafio 4
-
 
 function concatName(strings) {
 return strings[strings.length -1] + ', ' + strings[0];
@@ -37,7 +32,6 @@ function footballPoints(wins, ties) {
 }
 
 console.log(footballPoints(14,8))
-
 
 // Desafio 6
 
@@ -65,8 +59,6 @@ function highestCount(array) {
 
 
 console.log(hightestCount(array))
-
-
 
 // Desafio 7
 
