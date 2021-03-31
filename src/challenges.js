@@ -76,7 +76,7 @@ console.log(catAndMouse(1, 0, 3));
 
 function fizz(number) {
   if (number % 3 === 0) {
-    return 'fizz'
+    return 'fizz';
   } else {
     return number;
   }
@@ -85,7 +85,7 @@ console.log(fizz(41));
 
 function buzz(number) {
   if (number % 5 === 0) {
-    return 'buzz'
+    return 'buzz';
   } else {
     return number;
   }
@@ -116,7 +116,7 @@ console.log(fizzBuzz([7, 9]));
 function letterNumber(letter) {
   let options = {
     letters: ['a', 'e', 'i', 'o', 'u'],
-    numbers: ['1', '2', '3', '4', '5']
+    numbers: ['1', '2', '3', '4', '5'],
   }
   let result = letter;
   for (let index = 0; index < options.letters.length; index += 1) {
@@ -131,12 +131,12 @@ console.log(letterNumber('a'));
 function numberLetter(number) {
   let options = {
     letters: ['a', 'e', 'i', 'o', 'u'],
-    numbers: ['1', '2', '3', '4', '5']
-  }
+    numbers: ['1', '2', '3', '4', '5'],
+  };
   let result = number;
   for (let index = 0; index < options.numbers.length; index += 1) {
     if (options.numbers[index] === number) {
-      result = options.letters[index]
+      result = options.letters[index];
     }
   }
   return result;
@@ -146,9 +146,9 @@ console.log(numberLetter('1'));
 // Desafio 9
 function encode(code) {
   let phrase = code.split('');
-  let arrayPhrase =[];
+  let arrayPhrase = [];
   let theCode;
-  
+
   for (let index of phrase) {
     arrayPhrase.push(letterNumber(index));
     theCode = arrayPhrase.join('');
@@ -164,11 +164,11 @@ function decode(uncode) {
 
   for (let index of codedPhrase) {
     arrayCodedPhrase.push(numberLetter(index));
-    theUncode = arrayCodedPhrase.join('')
+    theUncode = arrayCodedPhrase.join('');
   }
-  return theUncode;  
+  return theUncode;
 }
-console.log(decode('h3 th2r2!'))
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
