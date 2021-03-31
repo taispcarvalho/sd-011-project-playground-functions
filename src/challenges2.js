@@ -4,6 +4,10 @@ function techList(arrTechNames, name1) {
   let arrTechNames2 = [];
   arrTechNames.sort();
 
+  if (arrTechNames === []) {
+    return 'Vazio!'
+  }
+
   for (let index = 0; index < arrTechNames.length; index += 1) {
     
     arrTechNames2[index] = {
