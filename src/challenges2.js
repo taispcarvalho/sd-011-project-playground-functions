@@ -28,7 +28,7 @@ function checkNegativeNineNumber(numbersArray) {
 function checkRepeatedNumber(numbersArray) {
   let countRepeatedNumber = 0;
   for (let index = 0; index < numbersArray.length; index += 1) {
-    for (let index2 = 0; index < numbersArray.length; index2 += 1) {
+    for (let index2 = 0; index2 < numbersArray.length; index2 += 1) {
       if (numbersArray[index] === numbersArray[index2]) {
         countRepeatedNumber += 1;
       }
