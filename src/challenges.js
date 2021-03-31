@@ -18,8 +18,8 @@ function splitSentence(frase) {
 splitSentence('go Trybe');
 
 // Desafio 4
-function concatName(array) {
-  return array[array.length - 1] + ', ' + array[0];
+function concatName(listaNomes) {
+  return listaNomes[listaNomes.length - 1] + ', ' + listaNomes[0];
 }
 concatName(['foguete', 'não', 'tem', 'ré']);
 
@@ -31,29 +31,20 @@ function footballPoints(wins, ties) {
 footballPoints(1, 2);
 
 // Desafio 6
-let vezes = 0;
 function highestCount(listaNumeros) {
-  for (indexLista = 0; indexLista < numeroMaior; indexLista += 1) {
-    if (listaNumeros[indexLista] === numeroMaior) {
+  let maiorNumero = 0;
+  let vezes = 0;
+  for (let index = 0; index < listaNumeros.length; index += 1) {
+    if (listaNumeros[index] > maiorNumero) {
+      maiorNumero = listaNumeros[index];
+    };
+    if (listaNumeros[index] === maiorNumero) {
       vezes += 1;
-    }
+    };
   }
   return vezes;
-};
+}
 highestCount([9, 1, 2, 3, 9, 5, 7]);
-
-let numeroMaior = 0;
-function maiorNumero(numeros) {
-  for (let index = 0; index < numeros.length; index += 1) {
-    if (numeros[index] > numeroMaior) {
-      numeroMaior = numeros[index];
-    }
-  }
-  return numeroMaior;
-};
-maiorNumero([9, 1, 2, 3, 9, 5, 7]);
-
-
 
 // Desafio 7
 function catAndMouse() {
