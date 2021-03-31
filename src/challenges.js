@@ -133,7 +133,7 @@ function decode(string) {
 
   for (let index = 0; index < str.length; index += 1) {
     for (let vIndex = 1; vIndex < vog.length; vIndex += 1) {
-      if (str[index] == vIndex) {
+      if (str[index] === vIndex.toString()) {
         str[index] = vog[vIndex - 1];
       }
     }
