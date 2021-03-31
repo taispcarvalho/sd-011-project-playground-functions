@@ -54,7 +54,7 @@ function highestCount(arrNum) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   
-  let whoCatches = '';
+  let whoCatches;
   if ((cat1 - mouse) < (cat2 - mouse)) {
     whoCatches = 'cat1';
   }
