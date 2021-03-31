@@ -1,15 +1,17 @@
-function fizzBuzz(arrayNumbers) {
-let comparacao = [];
-  for(let index = 0; index < arrayNumbers.length; index += 1){
-    if ((arrayNumbers[index] % 3 === 0) && (arrayNumbers[index] % 5 === 0)) {
-    comparacao.push('fizzBuzz');
-    } else if(arrayNumbers[index] % 5 === 0) {
-    comparacao.push('buzz');
-    } else if (arrayNumbers[index] % 3 === 0) {
-    comparacao.push('fizz');
-    }else {
-    comparacao.push('bug');
+function highestCount(array) {
+  array = [];
+  let maiorNumero = array[0];
+  let contador = 0;
+  for (let index = 1; index < array.length; index += 1) {
+    if (array[index] > maiorNumero){
+      maiorNumero = array[index];
     }
   }
-  return console.log(fizzBuzz(comparacao));
+  for (let indexCont = 1; indexCont < array.length; indexCont += 1) {
+    if (array[indexCont] === maiorNumero){
+      contador = contador + 1;
+    } 
+  }
+  return contador 
 }
+console.log(highestCount());
