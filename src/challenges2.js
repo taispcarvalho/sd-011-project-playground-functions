@@ -77,7 +77,7 @@ function hydrate(trybeBar) {
   if (cupWater === 1) {
     return `${cupWater} copo de água`;
   }
-  return `${count} copos de água`;
+  return `${cupWater} copos de água`;
 }
 
 module.exports = {
