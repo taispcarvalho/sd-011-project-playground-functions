@@ -29,18 +29,23 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-
-let arrayTest = [9, 1, 2, 3, 9, 5, 7];
-let timesNumberAppears = 0;
 function highestCount(arrayNumbers) {
- let heigthNumber = Math.max(null, arrayNumbers);
- for( let index = 0; index < arrayNumbers.length; arrayNumbers += 1 ) {
-   if( Math.max(null, arrayNumbers) === arrayNumbers[index])
-  timesNumberAppears = timesNumberAppears + 1;
- }
- return console.log(timesNumberAppears);
+  // Encontrar o maior valor
+    let higherthNumber = arrayNumbers[0];
+    for(let index = 0; index < arrayNumbers.length; index += 1){
+    if( arrayNumbers[index] > higherthNumber){
+      higherthNumber = arrayNumbers[index];
+    }
+  }
+  // verificar quantas vezes o numero maior aparece
+  let timesNumberAppears = 0;
+  for(let index = 0; index < arrayNumbers.length; index += 1){
+    if( arrayNumbers[index] === higherthNumber){
+      timesNumberAppears = timesNumberAppears + 1;
+    }
+  }
+  return timesNumberAppears;
 }
-highestCount(arrayTest)
 
 // Desafio 7
 function catAndMouse() {
