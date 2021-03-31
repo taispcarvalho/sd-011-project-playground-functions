@@ -11,8 +11,7 @@ function calcArea(a, b) {
 
 // Desafio 3
 function splitSentence(string) {
-  string.split('');
-  return (string);
+  return string.split('')
 }
 
 // Desafio 4 - ok
