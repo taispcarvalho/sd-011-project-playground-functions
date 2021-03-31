@@ -79,7 +79,7 @@ function fizzBuzz(array) {
   let msgRet = [];
   for (let index in array){
     if (array[index] % 15 === 0 ){
-      msgRet.push('fizzbuzz');
+      msgRet.push('fizzBuzz');
     } else if (array[index] % 3 === 0){
       msgRet.push('buzz');
     } else if (array[index] % 5 === 0){
