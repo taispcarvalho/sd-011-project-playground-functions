@@ -11,18 +11,16 @@ function calcArea(base, height) {
 }
 console.log(calcArea(35, 30));
 
-// Desafio 3
+// Desafio 3 - OK
 function splitSentence(frase) {
   let arrayFrase = frase.split(' ');
   return arrayFrase;
 }
-//console.log(frase(arrayFrase));
 
 // Desafio 4
-function concatName() {
-  
+function concatName(nome) {
+  return nome(nome.length -1).concat(', ' + nome[0]);
 }
-console.log();
 
 // Desafio 5
 function footballPoints() {
