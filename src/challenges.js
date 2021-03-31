@@ -70,8 +70,21 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(encodeString) {
+  for (let index = 0; index < encodeString.length; index += 1) {
+    if (encodeString[index] === 'a') {
+      encodeString = encodeString.replace('a', 1);
+    } else if (encodeString[index] === 'e') {
+      encodeString = encodeString.replace('e', 2);
+    } else if (encodeString[index] === 'i') {
+      encodeString = encodeString.replace('i', 3);
+    } else if (encodeString[index] === 'o') {
+      encodeString = encodeString.replace('o', 4);
+    } else if (encodeString[index] === 'u') {
+      encodeString = encodeString.replace('u', 5);
+    }
+  }
+  return encodeString;
 }
 
 function decode() {
