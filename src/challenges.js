@@ -19,7 +19,7 @@ function splitSentence(palavra) {
 // Desafio 4
 
 function concatName(strings) {
-return strings[strings.length -1] + ', ' + strings[0];
+return strings[strings.length -1] + ' , ' + strings[0];
 
 }
 
@@ -28,7 +28,7 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 // Desafio 5
 
 function footballPoints(wins, ties) {
-   return (wins * 3 + ties * 1)
+return (wins * 3 + ties * 1);
 }
 
 console.log(footballPoints(14,8))
@@ -57,20 +57,15 @@ function highestCount(array) {
   return repeatNumber;
 }
 
-
-console.log(hightestCount(array))
-
 // Desafio 7
 
 function catAndMouse(cat1, cat2) {
-  if (cat1> cat2) {
+  if (cat1 > cat2) {
   return 'cat2';
-  } else {
-  return 'cat1';
-  }
+  } 
 }
 
-console.log(catAndMouse(3,2))
+console.log(catAndMouse(3 , 2));
 
 // Desafio 8
 function fizzBuzz() {
