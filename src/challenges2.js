@@ -5,11 +5,11 @@ function techList(array, name) {
   for (let index = 0; index < array.length; index += 1) {
     let objects = {
       tech: array[index],
-      nome: name
+      nome: name,
     };
     secondArray.push(objects);
   }
-  if (array === null) {
+  if (array === 0) {
     return 'Vazio!';
   } else {
     return secondArray;
