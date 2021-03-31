@@ -17,9 +17,10 @@ function techList(tecnologias, name) {
 }
 
 // Desafio 11-ficou por fazer
-/*
+
 function generatePhoneNumber(numero) {
   // seu código aqui
+  /*
   if (numero.length!=11){
     return 'Array com tamanho incorreto.';
   }else{
@@ -65,9 +66,10 @@ function generatePhoneNumber(numero) {
         return retorno;
       }
     } 
+    console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]));
+    */
 }
-console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]));
-*/
+
 
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
