@@ -7,16 +7,16 @@ function compareTrue(value1, value2) {
 // Desafio 2
 
 function calcArea(base, heigth) {
-  return ((base * heigth) / 2);  
+  return ((base * heigth) / 2);
 }
 
 // Desafio 3
 
 function splitSentence(palavra) {
-  return palavra.split(" ");
+  return palavra.split(' ');
 }
 
-console.log(splitSentence("go Trybe"))
+console.log(splitSentence('go Trybe'))
 
 
 
