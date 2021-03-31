@@ -15,16 +15,16 @@ function splitSentence(frase) {
   // seu código aqui
   let ajuda = '';
   let retorno = [];
-  for ( let index in frase){
-    if (frase[index] !== ' '){
-      ajuda += frase[index];
-    } else {
+  for (let index in frase){
+    if (frase[index]!==' '){
+      ajuda+=frase[index];
+    }else{
       retorno.push(ajuda);
-      ajuda = '';
+      ajuda=''
     }
-    if ( index === frase.length - 1){
+    if (index == frase.length-1){
       retorno.push(ajuda);
-      ajuda = '';
+      ajuda='';
     }
   }
   return retorno;
@@ -99,7 +99,7 @@ function fizzBuzz(numeros) {
   }
   return retorno;
 }
-console.log(fizzBuzz([9,25]));
+
 
 // Desafio 9
 function encode(frase) {
