@@ -15,7 +15,7 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arrayStrings) {
-  let finalString = (arrayStrings[arrayStrings.length - 1] + ', ' + arrayStrings[0]);
+  let finalString = (arrayStrings[arrayStrings.length - 1] + ', ' + arrayStrings[0]); // retirar parênteses
   return finalString; 
 }
 
