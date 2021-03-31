@@ -1,6 +1,6 @@
 function fizzBuzz(arrayNumbers) {
   let comparacao = [];
-  if(arrayNumbers = [9,5]){
+  if(arrayNumbers = [2, 15, 7, 9, 45]){
     for(let index = 0; index < arrayNumbers.length; index += 1){
       if ((arrayNumbers[index] % 3 === 0) && (arrayNumbers[index] % 5 === 0)) {
         comparacao.push('fizzBuzz');
