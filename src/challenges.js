@@ -58,16 +58,15 @@ function fizzBuzz(arrayNumbers) {
 
   for(let number in arrayNumbers){
     if (number[i] % 3 === 0 && number[i] % 5 === 0) {
-    console.log('fizzBuzz');
+    return ('fizzBuzz');
     } else if(number[i] % 5 === 0) {
-    console.log('buzz');
+    return('buzz');
     } else if (number[i] % 3 === 0) {
-    console.log('fizz');
+    return('fizz');
     }else {
-    console.log('bug!');
+    return('bug!');
     }
   }
-  return arrayNumbers
 }
 
 // Desafio 9
