@@ -15,9 +15,9 @@ function splitSentence() {
 
 // Desafio 4
 function concatName() { 
-  return concatName[concatName.length - 1, concatName[0]]
+  return concatName[concatName.length - 1, concatName[0]];
 }
-  
+
 // Desafio 5
 function footballPoints() {
   // seu código aqui
