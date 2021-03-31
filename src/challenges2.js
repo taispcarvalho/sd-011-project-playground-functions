@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(technology, name) {
+function techList(technology, userName) {
   if (technology.length === 0) {
     return 'Vazio!';
   }
@@ -10,7 +10,7 @@ function techList(technology, name) {
   for (let currTecnology of orderTech) {
     listTech.push({
       tech: currTecnology,
-      name: name,
+      name: userName,
     });
   }
 
@@ -54,14 +54,19 @@ function generatePhoneNumber(arr) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
-  let phoneNumber = `(${arr.slice(0, 2).join('')})${arr.slice(2, 7).join('')}-${arr.slice(7).join('')}`;
+  let joinNum = arr.joinNum('');
+  let phoneNumber = `(${joinNum.substring(0, 2)}) ${joinNum.substring(2, 7)}-${joinNum.substring(7)}`;
 
   return phoneNumber;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function sum(num1, num2) {
+  return Math.abs(num1) + Math.abs(num2);
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  return sum(lineA, lineB) > lineC && sum(lineA, lineC) > lineB && sum(lineB, lineC) > lineA;
 }
 
 // Desafio 13
