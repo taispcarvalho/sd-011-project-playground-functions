@@ -15,8 +15,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(stringToSplit) {
-  let splitResult;
-  splitResult = stringToSplit.split(' ');
+  let splitResult = stringToSplit.split(' ');
   return splitResult;
 }
 
@@ -39,8 +38,6 @@ function footballPoints(wins, ties) {
   score = wins * `${pointWins}` + ties * `${pointTies}`;
   return score;
 }
-
-console.log(footballPoints(1, 1));
 
 // Desafio 6
 function highestCount() {
