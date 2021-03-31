@@ -19,8 +19,7 @@ function splitSentence(palavra) {
 // Desafio 4
 
 function concatName(array) {
-  let nameReturn = array[array.length - 1] + ' , ' + array[0];
-  return nameReturn;
+  return {array[array.length - 1]} , ${array[0]};
 }
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -58,7 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = mouse - cat2;
 
 
-  if (Math.abs(distanceCat1) > Math.abs (distanceCat2)) {
+  if(Math.abs(distanceCat1) > Math.abs (distanceCat2)) {
     return 'cat2';
   } else if(Math.abs(distanceCat1) < Math.abs (distanceCat2)) {
     return 'cat1';
@@ -68,9 +67,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayOfNumbers) {
+  let = fizzArrayStr = [];
+
+  for (let fizziindex = 0; fizziindex < arrayOfNumbers.length; fizziindex += 1) {
+    if (arrayOfNumbers[fizziindex] % 3 === 0 && arrayOfNumbers[fizziindex] % 5 === 0) {
+      fizzArrayStr.push('fizz');
+    } else if (arrayOfNumbers[fizziindex] % 5 === 0) {
+      fizzArrayStr.push('buzz');
+    } else if (arrayOfNumbers[fizziindex] % 3 === 0) {
+      fizzArrayStr.push('fizzBuzz');
+    } else {
+      fizzArrayStr.push('bug');
+    }
+  }
+  return fizzArrayStr;
 }
+
+let arrayOfNumbers = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(arrayOfNumbers));
 
 // Desafio 9
 function encode() {
