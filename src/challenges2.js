@@ -75,7 +75,7 @@ function hydrate(str) {
   let interger = textNumbers.map((count) => parseInt(count, 10));
   let sumNumbers = interger.reduce((acc, curr) => acc + curr);
 
-  if(sumNumbers === 1){
+  if (sumNumbers === 1) {
     return '1 copo de água';
   }
   return `${sumNumbers} copos de água`;
