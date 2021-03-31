@@ -105,15 +105,60 @@ function fizzBuzz(array) {
   return response;
 }
 
-console.table(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function returnEncodedLetter(string, vogais, numero, indexOut) {
+  for (let indexIn = 0; indexIn < vogais.length; indexIn += 1) {
+    if (string[indexOut] === vogais[indexIn]) {
+      string[indexOut] = numero[indexIn];
+    }
+  }
+  return string;
 }
-function decode() {
-  // seu código aqui
+
+function checkLetterEncoder(string, vogais, numero) {
+  let input;
+  for (let index = 0; index < string.length; index += 1) {
+    input = returnEncodedLetter(string, vogais, numero, index);
+  }
+  return input;
 }
+
+function encode(string) {
+  string = string.split('');
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
+  let numero = ['1', '2', '3', '4', '5'];
+  let stringOutput = checkLetterEncoder(string, vogais, numero);
+  return stringOutput.join('');
+}
+
+console.log(encode('hi there!'));
+
+function returnDecodedLetter(string, vogais, numero, indexOut) {
+  for (let indexIn = 0; indexIn < vogais.length; indexIn += 1) {
+    if (string[indexOut] === numero[indexIn]) {
+      string[indexOut] = vogais[indexIn];
+    }
+  }
+  return string;
+}
+
+function checkLetterDecoded(string, vogais, numero) {
+  let input;
+  for (let index = 0; index < string.length; index += 1) {
+    input = returnDecodedLetter(string, vogais, numero, index);
+  }
+  return input;
+}
+
+function decode(string) {
+  string = string.split('');
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
+  let numero = ['1', '2', '3', '4', '5'];
+  let stringOutput = checkLetterDecoded(string, vogais, numero);
+  return stringOutput.join('');
+}
+
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
