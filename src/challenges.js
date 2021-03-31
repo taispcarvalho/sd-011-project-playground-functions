@@ -59,15 +59,13 @@ console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let message;
   if (cat1 === cat2) {
-    message = 'os gatos trombam e o rato foge';
+    return 'os gatos trombam e o rato foge';
   } else if ((mouse - cat2) < (mouse - cat1)) {
-    message = 'cat2';
+    return 'cat2';
   } else {
-    message = 'cat1';
+    return 'cat1';
   }
-  return message;
 }
 console.log(catAndMouse(4, 1, 2));
 console.log(catAndMouse(18, 12, 6));
