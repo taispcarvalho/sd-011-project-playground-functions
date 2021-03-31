@@ -1,9 +1,6 @@
 // Desafio 1
 function compareTrue(input1, input2) {
-  if (input1 && input2) {
-    return true;
-  }
-  return false;
+  return input1 && input2;
 }
 // console.log(compareTrue(true, true));
 
@@ -57,8 +54,8 @@ function highestCount(arrayD6) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distCat1 = mouse - cat1;
-  let distCat2 = mouse - cat2;
+  let distCat1 = Math.abs(mouse - cat1);
+  let distCat2 =Math.abs(mouse - cat2);
   switch (true) {
   case distCat1 > distCat2:
     return 'cat2';
@@ -70,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
     break;
   }
 }
-console.log(catAndMouse(3, 2, 2));
+console.log(catAndMouse(13, 14, 12));
 
 // Desafio 8
 function fizzBuzz() {
