@@ -43,9 +43,7 @@ function higherNumber(numbers) {
   let number = numbers[0]
   for (let key of numbers) {
     if  (key > number) {
-      number = key
-    } else {
-      number = number
+      number = key;
     }
   }
   return number
@@ -58,11 +56,9 @@ function highestCount(numbers) {
   for (let key of numbers) {
     if  (key === higherNumber(numbers)) {
       counter += 1;
-    } else {
-      counter += 0;
     }
   }
-  return counter
+  return counter;
 }
 
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
