@@ -5,7 +5,7 @@ function compareTrue(value, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base*height) / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -15,7 +15,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayString) {
-  return arrayString[arrayString.length - 1] + ', ' + arrayString[0];
+  return `${arrayString[arrayString.length - 1]}, ${arrayString[0]}`;
 }
 
 // Desafio 5
@@ -24,43 +24,45 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(arrayNumbers) {
-  function higherNumberOfArray(arrayNumbers) {
-    let higherNumber = 0;
-    for(let index= 0; index < arrayNumbers.length; index += 1) {
-      if(arrayNumbers[index] > higherNumber) {
-        higherNumber = arrayNumbers[index];
-      }
+function higherNumberOfArray(arrayNumbers) {
+  let higherNumber = 0;
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] > higherNumber) {
+      higherNumber = arrayNumbers[index];
     }
-    return higherNumber;
   }
+  return higherNumber;
+}
 
+function highestCount(arrayNumbers) {
   let higherNumber = higherNumberOfArray(arrayNumbers);
-  let highestCount = 0;
-  for(let index = 0; index < arrayNumbers.length; index += 1) {
-    if(higherNumber === arrayNumbers[index]) {
-      highestCount += 1;
+  let count = 0;
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (higherNumber === arrayNumbers[index]) {
+      count += 1;
     }
   }
-  return highestCount;
+  return count;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let closer;
   let distanceCat1AndMouse = cat1 - mouse;
   let distanceCat2AndMouse = cat2 - mouse;
 
   if (distanceCat1AndMouse < 0 || distanceCat2AndMouse < 0) {
-    console.log('Distância inválida!')
-  } else {
-    if (cat1 < cat2) {
-      return 'cat1';
-    } else if (cat2 < cat1) {
-      return 'cat2';
-    } else {
-      return 'os gatos trombam e o rato foge'
-    }
+    closer = 'Distância inválida!';
   }
+
+  if (cat1 < cat2) {
+    closer = 'cat1';
+  } else if (cat2 < cat1) {
+    closer = 'cat2';
+  } else {
+    closer = 'os gatos trombam e o rato foge';
+  }
+  return closer;
 }
 
 // Desafio 8
