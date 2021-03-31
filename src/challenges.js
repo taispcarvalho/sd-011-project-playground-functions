@@ -119,9 +119,9 @@ function encode(string) {
         str[index] = vIndex + 1;
       }
     }
-    nStr += ''.concat(str[index]);
+    nStr += str[index];
   }
-  return ('"' + nStr + '"');
+  return nStr;
 }
 
 let string = ['hi there!', 'h3 th2r2!'];
@@ -139,9 +139,9 @@ function decode(string) {
         str[index] = vog[vIndex];
       }
     }
-    nStr += ''.concat(str[index]);
+    nStr += str[index];
   }
-  return ('"' + nStr + '"');
+  return nStr;
 }
 
 console.log(decode(string[0]));
