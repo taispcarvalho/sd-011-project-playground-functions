@@ -59,14 +59,11 @@ function fizzBuzz(numerosDesafio8) {
   for (let i = 0; i < numerosDesafio8.length; i += 1) {
     if (numerosDesafio8[i] % 3 === 0 && numerosDesafio8[i] % 5 === 0) {
       conteudoArray.push('fizzbuzz');
-    }
-    else if (numerosDesafio8[i] % 3 === 0) {
+    } else if (numerosDesafio8[i] % 3 === 0) {
       conteudoArray.push('fizz');
-    }
-    else if (numerosDesafio8[i] % 5 === 0) {
+    } else if (numerosDesafio8[i] % 5 === 0) {
       conteudoArray.push('buzz');
-    }
-    else {
+    } else {
       conteudoArray.push('bug!');
     }
   }
@@ -74,7 +71,6 @@ function fizzBuzz(numerosDesafio8) {
 }
 
 // Desafio 9
-
 let string1 = "hi there!";
 function encode(string1) {
   let codigo = [];
@@ -85,24 +81,19 @@ function encode(string1) {
     }
     else if (string1[i] === 'e') {
       codigo.push('2');
-    }
-    else if (string1[i] === 'i') {
+    } else if (string1[i] === 'i') {
       codigo.push('3');
-    }
-    else if (string1[i] === 'o') {
+    } else if (string1[i] === 'o') {
       codigo.push('4');
-    }
-    else if (string1[i] === 'u') {
+    } else if (string1[i] === 'u') {
       codigo.push('5');
-    }
-    else {
+    } else {
       codigo.push(string1[i]);
     }
   }
   console.log(codigo.join(''))
 }
 encode(string1);
-
 
 function decode() {
   // seu código aqui
