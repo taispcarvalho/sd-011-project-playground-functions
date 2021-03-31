@@ -18,7 +18,7 @@ function concatName(concatArray) {
   let ultiConcatString = concatArray[concatArray.length - 1];
   let firstConcatString = concatArray[0];
 
-  return ultiConcatString + ', ' + firstConcatString;
+  return `${ultiConcatString}, ${firstConcatString}`;
 }
 
 // Desafio 5
