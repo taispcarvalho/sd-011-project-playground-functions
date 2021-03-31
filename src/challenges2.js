@@ -107,5 +107,5 @@ function hydrate(string) {
       techList,
       hydrate,
       triangleCheck,
-
+      hydrate
     }
