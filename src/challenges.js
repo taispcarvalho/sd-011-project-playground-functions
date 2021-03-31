@@ -40,9 +40,9 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(aNumbers) {
-  let majorNumber = - 100;
+  let majorNumber = -100;
   let score = 0;
-  for (index = 0; index < aNumbers.length; index += 1) {
+  for (let index = 0; index < aNumbers.length; index += 1) {
     let number = aNumbers[index];
     if (number >= majorNumber) {
       majorNumber = number;
@@ -54,7 +54,6 @@ function highestCount(aNumbers) {
 
   return score;
 }
-console.log(highestCount([9, 1, 9, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
