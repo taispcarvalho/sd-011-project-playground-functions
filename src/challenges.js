@@ -82,16 +82,16 @@ console.log(catAndMouse(14, 12, 15));
 
 // Desafio 8
 function fizzBuzz(number) {
-  let result = '';
+  let result = [];
   for (let index = 0; index < number.length; index += 1) {
     if ((number[index] % 3) === 0 && (number[index] % 5) === 0) {
-      result += 'fizzBuzz ';
+      result.push('fizzBuzz');
     } else if ((number[index] % 3) === 0) {
-      result += 'fizz ';
+      result.push('fizz');
     } else if ((number[index] % 5) === 0) {
-      result += 'buzz ';
+      result.push('buzz');
     } else {
-      result += 'bug! ';
+      result.push('bug!');
     }
   }
   return result;
