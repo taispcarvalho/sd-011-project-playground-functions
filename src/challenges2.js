@@ -17,17 +17,11 @@ function triangleCheck(lineA, lineB, lineC) {
   let triCondi = false;
   let checkA = lineA < lineB + lineC;
   let difLineA = Math.abs(lineA - (lineB + lineC));
-  let checkB = lineB < lineA + lineC;
-  let difLineB = Math.abs(lineB - (lineA + lineC));
-  let checkC = lineC < lineA + lineB;
-  let difLineC = Math.abs(lineC - (lineA + lineB));
+
   if (checkA && difLineA) {
     triCondi = true;
-  } else if (checkB && difLineB) {
-    triCondi = true;
-  } else if (checkC && difLineC) {
-    triCondi = true;
-  } else {
+  } 
+  else {
     triCondi = false;
   }
   return triCondi;
