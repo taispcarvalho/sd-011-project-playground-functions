@@ -60,13 +60,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let resultado = '';
   if (distanciaCat2 < distanciaCat1) {
     resultado = 'cat2';
-    console.log(resultado);
+    console.log('cat2');
   } else if (distanciaCat2 > distanciaCat1) {
     resultado = 'cat1';
-    console.log(resultado);
+    console.log('cat1');
   } else {
     resultado = 'os gatos trombam e o rato foge';
-    console.log(resultado);
+    console.log('os gatos trombam e o rato foge');
   }
   return resultado;
 }
