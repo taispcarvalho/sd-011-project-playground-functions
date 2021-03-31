@@ -19,7 +19,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(strings) {
   let firstString = strings[0];
-  let laststring = strings[strings.length -1];
+  let laststring = strings[strings.length - 1];
   return laststring + ', ' + firstString;
 };
 
@@ -68,7 +68,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
 
   let encodesNumbers = [];
-  
+
   for (let index = 0; index < numbers.length; index += 1) {
     if(numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       encodesNumbers.push('fizzBuzz');
@@ -83,13 +83,40 @@ function fizzBuzz(numbers) {
   return encodesNumbers
 };
 
-// Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+// Desafio 9 referência: https://www.w3schools.com/jsref/jsref_replace.asp
+function encode(phrase) {
+  for (let index = 0; index < phrase.length ; index += 1) {
+    if(phrase[index] === 'a') {
+      phrase = phrase.replace('a','1')
+    } else if (phrase[index] === 'e') {
+      phrase = phrase.replace('e','2');
+    } else if (phrase[index] === 'i') {
+      phrase = phrase.replace('i','3');
+    } else if (phrase[index] === 'o') {
+      phrase = phrase.replace('o','4');
+    } else if (phrase[index] === 'u') {
+      phrase = phrase.replace('u','5');
+    } 
+  }
+      return phrase;
+};
+
+function decode(phrase) {
+  for (let index = 0; index < phrase.length ; index += 1) {
+      if(phrase[index] === '1') {
+      phrase = phrase.replace('1','a')
+      } else if (phrase[index] === '2') {
+      phrase = phrase.replace('2','e');
+      } else if (phrase[index] === '3') {
+      phrase = phrase.replace('3','i');
+      } else if (phrase[index] === '4') {
+      phrase = phrase.replace('4','o');
+      } else if (phrase[index] === '5') {
+      phrase = phrase.replace('5','u');
+      } 
+    }
+    return phrase;
+  };
 
 module.exports = {
   calcArea,
