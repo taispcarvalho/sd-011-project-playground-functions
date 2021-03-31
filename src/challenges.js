@@ -61,11 +61,11 @@ function fizzBuzz(numbersArray) {
       arrReturn = 'fizzBuzz';
     } else if (currNumber % 3 === 0) {
       arrReturn = 'fizz';
-      } else if (currNumber % 5 === 0) {
-        arrReturn = 'buzz';
-        } else {
-          arrReturn = 'bug!';
-          }
+    } else if (currNumber % 5 === 0) {
+      arrReturn = 'buzz';
+    } else {
+      arrReturn = 'bug!';
+    }
     return arrReturn;
   });
 }
