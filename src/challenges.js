@@ -54,8 +54,9 @@ function highestCount(numbers) {
 
 // Desafio 7
 // Who has the smaller distance, wins
+// Math.abs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
-  let distCat1 = Math.abs(cat1 - mouse); // Like math's modulus, not return negative numbers
+  let distCat1 = Math.abs(cat1 - mouse); // Math.abs is like math's modulus, not return negative numbers
   let distCat2 = Math.abs(cat2 - mouse);
 
   if (distCat1 === distCat2) return 'os gatos trombam e o rato foge';

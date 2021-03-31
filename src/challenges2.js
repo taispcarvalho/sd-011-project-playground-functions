@@ -61,20 +61,19 @@ function triangleCheck(lineA, lineB, lineC) {
 // References:
 // Find numbers in strings: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
 // RegExp g Modifier (/g): https://www.w3schools.com/jsref/jsref_regexp_g.asp
-// .split(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+// Removing unnecessary zeros: https://stackoverflow.com/questions/3612744/remove-insignificant-trailing-zeros-from-a-number
 // ParseInt: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 // Missing Radix Parameter: https://stackoverflow.com/questions/7818903/jslint-says-missing-radix-parameter
 // Template Literals: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-function hydrate(word) {
-  let number = word.replace(/[^0-9]/g, '');
-  let table = number.split('');
+function hydrate(words) {
+  let numbers = words.replace(/[^0-9]/g, ''); // A technique used to find the numbers inside a string with the adition of /g to search they all
   let result = 0;
 
-  for (let i = 0; i < table.length; i += 1) {
-    result += parseInt(table[i], 10);
+  for (let i = 0; i < numbers.length; i += 1) {
+    result += parseInt(numbers[i], 10); // it's not really necessary, but converting to string eliminates the annoying zero before numbers
   }
 
-  if (result === 1) {
+  if (result <= 1) {
     return `${result} copo de água`;
   } return `${result} copos de água`;
 }
