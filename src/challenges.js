@@ -4,29 +4,20 @@ function compareTrue(valorOne, ValorTwo) {
 }
 
 // Desafio 2
-function calcArea(base,height) {
-  return(base * height) /2;
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
-let base= 51;
-let height= 1;
-console.log(calcArea(base, height));
 
 // Desafio 3
-function splitSentence(str) {
-  return(str.split(' '));
+function splitSentence(SeparateWords) {
+  return (SeparateWords.split(' '));
 }
 
 // Desafio 4
-let nameArray = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-function concatName(nameArray) {
-  var lastItem = nameArray[nameArray.length -1];
-  var firstItem = nameArray[0];
+function concatName(myArray) {
+  let formatName = myArray[myArray.length -1] + ', ' + myArray[0];
+  return formatName;
 }
-console.log (concatName(nameArray));
-  
-  
- 
-
 
 // Desafio 5
 function footballPoints() {
