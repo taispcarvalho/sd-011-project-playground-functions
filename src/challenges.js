@@ -15,7 +15,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(strArr) {
-  return strArr[strArr.length - 1] + ', ' + strArr[0];
+  return (strArr[strArr.length - 1] + ', ' + strArr[0]);
 }
 
 // Desafio 5
@@ -46,11 +46,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat2 = cat2 - mouse;
   if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
-  }
-  else if (distanciaCat2 < distanciaCat1) {
+  } if (distanciaCat2 < distanciaCat1) {
     return 'cat2';
-  }
-  else if (distanciaCat1 === distanciaCat2) {
+  } else if (distanciaCat1 === distanciaCat2) {
     return 'Os gatos trombam e o rato foge';
   }
 }
@@ -70,37 +68,37 @@ function fizzBuzz(numerosDesafio8) {
     }
     else {
       conteudoArray.push('bug!');
-    }    
-  }  
-  return conteudoArray;    
+    }
+  }
+  return conteudoArray;
 }
 
 // Desafio 9
 
 let string1 = "hi there!";
 function encode(string1) {
-  let codigo = [];  
-  for ( let i = 0; i < string1.length; i += 1){
-    if (string1[i] === 'a'){
+  let codigo = [];
+  for (let i = 0; i < string1.length; i += 1) {
+    if (string1[i] === 'a') {
       codigo.push('1');
       console.log('teste')
     }
-    else if (string1[i] === 'e'){
-      codigo.push('2');      
+    else if (string1[i] === 'e') {
+      codigo.push('2');
     }
-    else if (string1[i] === 'i'){
+    else if (string1[i] === 'i') {
       codigo.push('3');
     }
-    else if (string1[i] === 'o'){
+    else if (string1[i] === 'o') {
       codigo.push('4');
     }
-    else if (string1[i] === 'u'){
+    else if (string1[i] === 'u') {
       codigo.push('5');
     }
     else {
       codigo.push(string1[i]);
-    }        
-  }  
+    }
+  }
   console.log(codigo.join(''))
 }
 encode(string1);
