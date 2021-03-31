@@ -1,22 +1,22 @@
 // Desafio 10
 function techList(array, name) {
   let test = [];
-  for(let index in array)
-    if (array !== []){
-    test.push = {
+  if (array.length <= 0){
+    return 'Vazio!';
+  }
+  for(let index = 0; index < array.length; index += 0){
+    test.push = ({
     tech: '',
     name: name,
     }
+  );
   }
-return test;
+   return test;
 }
-let tecnologias = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-
-console.log(techList(tecnologias.sort(a,z), 'Islene'));
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  
 }
 
 // Desafio 12
