@@ -20,7 +20,6 @@ function splitSentence(palavra) {
 
 function concatName(strings) {
   return strings[strings.length - 1] + ' , ' + strings[0];
-
 }
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -35,26 +34,20 @@ console.log(footballPoints(14,8))
 
 // Desafio 6
 
-let array = [3, 5, 4, 5, 2, 5];
-
 function highestCount(array) {
-  let higherNumber = 0;
-  let repeatNumber = 0;
-  for (let highIndex = 0; highIndex < array.length; highIndex += 1) {
-    let possibleHighNumber = higherNumber;
-    higherNumber = array[higherIndex];
-    if (higherNumber < possibleHighNumber) {
-      higherNumber = possibleHighNumber;
+  let highestNumber = 0;
+  for (let index of array) {
+    if (index > highestNumber) {
+      highestNumber = index;
     }
   }
-
-  for (let countIndex = 0; countIndex < array.length; countIndex += 1) {
-    if (higherNumber === array[countIndex]) {
-      repeatNumber += 1;
+  let counter = o;
+  for (let index in array) {
+    if (array[index2] === highestNumber) {
+      counter += 1;
     }
   }
-
-  return repeatNumber;
+  return counter;
 }
 
 // Desafio 7
