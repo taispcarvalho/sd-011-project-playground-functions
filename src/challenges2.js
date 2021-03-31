@@ -8,8 +8,8 @@ function myFunction(objects, index, myName) {
 }
 function techList(objects, name) {
   if (objects != null) {
-    for (let index in objects) {
-      if (objects = myFunction(objects, index, name));
+    for (let index = 0; index < objects.length; index += 1) {
+      objects = myFunction(objects, index, name);
     }
     return objects;
   }

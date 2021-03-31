@@ -26,11 +26,10 @@ function highestCount(numbers) {
   let repetitions = 0;
   let highestNumber = Math.max(...numbers);
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] == highestNumber) repetitions += 1;
+    if (numbers[index] === highestNumber) repetitions += 1;
   }
   return repetitions;
 }
-console.log(highestCount([0,1,5,3,4,5,9,9]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
