@@ -2,9 +2,8 @@
 function compareTrue(valorA, valorB) {
   return valorA && valorB;
 }
-
 //    [Chamada] Desafio 1
-console.log(compareTrue(true, 0))
+console.log(compareTrue(true, 0));
 
 // Desafio 2
 function calcArea() {
@@ -12,8 +11,17 @@ function calcArea() {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+
+function splitSentence(string) {
+  let i ="['";
+    for (let index of string){
+      if (index !== " ")
+      i += index;
+      else
+      i += "', '";
+    }
+  i+="']";
+  return i;
 }
 
 // Desafio 4
