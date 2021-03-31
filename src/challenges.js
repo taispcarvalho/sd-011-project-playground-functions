@@ -66,7 +66,7 @@ function highestCount(valores){
 // Desafio 7
 //let mouse=10;
 //let cat1=1;
-//let cat2=5    ;
+//let cat2=5    ; 
 
 function catAndMouse(mouse,cat1,cat2) {
   if(cat1&&cat2<mouse){
@@ -78,9 +78,9 @@ function catAndMouse(mouse,cat1,cat2) {
         return("Os gatos trombam e o rato foge");
       }
   }else if(cat1&&cat2>mouse){
-    if(cat1-mouse<cat2-mouse){
+    if(cat1<cat2){
       return("cat1");
-      }else if (cat1-mouse<cat2-mouse){
+      }else if (cat1>cat2){
         return("cat2");
       }else{
         return("Os gatos trombam e o rato foge");
