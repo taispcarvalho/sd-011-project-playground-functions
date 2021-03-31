@@ -27,9 +27,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let ordemArray = array.sort((a, b) => { 
-    return b - a;
-  });
+  let ordemArray = array.sort((a, b) => { return b - a });
   let sumRepeatLargestNumber = 1;
   let higherNumber = ordemArray[0];
   for (let index = 0; index < ordemArray.length; index += 1) {
@@ -76,7 +74,7 @@ function encode(str) {
 }
 
 function decode(str) {
-  return str.replace(/\d/g, match => 'Zaeiou'[match]);
+  return str.replace(/\d/g, match => { 'Zaeiou' [match] });
 }
 
 module.exports = {
