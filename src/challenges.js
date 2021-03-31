@@ -100,21 +100,22 @@ Se o numero nõ for divisével nem por 3 e nem por 5 - Bug
 */
 function fizzBuzz(array) {
   let game = [];
-  for (let index = 0; array.length; index += 1){
+  for (let index = 0; index < array.length; index += 1){
     let word = '';
     if (array[index] % 3 === 0){
       word += "fizz";
     }
     if (array[index] % 5 === 0){
       word += 'Buzz';
-    }else{
+    }
+    if (array[index] % 3 !== 0 && array[index] % 5 !== 0){
       word += 'Bug';
     }
     game.push(word);
   }
   return game;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+/* console.log(fizzBuzz([9, 25])); */
 
 // Desafio 9
 function encode() {
