@@ -64,14 +64,14 @@ function highestCount(valores){
 //highestCount(valores);
 
 // Desafio 7
-//let mouse=6;
-//let cat1=13;
-//let cat2=12 ;
+//let mouse=10;
+//let cat1=1;
+//let cat2=5    ;
 
 function catAndMouse(mouse,cat1,cat2) {
-  if(cat1-mouse<cat2-mouse){
+  if(mouse-cat1<cat2-mouse){
     return("cat1");
-  }else if(cat1-mouse>cat2-mouse){
+  }else if(mouse-cat1>cat2-mouse){
     return("cat2");
   }else{
     return("Os gatos trombam e o rato foge");
@@ -80,23 +80,24 @@ function catAndMouse(mouse,cat1,cat2) {
 //catAndMouse(mouse,cat1,cat2);
 
 // Desafio 8
-function fizzBuzz(arrayteste){
+//let numeros=[2,15,7,9,45];
+function fizzBuzz(numeros){
   let arrayresposta=[0];
   arrayresposta.pop();
-  for(let cont=0;cont<=arrayteste.length-1;){
-    if(arrayteste[cont]%3==0&arrayteste[cont]%5==0){
-      arrayresposta.push("fizzbuzz");
-    }else if(arrayteste[cont]%3==0&arrayteste[cont]%5!==0){
+  for(let cont=0;cont<=numeros.length-1;cont++){
+    if(numeros[cont]%3==0&numeros[cont]%5==0){
+      arrayresposta.push("fizzBuzz");
+    }else if(numeros[cont]%3==0&numeros[cont]%5!==0){
       arrayresposta.push("fizz");
-    }else if(arrayteste[cont]%3!==0&arrayteste[cont]%5==0){
+    }else if(numeros[cont]%3!==0&numeros[cont]%5==0){
       arrayresposta.push("buzz");
     }else{
-      arrayresposta.push("bug");
+      arrayresposta.push("bug!");
     }
   }
   return(arrayresposta);
 }
-
+//fizzBuzz(numeros);
 // Desafio 9
 function encode() {
   // seu código aqui
