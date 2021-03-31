@@ -76,9 +76,9 @@ function hydrate(beverage) {
   let answerHydrate;
 
   if (cupsWater === 1) {
-    let answerHydrate = cupsWater + ' copo de água';
+    answerHydrate = cupsWater + ' copo de água';
   } else {
-    let answerHydrate = cupsWater + ' copos de água';
+    nswerHydrate = cupsWater + ' copos de água';
   }
 
   return answerHydrate;

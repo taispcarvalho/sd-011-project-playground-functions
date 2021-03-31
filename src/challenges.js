@@ -132,7 +132,6 @@ function decode(sentence) {
       decodedSentence += sentence[index];
     }
   }
-
   return decodedSentence;
 }
 
