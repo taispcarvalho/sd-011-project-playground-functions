@@ -66,11 +66,11 @@ function triangleCheck(lineA, lineB, lineC) {
 // Missing Radix Parameter: https://stackoverflow.com/questions/7818903/jslint-says-missing-radix-parameter
 // Template Literals: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 function hydrate(words) {
-  let numbers = words.replace(/[^0-9]/g, ''); // A technique used to find the numbers inside a string with the adition of /g to search they all
+  let numbers = words.replace(/[^0-9]/g, ''); // A technique used to find the numbers inside a string with the addition of /g to search they all
   let result = 0;
 
   for (let i = 0; i < numbers.length; i += 1) {
-    result += parseInt(numbers[i], 10); // it's not really necessary, but converting to string eliminates the annoying zero before numbers
+    result += parseInt(numbers[i], 10); // it's not really necessary, but converting to integer eliminates the annoying zero before numbers
   }
 
   if (result <= 1) {
