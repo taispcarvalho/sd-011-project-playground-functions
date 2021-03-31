@@ -50,7 +50,7 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function module(cat, mouse) {
+function xmodule(cat, mouse) {
   if (cat - mouse > 0) {
     return cat - mouse;
   }
@@ -59,9 +59,9 @@ function module(cat, mouse) {
 
 function catAndMouse(mouse, cat1, cat2) {
   let bestPosition = '';
-  if (module(cat1, mouse) < module(cat2, mouse)) {
+  if (xmodule(cat1, mouse) < xmodule(cat2, mouse)) {
     bestPosition = 'cat1';
-  } else if (module(cat1, mouse) > module(cat2, mouse)) {
+  } else if (xmodule(cat1, mouse) > xmodule(cat2, mouse)) {
     bestPosition = 'cat2';
   } else {
     bestPosition = 'os gatos trombam e o rato foge';
