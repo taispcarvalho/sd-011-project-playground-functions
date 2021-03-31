@@ -48,15 +48,16 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 function catAndMouse(mouse, cat1, cat2) {
   let distance1 = mouse - cat1;
   let distance2 = mouse - cat2;
-  if (distance1 === distance2) {
-    return 'Os gatos trambaram e o rato foge';
+  let catMouse = [];
+
+  if (distance1 > distance2) {
+    catMouse.push('cat1');
+  } else if (distance1 < distance2) {
+    catMouse.push('cat2');
+  } else if (distance1 === distance2) {
+    catMouse.push('Os gatos trambaram e o rato foge');
   }
-  if (distance1 < distance2) {
-    return 'cat2';
-  }
-  if (distance1 === distance2) {
-    return 'cat1';
-  }
+  return catMouse;
   // seu código aqui
 }
 
@@ -66,6 +67,8 @@ function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       number.push('fizzBuzz');
+    } else if (array[index] % 3 === 0) {
+      number.push('fizz');
     }
   }
   // seu código aqui
