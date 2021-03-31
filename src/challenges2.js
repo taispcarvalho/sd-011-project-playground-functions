@@ -64,17 +64,28 @@ console.log(generatePhoneNumber([]));
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC) && lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) && lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
     return true;
-  } else {
-    return false;
-}
+  }
+  return false;
 }
 
 console.log(triangleCheck(10, 0, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let waterGlasses = 0;
+  for (let index = 0; index < str.length; index += 1) {
+    if (parseInt(str[index], 10) >= 1 && parseInt(str[index], 10) <= 9) {
+      waterGlasses += (parseInt(str[index], 10));
+    }
+  }
+  return waterGlasses;
 }
+
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+
+// Referencias
+// 1 - https://eslint.org/docs/rules/radix = ajudou a entender o parametro radix do parseInt();
+// 2 - https://www.w3schools.com/jsref/jsref_parseint.asp = me ajudou a entender como utilizar o parseInt().
 
 module.exports = {
   generatePhoneNumber,
