@@ -67,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'cat1';
 }
 
-// Desafio 8
+// Desafio 8 AINDA TEM ERRO DE LINTER
 function fizzBuzz(input) {
   let result = [];
   for (let index = 0; index < input.length; index += 1) {
@@ -84,7 +84,7 @@ function fizzBuzz(input) {
   return result;
 }
 
-// Desafio 9
+// Desafio 9 AINDA TEM ERRO DE LINTER
 function encode(word) {
   let workingWord = word.split('')
   let translate = { a: 1, e: 2, i: 3, o: 4, u: 5 };
@@ -98,7 +98,7 @@ function encode(word) {
   }
   return workingWord.join('');
 }
-function decode(word) { // esse ta dando erro ainda
+function decode(word) {
   let workingWord = word.split('');
   let translate = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   for (let index = 0; index < word.length; index += 1) {
