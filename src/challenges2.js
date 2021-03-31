@@ -1,6 +1,10 @@
 // Desafio 10
 function techList(array, name) {
   // seu código aqui
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+
   array = array.sort();
   let objectsArray = [];
   let autor = name;
@@ -11,6 +15,8 @@ function techList(array, name) {
     };
     objectsArray.push(object);
   }
+  return objectsArray;
+}
 
 // Desafio 11
 function generatePhoneNumber() {
