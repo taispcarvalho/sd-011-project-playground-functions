@@ -91,26 +91,26 @@ console.log(fizzBuzz(arrayTest));
 function encode(str) {
   for (let index in str) {
     let aux = str[index];
-    switch(aux) {
-      case 'a': str = str.replace(aux, 1);
-        break;
-      case 'e': str = str.replace(aux, 2);
-        break;
-      case 'i': str = str.replace(aux, 3);
-        break;
-      case 'o': str = str.replace(aux, 4);
-        break;
-      case 'u': str = str.replace(aux, 5);
-        break;
-      default: break;
+    switch (aux) {
+    case 'a': str = str.replace(aux, 1);
+      break;
+    case 'e': str = str.replace(aux, 2);
+      break;
+    case 'i': str = str.replace(aux, 3);
+      break;
+    case 'o': str = str.replace(aux, 4);
+      break;
+    case 'u': str = str.replace(aux, 5);
+      break;
+    default: break;
     }
   }
-  return str; 
+  return str;
 }
 function decode(str) {
   for (let index in str) {
     let aux = str[index];
-  switch (aux) {
+    switch (aux) {
     case '1': str = str.replace(aux, 'a');
       break;
     case '2': str = str.replace(aux, 'e');
@@ -122,7 +122,7 @@ function decode(str) {
     case '5': str = str.replace(aux, 'u');
       break;
     default: break;
-  }
+    }
   }
   return str;
 }
