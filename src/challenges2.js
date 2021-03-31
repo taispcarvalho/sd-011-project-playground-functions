@@ -12,49 +12,42 @@ function techList(techs, nome) {
   return lista;
 }
 
-function checkRepeated(arrayNumbers){
+function checkRepeated(arrayNumbers) {
   let count = 0;
-  let index = 0;
-  for(let num of arrayNumbers){
-    if(num === arrayNumbers[index]){
-      count += 1
+  let index = -1;
+  index += 1;
+  for (let num of arrayNumbers) {
+    if (num === arrayNumbers[index]) {
+      count += 1;
     }
-    if(count >= 3){
-      return true
-    }
-    index += 1
-  }
-}
-
-
-
-function checkInvalid(arrayNumbers){
-  for(let numb of arrayNumbers){
-    if(numb > 9 || numb < 0){
-      return true
+    if (count >= 3) {
+      return true;
     }
   }
 }
 
-
+function checkInvalid(arrayNumbers) {
+  for (let numb of arrayNumbers) {
+    if (numb > 9 || numb < 0) {
+      return true;
+    }
+  }
+}
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
   let phonePad = '(**) *****-****';
-      
-  if(checkInvalid(numbers) === true || checkRepeated(numbers) === true){
+  if (checkInvalid(numbers) === true || checkRepeated(numbers) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
-  } else if (numbers.length !== 11) {
-    return 'Array com tamanho incorreto.'
   }
-  for(let i = 0; i < numbers.length; i += 1){
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let i = 0; i < numbers.length; i += 1) {
     phonePad = phonePad.replace('*', numbers[i]);
   }
-
   return phonePad;
 }
-
-console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
