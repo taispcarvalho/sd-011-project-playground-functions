@@ -1,17 +1,23 @@
 // Desafio 10
 function techList(tech, name) {
   // seu código aqui
-  let list = {
-    tech : '',
-    name : name
-  };
-if (tech.length === 0) {
-  'Vazio!'
-}
-for (const key of tech) {
-  list.tech += key;
-  console.log (list);
+  tech.sort();
+  let teste = {
+    techs: tech[0],
+    nome: name
   }
+  let returnArray = [];
+  if (tech.length === 0) {
+    return 'Vazio!'
+  } else {
+    for (let index = 0; index < tech.length; index += 1){
+      returnArray.push(teste = {
+        techs: tech[index],
+        nome: name
+      })
+    }
+  }
+  return returnArray;
 }
 
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
