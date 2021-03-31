@@ -42,7 +42,7 @@ function highestCount(arra) {
 } //console.log( highestCount([ 9, 1, 2, 3, 9, 5, 7 ]))
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+function catAndMouse() {
   
   
 }
