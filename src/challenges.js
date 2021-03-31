@@ -71,19 +71,27 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 
 function divisible3and5(number) {
-  if (number % 3 === 0 && number % 5 !== 0) {
+  if (module3 === 0 && module5 !== 0) {
     return 'fizz';
   }
-  if (number % 3 !== 0 && number % 5 === 0) {
+  if (module3 !== 0 && module5 === 0) {
     return 'buzz';
   }
-  if (number % 3 === 0 && number % 5 === 0) {
+  if (module3 === 0 && module5 === 0) {
     return 'fizzBuzz';
   }
-  if (number % 3 !== 0 && number % 5 !== 0) {
+  if (module3 !== 0 && module5 !== 0) {
     return 'bug!';
   }
   return '';
+}
+
+function module3(number) {
+  return number % 3;
+}
+
+function module5(number) {
+  return number % 5;
 }
 
 function fizzBuzz(arrayOfNumbers) {
