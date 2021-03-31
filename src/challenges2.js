@@ -107,8 +107,25 @@ function triangleCheck(lineA, lineB, lineC) {
   return answer;
 }
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function numbersOfString(string) {
+  let soma = 0;
+  let array = string.match(/\d/g);
+  array = array.join('');
+  for (let i = 0; i < array.length; i += 1) {
+    let std = Number(array[i]);
+    soma += std;
+  }
+  return soma;
+}
+
+function hydrate(string) {
+  let qtd;
+  if (numbersOfString(string) === 1) {
+    qtd = `${numbersOfString(string)} copo de água`;
+  } else {
+    qtd = `${numbersOfString(string)} copos de água`;
+  }
+  return qtd;
 }
 
 module.exports = {
