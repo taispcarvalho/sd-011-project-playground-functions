@@ -5,13 +5,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let resultado = '';
   if (distanciaCat2 < distanciaCat1) {
     resultado = 'cat2';
+    console.log(resultado);
   } else if (distanciaCat2 > distanciaCat1) {
     resultado = 'cat1';
+    console.log(resultado);
   } else {
     resultado = 'os gatos trombam e o rato foge';
+    console.log(resultado);
   }
   return resultado;
 }
-  console.log(catAndMouse(0, 3, 2));
-  console.log(catAndMouse(0, 6, 12));
-  console.log(catAndMouse(0, 3, 3));
