@@ -35,23 +35,19 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbersArray) {
   let higherNumber = 0;
-  let largestAccountant = 0;
-  function discoverBigger(numbersArray) {
-    for (let index = 0; index < numbersArray.length; index += 1) {
-      if (numbersArray[index] >= higherNumber) {
-        higherNumber = numbersArray[index];
-      }
+  let largestAccountant = 0;  
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] >= higherNumber) {
+      higherNumber = numbersArray[index];
     }
-  }
-  function timesMore (numbersArray) {
-    for (let index = 0; index < numbersArray.length; index += 1) {
-      if (higherNumber === numbersArray[index]) {
-        largestAccountant += 1;
-      }
+  }  
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (higherNumber === numbersArray[index]) {
+      largestAccountant += 1;
     }
-  }
+  }  
   return largestAccountant;
 }
 
