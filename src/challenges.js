@@ -48,7 +48,7 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 function catAndMouse(mouse, cat1, cat2) {
   let distance1 = mouse - cat1;
   let distance2 = mouse - cat2;
-  let catMouse;
+  let catMouse = 0;
 
   if (distance1 > distance2) {
     catMouse.push('cat1');
