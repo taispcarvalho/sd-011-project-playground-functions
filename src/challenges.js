@@ -137,16 +137,6 @@ function encodeU(string) {
   }
 }
 
-function encode(string) {
-  let sentence = string;
-  encodeA(sentence);
-  encodeE(sentence);
-  encodeI(sentence);
-  encodeO(sentence);
-  encodeU(sentence);
-  return sentence;
-}
-
 function decode1(string) {
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] === 1) {
@@ -187,13 +177,23 @@ function decode5(string) {
   }
 }
 
-function decode(string) {
+function encode(string) {
   let sentence = string;
   decode1(sentence);
   decode2(sentence);
   decode3(sentence);
   decode4(sentence);
   decode5(sentence);
+  return sentence;
+}
+
+function decode(string) {
+  let sentence = string;
+  encodeA(sentence);
+  encodeE(sentence);
+  encodeI(sentence);
+  encodeO(sentence);
+  encodeU(sentence);
   return sentence;
 }
 
