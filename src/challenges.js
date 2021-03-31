@@ -80,9 +80,29 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numeros) {
   // seu código aqui
+  let retorno = [];
+
+  for (let index in numeros){
+
+    if ((numeros[index] % 3 == 0 ) && (numeros[index] % 5 == 0)){
+      retorno.push('fizzBuzz');
+    }else{
+      if ((numeros[index] % 3 == 0 )){
+        retorno.push('fizz');
+      }else{
+        if ((numeros[index] % 5 == 0 )){
+          retorno.push('buzz');
+        }else{
+          retorno.push('bug!');
+        }
+      }
+    }
+  }
+  return retorno;
 }
+console.log(fizzBuzz([9,25]));
 
 // Desafio 9
 function encode() {
