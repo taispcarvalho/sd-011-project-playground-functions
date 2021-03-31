@@ -1,6 +1,8 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 && param2) return true
+  if (param1 && param2) {
+    return true
+  }
 }
 
 // Desafio 2
@@ -33,12 +35,12 @@ function footballPoints(wins, ties) {
 function highestCount(arrayOfNumbers) {
   let highNumber = 0;
   let repeteations = 0;
-  for (number of arrayOfNumbers) {
+  for (let number of arrayOfNumbers) {
     if (number > highNumber) {
       highNumber = number;
     }
   }
-  for (number of arrayOfNumbers) {
+  for (let number of arrayOfNumbers) {
     if (highNumber == number) {
       repeteations += 1;
     }
