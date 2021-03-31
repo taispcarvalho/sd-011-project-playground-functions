@@ -49,19 +49,18 @@ function catAndMouse(mouse, cat1, cat2) {
   let catMouse = 0;
 
   if (distance1 > distance2) {
-    catMouse.push('cat1');
+    catMouse = 'cat1';
   } else if (distance1 < distance2) {
-    catMouse.push('cat2');
+    catMouse ='cat2';
   } else if (distance1 === distance2) {
-    catMouse.push('Os gatos trambaram e o rato foge');
-  }
-
+    catMouse = 'Os gatos trambaram e o rato foge';
+  };
   console.log(catMouse);
-
   return catMouse;
+  
   // seu código aqui
 }
-
+console.log(catAndMouse(12, 4, 3))
 // Desafio 8
 function fizzBuzz(array) {
   let number = 0;
@@ -72,10 +71,11 @@ function fizzBuzz(array) {
       number.push('fizz');
     } else if (array[index] % 5 === 0) {
       number.push('buzz');
-    } else if (array[index] % 3 !== 0 && array[index] % 5 !== 0){
-    number.push('bug!')
+    } else if (array[index] % 3 !== 0 && array[index] % 5 !== 0) {
+      number.push('bug!');
     }
   }
+  return number;
   // seu código aqui
 }
 
