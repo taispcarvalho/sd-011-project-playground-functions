@@ -25,9 +25,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winsValue = 3;
-  let tiesValue = 1;
-  return wins * winsValue + ties * tiesValue;
+  return (wins * 3) + (ties * 1);
 }
 /* console.log(footballPoints(0, 0));  */
 
@@ -68,21 +66,17 @@ function highestCount(array) {
 /* console.log(highestCount([9, 1, 2, 3, 9, 5, 7])); */
 
 // Desafio 7
-/* Recebe 3 posições numericas que representa a posição de cada animal. A ideia  e ver a distancia numerica entre as posiçoes e devolver o animal que estiver amis proximo 
-Para isso tenho que comparar a distancia do gato1 com o rato, gato2 com o rato e se os gatos estão na mesma distância.
-Se gato 1 estiver mais proximo retorna gato1.
-Se gato2 estiver amsi proximo retorna gato 2.
-Se os gatos estiverem na mesma distancia retorna frase "os gatos trombam e o rato foge". */
+/* Recebe 3 posições numericas que representa a posição de cada animal. A ideia  e ver a distância numerica entre as posições e devolver o gato que estiver mais próximo do rato.
+Para isso tenho que comparar a distância do gato1 com o rato, gato2 com o rato e se os gatos estão na mesma distância.
+Se gato 1 estiver mais próximo retorna gato1.
+Se gato2 estiver mais próximo retorna gato 2.
+Se os gatos estiverem na mesma distância retorna frase "os gatos trombam e o rato foge". */
 
 function betweenDistance (mouse, cat){
-  if (mouse === cat){
-    return 0;
-  }else{
-    return (mouse -= cat) * (-1); 
+    return Math.abs(mouse -= cat); 
   }    
+/* console.log(betweenDistance(1, 7)); */
 
-}
-/* console.log(betweenDistance(1, 8)) */
 function catAndMouse(mouse, cat1, cat2){
   let cat1Distance = betweenDistance (mouse, cat1);
   let cat2Distance = betweenDistance (mouse, cat2);
