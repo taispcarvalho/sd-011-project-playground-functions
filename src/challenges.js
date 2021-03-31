@@ -72,24 +72,24 @@ function fizzBuzz(numerosDesafio8) {
 
 // Desafio 9
 function encode(string1) {
-//   let codigo = [];
-//   for (let i = 0; i < string1.length; i += 1) {
-//     if (string1[i] === 'a') {
-//       codigo.push('1');
-//     } else if (string1[i] === 'e') {
-//       codigo.push('2');
-//     } else if (string1[i] === 'i') {
-//       codigo.push('3');
-//     } else if (string1[i] === 'o') {
-//       codigo.push('4');
-//     } else if (string1[i] === 'u') {
-//       codigo.push('5');
-//     } else {
-//       codigo.push(string1[i]);
-//     }
-//   }
-//   return codigo.join('');
-// }
+  let codigo = [];
+  for (let i = 0; i < string1.length; i += 1) {
+    if (string1[i] === 'a') {
+      codigo.push('1');
+    } else if (string1[i] === 'e') {
+      codigo.push('2');
+    } else if (string1[i] === 'i') {
+      codigo.push('3');
+    } else if (string1[i] === 'o') {
+      codigo.push('4');
+    } else if (string1[i] === 'u') {
+      codigo.push('5');
+    } else {
+      codigo.push(string1[i]);
+    }
+  }
+  return codigo.join('');
+}
 
 function decode() {
   // seu código aqui
@@ -106,4 +106,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
