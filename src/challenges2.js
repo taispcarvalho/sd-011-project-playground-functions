@@ -2,15 +2,15 @@
 function techList(arr, nm) {
   let newArr = [];
 
-  if (arr !== []) {
+  if (arr.length > 0) {
     for (let index of arr.sort()) {
       newArr.push({ tech: index, name: nm });
     }
-  } else return 'Vasio!';
+  } else return 'Vazio!';
   return newArr;
 }
-//'React', 'Jest', 'HTML', 'CSS', 'JavaScript'
-let cursos = [];
+// 'React', 'Jest', 'HTML', 'CSS', 'JavaScript'
+let cursos = ['Jest'];
 
 console.log(techList(cursos, 'marlon'));
 
