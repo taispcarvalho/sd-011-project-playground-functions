@@ -41,23 +41,23 @@ console.log(footballPoints(1, 2));
 // Desafio 6
 function higherNumber(numbers) {
   let higher = numbers[0];
-    for (let key of numbers) {
-      if (key > higher) {
-        higher = key;
-      }
+  for (let key of numbers) {
+    if (key > higher) {
+      higher = key;
     }
-  return number
+  }
+  return higher
 }
 console.log(higherNumber([9, 1, 2, 3, 9, 5, 7]));
 
 function highestCount(numbers) {
   // seu código aqui
   let counter = 0;
-    for (let key of numbers) {
-      if (key === higherNumber(numbers)) {
-        counter += 1;
-      }
+  for (let key of numbers) {
+    if (key === higherNumber(numbers)) {
+      counter += 1;
     }
+  }
   return counter;
 }
 
