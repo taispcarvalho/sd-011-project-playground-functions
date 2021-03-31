@@ -47,7 +47,7 @@ function phoneNumber(numbers) {
   let secondPart = numbers.slice(2, 7).join('');
   let thirddPart = numbers.slice(7, 12).join('');
 
-  return (${firstPart}) ${secondPart}-${thirddPart};
+  return `(${firstPart}) ${secondPart}-${thirddPart}`;
 }
 
 function generatePhoneNumber(numbers) {
