@@ -69,9 +69,9 @@ function highestCount(valores){
 //let cat2=5    ;
 
 function catAndMouse(mouse,cat1,cat2) {
-  if(mouse-cat1<cat2-mouse){
+  if(mouse-cat1<mouse-cat2){
     return("cat1");
-  }else if(mouse-cat1>cat2-mouse){
+  }else if(mouse-cat1>mouse-cat2){
     return("cat2");
   }else{
     return("Os gatos trombam e o rato foge");
@@ -99,9 +99,33 @@ function fizzBuzz(numeros){
 }
 //fizzBuzz(numeros);
 // Desafio 9
-function encode() {
-  // seu código aqui
+let frase="Melissa Gabriele Figueiredo";
+function encode(frase) {
+  let stresp=String;
+  //stresp.pop();
+  for(let cont=0;cont<frase.length;cont++){
+    if(frase[cont]==="a"){
+        stresp.push(1);
+    }else if(frase[cont]==="e"){
+        stresp.push(2);
+    }else if(frase[cont]==="i"){
+        stresp.push(3);
+    }else if(frase[cont]==="o"){
+        stresp.push(4);
+    }else if(frase[cont]==="u"){
+        stresp.push(5);
+    }else{
+        stresp.push(frase[cont]);
+    }
+    
+    
+
+  }
+  let frase2= stresp.toString();
+  console.log(frase2);
 }
+encode(frase);
+
 function decode() {
   // seu código aqui
 }
