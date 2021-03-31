@@ -67,10 +67,18 @@ let arr = [9, 1, 2, 3, 9, 5, 7]
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mousePosition, cat1Position, cat2Position ) {
+ const dist1 = Math.abs(mousePosition - cat1Position)
+ const dist2 = Math.abs(mousePosition - cat2Position) 
+ if (dist1 > dist2){
+   return 'cat2';
+ } if (dist1 < dist2 ){
+   return 'cat1'
+ }else{
+  return 'os gatos trobam e o rato foge'
 }
-
+}
+console.log(catAndMouse(0,0,0));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
