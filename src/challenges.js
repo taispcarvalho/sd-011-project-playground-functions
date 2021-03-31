@@ -45,6 +45,7 @@ function highestCount(array) {
 function catAndMouse(cat1, cat2, mouse) {
   let distancia1;
   let distancia2;
+  let resultado = '';
   if (cat1 < mouse) {
     distancia1 = mouse - cat1;
   } else {
@@ -56,11 +57,13 @@ function catAndMouse(cat1, cat2, mouse) {
     distancia2 = cat2 - mouse;
   }
   if (distancia1 < distancia2) {
-    return 'cat1';
+    resultado = 'cat1';
   } else if (distancia2 < distancia1) {
-    return 'cat2';
-  }
-  return 'os gatos trombam e o rato foge';
+    resultado = 'cat2';
+  }else{
+  resultado = 'os gatos trombam e o rato foge';
+}
+return resultado
 }
 
 console.log (catAndMouse(5,3,6))
@@ -84,12 +87,49 @@ function fizzBuzz(array) {
 }
 console.log(fizzBuzz(3,43,4,5))
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+function encode(code) {
+  let codigo = [];
+  for (let index = 0; index < code.length; index+=1) {
+    if (code[index] === 'a') {
+      codigo.push('1')
+    }else if (code[index] === 'e') {
+      codigo.push('2')
+    }else if (code[index] == 'i') {
+      codigo.push('3');
+    }else if (code[index] == 'o') {
+      codigo.push('4')
+    }else if (code[index] == 'u') {
+      codigo.push('5')
+    }else{
+      codigo.push(code[index])
+    }     
+  }
+  return codigo.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(code) {
+  let codigo = [];
+  for (let index = 0; index < code.length; index+=1) {
+    if (code[index] === '1') {
+      codigo.push('a')
+    }else if (code[index] === '2') {
+      codigo.push('e')
+    }else if (code[index] == '3') {
+      codigo.push('i');
+    }else if (code[index] == '4') {
+      codigo.push('o')
+    }else if (code[index] == '5') {
+      codigo.push('u')
+    }else{
+      codigo.push(code[index])
+    }     
+  }
+  return codigo.join('');
 }
+
+console.log(decode("h3 th2r2"))
+
 
 module.exports = {
   calcArea,
