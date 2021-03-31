@@ -56,14 +56,15 @@ function catAndMouse(mouse, cat1, cat2) {
 function divideNumber(num) {
   if (num % 15 === 0) {
     return 'fizzBuzz';
+  } 
+  if (num % 3 === 0) {
+    return 'fizz';
+  } 
+  if (num % 5 === 0) {
+    return 'buzz';
+  } else {
+    'bug!'
   }
-  else if (num % 3 === 0) {
-    return 'Fizz';
-  }
-  else if (num % 5 === 0) {
-    return 'Buzz';
-  }
-  return 'bug!';
 }
 
 function fizzBuzz(valueArray) {
@@ -73,18 +74,15 @@ function fizzBuzz(valueArray) {
   }
   return result;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-console.log(fizzBuzz([7, 9]));
-console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode(str) {
   const letterChange = { a: 1, e: 2, i: 3, o: 4, u: 5 };
-  return str.replace(/[aeiou]/g, (match => letterChange[match]));
+  return str.replace(/[aeiou]/g, (match) => letterChange[match]);
 }
 
 function decode(str) {
-  return str.replace(/\d/g, (match => 'Zaeiou'[match]));
+  return str.replace(/\d/g, (match) => 'Zaeiou'[match]);
 }
 
 module.exports = {
