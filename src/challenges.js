@@ -67,7 +67,7 @@ function fizzBuzz(value6) {
       if (value6[i] % 3 === 0 && value6[i] % 5 !== 0) {
         numbersConter.push('fizz');
       }
-
+    }
     function buzz() {
       if (value6[i] % 3 !== 0 && value6[i] % 5 === 0) {
         numbersConter.push('buzz');
