@@ -38,10 +38,10 @@ function highestCount() {
 
 }
 
-// Desafio 7
+// Desafio 7 - com problemas
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Mouse = cat1 - mouse;
-  let cat2Mouse = cat2 - mouse;
+  let cat1Mouse = Math.abs(cat1 - mouse);
+  let cat2Mouse = Math.abs(cat2 - mouse);
 
   if (cat1Mouse < cat2Mouse) {
     return 'cat1';
