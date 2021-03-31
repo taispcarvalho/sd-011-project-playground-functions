@@ -1,89 +1,73 @@
 // Desafio 10
 function techList(arr, nome) {
-
   arr = arr.sort();
 
-  for (const i in arr) {
-    arr[i] = { tech: arr[i], name: nome };
+  for (let i = 0; i < arr.length; i += 1) {
+    arr[i] = { tech: arr, name: nome };
   }
 
   return arr.length === 0 ? 'Vazio!' : arr;
 }
 
 // Desafio 11
+function isNumThree(arr, str) {
+  for (const n of arr) {
+    let re = new RegExp(n, 'g');
+    if (str.match(re).length >= 3) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function isNegative(str) {
+  return str.match(/-\d/g) !== null;
+}
+
+function isGreater9(str) {
+  return str.match(/\d/g).length > 11;
+}
+
 function generatePhoneNumber(arr) {
+  if (arr.length > 11) {
+    return 'Array com tamanho incorreto.';
+  }
+
   let str = arr.join('');
-
-  function isNumThree() {
-
-    for (const n of arr) {
-      let re = eval(`/${n}/g`);
-      if (str.match(re).length >= 3) {
-        return true;
-      }
-    }
-    return false;
+  if (!isGreater9(str) && !isNegative(str) && !isNumThree(arr, str)) {
+    str = str.replace(/^(\d{2})(\d{5})(\d{4})/g, '($1) $2-$3');
+    return str;
   }
-
-  function isNegative() {
-    return str.match(/-\d/g) !== null;
-  }
-
-  function isGreater9() {
-    return str.match(/\d/g).length > 11;
-  }
-
-  if (arr.length === 11) {
-    if (!isGreater9() && !isNegative() && !isNumThree()) {
-      str = str.replace(/^(\d{2})(\d{5})(\d{4})/g, '($1) $2-$3');
-      return str;
-    } else {
-      return "não é possível gerar um número de telefone com esses valores";
-    }
-  } else {
-    return "Array com tamanho incorreto.";
-  }
+  return 'não é possível gerar um número de telefone com esses valores';
 }
 
 // Desafio 12
+
+function abs(x) {
+  return Math.abs(x);
+}
+
 function triangleCheck(a, b, c) {
-  if (a <= 0 || b <= 0 || c <= 0) {
-    console.log("Lados nulos ou negativos nao sao aceitos.");
-    return false;
-  }
-
-  if (a >= b + c || b >= c + a || c >= a + b) {
-    console.log("Triangulo inexistente.");
-    return false;
-  }
-
-  if (a === b && b === c) {
-    console.log("Triangulo equilátero.");
-    return true;
-  } else if (a == b || b == c || c == a) {
-    console.log("Triangulo isósceles.");
-    return true;
-  } else {
-    console.log("Triangulo escaleno.");
-    return true;
-  }
+  return a < abs(b + c) && b < abs(a + c) && c < abs(a + b);
 }
 
 // Desafio 13
+
+function int(str) {
+  return parseInt(str, 10);
+}
+
 function hydrate(str) {
   let number = 0;
   let numbers = str.match(/\d/g);
 
   for (const num of numbers) {
-    number += parseInt(num);
+    number += int(num);
   }
-
   if (number <= 1) {
     return `${number} copo de água`;
-  } else {
-    return `${number} copos de água`;
   }
-
+  return `${number} copos de água`;
 }
 
 module.exports = {
