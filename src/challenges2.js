@@ -34,9 +34,9 @@ function countNumberRepets(numbersArray) {
   return max;
 }
 function generatePhoneNumber(numbersArray) {
-  let dddNumber = testArray.slice(0,2).map(String).join('');
-  let firsPartNumber = testArray.slice(2,7).map(String).join('');
-  let secondPartNumber = testArray.slice(7,11).map(String).join('');
+  let dddNumber = numbersArray.slice(0, 2).map(String).join('');
+  let firsPartNumber = numbersArray.slice(2, 7).map(String).join('');
+  let secondPartNumber = numbersArray.slice(7, 11).map(String).join('');
 
   if (numbersArray.length !== 11) {
     return 'Array com tamanho incorreto.'
@@ -50,7 +50,7 @@ function generatePhoneNumber(numbersArray) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
-  return '('+dddNumber+')'+firsPartNumber+'-'+secondPartNumber;
+  return '(' + dddNumber + ')' + firsPartNumber + '-' + secondPartNumber;
 }
 
 // Desafio 12
