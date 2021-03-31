@@ -74,8 +74,8 @@ function fizzBuzzElement(number) {
 
 function fizzBuzz(arr) {
   let newArr = [];
-  for (let index = 0; index < arr.length; index += 1) {
-    newArr.push(fizzBuzzElement(arr[index]));
+  for (let number of arr) {
+    newArr.push(fizzBuzzElement(number));
   }
   return newArr;
 }
