@@ -48,31 +48,36 @@ function highestCount() {
  
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
+  if(Math.abs(distanceCat1) < Math.abs(distanceCat2)){
+    return 'cat1';
+  }else if(Math.abs(distanceCat2) < Math.abs(distanceCat1)){
+    return 'cat2';
+  }else if (Math.abs(distanceCat2) == Math.abs(distanceCat1)){
+    return 'os gatos trombam e o rato foge';
+  }
+
 }
+console.log(catAndMouse(5, 2, 12));
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  
-  for (let i = 0; i < numbers.length; i += 1){
-        let checkIf =(numbers[i] % 3 === 0 &&  numbers[i] % 5 === 0);     
-         if(checkIf === true){
-           console.log('fizzBuzz')
-         }else {
-         if(numbers[i] % 3 === 0){
-          console.log('fizz');
-        }else if (numbers[i] % 5 === 0) {
-          console.log('buzz');
-
-        }else {
-          console.log('bug!');
+  for ( let index = 0; index < numbers.length; index += 1) {
+       let newArray; 
+         if(numbers[index] % 3 === 0 &&  numbers[index] % 5 === 0){
+            newArray.push('fizzBuzz');
+         }else if(numbers[index] % 3 === 0){
+           newArray.push('fizz');
+        }else if (numbers[index] % 5 === 0){
+          newArray.push('buzz');
+        }else{
+          return('bug!');
         }
-
+        return newArray;
       }
-    }
-    
-}
- 
+      }
+     console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode() {
   
