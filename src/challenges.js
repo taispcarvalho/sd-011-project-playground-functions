@@ -69,7 +69,7 @@ function highestCount(valores){
 //let cat2=5    ; 
 
 function catAndMouse(mouse,cat1,cat2) {
-  if(cat1&&cat2<mouse){
+  if(cat1<mouse&&cat2<mouse){
     if(cat1>cat2){
       return("cat1");
       }else if (cat2>cat1){
@@ -77,7 +77,7 @@ function catAndMouse(mouse,cat1,cat2) {
       }else{
         return("Os gatos trombam e o rato foge");
       }
-  }else if(cat1&&cat2>mouse){
+  }else if(cat1>mouse&&cat2>mouse){
     if(cat1<cat2){
       return("cat1");
       }else if (cat1>cat2){
@@ -105,7 +105,6 @@ function catAndMouse(mouse,cat1,cat2) {
   }else{  
 //  if(mouse-cat1==mouse-cat2||){
 //    return("cat2");
-//  }else{
     return("Os gatos trombam e o rato foge");
   }
 }
