@@ -13,7 +13,6 @@ function techList(anyArray, anyName) {
   }
   return techListArray;
 }
-}
 
 // Desafio 11
 function generatePhoneNumber(array) {
