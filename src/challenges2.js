@@ -1,5 +1,8 @@
 // Desafio 10
 function techList(techToLearn, myName) {
+  if (techToLearn.length === 0) {
+    return 'Vazio!';
+  }
   let listOfTechToLearn = [];
   let techToLearnSorted = techToLearn.sort();
   for (let index = 0; index < techToLearn.length; index += 1) {
