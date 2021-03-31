@@ -1,10 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return value1 && value2;
 }
 
 // Desafio 2
@@ -30,9 +26,7 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winPoints = 3 * wins;
-  let tiePoints = 1 * ties;
-  let points = winPoints + tiePoints;
+  let points = (3 * wins + ties);
   return points;
 }
 console.log(footballPoints(14, 8));
@@ -90,15 +84,26 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(str) {
-let encodeStr = '';
-  for (let i = 0; i < str.length; i += 1) {
-    if (str[i] === 'a') {
-      str[i] = 1;
+  let encdVogais = {
+    'a': 1,
+    'e': 2,
+    'i': 3,
+    'o': 4,
+    'u': 5,
+  };
+  let encdStr = '';
+  for (let letra in str) {
+    if (letra in encdVogais) {
+      encdStr += encdVogais[letra];
+    } else {
+      encdStr += letra;
     }
   }
-  return encodeStr;
+  return encdStr;
 }
-console.log(encode('abacaxi'));
+console.log(encode('hello there'));
+
+
 
 function decode() {
   // seu código aqui
