@@ -13,8 +13,8 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-// O método ultilizado abaixo consta na documentação do JavaScript
-// Esse método é usado para separar uma string em um array de acordo com separador, o usado abaixo foi para espaços (" ")
+  // O método ultilizado abaixo consta na documentação do JavaScript
+  // Esse método é usado para separar uma string em um array de acordo com separador, o usado abaixo foi para espaços (" ")
   return phrase.split(' ');
 }
 
@@ -48,8 +48,16 @@ function highestCount(number) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (mouse < cat1) {
+    return 'cat1';
+  }
+  if (mouse < cat2) {
+    return 'cat2';
+  }
+  if (cat1 === cat2) {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
