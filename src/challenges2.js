@@ -41,8 +41,8 @@ function checkRepeatedNumber(numbersArray) {
   return false;
 }
 
-function checkSizePhoneNumber(arraySize) {
-  if (arraySize.length !== 11) {
+function checkSizePhoneNumber(numbersArray) {
+  if (numbersArray.length !== 11) {
     return true;
   }
   return false;
