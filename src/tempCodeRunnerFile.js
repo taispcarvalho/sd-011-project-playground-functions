@@ -1,11 +1,13 @@
-function decode(frase) {
-  for (let index = 0; index < frase.length; index += 1){
-    frase = frase.replace('1', 'a');
-    frase = frase.replace('2', 'e');
-    frase = frase.replace('3', 'i');
-    frase = frase.replace('4', 'o');
-    frase = frase.replace('5', 'u');
+function techList(array, name) {
+let test = [];
+  for(let index in array)
+    if (array !== []){
+    test.push = {
+    tech: '',
+    name: name,
+    }
   }
-  return frase
+return test
 }
-console.log(decode('h3 th2r2!'))
+let tecnologias = ["React", "Jest", "HTML", "CSS", "JavaScript"]
+console.log(tecnologias , 'Islene')
