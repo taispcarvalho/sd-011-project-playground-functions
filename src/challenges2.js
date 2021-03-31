@@ -31,13 +31,13 @@ function validPhoneNumber(numbers) {
   let previous = 0;
   let randomNumbers = numbers.slice(0).sort();
 
-  randomNumbers.forEach(number) => {
+  randomNumbers.forEach((number) => {
     count = previous && previous === number ? count + 1 : 1;
 
     if (count === 3) status = false;
 
     previous = number;
-  };
+  });
 
   return status;
 }
