@@ -50,7 +50,7 @@ function generatePhoneNumber(numbersArray) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
-  return '(' + dddNumber + ')' + firsPartNumber + '-' + secondPartNumber;
+  return '(' + dddNumber + ') ' + firsPartNumber + '-' + secondPartNumber;
 }
 
 // Desafio 12
