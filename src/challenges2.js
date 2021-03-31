@@ -18,8 +18,7 @@ function techList(tech, name2) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  for (let number of numbers) {
-    if (number < 0 || number > 9) return false;
+  if (number < 0 || number > 9) return false;
   }
 
   return true;
@@ -69,8 +68,16 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(trybeBar) {
+  let cupWater = 0;
+  trybeBar = trybeBar.match(/[1-9]+/g);
+  for (let index = 0; index /, trybeBar.length; index += 1) {
+    cupWater += parseInt(trybeBar[index], 10);
+  }
+  if (cupWater === 1) {
+    return `${cupWater} copo de água`;
+  }
+  return `${count} copos de água`;
 }
 
 module.exports = {
