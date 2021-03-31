@@ -59,7 +59,6 @@ console.log(highestCount(numArray));
 function catAndMouse(mouse, cat1, cat2) {
   let catNumber1 = Math.abs(mouse - cat1);
   let catNumber2 = Math.abs(mouse - cat2);
-  
   if (catNumber1 < catNumber2) {
     return 'cat1';
   } if (catNumber1 > catNumber2) {
@@ -89,21 +88,47 @@ let arrayTest = [9, 25];
 console.log(fizzBuzz(arrayTest));
 
 // Desafio 9
-function encode(src) {
-  for (let index = 0; index < src.length; index += 1) {
-    if (src[index] === a) a = 1;
-    if (src[index] === e) e = 2;
-    if (src[index] === i) i = 3;
-    if (src[index] === o) o = 4;
-    if (src[index] === u) u = 5;
+function encode(str) {
+  for (let index in str) {
+    let aux = str[index];
+    switch(aux) {
+      case 'a': str = str.replace(aux, 1);
+        break;
+      case 'e': str = str.replace(aux, 2);
+        break;
+      case 'i': str = str.replace(aux, 3);
+        break;
+      case 'o': str = str.replace(aux, 4);
+        break;
+      case 'u': str = str.replace(aux, 5);
+        break;
+      default: break;
+    }
   }
-  return src; 
+  return str; 
 }
-function decode() {
-  // seu código aqui
+function decode(str) {
+  for (let index in str) {
+    let aux = str[index];
+    switch(aux) {
+      case '1': str = str.replace(aux, 'a');
+        break;
+      case '2': str = str.replace(aux, 'e');
+        break;
+      case '3': str = str.replace(aux, 'i');
+        break;
+      case '4': str = str.replace(aux, 'o');
+        break;
+      case '5': str = str.replace(aux, 'u');
+        break;
+      default: break;
+    }
+  }
+  return str;
 }
-let src = 'hi there';
-console.log(encode(src))
+let str = 'ivaldo souza';
+console.log(encode(str));
+console.log(decode(str));
 
 module.exports = {
   calcArea,
