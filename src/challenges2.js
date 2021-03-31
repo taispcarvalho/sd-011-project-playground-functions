@@ -3,13 +3,15 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  
+function generatePhoneNumber() { 
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) {
+  if (b < c + a && b > Math.abs(c - a)) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
