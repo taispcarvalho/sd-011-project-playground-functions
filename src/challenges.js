@@ -84,8 +84,7 @@ function encode(string) {
       string = string.replace('u', '5');
     }
   }
-    return string;
-
+  return string;
 }
 console.log(encode('don juan o batedor de veias'));
 
@@ -103,7 +102,7 @@ function decode(string) {
       string = string.replace('5', 'u');
     }
   }
-    return string;
+  return string;
 }
 console.log(decode('d4n j51n 4 b1t2d4r d2 v231s'));
 
