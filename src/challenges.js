@@ -74,22 +74,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 console.log(catAndMouse(1, 0, 3));
 
-// function catAndMouse(mouse, cat1, cat2) {
-//   let mouseCat1 = (cat1 - mouse) ** 2;
-//   let mouseCat2 = (cat2 - mouse) ** 2;
-//   let result;
-
-//   if (mouseCat1 < mouseCat2) {
-//     result = 'cat1';
-//   } else if (mouseCat2 < mouseCat1) {
-//     result = 'cat2';
-//   } else {
-//     result = 'os gatos trombam e o rato foge';
-//   }
-//   return result;
-// }
-// console.log(catAndMouse(1, 0, 2));
-
 function fizz(number) {
   if (number % 3 === 0) {
     return 'fizz'
