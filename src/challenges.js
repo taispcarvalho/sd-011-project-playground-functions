@@ -17,7 +17,7 @@ function splitSentence(string) {
 function concatName(myArray) {
   let firstItem = myArray[0];
   let lastItem = myArray[myArray.length - 1];
-  return lastItem + ', ' + firstItem;
+  return `${lastItem}, ${firstItem}`;
 }
 
 // Desafio 5
@@ -81,12 +81,10 @@ function encode(str) {
   const letterChange = { a: 1, e: 2, i: 3, o: 4, u: 5};
   return str.replace(/[aeiou]/g, match => letterChange[match]);
 }
-console.log(encode("H4w 1r2 y45 t4d1y?"))
 
 function decode(str) {
   return str.replace(/\d/g, match => 'Zaeiou'[match]);
 }
-console.log(decode("H4w 1r2 y45 t4d1y?"))
 
 module.exports = {
   calcArea,
