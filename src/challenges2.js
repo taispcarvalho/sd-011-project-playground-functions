@@ -78,11 +78,13 @@ function hydrate(beverage) {
   if (cupsWater === 1) {
     answerHydrate = cupsWater + ' copo de água';
   } else {
-    nswerHydrate = cupsWater + ' copos de água';
+    answerHydrate = cupsWater + ' copos de água';
   }
 
   return answerHydrate;
 }
+
+console.log(hydrate('4 caipirinhas e 2 cervejas'));
 
 module.exports = {
   generatePhoneNumber,
