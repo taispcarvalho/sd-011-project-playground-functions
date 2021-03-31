@@ -50,10 +50,10 @@ function phoneNumber(numbers) {
   return `(${firstPart}) ${secondPart}-${thirddPart}`;
 }
 
-function generatePhoneNumber(numbers) {
+function generatePhoneNumber2(numbers) {
   if (numbers.length !== 11) return 'Array com tamanho incorreto.';
 
-  if (!validPhoneNumber(numbers)) {
+  if (!validPhoneNumber2(numbers)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
