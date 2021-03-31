@@ -1,6 +1,5 @@
 // Desafio 1
 function compareTrue(val1, val2) {
-  
   if (val1 && val2) {
     return true;
   }
@@ -11,27 +10,28 @@ function compareTrue(val1, val2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  
-  return area = (base * height) / 2;
+  let area = (base * height) / 2;
+  return area;
 }
 
 
 // Desafio 3
 function splitSentence(word) {
-
-  return arrWord = word.split(' ');;
+  let arrWord = word.split(' ');
+  return arrWord;
 }
 
 // Desafio 4
 function concatName(arrWords) {
-  
-  return arrWords2 = arrWords[arrWords.length - 1] + ', ' + arrWords[0];
+  let arrWords2 = arrWords[arrWords.length - 1] + ', ' + arrWords[0];
+  return arrWords2;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let hits = 0;
-  return hits = (3 * wins) + ties;
+  hits = (3 * wins) + ties;
+  return hits;
 }
 
 // Desafio 6
@@ -46,8 +46,9 @@ function highestCount(arrNum) {
       evenCount += 1; 
     }
   }
-
-  return evenCount + 1;
+  evenCount += 1;
+  
+  return evenCount;
 }
 
 // Desafio 7
