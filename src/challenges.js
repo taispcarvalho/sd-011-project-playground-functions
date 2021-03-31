@@ -140,19 +140,19 @@ console.log(encode('a,e,i,o,u'));
 function decode(string) {
   let arrNew = string.split('');
   for (let letter = 0; letter < arrNew.length; letter += 1) {
-    if (arrNew[letter] == 1) {
+    if (arrNew[letter] === '1') {
       arrNew[letter] = 'a';
     }
-    if (arrNew[letter] == 2) {
+    if (arrNew[letter] === '2') {
       arrNew[letter] = 'e';
     }
-    if (arrNew[letter] == 3) {
+    if (arrNew[letter] === '3') {
       arrNew[letter] = 'i';
     }
-    if (arrNew[letter] == 4) {
+    if (arrNew[letter] === '4') {
       arrNew[letter] = 'o';
     }
-    if (arrNew[letter] == 5) {
+    if (arrNew[letter] === '5') {
       arrNew[letter] = 'u';
     }
   }
