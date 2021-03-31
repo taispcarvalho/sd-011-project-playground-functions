@@ -161,7 +161,7 @@ function decode(phrase) {
   for (const key of phrase) {
     switch (key) {
       case '1':
-        phrasDecode += 'a';
+        phraseDecode += 'a';
         break;
       case '2':
         phraseDecode += 'e';
