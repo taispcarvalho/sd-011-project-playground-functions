@@ -66,7 +66,7 @@ function checkSumSides(sideA, sideB, sideC) {
   let countValues = 0;
   if (sideA < sideB + sideC) {
     countValues += 1;
-  } 
+  }
   if (sideB < sideA + sideC) {
     countValues += 1;
   }
@@ -77,11 +77,11 @@ function checkSumSides(sideA, sideB, sideC) {
   return false;
 }
 
-function checkAbsoluteDiff (sideA, sideB, sideC) {
+function checkAbsoluteDiff(sideA, sideB, sideC) {
   let countValues = 0;
   if (sideA > Math.abs(sideB - sideC)) {
     countValues += 1;
-  } 
+  }
   if (sideB > Math.abs(sideA - sideC)) {
     countValues += 1;
   }
@@ -97,17 +97,25 @@ console.log(checkAbsoluteDiff(10, 14, 8));
 // Desafio 12
 function triangleCheck(sideA, sideB, sideC) {
   let sumSides = checkSumSides(sideA, sideB, sideC);
-  let absDiffSides = checkAbsoluteDiff (sideA, sideB, sideC);
-  if (sumSides && absDiffSides) return true;
+  let absDiff = checkAbsoluteDiff (sideA, sideB, sideC);
+  if (sumSides && absDiff) return true;
   return false;
 }
 
-console.log(triangleCheck(10, 14, 8));
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(receivedString) {
+  let matches = receivedString.match(/\d+/g);
+  let sum = 0;
+  for (let index = 0; index < matches.length; index += 1) {
+    sum += parseInt(matches[index]);
+  }
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  }
+  return `${sum} copos de água`;
 }
+
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
