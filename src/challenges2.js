@@ -1,9 +1,9 @@
-const { splitSentence } = require("./challenges")
+const { splitSentence } = require("./challenges");
 
 // Desafio 10
 function techList(arrayTechList, name) {
-  let arrayTechAndName = []
-  arrayTechList.sort()
+  let arrayTechAndName = [];
+  arrayTechList.sort();
 
   if (arrayTechList.length > 0) {
     for (let index = 0; index < arrayTechList.length; index += 1) {
@@ -12,40 +12,41 @@ function techList(arrayTechList, name) {
         name: name,
       }
     }
-    return arrayTechAndName
+    return arrayTechAndName;
 
   } else {
-    return ('Vazio!')
+    return ('Vazio!');
   }
 }
+
 // Desafio 11
 function generatePhoneNumber(arrayPhoneNumber) {
-  let amountNumber = 0
+  let amountNumber = 0;
   
   if (arrayPhoneNumber.length !== 11) {
     return ('Array com tamanho incorreto.');
   }
 
-  for (number of arrayPhoneNumber) {
+  for (let number of arrayPhoneNumber) {
     if (number < 0 || number > 9) { 
-      return ('não é possível gerar um número de telefone com esses valores') 
+      return ('não é possível gerar um número de telefone com esses valores');
     } else {
-        for (let index = 0; index < arrayPhoneNumber.length; index +=1) { 
-          if (number === arrayPhoneNumber[index]) { 
-            amountNumber += 1;
-          } 
-        }
-        if (amountNumber >= 3) { 
-          return ('não é possível gerar um número de telefone com esses valores') 
-        } else { 
-          amountNumber = 0 
-        }
+      for (let index = 0; index < arrayPhoneNumber.length; index +=1) {
+        if (number === arrayPhoneNumber[index]) { 
+          amountNumber += 1;
+        } 
+      }
+      if (amountNumber >= 3) { 
+        return ('não é possível gerar um número de telefone com esses valores');
+      } else { 
+        amountNumber = 0;
+      }
     }
   }
 
-  let phoneNumber = '(' + arrayPhoneNumber[0] + arrayPhoneNumber[1] + ') ' + arrayPhoneNumber[2] + arrayPhoneNumber[3] + arrayPhoneNumber[4] + arrayPhoneNumber[5] + arrayPhoneNumber[6] + '-' + arrayPhoneNumber[7] + arrayPhoneNumber[8] + arrayPhoneNumber[9] + arrayPhoneNumber[10]
+  let phoneNumber = '(' + arrayPhoneNumber[0] + arrayPhoneNumber[1] + ') ' + arrayPhoneNumber[2] + arrayPhoneNumber[3] + arrayPhoneNumber[4] + arrayPhoneNumber[5] + arrayPhoneNumber[6] + '-' + arrayPhoneNumber[7] + arrayPhoneNumber[8] + arrayPhoneNumber[9] + arrayPhoneNumber[10];
 
-  return phoneNumber
+  return phoneNumber;
 }
 
 // Desafio 12
@@ -56,7 +57,10 @@ function triangleCheck(lineA, lineB, lineC) {
   let subAB = Math.abs(lineA - lineB) < lineC;
   let subAC = Math.abs(lineA - lineC) < lineB;
   let subBC = Math.abs(lineB - lineC) < lineA;
-  return sumAB && sumBC && sumAC && subAB && subAC && subBC;
+
+  let answer = sumAB && sumBC && sumAC && subAB && subAC && subBC;
+  
+  return answer;
 }
 
 // Desafio 13
@@ -71,12 +75,10 @@ function hydrate(beverage) {
     }
   }
 
-  let answerHydrate = cupsWater + ' copos de água'
+  let answerHydrate = cupsWater + ' copos de água';
 
   return answerHydrate;
 }
-
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
 
 module.exports = {
   generatePhoneNumber,

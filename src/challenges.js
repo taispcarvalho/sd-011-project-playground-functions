@@ -5,17 +5,20 @@ function compareTrue(older18, hasLicense) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return ((base * height) / 2);
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
 function splitSentence(sentence) {
-  return sentence.split(' ');
+  let arraySentence = sentence.split(' ');
+  return arraySentence;
 }
 
 // Desafio 4
 function concatName(arrayName) {
-  return (arrayName[arrayName.length - 1] + ', ' + arrayName[0]);
+  let concatenedName = arrayName[arrayName.length - 1] + ', ' + arrayName[0];
+  return concatenedName;
 }
 
 // Desafio 5
