@@ -5,11 +5,13 @@ function techList(arrayOfTechnologies, name) {
     if (key < arrayOfTechnologies.length) {
       technologiesObjects.push({
         tech: arrayOfTechnologies[key], 
-        name: name
+        name: name,
       });
+      return technologiesObjects;
+    } else {
+      return 'Vazio!'
     }
   }
-  return technologiesObjects;
 }
 
 // Desafio 11
