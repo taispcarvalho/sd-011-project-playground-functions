@@ -24,8 +24,6 @@ function concatName(arrayConcat) {
   return concatResult;
 }
 
-console.log(concatName(['raphael', 'a', 'c']));
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let score;
@@ -36,9 +34,28 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayCountBiggest) {
+  let highestValue = biggestNumber(arrayCountBiggest);
+  let countHighestValue = 0;
+  for(let index = 0; index < arrayCountBiggest.length; index+= 1) {
+    if (arrayCountBiggest[index] === highestValue) {
+      countHighestValue += 1;
+    }
+  }
+  return countHighestValue;
 }
+
+function biggestNumber(numbersArray) {
+  let biggestNumber = 0;
+  for (let index = 0; index < numbersArray.length; index+=1) {
+    if (numbersArray[index] > biggestNumber) {
+      biggestNumber = numbersArray[index];
+    }
+  }
+  return biggestNumber;
+}
+
+console.log(highestCount([9, 1, 2, 9, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
