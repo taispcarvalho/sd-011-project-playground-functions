@@ -45,7 +45,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (mouseCat1 === mouseCat2) {
     return 'os gatos trombam e o rato foge';
-  } 
+  }
   if (mouseCat1 > mouseCat2) {
     return 'cat2';
   }
@@ -58,17 +58,17 @@ function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       result.push('FizzBuzz');
+    } else {
+        if (array[index] % 3 === 0) {
+          result.push('Fizz');
+        } else {
+            if (array[index] % 5 === 0) {
+              result.push('Buzz');
+            } else {
+              result.push('bug!');
+            }
+          }
     }
-    if (array[index] % 3 === 0) {
-      result.push('Fizz');
-    }
-    if (array[index] % 5 === 0) {
-      result.push('Buzz');
-    }
-
-    return result.push('bug!');
-    
-  }
   return result;
 }
 
@@ -79,7 +79,7 @@ function encode(str) {
 }
 
 function decode(str) {
-  return str.replace(/\d/g, match => { 'Zaeiou' [match] });
+  return str.replace(/\d/g, match => 'Zaeiou'[match]);
 }
 
 module.exports = {
