@@ -1,24 +1,19 @@
 // Desafio 1
-function compareTrue(value1,value2) {
+function compareTrue(value1, value2) {
   return value1 && value2;
 }
 
-
-
 // Desafio 2
 function calcArea(base, heigth) {
-  return (base * heigth)/2
+  return (base * heigth)/2;
 }
-
 
 // Desafio 3
 function splitSentence(frase) {
   return frase.split(' ');
 }
 
-
 // Desafio 4
-let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName(arrayString) {
   return `${arrayString[arrayString.length - 1]}, ${arrayString[0]}`;
 }
@@ -30,16 +25,16 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayNumbers) {
-  // Encontrar o maior valor
+
     let higherthNumber = arrayNumbers[0];
-    for(let index = 0; index < arrayNumbers.length; index += 1){
+    for( let index = 0; index < arrayNumbers.length; index += 1){
     if( arrayNumbers[index] > higherthNumber){
       higherthNumber = arrayNumbers[index];
     }
   }
-  // verificar quantas vezes o numero maior aparece
+
   let timesNumberAppears = 0;
-  for(let index = 0; index < arrayNumbers.length; index += 1){
+  for( let index = 0; index < arrayNumbers.length; index += 1){
     if( arrayNumbers[index] === higherthNumber){
       timesNumberAppears = timesNumberAppears + 1;
     }
