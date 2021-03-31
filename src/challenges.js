@@ -50,7 +50,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distance1 > distance2) {
     catMouse = 'cat1';
-  } if (distance1 < distance2) {
+  } else if (distance1 < distance2) {
     catMouse = 'cat2';
   } else if (distance1 === distance2) {
     catMouse = 'Os gatos trambaram e o rato foge';
@@ -62,14 +62,16 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(12, 4, 3));
 // Desafio 8
 function fizzBuzz(array) {
-  let number = 0;
+  let number = [];
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      number = 'fiz zBuzz';
-    } else if (array[index] % 3 === 0 || array[index] % 5 === 0 ) {
+      number = 'fizzBuzz';
+    } else if (array[index] % 3 === 0) {
       number = 'fizz';
+    } else if (array[index] % 5 === 0 ){
       number = ' buzz';
-    } else if (array[index] % 3 !== 0 && array[index] % 5 !== 0) {
+    } 
+    else if (array[index] % 3 !== 0 && array[index] % 5 !== 0) {
       number = 'bug!';
     }
   }
