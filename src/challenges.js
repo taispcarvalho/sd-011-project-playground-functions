@@ -11,21 +11,9 @@ function calcArea() {
 }
 
 // Desafio 3
-
 function splitSentence(string) {
-  let i = '["';
-  for (let index of string){
-    if (index !== " ") {
-    i += index;
-    } else {
-    i += '", "';
-    }
-  }
-  i+= '"]'
-  return i;
+  return string.split(' '); // Stackoverflow: https://pt.stackoverflow.com/questions/204346/como-pegar-uma-palavra-dentro-de-uma-string-frase-em-node-js
 }
-
-console.log(splitSentence('Go Trybe'));
 
 // Desafio 4
 function concatName() {
