@@ -15,24 +15,34 @@ function techList(tech, name) {
   return result;
 }
 
-// D11 Auxiliary Functions
-function phoneVerification(phone) {
-  phone = [];
-  if (phone.length > 11 || phone.length < 11) return true;
-}
-
 // Desafio 11
 // References:
+// Template Literals: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+// Break Lines in TL: https://stackoverflow.com/questions/37321047/wrap-long-template-literal-line-to-multiline-without-creating-a-new-line-in-the
 function generatePhoneNumber(phone) {
   let result = '';
-  let pVer = phoneVerification();
-  if (pVer) {
-    result = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
-  } else console.log('error');
+  if (phone.length != 11) {
+    console.log('Array com tamanho incorreto.');
+  } else {
+    for (let i = 0; i < phone.length; i += 1) {
+      let count = 0;
+      if (phone[i] < 0 || phone[i] > 9) {
+        console.log('não é possível gerar um número de telefone com esses valores1');
+      }
+      for (let j of phone) if (phone[j] === phone[i]) {
+        count += 1;
+        if (count > 2) {
+          console.log('não é possível gerar um número de telefone com esses valores2');
+        }
+      }
+    }
+    result = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}`
+    + `${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
+}
   return result;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 1, 1, 1, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {

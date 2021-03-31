@@ -14,8 +14,7 @@ function calcArea(base, height) {
 // Desafio 3
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
 function splitSentence(word) {
-  word = word.split(' ');
-  return word;
+  return word.split(' ');
 }
 
 // Desafio 4
@@ -35,7 +34,9 @@ function footballPoints(wins, ties) {
 // D6 Auxiliary Function
 function highestNumber(numbers) {
   let highNumber = 0;
-  for (let i in numbers) if (numbers[i] >= highNumber) highNumber = numbers[i];
+  for (let i in numbers) {
+    if (numbers[i] >= highNumber) highNumber = numbers[i];
+  }
   return highNumber;
 }
 
