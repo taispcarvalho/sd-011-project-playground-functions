@@ -24,15 +24,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
-  let highest = array[0];
-  let count = 0;
-
+function highNum(array) {
+  let highest;
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] > highest) {
       highest = array[index];
     }
   }
+  return highest;
+}
+
+function highestCount(array) {
+  let highest = array[0];
+  let count = 0;
+
+  highest = highNum(array);
 
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === highest) {
@@ -52,31 +58,34 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
+  let word = 'bug!';
   for (let index = 0; index < array.length; index += 1) {
-    if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) array[index] = 'fizzBuzz';
-    else if (array[index] % 3 === 0) array[index] = 'fizz';
-    else if (array[index] % 5 === 0) array[index] = 'buzz';
-    else array[index] = 'bug!';
+    if (array[index] % 3 === 0) word = 'fizz';
+    if (array[index] % 5 === 0) {
+      if (word === 'fizz') word = word.join('Buzz');
+      else word = 'buzz';
+    }
+    array[index] = word;
   }
   return array;
 }
 
 // Desafio 9
 function encode(string) {
-  string = string.replace(/a/g, "1");
-  string = string.replace(/e/g, "2");
-  string = string.replace(/i/g, "3");
-  string = string.replace(/o/g, "4");
-  string = string.replace(/u/g, "5");
+  string = string.replace(/a/g, '1');
+  string = string.replace(/e/g, '2');
+  string = string.replace(/i/g, '3');
+  string = string.replace(/o/g, '4');
+  string = string.replace(/u/g, '5');
   return string;
 }
 
 function decode(string) {
-  string = string.replace(/1/g, "a");
-  string = string.replace(/2/g, "e");
-  string = string.replace(/3/g, "i");
-  string = string.replace(/4/g, "o");
-  string = string.replace(/5/g, "u");  
+  string = string.replace(/1/g, 'a');
+  string = string.replace(/2/g, 'e');
+  string = string.replace(/3/g, 'i');
+  string = string.replace(/4/g, 'o');
+  string = string.replace(/5/g, 'u');
   return string;
 }
 
