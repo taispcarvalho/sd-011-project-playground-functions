@@ -92,7 +92,7 @@ function encode(frase) {
     frase = frase.replace('e', '2');
     frase = frase.replace('i', '2');
     frase = frase.replace('o', '4');
-    frase = frase.replace('u', '4');
+    frase = frase.replace('u', '5');
   }
   return frase
 }
@@ -102,7 +102,7 @@ function decode(frase) {
     frase = frase.replace('2', 'e');
     frase = frase.replace('3', 'i');
     frase = frase.replace('4', 'o');
-    frase = frase.replace('4', 'u');
+    frase = frase.replace('5', 'u');
   }
   return frase
 }
