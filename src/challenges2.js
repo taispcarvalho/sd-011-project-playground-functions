@@ -4,8 +4,10 @@ function techList(arrTechNames, name1) {
   let arrTechNames2 = [];
   arrTechNames.sort();
 
-  if (arrTechNames === []) {
-    return 'Vazio!'
+  let result = '';
+
+  if (arrTechNames.length == 0) {
+    result = 'Vazio!';
   }
 
   for (let index = 0; index < arrTechNames.length; index += 1) {
@@ -15,9 +17,10 @@ function techList(arrTechNames, name1) {
       tech: arrTechNames[index],
       name: name1,
       };
+      result = arrTechNames2;
   }
 
-  return arrTechNames2;
+  return result;
 }
 
 // Desafio 11
