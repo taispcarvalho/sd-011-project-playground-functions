@@ -10,12 +10,10 @@ function calcArea(base, altura) {
 
 // Desafio 3
 function splitSentence(string) {
-  let array = []
+  let array = [];
   array = string.split(' ');
   return array;
 }
-
-console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(array) {
@@ -73,7 +71,7 @@ function fizzBuzz(array) {
     } else if (array[index] % 3 === 0) {
       secondArray.push('fizz');
     } else if (array[index] % 5 === 0) {
-      secondArray.push('Buzz');
+      secondArray.push('buzz');
     } else {
       secondArray.push('bug!');
     }
