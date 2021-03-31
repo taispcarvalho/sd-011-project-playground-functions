@@ -34,7 +34,7 @@ function footballPoints(wins, ties) {
   return pontuacaoWins + pontuacaoTies;
 }
 
-// Desafio 6 - voltar para refatorar
+// Desafio 6
 function highestNumber(array) {
   let max = 0;
   for (let i in array) {
@@ -85,12 +85,48 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'cat2';
 }
 
-console.log(catAndMouse(0, 6, 12));
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// function isDividedByThree(value) {
+//   if (value % 3 === 0) {
+//     return 'fizz';
+//   }
+//   return;
+// }
+
+// function isDividedByFive(value) {
+//   if (value % 5 === 0) {
+//     return 'buzz';
+//   }
+//   return;
+// }
+
+// function isDividedByThreeAndFive(value) {
+//   if (value % 15 === 0) {
+//     return 'fizzBuzz'
+//   }
+//   return 'bug!';
+// }
+
+function ifFizzBuzz(value, index) {
+  if (value[index] % 15 === 0) {
+    return 'fizzBuzz';
+  } if (value[index] % 3 === 0) {
+    return 'fizz';
+  } if (value[index] % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
 }
+
+function fizzBuzz(array) {
+  let response = [];
+  for (let index in array) {
+    response.push(ifFizzBuzz(array, index));
+  }
+  return response;
+}
+
+console.table(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
