@@ -2,14 +2,14 @@
 function techList(array, name) {
   if (array.length === 0) return 'Vazio!';
   let object = [];
-  array = array.sort()
+  array = array.sort();
   for (let tech of array) {
     object.push({
       tech,
       name,
-    })
+    });
   }
-  return object
+  return object;
 }
 
 // Desafio 11
