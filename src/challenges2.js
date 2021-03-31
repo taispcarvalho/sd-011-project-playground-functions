@@ -1,6 +1,14 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(ability, name) {
+  let abilityList = [];
+  if (Array.isArray(ability) && ability.length > 0) {
+    for (let i = 0; i < ability.length; i += 1) {
+      abilityList[i] = { tech: `${ability[i]}`, name };
+    }
+  } else {
+    abilityList = 'Vazio!';
+  }
+  return abilityList;
 }
 
 // Desafio 11
