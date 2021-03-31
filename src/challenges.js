@@ -1,10 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 && value2){
-    return true;
-  } else {
-    return false;
-  }
+  return (value1 && value2)
 }
 
 // Desafio 2
@@ -15,17 +11,8 @@ function calcArea(base, heigth) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  let array = [];
-  let word = '';
-  let delimiter = ' ';
-  for (let index = 0; index <= phrase.length; index += 1) {
-    if (phrase[index] === delimiter || index === phrase.length) {
-      array.push(word);
-      word = '';
-    } else {
-      word += phrase[index];
-    }
-  } return array
+  let split = phrase.split(' ');
+  return split
 }
 
 // Desafio 4
@@ -49,21 +36,29 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  let inOrder = numeros.sort();
+  let highest = inOrder[highest.length -1]
+  let count = 0;
+
+  for (let index in inOrder) {
+    if (inOrder[index] === highest) {
+      count += 1;
+    }
+  } return count
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let atack1 = 0; let atack2 = 0; let result = null;
-
-  if (cat1 < mouse) { atack1 = mouse - cat1; } 
-  if (mouse < cat1) { atack1 = cat1 - mouse; }
-  if (cat2 < mouse) { atack2 = mouse - cat2; }
-  if (mouse < cat2) { atack2 = cat2 - mouse; } 
-  if (atack1 < atack2) { result = 'cat1'; }
-  else if (atack2 < atack1) { result = 'cat2'; }
-  else { result = 'os gatos trombam e o rato foge'; }
-  return result;
+  let atack1 = Math.abs(cat1 - mouse);
+  let atack2 = Math.abs(cat2 - mouse);
+  
+  if (atack1 < atack2) {
+    return 'cat1';
+  } else if (atack2 < atack1) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
@@ -86,11 +81,55 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let lowercase = phrase.toLowerCase();
+  let newPhrase = lowercase;
+
+  for(let index in newPhrase) {
+    switch (newPhrase[index]) {
+      case 'a':
+        newPhrase = newPhrase.replace('a', '1');
+        break;
+      case 'e':
+         newPhrase = newPhrase.replace('e', '2');
+          break;
+      case 'i':
+        newPhrase = newPhrase.replace('i', '3');
+        break;
+      case 'o':
+          newPhrase = newPhrase.replace('o', '4');
+          break;
+      case 'u':
+        newPhrase = newPhrase.replace('u', '5');
+        break;
+      default: break;
+    }
+  } return newPhrase
 }
-function decode() {
-  // seu código aqui
+function decode(phrase) {
+  let lowercase = phrase.toLowerCase();
+  let newPhrase = lowercase;
+
+  for(let index in newPhrase) {
+    switch (newPhrase[index]) {
+      case '1':
+        newPhrase = newPhrase.replace('1', 'a');
+        break;
+      case '2':
+         newPhrase = newPhrase.replace('2', 'e');
+          break;
+      case '3':
+        newPhrase = newPhrase.replace('3', 'i');
+        break;
+      case '4':
+          newPhrase = newPhrase.replace('4', 'o');
+          break;
+      case '5':
+        newPhrase = newPhrase.replace('5', 'u');
+        break;
+      default: break;
+    }
+  } return newPhrase
 }
 
 module.exports = {

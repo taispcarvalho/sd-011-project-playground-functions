@@ -35,7 +35,7 @@ function hydrate(frase) {
   let quant = 0;
   let agua = '';
 
-  for (index = 0; index < frase2.length; index += 1) {
+  for (let index = 0; index < frase2.length; index += 1) {
     if (isNaN(frase2[index]) == false) {
       quant += Number(frase2[index]);
     } else if (quant <= 1) {
