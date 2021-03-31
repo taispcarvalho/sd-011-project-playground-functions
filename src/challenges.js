@@ -71,7 +71,7 @@ function fizzBuzz(numerosDesafio8) {
 }
 
 // Desafio 9
-// function encode(string1) {
+function encode(string1) {
 //   let codigo = [];
 //   for (let i = 0; i < string1.length; i += 1) {
 //     if (string1[i] === 'a') {
