@@ -43,10 +43,28 @@ function generatePhoneNumber(tel) {
   let lastFour = `-${tel[7]}${tel[8]}${tel[9]}${tel[10]}`;
   return `${areaCode}${firstFive}${lastFour}`;
 }
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function checkLine(main, sideA, sideB) {
+  if (main >= sideA + sideB) {
+    return false;
+  }
+  if (main <= Math.abs(sideA - sideB)) {
+    return false;
+  }
+  return true;
+}
+function triangleCheck(lineA, lineB, lineC) {
+  if (!checkLine(lineA, lineB, lineC)) {
+    return false;
+  }
+  if (!checkLine(lineB, lineC, lineA)) {
+    return false;
+  }
+  if (!checkLine(lineC, lineA, lineB)) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
