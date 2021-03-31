@@ -1,13 +1,11 @@
 // Desafio 10
 function techList(techNamesArray, studentName) {
-  if (techNamesArray.length === 0) {
-    return 'Vazio!';
-  }
+  if (techNamesArray.length === 0) return 'Vazio!';
 
   let techListArray = [];
-  let sortedTechNamesArray = techNamesArray.sort();
+  let sortedTechNames = techNamesArray.sort();
 
-  for (let techName of sortedTechNamesArray) {
+  for (let techName of sortedTechNames) {
     techListArray.push({
       tech: techName,
       name: studentName,
