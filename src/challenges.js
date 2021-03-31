@@ -24,21 +24,28 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(arrayNumbers) {
+let myArray = [0, 0, 0];
+function higherthNumber(arrayNumbers) {
   let higherthNumber = arrayNumbers[0];
   for ( let index = 0; index < arrayNumbers.length; index += 1 ) {
   if ( arrayNumbers[index] > higherthNumber ) {
   higherthNumber = arrayNumbers[index];
   }
-  }
+ }
+ return higherthNumber;
+}
+function highestCount(arrayNumbers) {
   let timesNumberAppears = 0;
+  let higherth = higherthNumber(arrayNumbers);
   for ( let index = 0; index < arrayNumbers.length; index += 1 ) {
-  if ( arrayNumbers[index] === higherthNumber ) {
+  if ( arrayNumbers[index] === higherth ) {
   timesNumberAppears = timesNumberAppears + 1;
   }
   }
   return timesNumberAppears;
 }
+
+console.log(highestCount(myArray))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
