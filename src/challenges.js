@@ -101,8 +101,8 @@ function fizzBuzz(numeros){
 // Desafio 9
 let frase="Melissa Gabriele Figueiredo";
 function encode(frase) {
-  let stresp=String;
-  //stresp.pop();
+  let stresp=[0];
+  stresp.pop();
   for(let cont=0;cont<frase.length;cont++){
     if(frase[cont]==="a"){
         stresp.push(1);
