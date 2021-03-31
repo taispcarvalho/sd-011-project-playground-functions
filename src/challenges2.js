@@ -18,7 +18,7 @@ function techList(tech, name2) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  if (number < 0 || number > 9) return false;
+  if (number < 0 || number > 9) return false;{
   }
 
   return true;
