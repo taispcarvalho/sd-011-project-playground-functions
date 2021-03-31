@@ -78,8 +78,8 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzzChecker(result, array) {
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 5 === 0 && array[index] % 3 === 0) {
-      result.push('fizzBuzz');
+    if (array[index] % 15 === 0) {
+      result[index].push('fizzBuzz');
     }
   }
   return result;
@@ -87,8 +87,8 @@ function fizzBuzzChecker(result, array) {
 
 function buzzChecker(result, array) {
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
-      result.push('buzz');
+    if (array[index] % 3 === 0) {
+      result[index].push('buzz');
     }
   }
   return result;
@@ -96,8 +96,8 @@ function buzzChecker(result, array) {
 
 function fizzChecker(result, array) {
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 5 === 0 && array[index] % 3 !== 0) {
-      result.push('fizz');
+    if (array[index] % 5 === 0) {
+      result[index].push('fizz');
     }
   }
   return result;
@@ -106,7 +106,7 @@ function fizzChecker(result, array) {
 function bugChecker(result, array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 5 !== 0 && array[index] % 3 !== 0) {
-      result.push('bug!');
+      result[index].push('bug!');
     }
   }
   return result;
