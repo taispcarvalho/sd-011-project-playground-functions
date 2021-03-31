@@ -68,8 +68,19 @@ function validationArray(array){
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let somaLineA = lineB + lineC;
+  let somaLineB = lineA + lineC;
+  let somaLineC = lineA + lineB;
+  if (lineA < somaLineA || lineB < somaLineB || lineC < somaLineC){
+    if (lineA > Math.abs(lineB - lineC) || lineB > Math.abs(lineA - lineC) || lineC > Math.abs(lineA - lineB)){
+      return true;
+    } else {
+      return 'aq';
+    }
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
