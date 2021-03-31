@@ -2,12 +2,11 @@
 function compareTrue(value1, value2) {
   if (value1 && value2 === true) {
     return true;
-  }
+  } return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  // seu código aqui
   return ((base * height) / 2);
 }
 
