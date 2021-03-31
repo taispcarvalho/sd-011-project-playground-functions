@@ -21,6 +21,7 @@ function concatName(array) {
   return `${array[array.length - 1]}, ${array[0]}`;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
@@ -49,16 +50,21 @@ function catAndMouse(mouse, cat1, cat2) {
   let distance2 = mouse - cat2;
   if (distance1 === distance2) {
     return 'Os gatos trambaram e o rato foge';
-  } else if (distance1 < distance2) {
+  }
+  if (distance1 < distance2) {
     return 'cat2';
-  } else {
+  }
+  if (distance1 === distance2) {
     return 'cat1';
   }
   // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
+  for (let index = 0; index < array.length; index += 1) {
+    if ()
+  }
   // seu código aqui
 }
 
