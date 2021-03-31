@@ -15,6 +15,7 @@ function calcArea(base, height) {
 function splitSentence(phrase) {
   // O método ultilizado abaixo consta na documentação do JavaScript
   // Esse método é usado para separar uma string em um array de acordo com separador, o usado abaixo foi para espaços (" ")
+
   return phrase.split(' ');
 }
 
@@ -22,6 +23,7 @@ function splitSentence(phrase) {
 function concatName(string) {
   let firstName = string[0];
   let lastName = string[string.length - 1];
+
   return lastName + ', ' + firstName;
 }
 
@@ -61,26 +63,48 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let anotherNumber = [];
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 3 === 0) {
+      anotherNumber[index] = 'fizz';
+    }
+  }
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 5 === 0) {
+      anotherNumber[index] = 'buzz';
+    }
+  }
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 5 === 0 && numbers[index] % 3 === 0) {
+      anotherNumber[index] = 'fizzbuzz';
+    }
+  }
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 5 !== 0 && numbers[index] % 3 !== 0) {
+      anotherNumber[index] = 'bug!';
+    }
+  }
+  return anotherNumber;
 }
 
 // Desafio 9
 function encode(vowels) {
-
-  for (let index = 0; index < vowels.length; index++) {
+  for (let index = 0; index < vowels.length; index += 1) {
     vowels = vowels.replace('a', 1);
     vowels = vowels.replace('e', 2);
     vowels = vowels.replace('i', 3);
     vowels = vowels.replace('o', 4);
     vowels = vowels.replace('u', 5);
   }
+
   return vowels;
 }
 
 function decode(vowels) {
-  
-  for (let index = 0; index < vowels.length; index++) {
+  for (let index = 0; index < vowels.length; index += 1) {
     vowels = vowels.replace(1, 'a');
     vowels = vowels.replace(2, 'e');
     vowels = vowels.replace(3, 'i');
