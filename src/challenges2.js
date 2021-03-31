@@ -6,7 +6,7 @@ function techList(techArr, name){
     for (let index = 0; index < techArr.length; index += 1) {
       let object = {
         tech: techArr[index],
-        nome: name,
+        name: name,
       }
       newArrTech.push(object);
     }
@@ -15,7 +15,7 @@ function techList(techArr, name){
   }
   return newArrTech;
 }
-console.log(techList([], 'Lucas'));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
 
 // Desafio 11
 function repeatedNumberFinder(arrNumbers) {
@@ -36,7 +36,7 @@ console.log(repeatedNumberFinder([1, 2, 3, 4, 5, 3, 7, 3, 9, 3, 1]))
 function generatePhoneNumber(arrNumbers) {
   let newStr = '';
   for (let index = 0; index < arrNumbers.length; index += 1) {
-    if (arrNumbers[index] < 0 || arrNumbers[index] > 9 || )
+    if (arrNumbers[index] < 0 || arrNumbers[index] > 9)
     
     (index === 0 || index === 1) {
       newStr = newStr, '(', arrNumbers[1], arrNumbers[0], ')';
