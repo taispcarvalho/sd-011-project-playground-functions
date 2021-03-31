@@ -1,17 +1,16 @@
-function catAndMouse(mouse, cat1, cat2) {
-  mouse = 0;
-  let distanciaCat1 = cat1 - mouse;
-  let distanciaCat2 = cat2 - mouse;
-  let resultado = '';
-  if (distanciaCat2 < distanciaCat1) {
-    resultado = 'cat2';
-    console.log(resultado);
-  } else if (distanciaCat2 > distanciaCat1) {
-    resultado = 'cat1';
-    console.log(resultado);
-  } else {
-    resultado = 'os gatos trombam e o rato foge';
-    console.log(resultado);
-  }
-  return resultado;
+function fizzBuzz(arrayNumbers) {
+  let comparacao = [];
+    for (let index = 0; index < arrayNumbers.length; index += 1) {
+      if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
+        comparacao.push('fizzBuzz');
+      } else if (arrayNumbers[index] % 5 === 0) {
+        comparacao.push('buzz');
+      } else if (arrayNumbers[index] % 3 === 0) {
+        comparacao.push('fizz');
+      } else {
+        comparacao.push('bug!');
+      }
+    }
+  return comparacao;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
