@@ -63,25 +63,32 @@ console.log(catAndMouse(5, 2, 12));
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  for ( let index = 0; index < numbers.length; index += 1) {
-       let newArray; 
-         if(numbers[index] % 3 === 0 &&  numbers[index] % 5 === 0){
+  let newArray = []; 
+  for (const key of numbers) {
+           if(key % 3 === 0 &&  key % 5 === 0){
             newArray.push('fizzBuzz');
-         }else if(numbers[index] % 3 === 0){
+         }else if(key % 3 === 0){
            newArray.push('fizz');
-        }else if (numbers[index] % 5 === 0){
+        }else if (key % 5 === 0){
           newArray.push('buzz');
         }else{
-          return('bug!');
+          newArray.push('bug!');
         }
-        return newArray;
-      }
+       }
+      return newArray;
       }
      console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
-function encode() {
+function encode(string) {
+  let newString;
+  for(let index = 0; index < string.length; index += 1){
+    if(string[index] = 'a'){
+      newString = string.replace('1');
+    }
+  }
   
 }
+console.log(encode('alo'));
 
 function decode() {
   // seu código aqui
