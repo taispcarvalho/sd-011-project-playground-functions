@@ -145,21 +145,30 @@ console.log(numberLetter('1'));
 
 // Desafio 9
 function encode(code) {
-  let letter = code.split('');
-  let result =[];
+  let phrase = code.split('');
+  let arrayPhrase =[];
   let theCode;
   
-  for (let index of letter) {
-    result.push(letterNumber(index));
-    theCode = result.join('');
+  for (let index of phrase) {
+    arrayPhrase.push(letterNumber(index));
+    theCode = arrayPhrase.join('');
   }
   return theCode;
 }
 console.log(encode('hi there'));
 
-function decode() {
-  // seu código aqui
+function decode(uncode) {
+  let codedPhrase = uncode.split('');
+  let arrayCodedPhrase = [];
+  let theUncode;
+
+  for (let index of codedPhrase) {
+    arrayCodedPhrase.push(numberLetter(index));
+    theUncode = arrayCodedPhrase.join('')
+  }
+  return theUncode;  
 }
+console.log(decode('h3 th2r2'))
 
 module.exports = {
   calcArea,
