@@ -62,12 +62,47 @@ function generatePhoneNumber(arrayPhone) {
   return `(${arrayPhone[0]}${arrayPhone[1]}) ${arrayPhone[2]}${arrayPhone[3]}${arrayPhone[4]}${arrayPhone[5]}${arrayPhone[6]}-${arrayPhone[7]}${arrayPhone[8]}${arrayPhone[9]}${arrayPhone[10]}`;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+function checkSumSides(sideA, sideB, sideC) {
+  let countValues = 0;
+  if (sideA < sideB + sideC) {
+    countValues += 1;
+  } 
+  if (sideB < sideA + sideC) {
+    countValues += 1;
+  }
+  if (sideC < sideA + sideB) {
+    countValues += 1;
+  }
+  if (countValues === 3) return true;
+  return false;
+}
+
+function checkAbsoluteDiff (sideA, sideB, sideC) {
+  let countValues = 0;
+  if (sideA > Math.abs(sideB - sideC)) {
+    countValues += 1;
+  } 
+  if (sideB > Math.abs(sideA - sideC)) {
+    countValues += 1;
+  }
+  if (sideC > Math.abs(sideA - sideB)) {
+    countValues += 1;
+  }
+  if (countValues === 3) return true;
+  return false;
+}
+
+console.log(checkAbsoluteDiff(10, 14, 8));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(sideA, sideB, sideC) {
+  let sumSides = checkSumSides(sideA, sideB, sideC);
+  let absDiffSides = checkAbsoluteDiff (sideA, sideB, sideC);
+  if (sumSides && absDiffSides) return true;
+  return false;
 }
+
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
