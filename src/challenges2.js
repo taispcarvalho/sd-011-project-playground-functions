@@ -38,12 +38,37 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineC < lineA + lineB && lineC > Math.abs(lineB - lineA)) return true;
   if (lineA < lineC + lineB && lineA > Math.abs(lineB - lineC)) return true;
   if (lineB < lineA + lineC && lineB > Math.abs(lineC - lineA)) return true;
-  return false
+  return false;
 }
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function transformStringToArray(string) {
+  return string.split(' ');
 }
+
+function transformStringToNumber(array) {
+  let newArray = [];
+  for (let current of array) {
+    newArray.push(parseFloat(current));    
+  }
+  return newArray;
+}
+
+function sumNumbers(array) {
+  let totalSum = 0;
+  for (let number of array) {
+    if (number % number === 0) {
+      totalSum += number;
+    }
+  }
+  return totalSum;
+}
+
+function hydrate(string) {
+  let waterCups = sumNumbers(transformStringToNumber(transformStringToArray(string)));
+  if (waterCups === 1) return waterCups + ' copo de água';
+  return waterCups + ' copos de água';
+}
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
