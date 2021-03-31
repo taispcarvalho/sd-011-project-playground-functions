@@ -33,7 +33,7 @@ function highestCount(arrNum) {
   }
   return highest;
 }
-function findHighestNumber(arrNum) {
+function HighestNumber(arrNum) {
   let counter = 0;
   for (let index = 0; index < arrNum.length; index += 1) {
     if (arrNum[index] === highestCount(arrNum)) {
@@ -42,6 +42,7 @@ function findHighestNumber(arrNum) {
   }
   return counter;
 }
+console.log(HighestNumber([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -53,10 +54,11 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'cat2';
 }
-console.log(catAndMouse(3, 1, 1))
+console.log(catAndMouse(6, 3, 4))
+
 // Desafio 8
 function fizzBuzz() {
-  
+  //
 }
 
 // Desafio 9
