@@ -40,7 +40,7 @@ function highestCount(arrayNumbers) {
   for(let index = 0; index < arrayNumbers.length; index += 1) {
   if(arrayNumbers[index] === higherth) {
     timesNumberAppears = timesNumberAppears + 1;
-  }
+   }
   }
   return timesNumberAppears;
 }
@@ -58,11 +58,13 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz() {
+}
   
 // Desafio 9
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
