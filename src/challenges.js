@@ -53,21 +53,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numArray) {
-  for (let index = 0; index < numArray.length; index += 1) {
-    let currNumber = numArray[index];
-    numArray[index] = '';
-    if (currNumber % 3 === 0) {
-      numArray[index] += 'fizz';
-    }
-    if (currNumber % 5 === 0) {
-      numArray[index] += 'buzz';
-    } else if (currNumber % 5 !== 0 && currNumber % 3 !== 0) {
-      numArray[index] += 'bug!';
-    }
-    numArray[index] = numArray[index].replace('fizzbuzz', 'fizzBuzz');
-  }
-  return numArray;
+function fizzBuzz(numbersArray) {
+  return numbersArray.map((currNumber) => {
+    let arrReturn = '';
+
+    if (currNumber % 15 === 0) {
+      arrReturn = 'fizzBuzz';
+    } else if (currNumber % 3 === 0) {
+      arrReturn = 'fizz';
+      } else if (currNumber % 5 === 0) {
+        arrReturn = 'buzz';
+        } else {
+          arrReturn = 'bug!';
+          }
+    return arrReturn;
+  });
 }
 
 // Desafio 9
