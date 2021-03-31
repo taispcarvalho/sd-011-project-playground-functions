@@ -93,18 +93,17 @@ function fizzBuzz(array) {
 
   for (let counter = 0; counter < array.length; counter += 1) {
         
-    if ((array[counter] % 3 == 0) && (array[counter] % 5 == 0)) {
-      resultado += "fizzbuzz, ";
-    } else if (array[counter] % 5 == 0) {
-      resultado += "buzz, ";
-    } else if (array[counter] % 3 == 0) {
-      resultado += "fizz, ";
+    if ((array[counter] % 3 === 0) && (array[counter] % 5 === 0)) {
+      resultado.push('fizzBuzz');
+    } else if (array[counter] % 5 === 0) {
+      resultado.push('buzz');
+    } else if (array[counter] % 3 === 0) {
+      resultado.push('fizz');
     } else {
-      resultado += "bug!, ";
-    }  
+      resultado.push('bug!');
+    }
   }
-  resultado = resultado.substr(0,[resultado.length - 2]) + ".";
-  console.log (`Fizzbuzz (${array}):`);
+  console.log(`Fizzbuzz (${array}):`);
   return resultado;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
