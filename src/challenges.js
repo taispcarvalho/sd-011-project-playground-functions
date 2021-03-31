@@ -13,16 +13,19 @@ function calcArea() {
 // Desafio 3
 
 function splitSentence(string) {
-  let i ="['";
+  let i = "";
     for (let index of string){
-      if (index !== " ")
+      if (index !== " ") {
       i += index;
-      else
-      i += "', '";
+      }else{
+      i += ", ";
+      }
     }
-  i+="']";
   return i;
 }
+
+console.log(splitSentence('Go Trybe'));
+
 
 // Desafio 4
 function concatName() {
