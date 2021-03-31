@@ -47,6 +47,8 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
+// Para tratar os números contidos nos parâmentros, foi utilizada a função Math.abs()
+// Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
   let result;
   let distance1 = Math.abs(cat1 - mouse);
@@ -59,8 +61,15 @@ function catAndMouse(mouse, cat1, cat2) {
   return result;
 }
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let arrayResult;
+  for (let arrayPosi = 0; arrayPosi < array.length; arrayPosi += 1) {
+    if (array[arrayPosi] % 3 === 0) arrayResult.push('fizz');
+    if (array[arrayPosi] % 5 === 0) arrayResult.push('buzz');
+    if (array[arrayPosi] % 3 === 0 && array[arrayPosi] % 5 === 0) arrayResult.push('fizzbuzz');
+    if (array[arrayPosi] % 3 !== 0 && array[arrayPosi] % 5 !== 0) arrayResult.push('bug!');
+  }
+  return arrayResult;
 }
 
 // Desafio 9
