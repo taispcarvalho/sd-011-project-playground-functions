@@ -50,14 +50,12 @@ function catAndMouse(mouse, cat1, cat2) {
   if (catMouse1 === catMouse2) {
     return 'os gatos trombam e o rato foge';
   }
-  if (mouse - cat1 > mouse - cat2) {
+  if (catMouse1 < catMouse2) {
     return 'cat 1';
-  } if (mouse - cat1 < mouse - cat2) {
+  } if (catMouse1 > catMouse2) {
     return 'cat 2';
   }
 }
-
-// Não esta retornando o result como string
 
 // Desafio 8
 function fizzBuzz() {
