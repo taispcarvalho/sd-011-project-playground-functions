@@ -27,7 +27,6 @@ function footballPoints(wins, ties) {
 function highestCount(numArray) {
  let ordenado = numArray.sort((numb1, numb2) => numb2 - numb1);
  let repeat = 0;
- let highNumber = ordenado[0];
  for (let index = 0; index < ordenado.length; index +=1) {
    let element = ordenado[index];
    if (element === ordenado[0]) {
