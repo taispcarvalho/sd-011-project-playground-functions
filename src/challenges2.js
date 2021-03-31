@@ -38,8 +38,14 @@ function verifyDigit(arrayOfNumbers) {
     if (arrayOfNumbers[index] < 0 || arrayOfNumbers[index] > 9) {
       return false;
     }
-    let countRepetition = 0;
-    for (let index2 = 0 ; index2 < arrayOfNumbers.length; index2 += 1) {
+  }
+  return true;
+}
+
+function veryfyRepetition(arrayOfNumbers) {
+  let countRepetition = 0;
+  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
+    for (let index2 = 0; index2 < arrayOfNumbers.length; index2 += 1) {
       if (arrayOfNumbers[index] === arrayOfNumbers[index2]) {
         countRepetition += 1;
       }
@@ -48,7 +54,6 @@ function verifyDigit(arrayOfNumbers) {
       }
     }
   }
-  return true;
 }
 
 function generatePhoneNumber(arrayOfNumbers) {
