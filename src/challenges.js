@@ -114,28 +114,21 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function checkEncode(vowel) {
-  let vowelStr = '';
-  if (vowel === 'a') {
-    vowelStr = 1;
-  } else if (vowel === 'e') {
-    vowelStr = 2;
-  } else if (vowel === 'i') {
-    vowelStr = 3;
-  } else if (vowel === 'o') {
-    vowelStr = 4;
-  } else if (vowel === 'u') {
-    vowelStr = 5;
-  } else {
-    vowelStr = vowel;
+function checkVowel(vowel) {
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let number = [1, 2, 3, 4, 5];
+  for (let i = 0; i < vowels.length; i += 1) {
+    if (vowel === vowels[i]) {
+      vowel = number[i];
+    }
   }
-  return vowelStr;
+  return vowel;
 }
 
 function encode(string) {
   let arrNew = string.split('');
   for (let letter = 0; letter < arrNew.length; letter += 1) {
-    arrNew[letter] = checkEncode(arrNew[letter]);
+    arrNew[letter] = checkVowel(arrNew[letter]);
   }
   arrNew = arrNew.join('');
   return arrNew;
