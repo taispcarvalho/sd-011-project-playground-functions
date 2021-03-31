@@ -2,39 +2,32 @@
 function compareTrue(input1, input2) {
   return input1 && input2;
 }
-// console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-// console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(string) {
   let stringArray = string.split(' ');
   return stringArray;
 }
-// console.log(splitSentence('Vamo que vamo'));
 
 // Desafio 4
-// let testArrayD4 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']; // Array de teste
 function concatName(arrayD4) {
   // seu código aqui
   return `${arrayD4[arrayD4.length - 1]}, ${arrayD4[0]}`;
 }
-// console.log(concatName(testArrayD4));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let totalPoints = (wins * 3) + ties;
   return totalPoints;
 }
-// console.log(footballPoints(0,0))
 
 // Desafio 6
-// let testArrayD6 = [0,0,0]; // Array de teste
 function highestCount(arrayD6) {
   let biggest = arrayD6[0];
   let biggestCount = 0;
@@ -50,7 +43,6 @@ function highestCount(arrayD6) {
   }
   return biggestCount;
 }
-// console.log(highestCount(testArrayD6))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -70,8 +62,19 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(13, 14, 12));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayD8) {
+  for (let i = 0; i < arrayD8.length; i += 1) {
+    if (arrayD8[i] % 3 === 0 && arrayD8[i] % 5 === 0) {
+      arrayD8[i] = 'fizzBuzz';
+    } else if (arrayD8[i] % 3 === 0) {
+      arrayD8[i] = 'fizz';
+    } else if (arrayD8[i] % 5 === 0) {
+      arrayD8[i] = 'fizz';
+    } else {
+      arrayD8[i] = 'bug!';
+    } 
+  }
+  return arrayD8;
 }
 
 // Desafio 9
