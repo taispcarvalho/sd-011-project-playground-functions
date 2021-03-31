@@ -54,8 +54,8 @@ function generatePhoneNumber(arr) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
-  let joinNum = arr.joinNum('');
-  let phoneNumber = `(${joinNum.substring(0, 2)}) ${joinNum.substring(2, 7)}-${joinNum.substring(7)}`;
+  let addNum = arr.join('');
+  let phoneNumber = `(${addNum.substring(0, 2)})${addNum.substring(2, 7)}-${addNum.substring(7)}`;
 
   return phoneNumber;
 }
