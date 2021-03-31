@@ -17,12 +17,16 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let p;
-  let u;
-  u=array[array.length-1];    // Medium: https://medium.com/@rodrigoum/3-maneiras-de-pegar-o-primeiro-e-%C3%BAltimo-elemento-de-um-array-com-javascript-56e92e6bf3f4
-  p=array[0];
+  // let p;
+  // let u;
+
+  let [u, p] = [array[array.length-1], array[0]]; // Destructure Assignment: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#trocando_vari%C3%A1veis 
     return u + ', ' + p;
 }
+
+let test = ['Torquato', 'Madalena', 'Michel', 'Diego'];
+console.log(concatName(test));
+
 
 // Desafio 5
 function footballPoints() {
