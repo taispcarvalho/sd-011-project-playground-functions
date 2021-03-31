@@ -27,10 +27,11 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+//* Obtive a ajuda do colega Renato Bispo para entender melhor a refatoração das funções. Imensamente agradecido!
+//* A forma de fazer o if feita nas funções foi retirada de DevMedia.com.br
+//* Source: https://www.devmedia.com.br/javascript-estrutura-condicional-if/40611#:~:text=A%20estrutura%20condicional%20if%20permite,uma%20determinada%20condi%C3%A7%C3%A3o%20for%20verdadeira.&text=Nesse%20exemplo%2C%20a%20instru%C3%A7%C3%A3o%20console,preco%20for%20maior%20que%20100.
 function maxCount(numbers) {
   let highestNumber = 0;
-  //* Esta forma de fazer o if foi retirada de DevMedia.com.br
-  //* Source: https://www.devmedia.com.br/javascript-estrutura-condicional-if/40611#:~:text=A%20estrutura%20condicional%20if%20permite,uma%20determinada%20condi%C3%A7%C3%A3o%20for%20verdadeira.&text=Nesse%20exemplo%2C%20a%20instru%C3%A7%C3%A3o%20console,preco%20for%20maior%20que%20100.
   for (let arrayCount = 0; arrayCount < numbers.length; arrayCount += 1) {
     if (numbers[arrayCount] > highestNumber) highestNumber = numbers[arrayCount];
   }
@@ -47,10 +48,18 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(cat1, cat2, mouse) {
+  let distance1 = mouse - cat1;
+  let distance2 = mouse - cat2;
 
+  if (distance1 < distance2) {
+    return cat1;
+  } else if (distance1 > distance2) {
+    return cat2;
+  } else if (distance1 === distance2) {
+    return ('os gatos trombam e o rato foge');
+  }
 }
-
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
