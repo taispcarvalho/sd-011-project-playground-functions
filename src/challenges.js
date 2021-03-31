@@ -15,10 +15,10 @@ function calcArea(base,height) {
 console.log(calcArea(5, 10));
 
 // Desafio 3
+//https://www.w3schools.com/jsref/jsref_split.asp//
 function splitSentence(sentence) {
-return sentence.split("i");
+return sentence.split(" ");
 }
-
 console.log(splitSentence('Vivian Maria Braga'));
 
 // Desafio 4
@@ -28,9 +28,10 @@ function concatName(names) {
 console.log(concatName(['Vivian', 'Maria', 'Braga']));
 
 // Desafio 5
-function footballPoints() {
-  
+function footballPoints(wins, ties) {
+  return wins*3 + ties;
 }
+console.log(footballPoints(14,8));
 
 // Desafio 6
 function highestCount() {
