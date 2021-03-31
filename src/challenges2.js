@@ -5,6 +5,9 @@ function techList(tech, name) {
     tech : '',
     name : name
   };
+if (tech.length === 0) {
+  'Vazio!'
+}
 for (const key of tech) {
   list.tech += key;
   console.log (list);
