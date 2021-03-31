@@ -26,11 +26,13 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highNum(array) {
   let highest;
+
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] > highest) {
       highest = array[index];
     }
   }
+
   return highest;
 }
 
@@ -65,9 +67,7 @@ function whatWord(num) {
 }
 
 function fizzBuzz(array) {
-  for (let index = 0; index < array.length; index += 1) {
-    array[index] = whatWord(array[index]);
-  }
+  for (let index = 0; index < array.length; index += 1) array[index] = whatWord(array[index]);
   return array;
 }
 
