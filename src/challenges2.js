@@ -9,17 +9,30 @@ function generatePhoneNumber(array) {
     return 'Array com tamanho incorreto.';
   }
   
-  for (let index2 of array) {
-    if (index2 < 0 || index2 > 9) {
+  for (let index of array) {
+    if (index < 0 || index > 9) {
       return 'não é possível gerar um número de telefone com esses valores.'
     } 
   }
-
+  function repetition(array) {
+    let counter = 0;
+    for (let index2 of array) {
+      for (let index3 of array) {
+        if (index2 === index3) {
+          counter += 1;
+        }
+      }
+      if (counter >= 3) {
+        return 'não é possível gerar um número de telefone com esses valores.'
+      counter = 0;
+      }
+    }
+  }
   function createPhoneNumber(array) {
-  array.splice(0,0,'(');
-  array.splice(3, 0, ')');
-  array.splice(9, 0, '-');
-  array.join('');
+    array.splice(0,0,'(');
+    array.splice(3, 0, ')');
+    array.splice(9, 0, '-');
+    array.join('');
 }
   return array; 
 }
@@ -40,7 +53,9 @@ function hydrate(string) {
   for (let index of list) {
     soma += index;
   }
-  return soma;
+  if (soma === 1) {
+    return '1 copo de água';
+  } return soma + ' copos de água';
 }
 
 module.exports = {
