@@ -38,19 +38,19 @@ function highestCount(array) {
     }
   }
   let contador = 0;
-    for (let indexCont = 0; indexCont < array.length; indexCont += 1) {
+  for (let indexCont = 0; indexCont < array.length; indexCont += 1) {
     if (array[indexCont] === maiorNumero) {
-      contador = contador + 1;
+      contador += 1;
     }
   }
   return contador;
 }
-function arraytest(){
-if (test = [9, 1, 2, 3, 9, 5, 7]) {
+function arraytest() {
+  if (test = [9, 1, 2, 3, 9, 5, 7]) {
   let resultado = console.log(highestCount(test));
-  };
+  }
 
-return arraytest;;
+  return arraytest
 }
 
 // Desafio 7
@@ -73,8 +73,8 @@ console.log(catAndMouse());
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let comparacao = [];
-  if (arrayNumbers) {
-    for (let index = 0; index < arrayNumbers.length; index += 1){
+  if (arrayNumbers = []) {
+    for (let index = 0; index < arrayNumbers.length; index += 1) {
       if ((arrayNumbers[index] % 3 === 0) && (arrayNumbers[index] % 5 === 0)) {
         comparacao.push('fizzBuzz');
       } else if (arrayNumbers[index] % 5 === 0) {
@@ -88,7 +88,7 @@ function fizzBuzz(arrayNumbers) {
   }
   return comparacao;
 }
-console.log(fizzBuzz(comparacao));
+console.log(fizzBuzz());
 
 // Desafio 9
 function encode() {
