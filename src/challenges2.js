@@ -30,9 +30,22 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(frase) {
+  let frase2 = frase.replace(/ /g,'')
+  let quant = 0;
+  let agua = '';
+
+  for (index = 0; index < frase2.length; index += 1) {
+    if (isNaN(frase2[index]) == false) {
+      quant += Number(frase2[index]);
+    } else if (quant <= 1) {
+      agua = ' copo de água';
+    } else {
+      agua = ' copos de água';
+    }
+  } return quant + agua
 }
+
 
 module.exports = {
   generatePhoneNumber,
