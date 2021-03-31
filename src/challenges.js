@@ -37,12 +37,12 @@ function highestCount(listaNumeros) {
   for (let index = 0; index < listaNumeros.length; index += 1) {
     if (listaNumeros[index] > maiorNumero) {
       maiorNumero = listaNumeros[index];
-    };
+    }
     if (listaNumeros[index] === maiorNumero) {
       vezes += 1;
-    };
+    }
   }
-  return vezes;
+return maiorNumero, vezes;
 }
 highestCount([9, 1, 2, 3, 9, 5, 7]);
 
