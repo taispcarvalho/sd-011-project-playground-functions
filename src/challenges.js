@@ -19,7 +19,7 @@ function concatName(concatArray) {
   let firstConcatString = concatArray[0];
 
   return ultiConcatString + ', ' + firstConcatString;
-};
+}
 
 // Desafio 5
 function footballPoints() {
