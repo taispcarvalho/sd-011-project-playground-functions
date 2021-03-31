@@ -112,27 +112,34 @@ function fizzBuzz(array) {
 function encode(string) {
   let result = [];
   for (let index in string) {
-    switch (string[index]) {
-      case 'a':
-        result.push('1');
-        break;
-      case 'e':
-        result.push('2');
-        break;
-      case 'i':
-        result.push('3');
-        break;
-      case 'o':
-        result.push('4');
-        break;
-      case 'u':
-        result.push('5');
-        break;
-      default:
-        result.push(string[index]);
-    }
+    result.push(encodeCaracter(string[index]));
   }
   return result.join('');
+}
+console.log(encode('hi there!'));
+
+function encodeCaracter(caracter) {
+  let result = '';
+  switch (caracter) {
+    case 'a':
+      result = '1';
+      break;
+    case 'e':
+      result = '2';
+      break;
+    case 'i':
+      result = '3';
+      break;
+    case 'o':
+      result = '4';
+      break;
+    case 'u':
+      result = '5';
+      break;
+    default:
+      result = caracter;
+  }
+  return result;
 }
 
 function decode(string) {
