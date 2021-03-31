@@ -103,6 +103,7 @@ function encodeA(string) {
       string[index] = '1';
     }
   }
+  return string;
 }
 
 function encodeE(string) {
@@ -111,6 +112,7 @@ function encodeE(string) {
       string[index] = '2';
     }
   }
+  return string;
 }
 
 function encodeI(string) {
@@ -119,6 +121,7 @@ function encodeI(string) {
       string[index] = '3';
     }
   }
+  return string;
 }
 
 function encodeO(string) {
@@ -127,6 +130,7 @@ function encodeO(string) {
       string[index] = '4';
     }
   }
+  return string;
 }
 
 function encodeU(string) {
@@ -135,6 +139,7 @@ function encodeU(string) {
       string[index] = '5';
     }
   }
+  return string;
 }
 
 function decode1(string) {
@@ -143,6 +148,7 @@ function decode1(string) {
       string[index] = 'a';
     }
   }
+  return string;
 }
 
 function decode2(string) {
@@ -151,6 +157,7 @@ function decode2(string) {
       string[index] = 'e';
     }
   }
+  return string;
 }
 
 function decode3(string) {
@@ -159,6 +166,7 @@ function decode3(string) {
       string[index] = 'i';
     }
   }
+  return string;
 }
 
 function decode4(string) {
@@ -167,6 +175,7 @@ function decode4(string) {
       string[index] = 'o';
     }
   }
+  return string;
 }
 
 function decode5(string) {
@@ -175,6 +184,7 @@ function decode5(string) {
       string[index] = 'u';
     }
   }
+  return string;
 }
 
 function encode(string) {
