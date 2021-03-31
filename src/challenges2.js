@@ -1,3 +1,5 @@
+const { splitSentence } = require("./challenges")
+
 // Desafio 10
 function techList(arrayTechList, name) {
   let arrayTechAndName = []
@@ -41,7 +43,7 @@ function generatePhoneNumber(arrayPhoneNumber) {
     }
   }
 
-  let phoneNumber = '(' + arrayPhoneNumber[0] + arrayPhoneNumber[1] + ') ' + arrayPhoneNumber[2] + arrayPhoneNumber[3] + arrayPhoneNumber[4] + arrayPhoneNumber[5] +'-' + arrayPhoneNumber[6] + arrayPhoneNumber[7] + arrayPhoneNumber[8] + arrayPhoneNumber[9]
+  let phoneNumber = '(' + arrayPhoneNumber[0] + arrayPhoneNumber[1] + ') ' + arrayPhoneNumber[2] + arrayPhoneNumber[3] + arrayPhoneNumber[4] + arrayPhoneNumber[5] + arrayPhoneNumber[6] + '-' + arrayPhoneNumber[7] + arrayPhoneNumber[8] + arrayPhoneNumber[9] + arrayPhoneNumber[10]
 
   return phoneNumber
 }
@@ -58,9 +60,23 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(beverage) {
+  let arrayBeverage = beverage.split(' ');
+  let cupsWater = 0;
+
+  for (let index = 0; index < arrayBeverage.length; index += 1) {
+    arrayBeverage[index] = Number(arrayBeverage[index]);
+    if (arrayBeverage[index] > 0) {
+      cupsWater += arrayBeverage[index];
+    }
+  }
+
+  let answerHydrate = cupsWater + ' copos de água'
+
+  return answerHydrate;
 }
+
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
 
 module.exports = {
   generatePhoneNumber,
