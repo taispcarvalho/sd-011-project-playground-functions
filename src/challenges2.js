@@ -3,8 +3,8 @@ function techList(tech, name) {
   // seu código aqui
   tech.sort();
   let teste = {
-    techs: tech[0],
-    nome: name
+    tech: tech[0],
+    name: name
   }
   let returnArray = [];
   if (tech.length === 0) {
@@ -12,15 +12,15 @@ function techList(tech, name) {
   } else {
     for (let index = 0; index < tech.length; index += 1){
       returnArray.push(teste = {
-        techs: tech[index],
-        nome: name
+        tech: tech[index],
+        name: name
       })
     }
   }
   return returnArray;
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+console.log(techList(["React", "Jest", "HTML", "CSS", "Java"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
