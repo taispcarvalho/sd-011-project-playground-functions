@@ -23,7 +23,7 @@ let texto = array.split(' ');
 function concatName(arr) {
  return `${arr[arr.length -1]}, ${arr[0]}`;
 }  
-let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+//let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 //console.log(concatName(nomes));
 
 // Desafio 5
@@ -62,23 +62,23 @@ function maximoNumero(arr) {
  return numeroMaior
 }
 
-let arr = [9, 1, 2, 3, 9, 5, 7]
+//let arr = [9, 1, 2, 3, 9, 5, 7]
 //console.log(highestCount(arr));
 
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2 ) {
- const dist1 = Math.abs(mouse - cat1)
- const dist2 = Math.abs(mouse - cat2) 
- if (dist1 > dist2){
+function catAndMouse(mouse, cat1, cat2) {
+ const dist1 = Math.abs(mouse - cat1);
+ const dist2 = Math.abs(mouse - cat2); 
+ if (dist1 > dist2) {
    return 'cat2';
- } if (dist1 < dist2 ){
-   return 'cat1'
- }else{
-  return 'os gatos trobam e o rato foge'
+ } if (dist1 < dist2 ) {
+   return 'cat1';
+ }
+  return 'os gatos trobam e o rato foge';
 }
-}
-console.log(catAndMouse(0,-3,2));
+
+//console.log(catAndMouse(0,-3,2));
 
 // Desafio 8
 function fizzBuzz(arr){
