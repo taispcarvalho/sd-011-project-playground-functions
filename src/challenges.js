@@ -117,13 +117,85 @@ function fizzBuzz(array) {
 }
 /* console.log(fizzBuzz([9, 25])); */
 
+
+
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+/* O que será verificado:
+Retorne uma string codificada quando a função encode for utilizada
+Retorne uma string decodificada quando a função decode for utilizada
+A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
+
+O que será verificado:
+Retorne uma string codificada quando a função encode for utilizada
+Retorne uma string decodificada quando a função decode for utilizada
+*/
+/* Crie duas funções: a primeira deverá se chamar encode e recebe uma string como parâmetro, */
+function encode(encodeStr) {
+/*   deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+  a -> 1
+  e -> 2
+  i -> 3
+  o -> 4
+  u -> 5
+  Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!". */
+  let msg = "";
+  for (let index =0; index < encodeStr.length; index += 1){
+    switch (encodeStr[index]){
+      case 'a':
+        msg += '1';
+        break;
+      case 'e':
+        msg += '2';
+        break;
+      case 'i':
+        msg += '3';
+        break;
+      case 'o':
+        msg += '4';
+        break;
+      case 'u':
+        msg += '5';
+        break;
+      default:
+        msg += encodeStr[index];
+    } 
+  }
+  return msg;
 }
-function decode() {
-  // seu código aqui
+/* console.log(encode('hi there!')); */
+
+/* A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
+ */
+function decode(decodeStr) {
+  let msg = "";
+  for (let index =0; index < encodeStr.length; index += 1){
+    switch (encodeStr[index]){
+      case 'a':
+        msg += '1';
+        break;
+      case 'e':
+        msg += '2';
+        break;
+      case 'i':
+        msg += '3';
+        break;
+      case 'o':
+        msg += '4';
+        break;
+      case 'u':
+        msg += '5';
+        break;
+      default:
+        msg += encodeStr[index];
+    } 
+  }
+  return msg;
 }
+
+
+
+
 
 module.exports = {
   calcArea,
