@@ -69,9 +69,32 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+
+function pitagoras(cat1, cat2, hip) {
+  let final;
+  let calc;
+  if (Math.abs(cat1 - cat2) > 0) {
+    calc = Math.abs(cat1 - cat2);
+  } else calc = Math.abs(cat2 - cat1);
+  if (Math.abs(hip < calc)) {
+    final = false;
+  }
+  return final;
 }
+
+function triangleCheck(lineA, lineB, lineC) {
+  let x = pitagoras;
+  let a = lineA;
+  let b = lineB;
+  let c = lineC;
+  let answer = true;
+  if (x(a, b, c) || x(a, c, b) || x(b, c, a) === false) {
+    answer = false;
+  }
+  return answer;
+}
+
+console.log(triangleCheck(10, 18, 14));
 
 // Desafio 13
 function hydrate() {
