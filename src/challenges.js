@@ -108,14 +108,14 @@ function fizzBuzz(numbers) {
   // seu código aqui
   let returnArray = [];
   for (const key of numbers) {
-  if ((key%3) === 0 && (key%5) === 0) {
+  if ((key % 3) === 0 && (key % 5) === 0) {
     returnArray.push('fizzBuzz');
-  } else if ((key%3) === 0 && (key%5) !== 0) {
+  } else if ((key % 3) === 0 && (key % 5) !== 0) {
     returnArray.push('fizz');
-  } else if ((key%3) !== 0 && (key%5) === 0) {
+  } else if ((key %3 ) !== 0 && (key % 5) === 0) {
     returnArray.push('buzz');
   } else {
-    returnArray.push('bug!')
+    returnArray.push('bug!');
   }
   }
 
@@ -125,12 +125,65 @@ function fizzBuzz(numbers) {
 console.log(fizzBuzz([2, 15, 7, 9, 45, 25]));
 
 // Desafio 9
-function encode() {
+function encode(phrase) {
   // seu código aqui
+  let phraseCode = '';
+  for (const key of phrase) {
+    switch (key) {
+      case 'a':
+        phraseCode += '1';
+        break;
+      case 'e':
+        phraseCode += '2';
+        break;
+      case 'i':
+        phraseCode += '3';
+        break;
+      case 'o':
+        phraseCode += '4';
+        break;
+      case 'u':
+        phraseCode += '5';
+        break;
+      default:
+        phraseCode += key;
+        break;
+    }
+  }
+  return phraseCode;
 }
-function decode() {
+
+console.log(encode('hi there!'));
+
+function decode(phrase) {
   // seu código aqui
+  let phraseDecode = '';
+  for (const key of phrase) {
+    switch (key) {
+      case '1':
+        phrasDecode += 'a';
+        break;
+      case '2':
+        phraseDecode += 'e';
+        break;
+      case '3':
+        phraseDecode += 'i';
+        break;
+      case '4':
+        phraseDecode += 'o';
+        break;
+      case '5':
+        phraseDecode += 'u';
+        break;
+      default:
+        phraseDecode += key;
+        break;
+    }
+  }
+  return phraseDecode;
 }
+
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
