@@ -6,64 +6,60 @@ function compareTrue(valor1, valor2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  area = (base * height) / 2;
-  return area;   
+área = (base * height) / 2;
+return área;   
 }
 //  console.log(calcArea(51,1));
 
 // Desafio 3
 function splitSentence(array) {
-let texto = array.split(' ');
- return texto
+  let texto = array.split(' ');
+  return texto
 }
-//console.log(splitSentence('foguete') );
+//  console.log(splitSentence('foguete') );
 
 // Desafio 4
 function concatName(arr) {
- return `${arr[arr.length -1]}, ${arr[0]}`;
+  return `${arr[arr.length - 1]}, ${arr[0]}`;
 }  
-//let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
-//console.log(concatName(nomes));
+//  let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+//  console.log(concatName(nomes));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-
-  if (jogos = wins * 3 + ties *1){
-  return jogos
-  }else{
-    jogos == 0 
-    return jogos
-  }
+if (jogos = wins * 3 + ties *1) {
+return jogos; 
+} else { 
+ (jogos == 0) 
+return jogos;
+ }
 }
-//console.log(footballPoints(14,8));
+//  console.log(footballPoints(14,8));
 
 // Desafio 6
 function highestCount(arr) {
-
-let contador =  0
+let contador = 0
 let numeroMaior = maximoNumero(arr);
-  for (let index = 0; index < arr.length; index += 1) {
-    if (numeroMaior === arr[index] ){
-    contador += 1
+for (let index = 0; index < arr.length; index += 1) {
+      if (numeroMaior === arr[index] ) {
+    contador += 1;
     }
 
   }
-  return contador;
+return contador;
 } 
 
 function maximoNumero(arr) {
-  let numeroMaior = arr[0];
-  for (let index = 1; index < arr.length; index += 1) {  
-    if(numeroMaior < arr[index]){
+let numeroMaior = arr[0];
+for (let index = 1; index < arr.length; index += 1) {  
+     if (numeroMaior < arr[index]) {
       numeroMaior = arr[index];
-    }
-  }
- return numeroMaior
+     }
+   }
+ return numeroMaior;
 }
-
-//let arr = [9, 1, 2, 3, 9, 5, 7]
-//console.log(highestCount(arr));
-
+//  let arr = [9, 1, 2, 3, 9, 5, 7]
+//  console.log(highestCount(arr));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -76,8 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
  }
   return 'os gatos trombam e o rato foge';
 }
-
-//console.log(catAndMouse(0,-3,2));
+//  console.log(catAndMouse(0,-3,2));
 
 // Desafio 8
 function fizzBuzz(arr){
@@ -95,8 +90,8 @@ function fizzBuzz(arr){
   }
 return arr1
 }
-//arr1 = [2, 15, 7, 9, 45]
-//console.log(fizzBuzz(arr1) );
+//  arr1 = [2, 15, 7, 9, 45]
+//  console.log(fizzBuzz(arr1) );
 
 // Desafio 9
 function encode(string) {
@@ -118,7 +113,7 @@ for(let index = 0; index < string.length; index +=1) {
 }
 return encoded;
 }
-//console.log(encode('hi there!'));
+//  console.log(encode('hi there!'));
 
 function decode(string) {  
 let decoded = ''
@@ -139,7 +134,7 @@ let decoded = ''
   }
     return decoded;
 }
-//console.log(decode('h3 th2r2!'));
+//  console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
