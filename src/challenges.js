@@ -22,9 +22,8 @@ function splitSentence(word) {
   return arrWord = word.split(' ');;
 }
 
-
 // Desafio 4
-function concatName() {
+function concatName(arrWords) {
   
   return arrWords2 = arrWords[arrWords.length - 1] + ', ' + arrWords[0];
 }
