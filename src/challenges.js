@@ -9,7 +9,7 @@ function calcArea(a, b) {
   return (area);
 }
 
-// Desafio 3
+// Desafio 3 - ok
 function splitSentence(string) {
   let arrayString = string.split(' ');
   return arrayString;
@@ -19,29 +19,32 @@ function splitSentence(string) {
 function concatName(array) {
   let primeiroNome = array[0];
   let ultimoNome = array[array.length - 1];
-  return (ultimoNome + ', ' + primeiroNome);
+    return (ultimoNome + ', ' + primeiroNome);
   }
 
 // Desafio 5 - ok
 function footballPoints(wins, ties) {
   let operacao = (3 * wins) + ties;
-    return operacao;
+  return operacao;
 }
 
 // Desafio 6
 function highestCount(array) {
-  let count = 0;
-  let highCount = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    let number = array[index];
-    if (numbers[index] > higherNumber) {
-      higherNumber = numbers[index];
-    }else {
-    highCount = highCount + 1;
+  let maiorNumero = 0;
+  let contador = 0;
+  for (let index = 0; index < array.length; index += 1){
+    let numeroCompare = maiorNumero;
+    maiorNumero = array[i];
+    if (maiorNumero <= numeroCompare) {
+    maiorNumero = numeroCompare;
     }
-    
   }
-  return count;
+  for (let contadorIndex = 0; contadorindex < array.length; contadorIndex += 1) {
+    if (maiorNumero === array[contadorIndex]) {
+      contador = contador + 1;
+    }
+  }
+  return contador
 }
 
 // Desafio 7
@@ -50,8 +53,21 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+let arrayNumbers = [];
+function fizzBuzz(arrayNumbers) {
+
+  for(let number in arrayNumbers){
+    if (number[i]%3 === 0 && number[i]%5 === 0) {
+    console.log('fizzBuzz');
+    } else if(number[i]%5 === 0) {
+    console.log('buzz');
+    } else if (number[i]%3 === 0) {
+    console.log('fizz');
+    }else {
+    console.log('bug!');
+    }
+  }
+  return arrayNumbers
 }
 
 // Desafio 9
