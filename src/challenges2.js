@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(techArray, name) {
-  if (techArray === 0) return 'vazio';
+  if (techArray === 0) return 'Vazio!';
   let techListArray = [];
   let sortTechList = techListArray.sort;
   for (let techName of sortTechList) {
