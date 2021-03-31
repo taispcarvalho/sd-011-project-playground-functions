@@ -4,13 +4,12 @@ function techList(arrayOfTechnologies, name) {
   for (let key in arrayOfTechnologies) {
     if (key < arrayOfTechnologies.length) {
       technologiesObjects.push({
-        tech: arrayOfTechnologies[key], 
+        tech: arrayOfTechnologies[key],
         name: name,
       });
       return technologiesObjects;
-    } else {
-      return 'Vazio!'
     }
+    return 'Vazio!';
   }
 }
 
