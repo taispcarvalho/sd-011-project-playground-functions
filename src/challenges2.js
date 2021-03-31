@@ -21,28 +21,25 @@ function techList(tech, name) {
 // Break Lines in TL: https://stackoverflow.com/questions/37321047/wrap-long-template-literal-line-to-multiline-without-creating-a-new-line-in-the
 function generatePhoneNumber(phone) {
   let result = '';
-  if (phone.length != 11) {
-    console.log('Array com tamanho incorreto.');
-  } else {
-    for (let i = 0; i < phone.length; i += 1) {
-      let count = 0;
-      if (phone[i] < 0 || phone[i] > 9) {
-        console.log('não é possível gerar um número de telefone com esses valores1');
-      }
-      for (let j of phone) if (phone[j] === phone[i]) {
-        count += 1;
-        if (count > 2) {
-          console.log('não é possível gerar um número de telefone com esses valores2');
-        }
-      }
-    }
+  if (phone.length > 11 || phone.length < 11) {
+    result = 'Array com tamanho incorreto.';
+  }
+  else {
     result = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}`
     + `${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
-}
+    for (let i = 0; i < phone.length; i += 1) {
+      let count = 0;
+        if (phone[i] > 9 || phone[i] < 0) {
+        result = 'não é possível gerar um número de telefone com esses valores';
+        }
+        for (let j = 0; j < phone.length; j += 1) {
+          if (phone[i] === phone[j]) count += 1;
+          if (count > 2) result = 'não é possível gerar um número de telefone com esses valores';
+      }
+    }
+  }
   return result;
 }
-
-console.log(generatePhoneNumber([1, 1, 1, 1, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
