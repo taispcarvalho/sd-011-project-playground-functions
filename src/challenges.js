@@ -48,7 +48,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } if (distanciaCat2 < distanciaCat1) {
     return 'cat2';
-  } else if (distanciaCat1 === distanciaCat2) {
+  } if (distanciaCat1 === distanciaCat2) {
     return 'Os gatos trombam e o rato foge';
   }
 }
@@ -71,13 +71,12 @@ function fizzBuzz(numerosDesafio8) {
 }
 
 // Desafio 9
-let string1 = "hi there!";
+let string1 = 'hi there!';
 function encode(string1) {
   let codigo = [];
   for (let i = 0; i < string1.length; i += 1) {
     if (string1[i] === 'a') {
-      codigo.push('1');
-      console.log('teste')
+      codigo.push('1');      
     } else if (string1[i] === 'e') {
       codigo.push('2');
     } else if (string1[i] === 'i') {
@@ -90,7 +89,7 @@ function encode(string1) {
       codigo.push(string1[i]);
     }
   }
-  console.log(codigo.join(''))
+  console.log(codigo.join(''));
 }
 encode(string1);
 
