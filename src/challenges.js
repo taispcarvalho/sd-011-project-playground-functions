@@ -23,8 +23,9 @@ function splitSentence(phrase) {
 function concatName(string) {
   let firstName = string[0];
   let lastName = string[string.length - 1];
+  let fullName = lastName + ', ' + firstName;
 
-  return lastName + ', ' + firstName;
+  return fullName;
 }
 
 // Desafio 5
@@ -37,13 +38,13 @@ function highestCount(number) {
   let maior = 0;
   let repeat = 0;
   for (let index = 0; index < number.length; index += 1) {
-    if (number[index] > maior) {
-      maior = number[index];
+    if (maior === number[index]) {
+      repeat += 1;
     }
   }
   for (let index = 0; index < number.length; index += 1) {
-    if (maior === number[index]) {
-      repeat += 1;
+    if (number[index] > maior) {
+      maior = number[index];
     }
   }
   return repeat;
@@ -51,10 +52,13 @@ function highestCount(number) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse < cat1) {
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
+
+  if (distanceCat1 < distanceCat2) {
     return 'cat1';
   }
-  if (mouse < cat2) {
+  if (distanceCat1 > distanceCat2) {
     return 'cat2';
   }
   if (cat1 === cat2) {
