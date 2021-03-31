@@ -90,7 +90,7 @@ function encode(frase) {
   for (let index = 0; index < frase.length; index += 1){
     frase = frase.replace('a', '1');
     frase = frase.replace('e', '2');
-    frase = frase.replace('i', '2');
+    frase = frase.replace('i', '3');
     frase = frase.replace('o', '4');
     frase = frase.replace('u', '5');
   }
