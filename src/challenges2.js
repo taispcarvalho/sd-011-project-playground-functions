@@ -9,7 +9,7 @@ function techList(arrayOfTechnologies, name) {
       });
       return technologiesObjects;
     }
-    if (undefined) {
+    if (arrayOfTechnologies === []) {
       return 'Vazio!';
     }
   }
@@ -18,32 +18,38 @@ function techList(arrayOfTechnologies, name) {
 // Desafio 11
 
 function phoneNumber(arrayOfNumbers) {
-  let phoneNumber = '(';
+  let phoneNumberString = '(';
   for (let index = 0; index < arrayOfNumbers.length; index += 1) {
     if (index === 1) {
-      phoneNumber += arrayOfNumbers[index].toString();
-      phoneNumber += ') ';
+      phoneNumberString += arrayOfNumbers[index].toString();
+      phoneNumberString += ') ';
     } else if (index === 6) {
-      phoneNumber += arrayOfNumbers[index].toString();
-      phoneNumber += '-';
+      phoneNumberString += arrayOfNumbers[index].toString();
+      phoneNumberString += '-';
     } else {
-      phoneNumber += arrayOfNumbers[index].toString();
+      phoneNumberString += arrayOfNumbers[index].toString();
     }
   }
-  return phoneNumber;
+  return phoneNumberString;
+}
+
+function verifyDigit(arrayOfNumbers) {
+  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
+  if (arrayOfNumbers[index] < 0 || arrayOfNumbers[index] > 9) {
+      return false;
+    }
+  }
+  return true;
 }
 
 function generatePhoneNumber(arrayOfNumbers) {
   if (arrayOfNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  arrayOfNumbers.map((number) => {
-    if (number < 0 || number > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-    return true;
-  });
-  return phoneNumber(arrayOfNumbers);
+  if (verifyDigit(arrayOfNumbers) === true) {
+    return phoneNumber(arrayOfNumbers);
+  }
+  return 'não é possível gerar um número de telefone com esses valores';
 }
 
 // Desafio 12
