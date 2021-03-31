@@ -16,9 +16,10 @@ function calcArea(width, height) {
 
 // Desafio 3
 function splitSentence(frase) {
-  let final = frase.split('');
+  let final = frase.split(' ');
   return final;
 }
+console.log(splitSentence('tanto faz cacete'));
 
 // Desafio 4
 function concatName(nameArray) {
