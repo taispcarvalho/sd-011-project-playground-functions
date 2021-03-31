@@ -82,8 +82,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(phrase) {
-  let lowercase = phrase.toLowerCase();
-  let newPhrase = lowercase;
+  let newPhrase = phrase;
 
   for(let index in newPhrase) {
     switch (newPhrase[index]) {
@@ -107,8 +106,7 @@ function encode(phrase) {
   } return newPhrase
 }
 function decode(phrase) {
-  let lowercase = phrase.toLowerCase();
-  let newPhrase = lowercase;
+  let newPhrase = phrase;
 
   for(let index in newPhrase) {
     switch (newPhrase[index]) {
