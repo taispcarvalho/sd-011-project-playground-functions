@@ -92,7 +92,6 @@ function fizzBuzz(array) {
   let resultado = [];
 
   for (let counter = 0; counter < array.length; counter += 1) {
-
     if ((array[counter] % 3 === 0) && (array[counter] % 5 === 0)) {
       resultado.push('fizzBuzz');
     } else if (array[counter] % 5 === 0) {
@@ -103,7 +102,7 @@ function fizzBuzz(array) {
       resultado.push('bug!');
     }
   }
-  console.log(`Fizzbuzz (${array}):`);
+  // console.log(`Fizzbuzz (${array}):`);
   return resultado;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
