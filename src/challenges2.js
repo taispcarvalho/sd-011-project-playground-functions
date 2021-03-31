@@ -16,19 +16,20 @@ function techList(arrayTechToLearn, name) {
   return 'Vazio!';
 }
 
-function checkNegativeNineNumber(arrayNegOrNine) {
-  for (let index = 0; index < arrayNegOrNine.length; index += 1) {
-    if (arrayNegOrNine[index] < 0 || arrayNegOrNine[index] > 9) {
+function checkNegativeNineNumber(numbersArray) {
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] < 0 || numbersArray[index] > 9) {
       return true;
     }
   }
+  return false;
 }
 
-function checkRepeatedNumber(arrayRepeated) {
+function checkRepeatedNumber(numbersArray) {
   let countRepeatedNumber = 0;
-  for (let index = 0; index < arrayRepeated.length; index += 1) {
-    for (let index2 = 0; index < arrayRepeated.length; index2 += 1) {
-      if (arrayRepeated[index] === arrayRepeated[index2]) {
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    for (let index2 = 0; index < numbersArray.length; index2 += 1) {
+      if (numbersArray[index] === numbersArray[index2]) {
         countRepeatedNumber += 1;
       }
     }
