@@ -16,7 +16,7 @@ function techList(anyArray, anyName) {
 
 // Desafio 11
 function checkIf11Numbers(array) {
-  return array.length === 11
+  return array.length === 11;
 }
 
 function checkIfFollowTheRules(array) {
@@ -33,7 +33,7 @@ function checkIfFollowTheRules(array) {
 
 function generatePhoneNumber(array) {
   let formatedPhoneNumber = '';
-  if (checkIfFollowTheRules(array)) {
+  if (checkIfFollowTheRules(array) && checkIf11Numbers(array)) {
     for (let index = 0; index < array.length; index += 1) {
       if (index === 0) {
         formatedPhoneNumber += '(';
@@ -44,7 +44,7 @@ function generatePhoneNumber(array) {
       }
       formatedPhoneNumber += array[index];
     }
-  } else if (checkIfFollowTheRules(array)){
+  } else if (checkIf11Numbers(array) === false) {
     formatedPhoneNumber = 'Array com tamanho incorreto.';
   } else {
     formatedPhoneNumber = 'não é possível gerar um número de telefone com esses valores';
