@@ -4,16 +4,16 @@ function myFunction(objects, index, myName) {
     tech: objects[index],
     name: myName,
   };
+  return objects;
 }
 function techList(objects, name) {
-  if (objects == null) return 'Vazio!';
-  for (let index in objects) {
-    myFunction(objects, index, name);
+  if (objects != null) {
+    for (let index in objects) {
+      if (objects = myFunction(objects, index, name));
+    }
+    return objects;
   }
-  // for (let index = 0; index < objects.length; index += 1) {
-  //   myFunction(objects, index, name);
-  // }
-  return objects;
+  return 'Vazio!';
 }
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Marcelo'));
 
