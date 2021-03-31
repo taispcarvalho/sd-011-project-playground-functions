@@ -12,24 +12,6 @@ function techList(techs, nome) {
   return lista;
 }
 
-function repeatTimes(value, array) {
-  let count = 0;
-  for(let arr of array){
-
-    for(let i = 0; i < array; i += 1){
-
-      if(array[i] === arr){
-        count += 1
-      }
-    }
-  }
-
-  if(count >= 3){
-    return true;
-  }
-  return false;
-  
-}
 // Desafio 11
 function generatePhoneNumber(numbers) {
   let phonePad = '(**) *****-****';
