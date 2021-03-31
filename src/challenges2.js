@@ -3,7 +3,7 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() { 
+function generatePhoneNumber() {
 }
 
 // Desafio 12
