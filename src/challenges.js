@@ -69,7 +69,10 @@ function fizzBuzz(array) {
             }
           }
     }
+
   return result;
+
+  }
 }
 
 // Desafio 9
