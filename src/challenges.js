@@ -105,12 +105,52 @@ function fizzBuzz(numeros) {
 console.log(fizzBuzz([9,25]));
 
 // Desafio 9
-function encode() {
+function encode(frase) {
   // seu código aqui
+  let novaFrase = frase;
+
+  for (let index in novaFrase){
+    let ajuda = novaFrase[index];
+    switch(ajuda){
+      case 'a': novaFrase=novaFrase.replace(ajuda, 1);
+        break;
+      case 'e': novaFrase=novaFrase.replace(ajuda, 2);
+        break;
+      case 'i': novaFrase=novaFrase.replace(ajuda, 3);
+        break;
+      case 'o': novaFrase=novaFrase.replace(ajuda, 4);
+        break;
+      case 'u': novaFrase=novaFrase.replace(ajuda, 5);
+        break;
+      default: break;
+    }
+  }
+  return novaFrase;
 }
-function decode() {
+
+function decode(frase) {
   // seu código aqui
+  let novaFrase = frase;
+
+  for (let index in novaFrase){
+    let ajuda = novaFrase[index];
+    switch(ajuda){
+      case '1': novaFrase=novaFrase.replace(ajuda, 'a');
+        break;
+      case '2': novaFrase=novaFrase.replace(ajuda, 'e');
+        break;
+      case '3': novaFrase=novaFrase.replace(ajuda, 'i');
+        break;
+      case '4': novaFrase=novaFrase.replace(ajuda, 'o');
+        break;
+      case '5': novaFrase=novaFrase.replace(ajuda, 'o');
+        break;
+      default: break;
+    }
+  }
+  return novaFrase;
 }
+
 
 module.exports = {
   calcArea,
