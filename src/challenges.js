@@ -64,10 +64,12 @@ function highestCount(arrNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 - mouse > cat2 - mouse) {
+  let cat1Position = cat1 - mouse;
+  let cat2Position = cat2 - mouse;
+  if (cat1Position > cat2Position) {
     return 'cat2';
   }
-  if (cat1 - mouse < cat2 - mouse) {
+  if (cat1Position < cat2Position) {
     return 'cat1';
   }
   return 'os gatos trombam e o rato foge';
@@ -90,8 +92,8 @@ function fbDivider(value1) {
 function fizzBuzz(arrNumbers) {
   let arrFizzBuzz = [];
 
-  for (let i = 0; i < arrNumbers.length; i += 1) {
-    arrFizzBuzz[i] = fbDivider(arrNumbers[i]);
+  for (let num of arrNumbers) {
+    arrFizzBuzz.push(fbDivider(num));
   }
   return arrFizzBuzz;
 }
