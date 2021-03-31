@@ -94,9 +94,9 @@ function encode(str) {
   let encdStr = '';
   for (let letra in str) {
     if (letra in encdVogais) {
-      encdStr += encdVogais[letra];
+      encdStr = encdVogais[letra];
     } else {
-      encdStr += letra;
+      encdStr = letra;
     }
   }
   return encdStr;
