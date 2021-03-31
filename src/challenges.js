@@ -72,17 +72,17 @@ function fizzBuzz(numArray) {
   let responseArray = [];
 
   for (let number of numArray) {
-    if (number % 3 !== 0 && number % 5 !== 0) {
+    if (number % 3 !== 0) {
       responseArray.push('bug!');
     }
-    if (number % 3 === 0 && number % 5 !== 0) {
-      responseArray.push('fizz')
-  }
-    if (number % 3 !== 0 && number % 5 === 0) {
-      responseArray.push('buzz')
+    if (number % 3 === 0) {
+      responseArray.push('fizz');
+    }
+    if (number % 5 === 0) {
+      responseArray.push('buzz');
     }
     if (number % 3 === 0 && number % 5 === 0) {
-      responseArray.push('fizzBuzz')
+      responseArray.push('fizzBuzz');
     }
   }
   return responseArray;
