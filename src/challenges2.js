@@ -23,18 +23,17 @@ function generatePhoneNumber(phone) {
   let result = '';
   if (phone.length > 11 || phone.length < 11) {
     result = 'Array com tamanho incorreto.';
-  }
-  else {
+  } else {
     result = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}`
     + `${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
     for (let i = 0; i < phone.length; i += 1) {
       let count = 0;
-        if (phone[i] > 9 || phone[i] < 0) {
+      if (phone[i] > 9 || phone[i] < 0) {
         result = 'não é possível gerar um número de telefone com esses valores';
-        }
-        for (let j = 0; j < phone.length; j += 1) {
-          if (phone[i] === phone[j]) count += 1;
-          if (count > 2) result = 'não é possível gerar um número de telefone com esses valores';
+      }
+      for (let j = 0; j < phone.length; j += 1) {
+        if (phone[i] === phone[j]) count += 1;
+        if (count > 2) result = 'não é possível gerar um número de telefone com esses valores';
       }
     }
   }
@@ -42,9 +41,29 @@ function generatePhoneNumber(phone) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let result = false;
+  let lines = [];
+  lines.push((Math.abs(lineA), Math.abs(lineB), Math.abs(lineC)));
+
+  let add1 = lines[0] + lines[1];
+  let add2 = lines[0] + lines[2];
+  let add3 = lines[2] + lines[1];
+  let sub1 = lines[0] - lines[1];
+  let sub2 = lines[0] - lines[2];
+  let sub3 = lines[2] - lines[1];
+
+  if (add1 > lines[2] && sub1 < lines[2]) {
+    if (add2 > lines[1] && sub2 < lines[1]) {
+      if (add3 > lines[0] && sub3 < lines[0]) {
+        result = true;
+      }
+    }
+  }
+  return result;
 }
+
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
