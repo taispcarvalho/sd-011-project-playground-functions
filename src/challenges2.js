@@ -4,8 +4,8 @@ function techList(techArray, nameStudent) {
     return 'Vazio!';
   }
   let techListArray = [];
-  let sortTechList = techArray.sort;
-  for (let techName of sortTechList) {
+  let sortList = techArray.sort();
+  for (let techName of sortList) {
     techListArray.push({
       tech: techName,
       name: nameStudent,
