@@ -1,8 +1,6 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 == true && param2 == true) {
-    return true;
-  }
+  param1 && param2; return true;
 }
 
 // Desafio 2
@@ -41,7 +39,7 @@ function highestCount(arrayOfNumbers) {
     }
   }
   for (let number of arrayOfNumbers) {
-    if (highNumber == number) {
+    if (highNumber === number) {
       repeteations += 1;
     }
   }
