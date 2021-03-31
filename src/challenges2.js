@@ -4,12 +4,11 @@ function techList(array, name) {
   let object = {};
   array.sort();
   for (let index in array) {
-    object = {tech: array[index], name: name};
+    object = { tech: array[index], name };
     lista.push(object);
   }
   return lista;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber(array) {
