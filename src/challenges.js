@@ -87,8 +87,21 @@ function encode(encodeString) {
   return encodeString;
 }
 
-function decode() {
-  // seu código aqui
+function decode(decodeString) {
+  for (let index = 0; index < decodeString.length; index += 1) {
+    if (decodeString[index] === '1') {
+      decodeString = decodeString.replace(1, 'a');
+    } else if (decodeString[index] === '2') {
+      decodeString = decodeString.replace(2, 'e');
+    } else if (decodeString[index] === '3') {
+      decodeString = decodeString.replace(3, 'i');
+    } else if (decodeString[index] === '4') {
+      decodeString = decodeString.replace(4, 'o');
+    } else if (decodeString[index] === '5') {
+      decodeString = decodeString.replace(5, 'u');
+    }
+  }
+  return decodeString;
 }
 
 module.exports = {
