@@ -47,13 +47,15 @@ function checkSizePhoneNumber(arraySize) {
 
 // Desafio 11
 function generatePhoneNumber(arrayPhone) {
-  if (checkNegativeNineNumber(arrayPhone) || checkNegativeNineNumber(arrayPhone) || checkRepeatedNumber(arrayPhone)) {
+  if (checkNegativeNineNumber(arrayPhone) || 
+    checkNegativeNineNumber(arrayPhone) || checkRepeatedNumber(arrayPhone)) {
     return 'não é possível gerar um número de telefone com esses valores';
-  } else if (checkSizePhoneNumber(arrayPhone)) {
+  } if (checkSizePhoneNumber(arrayPhone)) {
     return 'Array com tamanho incorreto.';
   }
-  return `(${arrayPhone[0]}${arrayPhone[1]}) ${arrayPhone[2]}${arrayPhone[3]}${arrayPhone[4]}${arrayPhone[5]}-
-  ${arrayPhone[6]}${arrayPhone[7]}${arrayPhone[8]}${arrayPhone[9]}${arrayPhone[10]}`;
+  return `(${arrayPhone[0]}${arrayPhone[1]}) ${arrayPhone[2]}${arrayPhone[3]}
+  ${arrayPhone[4]}${arrayPhone[5]}-${arrayPhone[6]}${arrayPhone[7]}${arrayPhone[8]}
+  ${arrayPhone[9]}${arrayPhone[10]}`;
 }
 
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
