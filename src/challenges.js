@@ -69,19 +69,15 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function divisible3and5(number) {
   if (number % 3 === 0 && number % 5 !== 0) {
-    let word = 'fizz';
-    break;
+    return 'fizz';
   } else if (number % 3 !== 0 && number % 5 === 0) {
-    let word = 'buzz';
-    break;
+    return 'buzz';
   } else if (number % 3 === 0 && number % 5 === 0) {
-    let word = 'fizzBuzz';
-    break;
+    return 'fizzBuzz';
   } else if (number % 3 !== 0 && number % 5 !== 0) {
-    let word = 'bug!';
-    break;
+    return 'bug!';
   }
-  return word;
+  return '';
 }
 
 function fizzBuzz(arrayOfNumbers) {
@@ -93,8 +89,8 @@ function fizzBuzz(arrayOfNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  
 }
 function decode() {
   // seu código aqui
