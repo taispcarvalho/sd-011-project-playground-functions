@@ -19,9 +19,6 @@ function concatName(arrayConcat) {
   return concatFinish;
 }
 
-arrayTest = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-concatName(arrayTest);
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
