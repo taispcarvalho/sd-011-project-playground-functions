@@ -12,9 +12,8 @@ function techList(arrayTechToLearn, name) {
       storeTechsName[index] = listObjTechName;
     }
     return storeTechsName;
-  } else {
-    return 'Vazio!';
   }
+  return 'Vazio!';
 }
 
 console.log(techList([], 'Raphael'));
