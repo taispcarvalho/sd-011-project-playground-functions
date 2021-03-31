@@ -47,7 +47,7 @@ function highestCount(arrayD6) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(mouse - cat1);
-  let distCat2 =Math.abs(mouse - cat2);
+  let distCat2 = Math.abs(mouse - cat2);
   switch (true) {
   case distCat1 > distCat2:
     return 'cat2';
@@ -59,7 +59,6 @@ function catAndMouse(mouse, cat1, cat2) {
     break;
   }
 }
-console.log(catAndMouse(13, 14, 12));
 
 // Desafio 8
 function fizzBuzz(arrayD8) {
@@ -69,20 +68,31 @@ function fizzBuzz(arrayD8) {
     } else if (arrayD8[i] % 3 === 0) {
       arrayD8[i] = 'fizz';
     } else if (arrayD8[i] % 5 === 0) {
-      arrayD8[i] = 'fizz';
+      arrayD8[i] = 'buzz';
     } else {
       arrayD8[i] = 'bug!';
-    } 
+    }
   }
   return arrayD8;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringD9_1) {
+  stringD9_1 = stringD9_1.replace(/a/g, 1);
+  stringD9_1 = stringD9_1.replace(/e/g, 2);
+  stringD9_1 = stringD9_1.replace(/i/g, 3);
+  stringD9_1 = stringD9_1.replace(/o/g, 4);
+  stringD9_1 = stringD9_1.replace(/u/g, 5);
+  return stringD9_1;
 }
-function decode() {
-  // seu código aqui
+
+function decode(stringD9_2) {
+  stringD9_2 = stringD9_2.replace(/1/g, 'a');
+  stringD9_2 = stringD9_2.replace(/2/g, 'e');
+  stringD9_2 = stringD9_2.replace(/3/g, 'i');
+  stringD9_2 = stringD9_2.replace(/4/g, 'o');
+  stringD9_2 = stringD9_2.replace(/5/g, 'u');
+  return stringD9_2;
 }
 
 module.exports = {
