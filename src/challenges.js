@@ -15,7 +15,8 @@ function splitSentence() {
 
 // Desafio 4
 function concatName(arrayConcat) {
-  console.log(arrayConcat[arrayConcat.length -1] + ', ' + arrayConcat[0]);
+  concatFinish = console.log(arrayConcat[arrayConcat.length - 1] + ', ' + arrayConcat[0]);
+  return concatFinish;
 }
 
 arrayTest = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
