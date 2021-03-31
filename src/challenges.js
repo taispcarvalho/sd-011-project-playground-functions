@@ -67,9 +67,9 @@ let arr = [9, 1, 2, 3, 9, 5, 7]
 
 
 // Desafio 7
-function catAndMouse(mousePosition, cat1Position, cat2Position ) {
- const dist1 = Math.abs(mousePosition - cat1Position)
- const dist2 = Math.abs(mousePosition - cat2Position) 
+function catAndMouse(mouse, cat1, cat2 ) {
+ const dist1 = Math.abs(mouse - cat1)
+ const dist2 = Math.abs(mouse - cat2) 
  if (dist1 > dist2){
    return 'cat2';
  } if (dist1 < dist2 ){
@@ -78,7 +78,7 @@ function catAndMouse(mousePosition, cat1Position, cat2Position ) {
   return 'os gatos trobam e o rato foge'
 }
 }
-//console.log(catAndMouse(0,0,0));
+console.log(catAndMouse(0,-3,2));
 
 // Desafio 8
 function fizzBuzz(arr){
@@ -96,8 +96,8 @@ function fizzBuzz(arr){
 }
 return arr1
 }
-arr1 = [2, 15, 7, 9, 45]
-console.log(fizzBuzz(arr1) );
+//arr1 = [2, 15, 7, 9, 45]
+//console.log(fizzBuzz(arr1) );
 
 // Desafio 9
 function encode() {
