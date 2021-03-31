@@ -16,8 +16,8 @@ function splitSentence(splitPhase) {
 
 // Desafio 4
 function concatName(arrayName) {
-  let =  arrayName[arrayName.length - 1] + ',' + arrayName[0];
-  return arrayName;
+  let concatArray =  arrayName[arrayName.length - 1] + ',' + arrayName[0];
+  return concatArray;
 }
 
 // Desafio 5
