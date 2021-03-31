@@ -14,7 +14,7 @@ function calcArea(base, height) {
 function splitSentence(string) {
   return string.split(' '); // Stackoverflow: https://pt.stackoverflow.com/questions/204346/como-pegar-uma-palavra-dentro-de-uma-string-frase-em-node-js
 }
-
+console.log(splitSentence('oi tudo bem'))
 // Desafio 4
 function concatName(array) {
   let [u, p] = [array[array.length - 1], array[0]]; // Destructure Assignment: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#trocando_vari%C3%A1veis
@@ -22,8 +22,11 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let p = 0;
+  p += wins * 3;
+  p += ties * 1;
+  return p;
 }
 
 // Desafio 6
