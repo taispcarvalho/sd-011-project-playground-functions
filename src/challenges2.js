@@ -1,18 +1,19 @@
 // Desafio 10
 function techList(anyArray, anyName) {
   if (anyArray.length === 0) {
-    return 'Vazio';
+    return 'Vazio!';
   }
   let sortedTechs = anyArray.sort();
   let techListArray = [];
   for (let techs of sortedTechs) {
-    techListArray.push({ 
-      tech: techs, 
-      name: anyName 
+    techListArray.push({
+      tech: techs,
+      name: anyName;
     })
   }
   return techListArray;
 }
+console.log(techList());
 
 // Desafio 11
 function generatePhoneNumber(array) {
@@ -56,6 +57,7 @@ if (checkIfFollowTheRules()) {
   return "não é possível gerar um número de telefone com esses valores";
   }
 }
+
 
 // Desafio 12
 function triangleCheck() {
