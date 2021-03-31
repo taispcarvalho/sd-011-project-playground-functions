@@ -20,7 +20,7 @@ splitSentence('go Trybe');
 // Desafio 4
 function concatName(array) {
   return array[array.length - 1] + ', ' + array[0];
-  }
+}
 concatName(['foguete', 'não', 'tem', 'ré']);
 
 // Desafio 5
@@ -31,18 +31,6 @@ function footballPoints(wins, ties) {
 footballPoints(1, 2);
 
 // Desafio 6
-let numeroMaior = 0;
-function maiorNumero(numeros) {
-  for (let index = 0; index < numeros.length; index += 1) {
-    if (numeros[index] > numeroMaior) {
-      numeroMaior = numeros[index];
-    }
-  }
-  return numeroMaior;
-};
-maiorNumero([9, 1, 2, 3, 9, 5, 7]);
-
-
 let vezes = 0;
 function highestCount(listaNumeros) {
   for (indexLista = 0; indexLista < numeroMaior; indexLista += 1) {
@@ -53,6 +41,17 @@ function highestCount(listaNumeros) {
   return vezes;
 };
 highestCount([9, 1, 2, 3, 9, 5, 7]);
+
+let numeroMaior = 0;
+function maiorNumero(numeros) {
+  for (let index = 0; index < numeros.length; index += 1) {
+    if (numeros[index] > numeroMaior) {
+      numeroMaior = numeros[index];
+    }
+  }
+  return numeroMaior;
+};
+maiorNumero([9, 1, 2, 3, 9, 5, 7]);
 
 
 
