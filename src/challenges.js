@@ -44,7 +44,6 @@ function highestCount(array) {
     if (higherValue < array[highestIndex]) {
       higherValue = array[highestIndex];
     }
-   // return higherValue;
   }
 
   for (let countIndex = 0; countIndex < array.length; countIndex += 1) {
@@ -55,15 +54,24 @@ function highestCount(array) {
   return repeatValue;
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-
-
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distance;
+  let calc1 = Math.abs(cat1 - mouse);
+  let calc2 = Math.abs(cat2 - mouse);
+
+  if (calc2 < calc1) {
+    distance = 'cat2';
+  } else if (calc1 < calc2) {
+    distance = 'cat1';
+  } else {
+    distance = 'os gatos trombam e o rato foge';
+  }
+
+  return distance;
 }
+
+console.log(catAndMouse(14, 12, 15));
 
 // Desafio 8
 function fizzBuzz() {
@@ -71,9 +79,10 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(array) {
+
 }
+
 function decode() {
   // seu código aqui
 }
