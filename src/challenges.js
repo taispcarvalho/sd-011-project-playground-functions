@@ -11,7 +11,6 @@ function calcArea(base, height) {
 // Desafio 3
 // Consultei a documentação de W3Schools sobre método .split() para resolução deste problema.
 // Link: https://www.w3schools.com/jsref/jsref_split.asp
-
 function splitSentence(string) {
   return string.split(' ');
 }
@@ -49,6 +48,7 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
+  Math.abs(mouse);
   let distance1 = Math.abs(mouse - cat1);
   let distance2 = Math.abs(mouse - cat2);
   let result;
