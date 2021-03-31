@@ -60,22 +60,23 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 // References:
 // Find numbers in strings: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+// RegExp g Modifier (/g): https://www.w3schools.com/jsref/jsref_regexp_g.asp
 // .split(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
 // ParseInt: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+// Missing Radix Parameter: https://stackoverflow.com/questions/7818903/jslint-says-missing-radix-parameter
+// Template Literals: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 function hydrate(word) {
   let number = word.replace(/[^0-9]/g, '');
   let table = number.split('');
   let result = 0;
 
-  for (let i in table) {
-    result += parseInt(table[i]);
+  for (let i = 0; i < table.length; i += 1) {
+    result += parseInt(table[i], 10);
   }
 
   if (result === 1) {
-    return result + ' copo de água';
-  } else {
-    return result + ' copos de água';
-  }
+    return `${result} copo de água`;
+  } return `${result} copos de água`;
 }
 
 module.exports = {
