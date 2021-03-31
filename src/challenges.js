@@ -76,12 +76,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzzTest () {
-
-}
-
-function 
-
 function fizzBuzz() {
   // seu código aqui
 }
