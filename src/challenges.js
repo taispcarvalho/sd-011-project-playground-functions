@@ -111,8 +111,8 @@ function decode(inputString) {
   let numbers = [1, 2, 3, 4, 5];
   let outputString = '';
   let storeVowel = null;
-  for(let index = 0; index < inputString.length; index += 1) {
-    for (let index2 = 0; index2 < numbers.length; index2++) {
+  for (let index = 0; index < inputString.length; index += 1) {
+    for (let index2 = 0; index2 < numbers.length; index2 += 1) {
       if (inputString[index] == numbers[index2]) {
         storeVowel = vowels[index2];
       }
