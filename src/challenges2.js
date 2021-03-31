@@ -23,7 +23,7 @@ function generatePhoneNumber(numero) {
   let check =true;
   if (numero.length!=11){
     check=false;
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }else{
     for (let index in numero){
       let contador = 0;
@@ -65,7 +65,6 @@ function generatePhoneNumber(numero) {
     }
   }
 }
-console.log(generatePhoneNumber([1,2,3,4,5,2,7,8,9,0,1]));
 
 
 // Desafio 12
