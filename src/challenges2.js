@@ -1,12 +1,12 @@
 // Desafio 10
-function techList(tech, nome) {
+function techList(techname, nome) {
+  let tech = techname.sort()
   if (tech.length == 0){
     var output = 'Vazio!'
   } else {
     var output = []; 
-  }  
-
-  for (let index = 0; index < tech.length; index += 1) {
+  }
+  for (let index = 0; index < tech.length; index += 1) {  
     let object = {
       tech: String,
       name: String
@@ -14,10 +14,10 @@ function techList(tech, nome) {
       let objeto = Object.create(object);
       objeto.tech = tech[index];
       objeto.name = nome;
-      output.push(objeto);
-     
+      output.push(objeto);     
   } return output
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
