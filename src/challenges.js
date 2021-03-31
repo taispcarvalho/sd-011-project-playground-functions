@@ -74,43 +74,44 @@ function encode(stringEncode) {
   for (let index = 0; index < stringEncode.length; index += 1) {
     switch (stringEncode[index]) {
       case 'a':
-        stringEncode = stringEncode.replace('a','1');
+        stringEncode = stringEncode.replace('a', '1');
         break;
       case 'e':
         stringEncode = stringEncode.replace('e', '2');
         break;
       case 'i':
-        stringEncode = stringEncode.replace('i','3');
+        stringEncode = stringEncode.replace('i', '3');
         break;
       case 'o':
-        stringEncode = stringEncode.replace('o','4');
+        stringEncode = stringEncode.replace('o', '4');
         break;
       case 'u':
-        stringEncode = stringEncode.replace('u','5');
+        stringEncode = stringEncode.replace('u', '5');
         break;
       default:
         break;
     }
   }
-  return stringEcode;
+  return stringEncode;
 }
+
 function decode(stringDecode) {
   for (let index2 = 0; index2 < stringDecode.length; index2 += 1) {
     switch (stringDecode[index2]) {
       case '1':
-        stringDecode = stringDecode.replace('1','a');
+        stringDecode = stringDecode.replace('1', 'a');
         break;
       case '2':
         stringDecode = stringDecode.replace('2', 'e');
         break;
       case '3':
-        stringDecode = stringDecode.replace('3','i');
+        stringDecode = stringDecode.replace('3', 'i');
         break;
       case '4':
-        stringDecode = stringDecode.replace('4','o');
+        stringDecode = stringDecode.replace('4', 'o');
         break;
       case '5':
-        strinDecode = stringDecode.replace('5','u');
+        stringDecode = stringDecode.replace('5', 'u');
         break;
       default:
         break;
