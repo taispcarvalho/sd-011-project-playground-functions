@@ -9,6 +9,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
+// Consultei a documentação de W3Schools sobre método .split() para resolução deste problema.
+// Link: https://www.w3schools.com/jsref/jsref_split.asp
+
 function splitSentence(string) {
   return string.split(' ');
 }
@@ -20,12 +23,29 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return ((wins * 3) + (ties * 1));
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers, highestNumber) {
+  highestNumber = 0;
+  //* ACHA O MAIOR NÚMERO
+  //* Esta forma de fazer o if foi retirada de DevMedia.com.br
+  //* Source: https://www.devmedia.com.br/javascript-estrutura-condicional-if/40611#:~:text=A%20estrutura%20condicional%20if%20permite,uma%20determinada%20condi%C3%A7%C3%A3o%20for%20verdadeira.&text=Nesse%20exemplo%2C%20a%20instru%C3%A7%C3%A3o%20console,preco%20for%20maior%20que%20100.
+  for (let arrayCount = 0; arrayCount < numbers.length; arrayCount += 1) {
+    if (numbers[arrayCount] > highestNumber) highestNumber = numbers[arrayCount];
+  }
+  return highestCount(highestNumber);
+}
+
+function aleluia(numbers, highestNumber, countNum) {
+  countNum = 0;
+  for (let arrayCount = 0; arrayCount < numbers.length; arrayCount += 1) {
+    if (highestNumber === numbers[arrayCount]) {
+      countNum += 1;
+    }
+  }
+  return countNum;
 }
 
 // Desafio 7
