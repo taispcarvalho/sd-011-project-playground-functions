@@ -67,23 +67,13 @@ function fizzBuzz(numbers) {
   let anotherNumber = [];
 
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 3 === 0) {
-      anotherNumber[index] = 'fizz';
-    }
-  }
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 5 === 0) {
-      anotherNumber[index] = 'buzz';
-    }
-  }
-
-  for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 5 === 0 && numbers[index] % 3 === 0) {
       anotherNumber[index] = 'fizzbuzz';
-    }
-  }
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 5 !== 0 && numbers[index] % 3 !== 0) {
+    } else if (numbers[index] % 5 === 0) {
+      anotherNumber[index] = 'buzz';
+    } else if (numbers[index] % 3 === 0) {
+      anotherNumber[index] = 'fizz';
+    } else {
       anotherNumber[index] = 'bug!';
     }
   }

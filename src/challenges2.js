@@ -1,6 +1,17 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(skills, name) {
+  let packageSkills = [];
+
+  for (let index = 0; index < skills.length; index += 1) {
+    packageSkills.push([{
+      tech: skills[index],
+      name: name
+    }]);
+    if (skills[index] == null) {
+      return 'Vazio!';
+    }
+  }
+  return packageSkills;
 }
 
 // Desafio 11
