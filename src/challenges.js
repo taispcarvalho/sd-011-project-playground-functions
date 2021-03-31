@@ -91,18 +91,23 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(12, 0, 14));
 
 // Desafio 8
+function swapNumberStr(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
 function fizzBuzz(arrayOfNumbers) {
   let fizzArrayStr = [];
-  for (let fizzindex = 0; fizzindex < arrayOfNumbers.length; fizzindex += 1) {
-    if (arrayOfNumbers[fizzindex] % 3 === 0 && arrayOfNumbers[fizzindex] % 5 === 0) {
-      fizzArrayStr.push('fizzBuzz');
-    } else if (arrayOfNumbers[fizzindex] % 5 === 0) {
-      fizzArrayStr.push('buzz');
-    } else if (arrayOfNumbers[fizzindex] % 3 === 0) {
-      fizzArrayStr.push('fizz');
-    } else {
-      fizzArrayStr.push('bug!');
-    }
+  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
+    let result = swapNumberStr(arrayOfNumbers[index]);
+    fizzArrayStr.push(result);
   }
   return fizzArrayStr;
 }
