@@ -46,14 +46,18 @@ function highestCount(aNumbers) {
     let number = aNumbers[index];
     if (number >= majorNumber) {
       majorNumber = number;
-    }
+    }  
+  }
+  for (let index in aNumbers) {
     if (aNumbers[index] === majorNumber) {
       score += 1;
     }
   }
-
+  
   return score;
 }
+
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
