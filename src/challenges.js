@@ -1,36 +1,31 @@
 // Desafio 1 - ok
-function compareTrue(impar, par) {
-  return impar && par;
-
+function compareTrue(par, impar) {
+  return par && impar;
 }
 
 // Desafio 2 - ok
-function calcArea(base, altura) {
-  let areaTriangulo = (base * altura) / 2;
-  return (areaTriangulo);
-
+function calcArea(a, b) {
+  let area = (a * b) / 2;
+  return (area);
 }
 
 // Desafio 3 - ok
 function splitSentence(string) {
-  let arrayFrase = string.split(' ');
-  return arrayFrase;
+  let arrayString = string.split(' ');
+  return arrayString;
 }
-
 
 // Desafio 4 - ok
 function concatName(array) {
   let primeiroNome = array[0];
   let ultimoNome = array[array.length - 1];
   return (ultimoNome + ', ' + primeiroNome);
-
 }
 
 // Desafio 5 - ok
 function footballPoints(wins, ties) {
   let operacao = (3 * wins) + ties;
   return operacao;
-
 }
 
 // Desafio 6
@@ -49,7 +44,7 @@ function highestCount(array) {
   }
   return contador 
 }
-console.log(highestCount());
+console.log(highestCount(array));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -69,12 +64,10 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(1,0,2));
 
 // Desafio 8
-let num1 = [2, 15, 7, 9, 45];
-let num2 = [7, 9];
-let num3 = [9, 25];
 function fizzBuzz(arrayNumbers) {
   let comparacao = [];
-      for(let index = 0; index < arrayNumbers.length; index += 1){
+  if(arrayNumbers){
+    for(let index = 0; index < arrayNumbers.length; index += 1){
       if ((arrayNumbers[index] % 3 === 0) && (arrayNumbers[index] % 5 === 0)) {
         comparacao.push('fizzBuzz');
       }else if(arrayNumbers[index] % 5 === 0) {
@@ -85,12 +78,10 @@ function fizzBuzz(arrayNumbers) {
         comparacao.push('bug');
       }
     }
-  
+  }
   return comparacao;
 }
-console.log(fizzBuzz(num1));
-console.log(fizzBuzz(num2));
-console.log(fizzBuzz(num3));
+console.log(fizzBuzz([]));
 
 
 // Desafio 9
