@@ -84,30 +84,48 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(str) {
-  let encdVogais = {
-    'a': 1,
-    'e': 2,
-    'i': 3,
-    'o': 4,
-    'u': 5,
-  };
-  let encdStr = '';
-  for (let letra in str) {
-    if (letra in encdVogais) {
-      encdStr = encdVogais[letra];
+  let encStr = [];
+  for (let index = 0; index < str.length; index += 1) {
+    if (str[index] === 'a') {
+      encStr += '1';
+    } else if (str[index] === 'e') {
+      encStr += '2';
+    } else if (str[index] === 'i') {
+      encStr += '3';
+    } else if (str[index] === 'o') {
+      encStr += '4';
+    } else if (str[index] === 'u') {
+      encStr += '5';
     } else {
-      encdStr = letra;
+      encStr += str[index];
     }
   }
-  return encdStr;
+return encStr;  
 }
-console.log(encode('hello there'));
+console.log(encode('hi there!'));
 
+// Desafio 9
 
-
-function decode() {
-  // seu código aqui
+function decode(str) {
+  let dcdStr = [];
+  for (let index = 0; index < str.length; index += 1) {
+    if (str[index] === '1') {
+      dcdStr += 'a';
+    } else if (str[index] === '2') {
+      dcdStr += 'e';
+    } else if (str[index] === '3') {
+      dcdStr += 'i';
+    } else if (str[index] === '4') {
+      dcdStr += 'o';
+    } else if (str[index] === '5') {
+      dcdStr += 'u';
+    } else {
+      dcdStr += str[index];
+    }
+  }
+return dcdStr;  
 }
+console.log(decode('h3 th2r2!'))
 
 module.exports = {
   calcArea,
