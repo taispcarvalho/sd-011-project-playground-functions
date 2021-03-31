@@ -37,8 +37,9 @@ function generatePhoneNumber(arrNumbers) {
   let newStr = '';
   let repeatedNumber = repeatedNumberFinder(arrNumbers);
   if (arrNumbers.length != 11) {
-    return 'Array com tamanho incorreto.';}
-  for (let index = 0; index < arrNumbers.length; index += 1) {    
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index = 0; index < arrNumbers.length; index += 1) {
     if (arrNumbers[index] < 0 || arrNumbers[index] > 9 || repeatedNumber === true) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
@@ -60,9 +61,15 @@ function generatePhoneNumber(arrNumbers) {
 console.log(generatePhoneNumber([]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC) && lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) && lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+    return true;
+  } else {
+    return false;
 }
+}
+
+console.log(triangleCheck(10, 0, 8));
 
 // Desafio 13
 function hydrate() {
