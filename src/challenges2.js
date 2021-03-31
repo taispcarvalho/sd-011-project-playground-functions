@@ -21,8 +21,6 @@ techs = techs.sort()
   
 }
 
-console.log(techList([], "Lucas"));
-
 // Desafio 11
 function generatePhoneNumber(numbers) {
 
@@ -70,30 +68,16 @@ function generatePhoneNumber(numbers) {
 
 
 
-console.log(generatePhoneNumber([2, 2, 2, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let aANDb = lineA + lineB;
   let aANDc = lineA + lineC;
   let bANDc = lineB + lineC;
-  let lineCheck = 0;
-  if(lineA < bANDc && lineA > Math.abs(b-c)){
-    lineCheck += 1
-  }
 
-  if(lineB < aANDc && lineB > Math.abs(a-c)){
-    lineCheck += 1
-  }
-
-  if(lineC < aANDb && lineC > Math.abs(b-a)){
-    lineCheck += 1
-  }
-
-  if(lineCheck === 3){
-    return true
-  }else{
-    return false
+  if((lineA < bANDc && lineA > Math.abs(b-c)) || (lineB < aANDc && lineB > Math.abs(a-c)) || (lineC < aANDb && lineC > Math.abs(b-a))){
+    return true;
   }
 
 }
