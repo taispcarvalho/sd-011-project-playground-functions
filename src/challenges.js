@@ -78,11 +78,26 @@ function catAndMouse(mousePosition, cat1Position, cat2Position ) {
   return 'os gatos trobam e o rato foge'
 }
 }
-console.log(catAndMouse(0,0,0));
+//console.log(catAndMouse(0,0,0));
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr){
+  let arr1 = [];
+  for (let number of arr){
+    if (number % 3 === 0 && number % 5 === 0) {
+      arr1.push('fizzBuzz');
+    }else if (number % 3 === 0){
+      arr1.push('fizz');
+    }else if (number % 5 === 0){
+      arr1.push('buzz');
+    }else{
+      arr1.push('bug!');
+  } 
 }
+return arr1
+}
+arr1 = [2, 15, 7, 9, 45]
+console.log(fizzBuzz(arr1) );
 
 // Desafio 9
 function encode() {
