@@ -77,16 +77,11 @@ function catAndMouse(mouse, cat1, cat2 ) {
 // Desafio 8
 function fizzBuzz(array) {
   let msgRet = [];
-  for (let index in array){
-    if (array[index] % 15 === 0 ){
-      msgRet.push('fizzBuzz');
-    } else if (array[index] % 3 === 0){
-      msgRet.push('fizz');
-    } else if (array[index] % 5 === 0){
-      msgRet.push('buzz');
-    } else {
-      msgRet.push('bug!');
-    }
+  for (let index in array) {
+    if (array[index] % 15 === 0) msgRet.push('fizzBuzz');
+    else if (array[index] % 3 === 0) msgRet.push('fizz');
+    else if (array[index] % 5 === 0) msgRet.push('buzz');
+    else msgRet.push('bug!');
   }  
   return msgRet;
 }
