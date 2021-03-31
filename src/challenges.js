@@ -56,6 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat 2';
   }
 }
+// Talvez de certo
 
 // Desafio 8
 function fizzBuzz() {
