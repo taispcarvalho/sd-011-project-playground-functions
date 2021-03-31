@@ -69,18 +69,14 @@ function validationArray(array){
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let somaLineA = lineB + lineC;
-  let somaLineB = lineA + lineC;
-  let somaLineC = lineA + lineB;
-  if (lineA < somaLineA || lineB < somaLineB || lineC < somaLineC){
-    if (lineA > Math.abs(lineB - lineC) || lineB > Math.abs(lineA - lineC) || lineC > Math.abs(lineA - lineB)){
-      return true;
-    } else {
-      return 'aq';
-    }
-  } else {
-    return false;
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    return true;
+  } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+    return true;
+  } else if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+    return true;
   }
+  return false;
 }
 
 // Desafio 13
