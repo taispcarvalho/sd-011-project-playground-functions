@@ -4,7 +4,7 @@ function createTechObjects(list, name) {
   let objects = {};
   for (let technology of list) {
     // Source: https://stackoverflow.com/questions/2383484/how-to-create-a-dynamic-object-in-a-loop
-    objects = { tech: technology, name: name };
+    objects = { tech: technology, name };
     array.push(objects);
   }
   return array;
