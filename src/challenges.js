@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(pinky, cerebro) {
   return pinky && cerebro;
-  }
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -29,15 +29,15 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayN) {
-  var checkHighestNumber = Math.max.apply(null,arrayN);
+  let checkHighestNumber = Math.max.apply(null, arrayN);
   let checkRepetition = 0;
-  for(index = 0; index < arrayN.length; index += 1){
-  if(arrayN[index] === checkHighestNumber){
-  checkRepetition +=1 ;
-  }
+  for (let index = 0; index < arrayN.length; index += 1) {
+    if (arrayN[index] === checkHighestNumber) {
+      checkRepetition += 1;
+    }
   }
   return checkRepetition;
-  }
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
