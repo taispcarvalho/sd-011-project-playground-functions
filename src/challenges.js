@@ -77,6 +77,8 @@ let comparacao = [];
   return comparacao;
 }
 console.log(fizzBuzz(arrayNumbers = [2, 15, 7, 9, 45]));
+console.log(fizzBuzz(arrayNumbers = [7 ,9]));
+console.log(fizzBuzz(arrayNumbers = [9 ,25]));
 
 // Desafio 9
 function encode() {
