@@ -75,7 +75,7 @@ function catAndMouse(mouse, cat1, cat2) {
  } if (dist1 < dist2 ) {
    return 'cat1';
  }
-  return 'os gatos trobam e o rato foge';
+  return 'os gatos trombam e o rato foge';
 }
 
 //console.log(catAndMouse(0,-3,2));
