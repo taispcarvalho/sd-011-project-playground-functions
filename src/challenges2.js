@@ -25,11 +25,11 @@ techs = techs.sort()
 function generatePhoneNumber(numbers) {
 
   let phoneNumber = ''
-  let count = 0;
+  
   let canBePhoneNumber = true;
   
     for(let i = 0; i < 11; i += 1){
-
+      let count = 0;
       for(let number of numbers){
         if(number === numbers[i]){
           count += 1
@@ -73,18 +73,19 @@ function generatePhoneNumber(numbers) {
 
 
 
-console.log(generatePhoneNumber([1, 2, 2, 5, 5, 5, 2, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let aANDb = lineA + lineB;
-  let aANDc = lineA + lineC;
-  let bANDc = lineB + lineC;
+  let biggestLine = Math.max(lineA, lineB, lineC);
+  let perimeter = lineA + lineB + lineC;
 
-  if((lineA < bANDc && lineA > Math.abs(b-c)) || (lineB < aANDc && lineB > Math.abs(a-c)) || (lineC < aANDb && lineC > Math.abs(b-a))){
-    return true;
+  if(biggestLine < perimeter - biggestLine){
+    return true
   }
-
+  else{
+    return false
+  }
 }
 
 // Desafio 13
