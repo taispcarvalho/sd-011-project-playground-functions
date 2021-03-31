@@ -70,34 +70,21 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 
-function module3(number) {
-  return number % 3;
-}
-
-function module5(number) {
-  return number % 5;
-}
-
-function divisible3and5(number) {
-  if (module3 === 0 && module5 !== 0) {
-    return 'fizz';
-  }
-  if (module3 !== 0 && module5 === 0) {
-    return 'buzz';
-  }
-  if (module3 === 0 && module5 === 0) {
-    return 'fizzBuzz';
-  }
-  if (module3 !== 0 && module5 !== 0) {
-    return 'bug!';
-  }
-  return '';
-}
-
 function fizzBuzz(arrayOfNumbers) {
   let nonSenseArray = [];
   for (let index = 0; index < arrayOfNumbers.length; index += 1) {
-    nonSenseArray.push(divisible3and5(index));
+    if (arrayOfNumbers[index] === 3 && arrayOfNumbers[index] !== 5) {
+      nonSenseArray.push('fizz');
+    }
+    if (arrayOfNumbers[index] !== 3 && arrayOfNumbers[index] === 5) {
+      nonSenseArray.push('buzz');
+    }
+    if (arrayOfNumbers[index] === 3 && arrayOfNumbers[index] === 5) {
+      nonSenseArray.push('fizzBuzz');
+    }
+    if (arrayOfNumbers[index] !== 3 && arrayOfNumbers[index] !== 5) {
+      nonSenseArray.push('bug!');
+    }
   }
   return nonSenseArray;
 }
