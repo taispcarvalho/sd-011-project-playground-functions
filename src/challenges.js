@@ -81,19 +81,40 @@ function catAndMouse(mouse, cat1, cat2){
   let cat1Distance = betweenDistance (mouse, cat1);
   let cat2Distance = betweenDistance (mouse, cat2);
   if (cat1Distance === cat2Distance){
-    return "os gatos trombam e o rato foge"
+    return "os gatos trombam e o rato foge";
   }else if (cat2Distance < cat1Distance){
     return "Cat2"; 
   }else{
     return "cat1";
   }
 }
-/* console.log(catAndMouse(1, 2, 2)); */
+/* console.log(catAndMouse(1, 2, 2)); ------------------------------*/
 
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+/* Desafio 8
+Jogo FizzBuzzBug
+Recebe um array.
+Se o numero for divisével por 3 - fizz
+Se o numero for divisével por 5 - Buzz
+Se o numero for divisével por 3 e por 5 -FizzBuzz
+Se o numero nõ for divisével nem por 3 e nem por 5 - Bug
+*/
+function fizzBuzz(array) {
+  let game = [];
+  for (let index = 0; array.length; index += 1){
+    let word = '';
+    if (array[index] % 3 === 0){
+      word += "fizz";
+    }
+    if (array[index] % 5 === 0){
+      word += 'Buzz';
+    }else{
+      word += 'Bug';
+    }
+    game.push(word);
+  }
+  return game;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
