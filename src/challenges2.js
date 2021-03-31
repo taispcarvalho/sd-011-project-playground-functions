@@ -8,7 +8,7 @@ function myFunction(objects, index, myName) {
 }
 function techList(objects, name) {
   objects = objects.sort();
-  if (objects != []) {
+  if (objects !== []) {
     for (let index = 0; index < objects.length; index += 1) {
       objects = myFunction(objects, index, name);
     }
