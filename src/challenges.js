@@ -33,18 +33,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
- /* counter = [];
-  let checkHighestNumber = Math.max(counter);
-  return checkHighestNumber;
-  for(let index = 0; index < counter.length; index =+ 1) {
-    let checkRepetition = index;
-    if (counter[index] === index) {
-      index += 1;
-      return checkRepetition
-    }    
-  }*/
-}
+function highestCount(arrayN) {
+  var checkHighestNumber = Math.max.apply(null,arrayN);
+  let checkRepetition = 0; 
+  for(index = 0; index < arrayN.length; index += 1){
+  if(arrayN[index] === checkHighestNumber){
+  checkRepetition +=1 ;
+  }
+  }
+  return checkRepetition;
+  }
  
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -59,7 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
 }
-console.log(catAndMouse(5, 2, 12));
+
 
 // Desafio 8
 function fizzBuzz(numbers) {
@@ -74,21 +72,25 @@ function fizzBuzz(numbers) {
         }else{
           newArray.push('bug!');
         }
-       }
+        }
       return newArray;
       }
-     console.log(fizzBuzz([2, 15, 7, 9, 45]));
+     
 // Desafio 9
 function encode(string) {
-  let newString;
-  for(let index = 0; index < string.length; index += 1){
-    if(string[index] = 'a'){
-      newString = string.replace('1');
-    }
+  /*let newString = string;
+  let vogals = {
+    a:1, e:2, i:3, o:4, u:5
   }
-  
+  for(let index = 0; index < string.length; index += 1){
+
+  if(string = ('a')){
+     newString.push ('a' = '1');
+  }
+  return newString
+}*/
 }
-console.log(encode('alo'));
+
 
 function decode() {
   // seu código aqui
