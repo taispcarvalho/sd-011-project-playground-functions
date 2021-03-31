@@ -19,13 +19,13 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(array) {
-  return ` ${array[array.length-1]} , ${array[0]}`
+  return `${array[array.length-1]}, ${array[0]}`
 } //console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3 ) + ties
-} //console.log(footballPoints(14,8))
+} console.log(footballPoints(14,8))
 
 // Desafio 6
 function highestCount(arra) {
@@ -39,13 +39,19 @@ function highestCount(arra) {
   }
   return cont
   
-} //console.log( highestCount([ 9, 1, 2, 3, 9, 5, 7 ]))
+} console.log( highestCount([ 9, 1, 2, 3, 9, 5, 7 ]))
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  let run1 = Math.abs (mouse - cat1);
+  let run2 = Math.abs (mouse - cat2);
+  if (run2 > run1) {
+    return 'cat1'
+  } else if (run1 > run2){
+    return 'cat2'
+  } else { return`"os gatos trombam e o rato foge"`};
   
-  
-}
+} console.log(catAndMouse(5, 2, 3))
 
 // Desafio 8
 function fizzBuzz() {
