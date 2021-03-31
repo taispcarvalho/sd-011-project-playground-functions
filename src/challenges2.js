@@ -15,7 +15,6 @@ function techList(techs, nome) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   let phonePad = '(**) *****-****';
-  let condition = repeatTimes(numbers[i], numebers)
 
   for(let i = 0; i < numbers.length; i += 1){
 
