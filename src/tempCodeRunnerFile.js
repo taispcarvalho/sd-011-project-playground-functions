@@ -12,4 +12,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return resultado;
 }
-  console.log(catAndMouse(0, 3, 2), catAndMouse(0, 6, 12), catAndMouse(0, 3, 3));
+  console.log(catAndMouse(0, 3, 2));
+  console.log(catAndMouse(0, 6, 12));
+  console.log(catAndMouse(0, 3, 3));
