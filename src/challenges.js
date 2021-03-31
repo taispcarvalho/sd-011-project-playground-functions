@@ -47,7 +47,7 @@ function highestCount(arrNum) {
     }
   }
   evenCount += 1;
-  
+
   return evenCount;
 }
 
@@ -91,11 +91,75 @@ function fizzBuzz(arrNum) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(words) {
+  let arrVowels = words.split('');
+
+  for (let index = 0; index < words.length; index += 1) {
+
+    switch(arrVowels[index]) {
+      case 'a':
+        arrVowels[index] = 1;
+        break;
+    }
+    switch(words[index]) {
+      case 'e':
+        arrVowels[index] = 2;
+        break;
+    }
+    switch(words[index]) {
+      case 'i':
+        arrVowels[index] = 3;
+        break;
+    }
+    switch(words[index]) {
+      case 'o':
+        arrVowels[index] = 4;
+        break;
+    }
+    switch(words[index]) {
+      case 'u':
+        arrVowels[index] = 5;
+        break;
+    }
+  }
+  arrVowels = arrVowels.join('');
+  return arrVowels;
 }
-function decode() {
-  // seu código aqui
+
+function decode(words) {
+  
+  let arrVowels = words.split('');
+
+  for (let index = 0; index < words.length; index += 1) {
+
+    switch(arrVowels[index]) {
+      case '1':
+        arrVowels[index] = 'a';
+        break;
+    }
+    switch(words[index]) {
+      case '2':
+        arrVowels[index] = 'e';
+        break;
+    }
+    switch(words[index]) {
+      case '3':
+        arrVowels[index] = 'i';
+        break;
+    }
+    switch(words[index]) {
+      case '4':
+        arrVowels[index] = 'o';
+        break;
+    }
+    switch(words[index]) {
+      case '5':
+        arrVowels[index] = 'u';
+        break;
+    }
+  }
+  arrVowels = arrVowels.join('');
+  return arrVowels;
 }
 
 module.exports = {
