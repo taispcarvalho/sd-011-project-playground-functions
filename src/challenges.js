@@ -53,7 +53,7 @@ function counterHighest(highest, array) {
 }
 
 function highestCount(array) {
-  counterHighest(findHighest(array), array);
+  return counterHighest(findHighest(array), array);
 }
 
 // Desafio 7
