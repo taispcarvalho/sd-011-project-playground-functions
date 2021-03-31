@@ -79,45 +79,19 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzzChecker(result, array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 15 === 0) {
-      result[index].push('fizzBuzz');
+      result.push('fizzBuzz');
+    } else if (array[index] % 3 === 0) {
+      result.push('fizz');
+    } else if (array[index] % 5 === 0) {
+      result.push('buzz');
     }
+    result.push('bug!');
   }
-  return result;
-}
-
-function buzzChecker(result, array) {
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0) {
-      result[index].push('buzz');
-    }
-  }
-  return result;
-}
-
-function fizzChecker(result, array) {
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 5 === 0) {
-      result[index].push('fizz');
-    }
-  }
-  return result;
-}
-
-function bugChecker(result, array) {
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 5 !== 0 && array[index] % 3 !== 0) {
-      result[index].push('bug!');
-    }
-  }
-  return result;
 }
 
 function fizzBuzz(array) {
   let result = [];
   fizzBuzzChecker(result, array);
-  fizzChecker(result, array);
-  buzzChecker(result, array);
-  bugChecker(result, array);
   return result;
 }
 
