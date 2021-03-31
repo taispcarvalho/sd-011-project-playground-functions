@@ -14,10 +14,12 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName(arrayConcat) {
-  let concatFinish = console.log(arrayConcat[arrayConcat.length - 1] + ', ' + arrayConcat[0]);
-  return concatFinish;
+function concatName(strArray) {
+  return console.log(strArray[strArray.length - 1] + ", " + strArray[0]);
 }
+
+let x = ['a', 'b', 'c'];
+concatName(x);
 
 // Desafio 5
 function footballPoints() {
