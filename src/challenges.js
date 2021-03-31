@@ -1,37 +1,96 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+
+function compareTrue(value1, value2) {
+  if (value1 === true && value2 === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+console.log(compareTrue(true, true))
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+
+function calcArea(base, heigth) {
+  return (base * heigth/2);
+  
 }
+
+
+console.log(calcArea(10,50))
+
+
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+
+function splitSentence(palavra) {
+  return palavra.split(" ");
 }
+
+console.log(splitSentence("go Trybe"))
+
+
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+
+
+function concatName(strings) {
+return strings[strings.length -1] + ', ' + strings[0];
+
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])) 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+
+function footballPoints(wins, ties) {
+   return (wins * 3 + ties * 1)
 }
+
+console.log(footballPoints(14,8))
+
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+  let array = [3,5,4,5,2,5]
+
+function highestCount(array) {
+  let higherNumber = 0;
+  let repeatNumber = 0;
+  for (let highIndex = 0; highIndex < array.length; highIndex += 1) {
+    let possibleHighNumber = higherNumber
+    higherNumber = array[higherIndex];
+    if (higherNumber < possibleHighNumber) {
+      higherNumber = possibleHighNumber;
+    }
+  }
+  
+  for (let countIndex = 0; countIndex < array.length; countIndex += 1) {
+    if (higherNumber === array[countIndex]) {
+      repeatNumber += 1;
+    }
+  }
+
+  return repeatNumber;
 }
 
+
+console.log(hightestCount(array))
+
+
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+
+function catAndMouse(cat1, cat2) {
+  if (cat1> cat2) {
+  return 'cat2';
+  } else {
+  return 'cat1';
+  }
 }
+
+console.log(catAndMouse(3,2))
 
 // Desafio 8
 function fizzBuzz() {
