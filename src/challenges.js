@@ -48,7 +48,7 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 function catAndMouse(mouse, cat1, cat2) {
   let distance1 = mouse - cat1;
   let distance2 = mouse - cat2;
-  let catMouse = 0;
+  let catMouse;
 
   if (distance1 > distance2) {
     catMouse.push('cat1');
@@ -70,10 +70,17 @@ function fizzBuzz(array) {
       number.push('fizzBuzz');
     } else if (array[index] % 3 === 0) {
       number.push('fizz');
+    } else if (array[index] % 5 === 0) {
+      number.push('buzz');
+    } else if (array[index] % 3 !== 0 && array[index] % 5 !== 0){
+      number.push('bug!')
     }
   }
+  return number;
   // seu código aqui
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
