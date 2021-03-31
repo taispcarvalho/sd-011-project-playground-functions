@@ -19,7 +19,7 @@ function splitSentence(palavra) {
 // Desafio 4
 
 function concatName(strings) {
-return strings[strings.length -1] + ' , ' + strings[0];
+  return strings[strings.length - 1] + ' , ' + strings[0];
 
 }
 
@@ -35,7 +35,7 @@ console.log(footballPoints(14,8))
 
 // Desafio 6
 
-  let array = [3 ,5 ,4 ,5 ,2 , 5];
+let array = [3, 5, 4, 5, 2, 5];
 
 function highestCount(array) {
   let higherNumber = 0;
@@ -64,8 +64,6 @@ function catAndMouse(cat1, cat2) {
     return 'cat2';
   }
 }
-
-console.log(catAndMouse(3,2));
 
 // Desafio 8
 function fizzBuzz() {
