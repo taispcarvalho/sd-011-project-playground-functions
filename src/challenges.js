@@ -132,33 +132,55 @@ function fizzBuzz(numeros){
 //fizzBuzz(numeros);
 // Desafio 9
 //let frase="Melissa Gabriele Figueiredo";
-function encode(frase) {
-  let parcial=String;
-  let fraseResp=String;
+function encode(frase){
+  let parcial="";
+  let fraseResp="";
   //stresp.pop();
   for(let cont=0;cont<frase.length;cont++){
-    if(frase[cont]==="a"||frase[cont]==="A"){
+    if(frase[cont]=="a"){
       parcial="1";
-    }else if(frase[cont]==="e"||frase[cont]==="E"){
+    }else if(frase[cont]=="e"){
       parcial="2";
-    }else if(frase[cont]==="i"||frase[cont]==="I"){
+    }else if(frase[cont]=="i"){
       parcial="3";
-    }else if(frase[cont]==="o"||frase[cont]==="O"){
+    }else if(frase[cont]=="o"){
       parcial="4";
-    }else if(frase[cont]==="u"||frase[cont]==="O"){
+    }else if(frase[cont]=="u"){
       parcial="5";
     }else{
       parcial=frase[cont];
     }
     fraseResp=fraseResp+parcial;
   }
+  //  console.log(fraseResp);
     return(fraseResp);
 }
 //encode(frase);
 
-function decode() {
-  // seu código aqui
+//let frase="M2l3ss1 G1br32l2 F3g523r2d4"
+function decode(frase) {
+  let parcial="";
+  let fraseResp="";
+    for(let cont=0;cont<frase.length;cont++){
+    if(frase[cont]=="1"){
+      parcial="a";
+    }else if(frase[cont]=="2"){
+      parcial="e";
+    }else if(frase[cont]=="3"){
+      parcial="i";
+    }else if(frase[cont]=="4"){
+      parcial="o";
+    }else if(frase[cont]=="5"){
+      parcial="u";
+    }else{
+      parcial=frase[cont];
+    }
+    fraseResp=fraseResp+parcial;
+  }
+  //  console.log(fraseResp);
+    return(fraseResp);
 }
+//decode(frase);
 
 module.exports = {
   calcArea,
