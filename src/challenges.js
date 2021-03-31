@@ -143,7 +143,7 @@ function decode(frase) {
         break;
       case '4': novaFrase=novaFrase.replace(ajuda, 'o');
         break;
-      case '5': novaFrase=novaFrase.replace(ajuda, 'o');
+      case '5': novaFrase=novaFrase.replace(ajuda, 'u');
         break;
       default: break;
     }
