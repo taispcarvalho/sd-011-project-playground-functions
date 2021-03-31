@@ -20,55 +20,52 @@ function techList(tecnologias, name) {
 
 function generatePhoneNumber(numero) {
   // seu código aqui
-  /*
+  let check =true;
   if (numero.length!=11){
-    return 'Array com tamanho incorreto.';
+    check=false;
+    return 'Array com tamanho incorreto';
   }else{
-    // check dos números
-    let check=true;
-    for (let index=0;index<numero.length;index+=1){
-      let contador=0;
+    for (let index in numero){
+      let contador = 0;
       if(numero[index]<0 || numero[index]>9){
         check=false;
         return 'não é possível gerar um número de telefone com esses valores';
-      }else{
-          for (let index2=0;numero.length;index2+=1){
-            if(numero[index2]===numero[index]){
-              contador+=1;
-            }
-          }
-          if (contador>=3){
-            check=false;
-            return 'não é possível gerar um número de telefone com esses valores';
-          }
+      }
+      for (index2 in numero){
+        if (numero[index] === numero[index2]){
+          contador +=1;
         }
       }
-      if (check){
-        let telefone =[];
-        telefone[0]='(';
-        telefone[1]=numero[0];
-        telefone[2]=numero[1];
-        telefone[3]=')'
-        telefone[4]=numero[2];
-        telefone[5]=numero[3];
-        telefone[6]=numero[4];
-        telefone[7]=numero[5];
-        telefone[8]=numero[6];
-        telefone[9]='-';
-        telefone[10]=numero[7];
-        telefone[11]=numero[8];
-        telefone[12]=numero[9];
-        telefone[13]=numero[10];
-        let retorno = '';
-        for (let index in telefone){
-          retorno = retorno + telefone[index];
-        }
-        return retorno;
+      if (contador>=3){
+        check=false;
+        return 'não é possível gerar um número de telefone com esses valores';
       }
-    } 
-    console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]));
-    */
+    }
+    if (check){
+      let telefone =[];
+      telefone[0]='(';
+      telefone[1]=numero[0];
+      telefone[2]=numero[1];
+      telefone[3]=') '
+      telefone[4]=numero[2];
+      telefone[5]=numero[3];
+      telefone[6]=numero[4];
+      telefone[7]=numero[5];
+      telefone[8]=numero[6];
+      telefone[9]='-';
+      telefone[10]=numero[7];
+      telefone[11]=numero[8];
+      telefone[12]=numero[9];
+      telefone[13]=numero[10];
+      let retorno = '';
+      for (let index in telefone){
+        retorno = retorno + telefone[index];
+      }
+      return retorno;
+    }
+  }
 }
+console.log(generatePhoneNumber([1,2,3,4,5,2,7,8,9,0,1]));
 
 
 // Desafio 12
