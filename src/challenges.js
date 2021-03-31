@@ -24,7 +24,7 @@ function footballPoints(w, t) {
 }
 
 // Desafio 6
-function highestCount(arrNum) {
+function findHighestNumber(arrNum) {
   let highest = arrNum[0];
   for (let i = 0; i < arrNum; i += 1) {
     if (arrNum[i] > highest) {
@@ -33,32 +33,31 @@ function highestCount(arrNum) {
   }
   return highest;
 }
-function HighestNumber(arrNum) {
+
+function highestCount(arrNum) {
   let counter = 0;
   for (let index = 0; index < arrNum.length; index += 1) {
-    if (arrNum[index] === highestCount(arrNum)) {
+    if (arrNum[index] === findHighestNumber(arrNum)) {
       counter += 1;
     }
   }
   return counter;
 }
-console.log(HighestNumber([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
-    return 'os gatos trobam e o rato foge';
+    return 'os gatos trombam e o rato foge';
   }
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
   }
   return 'cat2';
 }
-console.log(catAndMouse(6, 3, 4))
 
 // Desafio 8
 function fizzBuzz() {
-  //
+  // seu código aqui
 }
 
 // Desafio 9
