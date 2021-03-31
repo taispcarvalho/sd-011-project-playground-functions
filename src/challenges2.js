@@ -7,7 +7,7 @@ function techList(arrayTechToLearn, name) {
     for (let index = 0; index < sortedArray.length; index += 1) {
       let listObjTechName = {
         tech: sortedArray[index],
-        name: (name) => name,
+        name: name,
       };
       storeTechsName[index] = listObjTechName;
     }
