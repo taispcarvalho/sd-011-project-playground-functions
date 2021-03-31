@@ -89,6 +89,7 @@ console.log(catAndMouse(1, 0, 3));
 //   return result;
 // }
 // console.log(catAndMouse(1, 0, 2));
+
 function fizz(number) {
   if (number % 3 === 0) {
     return 'fizz'
@@ -142,6 +143,21 @@ function letterNumber(letter) {
   return result;
 }
 console.log(letterNumber('a'));
+
+function numberLetter(number) {
+  let options = {
+    letters: ['a', 'e', 'i', 'o', 'u'],
+    numbers: ['1', '2', '3', '4', '5']
+  }
+  let result = number;
+  for (let index = 0; index < options.numbers.length; index += 1) {
+    if (options.numbers[index] === number) {
+      result = options.letters[index]
+    }
+  }
+  return result;
+}
+console.log(numberLetter('1'));
 
 // Desafio 9
 function encode(code) {
