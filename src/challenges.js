@@ -117,11 +117,11 @@ function letterNumber(letter) {
   let options = {
     letters: ['a', 'e', 'i', 'o', 'u'],
     numbers: ['1', '2', '3', '4', '5'],
-  }
+  };
   let result = letter;
   for (let index = 0; index < options.letters.length; index += 1) {
     if (options.letters[index] === letter) {
-      result = options.numbers[index]
+      result = options.numbers[index];
     }
   }
   return result;
