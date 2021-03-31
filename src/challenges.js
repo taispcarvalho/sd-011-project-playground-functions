@@ -10,7 +10,7 @@ function calcArea(base, altura) {
 
 // Desafio 3
 function splitSentence(frase) {
-  return frase.split(" ");
+  return frase.split(' ');
 }
 
 // Desafio 4
@@ -77,31 +77,31 @@ function fizzBuzz(numerosDesafio8) {
 
 // Desafio 9
 
-let string1 = ["hi there!"];
+let string1 = "hi there!";
 function encode(string1) {
-  let codigo = [];
-  let quebraDaString = string1.split('');
-  for ( let i = 0; i < quebraDaString.length; i += 1){
-    if (quebraDaString[i] === 'a'){
+  let codigo = [];  
+  for ( let i = 0; i < string1.length; i += 1){
+    if (string1[i] === 'a'){
       codigo.push('1');
+      console.log('teste')
     }
-    else if (quebraDaString[i] === 'e'){
-      codigo.push('2');
+    else if (string1[i] === 'e'){
+      codigo.push('2');      
     }
-    else if (quebraDaString[i] === 'i'){
+    else if (string1[i] === 'i'){
       codigo.push('3');
     }
-    else if (quebraDaString[i] === 'o'){
+    else if (string1[i] === 'o'){
       codigo.push('4');
     }
-    else if (quebraDaString[i] === 'u'){
+    else if (string1[i] === 'u'){
       codigo.push('5');
     }
     else {
-      codigo.push(quebraDaString[i]);
+      codigo.push(string1[i]);
     }        
   }  
-  console.log(codigo)
+  console.log(codigo.join(''))
 }
 encode(string1);
 
