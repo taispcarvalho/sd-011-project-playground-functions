@@ -1,20 +1,20 @@
 // Desafio 1 - ok
-function compareTrue(par, impar) {
-  return par && impar;
+function compareTrue(impar, par) {
+  return impar && par;
 
 }
 
 // Desafio 2 - ok
-function calcArea(a, b) {
-  let area = (a * b) / 2;
-  return (area);
+function calcArea(base, altura) {
+  let areaTriangulo = (base * altura) / 2;
+  return (areaTriangulo);
 
 }
 
 // Desafio 3 - ok
 function splitSentence(string) {
-  let arrayString = string.split(' ');
-  return arrayString;
+  let arrayFrase = string.split(' ');
+  return arrayFrase;
 }
 
 
