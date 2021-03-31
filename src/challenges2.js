@@ -3,7 +3,7 @@ function techList(techs, name) {
   let arrayTechName = [];
 
   if (techs == '') {
-    return 'Vazio!'
+    return 'Vazio!';
   }
 
   for (let index in techs) {
@@ -14,7 +14,7 @@ function techList(techs, name) {
   }
   return arrayTechName;
 }
-console.log(techList([], 'Felipe'));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Felipe'));
 
 // Desafio 11
 function generatePhoneNumber() {
