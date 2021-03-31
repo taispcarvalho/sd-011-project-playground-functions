@@ -88,22 +88,26 @@ console.log(catAndMouse(10, 4, 22));
 console.log(catAndMouse(2, 0, 0));
 
 // Desafio 8
-function fizzBuzz(array) {
+function checkNum(number){
   let resultado = [];
-
-  for (let counter = 0; counter < array.length; counter += 1) {
-    if ((array[counter] % 3 === 0) && (array[counter] % 5 === 0)) {
-      resultado.push('fizzBuzz');
-    } else if (array[counter] % 5 === 0) {
-      resultado.push('buzz');
-    } else if (array[counter] % 3 === 0) {
-      resultado.push('fizz');
-    } else {
-      resultado.push('bug!');
-    }
+  if ((number % 3 === 0) && (number % 5 === 0)) {
+    resultado += 'fizzBuzz';
+  } else if (number % 5 === 0) {
+    resultado += 'buzz';
+  } else if (number % 3 === 0) {
+    resultado += 'fizz';
+  } else {
+    resultado += 'bug!';
   }
-  // console.log(`Fizzbuzz (${array}):`);
   return resultado;
+}
+
+function fizzBuzz(array) {
+  for (let counter = 0; counter < array.length; counter += 1) {
+    array[counter] = checkNum(array[counter])
+  }
+  console.log(`Fizzbuzz (${array}):`);
+  return array;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
