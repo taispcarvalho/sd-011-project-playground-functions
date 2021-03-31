@@ -5,14 +5,14 @@ function techList(arrayOfTechnologies, name) {
     if (key < arrayOfTechnologies.length) {
       technologiesObjects.push({
         tech: arrayOfTechnologies[key],
-        name: name,
+        name: name
       });
-      return technologiesObjects;
     }
     if (arrayOfTechnologies === []) {
       return 'Vazio!';
     }
   }
+  return technologiesObjects;
 }
 
 // Desafio 11
@@ -35,7 +35,7 @@ function phoneNumber(arrayOfNumbers) {
 
 function verifyDigit(arrayOfNumbers) {
   for (let index = 0; index < arrayOfNumbers.length; index += 1) {
-  if (arrayOfNumbers[index] < 0 || arrayOfNumbers[index] > 9) {
+    if (arrayOfNumbers[index] < 0 || arrayOfNumbers[index] > 9) {
       return false;
     }
   }
