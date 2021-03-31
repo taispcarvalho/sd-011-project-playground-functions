@@ -52,7 +52,7 @@ function arraytest() {
   return arraytest
 }
 
-// Desafio 7
+// Desafio 7 -ok
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = Math.abs(cat1 - mouse);
   let distanciaCat2 = Math.abs(cat2 - mouse);
@@ -67,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return resultado;
 }
   
-// Desafio 8
+// Desafio 8 -ok
 function fizzBuzz(arrayNumbers) {
   let comparacao = [];
     for (let index = 0; index < arrayNumbers.length; index += 1) {
@@ -86,11 +86,25 @@ function fizzBuzz(arrayNumbers) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  
+function encode(frase) {
+  for (let index = 0; index < frase.length; index += 1){
+    frase = frase.replace('a', '1');
+    frase = frase.replace('e', '2');
+    frase = frase.replace('i', '2');
+    frase = frase.replace('o', '4');
+    frase = frase.replace('u', '4');
+  }
+  return frase
 }
-function decode() {
-  // seu código aqui
+function decode(frase) {
+  for (let index = 0; index < frase.length; index += 1){
+    frase = frase.replace('1', 'a');
+    frase = frase.replace('2', 'e');
+    frase = frase.replace('3', 'i');
+    frase = frase.replace('4', 'o');
+    frase = frase.replace('4', 'u');
+  }
+  return frase
 }
 
 module.exports = {
