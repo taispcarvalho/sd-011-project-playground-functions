@@ -113,20 +113,20 @@ console.log(fizzBuzz([9, 25]));
 // Desafio 9
 function encode(string) {
   let arrNew = string.split('');
-  for (let letter = 0; letter < arrNew.length; letter += 1){
-    if(arrNew[letter] === 'a'){
+  for (let letter = 0; letter < arrNew.length; letter += 1) {
+    if (arrNew[letter] === 'a') {
       arrNew[letter] = 1;
     }
-    if(arrNew[letter] === 'e'){
+    if (arrNew[letter] === 'e') {
       arrNew[letter] = 2;
     }
-    if(arrNew[letter] === 'i'){
+    if (arrNew[letter] === 'i') {
       arrNew[letter] = 3;
     }
-    if(arrNew[letter] === 'o'){
+    if (arrNew[letter] === 'o') {
       arrNew[letter] = 4;
     }
-    if(arrNew[letter] === 'u'){
+    if (arrNew[letter] === 'u') {
       arrNew[letter] = 5;
     }
   }
@@ -137,9 +137,31 @@ console.log(encode('hi there!'));
 console.log(encode('hello world!'));
 console.log(encode('a,e,i,o,u'));
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let arrNew = string.split('');
+  for (let letter = 0; letter < arrNew.length; letter += 1) {
+    if (arrNew[letter] == 1) {
+      arrNew[letter] = 'a';
+    }
+    if (arrNew[letter] == 2) {
+      arrNew[letter] = 'e';
+    }
+    if (arrNew[letter] == 3) {
+      arrNew[letter] = 'i';
+    }
+    if (arrNew[letter] == 4) {
+      arrNew[letter] = 'o';
+    }
+    if (arrNew[letter] == 5) {
+      arrNew[letter] = 'u';
+    }
+  }
+  arrNew = arrNew.join('');
+  return arrNew;
 }
+console.log(decode('h3 th2r2!'));
+console.log(decode('h2ll4 w4rld!'));
+console.log(decode('1,2,3,4,5'));
 
 module.exports = {
   calcArea,
