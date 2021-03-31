@@ -1,12 +1,7 @@
 // Desafio 1
 function compareTrue(pinky, cerebro) {
-  if (pinky && cerebro) {
-    return true;
-  } else {
-    return false;
+  return pinky && cerebro;
   }
-}
-
 
 // Desafio 2
 function calcArea(base, height) {
@@ -21,21 +16,21 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let firstIndex = array [0];
-  let lastIndex = array [array.length - 1];
+  let firstIndex = array[0];
+  let lastIndex = array[array.length - 1];
   return (lastIndex + ', ' + firstIndex);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = ((wins * 3) + ties);
-  return (points);   
+  return (points);
 }
 
 // Desafio 6
 function highestCount(arrayN) {
   var checkHighestNumber = Math.max.apply(null,arrayN);
-  let checkRepetition = 0; 
+  let checkRepetition = 0;
   for(index = 0; index < arrayN.length; index += 1){
   if(arrayN[index] === checkHighestNumber){
   checkRepetition +=1 ;
@@ -43,7 +38,7 @@ function highestCount(arrayN) {
   }
   return checkRepetition;
   }
- 
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = mouse - cat1;
@@ -61,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  let newArray = []; 
+  let newArray = [];
   for (const key of numbers) {
            if(key % 3 === 0 &&  key % 5 === 0){
             newArray.push('fizzBuzz');
@@ -75,7 +70,7 @@ function fizzBuzz(numbers) {
         }
       return newArray;
       }
-     
+
 // Desafio 9
 function encode(string) {
   /*let newString = string;
