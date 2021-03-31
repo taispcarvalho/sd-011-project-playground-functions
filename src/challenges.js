@@ -103,9 +103,31 @@ console.log(fizzBuzz([9, 25]));
 console.log(['fizz', 'buzz']);
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let tempString = '';
+  let letterEncodeValue = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5'
+  };
+
+  for (let index = 0; index < string.length - 1; index += 1) {
+    tempString += string[index];
+    console.log(letterEncodeValue.a);
+    for (let letter in letterEncodeValue) {
+      if (string[index] === letter) {
+        tempString[index] = letterEncodeValue[letter];
+      }
+    }
+  }
+  return tempString;
 }
+
+console.log(encode('hi there!'));
+
+// Desafio 9
 function decode() {
   // seu código aqui
 }
