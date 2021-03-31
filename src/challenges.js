@@ -58,9 +58,11 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distanceBetweenCat1 > distanceBetweenCat2) {
     return 'cat2';
-  } else if (distanceBetweenCat1 < distanceBetweenCat2) {
+  }
+  if (distanceBetweenCat1 < distanceBetweenCat2) {
     return 'cat1';
-  } else {
+  }
+  if (distanceBetweenCat1 === distanceBetweenCat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
