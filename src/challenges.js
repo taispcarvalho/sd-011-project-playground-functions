@@ -46,13 +46,16 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat2 = cat2 - mouse;
   if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
+    //console.log("cat1");
   } if (distanciaCat2 < distanciaCat1) {
     return 'cat2';
-  } if (distanciaCat1 === distanciaCat2) {
+    //console.log('cat2');
+  } if (cat1 === cat2) {
     return 'Os gatos trombam e o rato foge';
+    //console.log('Os gatos trombam e o rato foge');
   }
 }
-catAndMouse(5, 5, 5);
+
 // Desafio 8
 function fizzBuzz(numerosDesafio8) {
   let conteudoArray = [];
