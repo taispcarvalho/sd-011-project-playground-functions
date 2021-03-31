@@ -92,7 +92,7 @@ function fizzBuzz(array) {
   let resultado = [];
 
   for (let counter = 0; counter < array.length; counter += 1) {
-        
+
     if ((array[counter] % 3 === 0) && (array[counter] % 5 === 0)) {
       resultado.push('fizzBuzz');
     } else if (array[counter] % 5 === 0) {
@@ -111,9 +111,32 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let arrNew = string.split('');
+  for (let letter = 0; letter < arrNew.length; letter += 1){
+    if(arrNew[letter] === 'a'){
+      arrNew[letter] = 1;
+    }
+    if(arrNew[letter] === 'e'){
+      arrNew[letter] = 2;
+    }
+    if(arrNew[letter] === 'i'){
+      arrNew[letter] = 3;
+    }
+    if(arrNew[letter] === 'o'){
+      arrNew[letter] = 4;
+    }
+    if(arrNew[letter] === 'u'){
+      arrNew[letter] = 5;
+    }
+  }
+  arrNew = arrNew.join('');
+  return arrNew;
 }
+console.log(encode('hi there!'));
+console.log(encode('hello world!'));
+console.log(encode('a,e,i,o,u'));
+
 function decode() {
   // seu código aqui
 }
