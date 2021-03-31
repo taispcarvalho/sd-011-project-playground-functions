@@ -55,9 +55,9 @@ function catAndMouse(mouse, cat1, cat2) {
     closer = 'Distância inválida!';
   }
 
-  if (cat1 < cat2) {
+  if (distanceCat1AndMouse < distanceCat2AndMouse) {
     closer = 'cat1';
-  } else if (cat2 < cat1) {
+  } else if (distanceCat2AndMouse < distanceCat1AndMouse) {
     closer = 'cat2';
   } else {
     closer = 'os gatos trombam e o rato foge';
