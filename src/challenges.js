@@ -16,13 +16,13 @@ function splitSentence(splitPhase) {
 
 // Desafio 4
 function concatName(arrayName) {
-  let concatArray =  arrayName[arrayName.length-1] + ',' + arrayName[0];
+  let concatArray =  arrayName[arrayName.length - 1] + ',' + arrayName[0];
   return concatArray;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins *3) + ties;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
@@ -31,8 +31,14 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (mouse - cat1 === mouse - cat2){
+    return 'os gatos trombam e o rato foge';
+  } else if (mouse - cat1 < mouse - cat2) {
+    return cat1;
+  }else {
+    return cat2;
+  }
 }
 
 // Desafio 8
