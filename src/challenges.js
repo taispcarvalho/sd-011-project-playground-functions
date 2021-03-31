@@ -117,6 +117,7 @@ function decode(stringDecode) {
         break;
     }
   }
+  return stringDecode;
 }
 
 module.exports = {
