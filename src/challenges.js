@@ -63,17 +63,17 @@ function fizzBuzz(fizzBuzzArray) {
   let finalArray = [];
 
   for (let index = 0; index < fizzBuzzArray.length; index += 1) {
-    if (fizzBuzzArray[index] % 3 == 0 && fizzBuzzArray[index] % 5 == 0) {
-      finalArray.push('fizzBuzz')
+    if (fizzBuzzArray[index] % 3 === 0 && fizzBuzzArray[index] % 5 === 0) {
+      finalArray.push('fizzBuzz');
     } 
-    else if (fizzBuzzArray[index] % 5 == 0) {
-      finalArray.push('buzz')
+    else if (fizzBuzzArray[index] % 5 === 0) {
+      finalArray.push('buzz');
     }
-    else if (fizzBuzzArray[index] % 3 == 0) {
-      finalArray.push('fizz')
+    else if (fizzBuzzArray[index] % 3 === 0) {
+      finalArray.push('fizz');
     }
     else {
-      finalArray.push('bug!')
+      finalArray.push('bug!');
     }
   }
   return finalArray;
