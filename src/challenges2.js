@@ -39,7 +39,10 @@ function generatePhoneNumber(arrNumbers) {
   for (let index = 0; index < arrNumbers.length; index += 1) {
     if (arrNumbers[index] < 0 || arrNumbers[index] > 9 || repeatedNumber === true) {
       return 'não é possível gerar um número de telefone com esses valores';
-    } if (index === 0) {
+    } else if (arrNumbers.length != 11){
+      return 'Array com tamanho incorreto.'
+    }
+    if (index === 0) {
       newStr = `${newStr}(${arrNumbers[0]}`;
     } else if (index === 1) {
       newStr = `${newStr + arrNumbers[1]}) `;
