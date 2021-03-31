@@ -4,24 +4,32 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  if (array.length > 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  
+  for (let index2 of array) {
+    if (index2 < 0 || index2 > 9) {
+      return 'não é possível gerar um número de telefone com esses valores.'
+    } 
+  }
+
+  function createPhoneNumber(array) {
+  array.splice(0,0,'(');
+  array.splice(3, 0, ')');
+  array.splice(9, 0, '-');
+  array.join('');
 }
+  return array; 
+}
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let triangle = [lineA, lineB, lineC];
-  let sum = lineA + lineB + lineC;
-  let difference1 = Math.abs(lineB - lineC);
-  let difference2 = Math.abs(lineA - lineC);
-  let difference3 = Math.abs(lineA - lineB);
-  let differences = [difference1, difference2, difference3];
-
-  for (let side in triangle) {
-    if (sum - triangle[side] <= triangle[side] && differences[side] >= triangle[side]) {
-      return false;
-    } return true;
-  }
+  if (lineA > lineB + lineC && lineA < Math.abs(lineB - lineC)) {
+    return false;
+  } return true;
 }
 
 // Desafio 13
