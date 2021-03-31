@@ -6,8 +6,8 @@ function compareTrue(valor1, valor2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  área = (base * height) / 2;
-return área;  
+  let área = (base * height) / 2;
+  return área;
 }
 //  console.log(calcArea(51,1));
 
@@ -28,7 +28,7 @@ function concatName(arr) {
 // Desafio 5
 function footballPoints(wins, ties) {
   if (jogos = wins * 3 + ties * 1) {
-    return jogos; 
+    return jogos;
   } else {
     (jogos === 0);
     return jogos;
@@ -87,7 +87,7 @@ function fizzBuzz(arr) {
       arr1.push('bug!');
     }
   }
-  return arr1
+  return arr1;
 }
 //  arr1 = [2, 15, 7, 9, 45]
 //  console.log(fizzBuzz(arr1) );
@@ -103,20 +103,20 @@ function encode(string) {
     } else if (string[index] === 'i') {
       encoded += '3';
     } else if (string[index] === 'o') {
-      encoded += '4'; 
+      encoded += '4';
     } else if (string[index] === 'u') {
       encoded += '5';
     } else {
       encoded += string[index];
-    } 
+    }
   }
   return encoded;
 }
 //  console.log(encode('hi there!'));
 
-function decode(string) { 
+function decode(string) {
   let decoded = '';
-  for (let index = 0; index < string.length; index +=1 ) {
+  for (let index = 0; index < string.length; index += 1) {
     if (string[index] === '1') {
       decoded += 'a';
     } else if (string[index] === '2') {
@@ -124,14 +124,14 @@ function decode(string) {
     } else if (string[index] === '3') {
       decoded += 'i';
     } else if (string[index] === '4') {
-      decoded += 'o';  
+      decoded += 'o';
     } else if (string[index] === '5') {
       decoded += 'u';
     } else {
       decoded += string[index];
-    }  
+    }
   }
-return decoded;
+  return decoded;
 }
 //  console.log(decode('h3 th2r2!'));
 
