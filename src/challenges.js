@@ -100,7 +100,7 @@ function encode(str) {
       encStr += str[index];
     }
   }
-return encStr;  
+  return encStr;  
 }
 console.log(encode('hi there!'));
 
@@ -123,9 +123,9 @@ function decode(str) {
       dcdStr += str[index];
     }
   }
-return dcdStr;  
+  return dcdStr;  
 }
-console.log(decode('h3 th2r2!'))
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
