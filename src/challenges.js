@@ -8,7 +8,7 @@ function compareTrue(value1, value2) {
   }
 }
 
-console.log(compareTrue(true, true))
+
 
 // Desafio 2
 
