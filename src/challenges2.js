@@ -62,7 +62,7 @@ function generatePhoneNumber2(numbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     return true;
   }
   return false;
