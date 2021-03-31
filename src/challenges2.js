@@ -1,7 +1,15 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let lista = [];
+  let object = {};
+  array.sort();
+  for (let index in array) {
+    object = {tech: array[index], name: name};
+    lista.push(object);
+  }
+  return lista;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber(array) {
@@ -53,10 +61,9 @@ function hydrate(string) {
   for (let index of list) {
     soma += index;
   }
-  if (soma === 1) {
-    return '1 copo de água';
-  } return soma + ' copos de água';
+  return (soma > 1) ? `${soma} copos de água` : `${soma} copo de água'`;
 }
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
