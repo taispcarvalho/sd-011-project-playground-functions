@@ -11,28 +11,12 @@ function calcArea(base, heigth) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  let aux = '';
-  let index = 0;
-  let arrayStr = [];
-  for (let i = 0; i < phrase.length; i += 1) {
-    if (phrase.charAt(i) !== ' ') {
-      aux += phrase.charAt(i);
-    } else {
-      arrayStr[index] = aux;
-      aux = '';
-      index += 1;
-    }
-  }
-  arrayStr[index] = aux;
-  return arrayStr;
+  return phrase.split(' ');
 }
 
 // Desafio 4
-function concatName(arrStr) {
-  let strConcatenated = arrStr[arrStr.length - 1];
-  strConcatenated += ', ';
-  strConcatenated += arrStr[0];
-  return strConcatenated;
+function concatName(strArr) {
+  return `${strArr[strArr.length - 1]}, ${strArr[0]}`;
 }
 
 // Desafio 5
@@ -66,36 +50,27 @@ function highestCount(arrNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Position = cat1 - mouse;
   let cat2Position = cat2 - mouse;
-  if (cat1Position > cat2Position) {
-    return 'cat2';
-  }
-  if (cat1Position < cat2Position) {
-    return 'cat1';
-  }
+
+  if (cat1Position > cat2Position) return 'cat2';
+  if (cat1Position < cat2Position) return 'cat1';
   return 'os gatos trombam e o rato foge';
 }
 
-function fbDivider(value1) {
-  if (value1 % 3 === 0 && value1 % 5 === 0) {
-    return 'fizzbuzz';
-  }
-  if (value1 % 3 === 0) {
-    return 'fizz';
-  }
-  if (value1 % 5 === 0) {
-    return 'buzz';
-  }
+function fbDivider(num) {
+  if (num % 3 === 0 && num % 5 === 0) return 'fizzbuzz';
+  if (num % 3 === 0) return 'fizz';
+  if (num % 5 === 0) return 'buzz';
   return 'bug!';
 }
 
 // Desafio 8
-function fizzBuzz(arrNumbers) {
-  let arrFizzBuzz = [];
+function fizzBuzz(numbersArr) {
+  let fizzBuzzArr = [];
 
-  for (let num of arrNumbers) {
-    arrFizzBuzz.push(fbDivider(num));
+  for (let num of numbersArr) {
+    fizzBuzzArr.push(fbDivider(num));
   }
-  return arrFizzBuzz;
+  return fizzBuzzArr;
 }
 
 function changeLetter(letter) {
