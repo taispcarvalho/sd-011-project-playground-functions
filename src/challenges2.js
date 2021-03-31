@@ -99,13 +99,18 @@ function hydrate(string) {
     count += Number.parseInt(numb);
   }
 
-  return count + " copos de água"
+  if(count === 1){
+    return count + " copo de água"
+  }
+    return count + " copos de água"
 }
+
+console.log(hydrate('2 cerveja'))
 
     module.exports = {
       generatePhoneNumber,
       techList,
       hydrate,
       triangleCheck,
-      hydrate
+
     }
