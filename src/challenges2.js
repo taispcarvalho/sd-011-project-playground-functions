@@ -54,18 +54,18 @@ function generatePhoneNumber(numbersArray) {
 }
 
 // Desafio 12
-  function triangleCheck() {
-    // seu código aqui
-  }
+function triangleCheck() {
+  // seu código aqui
+}
 
-  // Desafio 13
-  function hydrate() {
-    // seu código aqui
-  }
+// Desafio 13
+function hydrate() {
+  // seu código aqui
+}
 
-  module.exports = {
-    generatePhoneNumber,
-    techList,
-    hydrate,
-    triangleCheck,
-  };
+module.exports = {
+  generatePhoneNumber,
+  techList,
+  hydrate,
+  triangleCheck,
+};
