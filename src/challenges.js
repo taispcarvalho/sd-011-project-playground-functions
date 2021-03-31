@@ -51,11 +51,10 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } if (distance1 < distance2) {
     return 'cat2';
-  } 
+  }
   if (distance1 === distance2) {
-    catMouse = 'Os gatos trambaram e o rato foge';
-  };
-  
+    return 'Os gatos trambaram e o rato foge';
+  };  
   return catMouse;
   
   // seu código aqui
