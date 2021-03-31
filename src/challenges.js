@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 && param2) {
-    return true
+  if (param1 == true && param2 == true) {
+    return true;
   }
 }
 
@@ -20,7 +20,7 @@ function splitSentence(string) {
 function concatName(string) {
   let lastName = string[string.length - 1];
   let firstName = string[0];
-  return `${lastName} ${firstName}`;
+  return `${lastName}, ${firstName}`;
 }
 
 // Desafio 5
