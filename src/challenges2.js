@@ -4,10 +4,12 @@ function myFunction(objects, index, myName) {
     tech: objects[index],
     name: myName,
   };
+  index += 1;
   return objects;
 }
 function techList(objects, name) {
   if (objects != null) {
+    let index = 0;
     for (let index = 0; index < objects.length; index += 1) {
       objects = myFunction(objects, index, name);
     }
@@ -15,7 +17,7 @@ function techList(objects, name) {
   }
   return 'Vazio!';
 }
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Marcelo'));
+//console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Marcelo'));
 
 // Desafio 11
 function generatePhoneNumber() {
