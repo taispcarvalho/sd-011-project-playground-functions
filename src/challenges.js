@@ -96,7 +96,7 @@ function encode(stringEncode) {
 }
 function decode(stringDecode) {
   for (let index2 = 0; index2 < stringDecode.length; index2 += 1) {
-    switch (stringDencode[index]) {
+    switch (stringDencode[index2]) {
       case '1':
         stringDencode = stringDencode.replace('1','a');
         break;
