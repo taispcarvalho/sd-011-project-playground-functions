@@ -66,7 +66,7 @@ console.log(catAndMouse());
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let comparacao = [];
-  if(arrayNumbers = [2, 15, 7, 9, 45] || [7, 9] || [9, 25]) {
+  if(arrayNumbers = []){
     for(let index = 0; index < arrayNumbers.length; index += 1){
       if ((arrayNumbers[index] % 3 === 0) && (arrayNumbers[index] % 5 === 0)) {
         comparacao.push('fizzBuzz');
