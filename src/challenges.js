@@ -169,30 +169,30 @@ function encode(encodeStr) {
  */
 function decode(decodeStr) {
   let msg = "";
-  for (let index =0; index < encodeStr.length; index += 1){
-    switch (encodeStr[index]){
-      case 'a':
-        msg += '1';
+  for (let index =0; index < decodeStr.length; index += 1){
+    switch (decodeStr[index]){
+      case '1':
+        msg += 'a';
         break;
-      case 'e':
-        msg += '2';
+      case '2':
+        msg += 'e';
         break;
-      case 'i':
-        msg += '3';
+      case '3':
+        msg += 'i';
         break;
-      case 'o':
-        msg += '4';
+      case '4':
+        msg += 'o';
         break;
-      case 'u':
-        msg += '5';
+      case '5':
+        msg += 'u';
         break;
       default:
-        msg += encodeStr[index];
+        msg += decodeStr[index];
     } 
   }
   return msg;
 }
-
+/* console.log(decode('h3 th2r2!')); */
 
 
 
