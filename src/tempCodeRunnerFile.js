@@ -11,8 +11,5 @@ let comparacao = [];
     comparacao.push('bug');
     }
   }
-  return comparacao;
+  return console.log(fizzBuzz(comparacao));
 }
-console.log(fizzBuzz(arrayNumbers = [2, 15, 7, 9, 45]));
-console.log(fizzBuzz(arrayNumbers = [7 ,9]));
-console.log(fizzBuzz(arrayNumbers = [9 ,25]));
