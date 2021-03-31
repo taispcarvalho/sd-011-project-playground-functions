@@ -57,15 +57,16 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function whatWord(num) {
+  if ((num % 3 === 0) && (num % 5 === 0)) return 'fizzBuzz';
+  if (num % 3 === 0) return 'fizz';
+  if (num % 5 === 0) return 'buzz';
+  return 'bug!';
+}
+
 function fizzBuzz(array) {
-  let word = 'bug!';
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0) word = 'fizz';
-    if (array[index] % 5 === 0) {
-      if (word === 'fizz') word = word.join('Buzz');
-      else word = 'buzz';
-    }
-    array[index] = word;
+    array[index] = whatWord(array[index]);
   }
   return array;
 }
