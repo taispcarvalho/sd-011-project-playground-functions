@@ -54,7 +54,8 @@ function fizzBuzz(numeros) {
   for (let index = 0; index < numeros.length; index += 1) {
     let restoDiv3 = numeros[index] % 3;
     let restoDiv5 = numeros[index] % 5;
-    if ((restoDiv3 === 0) && (restoDiv5 === 0)) {
+    let restoDiv15 = numeros[index] % 15;
+    if (restoDiv15 === 0) {
       arrayFizzBuzz.push('fizzBuzz');
     } else if (restoDiv3 === 0) {
       arrayFizzBuzz.push('fizz');
