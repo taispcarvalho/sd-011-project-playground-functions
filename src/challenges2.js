@@ -7,15 +7,14 @@ function myFunction(objects, index, myName) {
   return objects;
 }
 function techList(objects, name) {
+  if (objects.length === 0) return 'Vazio!';
   objects = objects.sort();
-  if (objects !== []) {
-    for (let index = 0; index < objects.length; index += 1) {
-      objects = myFunction(objects, index, name);
-    }
-    return objects;
+  for (let index = 0; index < objects.length; index += 1) {
+    objects = myFunction(objects, index, name);
   }
-  return 'Vazio!';
+  return objects;
 }
+// console.log(techList([]));
 // console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Marcelo'));
 //
 // Desafio 11
