@@ -66,7 +66,7 @@ function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       number = 'fiz zBuzz';
-    } else if (array[index] % 3 === 0 ||array[index] % 5 === 0 ) {
+    } else if (array[index] % 3 === 0 || array[index] % 5 === 0 ) {
       number = 'fizz';
       number = ' buzz';
     } else if (array[index] % 3 !== 0 && array[index] % 5 !== 0) {
