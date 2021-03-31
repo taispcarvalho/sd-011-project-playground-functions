@@ -1,22 +1,15 @@
-let num1 = [2, 15, 7, 9, 45];
-let num2 = [7, 9];
-let num3 = [9, 25];
-function fizzBuzz(arrayNumbers) {
-  let comparacao = [];
-      for(let index = 0; index < arrayNumbers.length; index += 1){
-      if ((arrayNumbers[index] % 3 === 0) && (arrayNumbers[index] % 5 === 0)) {
-        comparacao.push('fizzBuzz');
-      }else if(arrayNumbers[index] % 5 === 0) {
-        comparacao.push('buzz');
-      }else if(arrayNumbers[index] % 3 === 0) {
-        comparacao.push('fizz');
-      }else{
-        comparacao.push('bug');
-      }
-    }
-  
-  return comparacao;
+function catAndMouse(mouse, cat1, cat2) {
+  mouse = 0;
+  let distanciaCat1 = cat1 - mouse;
+  let distanciaCat2 = cat2 - mouse;
+  let resultado = '';
+  if (distanciaCat2 < distanciaCat1 ) {
+  resultado = 'cat2';
+  } else if (distanciaCat2 > distanciaCat1) {
+  resultado = 'cat1';
+  } else {
+  resultado = 'os gatos trombam e o rato foge'; 
+  }
+  return resultado;
 }
-console.log(fizzBuzz(num1));
-console.log(fizzBuzz(num2));
-console.log(fizzBuzz(num3));
+console.log(catAndMouse(1,0,2));

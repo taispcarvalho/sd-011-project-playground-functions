@@ -32,7 +32,7 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let maiorNumero = array[0];
   for (let index = 1; index < array.length; index += 1) {
-    if (array[index] > maiorNumero){
+    if (array[index] > maiorNumero) {
       maiorNumero = array[index];
     }
   }
@@ -42,13 +42,13 @@ function highestCount(array) {
   let contador = 0;
   let countNumber = highestCount(array);
   for (let indexCont = 0; indexCont < countNumber; indexCont += 1) {
-    if (countNumber === maiorNumero){
+    if (countNumber === maiorNumero) {
       contador = contador + 1;
-    } 
+    }
   }
-  return contador 
+  return contador;
 }
-console.log(highestCount(array));
+console.log(highestCount());
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -56,29 +56,29 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = cat1 - mouse;
   let distanciaCat2 = cat2 - mouse;
   let resultado = '';
-  if (distanciaCat2 < distanciaCat1 ) {
-  resultado = 'cat2';
+  if(distanciaCat2 < distanciaCat1) {
+    resultado = 'cat2';
   } else if (distanciaCat2 > distanciaCat1) {
-  resultado = 'cat1';
+    resultado = 'cat1';
   } else {
-  resultado = 'os gatos trombam e o rato foge'; 
+    resultado = 'os gatos trombam e o rato foge';
   }
   return resultado;
 }
-console.log(catAndMouse(1,0,2));
+console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let comparacao = [];
-  if(arrayNumbers){
-    for(let index = 0; index < arrayNumbers.length; index += 1){
+  if(arrayNumbers) {
+    for (let index = 0; index < arrayNumbers.length; index += 1){
       if ((arrayNumbers[index] % 3 === 0) && (arrayNumbers[index] % 5 === 0)) {
         comparacao.push('fizzBuzz');
-      }else if(arrayNumbers[index] % 5 === 0) {
+      }else if (arrayNumbers[index] % 5 === 0) {
         comparacao.push('buzz');
-      }else if(arrayNumbers[index] % 3 === 0) {
+      }else if (arrayNumbers[index] % 3 === 0) {
         comparacao.push('fizz');
-      }else{
+      }else {
         comparacao.push('bug');
       }
     }
@@ -86,7 +86,6 @@ function fizzBuzz(arrayNumbers) {
   return comparacao;
 }
 console.log(fizzBuzz());
-
 
 // Desafio 9
 function encode() {
