@@ -16,18 +16,17 @@ function calcArea(width, height) {
 
 // Desafio 3
 function splitSentence(frase) {
-  let list = frase.split();
-  let finalList = [];
-  finalList.push(list);
+  let finalList = frase.splitSentence(' ');
   return finalList;
 }
 
 // Desafio 4
-function concatName(list = [], anotherList = []) {
+function concatName(list) {
   // seu código aqui
-  anotherList.push(list[list.length - 1]);
-  anotherList.push(list[list.length - 2]);
-  return anotherList;
+  let newList = list.shift();
+  let listReverse = list.reverse();
+  let newList2 = listReverse.shift();
+  return `${newList2},${newList}`;
 }
 
 function footballPoints(wins, ties) {
