@@ -43,7 +43,7 @@ function highestCount(arrayNumbers) {
   }
   }
   return timesNumberAppears;
-};
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -57,9 +57,8 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayNumber) {
-  for(let index = 0; index < arrayNumber.length; index += 1)
-
+function fizzBuzz() {
+  
 // Desafio 9
 function encode() {
   // seu código aqui
