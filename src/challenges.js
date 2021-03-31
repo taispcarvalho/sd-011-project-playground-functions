@@ -53,7 +53,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distance1 > distance2) {
     return ('cat2');
   }
-    return ('Os gatos trambaram e o rato foge');
+    return ('os gatos trombam e o rato foge');
   // seu código aqui
 }
 console.log(catAndMouse(12, 3, 2));
