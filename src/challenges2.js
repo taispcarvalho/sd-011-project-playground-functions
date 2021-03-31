@@ -12,7 +12,7 @@ function generatePhoneNumber() {
 function triangleCheck(lineA, lineB, lineC) {
   let triangle = [lineA, lineB, lineC];
   let sum = lineA + lineB + lineC;
-  let difference1 = Math.abs(lineB- lineC);
+  let difference1 = Math.abs(lineB - lineC);
   let difference2 = Math.abs(lineA - lineC);
   let difference3 = Math.abs(lineA - lineB);
   let differences = [difference1, difference2, difference3];
@@ -23,7 +23,6 @@ function triangleCheck(lineA, lineB, lineC) {
     } return true;
   }
 }
-console.log(triangleCheck(15, 11, 8));
 
 // Desafio 13
 function hydrate(string) {
@@ -33,9 +32,7 @@ function hydrate(string) {
   for (let index of list) {
     soma += index;
   }
-  if (soma > 1) {
-    return soma + ' copos de água.';
-  } return soma + ' copo de água';
+  return soma;
 }
 
 module.exports = {
