@@ -1,6 +1,20 @@
 // Desafio 10
-function techList() {
-  
+function techList(technology, name) {
+  if (technology.length === 0) {
+    return 'Vazio!';
+  }
+
+  let orderTech = technology.sort();
+  let listTech = []
+
+  for (let currTecnology of orderTech) {
+    listTech.push({
+      tech : currTecnology,
+      name : name
+    });
+  }
+
+  return listTech;
 }
 
 // Desafio 11

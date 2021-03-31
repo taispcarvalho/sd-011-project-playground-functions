@@ -62,7 +62,7 @@ function fizzBuzz(numArray) {
     }
     if (currNumber % 5 === 0) {
       numArray[index] += 'buzz';
-    } else if (currNumber % 5 !== 0 && currNumber % 3 !== 0){
+    } else if (currNumber % 5 !== 0 && currNumber % 3 !== 0) {
       numArray[index] += 'bug!';
     }
     numArray[index] = numArray[index].replace('fizzbuzz', 'fizzBuzz');
