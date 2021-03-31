@@ -15,10 +15,7 @@ function techList(techArray, name) {
   return arrayOfObjects;
 }
 
-let testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-let testArrayString = testArray.map(String);
-
-
+// Desafio 11
 function countNumberRepets(numbersArray) {
   numbersArray.sort();
   var max = 0, result, freq = 0;
@@ -36,42 +33,25 @@ function countNumberRepets(numbersArray) {
   }
   return max;
 }
-
-function phoneFirstPart(numbersArray) {
-  let firstNumberPart = '';
-  for (let index = 2; index <= 6; index += 1) {
-    firstNumberPart += numbersArray[index]
-  }
-  return firstNumberPart;
-}
-
-function phoneSecondPart(numbersArray) {
-  let secondNumberPart = '';
-  for (let index = 7; index <= 11; index += 1) {
-    firstNumberPart += numbersArray[index]
-  }
-  return secondNumberPart;
-}
-
-// Desafio 11
 function generatePhoneNumber(numbersArray) {
-  let phoneStructure = {
-    ddd: numbersArray[0] + numbersArray[1],
-    numberFirstPart: phoneFirstPart(numbersArray),
-    numberSecondPart: phoneFirstPart(numbersArray),
-  };
+  let dddNumber = testArray.slice(0,2).map(String).join('');
+  let firsPartNumber = testArray.slice(2,7).map(String).join('');
+  let secondPartNumber = testArray.slice(7,11).map(String).join('');
 
   if (numbersArray.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
-  if (numbersArray[index] < 0 || numbersArray[index] > 9 || countNumberRepets(numbersArray) >= 3) {
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] < 0 || numbersArray[index] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  if (countNumberRepets(numbersArray) >= 3) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
-  return '(' + phoneStructure.ddd + ')' + phoneStructure.numberFirstPart + '-' + phoneStructure.secondPart;
+  return '('+dddNumber+')'+firsPartNumber+'-'+secondPartNumber;
 }
-
-console.log(generatePhoneNumber(testArray))
 
 // Desafio 12
   function triangleCheck() {
