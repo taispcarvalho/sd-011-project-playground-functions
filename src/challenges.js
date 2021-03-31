@@ -71,7 +71,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(inputArray) {
   let emptyArray = [];
   for (let index = 0; index < inputArray.length; index += 1) {
-    if (inputArray[index] % 3 === 0 && inputArray[index] % 5 === 0) {
+    if (inputArray[index] % 15 === 0) { //number divisible by 3 and 5 = divisible by 15
       emptyArray[index] = 'fizzbuzz';
     } else if (inputArray[index] % 5 === 0) {
       emptyArray[index] = 'buzz';
