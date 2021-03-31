@@ -82,7 +82,7 @@ function encode(string) {
   newString = newString.replace(/i/g, '3');
   newString = newString.replace(/o/g, '4');
   newString = newString.replace(/u/g, '5');
-  return newString
+  return newString;
 }
 
 function decode(string) {
@@ -91,7 +91,7 @@ function decode(string) {
   newString = newString.replace(/3/g, 'i');
   newString = newString.replace(/4/g, 'o');
   newString = newString.replace(/5/g, 'u');
-  return newString
+  return newString;
 }
 /* https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace */
 
