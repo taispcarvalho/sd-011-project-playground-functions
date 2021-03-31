@@ -73,21 +73,22 @@ function catAndMouse(mouse, cat1, cat2 ) {
     return 'cat1'
   }
 }
+
 // Desafio 8
 function fizzBuzz(array) {
-  let mensagemRetorno = [];
+  let msgRet = [];
   for (let index in array){
     if (array[index] % 15 === 0 ){
-      mensagemRetorno.push("fizzbuzz");
+      msgRet.push("fizzbuzz");
     } else if (array[index] % 3 === 0){
-      mensagemRetorno.push("buzz");
+      msgRet.push("buzz");
     } else if (array[index] % 5 === 0){
-      mensagemRetorno.push("fizz");
+      msgRet.push("fizz");
     } else {
-      mensagemRetorno.push("bug!");
+      msgRet.push("bug!");
     }
   }  
-  return mensagemRetorno;
+  return msgRet;
 }
 
 // Desafio 9
