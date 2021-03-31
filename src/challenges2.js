@@ -8,34 +8,36 @@ function techList(anyArray, anyName) {
   for (let techs of sortedTechs) {
     techListArray.push({
       tech: techs,
-      name: anyName
-    })
+      name: anyName,
+    });
   }
   return techListArray;
 }
 console.log(techList());
 
 // Desafio 11
-function generatePhoneNumber(array) {
-  
-  function checkIfFollowTheRules() {
-    if (array.length !== 11) {
-      return false;
-    } else {
-      for (let index in array) {
+function checkIfFollowTheRules(array) {
+  if (array.length !== 11) {
+    return false;
+  } else {
+    for (let index in array) {
       let count = 0;
-        for (let number of array) {
-          if (array[index] == number) {
-            count += 1;
-            if(count > 2 || array[index] > 9 || array[index] < 0) {
-              return false;
-            }
+      for (let number of array) {
+        if (array[index] == number) {
+          count += 1;
+          if(count > 2 || array[index] > 9 || array[index] < 0) {
+            return false;
           }
         }
       }
-      return true;
     }
+    return true;
   }
+};
+
+function generatePhoneNumber(array) {
+
+  
 if (checkIfFollowTheRules()) {
   let formatedPhoneNumber = '';
   for (let index = 0; index < array.length; index += 1) {
@@ -56,8 +58,7 @@ if (checkIfFollowTheRules()) {
   } else {
   return "não é possível gerar um número de telefone com esses valores";
   }
-}
-
+};
 
 // Desafio 12
 function triangleCheck() {
