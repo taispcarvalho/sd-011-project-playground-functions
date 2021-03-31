@@ -17,9 +17,8 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let [u,p] = [array[array.length -1],array[0]]; // Destructure Assignment: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#trocando_vari%C3%A1veis 
-  // let c = u+' '+p;
-  return u+' '+p;
+  let [u, p] = [array[array.length - 1], array[0]];//Destructure Assignment: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#trocando_vari%C3%A1veis 
+  return `${u}, ${p}`; // ES6 template literals: https://stackoverflow.com/questions/46858840/unexpected-string-concatenation
 }
 
 // Desafio 5
