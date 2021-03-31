@@ -112,3 +112,16 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+
+let vetor = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let string = 'Thiago';
+
+
+let result = [];
+vetor.sort();
+for (let index = 0; index < vetor.length; index += 1) {
+  result.push({tech: vetor[index] ,  name: string})
+}
+
+console.log(result)
