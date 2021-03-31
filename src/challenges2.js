@@ -1,22 +1,22 @@
 // Desafio 10
+function techList(tech, nome) {
+  if (tech.length == 0){
+    var output = 'Vazio!'
+  } else {
+    var output = []; 
+  }  
 
-function techList(tech, name) {
-  let output = []; 
-
-  for (let index = 0; index < tech.length; index += 1){  
+  for (let index = 0; index < tech.length; index += 1) {
     let object = {
       tech: String,
       name: String
     }   
-    if (tech.length != null) {
       let objeto = Object.create(object);
       objeto.tech = tech[index];
       objeto.name = nome;
       output.push(objeto);
-    } else {
-      output = 'Vazio!'
-    } 
-  } return output;
+     
+  } return output
 }
 
 // Desafio 11
