@@ -20,7 +20,7 @@ console.log(splitSentence('Go Trybe'));
 
 // Desafio 4
 function concatName(inintialtArray) {
-  return inintialtArray[inintialtArray.length -1].concat(", " + inintialtArray[0]);
+  return inintialtArray[inintialtArray.length - 1].concat(', ' + inintialtArray[0]);
 }
 console.log(concatName(['Lucas', 'Cassiano', 'ferraz', 'Paolilo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
