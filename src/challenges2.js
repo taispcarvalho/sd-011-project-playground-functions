@@ -44,7 +44,7 @@ function generatePhoneNumber(phone) {
 function triangleCheck(lineA, lineB, lineC) {
   let result = false; // if it's boolean, always start at false if you wanna true as result
   let lines = []; // empty array
-  lines.push((Math.abs(lineA), Math.abs(lineB), Math.abs(lineC))); // just add the parameters to the array
+  lines.push(Math.abs(lineA), Math.abs(lineB), Math.abs(lineC)); // just add the parameters to the array
   // test if one side is smaller than the sum of the others sides
   // and if this side is bigger than the subtration of the others sides
   if (lines[0] < (lines[1] + lines[2]) && lines[0] > (lines[1] - lines[2])) {
@@ -58,8 +58,24 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// References:
+// Find numbers in strings: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+// .split(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+// ParseInt: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+function hydrate(word) {
+  let number = word.replace(/[^0-9]/g, '');
+  let table = number.split('');
+  let result = 0;
+
+  for (let i in table) {
+    result += parseInt(table[i]);
+  }
+
+  if (result === 1) {
+    return result + ' copo de água';
+  } else {
+    return result + ' copos de água';
+  }
 }
 
 module.exports = {
