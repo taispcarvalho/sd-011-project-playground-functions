@@ -1,5 +1,3 @@
-const { splitSentence } = require("./challenges");
-
 // Desafio 10
 function techList(arrayTechList, name) {
   let arrayTechAndName = [];
@@ -59,7 +57,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let subBC = Math.abs(lineB - lineC) < lineA;
 
   let answer = sumAB && sumBC && sumAC && subAB && subAC && subBC;
-  
+
   return answer;
 }
 
@@ -75,7 +73,13 @@ function hydrate(beverage) {
     }
   }
 
-  let answerHydrate = cupsWater + ' copos de água';
+  let answerHydrate;
+
+  if (cupsWater === 1) {
+    let answerHydrate = cupsWater + ' copo de água';
+  } else {
+    let answerHydrate = cupsWater + ' copos de água';
+  }
 
   return answerHydrate;
 }

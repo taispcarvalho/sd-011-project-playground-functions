@@ -73,10 +73,9 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayFizzBuzzNumbers) {
   let arrayFizzBuzz = [];
 
-
   for (let number of arrayFizzBuzzNumbers) {
-    let isDivisibleBy3 = number % 3 === 0
-    let isDivisibleBy5 = number % 5 === 0
+    let isDivisibleBy3 = number % 3 === 0;
+    let isDivisibleBy5 = number % 5 === 0;
 
     if (isDivisibleBy3) {
       if (isDivisibleBy5) {
@@ -96,8 +95,7 @@ function fizzBuzz(arrayFizzBuzzNumbers) {
 
 // Desafio 9
 function encode(sentence) {
-  let encodedSentence = ''
-
+  let encodedSentence = '';
   for (let index = 0; index < sentence.length; index += 1) {
     if (sentence[index] === 'a') {
       encodedSentence += '1';
@@ -113,11 +111,11 @@ function encode(sentence) {
       encodedSentence += sentence[index];
     }
   }
-  return encodedSentence
+  return encodedSentence;
 }
 
 function decode(sentence) {
-  let decodedSentence = ''
+  let decodedSentence = '';
 
   for (let index = 0; index < sentence.length; index += 1) {
     if (sentence[index] === '1') {
@@ -135,9 +133,8 @@ function decode(sentence) {
     }
   }
 
-  return decodedSentence
+  return decodedSentence;
 }
-
 
 module.exports = {
   calcArea,
