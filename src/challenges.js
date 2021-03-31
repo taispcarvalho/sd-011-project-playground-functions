@@ -62,21 +62,23 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(value6) {
   let conter = [];
-  for (let i = 0; i < value6.length; i += 1 ) {
+  for (let i = 0; i < value6.length; i += 1) {
     if (value6[i] % 3 === 0 && value6[i] % 5 !== 0) {
       conter.push('fizz');
     }
     if (value6[i] % 3 !== 0 && value6[i] % 5 === 0) {
       conter.push('buzz');
     }
+    function part2(value6,i , conter) {
     if (value6[i] % 3 === 0 && value6[i] % 5 === 0) {
-      conter.push('fizzBuzz');
+      return conter.push('fizzBuzz');
     }
     if (value6[i] % 3 !== 0 && value6[i] % 5 !== 0) {
-      conter.push('bug!');
+      return conter.push('bug!');
     }
   }
-  return conter;
+  }
+  return (conter);
 }
 
 // Desafio 9
