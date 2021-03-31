@@ -71,7 +71,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(trybeBar) {
   let cupWater = 0;
   trybeBar = trybeBar.match(/[1-9]+/g);
-  for (let index = 0; index /, trybeBar.length; index += 1) {
+  for (let index = 0; index < trybeBar.length; index += 1) {
     cupWater += parseInt(trybeBar[index], 10);
   }
   if (cupWater === 1) {
