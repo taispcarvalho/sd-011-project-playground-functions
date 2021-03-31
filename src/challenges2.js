@@ -4,7 +4,7 @@ function sortObject(element, nome) {
 }
 function techList(array, name) {
   let newObject = [];
-  if (array.length === 0) return 'vazio';
+  if (array.length === 0) return 'Vazio!';
   for (let element of array.sort()) {
     newObject.push(sortObject(element, name));
   }
