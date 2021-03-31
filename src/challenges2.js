@@ -7,6 +7,7 @@ function myFunction(objects, index, myName) {
   return objects;
 }
 function techList(objects, name) {
+  objects = objects.sort();
   if (objects != null) {
     for (let index = 0; index < objects.length; index += 1) {
       objects = myFunction(objects, index, name);
@@ -15,7 +16,7 @@ function techList(objects, name) {
   }
   return 'Vazio!';
 }
-// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Marcelo'));
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Marcelo'));
 //
 // Desafio 11
 function generatePhoneNumber() {
