@@ -17,8 +17,9 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let [u, p] =[array[array.length -1], array[0]];// Destructure Assignment: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#trocando_vari%C3%A1veis 
-  return [u, p];   // Destructure Assignment
+  let [u,p] = [array[array.length -1],array[0]]; // Destructure Assignment: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#trocando_vari%C3%A1veis 
+  // let c = u+' '+p;
+  return u+' '+p;
 }
 
 // Desafio 5
