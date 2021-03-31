@@ -63,13 +63,16 @@ function highestCount(arrNumbers) {
 }
 
 function calcPosition(mouse, cat1, cat2) {
+  let result = 'os gatos trombam e o rato foge';
   if (cat1 - mouse > cat2 - mouse) {
-    return 'cat2';
+    result = 'cat2';
+    return result;
   }
   if (cat1 - mouse < cat2 - mouse) {
-    return 'cat1';
+    result = 'cat1';
+    return result;
   }
-  return 'os gatos trombam e o rato foge';
+  return result;
 }
 
 // Desafio 7
@@ -87,7 +90,7 @@ function fbDivider(value1) {
   if (value1 % 5 === 0) {
     return 'buzz';
   }
-  return 'bug';
+  return 'bug!';
 }
 
 // Desafio 8
