@@ -42,7 +42,7 @@ function verifyDigit(arrayOfNumbers) {
   return true;
 }
 
-function veryfyRepetition(arrayOfNumbers) {
+function verifyRepetition(arrayOfNumbers) {
   let countRepetition = 0;
   for (let index = 0; index < arrayOfNumbers.length; index += 1) {
     for (let index2 = 0; index2 < arrayOfNumbers.length; index2 += 1) {
@@ -54,13 +54,14 @@ function veryfyRepetition(arrayOfNumbers) {
       }
     }
   }
+  return true;
 }
 
 function generatePhoneNumber(arrayOfNumbers) {
   if (arrayOfNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (verifyDigit(arrayOfNumbers) === true) {
+  if (verifyDigit(arrayOfNumbers) === true && verifyRepetition === true) {
     return phoneNumber(arrayOfNumbers);
   }
   return 'não é possível gerar um número de telefone com esses valores';
