@@ -46,7 +46,7 @@ function generatePhoneNumber(numbersArray) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  if (countNumberRepets(numbersArray) >= 3) {
+  if (countNumberRepets(numbersArray) >= 2) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
