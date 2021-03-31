@@ -88,7 +88,7 @@ console.log(catAndMouse(10, 4, 22));
 console.log(catAndMouse(2, 0, 0));
 
 // Desafio 8
-function checkNum(number){
+function checkNum(number) {
   let resultado = [];
   if ((number % 3 === 0) && (number % 5 === 0)) {
     resultado += 'fizzBuzz';
@@ -104,7 +104,7 @@ function checkNum(number){
 
 function fizzBuzz(array) {
   for (let counter = 0; counter < array.length; counter += 1) {
-    array[counter] = checkNum(array[counter])
+    array[counter] = checkNum(array[counter]);
   }
   console.log(`Fizzbuzz (${array}):`);
   return array;
@@ -114,24 +114,28 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
+function checkEncode(vowel) {
+  let vowelStr = '';
+  if (vowel === 'a') {
+    vowelStr = 1;
+  } else if (vowel === 'e') {
+    vowelStr = 2;
+  } else if (vowel === 'i') {
+    vowelStr = 3;
+  } else if (vowel === 'o') {
+    vowelStr = 4;
+  } else if (vowel === 'u') {
+    vowelStr = 5;
+  } else {
+    vowelStr = vowel;
+  }
+  return vowelStr;
+}
+
 function encode(string) {
   let arrNew = string.split('');
   for (let letter = 0; letter < arrNew.length; letter += 1) {
-    if (arrNew[letter] === 'a') {
-      arrNew[letter] = 1;
-    }
-    if (arrNew[letter] === 'e') {
-      arrNew[letter] = 2;
-    }
-    if (arrNew[letter] === 'i') {
-      arrNew[letter] = 3;
-    }
-    if (arrNew[letter] === 'o') {
-      arrNew[letter] = 4;
-    }
-    if (arrNew[letter] === 'u') {
-      arrNew[letter] = 5;
-    }
+    arrNew[letter] = checkEncode(arrNew[letter]);
   }
   arrNew = arrNew.join('');
   return arrNew;
