@@ -36,8 +36,25 @@ console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  let higherNumber = 0;
+  let largestAccountant = 0;
+  function discoverBigger(numbersArray) {
+    for (let index = 0; index < numbersArray.length; index += 1) {
+      if (numbersArray[index] >= higherNumber) {
+        higherNumber = numbersArray[index];
+      }
+    }
+  }
+  function timesMore (numbersArray) {
+    for (let index = 0; index < numbersArray.length; index += 1) {
+      if (higherNumber === numbersArray[index]) {
+        largestAccountant += 1;
+      }
+    }
+  }
+  return largestAccountant;
 }
+
 
 // Desafio 7
 function catAndMouse() {
