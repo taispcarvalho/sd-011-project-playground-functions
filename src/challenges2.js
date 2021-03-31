@@ -55,7 +55,7 @@ function generatePhoneNumber(arr) {
   }
 
   let addNum = arr.join('');
-  let phoneNumber = `(${addNum.substring(0, 2)})${addNum.substring(2, 7)}-${addNum.substring(7)}`;
+  let phoneNumber = `(${addNum.substring(0, 2)}) ${addNum.substring(2, 7)}-${addNum.substring(7)}`;
 
   return phoneNumber;
 }
@@ -70,8 +70,15 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let textNumbers = str.match(/\d+/g);
+  let interger = textNumbers.map((count) => parseInt(count, 10));
+  let sumNumbers = interger.reduce((acc, curr) => acc + curr);
+
+  if(sumNumbers === 1){
+    return '1 copo de água';
+  }
+  return `${sumNumbers} copos de água`;
 }
 
 module.exports = {
