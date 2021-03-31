@@ -1,10 +1,9 @@
 // Desafio 1
-// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+// Reference:
+// Conditional Ternary: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 function compareTrue(value1, value2) {
-  return value1 && value2;
+  return value1 && value2; // Example: return condition ? true : false; but booleans are not necessary in ternary conditionals, so it's abreviate to just "return value1 && value2;".
 }
-
-// Example: return condition ? true : false; but booleans are not necessary in ternary conditionals, so it's abreviate to just "return value1 && value2;".
 
 // Desafio 2
 function calcArea(base, height) {
@@ -12,7 +11,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+// Reference:
+// .split(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
 function splitSentence(word) {
   return word.split(' ');
 }
@@ -22,8 +22,8 @@ function splitSentence(word) {
 // Template Literals: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 // Ways to declare string: https://www.digitalocean.com/community/tutorials/how-to-work-with-strings-in-javascript
 // Print the Last Item in Arrays: https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array
-function concatName(array) {
-  return `${array[array.length - 1]}, ${array[0]}`;
+function concatName(arrayText) {
+  return `${arrayText[arrayText.length - 1]}, ${arrayText[0]}`;
 }
 
 // Desafio 5

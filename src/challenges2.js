@@ -1,10 +1,10 @@
 // Desafio 10
-// References
-// Sort(): https://www.w3schools.com/jsref/jsref_sort.asp
+// References:
+// sort(): https://www.w3schools.com/jsref/jsref_sort.asp
 // Objects: https://www.w3schools.com/js/js_objects.asp
 function techList(tech, name) {
   let result = [];
-  let list = tech.sort(); // 'list' recieve 'tech sorted', I don't know if this works yet
+  let list = tech.sort(); // 'list' recieve 'tech sorted'
 
   if (list.length !== 0) { // if list.length diffent from zero, it's ok to continue
     for (let i = 0; i < list.length; i += 1) {
@@ -42,20 +42,20 @@ function generatePhoneNumber(phone) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let result = false;
-  let lines = [];
-  lines.push(Math.abs(lineA), Math.abs(lineB), Math.abs(lineC));
+  let result = false; // if it's boolean, always start at false if you wanna true as result
+  let lines = []; // empty array
+  lines.push((Math.abs(lineA), Math.abs(lineB), Math.abs(lineC))); // just add the parameters to the array
+  // test if one side is smaller than the sum of the others sides
+  // and if this side is bigger than the subtration of the others sides
   if (lines[0] < (lines[1] + lines[2]) && lines[0] > (lines[1] - lines[2])) {
     if (lines[1] < (lines[0] + lines[2]) && lines[1] > (lines[0] - lines[2])) {
       if (lines[2] < (lines[0] + lines[1]) && lines[2] > (lines[0] - lines[1])) {
-        result = true;
+        result = true; // if so, it's true
       }
     }
   }
   return result;
 }
-
-console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
