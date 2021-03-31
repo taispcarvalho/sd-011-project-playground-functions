@@ -74,6 +74,7 @@ function fizzBuzz(arrayOfNumber) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
+
 // Desafio 9
 function encode() {
   // seu código aqui
