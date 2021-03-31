@@ -1,18 +1,15 @@
-let arrayTest = [9, 1, 2, 3, 9, 5, 7];
-
-function highestCount(array) {
-  let maiorNumero = array[0];
-  let contador = 0;
-  for (let index = 1; index < array.length; index += 1) {
-    if (array[index] > maiorNumero){
-      maiorNumero = array[index];
-    }
+function catAndMouse(mouse, cat1, cat2) {
+  mouse = 0;
+  let distanciaCat1 = cat1 - mouse;
+  let distanciaCat2 = cat2 - mouse;
+  let resultado = '';
+  if (distanciaCat2 < distanciaCat1 ) {
+  resultado = 'cat2';
+  } else if (distanciaCat2 > distanciaCat1) {
+  resultado = 'cat1';
+  } else {
+  resultado = 'os gatos trombam e o rato foge'; 
   }
-  for (let indexCont = 0; indexCont < array.length; indexCont += 1) {
-    if (array[indexCont] === maiorNumero){
-      contador = contador + 1;
-    } 
-  }
-  return contador 
+  return resultado;
 }
-console.log(highestCount(arrayTest));
+console.log(catAndMouse());
