@@ -69,33 +69,43 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-
-function pitagoras(cat1, cat2, hip) {
+function side(a, b, c) {
   let final;
-  let calc;
+  let calcA = c + b;
+  let calcB = c + a;
+  let calcC = a + b;
+  if (c > calcC || b > calcB || a > calcA) {
+    final = false;
+  }
+  return final;
+}
+
+function abs(cat1, cat2, hip) {
+  let final;
+  let sides;
   if (Math.abs(cat1 - cat2) > 0) {
-    calc = Math.abs(cat1 - cat2);
-  } else calc = Math.abs(cat2 - cat1);
-  if (Math.abs(hip < calc)) {
+    sides = Math.abs(cat1 - cat2);
+  } else sides = Math.abs(cat2 - cat1);
+  if (Math.abs(hip < sides)) {
     final = false;
   }
   return final;
 }
 
 function triangleCheck(lineA, lineB, lineC) {
-  let x = pitagoras;
+  let x = abs;
   let a = lineA;
   let b = lineB;
   let c = lineC;
   let answer = true;
+  if (side(a, b, c) === false) {
+    answer = false;
+  }
   if (x(a, b, c) || x(a, c, b) || x(b, c, a) === false) {
     answer = false;
   }
   return answer;
 }
-
-console.log(triangleCheck(10, 18, 14));
-
 // Desafio 13
 function hydrate() {
   // seu código aqui
