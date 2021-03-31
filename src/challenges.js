@@ -18,7 +18,8 @@ function concatName(arrayOfStrings) {
   let lastCommaFirst = '';
   for (let index = ((arrayOfStrings.length) - 1); index >= 0; index -= 1) {
     if (index === ((arrayOfStrings.length) - 1)) {
-      lastCommaFirst += arrayOfStrings[index] + ', ';
+      lastCommaFirst += arrayOfStrings[index];
+      lastCommaFirst += ', ';
     } else if (index === 0) {
       lastCommaFirst += arrayOfStrings[index];
     }
@@ -43,7 +44,7 @@ function countRepetition(value, arrayOfNumbers) {
 }
 
 function verifyHighest(arrayOfNumbers) {
-  let max = arrayOfNumbers.reduce(function(a, b) {
+  let max = arrayOfNumbers.reduce(function (a, b) {
     return Math.max(a, b);
   });
   return max;
@@ -92,7 +93,7 @@ function fizzBuzz(arrayOfNumbers) {
 function encode(string) {
   
 }
-function decode() {
+function decode(string) {
   // seu código aqui
 }
 
