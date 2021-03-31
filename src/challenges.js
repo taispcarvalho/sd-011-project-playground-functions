@@ -31,19 +31,28 @@ function highestCount(arrNum) {
       highest = arrNum[i];
     }
   }
+  return highest;
+}
+function findHighestNumber(arrNum) {
   let counter = 0;
   for (let index = 0; index < arrNum.length; index += 1) {
-    if (arrNum[index] === highest) {
+    if (arrNum[index] === highestCount(arrNum)) {
       counter += 1;
     }
   }
   return counter;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(findHighestNumber([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
+    return 'os gatos trobam e o rato foge';
+  }
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    return 'cat1';
+  }
+  return 'cat2';
 }
 
 // Desafio 8
