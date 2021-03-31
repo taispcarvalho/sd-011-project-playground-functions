@@ -71,23 +71,25 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 
 function fizzBuzz(arrayOfNumbers) {
-  let nonSenseArray = [];
-  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
-    if (arrayOfNumbers[index] === 3 && arrayOfNumbers[index] !== 5) {
-      nonSenseArray.push('fizz');
+   return arrayOfNumbers.map(number => {
+    if (number % 3 === 0 && number % 5 !== 0) {
+      return 'fizz';
     }
-    if (arrayOfNumbers[index] !== 3 && arrayOfNumbers[index] === 5) {
-      nonSenseArray.push('buzz');
+    if (number % 3 !== 0 && number % 5 === 0) {
+      return 'buzz';
     }
-    if (arrayOfNumbers[index] === 3 && arrayOfNumbers[index] === 5) {
-      nonSenseArray.push('fizzBuzz');
+    if (number % 3 === 0 && number % 5 === 0) {
+      return 'fizzBuzz';
     }
-    if (arrayOfNumbers[index] !== 3 && arrayOfNumbers[index] !== 5) {
-      nonSenseArray.push('bug!');
+    if (number % 3 !== 0 && number % 5 !== 0) {
+      return 'bug!';
     }
-  }
-  return nonSenseArray;
+  });
 }
+
+// Arquivo /src/challenges.js
+// Linha 73: Function 'fizzBuzz' has a complexity of 10. Maximum allowed is 5.
+// Linha 73: Refactor this function to reduce its Cognitive Complexity from 13 to the 5 allowed.
 
 // Desafio 9
 function encode() {
