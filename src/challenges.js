@@ -26,9 +26,9 @@ function footballPoints(wins, ties) {
 
 function highestNumberArray(arr) {
   let hgNumber = arr[0];
-  for (let i = 0; i < arr.length; i += 1) {
-    if (hgNumber < arr[i]) {
-      hgNumber = arr[i];
+  for (let index = 0; index < arr.length; index += 1) {
+    if (hgNumber < arr[index]) {
+      hgNumber = arr[index];
     }
   }
   return hgNumber;
@@ -38,8 +38,8 @@ function highestNumberArray(arr) {
 function highestCount(arrNumbers) {
   let highestNumber = highestNumberArray(arrNumbers);
   let count = 0;
-  for (let i = 0; i < arrNumbers.length; i += 1) {
-    if (highestNumber === arrNumbers[i]) {
+  for (let index = 0; index < arrNumbers.length; index += 1) {
+    if (highestNumber === arrNumbers[index]) {
       count += 1;
     }
   }
@@ -107,8 +107,8 @@ function changeNumber(number) {
 
 function identifyVowal(letter) {
   let arrayVowel = ['a', 'e', 'i', 'o', 'u'];
-  for (let i = 0; i < arrayVowel.length; i += 1) {
-    if (letter === arrayVowel[i]) {
+  for (let index = 0; index < arrayVowel.length; index += 1) {
+    if (letter === arrayVowel[index]) {
       return letter;
     }
   }
@@ -118,11 +118,11 @@ function identifyVowal(letter) {
 function encode(phrase) {
   let newString = '';
 
-  for (let i = 0; i < phrase.length; i += 1) {
-    if (identifyVowal(phrase.charAt(i))) {
-      newString += changeLetter(phrase.charAt(i));
+  for (let index = 0; index < phrase.length; index += 1) {
+    if (identifyVowal(phrase.charAt(index))) {
+      newString += changeLetter(phrase.charAt(index));
     } else {
-      newString += phrase.charAt(i);
+      newString += phrase.charAt(index);
     }
   }
   return newString;
@@ -130,11 +130,11 @@ function encode(phrase) {
 
 function decode(phrase) {
   let newString = '';
-  for (let i = 0; i < phrase.length; i += 1) {
-    if (phrase.charAt(i) > 0 && phrase.charAt(i) < 6) {
-      newString += changeNumber(phrase.charAt(i));
+  for (let index = 0; index < phrase.length; index += 1) {
+    if (phrase.charAt(index) > 0 && phrase.charAt(index) < 6) {
+      newString += changeNumber(phrase.charAt(index));
     } else {
-      newString += phrase.charAt(i);
+      newString += phrase.charAt(index);
     }
   }
   return newString;

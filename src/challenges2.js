@@ -15,9 +15,59 @@ function techList(arrTec, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function countNumber(value1, numbersArr) {
+  let count = 0;
+  for (let num of numbersArr) {
+    if (value1 === num) {
+      count += 1;
+    }
+    if (count >= 3) {
+      return count;
+    }
+  }
+  return count;
 }
+
+function isValidArrLength(numbersArr) {
+  let isValid = true;
+  if (!numbersArr.length === 11) {
+    return !isValid;
+  }
+  return isValid;
+}
+
+function isValidPhoneNumber(numbersArr) {
+  let isValid = true;
+  for (let num of numbersArr) {
+    if (num > 9 || num < 0 || countNumber(num, numbersArr) >= 3) {
+      return !isValid;
+    }
+  }
+  return isValid;
+}
+
+function formatPhoneNumber(numbers) {
+  let format = '(xx) xxxxx-xxxx';
+  for (let index = 0; index < numbers.length; index += 1) {
+    format = format.replace('x', numbers[index]);
+  }
+  return format;
+}
+
+function generatePhoneNumber(phoneNumberArr) {
+  if (!isValidArrLength(phoneNumberArr)) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (!isValidPhoneNumber(phoneNumberArr)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+
+  return formatPhoneNumber(phoneNumberArr);
+  //  número máximo de caracteres numa linha == 100
+  //  return `(${phoneNumberArr.slice(0,2).join().replace(/,/g, '')}) ${phoneNumberArr.slice(2,7).join().replace(/,/g, '')}-${phoneNumberArr.slice(7,11).join().replace(/,/g, '')}`;
+}
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
