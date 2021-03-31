@@ -66,11 +66,28 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(vowels) {
+
+  for (let index = 0; index < vowels.length; index++) {
+    vowels = vowels.replace('a', 1);
+    vowels = vowels.replace('e', 2);
+    vowels = vowels.replace('i', 3);
+    vowels = vowels.replace('o', 4);
+    vowels = vowels.replace('u', 5);
+  }
+  return vowels;
 }
-function decode() {
-  // seu código aqui
+
+function decode(vowels) {
+  
+  for (let index = 0; index < vowels.length; index++) {
+    vowels = vowels.replace(1, 'a');
+    vowels = vowels.replace(2, 'e');
+    vowels = vowels.replace(3, 'i');
+    vowels = vowels.replace(4, 'o');
+    vowels = vowels.replace(5, 'u');
+  }
+  return vowels;
 }
 
 module.exports = {
