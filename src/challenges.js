@@ -96,6 +96,8 @@ function encode(frase) {
   }
   return frase
 }
+console.log(encode('hi there!'))
+
 function decode(frase) {
   for (let index = 0; index < frase.length; index += 1){
     frase = frase.replace('1', 'a');
@@ -106,7 +108,7 @@ function decode(frase) {
   }
   return frase
 }
-
+console.log(decode('h3 th2r2!'))
 module.exports = {
   calcArea,
   catAndMouse,
