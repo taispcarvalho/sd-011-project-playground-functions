@@ -32,10 +32,11 @@ function checkRepeatedNumber(numbersArray) {
       if (numbersArray[index] === numbersArray[index2]) {
         countRepeatedNumber += 1;
       }
+      if (countRepeatedNumber >= 3) {
+        return true;
+      }
     }
-    if (countRepeatedNumber >= 3) {
-      return true;
-    }
+    countRepeatedNumber = 0;
   }
   return false;
 }
