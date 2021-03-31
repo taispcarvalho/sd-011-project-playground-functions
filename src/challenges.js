@@ -11,15 +11,16 @@ function calcArea(a, b) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split('')
+  let arrayString = string.split(' ');
+  return arrayString;
 }
 
 // Desafio 4 - ok
 function concatName(array) {
-    let primeiroNome = array[0];
-    let ultimoNome = array[array.length - 1]
-    return (ultimoNome + ', ' + primeiroNome);
-    }
+  let primeiroNome = array[0];
+  let ultimoNome = array[array.length - 1];
+  return (ultimoNome + ', ' + primeiroNome);
+  }
 
 // Desafio 5 - ok
 function footballPoints(wins, ties) {
