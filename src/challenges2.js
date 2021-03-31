@@ -67,14 +67,11 @@ function generatePhoneNumber(numbers) {
     }
 
   
-
- 
-  
 }
 
 
 
-console.log(generatePhoneNumber([10,2,3,4,5,6,7,8,9,1,0]));
+console.log(generatePhoneNumber([1,4,2,3,4,5,6,7,8,9,1,0]));
 
 // Desafio 12
 function triangleCheck() {
