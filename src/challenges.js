@@ -18,8 +18,9 @@ function splitSentence(palavra) {
 
 // Desafio 4
 
-function concatName(strings) {
-  return strings[strings.length - 1] + ' , ' + strings[0];
+function concatName(array) {
+  let nameReturn = array[array.length - 1] + ' , ' + array[0];
+  return nameReturn;
 }
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -27,27 +28,27 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 // Desafio 5
 
 function footballPoints(wins, ties) {
-return (wins * 3 + ties * 1);
+  return (wins * 3 + ties * 1);
 }
-
-console.log(footballPoints(14,8))
 
 // Desafio 6
 
 function highestCount(array) {
-  let highestNumber = 0;
-  for (let index of array) {
-    if (index > highestNumber) {
-      highestNumber = index;
+  let higherNumber = 0;
+  let repeatNumber = 0;
+  for (let highIndex = 0; highIndex < array.length; highIndex += 1) {
+    let possibleHigherNumber = higherNumber;
+    higherNumber = array[highIndex];
+    if (higherNumber < possibleHigherNumber) {
+      higherNumber = possibleHigherNumber;
     }
   }
-  let counter = o;
-  for (let index in array) {
-    if (array[index2] === highestNumber) {
-      counter += 1;
+  for (let countIndex = 0; countIndex < array.length; countIndex += 1) {
+    if (higherNumber === array[countIndex]) {
+      repeatNumber += 1;
     }
   }
-  return counter;
+  return repeatNumber;
 }
 
 // Desafio 7
