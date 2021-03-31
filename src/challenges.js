@@ -8,24 +8,45 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-// Desafio 3
-function splitSentence(sentence) {
-  let answer = [];
+// Auxiliary function for Desafio 3
+function readWordAt(sentence, position) {
+  let index;
   let word = '';
 
-  for (let index = 0; index < sentence.length; index += 1) {
-    if (sentence[index] === ' ' || index === sentence.length - 1) {
-      if (index === sentence.length - 1) {
-        word += sentence[index];
-      }
-      answer.push(word);
-      word = '';
-    } else {
-      word += sentence[index];
-    }
+  for (index = position; sentence[index] !== ' ' && index < sentence.length; index += 1) {
+    word += sentence[index];
   }
 
-  return answer;
+  return { read: word, end: index - 1 };
+}
+
+// Auxiliary function for Desafio 3
+function getToNextWord(sentence, endOfWord) {
+  let character;
+
+  if (endOfWord === sentence.length - 1) {
+    return null;
+  }
+  for (character = endOfWord + 1; character === ' '; character += 1) ;
+
+  return character + 1;
+}
+
+// Desafio 3
+function splitSentence(sentence) {
+  let beginningOfWord = 0;
+  let endOfWord = 0;
+  let word;
+  let splittedSentence = [];
+
+  while (endOfWord < sentence.length - 1) {
+    word = readWordAt(sentence, beginningOfWord);
+    splittedSentence.push(word.read);
+    endOfWord = word.end;
+    beginningOfWord = getToNextWord(sentence, endOfWord);
+  }
+
+  return splittedSentence;
 }
 
 // Desafio 4
@@ -93,6 +114,7 @@ function catAndMouse(mouse, cat1, cat2) {
 //   return answer;
 // }
 
+// Auxiliary function for Desafio 8
 function isDivisible(dividend, divisor) {
   if (dividend % divisor === 0) {
     return true;
@@ -101,6 +123,7 @@ function isDivisible(dividend, divisor) {
   return false;
 }
 
+// Auxiliary function for Desafio 8
 function numberToFizzBuzz(number) {
   if (isDivisible(15, number)) {
     return 'fizzBuzz';
@@ -114,6 +137,7 @@ function numberToFizzBuzz(number) {
   return 'bug!';
 }
 
+// Desafio 8
 function fizzBuzz(numbers) {
   for (let number of numbers) {
     let index = numbers.indexOf(number);
