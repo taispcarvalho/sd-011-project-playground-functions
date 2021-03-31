@@ -71,17 +71,48 @@ function fizzBuzz(arrayOfNumber) {
   }
   return outputArray;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-console.log(fizzBuzz([7, 9]));
-console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let encripted = '';
+  for (let index = 0; index < str.length; index += 1) {
+    switch (str[index]) {
+    case 'a': encripted = `${encripted}1`;
+      break;
+    case 'e': encripted = `${encripted}2`;
+      break;
+    case 'i': encripted = `${encripted}3`;
+      break;
+    case 'o': encripted = `${encripted}4`;
+      break;
+    case 'u': encripted = `${encripted}5`;
+      break;
+    default: encripted = `${encripted}${str[index]}`;
+    }
+  }
+  return encripted;
 }
-function decode() {
-  // seu código aqui
+
+function decode(str) {
+  let decripted = '';
+  for (let index = 0; index < str.length; index += 1) {
+    switch (str[index]) {
+    case '1': decripted = `${decripted}a`;
+      break;
+    case '2': decripted = `${decripted}e`;
+      break;
+    case '3': decripted = `${decripted}i`;
+      break;
+    case '4': decripted = `${decripted}o`;
+      break;
+    case '5': decripted = `${decripted}u`;
+      break;
+    default: decripted = `${decripted}${str[index]}`;
+    }
+  }
+  return decripted;
 }
+console.log(decode('h3 th2r2'));
 
 module.exports = {
   calcArea,
