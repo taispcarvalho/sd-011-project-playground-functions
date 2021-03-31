@@ -76,8 +76,16 @@ function encode(string) {
   return string2;
 }
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let string2 = '';
+  string.split('').forEach((element) => {
+    string2 += element.replace('1', 'a')
+      .replace('2', 'e')
+      .replace('3', 'i')
+      .replace('4', 'o')
+      .replace('5', 'u');
+  });
+  return string2;
 }
 
 module.exports = {
