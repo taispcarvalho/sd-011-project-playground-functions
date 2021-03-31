@@ -11,13 +11,13 @@ function techList(arrayTechToLearn, name) {
       };
       storeTechsName[index] = listObjTechName;
     }
+    return storeTechsName;
   } else {
-    return console.log('Vazio!');
+    return 'Vazio!';
   }
-  return storeTechsName;
 }
 
-console.log(techList(['JavaScript', 'Node', 'Angular', 'PHP'], 'Raphael'));
+console.log(techList([], 'Raphael'));
 
 // Desafio 11
 function generatePhoneNumber() {
