@@ -1,25 +1,14 @@
 // Desafio 1
 
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return value1 && value2;
 }
-
-
 
 // Desafio 2
 
 function calcArea(base, heigth) {
   return ((base * heigth) / 2);  
 }
-
-
-console.log(calcArea(10,50))
-
-
 
 // Desafio 3
 
