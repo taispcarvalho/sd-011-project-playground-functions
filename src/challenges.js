@@ -92,7 +92,7 @@ function encode(stringEncode) {
         break;
     }
   }
-  return stringEncode;
+  return stringEcode;
 }
 function decode(stringDecode) {
   for (let index2 = 0; index2 < stringDecode.length; index2 += 1) {
