@@ -188,23 +188,21 @@ function decode5(string) {
 }
 
 function encode(string) {
-  let sentence = string;
-  encodeA(sentence);
-  encodeE(sentence);
-  encodeI(sentence);
-  encodeO(sentence);
-  encodeU(sentence);
-  return sentence;
+  encodeA(string);
+  encodeE(string);
+  encodeI(string);
+  encodeO(string);
+  encodeU(string);
+  return string;
 }
 
 function decode(string) {
-  let sentence = string;
-  decode1(sentence);
-  decode2(sentence);
-  decode3(sentence);
-  decode4(sentence);
-  decode5(sentence);
-  return sentence;
+  decode1(string);
+  decode2(string);
+  decode3(string);
+  decode4(string);
+  decode5(string);
+  return string;
 }
 
 module.exports = {
