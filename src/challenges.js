@@ -100,12 +100,51 @@ function fizzBuzz(number) {
 let num = [2, 15, 7, 9, 45];
 console.log(fizzBuzz(num));
 // Desafio 9
-function encode() {
-  // seu código aqui
+function retunrArr(s) {
+  let arr = [];
+  for (let index of s) {
+    arr.push(index);
+  }
+  return arr;
 }
-function decode() {
-  // seu código aqui
+
+function encode(string) {
+  let vog = ['a', 'e', 'i', 'o', 'u'];
+  let str = retunrArr(string);
+  let nStr = '';
+
+  for (let index = 0; index < str.length; index += 1) {
+    for (let vIndex = 1; vIndex < vog.length; vIndex += 1) {
+      if (str[index] === vog[vIndex]) {
+        str[index] = vIndex + 1;
+      }
+    }
+    nStr += ''.concat(str[index]);
+  }
+  return nStr;
 }
+
+let string = ['hi there!', 'h3 th2r2!'];
+console.log(encode(string[0]));
+
+function decode(string) {
+  // seu código aqui
+  let vog = ['a', 'e', 'i', 'o', 'u'];
+  let str = retunrArr(string);
+  let nStr = '';
+
+  for (let index = 0; index < str.length; index += 1) {
+    for (let vIndex = 1; vIndex < vog.length; vIndex += 1) {
+      if (str[index] === vog[vIndex]) {
+        str[index] = vog[vIndex];
+      }
+    }
+    nStr += ''.concat(str[index]);
+  }
+  return nStr;
+}
+
+console.log(decode(string[0]));
 
 module.exports = {
   calcArea,
