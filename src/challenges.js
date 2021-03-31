@@ -51,28 +51,29 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distcat1 < distcat2) {
     return 'cat1';
   }
-    return 'cat2';
+  return 'cat2';
 }
 
 // Desafio 8
-function fizzBuzz(array) {
-  let stringResult = [];
-  for(let index = 0; index < array.length; index += 1) {
-    stringResult.push(checkDivider(array[index]));
-  }
-  return stringResult;
-}
 function checkDivider(value) {
   if (value % 3 === 0 && value % 5 === 0) {
     return 'fizzBuzz';
   }
-  else if(value % 3 === 0) {
+  else if (value % 3 === 0) {
     return 'fizz';
   }
-  else if(value % 5 === 0) {
+  else if (value % 5 === 0) {
     return 'buzz';
   }
   return 'bug!';
+}
+
+function fizzBuzz(array) {
+  let stringResult = [];
+  for (let index = 0; index < array.length; index += 1) {
+    stringResult.push(checkDivider(array[index]));
+  }
+  return stringResult;
 }
 // Desafio 9
 
@@ -84,7 +85,6 @@ function encode(string) {
   string = string.replace(/u/g, '5');
   return string;
 }
-console.log(encode('hi there'))
 
 function decode(string) {
   string = string.replace(/1/g, 'a');
@@ -94,9 +94,6 @@ function decode(string) {
   string = string.replace(/5/g, 'u');
   return string;
 }
-console.log(decode('h3 th2r2'))
-
-
 
 module.exports = {
   calcArea,
@@ -110,6 +107,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-
-
