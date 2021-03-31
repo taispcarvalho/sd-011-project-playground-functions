@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(array, name) {
-  if (array.length === 0) return 'Vazio!'
+  if (array.length === 0) return 'Vazio!';
   else {
     for (let index in array) {
       array[index] = {
@@ -20,8 +20,27 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  let firstPart = ['('];
+  let secondPart = [];
+  let thirdPart = [];
+
+  for (let index = 0; index < 2; index += 1) {
+    firstPart.push(numbers[index]);
+  }
+  firstPart.push(')');
+  
+  for (let index = 2; index < 7; index += 1) {
+    secondPart.push(numbers[index]);
+  }
+
+  for (let index = 7; index < 11; index += 1) {
+    thirdPart.push(numbers[index]);
+  }
+  
+  let completeNumber = firstPart.join('') + ' ' + secondPart.join('') + '-' + thirdPart.join('');
+  
+  return completeNumber;
 }
 
 // Desafio 12
