@@ -34,13 +34,13 @@ function footballPoints(wins, ties) {
 }
 
 function biggestNumber(numbersArray) {
-  let biggestNumber = 0;
-  for (let index = 0; index < numbersArray.length; index+=1) {
-    if (numbersArray[index] > biggestNumber) {
-      biggestNumber = numbersArray[index];
+  let highestNumber = 0;
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] > highestNumber) {
+      highestNumber = numbersArray[index];
     }
   }
-  return biggestNumber;
+  return highestNumber;
 }
 
 // Desafio 6
@@ -54,7 +54,6 @@ function highestCount(arrayCountBiggest) {
   }
   return countHighestValue;
 }
-
 
 console.log(highestCount([9, 1, 2, 9, 9, 5, 7]));
 
