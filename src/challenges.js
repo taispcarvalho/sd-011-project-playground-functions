@@ -95,13 +95,6 @@ function fizzBuzz(numArray) {
   return responseArray;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-console.log(['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz']);
-console.log(fizzBuzz([7, 9]));
-console.log(['bug!', 'fizz']);
-console.log(fizzBuzz([9, 25]));
-console.log(['fizz', 'buzz']);
-
 // Desafio 9
 function encode(string) {
   let tempString = '';
