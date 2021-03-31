@@ -96,21 +96,21 @@ function encode(stringEncode) {
 }
 function decode(stringDecode) {
   for (let index2 = 0; index2 < stringDecode.length; index2 += 1) {
-    switch (stringDencode[index2]) {
+    switch (stringDecode[index2]) {
       case '1':
-        stringDencode = stringDencode.replace('1','a');
+        stringDecode = stringDecode.replace('1','a');
         break;
       case '2':
-        stringDencode = stringDencode.replace('2', 'e');
+        stringDecode = stringDecode.replace('2', 'e');
         break;
       case '3':
-        stringDencode = stringDencode.replace('3','i');
+        stringDecode = stringDecode.replace('3','i');
         break;
       case '4':
-        stringDencode = stringDencode.replace('4','o');
+        stringDecode = stringDecode.replace('4','o');
         break;
       case '5':
-        strinDeEncode = stringDencode.replace('5','u');
+        strinDecode = stringDecode.replace('5','u');
         break;
       default:
         break;
