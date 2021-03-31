@@ -21,11 +21,11 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName(list) {
-  let newList = list.shift();
-  let listReverse = list.reverse();
-  let newList2 = listReverse.shift();
-  return `${newList2},${newList}`;
+function concatName(nameArray) {
+  let firstName = nameArray[0];
+  let lastName = nameArray[nameArray.length - 1];
+  let nameString = `${lastName}, ${firstName}`;
+  return nameString;
 }
 
 function footballPoints(wins, ties) {
