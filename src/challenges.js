@@ -53,11 +53,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (cat1Pos < cat2Pos) {
     whoCatches = 'cat1';
-  }
-  else if (cat1Pos === cat2Pos) {
+  } else if (cat1Pos === cat2Pos) {
     whoCatches = 'os gatos trombam e o rato foge';
-  }
-  else {
+  } else {
     whoCatches = 'cat2';
   }
 
@@ -72,14 +70,11 @@ function fizzBuzz(arrNum) {
 
     if (arrNum[index] % 5 === 0 && arrNum[index] % 3 === 0) {
       result.push('fizzBuzz');
-    }
-    else if (arrNum[index] % 5 === 0) {
+    } else if (arrNum[index] % 5 === 0) {
       result.push('buzz');
-    }
-    else if (arrNum[index] % 3 === 0) {
+    } else if (arrNum[index] % 3 === 0) {
       result.push('fizz');
-    }
-    else {
+    } else {
       result.push('bug!');
     }
   }
@@ -92,27 +87,27 @@ function encode(words) {
 
   for (let index = 0; index < words.length; index += 1) {
 
-    switch(arrVowels[index]) {
+    switch (arrVowels[index]) {
       case 'a':
         arrVowels[index] = 1;
         break;
     }
-    switch(words[index]) {
+    switch (words[index]) {
       case 'e':
         arrVowels[index] = 2;
         break;
     }
-    switch(words[index]) {
+    switch (words[index]) {
       case 'i':
         arrVowels[index] = 3;
         break;
     }
-    switch(words[index]) {
+    switch (words[index]) {
       case 'o':
         arrVowels[index] = 4;
         break;
     }
-    switch(words[index]) {
+    switch (words[index]) {
       case 'u':
         arrVowels[index] = 5;
         break;
@@ -128,27 +123,27 @@ function decode(words) {
 
   for (let index = 0; index < words.length; index += 1) {
 
-    switch(arrVowels[index]) {
+    switch (arrVowels[index]) {
       case '1':
         arrVowels[index] = 'a';
         break;
     }
-    switch(words[index]) {
+    switch (words[index]) {
       case '2':
         arrVowels[index] = 'e';
         break;
     }
-    switch(words[index]) {
+    switch (words[index]) {
       case '3':
         arrVowels[index] = 'i';
         break;
     }
-    switch(words[index]) {
+    switch (words[index]) {
       case '4':
         arrVowels[index] = 'o';
         break;
     }
-    switch(words[index]) {
+    switch (words[index]) {
       case '5':
         arrVowels[index] = 'u';
         break;
