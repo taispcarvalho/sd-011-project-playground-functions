@@ -15,8 +15,8 @@ function techList(techs, name) {
   }
   return arrayTechName;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Felipe'));
-console.log(techList([], 'Felipe'));
+// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Felipe'));
+// console.log(techList([], 'Felipe'));
 
 // Desafio 11
 function sizeArray(list) {
@@ -93,11 +93,11 @@ function generatePhoneNumber(array) {
   }
   return phoneNumber;    
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 5, 5, 8, 9, 0, 1]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 19, 0, 1]));
-console.log(generatePhoneNumber([1, 2, 3, 4, -5, 6, 7, 8, 9, 0, 1]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 5, 5, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 19, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, -5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1]));
 
 // Desafio 12
 function triangleCheck() {
