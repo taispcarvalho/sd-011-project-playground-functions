@@ -66,16 +66,14 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(array) { // conditional operator (stackoverflow): https://stackoverflow.com/questions/6259982/how-do-you-use-the-conditional-operator-in-javascript
+
+function fizzBuzz(array) {
   let answer = [];
   for (let i = 0; i < array.length; i += 1) {
-    let fizz = array[i] % 3 === 0 && array[i] % 5 !== 0;
-    let buzz = array[i] % 5 === 0 && array[i] % 3 !== 0;
-    let fizzbuzz = array[i] % 5 === 0 && array[i] % 3 === 0;
-    (fizz ? answer[i] = 'fizz' : buzz ? answer[i] = 'buzz' : fizzbuzz ? answer[i] = 'fizzBuzz' : answer[i] = 'bug!'); 
-  }
+    ((array[i] % 3 === 0 && array[i] % 5 !== 0) ? (answer[i] = 'fizz') : (array[i] % 5 === 0 && array[i] % 3 !== 0) ? (answer[i] = 'buzz') : (array[i] % 5 === 0 && array[i] % 3 === 0) ? (answer[i] = 'fizzBuzz') : (answer[i] = 'bug!'));
+    }
   return answer;
-}
+ }
 
 // Desafio 9
 function encode() {
