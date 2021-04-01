@@ -1,5 +1,6 @@
 // Desafio 10
 function techList(arrayTechList, name) {
+  let answerTechList;
   let arrayTechAndName = [];
   arrayTechList.sort();
 
@@ -10,11 +11,12 @@ function techList(arrayTechList, name) {
         name: name,
       }
     }
-    return arrayTechAndName;
+    answerTechList = arrayTechAndName;
 
   } else {
-    return ('Vazio!');
+    answerTechList = 'Vazio!'
   }
+  return answerTechList;
 }
 
 // Desafio 11
@@ -83,8 +85,6 @@ function hydrate(beverage) {
 
   return answerHydrate;
 }
-
-console.log(hydrate('4 caipirinhas e 2 cervejas'));
 
 module.exports = {
   generatePhoneNumber,

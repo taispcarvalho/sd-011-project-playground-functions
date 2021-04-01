@@ -17,13 +17,18 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(arrayName) {
-  let concatenedName = arrayName[arrayName.length - 1] + ', ' + arrayName[0];
+  let concatenedName = '';
+  for (let index = 0; index < 3; index += 1) {
+
+  }
+   = arrayName[arrayName.length - 1] + ', ' + arrayName[0];
   return concatenedName;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return ((wins * 3) + (ties * 1));
+  let totalPoints = (wins * 3) + (ties * 1);
+  return totalPoints;
 }
 
 // Desafio 6
@@ -60,14 +65,20 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-    return ('cat1');
-  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
-    return ('cat2');
+  let answer = '';
+  let distance1 = Math.abs(cat1 - mouse);
+  let distance2 = Math.abs(cat2 - mouse);
+
+  if (distance1 < distance2) {
+    answer = 'cat1';
+  } else if (distance1 > distance2) {
+    answer = 'cat2';
   } else {
-    return ('os gatos trombam e o rato foge');
+    answer = 'os gatos trombam e o rato foge';
   }
+  return answer;
 }
+
 
 // Desafio 8
 function fizzBuzz(arrayFizzBuzzNumbers) {
@@ -77,12 +88,10 @@ function fizzBuzz(arrayFizzBuzzNumbers) {
     let isDivisibleBy3 = number % 3 === 0;
     let isDivisibleBy5 = number % 5 === 0;
 
-    if (isDivisibleBy3) {
-      if (isDivisibleBy5) {
-        arrayFizzBuzz.push('fizzBuzz');
-      } else {
-        arrayFizzBuzz.push('fizz');
-      }
+    if (isDivisibleBy3 && isDivisibleBy5) {
+      arrayFizzBuzz.push('fizzBuzz');
+    } else if (isDivisibleBy3) {
+      arrayFizzBuzz.push('fizz');  
     } else if (isDivisibleBy5) {
       arrayFizzBuzz.push('buzz');
     } else {
@@ -95,23 +104,26 @@ function fizzBuzz(arrayFizzBuzzNumbers) {
 
 // Desafio 9
 function encode(sentence) {
-  let encodedSentence = '';
-  for (let index = 0; index < sentence.length; index += 1) {
-    if (sentence[index] === 'a') {
-      encodedSentence += '1';
-    } else if (sentence[index] === 'e') {
-      encodedSentence += '2';
-    } else if (sentence[index] === 'i') {
-      encodedSentence += '3';
-    } else if (sentence[index] === 'o') {
-      encodedSentence += '4';
-    } else if (sentence[index] === 'u') {
-      encodedSentence += '5';
-    } else {
-      encodedSentence += sentence[index];
-    }
+  let objectVowels = {
+    a: '1', 
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
   }
-  return encodedSentence;
+
+  let arrayVowels = Object.keys(objectVowels);
+
+  for (let index = 0; index < sentence.length; index += 1) {
+    for (let vowel of arrayVowels) {
+      if (sentence[index] === vowel) {
+        sentence = sentence.replace(vowel, objectVowels[vowel])
+        break
+      }
+    } 
+  }
+
+  return sentence;
 }
 
 function decode(sentence) {
