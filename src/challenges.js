@@ -31,11 +31,11 @@ function highestCount(array) {
     if (array[i] > maior) {
       maior = array[i];
     }
-    if (array[n] === maior) {
+    if (array[i] === maior) {
       counter += 1;
     }
-  return counter;
   }
+  return counter;
 }
 
 // Desafio 7
@@ -122,8 +122,6 @@ function decode(array) {
   }
   return output.join('');
 }
-
-console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
