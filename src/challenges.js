@@ -2,14 +2,10 @@
 function compareTrue(value1, value2) {
   return value1 && value2;
 }
-console.log(compareTrue(false, true));
-console.log(compareTrue(false, false));
-console.log(compareTrue(true, true));
-
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2
 }
 
 // Desafio 3
