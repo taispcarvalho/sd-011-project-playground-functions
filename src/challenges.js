@@ -15,8 +15,8 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arrayStrings) {
-  let finalString = (arrayStrings[arrayStrings.length - 1] + ', ' + arrayStrings[0]); // retirar parênteses
-  return finalString; 
+  let finalString = `${arrayStrings[arrayStrings.length -1]} , ${arrayStrings[0]}` 
+  return finalString;
 }
 
 // Desafio 5
@@ -72,11 +72,6 @@ function fizzBuzz(array) {
   }
   return formattedArray;
 }
-
-console.log(fizzBuzz([2, 15,7,9,45]));
-console.log(fizzBuzz([7,9]));
-console.log(fizzBuzz([9,25]));
-
 
 // Desafio 9
 function encode(str) {
