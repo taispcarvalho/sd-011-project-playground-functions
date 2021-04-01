@@ -80,8 +80,7 @@ function fizzBuzz(fizzBuzzArray) {
 }
 
 // Desafio 9
-function encode(string) 
-{
+function encode(string) {
 
   let stringArray = string.toLowerCase().split('');
 
@@ -102,8 +101,7 @@ function encode(string)
   return stringfinal;
 }
 
-function decode(string) 
-{
+function decode(string) {
   let stringArray = string.toLowerCase().split('');
 
   for (let index = 0; index < stringArray.length; index += 1) {
