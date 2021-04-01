@@ -15,8 +15,10 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1] + ', ' + array[0];
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
+
+console.log(concatName(['Luciano', 'pimenta', 'junior']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -44,6 +46,7 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let firstDistance;
   let secondDistance;
+  let cat;
   if (mouse <= cat1) {
     firstDistance = cat1 - mouse;
   } else {
@@ -55,12 +58,13 @@ function catAndMouse(mouse, cat1, cat2) {
     secondDistance = mouse - cat1;
   }
   if (firstDistance < secondDistance) {
-    return 'cat1';
+    cat = 'cat1';
   } else if (firstDistance > secondDistance) {
-    return 'cat2';
+    cat = 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge';
+    cat = 'os gatos trombam e o rato foge';
   }
+  return cat;
 }
 
 // Desafio 8
