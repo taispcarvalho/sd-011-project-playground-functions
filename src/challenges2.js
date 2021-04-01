@@ -42,7 +42,7 @@ function hydrate(string) {
   }
   // seu código aqui
 }
-console.log(hydrate("1 cerveja"))
+console.log(hydrate("3 cerveja"))
 module.exports = {
   generatePhoneNumber,
   techList,
