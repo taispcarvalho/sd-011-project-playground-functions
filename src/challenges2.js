@@ -15,11 +15,11 @@ function techList(array, myName) {
 }
 
 // Desafio 11
-function repeatNumber(numbers, x){
+function repeatNumber(numbers, x) {
   let repetidos = 0;
   for (let index = 0; index < numbers.length; index += 1){
     if (numbers[index] === x) {
-      repetidos +=1
+      repetidos += 1;
     }
   }
 
@@ -27,11 +27,10 @@ function repeatNumber(numbers, x){
 }
 
 function numbereleven(number) {
-  for (let index of number){
+  for (let index of number) {
     if (index < 0 || index > 9 || repeatNumber(number, index) > 2) {
       return false;
     }
-
   }
 }
 
@@ -48,7 +47,7 @@ function generatePhoneNumber(numberPhone) {
       numbercell = numbercell.concat(index);
     }
     arraynumber = numbercell.replace(RegExp, '($1) $2-$3');
-  } 
+  }
   return arraynumber;
   // seu código aqui
 }
@@ -75,18 +74,17 @@ function hydrate(string) {
   let bebeAgua = 0;
   for (let index in string) {
     if (string[index] === '1' || string[index] === '2' || string[index] === '3' || string[index] === '4' || string[index] === '5' || string[index] === '6' || string[index] === '7' || string[index] === '8' || string[index] === '9') {
-      bebeAgua = bebeAgua + parseInt(string[index]);
+      bebeAgua += parseInt(string[index]);
     }
   }
   if (bebeAgua === 1) {
-    bebeAgua = `${bebeAgua + ' copo de água'}`;
+    bebeAgua = `${bebeAgua} + ' copo de água'`;
   } else {
-    return `${bebeAgua + ' copos de água'}`;
+    return `${bebeAgua} ' copos de água'`;
   }
   return bebeAgua;
   // seu código aqui
 }
-
 
 module.exports = {
   generatePhoneNumber,
