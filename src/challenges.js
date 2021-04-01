@@ -97,7 +97,7 @@ function decode(string) {
   string = string.split('');
   for (let n in dict) {
     for (let n2 of string) {
-      if (n2 === dict[n]) {
+      if (n2 === dict[n].toString()) {
         let indexOfLetter = string.indexOf(n2);
         string[indexOfLetter] = n;
       }
