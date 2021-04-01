@@ -85,29 +85,18 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(phrase) {
-  let encodePhrase = phrase;
+  let target = 'aeiou';
+  let encodeKey = '12345';
 
-  for (let index in encodePhrase) {
-    switch (encodePhrase[index]) {
-      case 'a':
-        encodePhrase = encodePhrase.replace('a', '1');
-        break;
-      case 'e':
-        encodePhrase = encodePhrase.replace('e', '2');
-        break;
-      case 'i':
-        encodePhrase = encodePhrase.replace('i', '3');
-        break;
-      case 'o':
-        encodePhrase = encodePhrase.replace('o', '4');
-        break;
-      case 'u':
-        encodePhrase = encodePhrase.replace('u', '5');
-        break;
-      default: break;
+  for (let index in frase) {
+    for (let index2 in target) {
+      if (frase[index] === target[index2]) {
+        frase = frase.replace(frase[index],encodeKey[index2]);
+      }
     }
-  } return encodePhrase;
+  } return frase;
 }
+
 function decode(phrase) {
   let decodePhrase = phrase;
 
@@ -132,8 +121,6 @@ function decode(phrase) {
     }
   } return decodePhrase;
 }
-/* Consultei o repositório do Vitor Hugo para resolver essa parte. Link do repositório
-https://github.com/tryber/sd-011-project-playground-functions/pull/154/files#submit-review */
 
 module.exports = {
   calcArea,
