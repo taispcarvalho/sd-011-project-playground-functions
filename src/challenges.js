@@ -109,15 +109,6 @@ function fizzBuzz(array) {
 // }
 // console.log(encodeUsingIf('hi there!'));
 
-function encode(string) {
-  let result = [];
-  for (let index in string) {
-    result.push(encodeCaracter(string[index]));
-  }
-  return result.join('');
-}
-console.log(encode('hi there!'));
-
 function encodeCaracter(caracter) {
   let result = '';
   switch (caracter) {
@@ -141,6 +132,15 @@ function encodeCaracter(caracter) {
   }
   return result;
 }
+
+function encode(string) {
+  let result = [];
+  for (let index in string) {
+    result.push(encodeCaracter(string[index]));
+  }
+  return result.join('');
+}
+console.log(encode('hi there!'));
 
 function decode(string) {
   let result = [];
