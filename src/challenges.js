@@ -20,8 +20,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let concatenation = array[array.length - 1] + ', ' + array[0];
-  return concatenation;
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -34,12 +33,12 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let cont = 0;
   let biggerNumber = 0;
-  for (var i = 0; i < array.length; i += 1) {
-    if (biggerNumber <= array[i]) {
-      biggerNumber = array[i];
+  for (let index = 0; index < array.length; index += 1) {
+    if (biggerNumber <= array[index]) {
+      biggerNumber = array[index];
     }
   }
-  for (var i = 0; i < array.length; i += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     if (biggerNumber === array[i]) {
       cont += 1;
     }
@@ -49,7 +48,13 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
+  if (cat1 === cat2) {
+    return `Os gatos trombam e o rato foge`;
+  } else if (cat1 < cat2) {
+    return cat1;
+  } else {
+    return cat2;
+  }
 }
 
 // Desafio 8
