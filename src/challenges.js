@@ -65,14 +65,11 @@ function fizzBuzz(fizzBuzzArray) {
   for (let index = 0; index < fizzBuzzArray.length; index += 1) {
     if (fizzBuzzArray[index] % 3 === 0 && fizzBuzzArray[index] % 5 === 0) {
       finalArray.push('fizzBuzz');
-    } 
-    else if (fizzBuzzArray[index] % 5 === 0) {
+    } else if (fizzBuzzArray[index] % 5 === 0) {
       finalArray.push('buzz');
-    }
-    else if (fizzBuzzArray[index] % 3 === 0) {
+    } else if (fizzBuzzArray[index] % 3 === 0) {
       finalArray.push('fizz');
-    }
-    else {
+    } else {
       finalArray.push('bug!');
     }
   }
