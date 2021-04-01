@@ -9,10 +9,10 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB , lineC) {
+function triangleCheck(lineA, lineB, lineC) {
   if (lineA < (lineB + lineC) && lineA > (lineB - lineC)) {
-    return true
-  } return false
+    return true;
+  } return false;
 } // console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
