@@ -23,7 +23,7 @@ function concatName(array) {
 
   for (let index = array.length; index >= 0; index -= 1) {
     if (index === 0) {
-      out += ', ' + array[index];
+      out = out + ', ' + array[index];
     }
   } return out;
 }
@@ -37,7 +37,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numeros) {
   let inOrder = numeros.sort();
-  let highest = inOrder[inOrder.length - 1]
+  let highest = inOrder[inOrder.length - 1];
   let count = 0;
 
   for (let index in inOrder) {
@@ -53,7 +53,7 @@ https://github.com/tryber/sd-011-project-playground-functions/pull/154/files#sub
 function catAndMouse(mouse, cat1, cat2) {
   let atack1 = Math.abs(cat1 - mouse);
   let atack2 = Math.abs(cat2 - mouse);
-    
+  
   if (atack1 < atack2) {
     return 'cat1';
   } else if (atack2 < atack1) {
@@ -86,7 +86,7 @@ function fizzBuzz(array) {
 function encode(phrase) {
   let newPhrase = phrase;
 
-  for(let index in newPhrase) {
+  for (let index in newPhrase) {
     switch (newPhrase[index]) {
       case 'a':
         newPhrase = newPhrase.replace('a', '1');
@@ -105,7 +105,7 @@ function encode(phrase) {
         break;
       default: break;
     }
-  } return newPhrase
+  } return newPhrase;
 }
 function decode(phrase) {
   let newPhrase = phrase;
