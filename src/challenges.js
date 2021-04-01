@@ -49,17 +49,15 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse(1, 0, 2));
-
 // Desafio 8
 function fizzBuzz(numbers) {
   let resultString = [];
-  for (let i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] % 3 === 0 && numbers[i] % 5 !== 0) {
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
       resultString.push('fizz');
-    } else if (numbers[i] % 5 === 0 && numbers[i] % 3 !== 0) {
+    } else if (numbers[index] % 5 === 0 && numbers[index] % 3 !== 0) {
       resultString.push('buzz');
-    } else if (numbers[i] % 5 === 0 && numbers[i] % 3 === 0) {
+    } else if (numbers[index] % 15 === 0) {
       resultString.push('fizzBuzz');
     } else {
       resultString.push('bug!');
