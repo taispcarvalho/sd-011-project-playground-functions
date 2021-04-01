@@ -51,13 +51,27 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 // Desafio 8
+
+function preBuzz(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
 function fizzBuzz(arrayNumber) {
- let buzzArray = [];
- for (let array0 of arrayNumber) {
-   buzzArray.push(analisyFizz(array0));
- } 
-  return buzzArray;
- }
+  let retornar = [];
+  for (let index = 0; index < array.length; index += 1) {
+    retornar.push(checkDividers35(array[index]));
+  }
+  return retornar;
+}
+
 
 // Desafio 9
 function encode(string) {
