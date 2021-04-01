@@ -78,8 +78,6 @@ function fizzBuzz(numberArray) {
   return newArray;
 }
 
-console.log(fizzBuzz([9,5,15,8]));
-
 // Desafio 9
 function encode(string) {
   let newString = '';
