@@ -3,7 +3,7 @@ function objectBuilder(tech, name) {
   let object = {
     tech: `${tech}`,
     name: `${name}`
-  }
+  };
   return object;
 }
 
@@ -17,12 +17,9 @@ function techList(techList, name) {
       newTechList.push(objectBuilder(tech, name));
     }
     return newTechList;
-  } else {
-    return 'Vazio!';
   }
+  return 'Vazio!';
 }
-
-console.log(techList(techs, 'Eduardo'));
 
 // Desafio 11
 function generatePhoneNumber() {
