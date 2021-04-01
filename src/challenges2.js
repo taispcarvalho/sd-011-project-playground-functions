@@ -18,17 +18,16 @@ function techList(array, myName) {
 function repeatNumber(numbers, x){
   let repetidos = 0;
   for (let index = 0; index < numbers.length; index += 1){
-      if(numbers[index] === x){
-        repetidos +=1
-      }
+    if (numbers[index] === x) {
+      repetidos +=1
+    }
   }
 
   return repetidos;
 }
 
-
-function numbereleven (number) {
-  for(let index of number){
+function numbereleven(number) {
+  for (let index of number){
     if (index < 0 || index > 9 || repeatNumber(number, index) > 2) {
       return false;
     }
@@ -40,7 +39,7 @@ function generatePhoneNumber(numberPhone) {
   let arraynumber = '';
   let numbercell = '';
   let RegExp = /(\d{2})(\d{5})(\d{4})/;
-  if (numberPhone.length != 11) {
+  if (numberPhone.length !== 11) {
     arraynumber = `${'Array com tamanho incorreto.'}`;
   } else if (numbereleven(numberPhone) === false) {
     arraynumber = `${'não é possível gerar um número de telefone com esses valores'}`;
@@ -49,8 +48,7 @@ function generatePhoneNumber(numberPhone) {
       numbercell = numbercell.concat(index);
     }
     arraynumber = numbercell.replace(RegExp, '($1) $2-$3');
-  }
-    
+  } 
   return arraynumber;
   // seu código aqui
 }
@@ -76,20 +74,19 @@ console.log(triangleCheck(10, 14, 8));
 function hydrate(string) {
   let bebeAgua = 0;
   for (let index in string) {
-    if (string[index] === '1' || string[index] === '2' || string[index] === '3' || string[index] === '4' || string[index] === '5' || string[index] === '6' || string[index] === '7' || string[index] === '8' ||string[index] === '9') {
+    if (string[index] === '1' || string[index] === '2' || string[index] === '3' || string[index] === '4' || string[index] === '5' || string[index] === '6' || string[index] === '7' || string[index] === '8' || string[index] === '9') {
       bebeAgua = bebeAgua + parseInt(string[index]);
     }
   }
   if (bebeAgua === 1) {
-    bebeAgua = bebeAgua + ' copo de água';
+    bebeAgua = `${bebeAgua + ' copo de água'}`;
   } else {
-    return bebeAgua + ' copos de água';
+    return `${bebeAgua + ' copos de água'}`;
   }
   return bebeAgua;
   // seu código aqui
 }
 
-console.log(hydrate("3 cerveja, 11 capirinhas."));
 
 module.exports = {
   generatePhoneNumber,
