@@ -26,10 +26,9 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-// https://www.geeksforgeeks.org/c-program-find-largest-element-array/
 function highestCount(listOfNumbers) {
-let count = 0;
-let highestNumber = listOfNumbers[0];
+  let count = 0;
+  let highestNumber = listOfNumbers[0];
   for (let index = 1; index < listOfNumbers.length; index += 1) {
     if (listOfNumbers[index] > highestNumber) {
       highestNumber = listOfNumbers[index];
@@ -44,10 +43,30 @@ let highestNumber = listOfNumbers[0];
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 < mouse) {
+    cat1 = mouse - cat1;
+  }
+  if (cat2 < mouse) {
+    cat1 = mouse - cat2;
+  }
+  if (cat1 > mouse) {
+    cat1 = cat1 - mouse;
+  }
+  if (cat2 > mouse) {
+    cat2 = cat2 - mouse;
+    }
+  if (cat1 < cat2) {
+    console.log('cat1');
+  } 
+  else if (cat2 < cat1) {
+    console.log('cat2');
+  }else {
+  console.log('os gatos trombam e o rato foge');
+  }
+  return;
 }
-
+ 
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
