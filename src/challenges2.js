@@ -26,10 +26,25 @@ function techList(arrayTech, nome) {
 function generatePhoneNumber() {
   // seu código aqui
 }
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function lineTest1(l1, l2, l3) {
+  if (l1 > l2 + l3 || l2 > l1 + l3 || l3 > l1 + l2) {
+    return false;
+  }
+  return true;
+}
+
+function lineTest2(l1, l2, l3) {
+  if (l1 < Math.abs(l2 - l3) || l2 < Math.abs(l1 - l3) || l3 < Math.abs(l1 - l2)) {
+    return false;
+  }
+  return true;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  if (!lineTest1(lineA, lineB, lineC)) { return false; }
+  if (!lineTest2(lineA, lineB, lineC)) { return false; }
+  return true;
 }
 
 // Desafio 13
