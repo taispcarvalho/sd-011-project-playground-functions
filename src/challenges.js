@@ -9,23 +9,23 @@ if (value1 === true && value2 === true){
 
 // Desafio 2
 function calcArea(base, height) {
- return (base * height) / 2.
-} //console.log(calcArea(10, 50))
+  return (base * height) / 2;
+} // console.log(calcArea(10, 50))
 
 // Desafio 3
 function splitSentence(frase) {
-  return frase.split(' ')
-} //console.log(splitSentence("go Trybe"))
+  return frase.split(' ');
+} // console.log(splitSentence("go Trybe"))
 
 // Desafio 4
 function concatName(array) {
-  return `${array[array.length-1]}, ${array[0]}`
-} //console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+  return `${array[array.length - 1]}, ${array[0]}`;
+} // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3 ) + ties
-} //console.log(footballPoints(14,8))
+  return (wins * 3) + ties;
+} // console.log(footballPoints(14,8))
 
 // Desafio 6
 function highestCount(arra) {
@@ -41,15 +41,15 @@ function highestCount(arra) {
 } console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let run1 = Math.abs (mouse - cat1);
-  let run2 = Math.abs (mouse - cat2);
+  let run1 = Math.abs(mouse - cat1);
+  let run2 = Math.abs(mouse - cat2);
   if (run2 > run1) {
-    return 'cat1'
-  } else if (run1 > run2){
-    return 'cat2'
-  } else { return`"os gatos trombam e o rato foge"`};
-  
-} //console.log(catAndMouse(5, 2, 3))
+    return 'cat1';
+  } if (run1 > run2) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
+} // console.log(catAndMouse(5, 2, 3))
 
 // Desafio 8
 function fizzBuzz(numero) {
