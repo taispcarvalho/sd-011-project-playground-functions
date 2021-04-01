@@ -57,26 +57,85 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function getFizzBuzzString(value) {
+  let str = 'bug!';
+  if (value % 3 === 0) {
+    str = 'fizz';
+  }
+  if (value % 5 === 0) {
+    if (str !== 'bug!') {
+      str += 'Buzz';
+    } else {
+      str = 'buzz';
+    }
+  }
+  return str;
+}
+
 function fizzBuzz(fbArray) {
   let result = [];
   for (let index = 0; index < fbArray.length; index += 1) {
-    if (fbArray[index] % 15 === 0) {
-      result.push('fizzBuzz');
-    } else if (fbArray[index] % 3 === 0) {
-      result.push('fizz');
-    } else if (fbArray[index] % 5 === 0) {
-      result.push('buzz');
-    } else { result.push('bug!'); }
+    let str = getFizzBuzzString(fbArray[index]);
+
+    result.push(str);
   }
   return result;
 }
+// Precisa diminuir a complexidade do Desafio 8
 
 // Desafio 9
-function encode() {
-
+function encodeCharacter(character) {
+  if (character === 'a') {
+    return '1';
+  }
+  if (character === 'e') {
+    return '2';
+  }
+  if (character === 'i') {
+    return '3';
+  }
+  if (character === 'o') {
+    return '4';
+  }
+  if (character === 'u') {
+    return '5';
+  }
+  return character;
 }
-function decode() {
-  // seu código aqui
+
+function encode(initString) {
+  let newString = '';
+  for (let index = 0; index < initString.length; index += 1) {
+    newString += encodeCharacter(initString[index]);
+  }
+  return newString;
+}
+
+function decodeCharacter(character) {
+  if (character === '1') {
+    return 'a';
+  }
+  if (character === '2') {
+    return 'e';
+  }
+  if (character === '3') {
+    return 'i';
+  }
+  if (character === '4') {
+    return 'o';
+  }
+  if (character === '5') {
+    return 'u';
+  }
+  return character;
+}
+
+function decode(initString) {
+  let newString = '';
+  for (let index = 0; index < initString.length; index += 1) {
+    newString += decodeCharacter(initString[index]);
+  }
+  return newString;
 }
 
 module.exports = {
