@@ -74,14 +74,12 @@ function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   listSides = [lineA, lineB, lineC]
   for (n in listSides) {
-    sideBuffer = listSides.slice(n,n+1);
+    sideBuffer = listSides.slice(n,eval(n)+1);
     if (sideBuffer >= (listSides[0]+listSides[1]) || sideBuffer <= Math.abs(listSides[0]-listSides[1])) {
       return false;
-    } else {
-      return true;
+    } 
     }
-
-  }
+  return true;
 
 }
 
