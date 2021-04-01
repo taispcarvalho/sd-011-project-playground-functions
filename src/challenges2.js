@@ -45,21 +45,28 @@ function generatePhoneNumber(numbers) {
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 9]));
 
 // Desafio 12
+function boo1(lineA, lineB, lineC) {
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
+    return true;
+  }
+}
+
+function boo2(lineA, lineB, lineC) {
+  if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
+    return true;
+  }
+}
+
+function boo3(lineA, lineB, lineC) {
+  if (lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) {
+    return true;
+  }
+}
+
+
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  let boo1 = false;
-  let boo2 = false;
-  let boo3 = false;
-  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
-    boo1 = true;
-  }
-  if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
-    boo2 = true;
-  }
-  if (lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) {
-    boo3 = true;
-  }
-  return boo1 && boo2 && boo3
+  return boo1(lineA, lineB, lineC) && boo2(lineA, lineB, lineC) && boo3(lineA, lineB, lineC);
 }
 
 console.log(triangleCheck(10, 14, 8));
