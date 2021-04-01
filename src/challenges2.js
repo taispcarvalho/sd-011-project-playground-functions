@@ -84,7 +84,7 @@ function hydrate(drinksTaken) {
       cupsOfWater += drinksListArray[index];
     }
   }
-  if (cupsofWater > 1){
+  if (cupsOfWater > 1){
   return cupsOfWater + ' copos de água';
   }
   return cupsOfWater + ' copo de água';
