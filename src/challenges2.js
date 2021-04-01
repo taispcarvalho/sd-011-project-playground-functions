@@ -44,7 +44,7 @@ function generatePhoneNumber(array) {
     } if (index === 0) {
       phone += `(${array[index]}`;
     } else if (index === 1) {
-      phone += `${array[index]}) `;
+      phone += `${array[index]})`;
     } else if (index === 6) {
       phone += `${array[index]}-`;
     } else {
