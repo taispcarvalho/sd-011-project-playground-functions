@@ -91,23 +91,19 @@ function encode(words) {
       case 'a':
         arrVowels[index] = 1;
         break;
-    }
-    switch (words[index]) {
+
       case 'e':
         arrVowels[index] = 2;
         break;
-    }
-    switch (words[index]) {
+
       case 'i':
         arrVowels[index] = 3;
         break;
-    }
-    switch (words[index]) {
+
       case 'o':
         arrVowels[index] = 4;
         break;
-    }
-    switch (words[index]) {
+
       case 'u':
         arrVowels[index] = 5;
         break;
@@ -127,23 +123,19 @@ function decode(words) {
       case '1':
         arrVowels[index] = 'a';
         break;
-    }
-    switch (words[index]) {
+
       case '2':
         arrVowels[index] = 'e';
         break;
-    }
-    switch (words[index]) {
-      case '3':
+
+        case '3':
         arrVowels[index] = 'i';
         break;
-    }
-    switch (words[index]) {
-      case '4':
+
+        case '4':
         arrVowels[index] = 'o';
         break;
-    }
-    switch (words[index]) {
+
       case '5':
         arrVowels[index] = 'u';
         break;
