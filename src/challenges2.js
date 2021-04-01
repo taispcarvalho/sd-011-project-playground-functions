@@ -9,19 +9,18 @@ Para cada tecnologia no array, crie um objeto com a seguinte estrutura:
 Caso o array venha vazio sua função deve retornar 'Vazio!'*/
 function techList(techArray, name) {
   let objectArray = [];
-  if (techArray.length < 0){
-    return 'Vazio!';
-  }
-  for ( let index = 0; index < techArray.length; index += 1){
+  let arraySorted = techArray.sort();
+  for ( let index = 0; index < arraySorted.length; index += 1){
     let object = {
-      tech: techArray[index],
+      tech: arraySorted[index],
       name
     }
     objectArray.push(object);
   }
   return (techArray.length === 0) ? 'Vazio!' : objectArray;
 }
-console.log(techList([],"Lucas"));
+/* console.log(techList([],"Lucas")); */
+console.log(techList(['React','Jest', 'HTML', 'CSS', 'JavaScript'],'Lucas'));
 /* O que será verificado:
 Retorne uma lista de objetos ordenados quando é passada uma lista com 5 tecnologias deve
 Retorne a mensagem de erro 'Vazio!' quando a lista tiver com 0 tecnologias
