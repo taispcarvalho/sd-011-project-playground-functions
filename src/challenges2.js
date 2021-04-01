@@ -1,23 +1,23 @@
 // Desafio 10
-let techs = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-let techsEmpty = [];
-function techList(array, name) {
+function createObject(array, name) {
   let newArray = [];
+  for (let index = 0; index < array.length; index += 1) {
+    let objeto = {
+      tech: array[index],
+      name: `${name}`,
+    };
+    newArray.push(objeto);
+  }
+  return newArray;
+}
+
+function techList(array, name) {
   if (array.length > 0) {
-    for (let index = 0; index < array.length; index += 1) {
-      let objeto = {
-        tech: array[index],
-        name: `${name}`,
-      };
-      newArray.push(objeto);
-    }
-    return newArray.sort((a, b) => (a.tech > b.tech ? 1 : -1));
+    return createObject(array, name).sort((a, b) => (a.tech > b.tech ? 1 : -1));
   }
   return 'Vazio!';
 }
 
-console.log(techList(techs, 'Henrique'));
-console.log(techList(techsEmpty, 'Henrique'));
 // Desafio 11
 function verify(item, array) {
   let counter = 0;
