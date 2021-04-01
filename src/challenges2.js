@@ -82,12 +82,8 @@ function generatePhoneNumber(arrayOfNumbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC) {
-    if (lineB < lineA + lineC) {
-      if (lineC < lineA + lineB) {
-        return true;
-      }
-    }
+  if ((lineA < lineB + lineC) && (lineB < lineA + lineC) && (lineC < lineA + lineB)) {
+    return true;
   }
   return false;
 }
