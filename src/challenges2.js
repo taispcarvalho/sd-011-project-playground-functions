@@ -43,9 +43,45 @@ function techList(techs, name) {
   return finalList;
 }
 
+// Auxiliary function for Desafio 11
+function exceedNumberRepetition(number) {
+  maxRepetition = 2;
+}
+
+// Auxiliary function for Desafio 11
+function numberInValidRange(number) {
+  let lowerBound = 0;
+  let upperBound = 9;
+
+  if (number >= lowerBound && number <= upperBound) {
+    return true;
+  }
+
+  return false;
+}
+
+// Auxiliary function for Desafio 11
+function allNumbersInValidRange(numbers) {
+  let foundInvalidNumber = false;
+
+  for (let index = 0; index < numbers.length && !foundInvalidNumber; index += 1) {
+    foundInvalidNumber = !numberInValidRange(numbers[index]);
+  }
+
+  return foundInvalidNumber;
+}
+
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  if (!allNumbersInValidRange(numbers) || exceedNumberRepetition(numbers)) {
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+
+
 }
 
 // Desafio 12
