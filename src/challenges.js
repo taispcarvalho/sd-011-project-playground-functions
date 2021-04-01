@@ -97,32 +97,36 @@ function fizzBuzz(numArray) {
 
 // Desafio 9
 function encode(string) {
-  let tempString = '';
+  let tempString = string.split('');
   let letterEncodeValue = {
-    a: '1',
-    e: '2',
-    i: '3',
-    o: '4',
-    u: '5'
+    a: '1', e: '2', i: '3', o: '4', u: '5'
   };
 
-  for (let index = 0; index < string.length - 1; index += 1) {
-    tempString += string[index];
-    console.log(letterEncodeValue.a);
+  for (let index = 0; index < tempString.length - 1; index += 1) {
     for (let letter in letterEncodeValue) {
-      if (string[index] === letter) {
+      if (tempString[index] === letter) {
         tempString[index] = letterEncodeValue[letter];
       }
     }
   }
-  return tempString;
+  return tempString.join('');
 }
 
-console.log(encode('hi there!'));
-
 // Desafio 9
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let tempString = string.split('');
+  let letterEncodeValue = {
+    a: '1', e: '2', i: '3', o: '4', u: '5'
+  };
+
+  for (let index = 0; index < tempString.length - 1; index += 1) {
+    for (let letter in letterEncodeValue) {
+      if (tempString[index] === letterEncodeValue[letter]) {
+        tempString[index] = letter;
+      }
+    }
+  }
+  return tempString.join('');
 }
 
 module.exports = {
