@@ -98,28 +98,16 @@ function encode(phrase) {
 }
 
 function decode(phrase) {
-  let decodePhrase = phrase;
+  let target = '12345';
+  let decodeKey = 'aeiou';
 
-  for (let index in decodePhrase) {
-    switch (decodePhrase[index]) {
-      case '1':
-        decodePhrase = decodePhrase.replace('1', 'a');
-        break;
-      case '2':
-        decodePhrase = decodePhrase.replace('2', 'e');
-        break;
-      case '3':
-        decodePhrase = decodePhrase.replace('3', 'i');
-        break;
-      case '4':
-        decodePhrase = decodePhrase.replace('4', 'o');
-        break;
-      case '5':
-        decodePhrase = decodePhrase.replace('5', 'u');
-        break;
-      default: break;
+  for (let index in phrase) {
+    for (let index2 in target) {
+      if (phrase[index] === target[index2]) {
+        phrase = phrase.replace(phrase[index], decodeKey[index2]);
+      }
     }
-  } return decodePhrase;
+  } return phrase;
 }
 /* Consultei o repositório do Vitor Hugo para resolver essa parte. Link do repositório
 https://github.com/tryber/sd-011-project-playground-functions/pull/154/files#submit-review */
