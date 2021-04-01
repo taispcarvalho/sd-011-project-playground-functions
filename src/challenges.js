@@ -95,7 +95,6 @@ function encode(sentence) {
   }
   return newSentence;
 }
-console.log(encode('Hello, World'));
 
 function decode(sentence) {
   let replacement = {
@@ -115,7 +114,6 @@ function decode(sentence) {
   }
   return newSentence;
 }
-console.log(decode('H2ll4, W4rld'));
 
 module.exports = {
   calcArea,
