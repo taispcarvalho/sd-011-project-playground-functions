@@ -90,15 +90,27 @@ function fizzBuzz(nArray) {
 
   return result;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  phrase = phrase.replace('a', '1');
+  phrase = phrase.replace('e', '2');
+  phrase = phrase.replace('i', '3');
+  phrase = phrase.replace('o','4');
+  phrase = phrase.replace('u','5');
+  return phrase;
 }
-function decode() {
-  // seu código aqui
+console.log(encode('Oi Priscila Bernardo!'));
+
+function decode(phrase) {
+  phrase = phrase.replace('1', 'a');
+  phrase = phrase.replace('2', 'e');
+  phrase = phrase.replace('3', 'i');
+  phrase = phrase.replace('4','o');
+  phrase = phrase.replace('5','u');
+  return phrase;
 }
+console.log(encode('O3 Priscil1 B2rnard4!'));
 
 module.exports = {
   calcArea,
