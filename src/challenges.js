@@ -12,13 +12,13 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(' '); // Stackoverflow: https://pt.stackoverflow.com/questions/204346/como-pegar-uma-palavra-dentro-de-uma-string-frase-em-node-js
+  return string.split(' '); // string.split() (Stackoverflow): https://pt.stackoverflow.com/questions/204346/como-pegar-uma-palavra-dentro-de-uma-string-frase-em-node-js
 }
 console.log(splitSentence('oi tudo bem'));
 // Desafio 4
 function concatName(array) {
-  let [u, p] = [array[array.length - 1], array[0]]; // Destructure Assignment: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#trocando_vari%C3%A1veis
-  return `${u}, ${p}`; // ES6 template literals: https://stackoverflow.com/questions/46858840/unexpected-string-concatenation
+  let [u, p] = [array[array.length - 1], array[0]]; // Destructure Assignment (MDN): https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#trocando_vari%C3%A1veis
+  return `${u}, ${p}`; // ES6 template literals (Stackoverflow): https://stackoverflow.com/questions/46858840/unexpected-string-concatenation
 }
 
 // Desafio 5
@@ -53,8 +53,19 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1P = Math.abs(mouse - cat1); // Math.abs() (MDN): https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+  let cat2P = Math.abs(mouse - cat2);
+  let string;
+
+  if (cat1P < cat2P)
+    string = 'cat1';
+  else if (cat2P < cat1P)
+    string = 'cat2';
+  else
+    string = 'os gatos trombam e o rato foge';
+  
+  return string;
 }
 
 // Desafio 8
