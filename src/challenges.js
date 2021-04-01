@@ -93,7 +93,7 @@ function fizzBuzz(nArray) {
 
 // Desafio 9
 function encode(phrase) {
-  for (let index = 0; index < phrase.length; index +=1) {
+  for (let index = 0; index < phrase.length; index += 1) {
     phrase = phrase.replace('a', '1');
     phrase = phrase.replace('e', '2');
     phrase = phrase.replace('i', '3');
@@ -105,7 +105,7 @@ function encode(phrase) {
 }
 
 function decode(phrase) {
-  for (let index = 0; index < phrase.length; index +=1) {
+  for (let index = 0; index < phrase.length; index += 1) {
     phrase = phrase.replace('1', 'a');
     phrase = phrase.replace('2', 'e');
     phrase = phrase.replace('3', 'i');
