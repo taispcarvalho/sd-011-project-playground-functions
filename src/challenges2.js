@@ -13,8 +13,42 @@ function techList(techArray, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function validationPhoneNumbers2(array, num, count) {
+  let count2 = count;
+  for (let i2 = 0; i2 < array.length; i2 += 1) {
+    if (array[i2] === num) {
+      count2 += 1;
+    }
+  }
+  return count2;
+}
+function validationPhoneNumbers1(array) {
+  let validation2 = true;
+  for (let i = 0; i < array.length; i += 1) {
+    let count = 0;
+    count = validationPhoneNumbers2(array, array[i], count);
+    if (array[i] < 0 || array[i] > 9 || count > 3) {
+      validation2 = false;
+    }
+  }
+  return validation2;
+}
+
+function generatePhoneNumber(phoneNumArray) {
   // seu código aqui
+  if (phoneNumArray.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  let validation1 = validationPhoneNumbers1(phoneNumArray);
+  if (validation1) {
+    // Referência: https://www.florin-pop.com/blog/2019/04/jcc-create-a-phone-number/
+    let numberMask = '(xx) xxxxx-xxxx';
+    for (let num of phoneNumArray) {
+      numberMask = numberMask.replace('x', num);
+    }
+    return numberMask;
+  }
+  return 'Não é possível gerar um número de telefone com esses valores.';
 }
 
 // Desafio 12
