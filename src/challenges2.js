@@ -1,7 +1,25 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+let newTechnology = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+let newName = 'Murilo';
+function techList(learningTechnology, name) {
+  let outExit = [];
+  for(let key of learningTechnology.sort()) {
+    outExit.push({tech: key, name: name}); 
+  }
+  return outExit;
 }
+console.log(techList(newTechnology, newName))
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -9,6 +27,7 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
+
 function triangleCheck() {
   // seu código aqui
 }
