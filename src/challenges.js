@@ -16,8 +16,12 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  let firstName = names.shift();
+  let lastName = names.pop();
+  let concatenatedNames = [];
+  concatenatedNames.push(lastName, firstName);
+  return concatenatedNames;
 }
 
 // Desafio 5
