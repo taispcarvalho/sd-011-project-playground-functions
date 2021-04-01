@@ -87,12 +87,33 @@ let arrayE = [2, 15, 7, 9, 45];
 console.log(fizzBuzz(arrayE));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  let eVogals = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  let eResult = '';
+  for (let vogal of text) {
+    if (eVogals[vogal]) {
+      eResult += eVogals[vogal];
+    } else {
+      eResult += vogal;
+    }
+  }
+  return eResult;
 }
-function decode() {
-  // seu código aqui
+let texto = 'go trybe, vamos que vamos!';
+console.log(encode(texto));
+function decode(eResult) {
+  let decoVogals = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  let decoResult = '';
+  for (let deNumber of eResult) {
+    if (decoVogals[deNumber]) {
+      decoResult += decoVogals[deNumber];
+    } else {
+      decoResult += deNumber;
+    }
+  }
+  return decoResult;
 }
+console.log(decode(encode(texto)));
 
 module.exports = {
   calcArea,
