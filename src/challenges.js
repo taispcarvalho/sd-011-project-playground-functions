@@ -54,9 +54,8 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-let numerosDesafio8 = [];
 function fizzBuzz(numerosDesafio8) {
-  let conteudoArray = [];
+  let conteudoArray  = [];
   for (let i = 0; i < numerosDesafio8.length; i += 1) {
     if (numerosDesafio8[i] % 3 === 0 && numerosDesafio8[i] % 5 === 0) {
       conteudoArray.push('fizzbuzz');
@@ -67,11 +66,13 @@ function fizzBuzz(numerosDesafio8) {
     } else {
       conteudoArray.push('bug!');
     }
-  }
-  return conteudoArray;
+  }   
+    return conteudoArray;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([2, 9]));
+console.log(fizzBuzz([9, 25]));
 
-fizzBuzz(numerosDesafio8);
 
 // Desafio 9
 function encode(string1) {
