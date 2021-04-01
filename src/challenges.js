@@ -10,21 +10,18 @@ function calcArea(base, heigth) {
 
 // Desafio 3
 function splitSentence(frase) {
-  let pherase = ''
-  let result = []
+  let pherase = '';
+  let result = [];
 
-  for (let cont in frase){
-    if (frase[cont]!== ''){
-      pherase += frase[cont]
+  for (let cont in frase) {
+    if (frase[cont]!== '') {
+      pherase += frase[cont];
     } else {
-      result.push(pherase)
-      pherase=''
-    }
-    if (frase[cont] === length -1){
-      result.push(pherase)
-      pherase=''
+      result.push(pherase);
+      pherase = '';
     }
   }
+  return result;
 }
 // Desafio 4
 function concatName() {
