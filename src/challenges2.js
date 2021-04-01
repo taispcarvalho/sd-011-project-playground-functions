@@ -11,9 +11,25 @@ function techList(learningTechnology, name) {
 } 
 
 // Desafio 11
-let phoneNumber1 =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+let numbers1 = [1, 9, 3, 4, 6, 6, 7, 5, 9, 0, 1];
+let response;
+let result = 0;
+let error;
+for (let index = 0; index < numbers1.length; index += 1){
+if (numbers1[index] === response){
+  result += 1;
+  }
+}
+  for (let i of numbers) { 
+  if (numbers1[i] < 0 || numbers1[i] > 9 || result > 2){
+  error = 'não é possivel gerar um número de telefone com esses valores';
+} else {
+  
+}
+console.log(error);
 
- function generatePhoneNumber(number1) {
+function generatePhoneNumber(number1) {
+  let number1 = 
   if (number1.length !== 11) { 
     return 'Array com tamanho incorreto'
   }
