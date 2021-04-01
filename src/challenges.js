@@ -29,18 +29,16 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arra) {
-    let moreNumber = 0
-    let cont = 0
-  for (let index = 0;index < arra.length; index += 1) {
-    if (arra[index] >= moreNumber){
-      moreNumber = arra[index]
-      cont += 1
+  let moreNumber = 0;
+  let cont = 0;
+  for (let index = 0; index < arra.length; index += 1) {
+    if (arra[index] >= moreNumber) {
+      moreNumber = arra[index];
+      cont += 1;
     }
   }
-  return cont
-  
-} //console.log( highestCount([ 9, 1, 2, 3, 9, 5, 7 ]))
-
+  return cont;
+} console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let run1 = Math.abs (mouse - cat1);
