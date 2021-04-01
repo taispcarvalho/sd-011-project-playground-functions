@@ -54,6 +54,7 @@ function highestCount(repeatNumber) {
 function catAndMouse(mouse, cat1, cat2) {
   let positionCat1 = 0;
   let positionCat2 = 0;
+  let result = "";
 
   if (mouse > cat1) {
     positionCat1 = mouse - cat1;
@@ -68,9 +69,11 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
   if (positionCat1 > positionCat2) {
-    return "cat1";
+    result = "cat1";
+    return result;
   } else {
-    return "cat2";
+    result = "cat2";
+    return result;
   }
 }
 
