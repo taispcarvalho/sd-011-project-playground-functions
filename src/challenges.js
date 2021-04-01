@@ -86,8 +86,15 @@ function encode(str) {
   return str;
 }
 
-function decode() {
-  // seu código aqui
+function decode(str) {
+  for (let index = 0; index < str.length; index += 1) {
+    str = str.replace('1', 'a');
+    str = str.replace('2', 'e');
+    str = str.replace('3', 'i');
+    str = str.replace('4', 'o');
+    str = str.replace('5', 'u');
+  }
+  return str;
 }
 
 module.exports = {
