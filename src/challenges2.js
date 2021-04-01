@@ -6,11 +6,12 @@ function newListSort(newList) {
     return 0;
   });
   return newList;
-  // Para implementar essa função, utilizei o tutorial dessa url:(https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort). Mais especificamente, a parte que explica como ordenar objetos a partir do valor de uma de suas propriedades utilizando uma função de comparação no comando sort. Tal função compara valores de uma mesma propriedade dos objetos e retorna 0, 1 ou -1. Dependendo do tipo do retorno, a função altera ou não a ordem dos objetos.
+  // Para implementar essa função, utilizei o tutorial dessa url:(https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort). Mais especificamente, a parte que explica como ordenar objetos a partir do valor de uma de suas propriedades utilizando uma função de comparação no comando sort. E dessa url: (https://pt.stackoverflow.com/questions/46600/como-ordenar-uma-array-de-objetos-com-array-sort) que explica como a função funciona e dá alguns exemplos de como fazer a ordenação.
 }
 
 function techList(arrayTech, name) {
   let newList = [];
+  if (arrayTech.length === 0) { return 'Vazio!'; }
   for (let index = 0; index < arrayTech.length; index += 1) {
     let objetc = {
       tech: arrayTech[index],
@@ -18,10 +19,8 @@ function techList(arrayTech, name) {
     };
     newList.push(objetc);
   }
-  console.log(newListSort(newList));
+  return newListSort(newList);
 }
-
-techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas');
 
 // Desafio 11
 function generatePhoneNumber() {
