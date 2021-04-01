@@ -16,15 +16,15 @@ function techList(anyArray, anyName) {
 
 // Desafio 11
 function checkIf11Numbers(array) {
-  return (array.length === 11); 
+  return (array.length === 11);
 }
 
 function checkRepeatdNumbers(array) {
   /// cria uma cópia da array reordenada, e não altera a array oiriginal
   let sortedNumbers = [...array].sort();
   let count = 0;
-  for (let index = 0; index < array.length - 1; index += 1) {
-    if (array[index] === array[index+1]) {
+  for (let index = 0; index < sortedNumbers.length - 1; index += 1) {
+    if (sortedNumbers[index] === sortedNumbers[index + 1]) {
       count += 1;
       if (count >= 2) {
         return false;
@@ -32,7 +32,7 @@ function checkRepeatdNumbers(array) {
     } else {
       count = 0;
     }
-  }  
+  }
   return true;
 }
 
@@ -60,12 +60,15 @@ function generatePhoneNumber(array) {
     }
   } else if (checkIf11Numbers(array) === false) {
     formatedPhoneNumber = 'Array com tamanho incorreto.';
-  } else if (checkIfBetween0to9(array) || checkRepeatdNumbers(array)){
+  } else if (checkIfBetween0to9(array) || checkRepeatdNumbers(array)) {
     formatedPhoneNumber = 'não é possível gerar um número de telefone com esses valores';
   }
   return formatedPhoneNumber;
 }
 
+let myArray = [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]
+console.log(generatePhoneNumber(myArray));
+console.log(checkRepeatdNumbers(myArray));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
