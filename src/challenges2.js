@@ -49,17 +49,17 @@ function repeatedNumber(list) {
   for (let index of list) {
     let count = 0;
     for (let number of list) {
-      if (count < 3) {
-        if (list[index] === number) {
+      if (list[index] === number) {
           count += 1;
-        }
-      } else {
-        repeated = true;
       }
+    }
+    if (count === 3) {
+      repeated = true;
     }
   }
   return repeated;
 }
+// console.log(repeatedNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 // console.log(repeatedNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // console.log(repeatedNumber([1, 2, 3, 4, 5, 5, 7, 8, 9, 0, 1]));
 // console.log(repeatedNumber([1, 2, 3, 4, 4, 4, 7, 8, 9, 0, 1]));
@@ -86,18 +86,20 @@ function generatePhoneNumber(array) {
   let frequentNumbers = repeatedNumber(array);
   let phoneNumber;
 
-  if (sizeNumbers === false || positiveNumberUnit === false || frequentNumbers === true) {
+  if (positiveNumberUnit === false || frequentNumbers === true) {
     phoneNumber = 'não é possível gerar um número de telefone com esses valores';
+  } else if (sizeNumbers === false) {
+    phoneNumber = 'Array com tamanho incorreto.'
   } else {
     phoneNumber = telephoneNumber(array);
   }
   return phoneNumber;    
 }
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 5, 5, 8, 9, 0, 1]));
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 19, 0, 1]));
-// console.log(generatePhoneNumber([1, 2, 3, 4, -5, 6, 7, 8, 9, 0, 1]));
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 5, 5, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 19, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1]));
 
 // Desafio 12
 function triangleCheck() {
