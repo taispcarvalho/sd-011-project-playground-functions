@@ -1,19 +1,22 @@
 // Auxiliary function for requirement 10
+function maySwap(arr, index) {
+  let arrElement1;
+
+  if (arr[index] > arr[index + 1]) {
+    arrElement1 = arr[index];
+    arr[index] = arr[index + 1];
+    arr[index + 1] = arrElement1;
+  }
+}
+
 function bubbleSort(arr) {
   let arrSize = arr.length;
   let indexA;
   let indexB;
-  let arrElement1;
-  let arrElement2;
 
   for (indexA = 1; indexA < arrSize - 1; indexA += 1) {
     for (indexB = 0; indexB < arrSize - indexA; indexB += 1) {
-      arrElement1 = arr[indexB];
-      arrElement2 = arr[indexB + 1];
-      if (arrElement1 > arrElement2) {
-        arr[indexB] = arrElement2;
-        arr[indexB + 1] = arrElement1;
-      }
+      maySwap(arr, indexB);
     }
   }
 
