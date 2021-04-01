@@ -47,9 +47,13 @@ function hydrate(order) {
   let cupsOfWater = 0;
   for (let index = 0; index < digit.length; index += 1) {
     cupsOfWater += parseInt(digit[index]);
+    if (cupsOfWater === 1) {
+      return '1 copo de água';
+    }
   }
   return `${cupsOfWater} copos de água`;
 }
+console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
