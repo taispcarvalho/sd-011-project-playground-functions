@@ -72,8 +72,8 @@ function triangleCheck(lineA, lineB, lineC) {
   let triaB = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
   let triaC = lineC < lineB + lineA && lineC > Math.abs(lineB - lineA);
   if (lineA !== 0 && lineB !== 0 && lineC !== 0) {
-    return (triaA || triaB || triaC);
   }
+  return (triaA || triaB || triaC);
 }
 console.log(triangleCheck(10, 6, 2));
 
@@ -85,10 +85,11 @@ function hydrate(string) {
     somaCopos += numeroCopos[index];
   }
   if(somaCopos > 1) {
-    return (somaCopos + ' copos de água');
+    let resultado = (somaCopos + ' copos de água');
   } else {
-    return (somaCopos + ' copo de água');
+    let resultado = (somaCopos + ' copo de água');
   }
+  return resultado;
 }
 
 module.exports = {
