@@ -51,12 +51,20 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return true;
 }
-console.log(triangleCheck(5,5,5));
+console.log(triangleCheck(5, 5, 5));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let count = 0;
+  var r = /\d+/g;
+  var m;
+  while ((m = r.exec(string)) != null) {
+    number = parseInt(m[0])
+    count += number
+  }
+  return count;
 }
+console.log(hydrate("2 cervejas e 4 martinis e 56 carros"));
 
 module.exports = {
   generatePhoneNumber,
