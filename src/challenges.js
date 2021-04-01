@@ -61,11 +61,12 @@ function fizzBuzz(array) {
       newArray.push('fizz');
     } else if (array[index] % 5 === 0) {
       newArray.push('buzz');
-    } 
-    newArray.push('bug!');
+    } else newArray.push('bug!');
   }
   return newArray;
 }
+let myArray = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(myArray));
 
 // Desafio 9
 function encode(str) {
