@@ -15,16 +15,49 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  //
+function numeroZeroNove(array) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] < 0 || array[index] > 9) {
+      return false;
+    }
+  }
+  return true;
+}
+function repeticaoNumero(array) {
+  let contador = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    for (let indexCont = 0; indexCont < array.length; indexCont += 1) {
+      if (array[indexCont] === array[index]) {
+        contador += 1;
+      }
+    }
+    if (contador >= 3) {
+      return false;
+    }contador = 0;
+  }
+  return true;
+}
+
+function generatePhoneNumber(array) {
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (!numeroZeroNove(array) || repeticaoNumero(array)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  let primeiroNUmero = ('(' + array[0] + array[1] + ') ');
+  let numeroMeio = (array[2] + array[3] + array[4] + array[5] + array[6]);
+  let ultimoNumero = (' - ' + array[7] + array[8] + array[9] + array[10]);
+
+  return (primeiroNUmero + numeroMeio + ultimoNumero);
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let triaA = lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
   let triaB = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
-  let triaC = lineC < lineB + lineA && lineC > Math.abs(lineB - lineA);
-  return (triaA || triaB || triaC);
+
+  return (triaA || triaB);
 }
 
 // Desafio 13
