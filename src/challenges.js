@@ -22,14 +22,14 @@ function readWordAt(sentence, position) {
 
 // Auxiliary function for Desafio 3
 function getToNextWord(sentence, endOfWord) {
-  let character;
+  let index;
 
   if (endOfWord === sentence.length - 1) {
     return null;
   }
-  for (character = endOfWord + 1; character === ' '; character += 1) ;
+  for (index = endOfWord + 1; sentence[index] === ' '; index += 1) ;
 
-  return character + 1;
+  return index;
 }
 
 // Desafio 3
