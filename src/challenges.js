@@ -55,27 +55,27 @@ function highestNumber(listOfNumbers) {
 function highestCount(listOfNumbers) {
   let highest = highestNumber(listOfNumbers);
   let count = 0;
-for (let i = 0; i < listOfNumbers.length; i += 1) {
+  for (let i = 0; i < listOfNumbers.length; i += 1) {
     if (listOfNumbers[i] === highest) {
       count += 1;
-  }
+    }
   }
   return count;
-  }
-  let teste6 = highestCount([0, 4, 4, 4, 9, 2, 1]);
-  console.log(teste6);
+}
+let teste6 = highestCount([0, 4, 4, 4, 9, 2, 1]);
+console.log(teste6);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = cat1 - mouse;
   let distanceCat2 = cat2 - mouse;
-    if (distanceCat1 < distanceCat2) {
-      return 'cat1';
-    } else if (distanceCat2 < distanceCat1) {
-      return 'cat2';
-    } else {
-      return 'os gatos trombam e o rato foge';
-    }
+  if (distanceCat1 < distanceCat2) {
+    return 'cat1';
+  } else if (distanceCat2 < distanceCat1) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 let desafio7 = catAndMouse(0, 6, 6);
 console.log(desafio7);
@@ -93,13 +93,13 @@ function divideNumbers(arrayOfNumbers) {
     } else {
       total += 'bug!';
     }
-    total += ' '
-}
-return total.split(' ');
+    total += ' ';
+  }
+  return total.split(' ');
 }
 function fizzBuzz(arrayOfNumbers) {
   let resultado = divideNumbers(arrayOfNumbers);
-  return resultado.filter(value => value != '');
+  return resultado.filter(value => (value !== ''));
 }
 console.log(fizzBuzz([9, 25]));
 
