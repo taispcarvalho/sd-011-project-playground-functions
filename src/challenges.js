@@ -82,7 +82,7 @@ function validaBuzz(number) {
   } else if (number % 3 === 0) {
     resultado = 'fizz';
   } else if (number % 5 === 0) {
-    resultado = 'fizzBuzz';
+    resultado = 'buzz';
   } else {
     resultado = 'bug!';
   }
@@ -96,6 +96,8 @@ function fizzBuzz(arrayNumber) {
   }
   return arrayResult;
 }
+
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode(string) {
