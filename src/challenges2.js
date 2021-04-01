@@ -3,7 +3,7 @@
 function techList(array, name) {
   if (array.length > 0) {
     for (let index in array) {
-      if (array.hasOwnProperty(index)) {
+      if (Object.prototype.hasOwnProperty.call(array, index);) {
         array[index] = {
           tech: array[index],
           name,
