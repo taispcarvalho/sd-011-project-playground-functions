@@ -23,7 +23,7 @@ function splitSentence(phrase) {
 function concatName(string) {
   let firstName = string[0];
   let lastName = string[string.length - 1];
-  let fullName = lastName + ', ' + firstName;
+  let fullName = `${lastName}, ${firstName}`;
 
   return fullName;
 }
@@ -75,7 +75,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let anotherNumber = [];
-  for (let index = 0; index < numbers.length; index += 1) {
+  for (let index in numbers) {
     if (numbers[index] % 5 === 0 && numbers[index] % 3 === 0) {
       anotherNumber[index] = 'fizzbuzz';
     } else if (numbers[index] % 5 === 0) {
