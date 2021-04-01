@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  return (value1 && value2)
+  return (value1 && value2);
 }
 
 // Desafio 2
@@ -12,7 +12,7 @@ function calcArea(base, heigth) {
 // Desafio 3
 function splitSentence(phrase) {
   let split = phrase.split(' ');
-  return split
+  return split;
 }
 
 // Desafio 4
@@ -46,6 +46,8 @@ function highestCount(numeros) {
     }
   } return count
 }
+/* Consultei o repositório do Vitor Hugo para resolver essa parte. Link do repositório
+https://github.com/tryber/sd-011-project-playground-functions/pull/154/files#submit-review */
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -129,6 +131,8 @@ function decode(phrase) {
     }
   } return newPhrase
 }
+/* Consultei o repositório do Vitor Hugo para resolver essa parte. Link do repositório
+https://github.com/tryber/sd-011-project-playground-functions/pull/154/files#submit-review */
 
 module.exports = {
   calcArea,
