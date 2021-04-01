@@ -1,11 +1,6 @@
 // Desafio 1
 function compareTrue(val1, val2) {
-  if (val1 && val2) {
-    return true;
-  }
-  else {
-    return false;
-  }
+  return val1 && val2;
 }
 
 // Desafio 2
@@ -13,7 +8,6 @@ function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-
 
 // Desafio 3
 function splitSentence(word) {
