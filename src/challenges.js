@@ -30,7 +30,7 @@ console.log(splitSentence(string))
 
 // Desafio 4
 function concatName(param) {
-  let newArray= [param[param.length-1] + ', ' + param[0]];
+  let newArray = [param[param.length-1] + ', ' + param[0]];
   return newArray;
 }
 
@@ -59,7 +59,9 @@ function highestCount(array) {
     if(array[index]>maior){
       maior = array[index];
     }
-    if(maior === array[index]){
+  }
+  for (let index2=0; index2<array.length; index2 +=1){
+    if(maior === array[index2]){
       contador = contador +1;
     }
   }
