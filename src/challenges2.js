@@ -1,5 +1,5 @@
 // Desafio 10
-  // seu código aqui
+// seu código aqui
 function techList(techs, nameList) {
   techs.sort();
   let listTech = [];
