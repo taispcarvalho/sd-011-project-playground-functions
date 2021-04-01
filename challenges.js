@@ -1,3 +1,8 @@
-function retornaSoma(numero1, numero2) {
-  return a + b;
+function compareTrue(bool1, bool2) {
+  let expression = false;
+  if (bool1 === true && bool2 === true) {
+    expression = true;
+  }
+  return expression;
 }
+console.log(compareTrue(true, true));
