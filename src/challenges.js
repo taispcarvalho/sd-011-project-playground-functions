@@ -69,9 +69,8 @@ function fizzBuzz(array) {
       newArray.push('fizz');
     } else if (array[index] % 5 === 0) {
       newArray.push('buzz');
-    } else {
-      newArray.push('bug!');
-    }
+    } 
+    newArray.push('bug!');
   }
   return newArray;
 }
