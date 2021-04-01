@@ -15,9 +15,11 @@ function splitSentence(splitPhase) {
 }
 
 // Desafio 4
-function concatName(arrayName) {
-  let concatArray =  arrayName[arrayName.length - 1] + ',' + arrayName[0];
-  return concatArray;
+
+function concatName(nameArray) {
+  let formatedString = nameArray[nameArray.length - 1] + ',' + nameArray[0];
+
+  return formatedString;
 }
 
 // Desafio 5
@@ -40,7 +42,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   }
 }
-console.log(catAndMouse(6, 4, 5))
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
