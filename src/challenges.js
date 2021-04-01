@@ -53,14 +53,16 @@ https://github.com/tryber/sd-011-project-playground-functions/pull/154/files#sub
 function catAndMouse(mouse, cat1, cat2) {
   let atack1 = Math.abs(cat1 - mouse);
   let atack2 = Math.abs(cat2 - mouse);
+  let result = null;
 
   if (atack1 < atack2) {
-    return 'cat1';
+    result =  'cat1';
   } else if (atack2 < atack1) {
-    return 'cat2';
+    result = 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge';
+    result = 'os gatos trombam e o rato foge';
   }
+  return result;
 }
 
 // Desafio 8
