@@ -34,7 +34,7 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(14,8));
 
 // Desafio 6
-function highestCount(numbers) {
+/*function highestCount(numbers) {
   if (numbers[0] > numbers[1]) {
     let highest =  numbers[0];
     for (index = 2; index < numbers.length; index += 1) {
@@ -46,15 +46,9 @@ function highestCount(numbers) {
       if (numbers[index] > highest) {
        return numbers[index];
   }
-}
+}*/
 
 console.log(highestCount([2, 1, 3]));
-
-
-
-
-
-
 
 // Desafio 7
 function catAndMouse([mouse, cat1, cat2]) {
@@ -69,28 +63,12 @@ function catAndMouse([mouse, cat1, cat2]) {
 console.log(catAndMouse([1, 4, 3]));
 
 // Desafio 8
-function fizzBuzz(numbers) {
- for (index = 0; index < numbers.length; index += 1) {
-   if (numbers[index] % 3 === 0 || numbers[index] % 5) {
-
+/*function fizzBuzz(numbers) {
+for (index = 0; index < numbers.length; index += 1) {
+  if (numbers[index] % 3 === 0 || numbers[index] % 5) {
    }
  } 
-}
-
-[2, 15, 7, 9, 45]
-
-
-
-
-
-
-
-
-
-
-
-
-
+}*/
 
 // Desafio 9
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/joinfunction encode() {
