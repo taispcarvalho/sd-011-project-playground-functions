@@ -78,15 +78,15 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function isFizzBuzz(number) {
-  if (number % 3 === 0 && number % 5 === 0) {
+  if ((number % 3 === 0) && (number % 5 === 0)) {
     return 'fizzbuzz';
   } if (number % 3 === 0) {
     return 'fizz';
-  } else if (number % 5 === 0) {
+  } if (number % 5 === 0) {
     return 'buzz';
-  } 
-  return 'bug!';
   }
+  return 'bug!';
+}
 
 function fizzBuzz(numbers) {
   // seu código aqui
@@ -98,7 +98,7 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function reference() {
-  let characters = { 
+  let characters = {
     code1: {
       a: '1',
       e: '2',
