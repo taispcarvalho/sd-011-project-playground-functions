@@ -108,7 +108,7 @@ function decode(stringDecode) {
       codifica.push(stringDecode[i]);
     }
   }
-  return codifica.join('');  
+  return codifica.join('');
 }
 
 module.exports = {
