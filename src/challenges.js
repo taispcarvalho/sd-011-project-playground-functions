@@ -79,18 +79,18 @@ console.log(catAndMouse(1, 0, 2));
 function conditionForFizzBuzz(value) {
   if (value % 3 === 0 && value % 5 === 0) {
     return 'fizzBuzz';
-  }  
+  }
   if (value % 3 === 0) {
     return 'fizz';
-  } 
+  }
   if (value % 5 === 0) {
     return 'buzz';
-  } 
-  return 'bug!';  
+  }
+  return 'bug!';
 }
 function fizzBuzz(numbers) {
   let newArrayFizBuzz = [];
-  for (let index in numbers) {
+  for (let index = 0; index < numbers.length; index += 1) {
     newArrayFizBuzz.push(conditionForFizzBuzz(numbers[index]));
   }
   return newArrayFizBuzz;
