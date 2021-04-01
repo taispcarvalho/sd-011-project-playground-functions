@@ -19,7 +19,7 @@ function techList(array, name) {
 console.log(techList(techs, 'Henrique'));
 console.log(techList(techsEmpty, 'Henrique'));
 // Desafio 11
-let teste = [9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1];
+let teste = [1, 2, -3, 4, 0, 6, 7, 8, 9, 9, 0];
 function repeatNumber(array) {
   let repeated = false;
 
