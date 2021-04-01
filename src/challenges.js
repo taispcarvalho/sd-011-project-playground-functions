@@ -69,9 +69,6 @@ function fizzBuzz(numerosDesafio8) {
   }
     return conteudoArray;
 }
-//console.log(fizzBuzz([2, 15, 7, 9, 45]));
-//console.log(fizzBuzz([2, 9]));
-//console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode(string1) {
