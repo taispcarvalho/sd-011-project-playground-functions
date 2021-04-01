@@ -63,6 +63,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
+// Regex tirado do https://pt.stackoverflow.com/questions/3719/como-obter-apenas-os-n%C3%BAmeros-de-uma-string-em-javascript
 function hydrate(string) {
   let RegExp = /([^\d])+/gim;
   let newStr = string.replace(RegExp, '');
