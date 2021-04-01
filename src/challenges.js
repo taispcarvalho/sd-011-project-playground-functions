@@ -102,10 +102,8 @@ function encode(string) {
   string = string.replace(/i/g, '3');
   string = string.replace(/o/g, '4');
   string = string.replace(/u/g, '5');
-  console.log(string);
+  return string;
 }
-
-encode('macaco louco idiota pede ajuda e corre');
 
 function decode(string) {
   string = string.replace(/1/g, 'a');
@@ -113,10 +111,8 @@ function decode(string) {
   string = string.replace(/3/g, 'c');
   string = string.replace(/4/g, 'd');
   string = string.replace(/5/g, 'e');
-  console.log(string);
+  return string;
 }
-
-decode('macaco louco idiota pede ajuda e corre');
 
 module.exports = {
   calcArea,
