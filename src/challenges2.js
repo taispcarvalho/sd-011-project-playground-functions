@@ -43,14 +43,13 @@ function triangleCheck(sideA, sideB, sideC) {
 
 // Desafio 13
 function hydrate(order) {
-  let numbers = order.match(/\d/g);
-  let cupsOfWater = 0
-  for (let index in numbers) {
-      cupsOfWater += parseInt(numbers[index])
+  let digit = order.match(/\d/g);
+  let cupsOfWater = 0;
+  for (let index = 0; index < digit.length; index += 1) {
+    cupsOfWater += parseInt(digit[index]);
   }
   return `${cupsOfWater} copos de água`;
 }
-console.log(hydrate('1 cerveja, 5 copos de vinho e 1 sex on the beach'));
 
 module.exports = {
   generatePhoneNumber,
