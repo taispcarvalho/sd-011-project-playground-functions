@@ -127,12 +127,25 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-console.log(triangleCheck(10, 14, 8));
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(phrase) {
+  let drinks = /\d+/g;
+  let sum = 0;
+  let array = phrase.match(drinks).map(Number);
+  if (array.length > 1) {
+    for (let index = 0; index < array.length; index += 1) {
+      sum += array[index];
+    }
+  } else {
+    sum = array;
+  }
+
+  if (sum < 2) {
+    return `${sum} copo de água`;
+  }
+  return `${sum} copos de água`;
 }
+console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
