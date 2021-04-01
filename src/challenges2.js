@@ -73,7 +73,7 @@ function telephoneNumber(array) {
       maskPhoneNumber[index] = ' ';
     } else if (maskPhoneNumber[index] === '') {
       maskPhoneNumber[index] = array[position];
-      position += 1
+      position += 1;
     }
   }
   return maskPhoneNumber.join('');
@@ -85,14 +85,10 @@ function generatePhoneNumber(array) {
   let positiveNumberUnit = limitNumbers(array);
   let frequentNumbers = repeatedNumber(array);
   let phoneNumber;
-  
-  if (sizeNumbers === false) {
+
+  if (sizeNumbers === false || positiveNumberUnit === false || frequentNumbers === true) {
     phoneNumber = 'não é possível gerar um número de telefone com esses valores';
-  } else if (positiveNumberUnit === false) {
-    phoneNumber = 'não é possível gerar um número de telefone com esses valores';
-  } else if (frequentNumbers === true) {
-    phoneNumber = 'não é possível gerar um número de telefone com esses valores';
-  } else {
+  else {
     phoneNumber = telephoneNumber(array);
   }
   return phoneNumber;    
