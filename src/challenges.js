@@ -21,16 +21,9 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(itens) {
   // seu código aqui
-  let firstItem;
-  let secondItem;
-  for (let index = 0; index < itens.length; index += 1) {
-    if (index === 0) {
-      secondItem = itens[index];
-    } else if (index === itens.length - 1) {
-      firstItem = itens[index];
-    }
-  }
-  return firstItem, secondItem;
+  let firstItem = [itens[itens.length - 1];
+  let secondItem = itens[0]];
+  return (firstItem, secondItem);
 }
 
 // Desafio 5
@@ -87,7 +80,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function isFizzBuzz(number) {
   if ((number % 3 === 0) && (number % 5 === 0)) {
-    return 'fizzbuzz';
+    return 'fizzBuzz';
   } if (number % 3 === 0) {
     return 'fizz';
   } if (number % 5 === 0) {
@@ -150,23 +143,6 @@ function decode(value) {
   return char.join('');
 }
 
-// Desafio 10
-function techList(techs, nameList) {
-  techs.sort();
-  let listTech = [];
-  for (let index = 0; index < techs.length; index += 1) {
-    let list = {
-      tech: techs[index],
-      name: nameList,
-    };
-    listTech.push(list);
-  }
-  if (listTech.length === 0) {
-    return 'Vazio!';
-  }
-  return listTech;
-}
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -178,5 +154,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-  techList,
 };
