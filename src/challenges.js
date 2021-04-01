@@ -1,16 +1,45 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(bool1, bool2) {
+  return bool1 && bool2;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base*height)/2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let positions = [];
+  let output = [];
+  for(let i in string){
+    if(string[i] === " "){
+      positions.push(i);    //guarda posição dos separadores
+    }
+  }
+  for(let n = 0; n <= positions.length; n+=1){
+    //define intervalos envolvendo posicao dos separadores
+    let start;
+    let end;
+    //inicio do intervalo
+    if(n === 0){
+      start = 0;
+    }
+    else{
+      start = positions[n-1];
+    }
+    //fim do intervalo
+    if(n === positions.length){
+      end = string.length;
+    }
+    else{
+      end = positions[n];
+    }
+    output.push(string.slice(start,end));
+  }
+  return output;
 }
+console.log(splitSentence("vamo que vamo"));
 
 // Desafio 4
 function concatName() {
