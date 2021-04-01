@@ -64,31 +64,38 @@ function repeatedNumber(list) {
 // console.log(repeatedNumber([1, 2, 3, 4, 5, 5, 7, 8, 9, 0, 1]));
 // console.log(repeatedNumber([1, 2, 3, 4, 4, 4, 7, 8, 9, 0, 1]));
 
+function telephoneNumber(array) {
+  let maskPhoneNumber = ['(', '', '', ')', '_', '', '', '', '', '', '-', '', '', '', ''];
+  let position = 0;
+
+  for (let index = 0; index < 15; index += 1) {
+    if (maskPhoneNumber[index] === '_') {
+      maskPhoneNumber[index] = ' ';
+    } else if (maskPhoneNumber[index] === '') {
+      maskPhoneNumber[index] = array[position];
+      position += 1
+    }
+  }
+  return maskPhoneNumber.join('');
+}
+// console.log(telephoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
 function generatePhoneNumber(array) {
   let sizeNumbers = sizeArray(array);
   let positiveNumberUnit = limitNumbers(array);
   let frequentNumbers = repeatedNumber(array);
-  let noPhoneNumber = 'não é possível gerar um número de telefone com esses valores';
-  let phoneNumber = ['(', '', '', ')', '_', '', '', '', '', '', '-', '', '', '', '',];
-  let position = 0;
-
+  let phoneNumber;
+  
   if (sizeNumbers === false) {
-    return noPhoneNumber;
+    phoneNumber = 'não é possível gerar um número de telefone com esses valores';
   } else if (positiveNumberUnit === false) {
-    return noPhoneNumber;
+    phoneNumber = 'não é possível gerar um número de telefone com esses valores';
   } else if (frequentNumbers === true) {
-    return noPhoneNumber;
+    phoneNumber = 'não é possível gerar um número de telefone com esses valores';
   } else {
-    for (let index = 0; index < 14; index += 1) {
-      if (phoneNumber[index] === '_') {
-        phoneNumber[index] = '';
-      } else if (phoneNumber[index] === '') {
-        phoneNumber[position] = array[position];
-        position += 1
-      }
-    }
-    return phoneNumber.join('');
+    phoneNumber = telephoneNumber(array);
   }
+  return phoneNumber;    
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 5, 5, 8, 9, 0, 1]));
