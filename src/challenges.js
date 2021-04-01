@@ -73,7 +73,8 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-// Pôr referência devmedia sobre .replace()
+// Foi verificada a informação no site DevMedia sobre o funcionamento da função .replace()
+// Source: https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
 function encode(phrase) {
   for (let index = 0; index < phrase.length; index += 1) {
     phrase = phrase.replace('a', '1');
@@ -91,7 +92,7 @@ function decode(phrase) {
     phrase = phrase.replace('2', 'e');
     phrase = phrase.replace('3', 'i');
     phrase = phrase.replace('4', 'o');
-    phrase = phrase.replace('5', 'e');
+    phrase = phrase.replace('5', 'u');
   }
   return phrase;
 }
