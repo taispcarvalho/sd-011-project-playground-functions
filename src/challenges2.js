@@ -1,13 +1,21 @@
 // Desafio 10
+//referencia: heyset (Matheus "Set" Inacio)
 function techList(arrayTech, nameTech) {
-  for(let index in arrayTech){
-  let objectTech  = {name:nameTech}
-  objectTech = {tech:arrayTech[index]}
+  if (arrayTech === 0){
+    arrayResult = 'Vazio!';
   }
-return objectTech
+  let arrayResult = [];
+  let organizedArray = arrayTech.sort();
+  for(let index = 0; index < arrayTech.length; index += 1){
+    arrayResult.push(
+      {
+        tech: organizedArray[index],
+        name: nameTech,
+      }
+    )
+  }
+return arrayResult
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"]
-"Lucas"))
 // Desafio 11
 function generatePhoneNumber(numberPhone) {
   let numberOrganized = "(";
