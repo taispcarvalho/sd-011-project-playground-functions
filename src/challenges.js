@@ -23,7 +23,7 @@ function concatName(itens) {
   // seu código aqui
   let firstItem = [itens[itens.length - 1];
   let secondItem = itens[0]];
-  return (firstItem, secondItem);
+  return firstItem + ', ' + secondItem;
 }
 
 // Desafio 5
