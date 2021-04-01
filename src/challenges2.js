@@ -1,25 +1,14 @@
 // Desafio 10
-let newTechnology = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-let newName = 'Murilo';
+
 function techList(learningTechnology, name) {
   let outExit = [];
+  if(learningTechnology.length === 0)
+  return 'Vazio!'
   for(let key of learningTechnology.sort()) {
-    outExit.push({tech: key, name: name}); 
-  }
+  outExit.push({tech: key, name: name}); 
+  } 
   return outExit;
-}
-console.log(techList(newTechnology, newName))
-
-
-
-
-
-
-
-
-
-
-
+} 
 
 // Desafio 11
 function generatePhoneNumber() {
