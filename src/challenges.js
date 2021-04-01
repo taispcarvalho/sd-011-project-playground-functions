@@ -46,7 +46,7 @@ function highestCount(array) {
   return numeroRepetido;
 }
 
-// Desafio 7
+// Desafio 7 - ok - verificar
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaMouseCat1 = Math.abs(mouse - cat1);
   let distanciaMouseCat2 = Math.abs(mouse - cat2);
@@ -60,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// Desafio 8
+// Desafio 8 - ok - verificar
 function fizzBuzz(array) {
   let arrayResultado = [];
   for (let index = 0; index < array.length; index += 1) {
@@ -78,11 +78,21 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let novaString = string.replace(/a/gi, '1')
+    .replace(/e/gi, '2')
+    .replace(/i/gi, '3')
+    .replace(/o/gi, '4')
+    .replace(/u/gi, '5');
+  return novaString;
 }
-function decode() {
-  // seu código aqui
+function decode(stringDecode) {
+  let novaStringDecode = stringDecode.replace(/1/gi, 'a')
+    .replace(/2/gi, 'e')
+    .replace(/3/gi, 'i')
+    .replace(/4/gi, 'o')
+    .replace(/5/gi, 'u');
+  return novaStringDecode;
 }
 
 module.exports = {
