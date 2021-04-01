@@ -6,7 +6,8 @@ function techList(array, name) {
       array[index] = {
         tech: array[index],
         name,
-      };}
+      };
+    }
   } else {
     return 'Vazio!';
   }
@@ -26,19 +27,17 @@ function repeatNumber(numbers) {
   let repeat = 0;
   let repeatTimes = 0;
   let repeatThreeTimes = false;
-
   for (let i in numbers) {
-      for (let j in numbers) {
-          if (numbers[i] === numbers[j]) {
-              repeat += 1;
-          }
+    for (let j in numbers) {
+      if (numbers[i] === numbers[j]) {
+        repeat += 1;
       }
-      if (repeat > repeatTimes) {
-        repeatTimes += 1;
-      }
-      repeat = 0;
+    }
+    if (repeat > repeatTimes) {
+      repeatTimes += 1;
+    }
+    repeat = 0;
   }
-
   if (repeatTimes >= 3) {
     repeatThreeTimes = true;
   }
@@ -79,10 +78,16 @@ function generatePhoneNumber(numbers) {
   return completeNumber;
 }
 
-console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]))
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let check = false;
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
+    if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+      check = true;
+    }
+  }
+
+  return check;
 }
 
 // Desafio 13
