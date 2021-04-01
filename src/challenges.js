@@ -139,18 +139,17 @@ console.log(encode('hi there!'));
 function decode(param1) {
   // seu código aqui
   let newString = '';
-  let decoding = encode(param1);
-  for (let index = 0; index < decoding.length; index += 1) {
-    if (param1[index] === 1) {
+  for (let index = 0; index < param1.length; index += 1) {
+    if (param1[index] === '1') {
       newString += 'a';
-    } else if (param1[index] === 2) {
+    } else if (param1[index] === '2') {
       newString += 'e';
-    } else if (param1[index] === 3) {
+    } else if (param1[index] === '3') {
       newString += 'i';
-    } else if (param1[index] === 4) {
+    } else if (param1[index] === '4') {
       newString += 'o';
     }
-    else if (param1[index] === 5) {
+    else if (param1[index] === '5') {
       newString += 'u';
     } else {
       newString += param1[index];
@@ -159,7 +158,7 @@ function decode(param1) {
   return newString;
 }
 
-console.log(decode('hi there!'));
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
