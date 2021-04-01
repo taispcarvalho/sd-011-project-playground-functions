@@ -20,11 +20,12 @@ function checkIf11Numbers(array) {
 }
 
 function checkRepeatdNumbers(array) {
-  let sortedNumbers = array.sort()
+  /// cria uma cópia da array reordenada, e não altera a array oiriginal
+  let sortedNumbers = [...array].sort();
   let count = 0;
   for (let index = 0; index < array.length - 1; index += 1) {
     if (array[index] === array[index+1]) {
-      count += 1
+      count += 1;
       if (count >= 2) {
         return false;
       }
