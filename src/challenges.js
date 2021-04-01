@@ -89,12 +89,12 @@ console.log(catAndMouse(20, 15, 10));
 // Desafio 8
 function fizzEncode(number) {
   let newStrCode = '';
-  if (number % 3 === 0 && number % 5 !== 0) {
-    newStrCode += 'fizz';
-  } else if (number % 5 === 0 && number % 3 !== 0) {
-    newStrCode += 'buzz';
-  } else if (number % 3 === 0 && number % 5 === 0) {
+  if (number % 15 === 0) {
     newStrCode += 'fizzBuzz';
+  } else if (number % 5 === 0) {
+    newStrCode += 'buzz';
+  } else if (number % 3 === 0) {
+    newStrCode += 'fizz';
   } else {
     newStrCode += 'bug!';
   }
@@ -113,26 +113,33 @@ function fizzBuzz(arrNumbers) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
+function changeLetter(letter) {
+  let letterNumber = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  let letterIndex = letterNumber[letter];
+  if (letterIndex) {
+    return letterIndex;
+  }
+  return letter;
+}
+
 function encode(str) {
   let str2 = '';
   for (let index = 0; index < str.length; index += 1) {
-    if (str[index] === 'a') {
-      str2 += 1;
-    } else if (str[index] === 'e') {
-      str2 += 2;
-    } else if (str[index] === 'i') {
-      str2 += 3;
-    } else if (str[index] === 'o') {
-      str2 += 4;
-    } else if (str[index] === 'u') {
-      str2 += 5;
-    } else {
-      str2 += str[index];
-    }
+    str2 += changeLetter(str[index]);
   }
   return str2;
 }
-console.log(encode('hi there!'));
+
+console.log(encode('A'));
+
+console.log(encode('A vida é bela'));
+
 function decode(str) {
   let str2 = '';
   for (let index = 0; index < str.length; index += 1) {
