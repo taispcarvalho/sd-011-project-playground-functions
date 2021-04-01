@@ -53,7 +53,7 @@ https://github.com/tryber/sd-011-project-playground-functions/pull/154/files#sub
 function catAndMouse(mouse, cat1, cat2) {
   let atack1 = Math.abs(cat1 - mouse);
   let atack2 = Math.abs(cat2 - mouse);
-  
+
   if (atack1 < atack2) {
     return 'cat1';
   } else if (atack2 < atack1) {
@@ -84,52 +84,52 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(phrase) {
-  let newPhrase = phrase;
+  let encodePhrase = phrase;
 
-  for (let index in newPhrase) {
-    switch (newPhrase[index]) {
+  for (let index in encodePhrase) {
+    switch (encodePhrase[index]) {
       case 'a':
-        newPhrase = newPhrase.replace('a', '1');
+        encodePhrase = encodePhrase.replace('a', '1');
         break;
       case 'e':
-         newPhrase = newPhrase.replace('e', '2');
-          break;
+        encodePhrase = encodePhrase.replace('e', '2');
+        break;
       case 'i':
-        newPhrase = newPhrase.replace('i', '3');
+        encodePhrase = encodePhrase.replace('i', '3');
         break;
       case 'o':
-          newPhrase = newPhrase.replace('o', '4');
-          break;
+        encodePhrase = encodePhrase.replace('o', '4');
+        break;
       case 'u':
-        newPhrase = newPhrase.replace('u', '5');
+        encodePhrase = encodePhrase.replace('u', '5');
         break;
       default: break;
     }
-  } return newPhrase;
+  } return encodePhrase;
 }
 function decode(phrase) {
-  let newPhrase = phrase;
+  let decodePhrase = phrase;
 
-  for(let index in newPhrase) {
-    switch (newPhrase[index]) {
+  for (let index in decodePhrase) {
+    switch (decodePhrase[index]) {
       case '1':
-        newPhrase = newPhrase.replace('1', 'a');
+        decodePhrase = decodePhrase.replace('1', 'a');
         break;
       case '2':
-         newPhrase = newPhrase.replace('2', 'e');
-          break;
+        decodePhrase = decodePhrase.replace('2', 'e');
+        break;
       case '3':
-        newPhrase = newPhrase.replace('3', 'i');
+        decodePhrase = decodePhrase.replace('3', 'i');
         break;
       case '4':
-          newPhrase = newPhrase.replace('4', 'o');
-          break;
+        decodePhrase = decodePhrase.replace('4', 'o');
+        break;
       case '5':
-        newPhrase = newPhrase.replace('5', 'u');
+        decodePhrase = decodePhrase.replace('5', 'u');
         break;
       default: break;
     }
-  } return newPhrase
+  } return decodePhrase;
 }
 /* Consultei o repositório do Vitor Hugo para resolver essa parte. Link do repositório
 https://github.com/tryber/sd-011-project-playground-functions/pull/154/files#submit-review */
