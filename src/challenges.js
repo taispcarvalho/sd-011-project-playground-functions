@@ -75,7 +75,6 @@ function catAndMouse(mouse, cat1, cat2) {
   return answer;
 }
 
-
 // Desafio 8
 function fizzBuzz(arrayFizzBuzzNumbers) {
   let arrayFizzBuzz = [];
@@ -100,47 +99,33 @@ function fizzBuzz(arrayFizzBuzzNumbers) {
 
 // Desafio 9
 function encode(sentence) {
-  let objectVowels = {
-    a: '1', 
-    e: '2',
-    i: '3',
-    o: '4',
-    u: '5',
-  }
-
-  let arrayVowels = Object.keys(objectVowels);
+  let objectVowels = { a: '1', e: '2', i: '3', o: '4', u: '5' };
 
   for (let index = 0; index < sentence.length; index += 1) {
-    for (let vowel of arrayVowels) {
+    for (let vowel of Object.keys(objectVowels)) {
       if (sentence[index] === vowel) {
-        sentence = sentence.replace(vowel, objectVowels[vowel])
+        sentence = sentence.replace(vowel, objectVowels[vowel]);
         break
-      }
-    } 
-  }
+      };
+    };
+  };
 
   return sentence;
 }
 
 function decode(sentence) {
-  let decodedSentence = '';
+  let objectNumbers = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' };
 
   for (let index = 0; index < sentence.length; index += 1) {
-    if (sentence[index] === '1') {
-      decodedSentence += 'a';
-    } else if (sentence[index] === '2') {
-      decodedSentence += 'e';
-    } else if (sentence[index] === '3') {
-      decodedSentence += 'i';
-    } else if (sentence[index] === '4') {
-      decodedSentence += 'o';
-    } else if (sentence[index] === '5') {
-      decodedSentence += 'u';
-    } else {
-      decodedSentence += sentence[index];
-    }
-  }
-  return decodedSentence;
+    for (let number of Object.keys(objectNumbers)) {
+      if (sentence[index] === number) {
+        sentence = sentence.replace(number, objectNumbers[number]);
+        break
+      };
+    };
+  };
+  
+  return sentence;
 }
 
 module.exports = {
