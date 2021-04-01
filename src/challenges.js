@@ -41,15 +41,36 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 < cat2) {
-     return cat1
-  }
-  else if (cat1 > cat2) {
-    return cat2
-  }
-  else (cat1 === cat2); {
-    return "os gatos trombam e o rato foge"
-  }
+  let distancia_cat1;
+  let distancia_cat2;
+  
+  if (mouse < cat1) {
+    distancia_cat1 = (cat1 - mouse);
+}
+else if (mouse > cat1) {
+    distancia_cat1 = (mouse - cat1);
+}
+else (mouse === cat1); {
+    distancia_cat1 = (mouse - cat1); //isso vai dar 0
+}
+if (mouse < cat2) {
+    distancia_cat2 = (cat2 - mouse);
+}
+else if  (mouse > cat2) {
+    distancia_cat2 = (mouse - cat2);
+}
+else (mouse === cat2); {
+    distancia_cat2 = (mouse - cat2); //isso vai dar 0
+}
+if (distancia_cat1 < distancia_cat2) {
+    return cat1;
+}
+else if (distancia_cat1 > distancia_cat2) {
+   return cat2;
+}
+else (distancia_cat1 === distancia_cat2) {
+ return "os gatos trombam e o rato foge";
+}
 }
 
 // Desafio 8
