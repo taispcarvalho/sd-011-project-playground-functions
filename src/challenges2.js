@@ -18,26 +18,23 @@ function techList(techArr, name) {
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11
-function repeatedNumberFinder(arrNumbers2) {
+function repeatedNumberCounter(arrNumbers2) {
   let count = 0;
   for (let index = 0; index < arrNumbers2.length; index += 1) {
     count = 0;
     for (let index2 = 1; index2 < arrNumbers2.length; index2 += 1) {
       if (arrNumbers2[index] === arrNumbers2[index2]) {
         count += 1;
-        if (count >= 3) {
-          return true;
-        }
       }
     }
   }
+  return count;
 }
 
-function isValidTelephone(arrTelephone) {
-  for (let index = 0; index < arrTelephone.length; index += 1) {
-    if (arrTelephone[index] < 0 || arrTelephone[index] > 9) {
-      return true;
-    }
+function repeatedNumberFinder(arrNumbers2) {
+  let numberDetected = repeatedNumberCounter(arrNumbers2);
+  if (numberDetected >= 3) {
+    return true;
   }
 }
 
@@ -60,6 +57,14 @@ function telephoneGenerator2(arrTel) {
     }
   }
   return newString2;
+}
+
+function isValidTelephone(arrTelephone) {
+  for (let index = 0; index < arrTelephone.length; index += 1) {
+    if (arrTelephone[index] < 0 || arrTelephone[index] > 9) {
+      return true;
+    }
+  }
 }
 
 function generatePhoneNumber(arrNumbers) {
