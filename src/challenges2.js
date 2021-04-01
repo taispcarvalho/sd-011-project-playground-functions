@@ -19,16 +19,6 @@ function generatePhoneNumber(array) {
   
 }
 
-function numeroTelefone(array) {
-  let numeroDeTelefone = generatePhoneNumber(array);
-  let primeirosNumero = ('(' + array[0] + array[1] + ') ');
-  let numeroMeio = (array[2] + array[3] + array[4] + array[5] + array[6] + ' - ');
-  let ultimoNumero = (array[7] + array[8] + array[9] + array[10] + array[11]);
-  let numeroTotal = primeirosNumero + numeroMeio + ultimoNumero;
-  console.log(numeroTelefone(numeroTotal));
-  return numeroTelefone(numeroTotal);
-}
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let triaA = lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
