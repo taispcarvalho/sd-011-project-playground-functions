@@ -64,21 +64,28 @@ function highestCount(valores){
 //highestCount(valores);
 
 // Desafio 7
-//let mouse=10;
-//let cat1=1;
-//let cat2=5    ; 
+//let mouse=5;
+//let cat1=10;
+//let cat2=0; 
 
   function catAndMouse(mouse,cat1,cat2){
     cat1=Math.abs(cat1-mouse);
     cat2=Math.abs(cat2-mouse);
-    if(cat1<cat2){
-      return("cat1");
-    }else if(cat1>cat2){
-      return("cat2");
-    }else{
+    if(cat1===cat2){
       return("Os gatos trombam e o rato foge");
+      //console.log("Os gatos trombam e o rato foge");
+    }else if(cat1<cat2){
+      return("cat1");
+      //console.log("cat1");
+    }else{
+      return("cat2");
+      //console.log("cat2");
     }
+      
+      
+   
   }
+//catAndMouse(mouse,cat1,cat2);
 //     return("cat1");
 //        }else
         // if (cat2>cat1)
@@ -132,7 +139,7 @@ function highestCount(valores){
 
 // Desafio 8
 function fizzBuzz(numeros){
-  let arrayresposta=[0];
+    let arrayresposta=[0];
   arrayresposta.pop();
   for(let cont=0;cont<=numeros.length-1;cont++){
     if(numeros[cont]%3==0&numeros[cont]%5==0){
