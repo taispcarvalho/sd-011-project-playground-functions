@@ -19,7 +19,6 @@ function techList(array, name) {
 console.log(techList(techs, 'Henrique'));
 console.log(techList(techsEmpty, 'Henrique'));
 // Desafio 11
-
 function verify(item, array) {
   let counter = 0;
   for (let j in array) {
@@ -95,7 +94,6 @@ function generatePhoneNumber(array) {
   return phoneNumber;
 }
 
-console.log(generatePhoneNumber(teste));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
