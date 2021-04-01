@@ -1,6 +1,16 @@
-// Desafio 10
-function techList() {
-  // seu código aqui
+// Desafio 10 - referencia: https://www.edsonemiliano.com.br/blog/como-ordenar-uma-array-de-objetos-com-javascript-sort/#:~:text=Caso%20voc%C3%AA%20tenha%20um%20array,usar%20o%20m%C3%A9todo%20sort().&text=return%20(a.,nome%20%3E%20b.
+function techList(techNames, name) {
+
+  let infoTech = {tech: '', name:''}
+  let completeTech = [];
+
+  for(let index = 0; index < techNames.length; index += 1) {
+    if(techNames.length > 0) {
+      infoTech = {tech: techNames[index],name: name}
+      completeTech.push(infoTech);
+    } else  return 'Vazio!';
+  }
+    return completeTech.sort((a,b) => (a.tech >b.tech ? 1 : -1));
 }
 
 // Desafio 11
