@@ -32,25 +32,27 @@ function countRepeaterNumber(array) {
   return count;
 }
 
-function generatePhoneNumber(array) {
-  let phone = '';
+function checkPossibleNumber(array) {
+  let possibleStr = false;
   let countStorage = countRepeaterNumber(array);
-  if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < 0 || array[index] > 9 || countStorage >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    } if (index === 0) {
-      phone += `(${array[index]}`;
-    } else if (index === 1) {
-      phone += `${array[index]})`;
-    } else if (index === 6) {
-      phone += `${array[index]}-`;
-    } else {
-      phone += array[index];
+      possibleStr = true;
     }
-  } return phone;
+  }
+  return possibleStr;
+}
+
+function generatePhoneNumber(array) {
+  let phone = '';
+  let possible = checkPossibleNumber(array);
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  } if (possible) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  phone = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+  return phone;
 }
 
 let numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
