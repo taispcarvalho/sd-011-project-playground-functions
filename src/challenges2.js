@@ -3,12 +3,10 @@
 function techList(array, name) {
   if (array.length > 0) {
     for (let index in array) {
-      if (Object.prototype.hasOwnProperty.call(array, index);) {
         array[index] = {
           tech: array[index],
           name,
         };
-      }
     }
   } else {
     return 'Vazio!';
@@ -27,22 +25,13 @@ function repeatNumber(numbers) {
   let repeatTimes = 0;
   let repeatThreeTimes = false;
   for (let i in numbers) {
-    if (numbers.hasOwnProperty(i)) {
-      for (let j in numbers) {
-        if (numbers[i] === numbers[j]) {
-          repeat += 1;
-      }
+    for (let j in numbers) {
+      if (numbers[i] === numbers[j]) repeat += 1;
     }
-      if (repeat > repeatTimes) {
-        repeatTimes += 1;
-      }
-      repeat = 0;
-    }
-    
+    if (repeat > repeatTimes) repeatTimes += 1;
+    repeat = 0;
   }
-  if (repeatTimes >= 3) {
-    repeatThreeTimes = true;
-  }
+  if (repeatTimes >= 3) repeatThreeTimes = true;
   return repeatThreeTimes;
 }
 
