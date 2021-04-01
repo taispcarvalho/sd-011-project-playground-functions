@@ -125,7 +125,7 @@ function confereSoletrando(param1) {
     } else {
       string += param1[index];
     }
-  } 
+  }
   return string;
 }
 
@@ -145,8 +145,7 @@ function decode(param1) {
       newString += 'i';
     } else if (param1[index] === '4') {
       newString += 'o';
-    }
-    else if (param1[index] === '5') {
+    } else if (param1[index] === '5') {
       newString += 'u';
     } else {
       newString += param1[index];
