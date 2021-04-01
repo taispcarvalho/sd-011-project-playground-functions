@@ -79,8 +79,8 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function isFizzBuzz(number) {
   if (number % 3 === 0 && number % 5 === 0) {
-  return 'fizzbuzz';
-  } else if (number % 3 === 0) {
+    return 'fizzbuzz';
+  } if (number % 3 === 0) {
     return 'fizz';
   } else if (number % 5 === 0) {
     return 'buzz';
@@ -142,19 +142,18 @@ function decode(value) {
   return char.join('');
 }
 
-//Desafio 10
-function techLearning(techs, nameList) {
+// Desafio 10
+function techList(techs, nameList) {
   techs.sort();
   let listTech = [];
-  let help = name;
   for (let index = 0; index < techs.length; index += 1) {
     let list = {
       tech: techs[index],
-      name: nameList
+      name: nameList,
     };
-  listTech.push(list);
+    listTech.push(list);
   }
-  if(listTech.length === 0) {
+  if (listTech.length === 0) {
     return 'Vazio!';
   }
   return listTech;
@@ -171,4 +170,5 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
+  techList,
 };
