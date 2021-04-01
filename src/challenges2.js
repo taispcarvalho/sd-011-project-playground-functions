@@ -1,3 +1,5 @@
+const { readWordAt, getToNextWord } = require('./challenges.js');
+
 // Auxiliary function for requirement 10
 function maySwap(arr, index) {
   let arrElement1;
@@ -156,10 +158,34 @@ function triangleCheck(lineA, lineB, lineC) {
 
   return true;
 }
+// Auxiliary function for Desafio 13
+function isNumber(anyString) {
+  if (anyString - (anyString - 1) === 1) {
+    return true;
+  }
+
+  return false;
+}
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinksSummary) {
+  let beginningOfWord = 0;
+  let endOfWord = 0;
+  let drinksSum = 0;
+  let word;
+  let plural = '';
+
+  while (endOfWord < drinksSummary.length - 1) {
+    word = readWordAt(drinksSummary, beginningOfWord);
+    if (isNumber(word.read)) {
+      drinksSum -= (`-${word.read}`);
+    }
+    endOfWord = word.end;
+    beginningOfWord = getToNextWord(drinksSummary, endOfWord);
+  }
+  if (drinksSum > 1) { plural = 's'; }
+
+  return `${drinksSum} copo${plural} de água`;
 }
 
 module.exports = {
