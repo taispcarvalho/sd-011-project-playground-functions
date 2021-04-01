@@ -128,11 +128,11 @@ function decode(words) {
         arrVowels[index] = 'e';
         break;
 
-        case '3':
+      case '3':
         arrVowels[index] = 'i';
         break;
 
-        case '4':
+      case '4':
         arrVowels[index] = 'o';
         break;
 
