@@ -1,6 +1,18 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(technology, name) {
+  let orderedListObjects = [];
+  let ordered = technology.sort();
+  for (let index in ordered) {
+    if (Object.prototype.hasOwnProperty.call(ordered, index) && ordered !== 0) {
+      orderedListObjects[index] = {
+        tech: ordered[index],
+        name: { name },
+      };
+    } else {
+      return 'Vazio!';
+    }
+  }
+  return orderedListObjects;
 }
 
 // Desafio 11
