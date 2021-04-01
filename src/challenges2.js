@@ -89,7 +89,7 @@ function checkABS(lineA, lineB, lineC) {
 }
 
 function checkLessThan(lineA, lineB, lineC) {
-  if ((lineA < lineB + lineC) && (lineB < lineA + lineC) && (lineC < lineA + lineB) {
+  if ((lineA < lineB + lineC) && (lineB < lineA + lineC) && (lineC < lineA + lineB)) {
     return true;
   }
   return false;
