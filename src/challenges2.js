@@ -12,12 +12,11 @@ function techList(techs, nome) {
   return lista;
 }
 
-function checkRepeated(arrayNumbers) {
+function checkRepeated(numb, arrayNumbers) {
   let count = 0;
-  let index = -1;
-  index += 1;
+
   for (let num of arrayNumbers) {
-    if (num === arrayNumbers[index]) {
+    if (numb === num) {
       count += 1;
     }
     if (count >= 3) {
@@ -37,13 +36,13 @@ function checkInvalid(arrayNumbers) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   let phonePad = '(**) *****-****';
-  if (checkInvalid(numbers) === true || checkRepeated(numbers) === true) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   for (let i = 0; i < numbers.length; i += 1) {
+    if (checkInvalid(numbers) === true || checkRepeated(numbers[i], numbers) === true) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
     phonePad = phonePad.replace('*', numbers[i]);
   }
   return phonePad;
