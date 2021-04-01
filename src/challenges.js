@@ -10,18 +10,24 @@ function calcArea(base, height) {
   return area;
   // seu código aqui
 }
+// Para o desafio 2 eu obtive ajuda no Stack Overflow.
+/** Source: https://pt.stackoverflow.com/questions/399963/iniciante-em-javascipt */
 
 // Desafio 3
 function splitSentence(string) {
   return string.split(' ');
   // seu código aqui
 }
+// Para o desafio 3 eu obitive ajuda usando o Devmidia.
+/** Source https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254 */
+
 
 // Desafio 4
 function concatName(array) {
   return `${array[array.length - 1]}, ${array[0]}`;
   // seu código aqui
 }
+// Para o desafio 4, a instrutora Caról, Me ajudou a compreender tamplate string.
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -41,6 +47,9 @@ function highestCount(number) {
   return repeatNumber;
   // seu código aqui
 }
+// Para o desafio 6 obtive ajuda para a resolução atravez do developer mozilla.
+/** Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max */
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -63,14 +72,12 @@ function fizzBuzz(array) {
   for (let index in array) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       retorno.push('fizzBuzz');
-    } else {
-      if (array[index] % 3 === 0) {
+    } else if (array[index] % 3 === 0) {
         retorno.push('fizz');
-      } else if (array[index] % 5 === 0) {
-          retorno.push('buzz');
-        } else {
-          retorno.push('bug!');
-        }
+    } else if (array[index] % 5 === 0) {
+        retorno.push('buzz');
+    } else {
+        retorno.push('bug!');
     }
   }
   return retorno;
