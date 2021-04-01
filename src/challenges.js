@@ -36,7 +36,7 @@ function highestNumber(array) {
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] > array[i + 1] && array[i] > h) {
       h = array[i];
-    } 
+    }
   }
   return h;
 }
