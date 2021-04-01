@@ -49,10 +49,21 @@ return maxNumberRepeat
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+  let mouseCat1 = mouse - cat1;
+  let mouseCat2 = mouse - cat2
+  if(Math.abs(mouseCat1) < Math.abs(mouseCat2)){
+  return 'cat1'
+  }
 
+  else if(Math.abs(mouseCat2) < Math.abs(mouseCat1)) {
+  return 'cat2'  
+  }
+  
+  else{
+    return 'os gatos trombam e o rato foge'
+  }
+}
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
