@@ -73,6 +73,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+// Pôr referência devmedia sobre .replace()
 function encode(phrase) {
   for (let index = 0; index < phrase.length; index += 1) {
     phrase = phrase.replace('a', '1');
