@@ -14,6 +14,7 @@ function techList(list, name1) {
   }
   return result;
 }
+console.log(techList(['A', 'B', 'C'], 'José'));
 
 // Desafio 11
 function generatePhoneNumber() {
