@@ -48,12 +48,17 @@ function generatePhoneNumber(nPhone) {
   return response;
 }
 
-console.log(generatePhoneNumber([0, 2, 3, 4, 5, 2, 7, 2, 1, 3, 4]));
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let Angle1 = Math.abs(lineA + lineB);
+  let Angle2 = Math.abs(lineA - lineB);
+
+  if (lineC < Angle1 && lineC > Angle2) {
+    return true;
+  }
 }
+
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
