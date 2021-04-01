@@ -25,7 +25,7 @@ function checkRepeatdNumbers(array) {
   for (let index = 0; index < array.length - 1; index += 1) {
     if (array[index] === array[index+1]) {
       count += 1
-      if (count >= 3) {
+      if (count >= 2) {
         return false;
       }
     } else {
