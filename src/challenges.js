@@ -10,22 +10,7 @@ function calcArea(base, heigth) {
 
 // Desafio 3
 function splitSentence(frase) {
-  let help = ''
-  let result = []
-  for (let cont in frase){
-    if (frase[cont] !== ''){
-      help += frase[cont]
-    }else{
-      result.push(help);
-      help = ''
-    }
-    if (cont == frase.length-1){
-      result.push(help);
-    }
-  }
-  return result;
 }
-
 // Desafio 4
 function concatName() {
   // seu código aqui
