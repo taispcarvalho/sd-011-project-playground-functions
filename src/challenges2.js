@@ -7,11 +7,6 @@ function techList(techno, name) {
   }
   return resulTech;
 }
-
-let technologia = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-let proName = 'Marcelo';
-console.log(techList(technologia, proName));
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
