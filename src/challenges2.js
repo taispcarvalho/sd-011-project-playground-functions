@@ -15,10 +15,46 @@ function techList(array, myName) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function repeatNumber(numbers, x){
+  let repetidos = 0;
+  for (let index = 0; index < numbers.length; index += 1){
+      if(numbers[index] === x){
+        repetidos +=1
+      }
+  }
 
+  return repetidos;
+}
+
+
+function numbereleven (number) {
+  for(let index of number){
+    if (index < 0 || index > 9 || repeatNumber(number, index) > 2) {
+      return false;
+    }
+
+  }
+}
+
+function generatePhoneNumber(numberPhone) {
+  let arraynumber = '';
+  let numbercell = '';
+  let RegExp = /(\d{2})(\d{5})(\d{4})/;
+  if(numberPhone !== 11) {
+    reponse = `${'Array com tamanho incorreto.'}`
+  } else if (numbereleven === false) {
+    reponse == `${'não é possível gerar um número de telefone com esses valores'}`
+  } else {
+    for (let index of numberPhone) {
+      numbercell = numbercell.concat(index);
+    }
+    arraynumber = numbercell.replace(RegExp, '($1) $2-$3');
+  }
+    
+  return arraynumber;
   // seu código aqui
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -40,8 +76,12 @@ console.log(triangleCheck(10, 14, 8));
 function hydrate(string) {
   let bebeAgua = 0;
   for (let index in string) {
-    if (string[index] === '1' || string[index] === '2' || string[index] === '3' || string[index] === '4' || string[index] === '5' || string[index] === '6' || string[index] === '7' || string[index] === '8' || string[index] === '9') {
-      bebeAgua = bebeAgua + parseInt(string[index]);
+    if (string[index] === '1' || string[index] === '2' 
+    || string[index] === '3' || string[index] === '4' 
+    || string[index] === '5' || string[index] === '6' 
+    || string[index] === '7' || string[index] === '8' 
+    ||string[index] === '9') {
+      bebeAgua = `${bebeAgua} ${parseInt(string[index])}`;
     }
   }
   if (bebeAgua === 1) {
