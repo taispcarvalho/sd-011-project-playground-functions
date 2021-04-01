@@ -34,6 +34,7 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(14,8));
 
 // Desafio 6
+// Ajuda do aluno Luiz Wendel,  que demosntrou com muita sapiência que uma função nao consegue chamar uma varável contida em função, e que pra isso era necessario nomear uma variável com o retorno da funcao para dai, sim, a mesma ser usado na funcao desejada.
 function highestCount(numbers) {
   var ammount = 0;
   let highest = highestNumber(numbers);
@@ -62,23 +63,32 @@ console.log(highestCount([1, 2, 7, 23, 23, 23, 5, 7, 11]));
 
 // Desafio 7
 function catAndMouse([mouse, cat1, cat2]) {
-   if (cat1 - mouse === cat2 - mouse) {
+   if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return 'os gatos se trobam e o rato foge';
-   } else if (cat1 - mouse < cat2 - mouse) {
+   } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
      return 'cat1';
    } else {
      return 'cat2';
    }
 }
-console.log(catAndMouse([1, 4, 3]));
+console.log(catAndMouse([1, 0, 2]));
 
 // Desafio 8
 function fizzBuzz(numbers) {
-for (index = 0; index < numbers.length; index += 1) {
-  if (numbers[index] % 3 === 0 || numbers[index] % 5) {
-   }
- } 
-}
+  let fizzBuzz1 = [];
+  for (index = 0; index < numbers.length; index += 1) {
+    if ((numbers[index]) % 5 === 0 && (numbers[index]) % 3 === 0 ) {
+      fizzBuzz1.push('fizzBuzz');
+    } else if ((numbers[index] % 3) === 0) {
+      fizzBuzz1.push('fizz');
+    } else if ((numbers[index] % 5) === 0) {
+      fizzBuzz1.push('buzz');
+    } else {
+      fizzBuzz1.push('bug!')
+    }
+    }return fizzBuzz1
+  } 
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/joinfunction encode() {
