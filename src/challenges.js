@@ -93,99 +93,49 @@ function fizzBuzz(numbers) {
 
 
 // Desafio 9
-function encode() {
-
-}
-
-
-
-
-
-var teste = 'ola, me chamo maran';
-var outra = [];
-for (index = 0; index<teste.length; index +=1) {
-  if (teste[index] === 'a') {
-    outra.push('1');
-  } else if (teste[index] === 'e') {
-      outra.push('2');
-    } else if (teste[index] === 'i') {
-        outra.push('3');
-      } else if (teste[index] === 'o') {
-          outra.push('4');
-        } else if (teste[index] === 'u') {
-            outra.push('5');
-          } else {
-              outra.push(teste[index]);
-            }
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/joinfunction encode() {
+  function encode(sentence) {
+    var assembSentence = [];
+    for (index = 0; index<sentence.length; index +=1) {
+      if (sentence[index] === 'a') {
+        assembSentence.push('1');
+      } else if (sentence[index] === 'e') {
+        assembSentence.push('2');
+        } else if (sentence[index] === 'i') {
+          assembSentence.push('3');
+          } else if (sentence[index] === 'o') {
+            assembSentence.push('4');
+            } else if (sentence[index] === 'u') {
+              assembSentence.push('5');
+              } else {
+                assembSentence.push(sentence[index]);
+                }
+      } 
+      return assembSentence.join('');
   }
+  console.log(encode('hoje vai chover'));
 
-console.log(outra);
 
-
-////////////////////////////////////////////
-let letter = 'hi there';
-let origin = '';
-
-for (index = 0; index<letter.length; index+=1) {
-  if (letter[index] === a) {
-    origin.push = 1;
-} else {
-  origin.push = "teste"
+function decode(sentence) {
+  var originalSentence = [];
+  for (index = 0; index<sentence.length; index +=1) {
+    if (sentence[index] === '1') {
+      originalSentence.push('a');
+    } else if (sentence[index] === '2') {
+      originalSentence.push('e');
+      } else if (sentence[index] === '3') {
+        originalSentence.push('i');
+        } else if (sentence[index] === '4') {
+          originalSentence.push('o');
+          } else if (sentence[index] === '5') {
+            originalSentence.push('u');
+            } else {
+              originalSentence.push(sentence[index]);
+              }
+    } 
+    return originalSentence.join('');
 }
-console.log(origin);
-
-/////////////////////////////////////////
-var teste = ('eu vou tomar agua')
-
-teste.push ('agora')
-console.log(teste);
-
-/////////////////////////////
-let letter = 'hi there';
-let origin = '';
-
-for (index = 0; index<letter.length; index+=1) {
-  origin = letter[index];
-  console.log(origin)
-} 
-/////////////////////////////
-let letter = "hi there";
-
-for (let char of letter){
-  console.log(char);
-}
-} 
-
-
-a = 1
-e = 2
-i = 3
-o = 4
-u = 5
-
-function decode() {
-  // seu código aqui
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(decode('h4j2 v13 ch4v2r'));
 
 module.exports = {
   calcArea,
