@@ -77,8 +77,13 @@ function checkLineDiff (lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
- 
+function hydrate(string) {
+  let numberOfDrinks = string.replace(/[^0-9]/g, '');
+  let numberOfWaters = 0;
+  for (let index = 0; index < numberOfDrinks.length; index += 1) {
+    numberOfWaters = numberOfWaters + parseInt(numberOfDrinks[index]);
+  }
+  return numberOfWaters + ' copos de água'//numberOfDrinks;
 }
 
 module.exports = {
