@@ -67,7 +67,7 @@ function fizzBuzz(array) {
         array[i] = 'fizzBuzz';
         break;
       case array[i] % 5 === 0:
-        array[i] = 'Buzz';
+        array[i] = 'buzz';
         break;
       case array[i] % 3 === 0:
         array[i] = 'fizz';
