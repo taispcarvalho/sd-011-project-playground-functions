@@ -99,15 +99,15 @@ function decode(phrase) {
   let leters = phrase.split('');
   let output = [];
   for (let index = 0; index < leters.length; index += 1) {
-    if (leters[index] === 1) {
+    if (leters[index] === '1') {
       output.push('a');
-    } else if (leters[index] === 2) {
+    } else if (leters[index] === '2') {
       output.push('e');
-    } else if (leters[index] === 3) {
+    } else if (leters[index] === '3') {
       output.push('i');
-    } else if (leters[index] === 4) {
+    } else if (leters[index] === '4') {
       output.push('o');
-    } else if (leters[index] === 5) {
+    } else if (leters[index] === '5') {
       output.push('u');
     } else {
       output.push(leters[index]);
