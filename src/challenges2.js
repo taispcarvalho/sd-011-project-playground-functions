@@ -40,10 +40,10 @@ function generatePhoneNumber(numberPhone) {
   let arraynumber = '';
   let numbercell = '';
   let RegExp = /(\d{2})(\d{5})(\d{4})/;
-  if (numberPhone.length !== 11) {
-    reponse = `${'Array com tamanho incorreto.'}`;
+  if (numberPhone.length != 11) {
+    arraynumber = `${'Array com tamanho incorreto.'}`;
   } else if (numbereleven(numberPhone) === false) {
-    reponse = `${'não é possível gerar um número de telefone com esses valores'}`;
+    arraynumber = `${'não é possível gerar um número de telefone com esses valores'}`;
   } else {
     for (let index of numberPhone) {
       numbercell = numbercell.concat(index);
