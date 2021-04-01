@@ -87,21 +87,31 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(20, 15, 10));
 
 // Desafio 8
-function fizzBuzz(arrNumbers) {
-  let newArrNumbers = [];
-  for (let index = 0; index < arrNumbers.length; index += 1) {
-    if (arrNumbers[index] % 3 === 0 && arrNumbers[index] % 5 !== 0) {
-      newArrNumbers.push('fizz');
-    } else if (arrNumbers[index] % 5 === 0 && arrNumbers[index] % 3 !== 0) {
-      newArrNumbers.push('buzz');
-    } else if (arrNumbers[index] % 3 === 0 && arrNumbers[index] % 5 === 0) {
-      newArrNumbers.push('fizzBuzz');
-    } else {
-      newArrNumbers.push('bug!');
-    }
-  } return newArrNumbers;
+function fizzEncode(number) {
+  let newStrCode = '';
+  if (number % 3 === 0 && number % 5 !== 0) {
+    newStrCode += 'fizz';
+  } else if (number % 5 === 0 && number % 3 !== 0) {
+    newStrCode += 'buzz';
+  } else if (number % 3 === 0 && number % 5 === 0) {
+    newStrCode += 'fizzBuzz';
+  } else {
+    newStrCode += 'bug!';
+  }
+  return newStrCode;
 }
-console.log(fizzBuzz([9, 25]));
+
+function fizzBuzz(arrNumbers) {
+  let newArr = [];
+  for (let index = 0; index < arrNumbers.length; index += 1) {
+    let encodedWord = fizzEncode(arrNumbers[index]);
+    newArr.push(encodedWord);
+  }
+  return newArr;
+}
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 // Desafio 9
 function encode(str) {
   let str2 = '';
