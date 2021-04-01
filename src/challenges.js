@@ -28,7 +28,7 @@ function footballPoints(win, ties) {
 
 // Desafio 6
 function highestCount(numeros) {
-  let ordem = numeros.sort;
+  let ordem = numeros.sort();
   let maior = ordem[numeros.length - 1];
   let retorno = 0
   for ( let index in numeros) {
