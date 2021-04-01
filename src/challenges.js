@@ -36,7 +36,6 @@ function calculateHighestNumber(arrayNumbers) {
       highestNumber = number;
     }
   }
-
   return highestNumber;
 }
 
@@ -48,14 +47,12 @@ function mostRepeatedNumber(arrayNumbers, numberX) {
       amountNumberX += 1;
     }
   }
-
   return amountNumberX;
 }
 
 function highestCount(arrayNumbers) {
   let numberX = calculateHighestNumber(arrayNumbers);
   let amountHighestNumber = mostRepeatedNumber(arrayNumbers, numberX);
-
   return amountHighestNumber;
 }
 
@@ -86,14 +83,13 @@ function fizzBuzz(arrayFizzBuzzNumbers) {
     if (isDivisibleBy3 && isDivisibleBy5) {
       arrayFizzBuzz.push('fizzBuzz');
     } else if (isDivisibleBy3) {
-      arrayFizzBuzz.push('fizz');  
+      arrayFizzBuzz.push('fizz');
     } else if (isDivisibleBy5) {
       arrayFizzBuzz.push('buzz');
     } else {
       arrayFizzBuzz.push('bug!');
     }
   }
-
   return arrayFizzBuzz;
 }
 
@@ -105,26 +101,24 @@ function encode(sentence) {
     for (let vowel of Object.keys(objectVowels)) {
       if (sentence[index] === vowel) {
         sentence = sentence.replace(vowel, objectVowels[vowel]);
-        break
-      };
-    };
-  };
-
+        break;
+      }
+    }
+  }
   return sentence;
 }
 
 function decode(sentence) {
-  let objectNumbers = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' };
+  let objectNumbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
 
   for (let index = 0; index < sentence.length; index += 1) {
     for (let number of Object.keys(objectNumbers)) {
       if (sentence[index] === number) {
         sentence = sentence.replace(number, objectNumbers[number]);
-        break
-      };
-    };
-  };
-  
+        break;
+      }
+    }
+  }
   return sentence;
 }
 
