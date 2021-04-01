@@ -19,30 +19,29 @@ function techList(techs, name) {
 // Desafio 11
 function verificarDuplicados(array) {
   let count = {};
-  array.forEach(function(i) { count[i] = (count[i]||0) + 1;});
-      return count;
+  array.forEach (function(i) { count[i] = (count[i] || 0) + 1; });
+  return count;
 }
 function generatePhoneNumber(array) {
-  let format = '(xx)xxxxx-xxxx';
-  if (array.length != 11) {
-      return "Array com tamanho incorreto.";
+  let format = '(xx) xxxxx-xxxx';
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
   let obj = verificarDuplicados(array);
   for (const property in obj) {
     if (obj[property] >= 3) {
-      return "não é possível gerar um número de telefone com esses valores";
-    }  
-  } 
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] < 0 || array[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores"; 
+      return 'não é possível gerar um número de telefone com esses valores';
     }
-    format = format.replace ('x', array[i])
-      
+    format = format.replace('x', array[i]);    
   }
-      return format
+  return format;
 }
-//  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
