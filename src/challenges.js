@@ -67,16 +67,33 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 
-function fizzBuzz(array) {
-  let answer = [];
-  for (let i = 0; i < array.length; i += 1) {
-    (array[i] % 5 === 0 && array[i] % 3 === 0) ? (answer[i] = 'fizzBuzz') :
-    (array[i] % 3 === 0 && array[i] % 5 !== 0) ? (answer[i] = 'fizz') :
-    (array[i] % 5 === 0 && array[i] % 3 !== 0) ? (answer[i] = 'buzz') : (answer[i] = 'bug!') }
+// function fizzBuzz(array) {
+//   let answer = [];
+
+//   for (let i = 0; i < array.length; i += 1) {
+//     (array[i] % 5 === 0 && array[i] % 3 === 0) ? (answer[i] = 'fizzBuzz') :
+//     (array[i] % 3 === 0 && array[i] % 5 !== 0) ? (answer[i] = 'fizz') :
+//     (array[i] % 5 === 0 && array[i] % 3 !== 0) ? (answer[i] = 'buzz') : (answer[i] = 'bug!') }
     
+//   return answer;
+//  }
+
+ function fizzBuzz(array) {
+  let answer = [];
+  for (let i in array) {
+    let fizz = array[i] % 3 === 0;
+    let buzz = array[i] % 5 === 0;
+    if (fizz && buzz) {
+      answer[i] = 'fizzBuzz';
+    } else if (fizz) {
+      answer[i] = 'fizz';
+    } else if (buzz) {
+      answer[i] = 'buzz';
+    } else {answer[i] = 'bug!';}
+  }
   return answer;
  }
-
+ 
 // Desafio 9
 function encode() {
   // seu código aqui
