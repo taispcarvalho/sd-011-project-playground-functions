@@ -17,10 +17,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(names) {
-  let firstName = names.shift();
-  let lastName = names.pop();
-  let concatenatedNames = [];
-  concatenatedNames.push(lastName, firstName);
+  let concatenatedNames = `${names.pop()}, ${names.shift()}`;
   return concatenatedNames;
 }
 
