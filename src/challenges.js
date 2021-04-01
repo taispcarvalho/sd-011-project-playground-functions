@@ -1,12 +1,12 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 && value2 === true) {
-    return true
-  }
-  else {
-    return false
-  }
+  return value1 && value2;
 }
+
+console.log(compareTrue(true, false));
+console.log(compareTrue(false, true));
+console.log(compareTrue(true, true));
+console.log(compareTrue(false, false));
 
 // Desafio 2
 function calcArea() {
