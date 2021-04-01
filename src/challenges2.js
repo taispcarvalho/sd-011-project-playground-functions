@@ -15,10 +15,6 @@ function techList(array, name) {
   }
   return result;
 }
-console.log(
-  techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Amandha')
-);
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
