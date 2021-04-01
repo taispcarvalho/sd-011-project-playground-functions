@@ -4,15 +4,16 @@ function techList(techNames, name) {
   let infoTech = {tech: '', name:''}
   let completeTech = [];
 
-  for(let index = 0; index < techNames.length; index += 1) {
-    if(techNames.length > 0) {
+  if(techNames.length != 0) {
+    for(let index = 0; index < techNames.length; index += 1) {
       infoTech = {tech: techNames[index],name: name}
       completeTech.push(infoTech);
-    } else  return 'Vazio!';
+    }
+  } else { 
+    return 'Vazio!';
   }
-    return completeTech.sort((a,b) => (a.tech >b.tech ? 1 : -1));
+  return completeTech.sort((a,b) => (a.tech >b.tech ? 1 : -1));
 }
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
