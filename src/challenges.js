@@ -21,7 +21,6 @@ function splitSentence(string) {
 // Para o desafio 3 eu obitive ajuda usando o Devmidia.
 /** Source https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254 */
 
-
 // Desafio 4
 function concatName(array) {
   return `${array[array.length - 1]}, ${array[0]}`;
@@ -50,7 +49,6 @@ function highestCount(number) {
 // Para o desafio 6 obtive ajuda para a resolução atravez do developer mozilla.
 /** Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max */
 
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distance1 = Math.abs(mouse - cat1);
@@ -66,25 +64,30 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 console.log(catAndMouse(12, 3, 2));
+// Vitor Cardozo, Tales Coelho e Marlon Ramos [Todos da Turma 11] me ajudaram a resolver.
+/** Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs */
+
 // Desafio 8
 function fizzBuzz(array) {
   let retorno = [];
-  for (let index in array) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+  for (let index = 0; index < array.length; index += 1) {
+    let verifiva5 = array[index] % 5 === 0;
+    let verifica3 = array[index] % 3 === 0;
+    if (array[index] % 15 === 0) {
       retorno.push('fizzBuzz');
-    } else if (array[index] % 3 === 0) {
-        retorno.push('fizz');
-    } else if (array[index] % 5 === 0) {
-        retorno.push('buzz');
+    } else if (verifica3) {
+      retorno.push('fizz');
+    } else if (verifiva5) {
+      retorno.push('buzz');
     } else {
-        retorno.push('bug!');
+      retorno.push('bug!');
     }
   }
   return retorno;
 }
 
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
+// Tales Coelho, Marlon Ramos, Vitor Cardozo, Rodolfo Ramos, Igor Mendes e Natali Lima me ajudaram a resolver/ endetender a questão
 // Desafio 9
 function encode(array) {
   for (let index = 0; index < array.length; index += 1) {
@@ -108,6 +111,7 @@ function decode(array) {
   return array;
   // seu código aqui
 }
+// Tales Coelho, Marlon Ramos, Vitor Cardozo, Iselen Igor Mendes e Natali Lima [Todos turma 11] me ajudaram a entender.
 
 module.exports = {
   calcArea,
