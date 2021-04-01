@@ -61,14 +61,35 @@ function generatePhoneNumber(arrNumbers) {
 console.log(generatePhoneNumber([]));
 
 // Desafio 12
+function checkA(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    return true;
+  }
+}
+
+function checkB(lineA, lineB, lineC) {
+  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+    return true;
+  }
+}
+
+function checkC(lineA, lineB, lineC) {
+  if (lineC < lineB + lineA && lineC > Math.abs(lineB - lineA)) {
+    return true;
+  }
+}
+
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC) && lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) && lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+  let sideA = checkA(lineA, lineB, lineC);
+  let sideB = checkB(lineA, lineB, lineC);
+  let sideC = checkC(lineA, lineB, lineC);
+  if (sideA === sideB === sideC) {
     return true;
   }
   return false;
 }
 
-console.log(triangleCheck(10, 0, 8));
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate(str) {
