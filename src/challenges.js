@@ -53,7 +53,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function substituteWords(number) {
-  if (number % 5 === 0 && array % 3 === 0) return 'FizzBuzz';
+  if (number % 5 === 0 && number % 3 === 0) return 'FizzBuzz';
   if (number % 3 === 0) return 'fizz';
   if (number % 5 === 0) return 'buzz';
   return 'bug!';
