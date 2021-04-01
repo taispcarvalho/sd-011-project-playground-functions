@@ -196,6 +196,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-  readWordAt,
-  getToNextWord,
 };

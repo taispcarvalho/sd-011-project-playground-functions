@@ -1,4 +1,4 @@
-const { readWordAt, getToNextWord } = require('./challenges.js');
+const { splitSentence } = require('./challenges');
 
 // Auxiliary function for requirement 10
 function maySwap(arr, index) {
@@ -170,21 +170,19 @@ function isNumber(anyString) {
 
 // Desafio 13
 function hydrate(drinksSummary) {
-  let beginningOfWord = 0;
-  let endOfWord = 0;
+  let drinksList = splitSentence(drinksSummary);
   let drinksSum = 0;
-  let word;
   let plural = '';
 
-  while (endOfWord < drinksSummary.length - 1) {
-    word = readWordAt(drinksSummary, beginningOfWord);
-    if (isNumber(word.read)) {
-      drinksSum -= (`-${word.read}`);
+  for (let word of drinksList) {
+    if (isNumber(word)) {
+      drinksSum -= (`-${word}`);
     }
-    endOfWord = word.end;
-    beginningOfWord = getToNextWord(drinksSummary, endOfWord);
   }
-  if (drinksSum > 1) { plural = 's'; }
+
+  if (drinksSum > 1) {
+    plural = 's';
+  }
 
   return `${drinksSum} copo${plural} de água`;
 }
