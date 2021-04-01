@@ -4,6 +4,8 @@ function techList(array, name) {
   if (array.length === 0) {
     return 'Vazio!';
   }
+
+  array.sort();
   for (let i = 0; i < array.length; i += 1) {
     let objeto = {
       tech: array[i],
@@ -11,10 +13,11 @@ function techList(array, name) {
     };
     result.push(objeto);
   }
-
   return result;
 }
-console.log(techList([], 'Amandha'));
+console.log(
+  techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Amandha')
+);
 
 // Desafio 11
 function generatePhoneNumber() {
