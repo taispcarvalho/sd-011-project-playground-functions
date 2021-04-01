@@ -3,10 +3,10 @@
 function techList(array, name) {
   if (array.length > 0) {
     for (let index in array) {
-        array[index] = {
-          tech: array[index],
-          name,
-        };
+      array[index] = {
+        tech: array[index],
+        name,
+      };
     }
   } else {
     return 'Vazio!';
@@ -40,10 +40,10 @@ function generatePhoneNumber(numbers) {
   let secondPart = [];
   let thirdPart = [];
   let repeat = repeatNumber(numbers);
-
   if (numbers.length !== 11) return 'Array com tamanho incorreto.';
   for (let index = 0; index < 11; index += 1) {
-    if (numbers[index] < 0 || numbers[index] > 9 || repeat === true) return 'não é possível gerar um número de telefone com esses valores';
+    if (numbers[index] < 0 || numbers[index] > 9 || repeat === true) 
+      return 'não é possível gerar um número de telefone com esses valores';
   }
   for (let index = 0; index < 2; index += 1) {
     firstPart.push(numbers[index]);
@@ -63,11 +63,11 @@ function triangleCheck(lineA, lineB, lineC) {
   let aPlusB = lineA + lineB;
   let bPlusC = lineB + lineC;
   let cPlusA = lineC + lineA;
-  let aMinusB = lineA - lineB;
-  let bMinusC = lineB - lineC;
-  let cMinusA = lineC - lineA;
+  let aMinusB = Math.abs(lineA - lineB);
+  let bMinusC = Math.abs(lineB - lineC);
+  let cMinusA = Math.abs(lineC - lineA);
 
-  if (lineA < bPlusC && lineB < cPlusA && lineC < aPlusB && lineA > Math.abs(bMinusC) && lineB > Math.abs(cMinusA) && lineC > Math.abs(aMinusB)) {
+  if (lineA < bPlusC && lineB < cPlusA && lineC < aPlusB && lineA > bMinusC && lineB > cMinusA && lineC > aMinusB) {
     check = true;
   }
 
@@ -82,9 +82,7 @@ function hydrate(string) {
   let msg = '';
 
   for (let i in matches) {
-    if (matches.hasOwnProperty(i)) {
-      drinks += Number(matches[i]);
-    }
+    drinks += Number(matches[i]);
   }
 
   if (drinks === 1) {
