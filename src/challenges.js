@@ -14,8 +14,8 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName(array) {
-  return `${array[array.length - 1]}, ${array[0]}`;
+function concatName(valor) {
+  return `${valor[valor.length - 1]}, ${valor[0]}`;
 }
 
 // Desafio 5
@@ -24,21 +24,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function biggestNumber(array) {
+function biggestNumber(valor) {
   let number = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > number) {
-      number = array[index];
+  for (let index = 0; index < valor.length; index += 1) {
+    if (valor[index] > number) {
+      number = valor[index];
     }
   }
   return number;
 }
 
-function highestCount(array) {
+function highestCount(valor) {
   let count = 0;
-  let x = biggestNumber(array);
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] === x) {
+  let x = biggestNumber(valor);
+  for (let index = 0; index < valor.length; index += 1) {
+    if (valor[index] === x) {
       count += 1;
     }
   }
@@ -77,6 +77,8 @@ function fizzBuzz(numberArray) {
   }
   return newArray;
 }
+
+console.log(fizzBuzz([9,5,15,8]));
 
 // Desafio 9
 function encode(string) {
