@@ -143,6 +143,8 @@ function fizzBuzz(numbers) {
     let index = numbers.indexOf(number);
     numbers[index] = numberToFizzBuzz(number);
   }
+
+  return numbers;
 }
 
 // Desafio 9
