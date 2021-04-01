@@ -140,7 +140,7 @@ console.log(encode('A'));
 
 console.log(encode('A vida é bela'));
 
-function changeLetter(letter) {
+function changeLetter2(letter) {
   let letterNumber = {
     1: 'a',
     2: 'e',
@@ -158,7 +158,7 @@ function changeLetter(letter) {
 function decode(str) {
   let str2 = '';
   for (let index = 0; index < str.length; index += 1) {
-    str2 += changeLetter(str[index]);
+    str2 += changeLetter2(str[index]);
   }
   return str2;
 }
