@@ -86,7 +86,6 @@ function encode(string)
   let stringArray = string.toLowerCase().split('');
 
   for (let index = 0; index < stringArray.length; index += 1) {
-    
     if (stringArray[index] === 'a') {
       stringArray[index] = '1';
     } else if (stringArray[index] === 'e') {
@@ -108,7 +107,6 @@ function decode(string)
   let stringArray = string.toLowerCase().split('');
 
   for (let index = 0; index < stringArray.length; index += 1) {
-    
     if (stringArray[index] === '1') {
       stringArray[index] = 'a';
     } else if (stringArray[index] === '2') {
