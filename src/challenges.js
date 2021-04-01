@@ -93,20 +93,18 @@ function encode(string) {
 
 function decode(string) {
   // seu código aqui
-  dict = { a: 1, e: 2, i: 3, o: 4, u: 5};
+  let dict = { a: 1, e: 2, i: 3, o: 4, u: 5 };
   string = string.split('');
   for (let n in dict) {
     for (let n2 of string) {
-      if (n2 == dict[n]) {
+      if (n2 === dict[n]) {
         let indexOfLetter = string.indexOf(n2);
         string[indexOfLetter] = n;
-      }  
+      }
     }
   }
   return string.join('');
 }
-
-
 
 module.exports = {
   calcArea,
