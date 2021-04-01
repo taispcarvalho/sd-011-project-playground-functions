@@ -14,8 +14,8 @@ function splitSentence(frase){
 
 function concatName(lista){
   let primPos = lista[0];
-  let ultPos = lista[lista.length - 1];
-  let resposta = ultPos.c54oncat(", ",primPos);
+  let ultPos = lista[lista.length-1];
+  let resposta = ultPos.concat(", ",primPos);
   return (resposta);
 }
 
