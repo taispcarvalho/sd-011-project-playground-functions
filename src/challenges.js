@@ -77,20 +77,20 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let stringEncode = string.replace("a", 1);
-  stringEncode = string.replace("e", 2);
-  stringEncode = string.replace("i", 3);
-  stringEncode = string.replace("o", 4);
-  stringEncode = string.replace("u", 5);
+  let stringEncode = string.replace('a', 1);
+  stringEncode = string.replace('e', 2);
+  stringEncode = string.replace('i', 3);
+  stringEncode = string.replace('o', 4);
+  stringEncode = string.replace('u', 5);
   return stringEncode;
 }
 
 function decode(string) {
-  let stringDecode = string.replace("1", a);
-  stringDecode = string.replace(2, "e");
-  stringDecode = string.replace(3, "i");
-  stringDecode = string.replace(4, "o");
-  stringDecode = string.replace(5, "u");
+  let stringDecode = string.replace(1, 'a');
+  stringDecode = string.replace(2, 'e');
+  stringDecode = string.replace(3, 'i');
+  stringDecode = string.replace(4, 'o');
+  stringDecode = string.replace(5, 'u');
   return stringDecode;
 }
 
