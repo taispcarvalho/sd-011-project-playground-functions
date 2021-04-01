@@ -52,14 +52,13 @@ console.log(generatePhoneNumber(3, 2, 6, 5, 8, 9, 7, 8));
 
 // Desafio 12 - ok
 function triangleCheck(lineA, lineB, lineC) {
-  if ( lineA !== 0 && lineB !== 0 && lineC !== 0 ) {  
   let triaA = lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
   let triaB = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
-  let triaC = lineC < lineB + lineA && lineC > Math.abs(lineB - lineA);      
+  let triaC = lineC < lineB + lineA && lineC > Math.abs(lineB - lineA); 
+    if ( lineA !== 0 && lineB !== 0 && lineC !== 0 ) {  
   return  ( triaA  ||  triaB  ||  triaC ) ;
   }
 }  
-console.log(triangleCheck(10, 6, 10));
 
 // Desafio 13
 function hydrate(string) {
@@ -75,7 +74,7 @@ function hydrate(string) {
     return (somaCopos + ' copo de água');
   }
 }
-console.log(hydrate('1 cerveja'));
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
