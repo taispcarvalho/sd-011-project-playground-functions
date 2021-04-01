@@ -2,7 +2,7 @@
 function techList(lista, nameName) {
   let list = [];
   for (let index = 0; index < lista.length; index += 1) {
-  let object = {
+    let object = {
       tech: lista[index],
       name: nameName,    
     };
@@ -10,13 +10,18 @@ function techList(lista, nameName) {
   }
 
   list.sort(function(a, b) {
-  return (a.tech > b.tech) ? 1 : ((b.tech > a.tech) ? -1 : 0); });
+  return (a.tech > b.tech) ? 1 : ((b.tech > a.tech) ? -1 : 0);
+  });
 
-  return list;
+  if (lista.length === 0) {
+    return 'Vazio!'
+  }
+
+  else {
+    return list;
+  }
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
-"Lucas"));
-
+console.log(techList([], "Lucas"));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
