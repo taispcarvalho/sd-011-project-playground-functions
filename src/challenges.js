@@ -97,7 +97,7 @@ function decode(string) {
   string = string.split('');
   for (let n in string) {
     if (Object.values(dict).includes(parseInt(string[n], 10))) {
-      string[n] = Object.keys(dict)[n];
+      string[n] = Object.keys(dict)[parseInt(string[n], 10)-1];
     }
   }
   return string.join('');
