@@ -1,25 +1,23 @@
 // Desafio 10
-function techList(array, name) {
-  let allTechs = [];
-  for (let index = 0; index < array.length; index += 1) {
-    allTechs.push(createObject(array[index],name));
-  }
-
-  allTechs.sort((a, b) => (a.tech > b.tech) ? 1 : -1);
-
-  if (array.length === 0) {
-    return 'Vazio!'
-  }
-  //return typeof allTechs
-  return allTechs
-}
-
 function createObject(techName,name) {
   let object = {
     tech: techName,
     name: name
   }
   return object;
+}
+
+function techList(array, name) {
+  let allTechs = [];
+  for (let index = 0; index < array.length; index += 1) {
+    allTechs.push(createObject(array[index], name));
+  }
+
+  allTechs.sort((a, b) => (a.tech > b.tech) ? 1 : -1);
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+  return allTechs;
 }
 
 // Desafio 11
@@ -29,7 +27,7 @@ function generatePhoneNumber(numbers) {
   } else if (checkNumbers(numbers) === false) {
     return 'não é possível gerar um número de telefone com esses valores'
   } else {
-    let phoneNumber = '(' + numbers.slice(0,2) + ') ' + numbers.slice(2,7) + '-' + numbers.slice(7,11);
+    let phoneNumber = '(' + numbers.slice(0, 2) + ') ' + numbers.slice(2, 7) + '-' + numbers.slice(7, 11);
     return phoneNumber.replace(/\,/g, '');
   }
 }
