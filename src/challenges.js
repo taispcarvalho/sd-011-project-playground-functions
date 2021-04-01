@@ -76,19 +76,24 @@ console.log(catAndMouse(10, 4, 22));
 console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
+function conditionForFizzBuzz(value) {
+  if (value % 3 === 0 && value % 5 === 0) {
+    return 'fizzBuzz';
+  }  
+  if (value % 3 === 0) {
+    return 'fizz';
+  } 
+  if (value % 5 === 0) {
+    return 'buzz';
+  } 
+  return 'bug!';  
+}
 function fizzBuzz(numbers) {
+  let newArrayFizBuzz = [];
   for (let index in numbers) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      numbers[index] = 'fizzBuzz';
-    } else if (numbers[index] % 3 === 0) {
-      numbers[index] = 'fizz';
-    } else if (numbers[index] % 5 === 0) {
-      numbers[index] = 'buzz';
-    } else {
-      numbers[index] = 'bug!';
-    }
+    newArrayFizBuzz.push(conditionForFizzBuzz(numbers[index]));
   }
-  return numbers;
+  return newArrayFizBuzz;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
