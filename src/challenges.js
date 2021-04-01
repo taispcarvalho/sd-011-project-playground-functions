@@ -88,13 +88,13 @@ function encode(phrase) {
   let target = 'aeiou';
   let encodeKey = '12345';
 
-  for (let index in frase) {
+  for (let index in phrase) {
     for (let index2 in target) {
-      if (frase[index] === target[index2]) {
-        frase = frase.replace(frase[index],encodeKey[index2]);
+      if (phrase[index] === target[index2]) {
+        phrase = phrase.replace(phrase[index], encodeKey[index2]);
       }
     }
-  } return frase;
+  } return phrase;
 }
 
 function decode(phrase) {
@@ -121,6 +121,8 @@ function decode(phrase) {
     }
   } return decodePhrase;
 }
+/* Consultei o repositório do Vitor Hugo para resolver essa parte. Link do repositório
+https://github.com/tryber/sd-011-project-playground-functions/pull/154/files#submit-review */
 
 module.exports = {
   calcArea,
