@@ -29,8 +29,6 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 
-let arrayExercicio = [9, 1, 2, 3, 9, 5, 7];
-
 function highestCount(array) {
   let higherNumber = 0;
   let repeatNumber = 0;
@@ -58,10 +56,10 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else if (Math.abs(distanceCat1) < Math.abs(distanceCat2)) {
     return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
+
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -80,7 +78,6 @@ function fizzBuzz(array) {
   return newArray;
 }
 
-let stringTest = 'hi there!';
 // Desafio 9
 function encode(word) {
   for (let index = 0; index < word.length; index += 1) {
@@ -105,10 +102,6 @@ function decode(word) {
   }
   return word;
 }
-
-console.log(encode(stringTest))
-console.log(decode(stringTest))
-
 
 module.exports = {
   calcArea,
