@@ -40,7 +40,7 @@ function highestCount (numArray) {
   
   let maxNumber = Math.max.apply(null, numArray);
   let maxNumberRepeat = 0
-  for (let index = 0; index < numArray.length; index += 1){;
+  for (let index = 0; index < numArray.length; index += 1){
     if(numArray[index] === maxNumber){
     maxNumberRepeat = maxNumberRepeat + 1
   }
@@ -65,8 +65,25 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numberArray) {
+  let comparation = []
+  for (let index = 0; index < numberArray.length; index += 1){
+    divisivel3 = numberArray[index] % 3;
+    divisivel5 = numberArray[index] % 5;
+    if(divisivel3 === 0 && divisivel5 === 0){
+    comparation.push('fizzbuzz');
+    }
+    else if (divisivel3 === 0 && divisivel5 != 0){
+      comparation.push('fizz');
+    }
+    else if (divisivel5 === 0 && divisivel3 != 0){
+      comparation.push ('buzz');
+    }
+    else{
+      comparation.push('bug')
+    }
+    }
+    return comparation; 
 }
 
 // Desafio 9
