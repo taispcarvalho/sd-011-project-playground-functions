@@ -5,19 +5,19 @@ function techList(array, name) {
     for (let index in array) {
       array[index] = {
         tech: array[index],
-        name: name,
-      }; }
+        name,
+      };}
   } else {
     return 'Vazio!';
   }
   array.sort(function (a, b) {
-  let techA = a.tech.toLowerCase();
-  let techB = b.tech.toLowerCase();
-  if (techA < techB) return -1;
-  if (techA > techB) return 1;
-  return 0;
+    let techA = a.tech.toLowerCase();
+    let techB = b.tech.toLowerCase();
+    if (techA < techB) return -1;
+    if (techA > techB) return 1;
+    return 0;
   });
-  
+
   return array;
 }
 
@@ -57,15 +57,15 @@ function generatePhoneNumber(numbers) {
 
   for (let index = 0; index < 11; index += 1) {
     if (numbers[index] < 0 || numbers[index] > 9 || repeat === true) {
-      return 'Não é possível gerar um número de telefone com esses valores';
-    } 
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
   }
 
   for (let index = 0; index < 2; index += 1) {
     firstPart.push(numbers[index]);
   }
   firstPart.push(')');
-  
+
   for (let index = 2; index < 7; index += 1) {
     secondPart.push(numbers[index]);
   }
@@ -73,12 +73,13 @@ function generatePhoneNumber(numbers) {
   for (let index = 7; index < 11; index += 1) {
     thirdPart.push(numbers[index]);
   }
-  
+
   let completeNumber = firstPart.join('') + ' ' + secondPart.join('') + '-' + thirdPart.join('');
-  
+
   return completeNumber;
 }
 
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]))
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
