@@ -28,7 +28,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   let newArray = array.sort();
-  let highestNumber = newArray[newArray.length-1];
+  let highestNumber = newArray[newArray.length - 1];
   let countNumber = 0;
   for (let index in array) {
     if (highestNumber === array[index]) {
@@ -54,7 +54,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
-  for (let index in array) {
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 5 === 0 && array[index] % 3 === 0) {
       newArray.push('fizzBuzz');
     } else if (array[index] % 3 === 0) {
