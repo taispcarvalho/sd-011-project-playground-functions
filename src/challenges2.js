@@ -87,11 +87,15 @@ function triangleCheck(sideA, sideB, sideC) {
   }
   return false;
 }
-console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  drinks = drinks.replace(/\D/g,'')
+  let count = 0;
+  for (let index = 0; index < drinks.length; index += 1) {
+    count += Number(drinks[index]);
+  }
+  return `${count} copos de água`;
 }
 
 module.exports = {
