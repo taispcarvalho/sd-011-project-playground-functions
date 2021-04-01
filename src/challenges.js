@@ -60,16 +60,17 @@ function fizzBuzz(array) {
 
 function numberDivisor (number) {
   let newString = '';
-    if (number % 3 === 0 && number % 5 !== 0) {
-      newString = 'fizz';
-    } else if (number % 5 === 0 && number % 3 !== 0) {
-      newString = 'buzz';
-    } else if (number % 15 === 0) {
-      newString = 'fizzBuzz';
-    } else {
-      newString = 'bug!';
-    }
-    return newString;
+
+  if (number % 3 === 0) {
+    newString = 'fizz';
+  } else if (number % 5 === 0) {
+    newString = 'buzz';
+  } else if (number % 15 === 0) {
+    newString = 'fizzBuzz';
+  } else {
+    newString = 'bug!';
+  }
+  return newString;
 }
 
 // Desafio 9
