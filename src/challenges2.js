@@ -42,15 +42,6 @@ function verifyDigit(arrayOfNumbers) {
   return true;
 }
 
-function verifyArrayOfBool(arrayOfBool) {
-  for (let index = 0; index < (arrayOfBool.length - 1); index += 1) {
-    if (arrayOfBool[index] === false) {
-      return false;
-    }
-  }
-  return true;
-}
-
 function verifyRepetition(arrayOfNumbers) {
   let repLimit = 2;
   let repArray = arrayOfNumbers.map((num) => arrayOfNumbers.filter((n) => n === num).length > repLimit);
