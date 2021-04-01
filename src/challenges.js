@@ -64,10 +64,10 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let arrayResult = '';
   for (let arrayPosi = 0; arrayPosi < array.length; arrayPosi += 1) {
-    if (array[arrayPosi] % 3 === 0) arrayResult = 'fizz'[arrayPosi];
-    if (array[arrayPosi] % 5 === 0) arrayResult = 'buzz'[arrayPosi];
-    if (array[arrayPosi] % 3 === 0 && array[arrayPosi] % 5 === 0) arrayResult = 'fizzbuzz'[arrayPosi];
-    if (array[arrayPosi] % 3 !== 0 && array[arrayPosi] % 5 !== 0) arrayResult = 'bug!'[arrayPosi];
+    if (array[arrayPosi] % 3 === 0) arrayResult[arrayPosi] = 'fizz';
+    if (array[arrayPosi] % 5 === 0) arrayResult[arrayPosi] = 'buzz';
+    if (array[arrayPosi] % 3 === 0 && array[arrayPosi] % 5 === 0) arrayResult[arrayPosi] = 'fizzbuzz';
+    if (array[arrayPosi] % 3 !== 0 && array[arrayPosi] % 5 !== 0) arrayResult[arrayPosi] = 'bug!';
   }
   return arrayResult;
 }
