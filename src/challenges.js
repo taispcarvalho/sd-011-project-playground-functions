@@ -84,25 +84,20 @@ function encode(string) {
 
 let stringArray = string.toLowerCase().split('')
 
-for (let index = 0; index < stringArray.length; index += 1) {
-  if (stringArray[index] === 'a') 
-  {
+  for (let index = 0; index < stringArray.length; index += 1) {
+    if (stringArray[index] === 'a') {
       stringArray[index] = '1';
     } 
-    else if (stringArray[index] === 'e') 
-    {
+    else if (stringArray[index] === 'e') {
       stringArray[index] = '2';
     }
-    else if (stringArray[index] === 'i') 
-    {
+    else if (stringArray[index] === 'i') {
       stringArray[index] = '3'
     }
-    else if (stringArray[index] === 'o') 
-    {
+    else if (stringArray[index] === 'o') {
       stringArray[index] = '4';
     }
-    else if (stringArray[index] === 'u') 
-    {
+    else if (stringArray[index] === 'u') {
       stringArray[index] = '5';
     }
   }
@@ -113,25 +108,20 @@ for (let index = 0; index < stringArray.length; index += 1) {
 function decode(string) {
   let stringArray = string.toLowerCase().split('')
 
-for (let index = 0; index < stringArray.length; index += 1) {
-    if (stringArray[index] === '1') 
-    {
+  for (let index = 0; index < stringArray.length; index += 1) {
+    if (stringArray[index] === '1') {
       stringArray[index] = 'a';
     } 
-    else if (stringArray[index] === '2') 
-    {
+    else if (stringArray[index] === '2') {
       stringArray[index] = 'e';
     }
-    else if (stringArray[index] === '3') 
-    {
+    else if (stringArray[index] === '3') {
       stringArray[index] = 'i';
     }
-    else if (stringArray[index] === '4') 
-    {
+    else if (stringArray[index] === '4') {
       stringArray[index] = 'o';
     }
-    else if (stringArray[index] === '5') 
-    {
+    else if (stringArray[index] === '5') {
       stringArray[index] = 'u';
     }
   }
