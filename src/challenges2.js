@@ -26,12 +26,7 @@ function arraySize(array) {
 
 function checkNumbersUndersAndOvers(array) {
   for (let n of array) {
-    if (n < 0) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-  }
-  for (let n of array) {
-    if (n > 9) {
+    if (n < 0 || n > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
@@ -40,15 +35,9 @@ function checkNumbersUndersAndOvers(array) {
 function checkNumbersRepeating(array) {
   let numRepeat = [];
   for (let n of array) {
-    for (let n2 of array) {
-      if (n2 === n) {
-        numRepeat[n] = (numRepeat[n] || 0) + 1;
-      }
-    }
-    if (numRepeat[n] > 8) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
+    numRepeat[n] = (numRepeat[n] || 0) + 1;
   }
+  return (numRepeat.sort().reverse()).filter(Number)[0];
 }
 
 function generatePhoneNumber(array) {
@@ -57,8 +46,8 @@ function generatePhoneNumber(array) {
   let checkRepeatConsistency = checkNumbersRepeating(array);
   if (typeof checkSizeConsistency === 'string') {
     return checkSizeConsistency;
-  } if (typeof checkRepeatConsistency === 'string') {
-    return checkRepeatConsistency;
+  } if (checkRepeatConsistency >= 3) {
+    return 'não é possível gerar um número de telefone com esses valores';
   } if (typeof checkUndersAndOversConsistency === 'string') {
     return checkUndersAndOversConsistency;
   }
@@ -73,7 +62,9 @@ function triangleCheck(lineA, lineB, lineC) {
   let listSides = [lineA, lineB, lineC];
   for (let n in listSides) {
     let sideBuffer = listSides.slice(n, parseInt(n, 10) + 1);
-    if (sideBuffer >= (listSides[0] + listSides[1]) || sideBuffer <= Math.abs(listSides[0] - listSides[1])) {
+    let index0 = listSides[0];
+    let index1 = listSides[1];
+    if (sideBuffer >= (index0 + index1) || sideBuffer <= Math.abs(index0 - index1)) {
       return false;
     }
   }

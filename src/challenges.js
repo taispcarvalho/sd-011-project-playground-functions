@@ -58,19 +58,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function fizzAndbuzz(n) {
+  if (n % 3 === 0 && n % 5 === 0) {
+    return ('fizzBuzz');
+  } if (n % 3 === 0) {
+    return ('fizz');
+  } if (n % 5 === 0) {
+    return ('buzz');
+  }
+  return 'bug!';
+}
+
 function fizzBuzz(array) {
   // seu código aqui
   let resultArray = [];
   for (let n of array) {
-    if (n % 3 === 0 && n % 5 === 0) {
-      resultArray.push('fizzBuzz');
-    } else if (n % 3 === 0 && n % 5 !== 0) {
-      resultArray.push('fizz');
-    } else if (n % 3 !== 0 && n % 5 === 0) {
-      resultArray.push('buzz');
-    } else {
-      resultArray.push('bug!');
-    }
+    resultArray.push(fizzAndbuzz(n));
   }
   return resultArray;
 }
@@ -80,12 +83,9 @@ function encode(string) {
   // seu código aqui
   let dict = { a: 1, e: 2, i: 3, o: 4, u: 5 };
   string = string.split('');
-  for (let n in dict) {
-    for (let n2 of string) {
-      if (n2 === n) {
-        let indexOfLetter = string.indexOf(n2);
-        string[indexOfLetter] = dict[n];
-      }
+  for (let n in string) {
+    if (Object.keys(dict).includes(string[n])) {
+      string[n] = Object.values(dict)[n];
     }
   }
   return string.join('');
@@ -95,12 +95,9 @@ function decode(string) {
   // seu código aqui
   let dict = { a: 1, e: 2, i: 3, o: 4, u: 5 };
   string = string.split('');
-  for (let n in dict) {
-    for (let n2 of string) {
-      if (n2 === dict[n].toString()) {
-        let indexOfLetter = string.indexOf(n2);
-        string[indexOfLetter] = n;
-      }
+  for (let n in string) {
+    if (Object.values(dict).includes(parseInt(string[n], 10))) {
+      string[n] = Object.keys(dict)[n];
     }
   }
   return string.join('');
