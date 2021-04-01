@@ -3,19 +3,19 @@
 function techList(array, name) {
   if (array.length > 0) {
     for (let index in array) {
-      array[index] = {
-        tech: array[index],
-        name,
-      };
+      if (array.hasOwnProperty(index)) {
+        array[index] = {
+          tech: array[index],
+          name,
+        };
+      }
     }
   } else {
     return 'Vazio!';
   }
   array.sort(function (a, b) {
-    let techA = a.tech.toLowerCase();
-    let techB = b.tech.toLowerCase();
-    if (techA < techB) return -1;
-    if (techA > techB) return 1;
+    if (a.tech < b.tech) return -1;
+    if (a.tech > b.tech) return 1;
     return 0;
   });
   return array;
@@ -27,15 +27,18 @@ function repeatNumber(numbers) {
   let repeatTimes = 0;
   let repeatThreeTimes = false;
   for (let i in numbers) {
-    for (let j in numbers) {
-      if (numbers[i] === numbers[j]) {
-        repeat += 1;
+    if (numbers.hasOwnProperty(i)) {
+      for (let j in numbers) {
+        if (numbers[i] === numbers[j]) {
+          repeat += 1;
       }
     }
-    if (repeat > repeatTimes) {
-      repeatTimes += 1;
+      if (repeat > repeatTimes) {
+        repeatTimes += 1;
+      }
+      repeat = 0;
     }
-    repeat = 0;
+    
   }
   if (repeatTimes >= 3) {
     repeatThreeTimes = true;
@@ -44,45 +47,39 @@ function repeatNumber(numbers) {
 }
 
 function generatePhoneNumber(numbers) {
-  let firstPart = ['('];
+  let firstPart = [];
   let secondPart = [];
   let thirdPart = [];
   let repeat = repeatNumber(numbers);
 
-  if (numbers.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
-
+  if (numbers.length !== 11) return 'Array com tamanho incorreto.';
   for (let index = 0; index < 11; index += 1) {
-    if (numbers[index] < 0 || numbers[index] > 9 || repeat === true) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
+    if (numbers[index] < 0 || numbers[index] > 9 || repeat === true) return 'não é possível gerar um número de telefone com esses valores';
   }
-
   for (let index = 0; index < 2; index += 1) {
     firstPart.push(numbers[index]);
   }
-  firstPart.push(')');
-
   for (let index = 2; index < 7; index += 1) {
     secondPart.push(numbers[index]);
   }
-
   for (let index = 7; index < 11; index += 1) {
     thirdPart.push(numbers[index]);
   }
-
-  let completeNumber = firstPart.join('') + ' ' + secondPart.join('') + '-' + thirdPart.join('');
-
-  return completeNumber;
+  return `(${firstPart.join('')}) ${secondPart.join('')}-${thirdPart.join('')}`;
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let check = false;
-  
-  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
-      check = true;
+  let aPlusB = lineA + lineB;
+  let bPlusC = lineB + lineC;
+  let cPlusA = lineC + lineA;
+  let aMinusB = lineA - lineB;
+  let bMinusC = lineB - lineC;
+  let cMinusA = lineC - lineA;
+
+  if (lineA < bPlusC && lineB < cPlusA && lineC < aPlusB && lineA > Math.abs(bMinusC) && lineB > Math.abs(cMinusA) && lineC > Math.abs(aMinusB)) {
+    check = true;
   }
 
   return check;
@@ -96,13 +93,15 @@ function hydrate(string) {
   let msg = '';
 
   for (let i in matches) {
-    drinks += parseInt(matches[i]);
+    if (matches.hasOwnProperty(i)) {
+      drinks += Number(matches[i]);
+    }
   }
 
   if (drinks === 1) {
-    msg = drinks + ' copo de água';
+    msg = `${drinks} copo de água`;
   } else {
-    msg = drinks + ' copos de água';
+    msg = `${drinks} copos de água`;
   }
 
   return msg;
