@@ -1,23 +1,36 @@
-
-function compareTrue(valor1, valor2) {
-  return (valor1 && valor2);
+// Desafio 1 ok
+//let valor1=true;
+//let valor2=true;
+function compareTrue(valor1,valor2) {
+  return(valor1&&valor2);
 }
-
-function calcArea(base, altura) {
+//compareTrue(valor2,valor1);
+// Desafio 2 ok
+//let base = 1;
+//let altura = 51;
+//let areaTriangulo = 0.1;
+function calcArea(base,altura) {
   areaTriangulo = base * altura / 2;
-  return (areaTriangulo);
+  return(areaTriangulo);
 }
-
+//calcArea(base,altura);
+//console.log(areaTriangulo);
+// Desafio 3
+//let frase="Wilquer Figueiredo Alves"
 function splitSentence(frase){
   let separado=frase.split(" ");
-  return (separado);
+  return(separado);
 }
-
+//splitSentence(frase);
+  // seu código aqui
+// Desafio 4
+//let lista=["meu","nome","nao","e","jhonny"];
+//console.log(lista.length);
 function concatName(lista){
-  let primPos = lista[0];
-  let ultPos = lista[lista.length-1];
-  let resposta = ultPos.concat(", ",primPos);
-  return (resposta);
+  let primPos=lista[0];
+  let ultPos=lista[lista.length-1];
+  let resposta= ultPos.concat(", ",primPos);
+  return(resposta);
   }
 //concatName(lista);
 // Desafio 5
@@ -49,8 +62,8 @@ function highestCount(valores){
 //let cat2=0; 
 
   function catAndMouse(mouse,cat1,cat2){
-    cat1=Math.abs(cat1,mouse);
-    cat2=Math.abs(cat2,mouse);
+    cat1=Math.abs(cat1-mouse);
+    cat2=Math.abs(cat2-mouse);
     if(cat1===cat2){
       return("Os gatos trombam e o rato foge");
       //console.log("Os gatos trombam e o rato foge");
@@ -157,8 +170,8 @@ function decode(frase) {
     frase=frase.replaceAll("3","i");
     frase=frase.replaceAll("4","o");
     frase=frase.replaceAll("5","u");
-    return (frase);
-}
+    return(frase);
+} 
 module.exports = {
   calcArea,
   catAndMouse,
