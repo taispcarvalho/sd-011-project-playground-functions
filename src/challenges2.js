@@ -9,7 +9,7 @@ function techList(skills, name) {
   for (let index = 0; index < skills.length; index += 1) {
     packageSkills.push({
       tech: skills[index],
-      name: name
+      name: name,
     });
   }
   return packageSkills;

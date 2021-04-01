@@ -58,7 +58,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
   }
-  if (distanceCat1 > distanceCat2) {
+  if (distanceCat2 < distanceCat1) {
     return 'cat2';
   }
   if (cat1 === cat2) {
@@ -94,7 +94,7 @@ function encode(encodeVowels) {
     encodeVowels = encodeVowels.replace('u', 5);
   }
 
-  return vowels;
+  return encodeVowels;
 }
 
 function decode(decodeVowels) {
@@ -107,7 +107,6 @@ function decode(decodeVowels) {
   }
   return decodeVowels;
 }
-
 
 module.exports = {
   calcArea,
