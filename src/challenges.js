@@ -95,8 +95,6 @@ function fizzBuzz(array) {
   return result;
 }
 
-fizzBuzz([2, 15, 7, 9, 45]);
-
 // Desafio 9
 function encodeA(string) {
   for (let index = 0; index < string.length; index += 1) {
