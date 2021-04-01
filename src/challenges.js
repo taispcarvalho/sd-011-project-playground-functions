@@ -51,11 +51,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let firthCat = mouse - cat1;
   let secondCat = mouse - cat2;
   if (firthCat === secondCat) {
-    return `Os gatos trombam e o rato foge`;
+    return 'Os gatos trombam e o rato foge';
   } else if (firthCat < secondCat) {
-    return firthCat;
+    return 'cat1';
   }
-  return secondCat;
+  return 'cat2';
 }
 
 // Desafio 8
@@ -71,14 +71,12 @@ function fizzBuzz(array) {
     } else {
       newArray.push('bug!');
     }
-    return newArray;
   }
+  return newArray;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
+function encode() {}
 function decode() {
   // seu código aqui
 }
