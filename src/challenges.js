@@ -37,7 +37,6 @@ function findNumber(valor) {
 }
 
 function highestCount(var1) {
-  var1 = [];
   let resultado = 0;
   for (let index1 = 0; index1 < var1.length; index1 += 1) {
     if (findNumber() === var1[index1])
@@ -57,8 +56,18 @@ function catAndMouse(mouse, cat1, cat2) {
   } 
 }
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let array = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      array.push('fizzBuzz');
+    }else if (numbers[index] % 3 === 0 && numbers[index] % 5 != 0) {
+      array.push('fizz');
+    }else if (numbers[index] % 3 != 0 && numbers[index] % 5 === 0) {
+      array.push('buzz')
+    }
+  }
+  return array;
 }
 
 // Desafio 9
