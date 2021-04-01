@@ -50,15 +50,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
-  let formattedArray = [];
-  for (let index = 0; index < array.length; index += 1) {
-    formattedArray.push(numberDivisor(array[index]))
-  }
-  return formattedArray;
-}
-
-function numberDivisor (number) {
+function numberDivisor(number) {
   let newString = '';
 
   if (number % 3 === 0) {
@@ -71,6 +63,14 @@ function numberDivisor (number) {
     newString = 'bug!';
   }
   return newString;
+}
+
+function fizzBuzz(array) {
+  let formattedArray = [];
+  for (let index = 0; index < array.length; index += 1) {
+    formattedArray.push(numberDivisor(array[index]));
+  }
+  return formattedArray;
 }
 
 // Desafio 9
