@@ -84,6 +84,9 @@ function hydrate(string) {
   let stringDrinks = string.match(regex);
   let numbersDrinks = stringDrinks.map(Number);
   let water = getSum(numbersDrinks);
+  if (water === 1) {
+    return `${water} copo de água`;
+  }
   return `${water} copos de água`;
 }
 
