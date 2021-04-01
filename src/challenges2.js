@@ -8,8 +8,8 @@ function techList(techname, nome) {
   for (let index = 0; index < tech.length; index += 1) {
     let object = {
       tech: String,
-      name: String
-    }
+      name: String,
+    };
     let objeto = Object.create(object);
     objeto.tech = tech[index];
     objeto.name = nome;
@@ -34,7 +34,7 @@ function hydrate(frase) {
   let agua = '';
 
   for (let index = 0; index < frase2.length; index += 1) {
-    if (!isNaN(frase2[index])) {
+    if (Number.isNaN(frase2[index])) {
       quant += Number(frase2[index]);
     } else if (quant <= 1) {
       agua = ' copo de água';
