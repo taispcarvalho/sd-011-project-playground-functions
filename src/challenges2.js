@@ -62,7 +62,7 @@ function hydrate(string) {
     number = parseInt(m[0])
     count += number
   }
-  return count;
+  return count + ' copos de água';
 }
 console.log(hydrate("2 cervejas e 4 martinis e 56 carros"));
 
