@@ -83,7 +83,12 @@ function hydrate(string) {
   for (let index = 0; index < numberOfDrinks.length; index += 1) {
     numberOfWaters = numberOfWaters + parseInt(numberOfDrinks[index]);
   }
-  return numberOfWaters + ' copos de água'//numberOfDrinks;
+
+  if (numberOfWaters === 1) {
+    return numberOfWaters + ' copo de água';
+  } else {
+    return numberOfWaters + ' copos de água';
+  }
 }
 
 module.exports = {
