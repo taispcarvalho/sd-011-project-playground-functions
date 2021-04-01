@@ -37,7 +37,12 @@ function hydrate(string) {
   for (let index = 0; index < numeroCopos.length; index += 1) {
     somaCopos += numeroCopos[index];
   }
-  return (somaCopos + 'copos de água');
+  if(somaCopos > 1) {
+    return (somaCopos + ' copos de água');
+  } else if (somaCopos >=0 || somaCopos === 1){
+    return (somaCopos + ' copo de água');
+  }
+  
 }
 
 module.exports = {
