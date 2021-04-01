@@ -39,7 +39,7 @@ function highestCount(numberArray) {
     } 
   }
   for (n in numberArray) {
-    if (maior === numberArray[n]) { count += 1 };
+    if (maior === numberArray[n]) { count += 1 }
   }
   return count;
 }
@@ -58,8 +58,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(fizzArray) {
+  fizzList = [];
+  for (n in fizzArray) {
+    if ((fizzArray[n] % 3) == 0 && (fizzArray[n] % 5) === 0) {
+      fizzList.push ("fizzBuzz");
+    } else if ((fizzArray[n] % 3) == 0) {
+      fizzList.push ("fizz");
+    } else if ((fizzArray[n] % 5)== 0) {
+      fizzList.push ("buzz");
+    } else {
+      fizzList.push ("bug!");
+    }
+  }
+  return fizzList;
 }
 
 // Desafio 9
