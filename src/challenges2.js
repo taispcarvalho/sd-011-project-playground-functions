@@ -47,15 +47,14 @@ function numeroTelefone(array) {
   console.log(numeroTelefone(numeroTotal));
   return numeroTelefone(numeroTotal);
 }
-let array = [3, 2, 6, 5, 7, 9, 8, 1, 0, 2, 3]
-console.log(generatePhoneNumber(array));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let triaA = lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
   let triaB = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
   let triaC = lineC < lineB + lineA && lineC > Math.abs(lineB - lineA);
-    return (triaA || triaB || triaC);
+  
+  return (triaA || triaB || triaC);
 }
 
 // Desafio 13
@@ -72,7 +71,7 @@ function hydrate(string) {
   }
   return hydrate;
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+console.log(hydrate('5 cachaça'));
 
 module.exports = {
   generatePhoneNumber,
