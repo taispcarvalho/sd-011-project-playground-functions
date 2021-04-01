@@ -68,18 +68,35 @@ function generatePhoneNumber(array) {
   let sizeNumbers = sizeArray(array);
   let positiveNumberUnit = limitNumbers(array);
   let frequentNumbers = repeatedNumber(array);
-  let phoneNumber = 'não é possível gerar um número de telefone com esses valores';
+  let noPhoneNumber = 'não é possível gerar um número de telefone com esses valores';
+  let phoneNumber = [];
 
   if (sizeNumbers === false) {
-    return phoneNumber;
+    return noPhoneNumber;
   } else if ( positiveNumberUnit === false) {
-    return phoneNumber;
+    return noPhoneNumber;
   } else if (frequentNumbers === true) {
-    return phoneNumber;
+    return noPhoneNumber;
   } else {
-    phoneNumber = "teste";
+    for (let index = 0; index < array.length; index += 1) {
+      if (index === 0){
+        phoneNumber.push('(');
+        phoneNumber.push(array[index]);
+      } else if (index === 1) {
+        phoneNumber.push(array[index]);
+        phoneNumber.push(')');
+      } else if (index === 2) {
+        phoneNumber.push(' ');
+        phoneNumber.push(array[index]);
+      } else if (index === 6) {
+        phoneNumber.push(array[index]);
+        phoneNumber.push('-');
+      } else {
+        phoneNumber.push(array[index]);
+      }
+    }
+    return phoneNumber.join('');
   }
-  return phoneNumber;
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 5, 5, 8, 9, 0, 1]));
