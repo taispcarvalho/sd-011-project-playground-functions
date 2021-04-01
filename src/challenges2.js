@@ -35,7 +35,7 @@ function generatePhoneNumber(nPhone) {
   let RegExp = /(\d{2})(\d{5})(\d{4})/;
 
   if (nPhone.length !== 11) {
-    response = 'Array com tamanho incorreto';
+    response = 'Array com tamanho incorreto.';
   } else if (checkNum(nPhone) === false) {
     response = 'não é possível gerar um número de telefone com esses valores';
   } else {
@@ -47,7 +47,7 @@ function generatePhoneNumber(nPhone) {
   return response;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 // Desafio 12
 function triangleCheck() {
