@@ -72,34 +72,22 @@ function fizzBuzz(arrayNumbers) {
 // Desafio 9
 function encode(encodeString) {
   for (let index = 0; index < encodeString.length; index += 1) {
-    if (encodeString[index] === 'a') {
-      encodeString = encodeString.replace('a', 1);
-    } else if (encodeString[index] === 'e') {
-      encodeString = encodeString.replace('e', 2);
-    } else if (encodeString[index] === 'i') {
-      encodeString = encodeString.replace('i', 3);
-    } else if (encodeString[index] === 'o') {
-      encodeString = encodeString.replace('o', 4);
-    } else if (encodeString[index] === 'u') {
-      encodeString = encodeString.replace('u', 5);
-    }
+    encodeString = encodeString.replace('a', 1);
+    encodeString = encodeString.replace('e', 2);
+    encodeString = encodeString.replace('i', 3);
+    encodeString = encodeString.replace('o', 4);
+    encodeString = encodeString.replace('u', 5);
   }
   return encodeString;
 }
 
 function decode(decodeString) {
   for (let index = 0; index < decodeString.length; index += 1) {
-    if (decodeString[index] === '1') {
-      decodeString = decodeString.replace(1, 'a');
-    } else if (decodeString[index] === '2') {
-      decodeString = decodeString.replace(2, 'e');
-    } else if (decodeString[index] === '3') {
-      decodeString = decodeString.replace(3, 'i');
-    } else if (decodeString[index] === '4') {
-      decodeString = decodeString.replace(4, 'o');
-    } else if (decodeString[index] === '5') {
-      decodeString = decodeString.replace(5, 'u');
-    }
+    decodeString = decodeString.replace(1, 'a');
+    decodeString = decodeString.replace(2, 'e');
+    decodeString = decodeString.replace(3, 'i');
+    decodeString = decodeString.replace(4, 'o');
+    decodeString = decodeString.replace(5, 'u');
   }
   return decodeString;
 }
