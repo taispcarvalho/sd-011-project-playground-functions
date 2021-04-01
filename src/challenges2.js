@@ -3,13 +3,15 @@ function techList(array, myName) {
   let retorno = [];
   for (let index in array.sort()) {
     if ({}.hasOwnProperty.call(array, myName)){
-    retorno[index] = {
-      tech: array[index],
-      name: myName,
-    };
-  } else if (retorno.length === 0) {
+      retorno[index] = {
+        tech: array[index],
+        name: myName,
+      };
+    }
+  } 
+  
+  if (retorno.length === 0) {
     return 'Vazio!';
-  }
   }
   return retorno;
   // seu código aqui
