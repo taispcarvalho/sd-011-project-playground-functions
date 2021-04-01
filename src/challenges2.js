@@ -23,13 +23,26 @@ function countRepeaterNumber(array) {
   let count = 1;
   for (let index = 0; index < array.length; index += 1) {
     let save = array[index];
-    for (let indexB = index + 1; indexB < array.length; indexB += 1) {
-      if (save === array[indexB]) {
+    for (let num in array) {
+      if (save === array[num]) {
         count += 1;
       }
     }
   }
   return count;
+}
+
+function transformPhoneNumber(array) {
+  let savePhone = '';
+  for (let index = 0; index < array.length; index += 1) {
+    if (index === 0) { 
+      savePhone += `( ${array[index]}${array[index + 1]})`;
+    } if (index === 6) {
+      savePhone += `${array[index]}-`;
+    }
+    savePhone += array[index];
+  }
+  return savePhone;
 }
 
 function checkPossibleNumber(array) {
@@ -44,14 +57,13 @@ function checkPossibleNumber(array) {
 }
 
 function generatePhoneNumber(array) {
-  let phone = '';
+  let phone = transformPhoneNumber(array);
   let possible = checkPossibleNumber(array);
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } if (possible) {
+  } if (possible === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  phone = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
   return phone;
 }
 
@@ -59,9 +71,18 @@ let numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 console.log(generatePhoneNumber(numberArray));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    return true;
+  } if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+    return true;
+  } if (lineC < lineA + lineB && lineC > Math.abs(lineB - lineA)) {
+    return true;
+  }
+  return false;
 }
+
+console.log(triangleCheck(10, 19, 10));
 
 // Desafio 13
 function hydrate() {
