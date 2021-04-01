@@ -81,8 +81,22 @@ function generatePhoneNumber(arrayOfNumbers) {
 }
 
 // Desafio 12
+function checkABS(lineA, lineB, lineC) {
+  if ((lineA > Math.abs(lineB - lineC)) && (lineB > Math.abs(lineA - lineC)) && (lineC > Math.abs(lineA - lineB))) {
+    return true;
+  }
+  return false;
+}
+
+function checkLessThan(lineA, lineB, lineC) {
+  if ((lineA < lineB + lineC) && (lineB < lineA + lineC) && (lineC < lineA + lineB) {
+    return true;
+  }
+  return false;
+}
+
 function triangleCheck(lineA, lineB, lineC) {
-  if ((lineA < lineB + lineC) && (lineB < lineA + lineC) && (lineC < lineA + lineB) && (lineA > Math.abs(lineB - lineC)) && (lineB > Math.abs(lineA - lineC)) && (lineC > Math.abs(lineA - lineB))) {
+  if (checkABS(lineA, lineB, lineC) && checkLessThan(lineA, lineB, lineC)) {
     return true;
   }
   return false;
