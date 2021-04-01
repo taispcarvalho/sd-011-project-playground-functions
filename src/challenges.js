@@ -30,7 +30,7 @@ console.log(splitSentence(string))
 
 // Desafio 4
 function concatName(param) {
-  let newArray= [param[param.length-1] + " , "+ param[0]];
+  let newArray= [param[param.length-1] + ", "+ param[0]];
   return newArray;
 }
 
@@ -68,6 +68,7 @@ function highestCount(array) {
 
 let array6 = [9, 1, 2, 3, 9, 5, 7];
 console.log(highestCount(array6));
+
 // Desafio 7
 function catAndMouse(mouse, cat1,cat2) {
   if(cat1>cat2){
