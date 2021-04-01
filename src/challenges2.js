@@ -20,17 +20,22 @@ console.log(techList(techs, 'Henrique'));
 console.log(techList(techsEmpty, 'Henrique'));
 // Desafio 11
 let teste = [1, 2, -3, 4, 0, 6, 7, 8, 9, 9, 0];
+
+function verify(item, array) {
+  let counter = 0;
+  for (let j in array) {
+    if (item === array[j]) {
+      counter += 1;
+    }
+  }
+  return counter;
+}
+
 function repeatNumber(array) {
   let repeated = false;
 
-  for (let index = 0; index < array.length; index += 1) {
-    let counter = 0;
-    for (let j = 0; j < array.length; j += 1) {
-      if (array[index] === array[j]) {
-        counter += 1;
-      }
-    }
-    if (counter > 2) {
+  for (let index in array) {
+    if (verify(array[index], array) > 2) {
       repeated = true;
     }
   }
@@ -61,7 +66,7 @@ function generatePhoneNumber(array) {
     '(' +
     array[0] +
     array[1] +
-    ')' +
+    ') ' +
     array[2] +
     array[3] +
     array[4] +
