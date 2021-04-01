@@ -16,24 +16,37 @@ function techList(anyArray, anyName) {
 
 // Desafio 11
 function checkIf11Numbers(array) {
-  return array.length === 11;
+  return (array.length === 11); 
 }
 
-function checkIfFollowTheRules(array) {
-  for (let index = 0; index < array.length; index += 1) {
-    let count = 0;
-    for (let number of array) {
-      if (array[index] === number) {
-        count += 1;
+function checkRepeatdNumbers(array) {
+  let sortedNumbers = array.sort()
+  let count = 0;
+  for (let index = 0; index < array.length - 1; index += 1) {
+    if (array[index] === array[index+1]) {
+      count += 1
+      if (count >= 3) {
+        return false;
       }
+    } else {
+      count = 0;
     }
-    return count < 3 && array[index] < 9 && array[index] > 0;
+  }  
+  return true;
+}
+
+function checkIfBetween0to9(array) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > 9 || array[index] < 0) {
+      return false;
+    }
   }
+  return true;
 }
 
 function generatePhoneNumber(array) {
   let formatedPhoneNumber = '';
-  if (checkIfFollowTheRules(array) && checkIf11Numbers(array)) {
+  if (checkRepeatdNumbers(array) && checkIf11Numbers(array) && checkIfBetween0to9(array)) {
     for (let index = 0; index < array.length; index += 1) {
       if (index === 0) {
         formatedPhoneNumber += '(';
@@ -46,7 +59,7 @@ function generatePhoneNumber(array) {
     }
   } else if (checkIf11Numbers(array) === false) {
     formatedPhoneNumber = 'Array com tamanho incorreto.';
-  } else {
+  } else if (checkIfBetween0to9(array) || checkRepeatdNumbers(array)){
     formatedPhoneNumber = 'não é possível gerar um número de telefone com esses valores';
   }
   return formatedPhoneNumber;
