@@ -53,21 +53,11 @@ function verifyArrayOfBool(arrayOfBool) {
 
 function verifyRepetition(arrayOfNumbers) {
   let limitRepetition = 2;
-  let arrayOfBool = arrayOfNumbers.map((number, index) => {
-    let countRepetition = 0;
-    if (index <= (arrayOfNumbers.length - limitRepetition - 1)) {
-      for (let indexFor = index; indexFor <= (arrayOfNumbers.length - 1); indexFor += 1) {
-        if (number === arrayOfNumbers[indexFor]) {
-          countRepetition += 1;
-        }
-      }
-      if (countRepetition > limitRepetition) {
-        return false;
-      }
-    }
+  let repNumArray = arrayOfNumbers.map(numero => arrayOfNumbers.filter(n => n === numero).length >=3);
+  if (repNumArray.length === 0) {
     return true;
-  });
-  return verifyArrayOfBool(arrayOfBool);
+  }
+  return false;
 }
 
 function generatePhoneNumber(arrayOfNumbers) {
