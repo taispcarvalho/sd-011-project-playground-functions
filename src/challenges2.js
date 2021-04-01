@@ -73,7 +73,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let triaB = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
   let triaC = lineC < lineB + lineA && lineC > Math.abs(lineB - lineA);
   
-  return (triaA || triaB || triaC);
+  return triaA || triaB || triaC;
 }
 console.log(triangleCheck(10, 6, 2));
 
@@ -81,16 +81,18 @@ console.log(triangleCheck(10, 6, 2));
 function hydrate(string) {
   let numeroCopos = string.match(/\d+/g).map(Number);
   let somaCopos = 0;
+  let resultado = '';
   for (let index = 0; index < numeroCopos.length; index += 1) {
     somaCopos += numeroCopos[index];
   }
   if(somaCopos > 1) {
-    let resultado = (somaCopos + ' copos de água');
+    resultado = (somaCopos + ' copos de água');
   } else {
-    let resultado = (somaCopos + ' copo de água');
+    resultado = (somaCopos + ' copo de água');
   }
   return resultado;
 }
+console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
