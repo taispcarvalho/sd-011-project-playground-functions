@@ -74,8 +74,6 @@ function triangleCheck(lineA, lineB, lineC) {
   return menorQueSoma(lineA, lineB, lineC) && maiorQueAbsoluto (lineA, lineB, lineC)
 }
 
-console.log(triangleCheck(10, 12, 2));
-
 // Desafio 13
 function hydrate() {
   // seu código aqui
