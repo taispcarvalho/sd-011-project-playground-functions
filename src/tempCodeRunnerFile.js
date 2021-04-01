@@ -22,7 +22,6 @@ function repeticaoNumero(array) {
 }
 
 function generatePhoneNumber(array) {
-  
   if (array.length > 11) {
     return 'Array com tamanho incorreto.';
   }
@@ -30,12 +29,12 @@ function generatePhoneNumber(array) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   if (array.length === 11) {
-    let primeiroNUmero = ('(' + array[0] + array[1]);
-    let numeroMeio = (') ' + array[2] + array[3] + array[4] + array[5] + array[6]);
-    let ultimoNumero = (' - ' + array[7] + array[8] + array[9] + array[10]);
-    console.log(primeiroNUmero + numeroMeio + ultimoNumero);
+    let primeiraParte = `(${array[0]}${array[1]}) ${array[2]}${array[3]}`;
+    let segundaParte = `${array[4]}${array[5]}${array[6]} - ${array[7]}`;
+    let ultimaParte = `${array[8]}${array[9]}${array[10]}`;
+    return (primeiraParte + segundaParte + ultimaParte);
   }
   return generatePhoneNumber(array);
 }
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 2];
+let array = [1, 2, 3, 2, 5, 6, 7, 8, 9, 8, 1];
 console.log(generatePhoneNumber(array));
