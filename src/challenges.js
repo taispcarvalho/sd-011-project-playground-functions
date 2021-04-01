@@ -69,61 +69,68 @@ function highestCount(valores){
 //let cat2=5    ; 
 
   function catAndMouse(mouse,cat1,cat2){
-    if(cat1<mouse&&cat2<mouse){
-      if(cat1>cat2){
-        return("cat1");
-        }else
+    cat1=Math.abs(cat1-mouse);
+    cat2=Math.abs(cat2-mouse);
+    if(cat1<cat2){
+      return("cat1");
+    }else if(cat1>cat2){
+      return("cat2");
+    }else{
+      return("Os gatos trombam e o rato foge");
+    }
+  }
+//     return("cat1");
+//        }else
         // if (cat2>cat1)
         {
-          return("cat2");
+//          return("cat2");
         }
         //else{
         //  return("Os gatos trombam e o rato foge");
         //}
-    }else if(cat1>mouse&&cat2>mouse){
-      if(cat1<cat2){
-        return("cat1");
-        }else
+//    }else if(cat1>mouse&&cat2>mouse){
+//      if(cat1<cat2){
+//        return("cat1");
+//        }else
          //if (cat1>cat2)
          {
-          return("cat2");
+//          return("cat2");
         }
         //else{
         //  return("Os gatos trombam e o rato foge");
         //}
-    }else if(cat1<mouse&&mouse<cat2){
-            if(mouse-cat1<cat2-mouse){
-              return("cat1");
-            }else
+//    }else if(cat1<mouse&&mouse<cat2){
+//            if(mouse-cat1<cat2-mouse){
+//             return("cat1");
+//            }else
             // if(mouse-cat1>cat2-mouse)
-            { 
-              return("cat2");
-            }
+//            { 
+//              return("cat2");
+//            }
             //else{
             //  return("Os gatos trombam e o rato foge");
             //}
-          }else if(cat2<mouse&&mouse<cat1){
-              if(mouse-cat1>cat2-mouse){
-                return("cat2");
-              }else
+//          }else if(cat2<mouse&&mouse<cat1){
+//              if(mouse-cat1>cat2-mouse){
+//                return("cat2");
+//              }else
                //if(mouse-cat1<cat2-mouse)
                {
-                return("cat1");
+//                return("cat1");
               }
               //else{
               //  return("Os ga tos trombam e o rato foge");
               //}
           
-    }else{  
+//    }else{  
   //  if(mouse-cat1==mouse-cat2||){
   //    return("cat2");
-      return("Os gatos trombam e o rato foge");
-    }
-  }
+//      return("Os gatos trombam e o rato foge");
+//    }
+//  }
 //catAndMouse(mouse,cat1,cat2);
 
 // Desafio 8
-//let numeros=[2,15,7,9,45];
 function fizzBuzz(numeros){
   let arrayresposta=[0];
   arrayresposta.pop();
@@ -150,7 +157,6 @@ function encode(frase){
     frase=frase.replaceAll("i",3);
     frase=frase.replaceAll("o",4);
     frase=frase.replaceAll("u",5);
-   
     return(frase);
 }
 
