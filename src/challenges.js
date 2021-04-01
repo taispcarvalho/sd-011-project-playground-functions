@@ -46,8 +46,8 @@ function highestCount(array) {
   }
   return contador;
 }
-function arraytest() {
-  if (test = [9, 1, 2, 3, 9, 5, 7]) {
+function arraytest(test) {
+  if (test) {
     let resultado = console.log(highestCount(test));
   }
   return arraytest;
