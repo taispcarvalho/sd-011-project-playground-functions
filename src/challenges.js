@@ -62,9 +62,33 @@ function fizzBuzz(numbers) {
     } else {
       resultString.push('bug!');
     }
-  }
-  return resultString;
+    return resultString;
+    
+    
+    
+    //testDivisor(numbers); 
+    //if (numbers[index] % 5 === 0 && numbers[index] % 3 !== 0) {
+      //resultString.push('buzz');
+    //} else if (numbers[index] % 15 === 0) {
+      //resultString.push('fizzBuzz');
+    //} else {
+     // resultString.push('bug!');
+    //}
+   //return resultString;
 }
+console.log(fizzBuzz([1,2,3,4,5]));
+
+
+//function testDivisor (numbers) {
+  //if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
+    //resultString.push('fizz');
+  //return resultString;
+//}
+
+console.log(fizzBuzz([1,2,3,4,5]));
+
+
+
 
 // Desafio 9
 function encode(str) {
