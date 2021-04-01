@@ -17,8 +17,8 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let string = array[array.length - 1] + ', ' + array[0];
-  return string; 
+  let string = `${array[array.length - 1]}, ${array[0]}`;
+  return string;
 }
 
 // Desafio 5
@@ -48,18 +48,17 @@ function catAndMouse(mouse, cat1, cat2) {
   let distancia1 = cat1 - mouse;
   let distancia2 = cat2 - mouse;
   if (distancia1 < 0) {
-    distancia1 = distancia1 * -1;
+    distancia1 *= -1;
   }
   if (distancia2 < 0) {
-    distancia2 = distancia2 * -1;
+    distancia2 *= -1;
   }
   if (distancia1 < distancia2) {
     return 'cat1';
-  } else if (distancia2 < distancia1) {
+  } if (distancia2 < distancia1) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -67,7 +66,7 @@ function fizzBuzz(array) {
   let secondArray = [];
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      secondArray.push('fizzBuzz');
+      secondArray.push('fizzBuzsz');
     } else if (array[index] % 3 === 0) {
       secondArray.push('fizz');
     } else if (array[index] % 5 === 0) {
@@ -84,17 +83,17 @@ function encode(string) {
   let secondString = '';
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] === 'a') {
-      secondString = secondString + '1';
+      secondString += '1';
     } else if (string[index] === 'e') {
-      secondString = secondString + '2';
+      secondString += '2';
     } else if (string[index] === 'i') {
-      secondString = secondString + '3';
+      secondString += '3';
     } else if (string[index] === 'o') {
-      secondString = secondString + '4';
+      secondString += '4';
     } else if (string[index] === 'u') {
-      secondString = secondString + '5';
+      secondString += '5';
     } else {
-      secondString = secondString + string[index];
+      secondString += string[index];
     }
   }
   return secondString;
@@ -104,17 +103,17 @@ function decode(string) {
   let secondString = '';
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] === '1') {
-      secondString = secondString + 'a';
+      secondString += 'a';
     } else if (string[index] === '2') {
-      secondString = secondString + 'e';
+      secondString += 'e';
     } else if (string[index] === '3') {
-      secondString = secondString + 'i';
+      secondString += 'i';
     } else if (string[index] === '4') {
-      secondString = secondString + 'o';
+      secondString += 'o';
     } else if (string[index] === '5') {
-      secondString = secondString + 'u';
+      secondString += 'u';
     } else {
-      secondString = secondString + string[index];
+      secondString += string[index];
     }
   }
   return secondString;
