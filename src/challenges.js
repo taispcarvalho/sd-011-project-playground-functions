@@ -41,17 +41,28 @@ return highestNumberCount;
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if(cat1 - mouse === cat2 - mouse){
-      resultado = "os gatos trombam e o rato foge"
-  }
-  else if(cat1 - mouse <cat2 -mouse){
-      resultado = 'cat1'
-  }else{
-      resultado = 'cat2'
-  }
-  return resultado;
+ let cat1Distance = 0;
+ let cat2Distance = 0;
+ let result = 0;
+ if(mouse > cat1){
+  cat1Distance = mouse - cat1
+ }else(
+   cat1Distance = cat1 - mouse
+ )
+ if(mouse > cat2){
+  cat1Distance = mouse - cat2
+ }else(
+   cat1Distance = cat2 - mouse
+ )
+ if(cat1Distance === cat2Distance){
+  result = 'os gatos trombam e o rato foge'
+ }else if(cat1Distance<cat2Distance){
+   result = 'cat1'
+ }else{
+   result = 'cat2'
+ }
+ return result
 }
-
 // Desafio 8 -FEITO 
 function fizzBuzz(arrayFizzBuzz) {
   secondArray=[];
