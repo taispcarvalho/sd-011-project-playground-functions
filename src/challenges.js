@@ -85,6 +85,7 @@ console.log(catAndMouse(14, 12, 15));
 // Desafio 8
 function fizzBuzz(number) {
   let result = [];
+
   for (let index = 0; index < number.length; index += 1) {
     if ((number[index] % 3) === 0 && (number[index] % 5) === 0) {
       result.push('fizzBuzz');
@@ -110,16 +111,24 @@ function retunrArr(s) {
   return arr;
 }
 
-function encode(string) {
+function vogal(l) {
   let vog = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+
+  for (let vIndex in vog) {
+    if (vog[vIndex] === l) {
+      return vIndex;
+    }
+  }
+  return false;
+}
+
+function encode(string) {
   let str = retunrArr(string);
   let nStr = '';
 
   for (let index = 0; index < str.length; index += 1) {
-    for (let vIndex in vog) {
-      if (str[index] === vog[vIndex]) {
-        str[index] = vIndex;
-      }
+    if (vogal(str[index]) > 0) {
+      str[index] = vogal(str[index]);
     }
     nStr += str[index];
   }
