@@ -78,19 +78,19 @@ function fizzBuzz(numbers) {
 function encode(phrase) {
   let leters = phrase.split('');
   let output = [];
-  for (index = 0; index < leters.length; index += 1) {
-    if (leters[index] == 'a') {
-        output.push(1);
-    } else if (leters[index] == 'e') {
-        output.push(2);
-    }else if (leters[index] == 'i') {
-        output.push(3);
-    }else if (leters[index] == 'o') {
-        output.push(4);
-    }else if (leters[index] == 'u') {
-        output.push(5);
+  for (let index = 0; index < leters.length; index += 1) {
+    if (leters[index] === 'a') {
+      output.push(1);
+    } else if (leters[index] === 'e') {
+      output.push(2);
+    } else if (leters[index] === 'i') {
+      output.push(3);
+    } else if (leters[index] === 'o') {
+      output.push(4);
+    } else if (leters[index] === 'u') {
+      output.push(5);
     } else {
-        output.push(leters[index]);
+      output.push(leters[index]);
     }
   }
   return output.join('');
@@ -98,19 +98,19 @@ function encode(phrase) {
 function decode(phrase) {
   let leters = phrase.split('');
   let output = [];
-  for (index = 0; index < leters.length; index += 1) {
-    if (leters[index] == 1) {
-        output.push('a');
-    } else if (leters[index] == 2) {
-        output.push('e');
-    }else if (leters[index] == 3) {
-        output.push('i');
-    }else if (leters[index] == 4) {
-        output.push('o');
-    }else if (leters[index] == 5) {
-        output.push('u');
+  for (let index = 0; index < leters.length; index += 1) {
+    if (leters[index] === 1) {
+      output.push('a');
+    } else if (leters[index] === 2) {
+      output.push('e');
+    } else if (leters[index] === 3) {
+      output.push('i');
+    } else if (leters[index] === 4) {
+      output.push('o');
+    } else if (leters[index] === 5) {
+      output.push('u');
     } else {
-        output.push(leters[index]);
+      output.push(leters[index]);
     }
   }
   return output.join('');
