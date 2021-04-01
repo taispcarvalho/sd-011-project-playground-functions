@@ -25,23 +25,7 @@ console.log(generatePhoneNumber(phoneNumber1))
   return 'não é possível gerar um número de telefone com esses valores'  
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Desafio 12
+  // Desafio 12
 
 function triangleCheck(lineA, lineB, lineC) {
   let sizeLineA = Math.abs(lineA + lineB);
@@ -51,7 +35,7 @@ function triangleCheck(lineA, lineB, lineC) {
    return true;
   } return false;
 }
-console.log (triangleCheck(10, 14, 10));
+
 // Desafio 13
 let shoop = '1 cerveja';
 function hydrate() {
