@@ -23,10 +23,20 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, linceC) {
+  let angl1 = Math.abs(lineA + lineB)
+  let angl2 = Math.abs(lineA - lineB)
+  let value = false;
+
+  if (lineC < angl1 && lineC > angl2){
+  value = true;
+  } else if (angl1 < lineC && angl2 > lineC){
+  value = false;
+  }
+  return value;
   // seu código aqui
 }
-
+console.log(triangleCheck(10, 14, 8))
 // Desafio 13
 function hydrate(string) {
   let bebeAgua = 0;
