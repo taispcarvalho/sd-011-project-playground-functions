@@ -74,45 +74,28 @@ function fizzBuzz(arrayOfNumber) {
 
 // Desafio 9
 function encode(str) {
-  let encripted = '';
+  str = str.split('');
   for (let index = 0; index < str.length; index += 1) {
-    switch (str[index]) {
-    case 'a': encripted = `${encripted}1`;
-      break;
-    case 'e': encripted = `${encripted}2`;
-      break;
-    case 'i': encripted = `${encripted}3`;
-      break;
-    case 'o': encripted = `${encripted}4`;
-      break;
-    case 'u': encripted = `${encripted}5`;
-      break;
-    default: encripted = `${encripted}${str[index]}`;
-    }
+    if (str[index] === 'a') str[index] = '1';
+    if (str[index] === 'e') str[index] = '2';
+    if (str[index] === 'i') str[index] = '3';
+    if (str[index] === 'o') str[index] = '4';
+    if (str[index] === 'u') str[index] = '5';
   }
-  return encripted;
+  return str.join('');
 }
 
 function decode(str) {
-  let decripted = '';
-  for (let index = 0; index < str.length; index += 1) {
-    switch (str[index]) {
-    case '1': decripted = `${decripted}a`;
-      break;
-    case '2': decripted = `${decripted}e`;
-      break;
-    case '3': decripted = `${decripted}i`;
-      break;
-    case '4': decripted = `${decripted}o`;
-      break;
-    case '5': decripted = `${decripted}u`;
-      break;
-    default: decripted = `${decripted}${str[index]}`;
-    }
+  str = str.split('');
+  for (let key = 0; key < str.length; key += 1) {
+    if (str[key] === '1') str[key] = 'a';
+    if (str[key] === '2') str[key] = 'e';
+    if (str[key] === '3') str[key] = 'i';
+    if (str[key] === '4') str[key] = 'o';
+    if (str[key] === '5') str[key] = 'u';
   }
-  return decripted;
+  return str.join('');
 }
-console.log(decode('h3 th2r2'));
 
 module.exports = {
   calcArea,
