@@ -99,14 +99,14 @@ function divideNumbers(arrayOfNumbers) {
 }
 function fizzBuzz(arrayOfNumbers) {
   let resultado = divideNumbers(arrayOfNumbers);
-  return resultado.filter(value => (value !== ''));
+  return resultado.filter((value) => (value !== ''));
 }
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function soletrando(param1) {
-  let soletrando = param1.split('');
-  return soletrando;
+  let soletrandol = param1.split('');
+  return soletrandol;
 }
 function confereSoletrando(param1) {
   let string = '';
@@ -120,13 +120,12 @@ function confereSoletrando(param1) {
       string += 3;
     } else if (param1[index] === 'o') {
       string += 4;
-    }
-    else if (param1[index] === 'u') {
+    } else if (param1[index] === 'u') {
       string += 5;
     } else {
       string += param1[index];
     }
-  }
+  } 
   return string;
 }
 
@@ -136,7 +135,6 @@ function encode(param1) {
 console.log(encode('hi there!'));
 
 function decode(param1) {
-  // seu código aqui
   let newString = '';
   for (let index = 0; index < param1.length; index += 1) {
     if (param1[index] === '1') {
