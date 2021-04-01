@@ -51,9 +51,9 @@ function generatePhoneNumber(arrayPhoneNumber) {
   } else if (checkPhoneNumber(arrayPhoneNumber) === false) {
     answer = 'não é possível gerar um número de telefone com esses valores';
   } else {
-    arrayPhoneNumber.splice(7,0, '-');
-    arrayPhoneNumber.splice(2,0, ') ');
-    arrayPhoneNumber.splice(0,0, '(');
+    arrayPhoneNumber.splice(7, 0, '-');
+    arrayPhoneNumber.splice(2, 0, ') ');
+    arrayPhoneNumber.splice(0, 0, '(');
     answer = arrayPhoneNumber.join('');
   }
 

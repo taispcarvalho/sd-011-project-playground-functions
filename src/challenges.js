@@ -79,8 +79,9 @@ function fizzBuzz(arrayFizzBuzzNumbers) {
   for (let number of arrayFizzBuzzNumbers) {
     let isDivisibleBy3 = number % 3 === 0;
     let isDivisibleBy5 = number % 5 === 0;
+    let isDivisibleBy3and5 = number % 3 === 0 && number % 5 === 0;
 
-    if (isDivisibleBy3 && isDivisibleBy5) {
+    if (isDivisibleBy3and5) {
       arrayFizzBuzz.push('fizzBuzz');
     } else if (isDivisibleBy3) {
       arrayFizzBuzz.push('fizz');
@@ -89,18 +90,25 @@ function fizzBuzz(arrayFizzBuzzNumbers) {
     } else {
       arrayFizzBuzz.push('bug!');
     }
-  }
+  }  
+
   return arrayFizzBuzz;
 }
 
 // Desafio 9
 function encode(sentence) {
-  let objectVowels = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  let objectVowels = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5'
+  };
 
   for (let index = 0; index < sentence.length; index += 1) {
-    for (let vowel of Object.keys(objectVowels)) {
-      if (sentence[index] === vowel) {
-        sentence = sentence.replace(vowel, objectVowels[vowel]);
+    for (let key of Object.keys(objectVowels)) {
+      if (sentence[index] === key) {
+        sentence = sentence.replace(key, objectVowels[key]);
         break;
       }
     }
@@ -109,12 +117,18 @@ function encode(sentence) {
 }
 
 function decode(sentence) {
-  let objectNumbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  let objectNumbers = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u'
+  };
 
   for (let index = 0; index < sentence.length; index += 1) {
-    for (let number of Object.keys(objectNumbers)) {
-      if (sentence[index] === number) {
-        sentence = sentence.replace(number, objectNumbers[number]);
+    for (let key of Object.keys(objectNumbers)) {
+      if (sentence[index] === key) {
+        sentence = sentence.replace(key, objectNumbers[key]);
         break;
       }
     }
