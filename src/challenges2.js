@@ -22,12 +22,7 @@ let numeroRepetido = [];
     resultado =  ('Array com tamanho incorreto.')
   }
   for (let numeroZero of array) {
-    if (numeroZero < 0) {
-    resultado = ('não é possível gerar um número de telefone com esses valores');
-    }
-  }
-  for (let numeroNove of array) {
-    if (numeroNove > 9) {
+    if (numeroZero < 0 || numeroNove > 9) {
     resultado = ('não é possível gerar um número de telefone com esses valores');
     }
   }
@@ -35,10 +30,9 @@ let numeroRepetido = [];
     for (let indexNumeroRepetido of array) {
       if (indexNumeroRepetido === index){
         numeroRepetido [index] = (numeroRepetido[index] || 0) + 1;
-      }
-    }
-  if (numeroRepetido[index] >= 3) {
+      } if (numeroRepetido[index] >= 3) {
     let resultado = ('não é possível gerar um número de telefone com esses valores');
+     }
     }
   }
   return generatePhoneNumber(resultado);
@@ -62,10 +56,10 @@ function triangleCheck(lineA, lineB, lineC) {
   let triaB = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
   let triaC = lineC < lineB + lineA && lineC > Math.abs(lineB - lineA);
   if ( lineA !== 0 && lineB !== 0 && lineC !== 0 ) {        
-    return  ( triaA  ||  triaB  ||  triaC ) ;
   }
+  return  ( triaA  ||  triaB  ||  triaC ) ;
 }  
-console.log(triangleCheck(10, 6, 2));
+console.log(triangleCheck(10, 6, 10));
 
 // Desafio 13
 function hydrate(string) {
