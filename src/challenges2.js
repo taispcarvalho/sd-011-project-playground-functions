@@ -95,9 +95,39 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function validationA(a, b, c) {
+  if (c + b > a && a > Math.abs(c - b)) {
+    return true;
+  }
+  return false;
 }
+
+function validationB(a, b, c) {
+  if (a + c > b && b > Math.abs(a - c)) {
+    return true;
+  }
+  return false;
+}
+
+function validationC(a, b, c) {
+  if (a + b > c && c > Math.abs(a - c)) {
+    return true;
+  }
+  return false;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  if (
+    validationA(lineA, lineB, lineC)
+    && validationB(lineA, lineB, lineC)
+    && validationC(lineA, lineB, lineC)
+  ) {
+    return true;
+  }
+  return false;
+}
+
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
