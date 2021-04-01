@@ -103,7 +103,6 @@ function encode(array1) {
   }
   return array1;
 }
-console.log(array1("hi there!"));
 
 function decode(array2) {
   for (let index = 0; index < array2.length; index += 1) {
@@ -111,16 +110,16 @@ function decode(array2) {
       case array2[index] === 1:
       return index = 'a';
       break;
-      case array2[i] === 2:
+      case array2[index] === 2:
       return index = 'e';
       break;
-      case array2[i] === 3:
+      case array2[index] === 3:
       return index = i;
       break;
-      case array2[i] === 4:
+      case array2[index] === 4:
       return index = o;
       break;
-      case array2[i] === 5:
+      case array2[index] === 5:
       return index = u;
       break;
     }
