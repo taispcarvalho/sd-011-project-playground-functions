@@ -10,14 +10,14 @@ Caso o array venha vazio sua função deve retornar 'Vazio!'*/
 function techList(techArray, name) {
   let objectArray = [];
   let arraySorted = techArray.sort();
-  for ( let index = 0; index < arraySorted.length; index += 1){
+  for (let index = 0; index < arraySorted.length; index += 1) {
     let object = {
       tech: arraySorted[index],
-      name
-    }
+      name,
+    };
     objectArray.push(object);
   }
-  return (techArray.length === 0) ? 'Vazio!' : objectArray;
+  return techArray.length === 0 ? 'Vazio!' : objectArray;
 }
 /* console.log(techList([],"Lucas")); */
 /* console.log(techList(['React','Jest', 'HTML', 'CSS', 'JavaScript'],'Lucas')); */
@@ -27,25 +27,11 @@ Retorne a mensagem de erro 'Vazio!' quando a lista tiver com 0 tecnologias
 Teste: 
  */
 
-
-
 // Desafio 11
 /* Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
-
 Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], generatePhoneNumber deverá retornar (12) 34567-8901. */
-function generatePhoneNumber(array) {
-  errorArrayLength(array);
-
-  let phoneNumber = '(00) 00000-0000';
-  if (array.length !== 11) {
-    return errorLength;
-  }
-}
- 
-function errorArrayLength (array){
-  if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';;
-  }
+function errorArrayLength(array) {
+  return array.length !== 11 ? 'Array com tamanho incorreto.' : false;
 }
 function errorNumber(array) {
   let validationError = 0;
@@ -61,7 +47,35 @@ function errorNumber(array) {
     ? 'não é possível gerar um número de telefone com esses valores'
     : false;
 }
-  /* 
+function repeatedNumber(array) {
+  // Função feita com consulta a https://dev.to/huyddo/find-duplicate-or-repeat-elements-in-js-array-3cl3.
+  let numbers = {};
+  let msgError;
+  let passMsg = false;
+  for (let index = 0; index < array.length; index += 1) {
+    if (numbers[array[index]]) {
+      numbers[array[index]] += 1;
+    } else {
+      numbers[array[index]] = 1;
+    }
+  }
+  for (let variable in numbers) {
+    if (numbers[variable] > 2) {
+      msgError = 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return msgError || passMsg;
+}
+function generatePhoneNumber(array) {
+  errorArrayLength(array);
+  errorNumber(array);
+  repeatedNumber (array);
+  let phoneNumber = '(00) 00000-0000';
+
+}
+
+
+/* 
 
   
   - Retorne a string "não é possível gerar um número de telefone com esses valores" caso algum número da array se repeti 3 vezes ou mais.
@@ -72,10 +86,6 @@ function errorNumber(array) {
 /* console.log(generatePhoneNumber([1, 2, 13, 4, 5, 6, 7, 8, 9, 0, 1])); maior que 9*/
 /* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 7, 7, 0, 1])); */
 /* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));  Retornar (12) 34567-8901*/
-
-
-
-
 
 // Desafio 12----------------------------------------
 /* Crie uma função de Condição de existência de um triângulo
@@ -92,9 +102,6 @@ Retorne true quando a medida de qualquer um dos lados seja menor que a soma das 
 function triangleCheck() {
   // seu código aqui
 }
-
-
-
 
 // Desafio 13---------------------------------------------------------
 /* Crie uma função de Bem vindo ao Bar da Trybe!
@@ -124,10 +131,6 @@ Retorne a sugestão de quantos copos de água deve-se beber ao receber uma strin
 function hydrate() {
   // seu código aqui
 }
-
-
-
-
 
 module.exports = {
   generatePhoneNumber,
