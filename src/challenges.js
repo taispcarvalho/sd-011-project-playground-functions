@@ -54,21 +54,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-let numerosDesafio8 = [2, 15, 7, 9, 45];
+let numerosDesafio8 = [];
 function fizzBuzz(numerosDesafio8) {
   let conteudoArray = [];
   for (let i = 0; i < numerosDesafio8.length; i += 1) {
     if (numerosDesafio8[i] % 3 === 0 && numerosDesafio8[i] % 5 === 0) {
-      conteudoArray.push('fizzbuzz');      
+      conteudoArray.push('fizzbuzz');
     } else if (numerosDesafio8[i] % 3 === 0) {
-      conteudoArray.push('fizz');      
+      conteudoArray.push('fizz');
     } else if (numerosDesafio8[i] % 5 === 0) {
-      conteudoArray.push('buzz');      
+      conteudoArray.push('buzz');
     } else {
-      conteudoArray.push('bug!');      
-    }        
-  }  
-  return conteudoArray;  
+      conteudoArray.push('bug!');
+    }
+  }
+  return conteudoArray;
 }
 
 fizzBuzz(numerosDesafio8);
@@ -109,4 +109,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
