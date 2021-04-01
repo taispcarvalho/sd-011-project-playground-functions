@@ -9,5 +9,6 @@ function hydrate(string) {
   } if (somaCopos >= 0 || somaCopos < 1) {
     return (somaCopos + ' copo de água');
   }
+  return hydrate;
 }
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
