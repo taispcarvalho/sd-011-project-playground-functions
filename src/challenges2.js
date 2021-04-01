@@ -27,12 +27,10 @@ let triaC = lineC < lineB + lineA && lineC > Math.abs(lineB - lineA);
 
 return triaA || triaB || triaC;
 
-}
-  
+}  
 console.log(triangleCheck(10, 6, 2))
 
 // Desafio 13
-let 
 function hydrate(string) {
   string = 'Bem vindo ao bar da tribe'
   newString.push(string);
