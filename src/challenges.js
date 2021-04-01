@@ -29,7 +29,7 @@ function highestCount(valores){
   let maior = arrumado[arrumado.length - 1];
   let quanVezes = 0;
   for(let index = 0; index <= valores.length - 1; index++){
-    if(valores[index] == maior){
+    if (valores[index] == maior){
     quanVezes++;
     } 
   }
@@ -41,18 +41,23 @@ function highestCount(valores){
 //let cat1=10;
 //let cat2=0; 
 
-function catAndMouse(mouse,cat1,cat2){
+function catAndMouse(mouse, cat1, cat2){
+if (mouse > cat1){
+  cat1 = Math.abs(mouse - cat1);
+} else {
   cat1 = Math.abs(cat1 - mouse);
+}
+if (mouse > cat2){
+  cat2 = Math.abs(mouse - cat2);
+} else {
   cat2 = Math.abs(cat2 - mouse);
-  if(cat1 === cat2){
+}
+  if (cat1 === cat2){
   return ("Os gatos trombam e o rato foge");
-  //console.log("Os gatos trombam e o rato foge");
-  }else if(cat1<cat2){
+  } else if (cat1<cat2){
     return ("cat1");
-      //console.log("cat1");
-  }else{
+  } else {
     return ("cat2");
-      //console.log("cat2");
   }
 }
 
