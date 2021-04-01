@@ -96,7 +96,7 @@ function highestCount(valores){
               return("cat1");
             }else
             // if(mouse-cat1>cat2-mouse)
-            {
+            { 
               return("cat2");
             }
             //else{
@@ -111,7 +111,7 @@ function highestCount(valores){
                 return("cat1");
               }
               //else{
-              //  return("Os gatos trombam e o rato foge");
+              //  return("Os ga tos trombam e o rato foge");
               //}
           
     }else{  
@@ -141,57 +141,27 @@ function fizzBuzz(numeros){
   return(arrayresposta);
 }
 //fizzBuzz(numeros);
-// Desafio 9
-//let frase="Melissa Gabriele Figueiredo";
-function encode(frase){
-  let parcial="";
-  let fraseResp="";
-  //stresp.pop();
-  for(let cont=0;cont<frase.length;cont++){
-    if(frase[cont]=="a"){
-      parcial="1";
-    }else if(frase[cont]=="e"){
-      parcial="2";
-    }else if(frase[cont]=="i"){
-      parcial="3";
-    }else if(frase[cont]=="o"){
-      parcial="4";
-    }else if(frase[cont]=="u"){
-      parcial="5";
-    }else{
-      parcial=frase[cont];
-    }
-    fraseResp=fraseResp+parcial;
-  }
-  //  console.log(fraseResp);
-    return(fraseResp);
-}
-//encode(frase);
 
-//let frase="M2l3ss1 G1br32l2 F3g523r2d4"
-function decode(frase) {
-  let parcial="";
-  let fraseResp="";
-    for(let cont=0;cont<frase.length;cont++){
-    if(frase[cont]=="1"){
-      parcial="a";
-    }else if(frase[cont]=="2"){
-      parcial="e";
-    }else if(frase[cont]=="3"){
-      parcial="i";
-    }else if(frase[cont]=="4"){
-      parcial="o";
-    }else if(frase[cont]=="5"){
-      parcial="u";
-    }else{
-      parcial=frase[cont];
-    }
-    fraseResp=fraseResp+parcial;
-  }
-  //  console.log(fraseResp);
-    return(fraseResp);
+// Desafio 9 ok
+
+function encode(frase){
+    frase=frase.replaceAll("a",1);
+    frase=frase.replaceAll("e",2);
+    frase=frase.replaceAll("i",3);
+    frase=frase.replaceAll("o",4);
+    frase=frase.replaceAll("u",5);
+   
+    return(frase);
 }
-//decode(frase);
+
+function decode(frase) {
+    frase=frase.replaceAll("1","a");
+    frase=frase.replaceAll("2","e");
+    frase=frase.replaceAll("3","i");
+    frase=frase.replaceAll("4","o");
+    frase=frase.replaceAll("5","u");
+    return(frase);
+} 
 
 module.exports = {
   calcArea,
