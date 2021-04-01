@@ -54,7 +54,6 @@ function generatePhoneNumber(numbersArray) {
 }
 
 // Desafio 12
-
 function linesSumCheck(lineA, lineB, lineC) {
   if (lineA + lineB > lineC && lineA + lineC > lineB && lineB + lineC > lineA) {
     return true;
@@ -78,7 +77,14 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(drinksTaken) {
-
+  let drinksListArray = drinksTaken.split(' ').map(Number);
+  let cupsOfWater = 0;
+  for  (let index = 0; index < drinksListArray.length; index += 1) {
+    if (drinksListArray[index] > 0) {
+      cupsOfWater += drinksListArray[index];
+    }
+  }
+  return cupsOfWater + ' copos de água';
 }
 
 module.exports = {
