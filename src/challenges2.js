@@ -65,9 +65,9 @@ function hydrate(drinks) {
     glassWater += key;
   }
   if (glassWater > 1) {
-    return glassWater + ' copos de água';
+    return `${glassWater} copos de água`;
   }
-  return glassWater + ' copo de água';
+  return `${glassWater} copo de água`;
 }
 
 console.log(hydrate('1 cachaça'));
