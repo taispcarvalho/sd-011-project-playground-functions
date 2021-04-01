@@ -39,12 +39,19 @@ function generatePhoneNumber(array) {
   }
   return phoneNumber;
 }
-console.log((generatePhoneNumber([4, 5, 5, 3, 2, 2, 1, 1, 9, 7, 8])));
+console.log((generatePhoneNumber([5, 5, 5, 3, 2, 2, 1, 1, 9, 7, 8])));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // seu código aqui
+  if (lineA <= 0 || lineB <= 0 || lineC <= 0) {
+    return false;
+  }
+  if (lineA >= Math.abs(lineB + lineC) || lineB >= Math.abs(lineA + lineC) || lineC >= Math.abs(lineA + lineB)) {
+    return false;
+  }
+  return true;
 }
+console.log(triangleCheck(5,5,5));
 
 // Desafio 13
 function hydrate() {
