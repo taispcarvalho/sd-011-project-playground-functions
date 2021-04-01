@@ -77,9 +77,26 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(sentence) {
+  let replacement = {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4,
+    e: 5,
+  };
+  let newSentence = '';
+  for (let letter of sentence) {
+    if (replacement[letter]) {
+      newSentence += (replacement[letter]);
+    } else {
+      newSentence += (letter);
+    }
+  }
+  return newSentence;
 }
+console.log(encode('Hello, World'));
+
 function decode() {
   // seu código aqui
 }
