@@ -39,8 +39,9 @@ function findNumber(valor) {
 function highestCount(var1) {
   let resultado = 0;
   for (let index1 = 0; index1 < var1.length; index1 += 1) {
-    if (findNumber() === var1[index1])
+    if (findNumber() === var1[index1]) {
       resultado += 1;
+    }
   }
   return resultado;
 }
@@ -61,12 +62,12 @@ function fizzBuzz(numbers) {
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       array.push('fizzBuzz');
-    }else if (numbers[index] % 3 === 0 && numbers[index] % 5 != 0) {
+    } else if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
       array.push('fizz');
-    }else if (numbers[index] % 3 != 0 && numbers[index] % 5 === 0) {
-      array.push('buzz')
-    }else {
-      array.push('bug!')
+    } else if (numbers[index] % 3 !== 0 && numbers[index] % 5 === 0) {
+      array.push('buzz');
+    } else {
+      array.push('bug!');
     }
   }
   return array;
