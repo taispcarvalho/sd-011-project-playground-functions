@@ -17,56 +17,44 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
 let resultado = '';
+let numeroRepetido = [];
   if(array.length !== 11) {
-  let resultado =  ('Array com tamanho incorreto.')
+    resultado =  ('Array com tamanho incorreto.')
   }
-  return generatePhoneNumber(resultado);
-}
-
-function numeroZero(array) {
-let resultado = '';
-generatePhoneNumber(array);
   for (let numeroZero of array) {
     if (numeroZero < 0) {
-    resultado ('não é possível gerar um número de telefone com esses valores');
+    resultado = ('não é possível gerar um número de telefone com esses valores');
     }
   }
-  return numeroZero(resultado);
-}
-
-function numeroNove(array) {
-let resultado = ' ';
-generatePhoneNumber(array);
   for (let numeroNove of array) {
     if (numeroNove > 9) {
-    let resultado = ('não é possível gerar um número de telefone com esses valores');
+    resultado = ('não é possível gerar um número de telefone com esses valores');
     }
   }
-  return numeroNove(resultado);
-}
-
-function maiorValor(array) {
-generatePhoneNumber(array);
-let numeroRepetido = [];
-for (let index of array) {
-  for (let indexNumeroRepetido of array) {
-    if (indexNumeroRepetido === index){
-      numeroRepetido [index] = (numeroRepetido[index] || 0) + 1;
+  for (let index of array) {
+    for (let indexNumeroRepetido of array) {
+      if (indexNumeroRepetido === index){
+        numeroRepetido [index] = (numeroRepetido[index] || 0) + 1;
+      }
     }
-  }
   if (numeroRepetido[index] >= 3) {
     let resultado = ('não é possível gerar um número de telefone com esses valores');
     }
   }
-  return maiorValor(resultado)
+  return generatePhoneNumber(resultado);
 }
 
 function numeroTelefone(array) {
 let numeroDeTelefone = generatePhoneNumber(array);
-  let numeroDeTelefone = ('(' + array[0] + array[1] + ')' + array[2]+ array[3]+ array[4]+ array[5]+ array[6] + ' - '+ array[7]+ array[8]+ array[9]+ array[10]+ array[11]);
-  return numeroDeTelefone;
+let primeirosNumero = ('(' + array[0] + array[1] + ') ');
+let numeroMeio = (array[2]+ array[3]+ array[4]+ array[5]+ array[6] + ' - ');
+let ultimoNumero = (array[7]+ array[8]+ array[9]+ array[10]+ array[11]);
+let numeroTotal = primeirosNumero + numeroMeio + ultimoNumero;
+  
+  return numeroTelefone(numeroTotal);
 }
-  console.log(generatePhoneNumber([[3, 2, 6, 5, 8, 9, 7, 8]]));
+
+console.log(generatePhoneNumber(3, 2, 6, 5, 8, 9, 7, 8));
 
 // Desafio 12 - ok
 function triangleCheck(lineA, lineB, lineC) {
