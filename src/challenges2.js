@@ -16,7 +16,7 @@ function techList(array, name) {
 }
 
 // Desafio 11
-// function generatePhoneNumber(array) {
+function generatePhoneNumber(array) {
 //   let telefone = '(';
 //   function maisDeTres (array) {
 //     let contador = 0;
@@ -51,7 +51,7 @@ function techList(array, name) {
 //     }
 //   }
 //   return telefone;
-// }
+}
 
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
@@ -75,9 +75,15 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let quantidade = string.replace(/\D/g, "");
+  if (quantidade === '1') {
+    return quantidade + ' copo de água';
+  } else {
+    return quantidade + ' copos de água';
+  }
 }
+console.log(hydrate("1 cerveja"));
 
 module.exports = {
   generatePhoneNumber,
