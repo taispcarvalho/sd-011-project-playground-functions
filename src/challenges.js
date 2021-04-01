@@ -31,6 +31,8 @@ function highestCount(array) {
     if (array[i] > maior) {
       maior = array[i];
     }
+  }
+  for (let i in array) {
     if (array[i] === maior) {
       counter += 1;
     }
