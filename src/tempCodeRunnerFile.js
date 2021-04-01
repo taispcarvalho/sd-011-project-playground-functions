@@ -1,9 +1,9 @@
-function triangleCheck(lineA, lineB, lineC) {
-let triaA = lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
-let triaB = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
-let triaC = lineC < lineB + lineA && lineC > Math.abs(lineB - lineA);
-
-return triaA || triaB || triaC;
-
-}  
-console.log(triangleCheck(10, 6, 2))
+function hydrate(string) {
+  string = '1 cachaça, 5 cervejas e 1 copo de vinho'
+  let numeroCopos = string.match(/\d+/g).map(Number); //me gera um array com os números
+  let somaCopos = 0;
+  for (let index = 0; index < numeroCopos.length; index += 1){
+    somaCopos += numeroCopos[index];
+  }
+  return (somaCopos, 'copos de água');
+  }
