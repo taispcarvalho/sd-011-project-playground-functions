@@ -53,7 +53,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function substituteWords(number) {
-  if (number % 5 === 0 && number % 3 === 0) return 'FizzBuzz';
+  if (number % 15 === 0) return 'FizzBuzz';
   if (number % 3 === 0) return 'fizz';
   if (number % 5 === 0) return 'buzz';
   return 'bug!';
@@ -77,10 +77,13 @@ function encode(str) {
 
 function decode(str) {
   let newStr = '';
-  newStr += str.replace(/1/gi, 'a').replace(/2/gi, 'e').replace(/3/gi, 'i');
-  newStr += str.replace(/4/gi, 'o').replace(/5/gi, 'u');
+  newStr = str.replace(/1/gi, 'a').replace(/2/gi, 'e').replace(/3/gi, 'i');
+  newStr = str.replace(/4/gi, 'o').replace(/5/gi, 'u');
   return newStr;
 }
+let myStr = 'hello'
+console.log(encode(myStr));
+console.log(decode(myStr));
 
 module.exports = {
   calcArea,
