@@ -80,8 +80,7 @@ function fizzBuzz(array) {
       newArray.push('bug!');
     }
   }
-  let array2 = newArray;
-  return array2;
+  return newArray;
 }
 
 // Desafio 9
