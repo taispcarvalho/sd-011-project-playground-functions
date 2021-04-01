@@ -70,16 +70,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let answer = [];
   for (let i = 0; i < array.length; i += 1) {
-  
-    let fizz = array[i] % 3 === 0 && array[i] % 5 !== 0 ;
-    let buzz = array[i] % 5 === 0 && array[i] % 3 !== 0 ;
-    let fizzBuzz = array[i] % 5 === 0 && array[i] % 3 === 0 ;
-  
+    let fizz = array[i] % 3 === 0 && array[i] % 5 !== 0;
+    let buzz = array[i] % 5 === 0 && array[i] % 3 !== 0;
+    let fizzbuzz = array[i] % 5 === 0 && array[i] % 3 === 0;
     if (fizz) {
-    answer[i] = 'fizz';
+      answer[i] = 'fizz';
     } else if (buzz) {
       answer[i] = 'buzz';
-    } else if (fizzBuzz) {
+    } else if (fizzbuzz) {
       answer[i] = 'fizzBuzz';
     } else {
       answer[i] = 'bug!';
@@ -87,7 +85,7 @@ function fizzBuzz(array) {
   }
   return answer;
 }
-  
+
 // Desafio 9
 function encode() {
   // seu código aqui
