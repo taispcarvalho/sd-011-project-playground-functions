@@ -114,6 +114,8 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
+
+// Funções para o encode
 function checkVowel(vowel) {
   let vowels = ['a', 'e', 'i', 'o', 'u'];
   let number = [1, 2, 3, 4, 5];
@@ -137,24 +139,22 @@ console.log(encode('hi there!'));
 console.log(encode('hello world!'));
 console.log(encode('a,e,i,o,u'));
 
+// Funções para o decode
+function checkNum(number) {
+  let numbers = ['1', '2', '3', '4', '5'];
+  let vowel = ['a', 'e', 'i', 'o', 'u'];
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (number === numbers[i]) {
+      number = vowel[i];
+    }
+  }
+  return number;
+}
+
 function decode(string) {
   let arrNew = string.split('');
   for (let letter = 0; letter < arrNew.length; letter += 1) {
-    if (arrNew[letter] === '1') {
-      arrNew[letter] = 'a';
-    }
-    if (arrNew[letter] === '2') {
-      arrNew[letter] = 'e';
-    }
-    if (arrNew[letter] === '3') {
-      arrNew[letter] = 'i';
-    }
-    if (arrNew[letter] === '4') {
-      arrNew[letter] = 'o';
-    }
-    if (arrNew[letter] === '5') {
-      arrNew[letter] = 'u';
-    }
+    arrNew[letter] = checkNum(arrNew[letter]);
   }
   arrNew = arrNew.join('');
   return arrNew;
