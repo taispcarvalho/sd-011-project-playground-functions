@@ -70,8 +70,10 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let answer = [];
   for (let i = 0; i < array.length; i += 1) {
-    ((array[i] % 3 === 0 && array[i] % 5 !== 0) ? (answer[i] = 'fizz') : (array[i] % 5 === 0 && array[i] % 3 !== 0) ? (answer[i] = 'buzz') : (array[i] % 5 === 0 && array[i] % 3 === 0) ? (answer[i] = 'fizzBuzz') : (answer[i] = 'bug!'));
-    }
+    (array[i] % 5 === 0 && array[i] % 3 === 0) ? (answer[i] = 'fizzBuzz') :
+    (array[i] % 3 === 0 && array[i] % 5 !== 0) ? (answer[i] = 'fizz') :
+    (array[i] % 5 === 0 && array[i] % 3 !== 0) ? (answer[i] = 'buzz') : (answer[i] = 'bug!') }
+    
   return answer;
  }
 
