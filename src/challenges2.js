@@ -40,12 +40,17 @@ function generatePhoneNumber(arrayOfNumber) {
 function triangleCheck(sideA, sideB, sideC) {
   return sideA < sideB + sideC && sideA > Math.abs(sideB - sideC);
 }
-console.log(triangleCheck(8, 8, 18));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(order) {
+  let numbers = order.match(/\d/g);
+  let cupsOfWater = 0
+  for (let index in numbers) {
+      cupsOfWater += parseInt(numbers[index])
+  }
+  return `${cupsOfWater} copos de água`;
 }
+console.log(hydrate('1 cerveja, 5 copos de vinho e 1 sex on the beach'));
 
 module.exports = {
   generatePhoneNumber,
