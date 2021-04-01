@@ -26,18 +26,16 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   let maior = 0;
+  let counter = 0;
   for (let i in array) {
     if (array[i] > maior) {
       maior = array[i];
     }
-  }
-  let counter = 0;
-  for (let n in array) {
     if (array[n] === maior) {
       counter += 1;
     }
-  }
   return counter;
+  }
 }
 
 // Desafio 7
@@ -72,15 +70,60 @@ function fizzBuzz(array) {
   return output;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(array) {
+  let output = [];
+  for (let n in array) {
+    switch (array[n]) {
+      case 'a':
+        output.push(1);  
+        break;
+      case 'e':
+        output.push(2);   
+        break;
+      case 'i':
+        output.push(3);   
+        break;
+      case 'o':
+        output.push(4); 
+        break;
+      case 'u':
+        output.push(5);   
+        break;
+      default:
+        output.push(array[n]); 
+    }
+  }
+  return output.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(array) {
+  let output = [];
+  for (let n in array) {
+    switch (array[n]) {
+      case '1':
+        output.push('a');  
+        break;
+      case '2':
+        output.push('e');   
+        break;
+      case '3':
+        output.push('i');   
+        break;
+      case '4':
+        output.push('o'); 
+        break;
+      case '5':
+        output.push('u');   
+        break;
+      default:
+        output.push(array[n]); 
+    }
+  }
+  return output.join('');
 }
+
+console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
