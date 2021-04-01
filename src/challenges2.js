@@ -151,9 +151,24 @@ console.log(triangleCheck(10, 14, 8));
 console.log(triangleCheck(10, 14, 50));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let drinks = str.match(/\d+/g);
+  let numbersDrink =[];
+  let glassWater = 0;
+  
+  for (let index =0; index < drinks.length; index += 1) {
+    numbersDrink.push(+drinks[index]);
+    glassWater += numbersDrink[index];
+  }
+  if (glassWater < 2){
+    return glassWater + ' copo de água';
+  } else {
+    return glassWater + ' copos de água';
+  }
+  
 }
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+console.log(hydrate('1 cachaça'));
 
 module.exports = {
   generatePhoneNumber,
