@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(array, name) {
-  if(array.length === 0) {
+  if (array.length === 0) {
     return 'Vazio!';
   }
   let lista = [];
@@ -15,38 +15,44 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
+function isValidArrayLength(array) {
   if (array.length > 11) {
-    return 'Array com tamanho incorreto.';
-  }
-  
+    return false;
+  } return true;
+}
+function isValidArrayNumber(array) {
   for (let index of array) {
     if (index < 0 || index > 9) {
-      return 'não é possível gerar um número de telefone com esses valores.'
-    } 
+      return false;
+    } return true;
   }
-  function repetition(array) {
-    let counter = 0;
-    for (let index2 of array) {
-      for (let index3 of array) {
-        if (index2 === index3) {
-          counter += 1;
-        }
-      }
-      if (counter >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores.'
-      counter = 0;
+}
+function NumberOfrepetition(array) {
+  let counter = 0;
+  for (let index2 of array) {
+    for (let index3 = 1; index3 < array.length; index3 += 1) {
+      if (index2 === index3) {
+        counter += 1;
       }
     }
-  }
-  function createPhoneNumber(array) {
-    array.splice(0,0,'(');
-    array.splice(3, 0, ')');
-    array.splice(9, 0, '-');
-    array.join('');
+    if (counter >= 3) {
+      return false;
+    } counter = 0;
+  } return true;
 }
-  return array; 
+function createPhoneNumber(array) {
+  array.splice(0, 0, '(');
+  array.splice(3, 0, ')');
+  array.splice(9, 0, '-');
+  array.join('');
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
+  if (!isValidArrayLength(array)) {
+    return 'Array com tamanho incorreto.';
+  } if (!isValidArrayNumber(array) || !NumberOfrepetition(array)) {
+      return 'não é possível gerar um número de telefone com esses valores.';
+    } return createPhoneNumber(array);
+}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
