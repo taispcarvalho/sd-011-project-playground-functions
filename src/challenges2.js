@@ -14,14 +14,15 @@ function techList(lista, nameName) {
   });
 
   if (lista.length === 0) {
-    return 'Vazio!'
+    return 'Vazio!';
+    
   }
 
   else {
     return list;
   }
 }
-console.log(techList([], "Lucas"));
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
