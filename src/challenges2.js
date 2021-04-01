@@ -62,17 +62,29 @@ function generatePhoneNumber(array) {
 }
 console.log((generatePhoneNumber([5, 8, 5, 3, 2, 2, 4, 1, 9, 7, 4])));
 
-// Desafio 12 teste
-function triangleCheck(lineA, lineB, lineC) {
+// Desafio 12
+function noZeroSides(lineA, lineB, lineC) {
   if (lineA <= 0 || lineB <= 0 || lineC <= 0) {
-    return false;
+    message = false;
   }
-  if (lineA >= Math.abs(lineB + lineC) || lineB >= Math.abs(lineA + lineC) || lineC >= Math.abs(lineA + lineB)) {
-    return false;
-  }
-  return true;
 }
-console.log(triangleCheck(5, 5, 5));
+
+function lengthSides(lineA, lineB, lineC) {
+  if (lineA >= Math.abs(lineB + lineC) || lineB >= Math.abs(lineA + lineC)) {
+    message = false;
+  }
+  if ((lineC >= Math.abs(lineA + lineB))) {
+    message = false;
+  }
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+let message = true;
+noZeroSides(lineA, lineB, lineC);
+lengthSides(lineA, lineB, lineC);
+return message;
+}
+console.log(triangleCheck(5, 5, -1));
 
 // Desafio 13
 function hydrate(string) {
