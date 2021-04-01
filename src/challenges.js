@@ -21,7 +21,8 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(itens) {
   // seu código aqui
-  return (itens[itens.length - 1], itens[0]);
+  let bothNames = (itens[itens.length - 1], itens[0]);
+  return bothNames;
 }
 
 // Desafio 5
@@ -56,18 +57,18 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function distancia(p1, p2){
-  return Math.abs(p2 - p1)
+function distancia (p1, p2){
+  return Math.abs(p2 - p1);
 }
 
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let result;
   let re1 = distancia(cat1, mouse);
-  let re2 
-  if (re1 > re2) {
+  let re2 = distancia(cat2, mouse);
+  if (re1 < re2) {
     result = 'cat1';
-  } else if (re1 < re2) {
+  } else if (re1 > re2) {
     result = 'cat2';
   } else {
     result = 'os gatos trombam e o rato foge';
@@ -76,29 +77,70 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function isFizzBuzz(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+      return 'fizzbuzz';
+  } else if (number % 3 === 0) {
+      return 'fizz';
+  } else if (number % 5 === 0) {
+      return 'buzz';
+  } 
+  return 'bug!';
+  }
+
 function fizzBuzz(numbers) {
   // seu código aqui
-  let arrei = [];
   for (let index = 0; index < numbers.length; index += 1) {
-    if(numbers[index] % 3 === 0) {
-      arrei.push('fizz');
-    } else if (numbers[index] % 5 === 0) {
-      arrei.push('buzz');
-    } else if (numers[index] % 3 === 0 && numbers[index] % 5 == 0) {
-      arrei.push('fizzbuzz');
-    } else {
-      arrei.push('bug!');
-    }
+    numbers[index] = isFizzBuzz(numbers[index]);
   }
   return arrei;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function reference() {
+  let characters = { 
+    code1: {
+      a: '1',
+      e: '2',
+      i: '3',
+      o: '4',
+      u: '5',
+    },
+
+    code2: {
+      1: 'a',
+      2: 'e',
+      3: 'i',
+      4: 'o',
+      5: 'u',
+    }
+  }
+  return characters;
 }
-function decode() {
+
+
+function encode(value) {
   // seu código aqui
+  let char = value.split('');
+  let charReference = reference().encode;
+  for (let index = 0; index < char.length; index += 1) {
+    if(charReference[char[index]]) {
+      char[index] = charReference[char[index]]
+    }
+  }
+  return char.join('');
+}
+
+function decode(value) {
+  // seu código aqui
+  let char = value.split('');
+  let charReference = reference().decode;
+  for (let index = 0; index < char.length; index += 1) {
+    if(charReference[char[index]]) {
+      char[index] = charReference[char[index]]
+    }
+  }
+  return char.join('');
 }
 
 module.exports = {
