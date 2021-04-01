@@ -27,7 +27,7 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   let result;
 
   if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
