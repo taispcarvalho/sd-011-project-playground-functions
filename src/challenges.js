@@ -68,35 +68,27 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-//Função auxiliar para o Desafio 8
-function compare(nArray) {
+function fizzBuzz(nArray) {
   let result = [];
-  if (nArray[index] % 3 === 0 && nArray[index] % 5 !== 0) {
-    result.push('fizz');
-    }
-  
-   if (nArray[index] % 5 === 0 && nArray[index] % 3 !== 0) {
-    result.push('buzz');
-    }
-  
-   if (nArray[index] % 3 === 0 && nArray[index] % 5 === 0) {
-      result.push('fizzBuzz');
-    }
-  
-    if (nArray[index] % 3 !== 0 && nArray[index] % 5 !== 0) {
-     result.push('bug!');
+  for (let index = 0; index < nArray.length; index += 1) {
+    if (nArray[index] % 3 === 0 && nArray[index] % 5 !== 0) {
+      result.push('fizz');
     }
 
-    return result;
+    if (nArray[index] % 5 === 0 && nArray[index] % 3 !== 0) {
+      result.push('buzz');
     }
-  
-   
-// Desafio 8
-function fizzBuzz(nArray) {
-  for (let index = 0; index < nArray.length; index += 1) {
-    compare(nArray);
+
+    if (nArray[index] % 3 === 0 && nArray[index] % 5 === 0) {
+      result.push('fizzBuzz');
+    }
+
+    if (nArray[index] % 3 !== 0 && nArray[index] % 5 !== 0) {
+      result.push('bug!');
+    }
   }
-  
+
+  return result;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
