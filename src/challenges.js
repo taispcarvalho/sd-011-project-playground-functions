@@ -125,13 +125,13 @@ function isDivisible(dividend, divisor) {
 
 // Auxiliary function for Desafio 8
 function numberToFizzBuzz(number) {
-  if (isDivisible(15, number)) {
+  if (isDivisible(number, 15)) {
     return 'fizzBuzz';
   }
-  if (isDivisible(5, number)) {
+  if (isDivisible(number, 5)) {
     return 'buzz';
   }
-  if (isDivisible(3, number)) {
+  if (isDivisible(number, 3)) {
     return 'fizz';
   }
   return 'bug!';
