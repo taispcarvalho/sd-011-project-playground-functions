@@ -18,7 +18,7 @@ function splitSentence(array) {
 function concatName(array2) {
   let first = array2[0];
   let last = array2[array2.length - 1];
-  return last + ", " + first;
+  return last + ', ' + first;
 }
 
 // Desafio 5
@@ -40,8 +40,16 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
- // 
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 < cat2) {
+     return cat1
+  }
+  else if (cat1 > cat2) {
+    return cat2
+  }
+  else (cat1 === cat2); {
+    return "os gatos trombam e o rato foge"
+  }
 }
 
 // Desafio 8
