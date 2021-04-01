@@ -5,7 +5,7 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -34,8 +34,20 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let numeros = [];
+  for (let index in array) {
+    if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
+    numeros.push ('fizzBuzz');
+    } else if (array[index] % 5 === 0){
+    numeros.push ('buzz');
+    } else if  (array[index] % 3 === 0) {
+    numeros.push ('fizz');
+    } else {
+    numeros.push('bug!');
+    }
+  }
+  return numeros;
 }
 
 // Desafio 9
