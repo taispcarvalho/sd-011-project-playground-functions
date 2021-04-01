@@ -54,21 +54,31 @@ function generatePhoneNumber(numbersArray) {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  if (lineA + lineB > lineC && lineC > Math.abs(lineA - lineB)) {
-    return true;
-  } if (lineA + lineC > lineB && lineB > Math.abs(lineA - lineC)) {
-    return true;
-  } if (lineB + lineC > lineA && lineA > Math.abs(lineB - lineC)) {
+
+function linesSumCheck(lineA, lineB, lineC) {
+  if (lineA + lineB > lineC && lineA + lineC > lineB && lineB + lineC > lineA) {
     return true;
   }
   return false;
 }
-console.log(triangleCheck(10,14,30))
+
+function linesSubtractCheck(lineA, lineB, lineC) {
+  if (lineC > Math.abs(lineA - lineB) && lineB > Math.abs(lineA - lineC) && lineA > Math.abs(lineB - lineC)) {
+    return true;
+  }
+  return false;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  if (linesSumCheck(lineA, lineB, lineC) === true && linesSubtractCheck(lineA, lineB, lineC) === true) {
+    return true;
+  }
+  return false;
+}
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinksTaken) {
+
 }
 
 module.exports = {
