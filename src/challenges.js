@@ -140,7 +140,7 @@ console.log(encode('hello world!'));
 console.log(encode('a,e,i,o,u'));
 
 // Funções para o decode
-function checkNum(number) {
+function checkDecode(number) {
   let numbers = ['1', '2', '3', '4', '5'];
   let vowel = ['a', 'e', 'i', 'o', 'u'];
   for (let i = 0; i < numbers.length; i += 1) {
@@ -154,7 +154,7 @@ function checkNum(number) {
 function decode(string) {
   let arrNew = string.split('');
   for (let letter = 0; letter < arrNew.length; letter += 1) {
-    arrNew[letter] = checkNum(arrNew[letter]);
+    arrNew[letter] = checkDecode(arrNew[letter]);
   }
   arrNew = arrNew.join('');
   return arrNew;
