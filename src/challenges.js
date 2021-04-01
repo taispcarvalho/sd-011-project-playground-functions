@@ -28,6 +28,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+function funtionHigherNumber(repeatNumber) {
+  let higherNumber = 0;
+  for (let firstIndex = 0; firstIndex < repeatNumber.length; firstIndex += 1) {
+    if (repeatNumber[firstIndex] > higherNumber) {
+      higherNumber = repeatNumber[firstIndex];
+    }
+  }
+  return higherNumber;
+}
+
 function highestCount(repeatNumber) {
   let higherNumber = funtionHigherNumber(repeatNumber);
   let counterNumber = 0;
@@ -38,16 +48,6 @@ function highestCount(repeatNumber) {
     }
   }
   return counterNumber;
-}
-
-function funtionHigherNumber(repeatNumber){
-  let higherNumber = 0;
-  for (let firstIndex = 0; firstIndex < repeatNumber.length; firstIndex += 1) {
-    if (repeatNumber[firstIndex] > higherNumber) {
-      higherNumber = repeatNumber[firstIndex];
-    }
-  }
-  return higherNumber;
 }
 
 let a = [0, 4, 4, 4, 2, 1];
