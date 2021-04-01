@@ -140,26 +140,30 @@ console.log(encode('A'));
 
 console.log(encode('A vida é bela'));
 
+function changeLetter(letter) {
+  let letterNumber = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let letterIndex = letterNumber[letter];
+  if (letterIndex) {
+    return letterIndex;
+  }
+  return letter;
+}
+
 function decode(str) {
   let str2 = '';
   for (let index = 0; index < str.length; index += 1) {
-    if (str[index] === '1') {
-      str2 += 'a';
-    } else if (str[index] === '2') {
-      str2 += 'e';
-    } else if (str[index] === '3') {
-      str2 += 'i';
-    } else if (str[index] === '4') {
-      str2 += 'o';
-    } else if (str[index] === '5') {
-      str2 += 'u';
-    } else {
-      str2 += str[index];
-    }
+    str2 += changeLetter(str[index]);
   }
   return str2;
 }
 console.log(decode('h3 th2r2!'));
+
 module.exports = {
   calcArea,
   catAndMouse,
