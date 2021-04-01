@@ -16,7 +16,7 @@ function splitSentence(array) {
 
 // Desafio 4
 function concatName(array2) {
- return `${array2[array2.length - 1]}, ${array2[0]}`;
+  return `${array2[array2.length - 1]}, ${array2[0]}`;
 }
 
 // Desafio 5
@@ -53,23 +53,19 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumber) {
   let retornar = [];
-  
   for (let index in arrayNumber) {
     if (arrayNumber[index] % 15 === 0) {
-    retornar.push('fizzBuzz');
-    }
-    else if (arrayNumber[index] % 3 === 0) {
+    retornar.push('fizzBuzz'); 
+    } else if (arrayNumber[index] % 3 === 0) {
       retornar.push('fizz');
-    }
-    else if (arrayNumber[index] % 5 === 0) {
+    } else if (arrayNumber[index] % 5 === 0) {
       retornar.push('buzz'); 
-    }
-      else
+    } else {
       retornar.push('bug!');
     }
   return retornar;
 }
-
+}
 // Desafio 9
 function encode(string) {
   let chtArray = string.split('');
