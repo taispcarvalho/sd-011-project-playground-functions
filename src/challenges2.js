@@ -22,7 +22,6 @@ function createObject(techName,name) {
   return object;
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Leonardo"));
 // Desafio 11
 function generatePhoneNumber(numbers) {
   //let phoneNumber = '(' + numbers.slice(0,2) + ') ' + numbers.slice(2,7) + '-' + numbers.slice(7,11);
@@ -47,13 +46,39 @@ function generatePhoneNumber(numbers) {
 //console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1,1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let triangleRequirements = true;
+  if (checkLineSum (lineA, lineB, lineC) === true && checkLineDiff (lineA, lineB, lineC) === true) {
+    triangleRequirements = true;
+  } else {
+    triangleRequirements = false;
+  }
+  return triangleRequirements
+}
+
+function checkLineSum(lineA, lineB, lineC) {
+  let checkSum = true;
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB){
+    checkSum = true;
+  } else {
+    checkSum = false;
+  }
+  return checkSum;
+}
+
+function checkLineDiff (lineA, lineB, lineC) {
+  let checkDiff = true;
+  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+    checkDiff = true;
+  } else {
+    checkDiff = false;
+  }
+  return checkDiff;
 }
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+ 
 }
 
 module.exports = {
