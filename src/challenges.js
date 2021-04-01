@@ -107,10 +107,10 @@ function encode(string) {
 
 function decode(string) {
   string = string.replace(/1/g, 'a');
-  string = string.replace(/2/g, 'b');
-  string = string.replace(/3/g, 'c');
-  string = string.replace(/4/g, 'd');
-  string = string.replace(/5/g, 'e');
+  string = string.replace(/2/g, 'e');
+  string = string.replace(/3/g, 'i');
+  string = string.replace(/4/g, 'o');
+  string = string.replace(/5/g, 'u');
   return string;
 }
 
