@@ -116,7 +116,7 @@ function decode(newString) {
     newString = newString.replace(/2/g, 'e');
     newString = newString.replace(/3/g, 'i');
     newString = newString.replace(/4/g, 'o');
-    newString = newString.replace(/5/g. 'u');
+    newString = newString.replace(/5/g, 'u');
   }
   return newString;
 }
