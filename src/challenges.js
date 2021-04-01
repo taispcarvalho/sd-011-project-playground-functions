@@ -30,11 +30,11 @@ console.log(splitSentence(string))
 
 // Desafio 4
 function concatName(param) {
-  let newArray= [param[param.length-1] + ", "+ param[0]];
+  let newArray= [param[param.length-1] + ', ' + param[0]];
   return newArray;
 }
 
-let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+let names = ['captain', 'my', 'captain'];
 console.log(concatName(names));
 
 // Desafio 5
@@ -63,10 +63,11 @@ function highestCount(array) {
       contador = contador +1;
     }
   }
+  console.log(maior);
   return contador;
 }
 
-let array6 = [9, 1, 2, 3, 9, 5, 7];
+let array6 = [0, 4, 4, 4, 9, 2, 1];
 console.log(highestCount(array6));
 
 // Desafio 7
