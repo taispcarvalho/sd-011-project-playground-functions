@@ -50,45 +50,27 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbers) {
-  let resultString = [];
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
-      resultString.push('fizz');
-    } else if (numbers[index] % 5 === 0 && numbers[index] % 3 !== 0) {
-      resultString.push('buzz');
-    } else if (numbers[index] % 15 === 0) {
-      resultString.push('fizzBuzz');
-    } else {
-      resultString.push('bug!');
-    }
-    return resultString;
-    
-    
-    
-    //testDivisor(numbers); 
-    //if (numbers[index] % 5 === 0 && numbers[index] % 3 !== 0) {
-      //resultString.push('buzz');
-    //} else if (numbers[index] % 15 === 0) {
-      //resultString.push('fizzBuzz');
-    //} else {
-     // resultString.push('bug!');
-    //}
-   //return resultString;
+function fizzBuzz(array) {
+  let formattedArray = [];
+  for (let index = 0; index < array.length; index += 1) {
+    formattedArray.push(numberDivisor(array[index]))
+  }
+  return formattedArray;
 }
-console.log(fizzBuzz([1,2,3,4,5]));
 
-
-//function testDivisor (numbers) {
-  //if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
-    //resultString.push('fizz');
-  //return resultString;
-//}
-
-console.log(fizzBuzz([1,2,3,4,5]));
-
-
-
+function numberDivisor (number) {
+  let newString = '';
+    if (number % 3 === 0 && number % 5 !== 0) {
+      newString = 'fizz';
+    } else if (number % 5 === 0 && number % 3 !== 0) {
+      newString = 'buzz';
+    } else if (number % 15 === 0) {
+      newString = 'fizzBuzz';
+    } else {
+      newString = 'bug!';
+    }
+    return newString;
+}
 
 // Desafio 9
 function encode(str) {
