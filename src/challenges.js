@@ -55,7 +55,6 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumber) {
   let retornar = [];
-
   for (let index in arrayNumber) {
     if (arrayNumber[index] % 15 === 0) {
       retornar.push('fizzBuzz');
@@ -71,11 +70,32 @@ function fizzBuzz(arrayNumber) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let chtArray = string.split('');
+  let letra = ['a', 'e', 'i', 'o', 'u'];
+  let decodeArray = [];
+
+  for (let caractere of chtArray) {
+    if (letra.indexOf(caractere) >=0) decodeArray.push(letra.indexOf(caractere) +1);
+    else decodeArray.push(caractere);
+  }
+  return decodeArray.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(decodeString) {
+  let decodeArray = decodeString.split('');
+  let letra = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let chtArray = [];
+  for(let caractere of decodeArray) {
+    if (Object.keys(letra).indexOf(caractere) >=0) chtArray.push(letra[caractere]);
+    else chtArray.push(caractere);
+  }
+  return chtArray.join('');
 }
 
 module.exports = {
