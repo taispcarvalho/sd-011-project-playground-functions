@@ -82,7 +82,10 @@ function generatePhoneNumber(arrayOfNumbers) {
 
 // Desafio 12
 function checkABS(lineA, lineB, lineC) {
-  if ((lineA > Math.abs(lineB - lineC)) && (lineB > Math.abs(lineA - lineC)) && (lineC > Math.abs(lineA - lineB))) {
+  let checklineA = lineA > Math.abs(lineB - lineC);
+  let checklineB = lineB > Math.abs(lineA - lineC);
+  let checklineC = lineC > Math.abs(lineA - lineB);
+  if (checklineA && checklineB && checklineC) {
     return true;
   }
   return false;
