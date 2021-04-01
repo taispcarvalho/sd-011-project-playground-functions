@@ -50,9 +50,20 @@ console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA > lineB + lineC && lineA < Math.abs(lineB - lineC)) {
-    return false;
-  } return true;
+  let sum = lineA + lineB + lineC;
+  let checkSumA = sum - lineA;
+  let checkSumB = sum - lineB;
+  let checkSumC = sum - lineC;
+  let checkDifA = Math.abs(lineB - lineC);
+  let checkDifB = Math.abs(lineA - lineC);
+  let checkDifC = Math.abs(lineA - lineB);
+  let differences = [difference1, difference2, difference3];
+
+  for (let side in triangle) {
+    if (sum - triangle[side] <= triangle[side] && differences[side] >= triangle[side]) {
+      return false;
+    } return true;
+  }
 }
 
 // Desafio 13
@@ -63,7 +74,7 @@ function hydrate(string) {
   for (let index of list) {
     soma += index;
   }
-  return (soma > 1) ? `${soma} copos de água` : `${soma} copo de água'`;
+  return (soma > 1) ? `${soma} copos de água` : `${soma} copo de água`;
 }
 
 module.exports = {
