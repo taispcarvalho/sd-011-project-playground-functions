@@ -71,7 +71,7 @@ function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let listSides = [lineA, lineB, lineC];
   for (let n in listSides) {
-    let sideBuffer = listSides.slice(n, eval(n) + 1);
+    let sideBuffer = listSides.slice(n, parseInt(n, 10) + 1);
     if (sideBuffer >= (listSides[0] + listSides[1]) || sideBuffer <= Math.abs(listSides[0] - listSides[1])) {
       return false;
     }
@@ -86,7 +86,7 @@ function hydrate(string) {
   let stringDigits = string.match(regex);
   let countTotal = 0;
   for (let n of stringDigits) {
-    countTotal += eval(n);
+    countTotal += parseInt(n, 10);
   }
   if (countTotal === 1) {
     return '1 copo de água';
