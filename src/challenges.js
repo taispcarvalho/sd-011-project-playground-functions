@@ -71,7 +71,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8 -ok
 function fizzBuzz(arrayNumbers) {
   let comparacao = [];
-   for (let index = 0; index < arrayNumbers.length; index += 1) {
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
       comparacao.push('fizzBuzz');
     } else if (arrayNumbers[index] % 5 === 0) {
@@ -97,7 +97,7 @@ function encode(frase) {
   }
   return frase;
 }
-console.log(encode('hi there!'))
+console.log(encode('hi there!'));
 
 function decode(frase) {
   for (let index = 0; index < frase.length; index += 1) {
