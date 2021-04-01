@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(nomes) {
+function techList(tech, nome) {
   // seu código aqui
 }
 
