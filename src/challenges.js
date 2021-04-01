@@ -97,7 +97,9 @@ function fizzBuzz(numArray) {
 function encrypt(tempString, keyValue) {
   for (let index = 0; index < tempString.length; index += 1) {
     for (let letter in keyValue) {
-      if (tempString[index] === letter) tempString[index] = keyValue[letter];
+      if (tempString[index] === letter) {
+        tempString[index] = keyValue[letter];
+      }
     }
   }
   return tempString.join('');
@@ -115,7 +117,9 @@ function encode(string) {
 function decrypt(tempString, keyValue) {
   for (let index = 0; index < tempString.length; index += 1) {
     for (let letter in keyValue) {
-      if (tempString[index] === keyValue[letter]) tempString[index] = letter;
+      if (tempString[index] === keyValue[letter]) {
+        tempString[index] = letter;
+      }
     }
   }
   return tempString.join('');
