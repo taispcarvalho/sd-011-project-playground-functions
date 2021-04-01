@@ -78,14 +78,14 @@ function hydrate(string) {
     }
   }
   if (bebeAgua === 1) {
-    bebeAgua = `${bebeAgua} + ' copo de água'`;
+    bebeAgua = `${bebeAgua} copo de água`;
   } else {
-    return `${bebeAgua} ' copos de água'`;
+    return `${bebeAgua} copos de água`;
   }
   return bebeAgua;
   // seu código aqui
 }
-
+console.log(hydrate('1 cervejas'))
 module.exports = {
   generatePhoneNumber,
   techList,
