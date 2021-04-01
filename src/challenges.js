@@ -58,7 +58,7 @@ function fizzBuzz(numerosDesafio8) {
   let conteudoArray = [];
   for (let i = 0; i < numerosDesafio8.length; i += 1) {
     if (numerosDesafio8[i] % 3 === 0 && numerosDesafio8[i] % 5 === 0) {
-      conteudoArray.push('fizzbuzz');
+      conteudoArray.push('fizzBuzz');
     } else if (numerosDesafio8[i] % 3 === 0) {
       conteudoArray.push('fizz');
     } else if (numerosDesafio8[i] % 5 === 0) {
