@@ -52,13 +52,17 @@ function generatePhoneNumber(nPhone) {
 function triangleCheck(lineA, lineB, lineC) {
   let Angle1 = Math.abs(lineA + lineB);
   let Angle2 = Math.abs(lineA - lineB);
+  let value = false;
 
   if (lineC < Angle1 && lineC > Angle2) {
-    return true;
+    value = true;
+  } else if (Angle1 < lineC && Angle2 > lineC) {
+    value = false;
   }
+  return value;
 }
 
-console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(10, 14, 99));
 
 // Desafio 13
 function hydrate() {
