@@ -17,11 +17,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(arrayName) {
-  let concatenedName = '';
-  for (let index = 0; index < 3; index += 1) {
-
-  }
-   = arrayName[arrayName.length - 1] + ', ' + arrayName[0];
+  let concatenedName = arrayName[arrayName.length - 1] + ', ' + arrayName[0];
   return concatenedName;
 }
 
