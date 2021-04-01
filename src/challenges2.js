@@ -6,10 +6,9 @@ function techList(arrayTechList, firstName) {
 
   if (arrayTechList.length > 0) {
     for (let index = 0; index < arrayTechList.length; index += 1) {
-      arrayTechAndName[index] = { tech: arrayTechList[index], name: firstName }
+      arrayTechAndName[index] = { tech: arrayTechList[index], name: firstName };
     }
     answerTechList = arrayTechAndName;
-
   } else {
     answerTechList = 'Vazio!';
   }
@@ -24,13 +23,11 @@ function checkSizeArray(array, size) {
 
 function countChar(array, charX) {
   let amountChar = 0;
-
   for (let char of array) {
     if (char === charX) {
       amountChar += 1;
     }
   }
-
   return amountChar;
 }
 
@@ -43,8 +40,7 @@ function checkPhoneNumber(arrayPhoneNumber) {
       break;
     }
   }
-
-  return checkNumbers
+  return checkNumbers;
 }
 
 function generatePhoneNumber(arrayPhoneNumber) {
@@ -55,7 +51,10 @@ function generatePhoneNumber(arrayPhoneNumber) {
   } else if (checkPhoneNumber(arrayPhoneNumber) === false) {
     answer = 'não é possível gerar um número de telefone com esses valores';
   } else {
-    answer = '(' + arrayPhoneNumber[0] + arrayPhoneNumber[1] + ') ' + arrayPhoneNumber[2] + arrayPhoneNumber[3] + arrayPhoneNumber[4] + arrayPhoneNumber[5] + arrayPhoneNumber[6] + '-' + arrayPhoneNumber[7] + arrayPhoneNumber[8] + arrayPhoneNumber[9] + arrayPhoneNumber[10];
+    arrayPhoneNumber.splice(7,0, '-');
+    arrayPhoneNumber.splice(2,0, ') ');
+    arrayPhoneNumber.splice(0,0, '(');
+    answer = arrayPhoneNumber.join('');
   }
 
   return answer;
@@ -64,10 +63,7 @@ function generatePhoneNumber(arrayPhoneNumber) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let comparingA = lineB + lineC > lineA && lineA > Math.abs(lineB - lineC);
-  let comparingB = lineA + lineB > lineC && lineC > Math.abs(lineA - lineB);
-  let comparingC = lineA + lineC > lineB && lineB > Math.abs(lineA - lineC);
-  let answer = comparingA && comparingB && comparingC;
-  return answer;
+  return comparingA;
 }
 
 // Desafio 13
@@ -82,11 +78,11 @@ function hydrate(beverage) {
       cupsWater += arrayBeverage[index];
     }
   }
-  
+
   if (cupsWater === 1) {
-    answerHydrate = cupsWater + ' copo de água';
+    answerHydrate = `${cupsWater} copo de água`;
   } else {
-    answerHydrate = cupsWater + ' copos de água';
+    answerHydrate = `${cupsWater} copos de água`;
   }
   return answerHydrate;
 }
