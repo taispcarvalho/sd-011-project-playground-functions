@@ -85,7 +85,7 @@ function encode(string) {
   string = string.split('');
   for (let n in string) {
     if (Object.keys(dict).includes(string[n])) {
-      string[n] = Object.values(dict)[n];
+      string[n] = dict[string[n]]
     }
   }
   return string.join('');
