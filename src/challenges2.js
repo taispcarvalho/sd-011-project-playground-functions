@@ -77,13 +77,20 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string) {
   let quantidade = string.replace(/\D/g, "");
-  if (quantidade === '1') {
-    return quantidade + ' copo de água';
+  let copos = 0;
+  if (quantidade.length > 1) {
+    for (let index = 0; index < quantidade.length; index += 1) {
+      copos = copos + parseInt(quantidade[index], 10);
+    }
   } else {
-    return quantidade + ' copos de água';
+    copos = parseInt(quantidade, 10);
+  }
+  if (copos === 1) {
+    return copos + ' copo de água';
+  } else {
+    return copos + ' copos de água';
   }
 }
-console.log(hydrate("1 cerveja"));
 
 module.exports = {
   generatePhoneNumber,
