@@ -56,16 +56,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayNumber) {
   let retornar = [];
   for (let index in arrayNumber) {
-    if (arrayNumber[index] % 15 === 0) {
-      retornar.push('fizzBuzz');
-    } else if (arrayNumber[index] % 3 === 0) {
-      retornar.push('fizz');
-    } else if (arrayNumber[index] % 5 === 0) {
-      retornar.push('buzz');
-    } else {
+    if (arrayNumber[index] % 15 === 0) retornar.push('fizzBuzz');
+    if (arrayNumber[index] % 3 === 0)  retornar.push('fizz');
+    if (arrayNumber[index] % 5 === 0)  retornar.push('buzz');
       retornar.push('bug!');
     }
-  }
   return retornar;
 }
 
@@ -76,7 +71,7 @@ function encode(string) {
   let decodeArray = [];
 
   for (let caractere of chtArray) {
-    if (letra.indexOf(caractere) >=0) decodeArray.push(letra.indexOf(caractere) +1);
+    if (letra.indexOf(caractere) >= 0) decodeArray.push(letra.indexOf(caractere) + 1);
     else decodeArray.push(caractere);
   }
   return decodeArray.join('');
@@ -91,8 +86,8 @@ function decode(decodeString) {
     5: 'u',
   };
   let chtArray = [];
-  for(let caractere of decodeArray) {
-    if (Object.keys(letra).indexOf(caractere) >=0) chtArray.push(letra[caractere]);
+  for (let caractere of decodeArray) {
+    if (Object.keys(letra).indexOf(caractere) >= 0) chtArray.push(letra[caractere]);
     else chtArray.push(caractere);
   }
   return chtArray.join('');
