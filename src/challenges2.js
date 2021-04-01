@@ -89,35 +89,14 @@ function generatePhoneNumber(arrNumbers) {
 console.log(generatePhoneNumber([1, 2, 2, 2, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function checkA(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
-    return true;
-  }
-}
-
-function checkB(lineA, lineB, lineC) {
-  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
-    return true;
-  }
-}
-
-function checkC(lineA, lineB, lineC) {
-  if (lineC < lineB + lineA && lineC > Math.abs(lineB - lineA)) {
-    return true;
-  }
-}
-
 function triangleCheck(lineA, lineB, lineC) {
-  let sideA = checkA(lineA, lineB, lineC);
-  let sideB = checkB(lineA, lineB, lineC);
-  let sideC = checkC(lineA, lineB, lineC);
-  if (sideA === sideB === sideC) {
-    return true;
+  if (lineA > lineB + lineC || lineA < Math.abs(lineB - lineC)) {
+    return false;
   }
-  return false;
+  return true;
 }
 
-console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(14, 8, 30));
 
 // Desafio 13
 function hydrate(str) {
