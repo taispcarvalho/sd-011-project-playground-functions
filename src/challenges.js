@@ -42,9 +42,9 @@ function highestCount(numArray) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = cat1 - mouse;
   let distanciaCat2 = cat2 - mouse;
-  if (distanciaCat2 === 2) {
+  if (distanciaCat2 < distanciaCat1) {
     return 'cat2'
-  } else if (distanciaCat1 - mouse === 6) {
+  } else if (distanciaCat1 < distanciaCat2) {
     return 'cat1'
   } else {
     return 'Os gatos trombam e o rato foge'
