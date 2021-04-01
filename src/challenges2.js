@@ -126,16 +126,16 @@ function formatPhoneNumber(numbers, index) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  const lowerBound = 0;
-  const upperBound = 9;
-  const maxNumberRepetition = 2;
+  const LOWER_BOUND = 0;
+  const UPPER_BOUND = 9;
+  const MAX_NUMBER_REPETITION = 2;
   let phoneNumber = '(';
 
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  let allInValidRange = allNumbersInValidRange(numbers, lowerBound, upperBound);
-  if (!allInValidRange || exceedMaxNumberRepetition(numbers, maxNumberRepetition)) {
+  let allInValidRange = allNumbersInValidRange(numbers, LOWER_BOUND, UPPER_BOUND);
+  if (!allInValidRange || exceedMaxNumberRepetition(numbers, MAX_NUMBER_REPETITION)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
