@@ -102,9 +102,53 @@ function generatePhoneNumber(array) {
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+
+function lessSum(aSide, bSide, cSide) {
+  let itSmaller;
+
+  if (aSide > bSide + cSide) {
+    itSmaller = false;
+  } else if (bSide > aSide + cSide) {
+    itSmaller = false;
+  } else if (cSide > aSide + bSide) {
+    itSmaller = false;
+  } else {
+    itSmaller = true;
+  }
+  return itSmaller;
 }
+// console.log(lessSum(10, 14, 8));
+// console.log(lessSum(10, 14, 50));
+
+function checkAbs(aSide, bSide, cSide) {
+  let isBiggerAbs;
+
+  if (aSide < Math.abs(bSide - cSide)) {
+    isBiggerAbs = false;
+  } else if (bSide < Math.abs(aSide - cSide)) {
+    isBiggerAbs = false;
+  } else if (cSide < Math.abs(aSide - bSide)) {
+    isBiggerAbs = false;
+  } else {
+    isBiggerAbs = true;
+  }
+  return isBiggerAbs;
+}
+// console.log(checkAbs(10, 14, 8));
+// console.log(checkAbs(10, 14, 50));
+
+function triangleCheck(lineA, lineB, lineC) {
+  let sumLines = lessSum(lineA, lineB, lineC);
+  let absLines = checkAbs(lineA, lineB, lineC);
+  let isTriangle = false;
+
+  if (sumLines === true && absLines === true) {
+    isTriangle = true;
+  }
+  return isTriangle;
+}
+console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(10, 14, 50));
 
 // Desafio 13
 function hydrate() {
