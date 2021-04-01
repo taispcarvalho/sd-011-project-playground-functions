@@ -57,7 +57,7 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function distancia (p1, p2){
+function distancia(p1, p2) {
   return Math.abs(p2 - p1);
 }
 
@@ -79,11 +79,11 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function isFizzBuzz(number) {
   if (number % 3 === 0 && number % 5 === 0) {
-      return 'fizzbuzz';
+  return 'fizzbuzz';
   } else if (number % 3 === 0) {
-      return 'fizz';
+    return 'fizz';
   } else if (number % 5 === 0) {
-      return 'buzz';
+    return 'buzz';
   } 
   return 'bug!';
   }
@@ -93,7 +93,7 @@ function fizzBuzz(numbers) {
   for (let index = 0; index < numbers.length; index += 1) {
     numbers[index] = isFizzBuzz(numbers[index]);
   }
-  return arrei;
+  return numbers;
 }
 
 // Desafio 9
@@ -113,19 +113,18 @@ function reference() {
       3: 'i',
       4: 'o',
       5: 'u',
-    }
-  }
+    },
+  };
   return characters;
 }
-
 
 function encode(value) {
   // seu código aqui
   let char = value.split('');
   let charReference = reference().encode;
   for (let index = 0; index < char.length; index += 1) {
-    if(charReference[char[index]]) {
-      char[index] = charReference[char[index]]
+    if (charReference[char[index]]) {
+      char[index] = charReference[char[index]];
     }
   }
   return char.join('');
@@ -136,11 +135,29 @@ function decode(value) {
   let char = value.split('');
   let charReference = reference().decode;
   for (let index = 0; index < char.length; index += 1) {
-    if(charReference[char[index]]) {
-      char[index] = charReference[char[index]]
+    if (charReference[char[index]]) {
+      char[index] = charReference[char[index]];
     }
   }
   return char.join('');
+}
+
+//Desafio 10
+function techLearning(techs, nameList) {
+  techs.sort();
+  let listTech = [];
+  let help = name;
+  for (let index = 0; index < techs.length; index += 1) {
+    let list = {
+      tech: techs[index],
+      name: nameList
+    };
+  listTech.push(list);
+  }
+  if(listTech.length === 0) {
+    return 'Vazio!';
+  }
+  return listTech;
 }
 
 module.exports = {
