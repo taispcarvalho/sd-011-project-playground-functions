@@ -35,7 +35,7 @@ function highestCount(valores){
 //let cat1=10;
 //let cat2=0; 
   function catAndMouse(mouse,cat1,cat2){
-    cat1=M  ath.abs(diff(mouse,cat1));
+    cat1=Math.abs(diff(mouse,cat1));
     cat2=Math.abs(diff(mouse,cat2));
       if(cat1===cat2){
       return("Os gatos trombam e o rato foge");
