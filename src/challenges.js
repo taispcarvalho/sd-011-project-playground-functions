@@ -98,9 +98,7 @@ function fizzBuzz(numArray) {
 // Desafio 9
 function encode(string) {
   let tempString = string.split('');
-  let letterEncodeValue = {
-    a: '1', e: '2', i: '3', o: '4', u: '5'
-  };
+  let letterEncodeValue = { a: '1', e: '2', i: '3', o: '4', u: '5' };
 
   for (let index = 0; index < tempString.length - 1; index += 1) {
     for (let letter in letterEncodeValue) {
@@ -115,9 +113,7 @@ function encode(string) {
 // Desafio 9
 function decode(string) {
   let tempString = string.split('');
-  let letterEncodeValue = {
-    a: '1', e: '2', i: '3', o: '4', u: '5'
-  };
+  let letterEncodeValue = { a: '1', e: '2', i: '3', o: '4', u: '5' };
 
   for (let index = 0; index < tempString.length - 1; index += 1) {
     for (let letter in letterEncodeValue) {
