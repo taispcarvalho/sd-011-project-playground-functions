@@ -2,17 +2,17 @@
 function objectBuilder(tech, name) {
   let object = {
     tech: `${tech}`,
-    name: `${name}`
+    name: `${name}`,
   };
   return object;
 }
 
 // Desafio 10
-function techList(techList, name) {
+function techList(techArray, name) {
   let newTechList = [];
-  let sortedTechs = techList.sort();
+  let sortedTechs = techArray.sort();
 
-  if (techList.length > 0) {
+  if (techArray.length > 0) {
     for (let tech of sortedTechs) {
       newTechList.push(objectBuilder(tech, name));
     }
