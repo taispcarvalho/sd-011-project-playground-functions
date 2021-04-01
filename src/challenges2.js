@@ -7,8 +7,8 @@ function techList(arrayTech, name) {
   arrayTech = arrayTech.sort();
   for (let tech = 0; tech < arrayTech.length; tech += 1) {
     newArrayTech.push({
-      tech: newArray[tech],
-      name: name,
+      tech: arrayTech[tech],
+      name,
     });
   }
   return newArrayTech;
