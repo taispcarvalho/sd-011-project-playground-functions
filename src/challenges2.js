@@ -29,12 +29,20 @@ function generatePhoneNumber(array) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  return '(' + array[0] + array[1] + ') ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
+  let phoneNumber = `(${array[0]}${array[1]}) `;
+  for (let index = 2; index < 7; index += 1) {
+    phoneNumber += array[index];
+  }
+  phoneNumber += '-';
+  for (let index = 7; index < 11; index += 1) {
+    phoneNumber += array[index];
+  }
+  return phoneNumber;
 }
-console.log((generatePhoneNumber([3, 5, 5, 3, 2, 2, 1, 1, 9, 7, 8])));
+console.log((generatePhoneNumber([55, 5, 5, 3, 2, 2, 1, 1, 9, 7, 8])));
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
 }
 
