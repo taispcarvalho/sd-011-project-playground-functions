@@ -39,7 +39,13 @@ function highestCount(array) {
     else if (array[i]< array[i+1] && array[i+1] > h)
     h = array[i+1];
   }
-  return h;
+
+  for (let i = 0; i<array.length; i+=1) {
+    if (array[i] === h)
+    c+=1;
+  }
+
+  return c;
 }
 
 // Desafio 7
