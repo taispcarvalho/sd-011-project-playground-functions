@@ -22,19 +22,20 @@ function splitSentence(array) {
 function concatName(arr) {
   return `${arr[arr.length - 1]}, ${arr[0]}`;
 }
-//  let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
-//  console.log(concatName(nomes));
+//  let arr = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+//  console.log(concatName(arr));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  if (jogos = wins * 3 + ties * 1) {
-    return jogos;
+  let jogos 
+  if (jogos = wins *3 + ties * 1){
+  return jogos;
   } else {
-    (jogos === 0);
-    return jogos;
+    jogos === 0
   }
+  return jogos;
 }
-//  console.log(footballPoints(14,8));
+//  console.log(footballPoints(2,10));
 
 // Desafio 6
 function highestCount(arr) {
