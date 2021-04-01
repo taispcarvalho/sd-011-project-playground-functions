@@ -75,13 +75,13 @@ function hydrate(str) {
     sum += numbers; 
   }
   
-  if (sum > 1) {
-    return sum + ' copos de água';
-  } else {
+  if (sum === 1) {
     return sum + ' copo de água';
+  } else {
+    return sum + ' copos de água';
   }
 }
-console.log(hydrate("1 cachaça"));
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
