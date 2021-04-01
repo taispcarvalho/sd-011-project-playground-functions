@@ -67,32 +67,48 @@ function fizzBuzz(numerosDesafio8) {
       conteudoArray.push('bug!');
     }
   }
-    return conteudoArray;
+  return conteudoArray;
 }
 
 // Desafio 9
-function encode(string1) {
+function encode(stringEncode) {
   let codigo = [];
-  for (let i = 0; i < string1.length; i += 1) {
-    if (string1[i] === 'a') {
+  for (let i = 0; i < stringEncode.length; i += 1) {
+    if (stringEncode[i] === 'a') {
       codigo.push('1');
-    } else if (string1[i] === 'e') {
+    } else if (stringEncode[i] === 'e') {
       codigo.push('2');
-    } else if (string1[i] === 'i') {
+    } else if (stringEncode[i] === 'i') {
       codigo.push('3');
-    } else if (string1[i] === 'o') {
+    } else if (stringEncode[i] === 'o') {
       codigo.push('4');
-    } else if (string1[i] === 'u') {
+    } else if (stringEncode[i] === 'u') {
       codigo.push('5');
     } else {
-      codigo.push(string1[i]);
+      codigo.push(stringEncode[i]);
     }
   }
   return codigo.join('');
 }
 
-function decode() {
-  // seu código aqui
+function decode(stringDecode) {
+  let codifica = [];
+  for (let i = 0; i < stringDecode.length; i += 1) {
+    if (stringDecode[i] === '1') {
+      codifica.push('a');
+    } else if (stringDecode[i] === '2') {
+      codifica.push('e');
+    } else if (stringDecode[i] === '3') {
+      codifica.push('i');
+    } else if (stringDecode[i] === '4') {
+      codifica.push('o');
+    } else if (stringDecode[i] === '5') {
+      codifica.push('u');
+    } else {
+      codifica.push(stringDecode[i]);
+    }
+  }
+  return codifica.join('');  
 }
 
 module.exports = {
