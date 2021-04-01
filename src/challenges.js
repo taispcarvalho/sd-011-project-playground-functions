@@ -82,7 +82,7 @@ function fizzBuzz(fizzBuzzArray) {
 // Desafio 9
 function encode(string) {
 
-stringArray = string.toLowerCase().split('')
+let stringArray = string.toLowerCase().split('')
 
 for (let index = 0; index < stringArray.length; index += 1) {
   if (stringArray[index] === 'a') {
