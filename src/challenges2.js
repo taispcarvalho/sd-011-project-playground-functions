@@ -1,10 +1,6 @@
 // Desafio 10
-function techList(tech, name) {
-  let object = {
-    tech: "NomeTech",
-    name: name
-  };
-  return 
+function techList() {
+   // seu código aqui
 }
 
 // Desafio 11
