@@ -64,8 +64,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-
-console.log(triangleCheck(10,14,8))
+console.log(triangleCheck(10,14,30))
 
 // Desafio 13
 function hydrate() {
