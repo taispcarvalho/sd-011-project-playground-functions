@@ -18,22 +18,25 @@ function concatName(array) {
   return `${array[array.length - 1]}, ${array[0]}`;
 }
 
-console.log(concatName(['Luciano', 'pimenta', 'junior']));
-
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount(array) {
-  let maiorNumero;
-  let contador = 0;
+function higherNumber(array) {
+  let maiorNumero = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (index === 0 || array[index] >= maiorNumero) {
       maiorNumero = array[index];
     }
   }
+  return maiorNumero;
+}
+
+function highestCount(array) {
+  let maiorNumero = higherNumber(array);
+  let contador = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === maiorNumero) {
       contador += 1;
@@ -43,10 +46,21 @@ function highestCount(array) {
 }
 
 // Desafio 7
+function distance(firstDistance, secondDistance) {
+  let cat;
+  if (firstDistance < secondDistance) {
+    cat = 'cat1';
+  } else if (firstDistance > secondDistance) {
+    cat = 'cat2';
+  } else {
+    cat = 'os gatos trombam e o rato foge';
+  }
+  return cat;
+}
+
 function catAndMouse(mouse, cat1, cat2) {
   let firstDistance;
   let secondDistance;
-  let cat;
   if (mouse <= cat1) {
     firstDistance = cat1 - mouse;
   } else {
@@ -57,14 +71,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     secondDistance = mouse - cat1;
   }
-  if (firstDistance < secondDistance) {
-    cat = 'cat1';
-  } else if (firstDistance > secondDistance) {
-    cat = 'cat2';
-  } else {
-    cat = 'os gatos trombam e o rato foge';
-  }
-  return cat;
+  return distance(firstDistance, secondDistance);
 }
 
 // Desafio 8
@@ -85,24 +92,18 @@ function fizzBuzz(arrayNumber) {
 }
 
 // Desafio 9
-function encode(string) {
-  let array = string.split('');
+function formataEncode(array) {
   for (let index = 0; index < array.length; index += 1) {
     switch (array[index]) {
-    case 'a':
-      array[index] = '1';
+    case 'a': array[index] = '1';
       break;
-    case 'e':
-      array[index] = '2';
+    case 'e': array[index] = '2';
       break;
-    case 'i':
-      array[index] = '3';
+    case 'i': array[index] = '3';
       break;
-    case 'o':
-      array[index] = '4';
+    case 'o': array[index] = '4';
       break;
-    case 'u':
-      array[index] = '5';
+    case 'u': array[index] = '5';
       break;
     default:
       break;
@@ -111,30 +112,34 @@ function encode(string) {
   return array.join('');
 }
 
-function decode(string) {
-  let array = string.split('');
+function formataDecode(array) {
   for (let index = 0; index < array.length; index += 1) {
     switch (array[index]) {
-    case '1':
-      array[index] = 'a';
+    case '1': array[index] = 'a';
       break;
-    case '2':
-      array[index] = 'e';
+    case '2': array[index] = 'e';
       break;
-    case '3':
-      array[index] = 'i';
+    case '3': array[index] = 'i';
       break;
-    case '4':
-      array[index] = 'o';
+    case '4': array[index] = 'o';
       break;
-    case '5':
-      array[index] = 'u';
+    case '5': array[index] = 'u';
       break;
     default:
       break;
     }
   }
   return array.join('');
+}
+
+function encode(string) {
+  let array = string.split('');
+  return formataEncode(array);
+}
+
+function decode(string) {
+  let array = string.split('');
+  return formataDecode(array);
 }
 
 module.exports = {
