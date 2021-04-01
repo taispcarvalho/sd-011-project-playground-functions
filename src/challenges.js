@@ -82,9 +82,27 @@ let desafio7 = catAndMouse(0, 6, 6);
 console.log(desafio7);
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function divideNumbers(arrayOfNumbers) {
+  let total = '';
+  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
+    if (arrayOfNumbers[index] % 15 === 0) {
+      total += 'fizzBuzz';
+    } else if (arrayOfNumbers[index] % 5 === 0) {
+      total += 'buzz';
+    } else if (arrayOfNumbers[index] % 3 === 0) {
+      total += 'fizz';
+    } else {
+      total += 'bug!';
+    }
+    total += ' '
 }
+return total.split(' ');
+}
+function fizzBuzz(arrayOfNumbers) {
+  let resultado = divideNumbers(arrayOfNumbers);
+  return resultado.filter(value => value != '');
+}
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
