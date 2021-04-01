@@ -19,6 +19,7 @@ function techList(array, name) {
 console.log(techList(techs, 'Henrique'));
 console.log(techList(techsEmpty, 'Henrique'));
 // Desafio 11
+let teste = [9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1];
 function repeatNumber(array) {
   let repeated = false;
 
@@ -48,8 +49,8 @@ function henrique(array) {
     if (array[index] > 9 || array[index] < 0) {
       return false;
     }
-    return true;
   }
+  return true;
 }
 
 function generatePhoneNumber(array) {
@@ -81,6 +82,7 @@ function generatePhoneNumber(array) {
   return phoneNumber;
 }
 
+console.log(generatePhoneNumber(teste));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
