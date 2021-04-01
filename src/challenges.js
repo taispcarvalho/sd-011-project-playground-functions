@@ -16,7 +16,7 @@ console.log(desafio2);
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(' ')
+  return string.split(' ');
 }
 let desafio3 = splitSentence('go trybe');
 console.log(desafio3);
@@ -42,7 +42,7 @@ let desafio5 = footballPoints(0, 0);
 console.log(desafio5);
 
 // Desafio 6
-function highestNumber (listOfNumbers) {
+function highestNumber(listOfNumbers) {
   let highNumber = 0;
   for (let i = 0; i < listOfNumbers.length; i += 1) {
     if (listOfNumbers[i] > highNumber) {
@@ -52,13 +52,12 @@ function highestNumber (listOfNumbers) {
   return highNumber;
 }
 
-
 function highestCount(listOfNumbers) {
   let highest = highestNumber(listOfNumbers);
   let count = 0;
 for (let i = 0; i < listOfNumbers.length; i += 1) {
-  if (listOfNumbers[i] === highest) {
-    count += 1;
+    if (listOfNumbers[i] === highest) {
+      count += 1;
   }
   }
   return count;
