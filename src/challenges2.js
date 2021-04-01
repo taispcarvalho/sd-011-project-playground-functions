@@ -32,8 +32,11 @@ return triaA || triaB || triaC;
 console.log(triangleCheck(10, 6, 2))
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+let 
+function hydrate(string) {
+  string = 'Bem vindo ao bar da tribe'
+  newString.push(string);
+  console.log(newString)
 }
 
 module.exports = {
