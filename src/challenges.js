@@ -44,16 +44,16 @@ function highestCount(listOfNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 <= mouse) {
+  if (cat1 <= mouse && cat1 >= 0) {
     cat1 = mouse - cat1;
   }
-  if (cat2 <= mouse) {
+  if (cat2 <= mouse && cat2 >= 0) {
     cat2 = mouse - cat2;
   }
-  if (cat1 >= mouse) {
+  if (cat1 > mouse) {
     cat1 = cat1 - mouse;
   }
-  if (cat2 >= mouse) {
+  if (cat2 > mouse) {
     cat2 = cat2 - mouse;
     }
   if (cat1 < cat2 && cat1 !== cat2) {
@@ -66,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   
 }
-console.log(catAndMouse(10,16,22))
+console.log(catAndMouse(0,3,3))
 
 // Desafio 8
 function fizzBuzz() {
