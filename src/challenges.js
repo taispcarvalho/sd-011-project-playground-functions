@@ -93,30 +93,42 @@ function fizzBuzz(numArray) {
   return responseArray;
 }
 
-// Desafio 9
-function encode(string) {
+// part of Desafio 9
+function encrypt(string, keyValue) {
   let tempString = string.split('');
-  let keyValue = { a: '1', e: '2', i: '3', o: '4', u: '5' };
 
   for (let index = 0; index < tempString.length; index += 1) {
     for (let letter in keyValue) {
-      if (tempString[index] === letter)  tempString[index] = keyValue[letter];
-      }
+      if (tempString[index] === letter) tempString[index] = keyValue[letter];
+    }
+  }
+  return tempString.join('');
+}
+
+// Desafio 9
+function encode(string) {
+  let keyValue = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+
+  return encrypt(string, keyValue);
+}
+
+// part of Desafio 9
+function decrypt(string, keyValue) {
+  let tempString = string.split('');
+
+  for (let index = 0; index < tempString.length; index += 1) {
+    for (let letter in keyValue) {
+      if (tempString[index] === keyValue[letter]) tempString[index] = letter;
+    }
   }
   return tempString.join('');
 }
 
 // Desafio 9
 function decode(string) {
-  let tempString = string.split('');
   let keyValue = { a: '1', e: '2', i: '3', o: '4', u: '5' };
 
-  for (let index = 0; index < tempString.length; index += 1) {
-    for (let letter in keyValue) {
-      if (tempString[index] === keyValue[letter]) tempString[index] = letter;
-      }
-    }
-  return tempString.join('');
+  return decrypt(string, keyValue);
 }
 
 module.exports = {
