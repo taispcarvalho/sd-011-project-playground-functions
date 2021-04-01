@@ -41,6 +41,7 @@ function checkPhoneNumber(arrayPhoneNumber) {
     if (number < 0 || number > 9 || (countChar(arrayPhoneNumber, number)) >= 3) {
       checkNumbers = false;
       break;
+    }
   }
 
   return checkNumbers
