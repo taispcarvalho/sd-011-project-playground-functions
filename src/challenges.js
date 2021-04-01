@@ -67,23 +67,23 @@ function fizzBuzz(x) {
 function encode(string) {
   let string2 = '';
   string.split('').forEach((element) => {
-    string2 += element.replace('a', '1')
-      .replace('e', '2')
-      .replace('i', '3')
-      .replace('o', '4')
-      .replace('u', '5');
+    string2 += element.replace('a', 1)
+      .replace('e', 2)
+      .replace('i', 3)
+      .replace('o', 4)
+      .replace('u', 5);
   });
   return string2;
 }
 
-function decode(string) {
+function decode(string1) {
   let string2 = '';
-  string.split('').forEach((element) => {
-    string2 += element.replace('1', 'a')
-      .replace('2', 'e')
-      .replace('3', 'i')
-      .replace('4', 'o')
-      .replace('5', 'u');
+  string1.split('').forEach((element) => {
+    string2 += element.replace(1, 'a')
+      .replace(2, 'e')
+      .replace(3, 'i')
+      .replace(4, 'o')
+      .replace(5, 'u');
   });
   return string2;
 }
