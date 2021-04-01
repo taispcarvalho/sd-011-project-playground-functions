@@ -14,47 +14,45 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  function isValidArrayLength(array) {
-    if (array.length > 11) {
+function isValidArrayLength(array) {
+  return array.length === 11;
+}
+function isValidArrayNumber(array) {
+  for (let number of array) {
+    if (number < 0 || number > 9) {
       return false;
-    } return true;
-  }
-  function isValidArrayNumber(array) {
-    for (let index of array) {
-      if (index < 0 || index > 9) {
-        return false;
-      } return true;
     }
-  }
-  function NumberOfrepetition(array) {
-    let counter = 0;
-    for (let index2 of array) {
-      for (let index3 = 1; index3 < array.length; index3 += 1) {
-        if (index2 === index3) {
-          counter += 1;
-        }
+  } return true;
+}
+function NumberOfrepetition(array) {
+  let counter = 0;
+  for (let number of array) {
+    for (let index = 1; index < array.length; index += 1) {
+      if (number === array[index]) {
+        counter += 1;
       }
-      if (counter >= 3) {
-        return false;
-      } counter = 0;
-    } return true;
-  }
-  // Consultei o repositório do Matheus Gaspar para resolver essa parte.
-  // Link: https://github.com/tryber/sd-011-project-playground-functions/pull/28/files
-  function createPhoneNumber(array) {
-    array.splice(0, 0, '(');
-    array.splice(3, 0, ')');
-    array.splice(9, 0, '-');
-    array.join('');
-  }
-
+    }
+    if (counter >= 3) {
+      return false;
+    } counter = 0;
+  } return true;
+}
+// Consultei o repositório do Matheus Gaspar para resolver essa parte.
+// Link: https://github.com/tryber/sd-011-project-playground-functions/pull/28/files
+function createPhoneNumber(array) {
+  array.splice(0, 0, '(');
+  array.splice(3, 0, ') ');
+  array.splice(9, 0, '-');
+  return array.join('');
+}
+function generatePhoneNumber(array) {
   if (!isValidArrayLength(array)) {
     return 'Array com tamanho incorreto.';
   } if (!isValidArrayNumber(array) || !NumberOfrepetition(array)) {
       return 'não é possível gerar um número de telefone com esses valores.';
     } return createPhoneNumber(array);
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
