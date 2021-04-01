@@ -21,11 +21,9 @@ function concatName(arrayDeString) {
   let firstName = arrayDeString[0]
   let lastName = arrayDeString[arrayDeString.length - 1]
   /* let testOverFLow =  arrayDeString.slice(-1)[0]  */
-  /*   for (let index = 0; index = arrayDeString.lenght; index += 1){
-      lastName = arrayDeString[2]
-    } */
-  /* return lastName.concat(firstName).split( ) */
-  return lastName + " " + firstName
+
+  return lastName.split().concat(firstName)
+  /* return lastName + " " + firstName */
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
@@ -34,10 +32,31 @@ function footballPoints(wins, ties) {
   return (wins * 3) + (ties)
 }
 console.log(footballPoints(1, 2))
+
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+let arrayTest = [9, 1, 2, 3, 9, 5, 7];
+
+function arrayNumber(arrayTest) {
+  let higherNumber = 0;
+  for (let index of arrayTest) {
+    if (higherNumber < index) {
+      higherNumber = index
+    }
+  }
+  return higherNumber
 }
+console.log(arrayNumber(arrayTest))
+
+function highestCount(arrayHigherNumber) {
+  let recurrentNumber = 0;
+  for (let index in arrayHigherNumber) {
+    if (arrayNumber(arrayTest) == arrayHigherNumber[index]) {
+      recurrentNumber += 1
+    }
+  }
+  return recurrentNumber
+}
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse() {
