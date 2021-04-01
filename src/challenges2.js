@@ -52,9 +52,9 @@ function verifyArrayOfBool(arrayOfBool) {
 }
 
 function verifyRepetition(arrayOfNumbers) {
-  let limitRepetition = 2;
-  let repNumArray = arrayOfNumbers.map(numero => arrayOfNumbers.filter(n => n === numero).length >=3);
-  if (repNumArray.length === 0) {
+  let repLimit = 2;
+  let repArray = arrayOfNumbers.map((num) => arrayOfNumbers.filter((n) => n === num).length > repLimit);
+  if (repArray.length === 0) {
     return true;
   }
   return false;
