@@ -77,15 +77,16 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzzChecker(result, array) {
-  for (let index = 0; index < array.length; index += 1) {
+  for (let index of array) {
     if (array[index] % 15 === 0) {
-      result[index].push('fizzBuzz');
+      result[index] = 'fizzBuzz';
     } else if (array[index] % 3 === 0) {
-      result[index].push('fizz');
+      result[index] = 'fizz';
     } else if (array[index] % 5 === 0) {
-      result[index].push('buzz');
+      result[index] = 'buzz';
+    } else {
+      result[index] = 'bug!';
     }
-    result[index].push('bug!');
   }
   return result;
 }
@@ -193,8 +194,10 @@ function encode(string) {
   encodeI(string);
   encodeO(string);
   encodeU(string);
-  return string;
+  console.log(string);
 }
+
+encode('hey there');
 
 function decode(string) {
   decode1(string);
@@ -202,8 +205,10 @@ function decode(string) {
   decode3(string);
   decode4(string);
   decode5(string);
-  return string;
+  console.log(string);
 }
+
+decode('h2y th2r2');
 
 module.exports = {
   calcArea,
