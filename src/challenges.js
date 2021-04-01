@@ -25,7 +25,7 @@ function footballPoints(wins, ties) {
 function highestNumber(vetor) {
   let higherNum = 0;
   for (let index = 0; index < vetor.length; index += 1) {
-    if (vetor[index] > vetor[index + 1]) {
+    if (vetor[index] > higherNum) {
       higherNum = vetor[index];
     }
   }
