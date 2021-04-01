@@ -60,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   return result;
 }
-// Desafio 8
+// Desafio 8 //FALTA AJEITAR O LINT
 function fizzBuzz(array) {
   let arrayResult = [];
   for (let index = 0; index < array.length; index += 1) {
@@ -71,14 +71,28 @@ function fizzBuzz(array) {
   }
   return arrayResult;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  for (let index = 0; index < phrase.length; index += 1) {
+    phrase = phrase.replace('a', '1');
+    phrase = phrase.replace('e', '2');
+    phrase = phrase.replace('i', '3');
+    phrase = phrase.replace('o', '4');
+    phrase = phrase.replace('u', '5');
+  }
+  return phrase;
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase) {
+  for (let index = 0; index < phrase.length; index += 1) {
+    phrase = phrase.replace('1', 'a');
+    phrase = phrase.replace('2', 'e');
+    phrase = phrase.replace('3', 'i');
+    phrase = phrase.replace('4', 'o');
+    phrase = phrase.replace('5', 'e');
+  }
+  return phrase;
 }
 
 module.exports = {
