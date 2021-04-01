@@ -88,11 +88,10 @@ function hydrate(string) {
     somaCopos += numeroCopos[index];
   }
   if(somaCopos > 1) {
-    resultado = (somaCopos + ' copos de água');
+    return (somaCopos + ' copos de água');
   } else {
-    resultado = (somaCopos + ' copo de água');
+    return (somaCopos + ' copo de água');
   }
-  return hydrate(resultado);
 }
 console.log(hydrate('1 cerveja'));
 
