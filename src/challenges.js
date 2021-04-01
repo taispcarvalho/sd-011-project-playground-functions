@@ -81,7 +81,7 @@ function encode(str) {
       newStr += '4';
     } else if (str[index] === 'u') {
       newStr += '5';
-    } 
+    }
     newStr += str[index];
   }
   return newStr;
