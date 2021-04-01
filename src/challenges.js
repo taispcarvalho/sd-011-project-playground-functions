@@ -15,8 +15,9 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(array) {
-  let newStr = array[0] + ', ' + array[array.length-1];
-  return newStr;
+  let firstName = array[array.length-1]
+  let lastName = array[0]
+  return `${firstName}, ${lastName}`
 }
 
 // Desafio 5
