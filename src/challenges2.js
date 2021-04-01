@@ -19,9 +19,55 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function arraySize(array) {
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
 }
+
+function checkNumbersUndersAndOvers(array) {
+  for (n of array) {
+    if (n < 0) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+  }
+  for (n of array) {
+    if (n > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+}
+
+function checkNumbersRepeating(array) {
+  let numRepeat = [];
+  for (let n of array) {
+    for (let n2 of array) {
+      if (n2 === n) {
+        numRepeat[n] = (numRepeat[n] || 0) + 1;
+      }
+    }
+    if (numRepeat[n] > 8) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+}
+
+function generatePhoneNumber(array) {
+  let checkSizeConsistency = arraySize(array);
+  let checkUndersAndOversConsistency =  checkNumbersUndersAndOvers(array);
+  let checkRepeatConsistency = checkNumbersRepeating(array);
+  if (typeof checkSizeConsistency === 'string') {
+    return checkSizeConsistency;
+  } else if (typeof checkRepeatConsistency === 'string') {
+    return checkRepeatConsistency;
+  } else if (typeof checkUndersAndOversConsistency === 'string') {
+    return checkUndersAndOversConsistency;
+  }
+
+
+  return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
+}
+
 
 // Desafio 12
 function triangleCheck() {
