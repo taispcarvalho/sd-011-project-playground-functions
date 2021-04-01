@@ -56,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let result = null;
 
   if (atack1 < atack2) {
-    result =  'cat1';
+    result = 'cat1';
   } else if (atack2 < atack1) {
     result = 'cat2';
   } else {
@@ -69,7 +69,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let newArray = [];
 
-  for (let index = 0; index < array.length; index += 1) {
+  for (let index in array) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       newArray.push('fizzBuzz');
     } else if (array[index] % 5 === 0) {
