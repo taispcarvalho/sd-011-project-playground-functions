@@ -37,14 +37,14 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numeros) {
   let inOrder = numeros.sort();
-  let highest = inOrder[inOrder.length -1]
+  let highest = inOrder[inOrder.length - 1]
   let count = 0;
 
   for (let index in inOrder) {
     if (inOrder[index] === highest) {
       count += 1;
     }
-  } return count
+  } return count;
 }
 /* Consultei o repositório do Vitor Hugo para resolver essa parte. Link do repositório
 https://github.com/tryber/sd-011-project-playground-functions/pull/154/files#submit-review */
@@ -53,19 +53,21 @@ https://github.com/tryber/sd-011-project-playground-functions/pull/154/files#sub
 function catAndMouse(mouse, cat1, cat2) {
   let atack1 = Math.abs(cat1 - mouse);
   let atack2 = Math.abs(cat2 - mouse);
-  
+  let out = null;
+
   if (atack1 < atack2) {
-    return 'cat1';
+    out =  'cat1';
   } else if (atack2 < atack1) {
-    return 'cat2';
+    out =  'cat2';
   } else {
-    return 'os gatos trombam e o rato foge';
-  }
+    out =  'os gatos trombam e o rato foge';
+  } return out;
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
+  let out = null;
 
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
@@ -78,15 +80,15 @@ function fizzBuzz(array) {
       newArray.push('bug!');
     }
   }
-  let array2 = newArray;
-  return array2;
+  let out = newArray;
+  return out;
 }
 
 // Desafio 9
 function encode(phrase) {
   let newPhrase = phrase;
 
-  for(let index in newPhrase) {
+  for (let index in newPhrase) {
     switch (newPhrase[index]) {
       case 'a':
         newPhrase = newPhrase.replace('a', '1');
@@ -105,12 +107,12 @@ function encode(phrase) {
         break;
       default: break;
     }
-  } return newPhrase
+  } return newPhrase;
 }
 function decode(phrase) {
   let newPhrase = phrase;
 
-  for(let index in newPhrase) {
+  for (let index in newPhrase) {
     switch (newPhrase[index]) {
       case '1':
         newPhrase = newPhrase.replace('1', 'a');
@@ -129,7 +131,7 @@ function decode(phrase) {
         break;
       default: break;
     }
-  } return newPhrase
+  } return newPhrase;
 }
 /* Consultei o repositório do Vitor Hugo para resolver essa parte. Link do repositório
 https://github.com/tryber/sd-011-project-playground-functions/pull/154/files#submit-review */
