@@ -19,7 +19,6 @@ function techList(array, name) {
 console.log(techList(techs, 'Henrique'));
 console.log(techList(techsEmpty, 'Henrique'));
 // Desafio 11
-let teste = [1, 2, -3, 4, 0, 6, 7, 8, 9, 9, 0];
 
 function verify(item, array) {
   let counter = 0;
@@ -49,7 +48,7 @@ function validation(array) {
   return true;
 }
 
-function henrique(array) {
+function validDigit(array) {
   for (let index in array) {
     if (array[index] > 9 || array[index] < 0) {
       return false;
@@ -58,26 +57,35 @@ function henrique(array) {
   return true;
 }
 
+function ddd(array) {
+  let numbers = '';
+  for (let index = 0; index < 2; index += 1) {
+    numbers += array[index];
+  }
+  return numbers;
+}
+
+function firstPart(array) {
+  let numbers = '';
+  for (let index = 2; index < 7; index += 1) {
+    numbers += array[index];
+  }
+  return numbers;
+}
+
+function secondPart(array) {
+  let numbers = '';
+  for (let index = 7; index < 11; index += 1) {
+    numbers += array[index];
+  }
+  return numbers;
+}
+
 function generatePhoneNumber(array) {
   let isRepeated = repeatNumber(array);
   let isValidLength = validation(array);
-  let isValidDigit = henrique(array);
-  let phoneNumber =
-    '(' +
-    array[0] +
-    array[1] +
-    ') ' +
-    array[2] +
-    array[3] +
-    array[4] +
-    array[5] +
-    array[6] +
-    '-' +
-    array[7] +
-    array[8] +
-    array[9] +
-    array[10];
-
+  let isValidDigit = validDigit(array);
+  let phoneNumber = `(${ddd(array)}) ${firstPart(array)}-${secondPart(array)}`;
   if (!isValidLength) {
     return 'Array com tamanho incorreto.';
   }
