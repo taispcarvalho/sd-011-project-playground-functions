@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  // seu código aqui
+  
   if (value1 === true && value2 === true) {
     return true;
   } 
@@ -32,8 +32,8 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   // seu código aqui
   let result = (3 * wins) + ties;
-  return result;
-}
+    return result;
+};
 
 let highestArray = [9, 1, 2, 3, 9, 5, 7];
 // Desafio 6
@@ -41,6 +41,7 @@ function highestCount(array) {
   // seu código aqui
   let higherNumber = 0;
   let repeatNumber = 0;
+
   for (let index = 0; index < array.length; index += 1){
     let possibleHigherNumber = higherNumber;
     higherNumber = array[index];
@@ -49,18 +50,36 @@ function highestCount(array) {
           }
   }      
 }
-for (let index = 0; index < array.length; index += 1){
+  for (let index = 0; index < array.length; index += 1){
   if (higherNumber === array[index]){
     repeatNumber += 1;
       }
-}
-return repeatNumber;
+
+return repeatNumber;     
+};
+
+
 
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-}
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
+
+  if (Math.abs(distanceCat1) > Math.abs(distanceCat2)) {
+
+    return 'cat2';
+
+  } else if (Math.abs(distanceCat1) < Math.abs(distanceCat2)) {
+
+    return 'cat1';
+
+  } else {
+
+    return 'os gatos trombam e o rato foge';
+  }
+};
 
 // Desafio 8
 function fizzBuzz() {
