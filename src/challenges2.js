@@ -74,7 +74,7 @@ function hydrate(string) {
   let bebeAgua = 0;
   for (let index in string) {
     if (string[index] === '1' || string[index] === '2' || string[index] === '3' || string[index] === '4' || string[index] === '5' || string[index] === '6' || string[index] === '7' || string[index] === '8' || string[index] === '9') {
-      bebeAgua += parseInt(string, index);
+      bebeAgua += parseInt(string[index]);
     }
   }
   if (bebeAgua === 1) {
@@ -85,7 +85,7 @@ function hydrate(string) {
   return bebeAgua;
   // seu código aqui
 }
-console.log(hydrate('1 cervejas'))
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 module.exports = {
   generatePhoneNumber,
   techList,
