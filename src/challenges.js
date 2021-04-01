@@ -39,13 +39,29 @@ function footballPoints(wins, ties) {
 //console.log(footballPoints(14, 8));
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
   // seu código aqui
 }
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+let mouse = 0;
+let cat1 = 0;
+let cat2 = 0;
+function catAndMouse(mouse, cat1, cat2) {
+    if(cat1 < cat2){
+      let call1 = "cat1"
+    return call1;
+  }
+  else if (cat1 > cat2) {
+    let call2 = "cat2"
+    return call2;
+  }
+  else (cat1 === cat2)
+  let call3 = "os gatos trombam e o rato foge";
+    return call3
+  }
+//console.log(catAndMouse(10, 12, 12))
+
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
