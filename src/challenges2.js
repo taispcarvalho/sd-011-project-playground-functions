@@ -59,19 +59,14 @@ ${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  let listSides = [lineA, lineB, lineC];
-  for (let n in listSides) {
-    let sideBuffer = listSides.slice(n, parseInt(n, 10) + 1);
-    let index0 = listSides[0];
-    let index1 = listSides[1];
-    if (sideBuffer >= (index0 + index1) || sideBuffer <= Math.abs(index0 - index1)) {
-      return false;
-    }
-  }
-  return true;
+  let sideA = (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC));
+  let sideB = (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC));
+  // let sideC = (lineC < lineB + lineA && lineC > Math.abs(lineB - lineA));
+
+  return sideA && sideB; // && sideC;
 }
 
-// Desafio 12
+// Desafio 13
 function hydrate(string) {
   // seu código aqui
   let regex = /\d+/g; // \d+ = Pega os digitos com 1 caractere ou mais | /g = faz a "pesquisa" na string toda.
