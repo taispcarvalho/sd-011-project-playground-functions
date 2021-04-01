@@ -80,10 +80,10 @@ function fizzBuzz(array) {
 function encode(sentence) {
   let replacement = {
     a: 1,
-    b: 2,
-    c: 3,
-    d: 4,
-    e: 5,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
   };
   let newSentence = '';
   for (let letter of sentence) {
@@ -97,9 +97,25 @@ function encode(sentence) {
 }
 console.log(encode('Hello, World'));
 
-function decode() {
-  // seu código aqui
+function decode(sentence) {
+  let replacement = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let newSentence = '';
+  for (let letter of sentence) {
+    if (replacement[letter]) {
+      newSentence += (replacement[letter]);
+    } else {
+      newSentence += (letter);
+    }
+  }
+  return newSentence;
 }
+console.log(decode('H2ll4, W4rld'));
 
 module.exports = {
   calcArea,
