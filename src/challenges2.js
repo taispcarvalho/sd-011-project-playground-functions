@@ -18,6 +18,7 @@ function techList(array, myName) {
 
 // Desafio 11
 function generatePhoneNumber() {
+
   // seu código aqui
 }
 
@@ -27,10 +28,21 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
+  let bebeAgua = 0;
+  for (let index in string) {
+    if (string[index] === '1' || string[index] === '2' ||string[index] === '3' ||string[index] === '4' ||string[index] === '5' ||string[index] === '6' ||string[index] === '7' ||string[index] === '8' || string[index] === '9') {
+      bebeAgua = bebeAgua + parseInt(string[index]);
+    }
+  }
+  if (bebeAgua === 1) {
+    return bebeAgua + ' copo de água';
+  } else {
+    return bebeAgua + ' copo de água';
+  }
   // seu código aqui
 }
-
+console.log(hydrate("1 cerveja"))
 module.exports = {
   generatePhoneNumber,
   techList,
