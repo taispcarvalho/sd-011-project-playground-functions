@@ -1,5 +1,8 @@
 // Desafio 10
-function techList() {
+function techList(array, name) {
+  for (let index = 0; index < array.length; index += 0) {
+    
+  }
   // seu código aqui
 }
 

@@ -94,6 +94,7 @@ function encode(string) {
 return string2.join('');
 }
 console.log(encode('hi there!'));
+
 function decode(string) {
   let string2 = string.split('');
   for (let index = 0; index < string2.length; index += 1) {
