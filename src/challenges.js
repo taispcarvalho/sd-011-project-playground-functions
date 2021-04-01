@@ -52,21 +52,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function substituteWords(array) {
+  if (array % 5 === 0 && array % 3 === 0) {
+    return 'FizzBuzz';
+  } else if (array % 3 === 0) {
+    return 'fizz';
+  } else if (array % 5 === 0) {
+    return 'buzz'
+  }
+  return 'bug!'
+}
+
 function fizzBuzz(array) {
   let newArray = [];
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 5 === 0 && array[index] % 3 === 0) {
-      newArray.push('fizzBuzz');
-    } else if (array[index] % 3 === 0) {
-      newArray.push('fizz');
-    } else if (array[index] % 5 === 0) {
-      newArray.push('buzz');
-    } else newArray.push('bug!');
+    newArray.push(substituteWords(array[index]));
   }
   return newArray;
 }
-let myArray = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(myArray));
 
 // Desafio 9
 function encode(str) {
