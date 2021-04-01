@@ -48,14 +48,17 @@ function highestCount(arrNum) {
 function catAndMouse(mouse, cat1, cat2) {
   
   let whoCatches;
-  if ((Math.abs(cat1) - mouse) < (Math.abs(cat2) - mouse)) {
+  let cat1Pos = Math.abs(cat1 - mouse);
+  let cat2Pos = Math.abs(cat2 - mouse);
+
+  if (cat1Pos < cat2Pos) {
     whoCatches = 'cat1';
   }
-  else if ((Math.abs(cat1) - mouse) > (Math.abs(cat2) - mouse)) {
-    whoCatches = 'cat2';
+  else if (cat1Pos === cat2Pos) {
+    whoCatches = 'os gatos trombam e o rato foge';
   }
   else {
-    whoCatches = 'os gatos trombam e o rato foge';
+    whoCatches = 'cat2';
   }
 
   return whoCatches;
