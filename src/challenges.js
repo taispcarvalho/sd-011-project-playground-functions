@@ -50,13 +50,31 @@ function highestCount(repeatNumber) {
   return counterNumber;
 }
 
-let a = [0, 4, 4, 4, 2, 1];
-console.log(highestCount(a));
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let positionCat1 = 0;
+  let positionCat2 = 0;
+
+  if (mouse > cat1) {
+    positionCat1 = mouse - cat1;
+  } else {
+    positionCat1 = cat1 - mouse;
+  }
+
+  if (mouse > cat2) {
+    positionCat2 = mouse - cat2;
+  } else {
+    positionCat2 = cat2 - mouse;
+  }
+
+  if (positionCat1 > positionCat2) {
+    return "cat1";
+  } else {
+    return "cat2";
+  }
 }
+
+console.log(catAndMouse(7, 5, 8));
 
 // Desafio 8
 function fizzBuzz() {
