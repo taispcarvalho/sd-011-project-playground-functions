@@ -22,13 +22,13 @@ function zeroNove(number) {
 
 function maiorIgualTres(arr, number) {
   let repeat = 0;
-  for (let index = 0; index < phone.length; index += 1) {
+  for (let index = 0; index < arr.length; index += 1) {
     if (number === arr[index]) {
       repeat += 1;
     }
     if (repeat >= 3) return true;
   }
-  return false; 
+  return false;
 }
 
 function generatePhoneNumber(phone) {
@@ -52,13 +52,17 @@ function generatePhoneNumber(phone) {
   return numPhone;
 }
 
-let phone = [3, 3, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+let phone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 console.log(generatePhoneNumber(phone));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA + lineB > lineC && lineC > Math.abs(lineA - lineB)) {
+    return true;
+  }
+  return false;  
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
