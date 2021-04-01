@@ -92,54 +92,22 @@ function fizzBuzz(arrayNumber) {
 }
 
 // Desafio 9
-function formataEncode(array) {
-  for (let index = 0; index < array.length; index += 1) {
-    switch (array[index]) {
-    case 'a': array[index] = '1';
-      break;
-    case 'e': array[index] = '2';
-      break;
-    case 'i': array[index] = '3';
-      break;
-    case 'o': array[index] = '4';
-      break;
-    case 'u': array[index] = '5';
-      break;
-    default:
-      break;
-    }
-  }
-  return array.join('');
-}
-
-function formataDecode(array) {
-  for (let index = 0; index < array.length; index += 1) {
-    switch (array[index]) {
-    case '1': array[index] = 'a';
-      break;
-    case '2': array[index] = 'e';
-      break;
-    case '3': array[index] = 'i';
-      break;
-    case '4': array[index] = 'o';
-      break;
-    case '5': array[index] = 'u';
-      break;
-    default:
-      break;
-    }
-  }
-  return array.join('');
-}
-
 function encode(string) {
-  let array = string.split('');
-  return formataEncode(array);
+  string = string.replace(/a/g, '1');
+  string = string.replace(/e/g, '2');
+  string = string.replace(/i/g, '3');
+  string = string.replace(/o/g, '4');
+  string = string.replace(/u/g, '5');
+  return string;
 }
 
 function decode(string) {
-  let array = string.split('');
-  return formataDecode(array);
+  string = string.replace(/1/g, 'a');
+  string = string.replace(/2/g, 'e');
+  string = string.replace(/3/g, 'i');
+  string = string.replace(/4/g, 'o');
+  string = string.replace(/5/g, 'u');
+  return string;
 }
 
 module.exports = {
