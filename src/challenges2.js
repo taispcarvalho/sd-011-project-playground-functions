@@ -158,6 +158,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
   return true;
 }
+
 // Auxiliary function for Desafio 13
 function isNumber(anyString) {
   if (anyString - (anyString - 1) === 1) {
