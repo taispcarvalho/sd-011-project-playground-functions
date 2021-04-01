@@ -67,18 +67,31 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'cat1';
 }
 
-// Desafio 8 AINDA TEM ERRO DE LINTER
+// Desafio 8
+function checkCondition(valueToCheck, index) {
+  if (valueToCheck[index] % 3 === 0 && valueToCheck[index] % 5 !== 0) {
+    return 'fizz';
+  }
+  if (valueToCheck[index] % 3 !== 0 && valueToCheck[index] % 5 !== 0) {
+    return 'bug!';
+  }
+}
+function checkBothCondition(valueToCheck, index) {
+  if (valueToCheck[index] % 5 === 0 && valueToCheck[index] % 3 !== 0) {
+    return 'buzz';
+  }
+  if (valueToCheck[index] % 5 === 0 && valueToCheck[index] % 3 === 0) {
+    return 'fizzBuzz';
+  }
+}
 function fizzBuzz(input) {
   let result = [];
   for (let index = 0; index < input.length; index += 1) {
-    if (input[index] % 3 === 0 && input[index] % 5 !== 0) {
-      result.push('fizz');
-    } else if (input[index] % 5 === 0 && input[index] % 3 !== 0) {
-      result.push('buzz');
-    } else if (input[index] % 5 === 0 && input[index] % 3 === 0) {
-      result.push('fizzBuzz')
-    } else {
-      result.push('bug!');
+    if (checkCondition(input, index) !== undefined) {
+      result.push(checkCondition(input, index));
+    }
+    if (checkBothCondition(input, index) !== undefined) {
+      result.push(checkBothCondition(input, index));
     }
   }
   return result;
