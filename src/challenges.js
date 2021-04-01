@@ -4,6 +4,8 @@ function compareTrue(value1, value2) {
   return value1 && value2;
 }
 
+console.log(compareTrue(, 3));
+
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
@@ -19,7 +21,8 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(frase) {
   // seu código aqui
-  return frase[frase.length - 1] + ', ' + frase[0];
+  let space = ', '
+  return frase[frase.length - 1] +  space + frase[0];
 }
 
 // Desafio 5
