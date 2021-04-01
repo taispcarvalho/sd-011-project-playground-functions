@@ -142,7 +142,6 @@ function decode(string) {
 }
 
 console.log(decode('h3 th2r2!'));
-//console.log(decode('01234'));
 
 module.exports = {
   calcArea,
