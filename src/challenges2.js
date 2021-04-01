@@ -66,13 +66,28 @@ function generatePhoneNumber(array) {
   return formatedPhoneNumber;
 }
 
-let myArray = [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]
-console.log(generatePhoneNumber(myArray));
-console.log(checkRepeatdNumbers(myArray));
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function checkSides(sideA, sideB, sideC) {
+  if (sideA <= sideB + sideC && sideB <= sideA + sideC && sideC <= sideA + sideB) {
+    return true;
+  }
+  return false;
 }
+
+function checkIfSidesHigherThenDiff(sideA, sideB, sideC) {
+  if (sideA >= Math.abs(sideB - sideC) && sideB >= Math.abs(sideA - sideC) && sideC >= Math.abs(sideA - sideB)) {
+    return true;
+  }
+  return false;
+}
+
+function triangleCheck(sideA, sideB, sideC) {
+  if (checkSides(sideA, sideB, sideC) && checkIfSidesHigherThenDiff(sideA, sideB, sideC)) {
+    return true;
+  }
+  return false;
+}
+console.log(triangleCheck(10,14,8));
 
 // Desafio 13
 function hydrate() {
