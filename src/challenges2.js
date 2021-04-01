@@ -16,8 +16,9 @@ function techList(list, name) {
 }
 
 // Desafio 11
-let message = null;
+
 function checkLength(array) {
+  let message = null;
   if (array.length !== 11) {
     message = 'Array com tamanho incorreto.';
   } else {
@@ -65,26 +66,28 @@ console.log((generatePhoneNumber([5, 8, 5, 3, 2, 2, 4, 1, 9, 7, 4])));
 // Desafio 12
 function noZeroSides(lineA, lineB, lineC) {
   if (lineA <= 0 || lineB <= 0 || lineC <= 0) {
-    message = false;
+    return false;
   }
 }
 
 function lengthSides(lineA, lineB, lineC) {
   if (lineA >= Math.abs(lineB + lineC) || lineB >= Math.abs(lineA + lineC)) {
-    message = false;
+    return false;
   }
   if ((lineC >= Math.abs(lineA + lineB))) {
-    message = false;
+    return false;
   }
 }
 
 function triangleCheck(lineA, lineB, lineC) {
-let message = true;
-noZeroSides(lineA, lineB, lineC);
-lengthSides(lineA, lineB, lineC);
-return message;
+  let condition1 = noZeroSides(lineA, lineB, lineC);
+  let condition2 = lengthSides(lineA, lineB, lineC);
+  if (condition1 === false || condition2 === false) {
+    return false;
+  }
+  return true;
 }
-console.log(triangleCheck(5, 5, -1));
+console.log(triangleCheck(5, 5, 9));
 
 // Desafio 13
 function hydrate(string) {
