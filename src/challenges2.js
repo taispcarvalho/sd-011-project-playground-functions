@@ -13,7 +13,7 @@ function techList(array, name) {
     allTechs.push(createObject(array[index], name));
   }
 
-  allTechs.sort((a, b) => (a.tech > b.tech) ? 1 : -1);
+  allTechs.sort((a, b) => ((a.tech > b.tech) ? 1 : -1));
   if (array.length === 0) {
     return 'Vazio!';
   }
@@ -21,52 +21,87 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function checkNumbers(numbers) {
-  let numberValues = true;
+function checkNumb(numbers) {
+  let arrayValues = true;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] < 0 || numbers[index] > 9) {
+      arrayValues = false;
+    }
+  }
+  return arrayValues;
+}
+
+function checkRep(numbers) {
   let repetitionCondition = true;
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] < 0 || numbers [index] > 9) {
-      numberValues = false;
-    }
-    let numberRepetitions = 0;
+    let repetition = 0;
     for (let index2 = 0; index2 < numbers.length; index2 += 1) {
       if (numbers[index] === numbers[index2]) {
-        numberRepetitions += 1;
+        repetition += 1;
       }
     }
-    if (numberRepetitions >= 3) {
+    if (repetition >= 3) {
       repetitionCondition = false;
     }
   }
-
-
-
-  let finalCondition = true;
-  if (numberValues === true && repetitionCondition === true) {
-    finalCondition = true
-  } else {
-    finalCondition = false;
-  }
-  return finalCondition;
+  return repetitionCondition;
 }
 
-function arraySize(number) {
+
+//function checkNumbers(numbers) {
+  //let numberValues = true;
+  //let repetitionCondition = true;
+  //for (let index = 0; index < numbers.length; index += 1) {
+    //if (numbers[index] < 0 || numbers[index] > 9) {
+      //numberValues = false;
+   // }
+    //let numberRepetitions = 0;
+    //for (let index2 = 0; index2 < numbers.length; index2 += 1) {
+     // if (numbers[index] === numbers[index2]) {
+     //   numberRepetitions += 1;
+      //}
+   // }
+    //if (numberRepetitions >= 3) {
+      //repetitionCondition = false;
+    //}
+  //}
+  
+ // let finalCondition = true;
+  //if (numberValues === true && repetitionCondition === true) {
+   // finalCondition = true;
+  //} else {
+   // finalCondition = false;
+  //}
+  //return finalCondition;
+//}
+
+function arraySize(numbers) {
   let numberSize = true;
-  if (number.length !== 11) {
+  if (numbers.length !== 11) {
     numberSize = false;
   }
   return numberSize;
 }
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
 function generatePhoneNumber(numbers) {
   if (arraySize(numbers) === false) {
     return 'Array com tamanho incorreto.';
-  } else if (checkNumbers(numbers) === false) {
-    return 'não é possível gerar um número de telefone com esses valores'
-  } else {
-    let phoneNumber = '(' + numbers.slice(0, 2) + ') ' + numbers.slice(2, 7) + '-' + numbers.slice(7, 11);
+  }
+  if (checkRep(numbers) === false || checkNumb(numbers) === false) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  } 
+  if (arraySize(numbers) === true && checkNumb(numbers) === true && checkRep(numbers) === true) {
+    let phoneNumber = `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
+    
+   // '(' + numbers.slice(0, 2) + ') ' + numbers.slice(2, 7) + '-' + numbers.slice(7, 11);
     return phoneNumber.replace(/\,/g, '');
   }
 }
+
+
+
 
 // Desafio 12
 function checkLineSum(lineA, lineB, lineC) {
@@ -90,7 +125,7 @@ function checkLineDiff(lineA, lineB, lineC) {
 }
 function triangleCheck(lineA, lineB, lineC) {
   let triangleRequirements = true;
-  if (checkLineSum (lineA, lineB, lineC) === true && checkLineDiff (lineA, lineB, lineC) === true) {
+  if (checkLineSum(lineA, lineB, lineC) === true && checkLineDiff(lineA, lineB, lineC) === true) {
     triangleRequirements = true;
   } else {
     triangleRequirements = false;
