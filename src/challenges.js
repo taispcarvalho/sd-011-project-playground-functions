@@ -77,13 +77,13 @@ console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  for (index = 0; index < numbers.length; index += 1) {
+  for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       numbers[index] = 'fizzBuzz';
     } else if (numbers[index] % 3 === 0) {
       numbers[index] = 'fizz';
     } else if (numbers[index] % 5 === 0) {
-      numbers[index] = 'fizz';
+      numbers[index] = 'buzz';
     } else {
       numbers[index] = 'bug!';
     }
