@@ -100,11 +100,11 @@ function countDrinks(drinks) {
 
 function hydrate(drinks) {
   if (countDrinks(drinks) === 1) {
-    return `${countDrinks(drinks)} copo de água`; 
-  } else {
-    return `${countDrinks(drinks)} copos de água`;
+    return `${countDrinks(drinks)} copo de água`;
   }
+  return `${countDrinks(drinks)} copos de água`;
 }
+
 
 module.exports = {
   generatePhoneNumber,
