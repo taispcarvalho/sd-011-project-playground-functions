@@ -71,22 +71,22 @@ console.log(catAndMouse(12, 3, 2));
 function fizzBuzz(array) {
   let retorno = [];
   for (let index = 0; index < array.length; index += 1) {
-    let verifiva5 = array[index] % 5 === 0;
     let verifica3 = array[index] % 3 === 0;
+    let verifiva5 = array[index] % 5 === 0;
+    retorno[index] = 'bug!';
     if (array[index] % 15 === 0) {
-      retorno.push('fizzBuzz');
+      retorno[index] = 'fizzBuzz';
     } else if (verifica3) {
-      retorno.push('fizz');
+      retorno[index] = 'fizz';
     } else if (verifiva5) {
-      retorno.push('buzz');
-    } else {
-      retorno.push('bug!');
+      retorno[index] = 'buzz';
     }
   }
   return retorno;
 }
 
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// Igor Mendes [Turma 11], ajudou a tirar a complexidade dessa função.
 // Tales Coelho, Marlon Ramos, Vitor Cardozo, Rodolfo Ramos, Igor Mendes e Natali Lima me ajudaram a resolver/ endetender a questão
 // Desafio 9
 function encode(array) {
