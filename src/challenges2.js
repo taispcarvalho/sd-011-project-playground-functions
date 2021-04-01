@@ -48,7 +48,6 @@ function generatePhoneNumber(numbers) {
   }
   return addSeparatorsPhoneNumber(numbers);
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
@@ -56,8 +55,20 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function sumNumbersFromString(s) {
+  let numbersStr = s.replace(/\D/g, '');
+  let arrayNumbersStr = numbersStr.split('');
+  let sum = 0;
+  for (let index = 0; index < arrayNumbersStr.length; index += 1) {
+    sum += Number(arrayNumbersStr[index]);
+  }
+  return sum;
+}
+
+function hydrate(str) {
+  const glassesOfWater = sumNumbersFromString(str);
+  if (glassesOfWater === 1) return `${glassesOfWater} copo de água`;
+  return `${glassesOfWater} copos de água`;
 }
 
 module.exports = {
