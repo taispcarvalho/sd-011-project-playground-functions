@@ -22,22 +22,24 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + (ties * 1);
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-
-function highestCount(array) {
+function findHighestNumber(array) {
   let highestNumber = array[0];
   for (let index in array) {
     if (array[index] > highestNumber) {
       highestNumber = array[index];
     }
   }
+  return highestNumber;
+}
 
+function highestCount(array) {
   let countNumber = 0;
   for (let index in array) {
-    if (highestNumber === array[index]) {
+    if (findHighestNumber() === array[index]) {
       countNumber += 1;
     }
   }
