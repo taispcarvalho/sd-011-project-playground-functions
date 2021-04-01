@@ -37,9 +37,10 @@ function generatePhoneNumber(arrayOfNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(sideA, sideB, sideC) {
+  return sideA < sideB + sideC && sideA > Math.abs(sideB - sideC);
 }
+console.log(triangleCheck(8, 8, 18));
 
 // Desafio 13
 function hydrate() {
