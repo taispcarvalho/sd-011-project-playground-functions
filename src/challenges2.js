@@ -23,7 +23,7 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, linceC) {
+function triangleCheck(lineA, lineB, lineC) {
   let angl1 = Math.abs(lineA + lineB)
   let angl2 = Math.abs(lineA - lineB)
   let value = false;
@@ -52,6 +52,7 @@ function hydrate(string) {
   }
   // seu código aqui
 }
+
 console.log(hydrate("3 cerveja"))
 module.exports = {
   generatePhoneNumber,
