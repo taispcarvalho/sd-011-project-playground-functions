@@ -42,6 +42,15 @@ function verifyDigit(arrayOfNumbers) {
   return true;
 }
 
+function verifyArrayOfBool(arrayOfBool) {
+  for (let index = 0; index < (arrayOfBool.length - 1); index += 1) {
+    if (arrayOfBool[index] === false) {
+      return false;
+    }
+  }
+  return true;
+}
+
 function verifyRepetition(arrayOfNumbers) {
   let limitRepetition = 2;
   let arrayOfBool = arrayOfNumbers.map((number, index) => {
@@ -61,15 +70,6 @@ function verifyRepetition(arrayOfNumbers) {
   return verifyArrayOfBool(arrayOfBool);
 }
 
-function verifyArrayOfBool (arrayOfBool) {
-  for (let index = 0; index < (arrayOfBool.length - 1); index += 1) {
-    if (arrayOfBool[index] === false) {
-      return false;
-    }
-  }
-  return true;
-}
-
 function generatePhoneNumber(arrayOfNumbers) {
   if (arrayOfNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -81,8 +81,15 @@ function generatePhoneNumber(arrayOfNumbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC) {
+    if (lineB < lineA + lineC) {
+      if (lineC < lineA + lineB) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 // Desafio 13
