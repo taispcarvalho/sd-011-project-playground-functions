@@ -15,43 +15,43 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-function isValidArrayLength(array) {
-  if (array.length > 11) {
-    return false;
-  } return true;
-}
-function isValidArrayNumber(array) {
-  for (let index of array) {
-    if (index < 0 || index > 9) {
+  function isValidArrayLength(array) {
+    if (array.length > 11) {
       return false;
     } return true;
   }
-}
-function NumberOfrepetition(array) {
-  let counter = 0;
-  for (let index2 of array) {
-    for (let index3 = 1; index3 < array.length; index3 += 1) {
-      if (index2 === index3) {
-        counter += 1;
-      }
+  function isValidArrayNumber(array) {
+    for (let index of array) {
+      if (index < 0 || index > 9) {
+        return false;
+      } return true;
     }
-    if (counter >= 3) {
-      return false;
-    } counter = 0;
-  } return true;
-}
-function createPhoneNumber(array) {
-  array.splice(0, 0, '(');
-  array.splice(3, 0, ')');
-  array.splice(9, 0, '-');
-  array.join('');
-}
+  }
+  function NumberOfrepetition(array) {
+    let counter = 0;
+    for (let index2 of array) {
+      for (let index3 = 1; index3 < array.length; index3 += 1) {
+        if (index2 === index3) {
+          counter += 1;
+        }
+      }
+      if (counter >= 3) {
+        return false;
+      } counter = 0;
+    } return true;
+  }
+  function createPhoneNumber(array) {
+    array.splice(0, 0, '(');
+    array.splice(3, 0, ')');
+    array.splice(9, 0, '-');
+    array.join('');
+  }
 
-  if (!isValidArrayLength(array)) {
-    return 'Array com tamanho incorreto.';
-  } if (!isValidArrayNumber(array) || !NumberOfrepetition(array)) {
-      return 'não é possível gerar um número de telefone com esses valores.';
-    } return createPhoneNumber(array);
+    if (!isValidArrayLength(array)) {
+      return 'Array com tamanho incorreto.';
+    } if (!isValidArrayNumber(array) || !NumberOfrepetition(array)) {
+        return 'não é possível gerar um número de telefone com esses valores.';
+      } return createPhoneNumber(array);
 }
 
 // Desafio 12
