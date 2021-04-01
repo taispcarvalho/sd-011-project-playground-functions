@@ -23,7 +23,7 @@ function Repeat(n) {
 
 function checkNum(n) {
   for (let index of n) {
-    if (index < 0 || index > 9 || Repeat(index) > 2) {
+    if (index < 0 || index > 9 || Repeat(index) >= 3) {
       return false;
     }
   }
