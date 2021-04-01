@@ -38,7 +38,7 @@ function hydrate(string) {
   if (bebeAgua === 1) {
     return bebeAgua + ' copo de água';
   } else {
-    return bebeAgua + ' copo de água';
+    return bebeAgua + ' copos de água';
   }
   // seu código aqui
 }
