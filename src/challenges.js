@@ -61,17 +61,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
+  let arrayResultado = [];
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 == 0 && array [i] % 5 == 0){
-      return "fizzBuzz";
-    } else if (array[i] % 3 == 0) {
-      return "fizz";
-    } else if (array [i] % 5 == 0) {
-      return "Buzz";
+    if (array[i] % 3 === 0 && array [i] % 5 === 0){
+      return arrayResultado.push("fizzBuzz");
+    } else if (array[i] % 3 === 0) {
+      return arrayResultado.push("fizz");
+    } else if (array [i] % 5 === 0) {
+      return arrayResultado.push("Buzz");
     } else {
-      return "bug!"
+      return arrayResultado.push("bug!");
     }
   }
+  return arrayResultado;
 }
 
 // Desafio 9
