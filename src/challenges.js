@@ -39,14 +39,22 @@ function highestCount(numberArray) {
     } 
   }
   for (n in numberArray) {
-    if (maior === numberArray[n]){count += 1}
+    if (maior === numberArray[n]) { count += 1 };
   }
   return count;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1, cat2) {
+  let catOne = Math.abs(cat1 - mouse);
+  let catTwo = Math.abs(cat2 - mouse);
+  if (catOne < catTwo){
+    return 'cat1';
+  } else if(catTwo < catOne) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
