@@ -62,7 +62,7 @@ function generatePhoneNumber(array) {
 }
 console.log((generatePhoneNumber([5, 8, 5, 3, 2, 2, 4, 1, 9, 7, 4])));
 
-// Desafio 12
+// Desafio 12 teste
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA <= 0 || lineB <= 0 || lineC <= 0) {
     return false;
