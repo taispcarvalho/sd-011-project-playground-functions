@@ -25,7 +25,7 @@ let resultado = '';
 
 function numeroZero(array) {
 let resultado = '';
-let verificaZero = generatePhoneNumber(array);
+generatePhoneNumber(array);
   for (let numeroZero of array) {
     if (numeroZero < 0) {
     resultado ('não é possível gerar um número de telefone com esses valores');
@@ -35,8 +35,8 @@ let verificaZero = generatePhoneNumber(array);
 }
 
 function numeroNove(array) {
-let resultado = '';
-let verificaNove = generatePhoneNumber(array);
+let resultado = ' ';
+generatePhoneNumber(array);
   for (let numeroNove of array) {
     if (numeroNove > 9) {
     let resultado = ('não é possível gerar um número de telefone com esses valores');
@@ -46,10 +46,10 @@ let verificaNove = generatePhoneNumber(array);
 }
 
 function maiorValor(array) {
-let newArray = generatePhoneNumber(array);
+generatePhoneNumber(array);
 let numeroRepetido = [];
-for (let index of newArray) {
-  for (let indexNumeroRepetido of newArray) {
+for (let index of array) {
+  for (let indexNumeroRepetido of array) {
     if (indexNumeroRepetido === index){
       numeroRepetido [index] = (numeroRepetido[index] || 0) + 1;
     }
@@ -58,6 +58,7 @@ for (let index of newArray) {
     let resultado = ('não é possível gerar um número de telefone com esses valores');
     }
   }
+  return resultado
 }
 
 function generatePhoneNumber(array) {
@@ -71,8 +72,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let triaA = lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
   let triaB = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
   let triaC = lineC < lineB + lineA && lineC > Math.abs(lineB - lineA);
-  if (lineA !== 0 && lineB !== 0 && lineC !== 0) {
-  }
+  
   return (triaA || triaB || triaC);
 }
 console.log(triangleCheck(10, 6, 2));
