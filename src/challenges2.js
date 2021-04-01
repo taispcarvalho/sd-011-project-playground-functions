@@ -15,7 +15,8 @@ function techList(technologiesToLearn, nameOfPerson) {
 function addSeparatorsPhoneNumber(numbers) {
   numbers.splice(0, 0, '(');
   numbers.splice(3, 0, ')');
-  numbers.splice(9, 0, '-');
+  numbers.splice(4, 0, ' ');
+  numbers.splice(10, 0, '-');
   return numbers.join('');
 }
 
@@ -43,11 +44,11 @@ function validatePhoneNumber(numbers) {
 function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) return 'Array com tamanho incorreto.';
   if (!validatePhoneNumber(numbers)) {
-    return 'Não é possível gerar um número de telefone com esses valores.';
+    return 'não é possível gerar um número de telefone com esses valores';
   }
   return addSeparatorsPhoneNumber(numbers);
 }
-console.log(generatePhoneNumber([9, 8, 9, 9, 2, 0, 0, 2, 1, 5, 8]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
