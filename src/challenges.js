@@ -61,28 +61,71 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let arrayResultado = [];
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 === 0 && array [i] % 5 === 0){
-      return arrayResultado.push("fizzBuzz");
-    } else if (array[i] % 3 === 0) {
-      return arrayResultado.push("fizz");
-    } else if (array [i] % 5 === 0) {
-      return arrayResultado.push("Buzz");
-    } else {
-      return arrayResultado.push("bug!");
+    switch (true) {
+      case array[i] % 3 === 0 && array[i] % 5 === 0:
+        array[i] = 'fizzBuzz';
+        break;
+      case array[i] % 5 === 0:
+        array[i] = 'Buzz';
+        break;
+      case array[i] % 3 === 0:
+        array[i] = 'fizz';
+        break;
+      default:
+        array[i] = 'bug!'
+        break;
     }
   }
-  return arrayResultado;
+  return array; 
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(array1) {
+  for (let i = 0; i < array1.length; i += 1) {
+    switch (true) {
+      case array1[i] === a:
+      i = 1;
+      break;
+      case array1[i] === e:
+      i = 2;
+      break;
+      case array1[i] === i:
+      i = 3;
+      break;
+      case array1[i] === o:
+      i = 4;
+      break;
+      case array1[i] === u:
+      i = 5;
+      break;
+    }
+  }
+  return array1;
 }
-function decode() {
-  // seu código aqui
-}
+
+function decode(array2) {
+  for (let index = 0; index < array2.length; index += 1) {
+    switch (true) {
+      case array2[index] === 1:
+      index = a;
+      break;
+      case array2[i] === 2:
+      index = e;
+      break;
+      case array2[i] === 3:
+      index = i;
+      break;
+      case array2[i] === o:
+      index = 4;
+      break;
+      case array2[i] === u:
+      index = 5;
+      break;
+    }
+  }
+  return array2;
+} 
 
 module.exports = {
   calcArea,
