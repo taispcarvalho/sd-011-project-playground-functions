@@ -147,61 +147,42 @@ function fizzBuzz(numbers) {
   return numbers;
 }
 
+// Auxiliary function for Desafio 9
+function parseCharacter(character, dictionaryOption) {
+  let dictionary;
+
+  if (dictionaryOption === 0) {
+    dictionary = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  } else {
+    dictionary = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  }
+
+  if (dictionary[character]) {
+    return dictionary[character];
+  }
+
+  return character;
+}
+
 // Desafio 9
 function encode(message) {
   let encodedMessage = '';
 
-  for (let index = 0; index < message.length; index += 1) {
-    switch (message[index]) {
-    case 'a':
-      encodedMessage += '1';
-      break;
-    case 'e':
-      encodedMessage += '2';
-      break;
-    case 'i':
-      encodedMessage += '3';
-      break;
-    case 'o':
-      encodedMessage += '4';
-      break;
-    case 'u':
-      encodedMessage += '5';
-      break;
-    default:
-      encodedMessage += message[index];
-    }
+  for (let character of message) {
+    encodedMessage += parseCharacter(character, 0);
   }
 
   return encodedMessage;
 }
 
 function decode(encodedMessage) {
-  let decodedMessage = '';
+  let message = '';
 
-  for (let index = 0; index < encodedMessage.length; index += 1) {
-    switch (encodedMessage[index]) {
-    case '1':
-      decodedMessage += 'a';
-      break;
-    case '2':
-      decodedMessage += 'e';
-      break;
-    case '3':
-      decodedMessage += 'i';
-      break;
-    case '4':
-      decodedMessage += 'o';
-      break;
-    case '5':
-      decodedMessage += 'u';
-      break;
-    default:
-      decodedMessage += encodedMessage[index];
-    }
+  for (let character of encodedMessage) {
+    message += parseCharacter(character, 1);
   }
 
-  return decodedMessage;
+  return message;
 }
 
 module.exports = {
