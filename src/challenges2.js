@@ -18,7 +18,6 @@ function techList(array, name) {
     if (techA > techB) return 1;
     return 0;
   });
-
   return array;
 }
 
@@ -81,18 +80,32 @@ function generatePhoneNumber(numbers) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let check = false;
-  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
-    if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+  
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
       check = true;
-    }
   }
 
   return check;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let regex = /\d+/g;
+  let matches = string.match(regex);
+  let drinks = 0;
+  let msg = '';
+
+  for (let i in matches) {
+    drinks += parseInt(matches[i]);
+  }
+
+  if (drinks === 1) {
+    msg = drinks + ' copo de água';
+  } else {
+    msg = drinks + ' copos de água';
+  }
+
+  return msg;
 }
 
 module.exports = {
