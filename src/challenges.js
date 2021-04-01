@@ -97,31 +97,41 @@ function fizzBuzz(input) {
   return result;
 }
 
-// Desafio 9 AINDA TEM ERRO DE LINTER
-function encode(word) {
-  let workingWord = word.split('')
-  let translate = { a: 1, e: 2, i: 3, o: 4, u: 5 };
-
-  for (let index = 0; index <= word.length; index += 1) {
-    for (let indexOfTranslate in translate) {
-      if (indexOfTranslate === word[index]) {
-        workingWord[index] = translate[indexOfTranslate];
-      }
+// Desafio 9
+function searchOnEncode(index, workingWord) {
+  let translate = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  let workingWordSplited = workingWord.split('');
+  for (let indexOfTranslate in translate) {
+    if (indexOfTranslate === workingWord[index]) {
+      workingWordSplited[index] = translate[indexOfTranslate];
     }
   }
-  return workingWord.join('');
+  return workingWordSplited.join('');
+}
+function encode(word) {
+  let workingWord = word;
+  for (let index = 0; index <= word.length; index += 1) {
+    workingWord = searchOnEncode(index, workingWord);
+  }
+  return workingWord;
+}
+
+function searchOnDecode(index, workingWord) {
+  let translate = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  let workingWordSplited = workingWord.split('');
+  for (let indexOfTranslate in translate) {
+    if (translate[indexOfTranslate] === workingWord[index]) {
+      workingWordSplited[index] = indexOfTranslate;
+    }
+  }
+  return workingWordSplited.join('');
 }
 function decode(word) {
-  let workingWord = word.split('');
-  let translate = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  let workingWord = word;
   for (let index = 0; index < word.length; index += 1) {
-    for (let indexOfTranslate in translate) {
-      if (translate[indexOfTranslate] == word[index]) {
-        workingWord[index] = indexOfTranslate;
-      }
-    }
+    workingWord = searchOnDecode(index, workingWord);
   }
-  return workingWord.join('');
+  return workingWord;
 }
 
 module.exports = {
