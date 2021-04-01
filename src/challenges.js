@@ -69,14 +69,14 @@ function highestCount(valores){
 //let cat2=0; 
 
   function catAndMouse(mouse,cat1,cat2){
-    cat1=Math.abs(mouse-cat1);
-    cat2=Math.abs(mouse-cat2);
-    if(cat1===cat2){
+    cat1=Math.abs(diff(mouse,cat1));
+    cat2=Math.abs(diff(mouse,cat2));
+      if(cat1===cat2){
       return("Os gatos trombam e o rato foge");
       //console.log("Os gatos trombam e o rato foge");
-    }else if(cat1<cat2){
+    }else if(<cat2){
       return("cat1");
-      //console.log("cat1");
+      //console.log("cat1")
     }else{
       return("cat2");
       //console.log("cat2");
