@@ -56,11 +56,13 @@ console.log(triangleCheck(5, 5, 5));
 // Desafio 13
 function hydrate(string) {
   let count = 0;
-  var r = /\d+/g;
-  var m;
+  let r = /\d+/g;
   while ((m = r.exec(string)) != null) {
-    number = parseInt(m[0])
-    count += number
+    let number = parseInt(m[0]);
+    count += number;
+  }
+  if (count === 1) {
+    return '1 copo de água';
   }
   return count + ' copos de água';
 }
