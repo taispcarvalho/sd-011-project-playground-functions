@@ -76,26 +76,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzzChecker(result, array) {
-  for (let index of array) {
-    if (array[index] % 15 === 0) {
-      result[index] = 'fizzBuzz';
-    } else if (array[index] % 3 === 0) {
-      result[index] = 'fizz';
-    } else if (array[index] % 5 === 0) {
-      result[index] = 'buzz';
-    } else {
-      result[index] = 'bug!';
-    }
+function fizzBuzzChecker(number) {
+  if (number % 15 === 0) {
+    return 'fizzBuzz';
+  } if (number % 3 === 0) {
+    return 'fizz';
+  } if (number % 5 === 0) {
+    return 'buzz';
   }
-  return result;
+  return 'bug!';
 }
 
 function fizzBuzz(array) {
   let result = [];
-  fizzBuzzChecker(result, array);
-  console.log(result);
+  for (let number of array) {
+    result.push(fizzBuzzChecker(number));
+  }
+  return result;
 }
+
+fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encodeA(string) {
@@ -197,7 +197,7 @@ function encode(string) {
   console.log(string);
 }
 
-encode('hey there');
+encode('macaco louco idiota pede ajuda e corre');
 
 function decode(string) {
   decode1(string);
@@ -208,7 +208,7 @@ function decode(string) {
   console.log(string);
 }
 
-decode('h2y th2r2');
+decode('macaco louco idiota pede ajuda e corre');
 
 module.exports = {
   calcArea,
