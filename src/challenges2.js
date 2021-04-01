@@ -61,12 +61,12 @@ function hydrate(string) {
     let number = parseInt(m[0]);
     count += number;
   }
-  if (count === 1) {
+  if (count == 1) {
     return '1 copo de água';
   }
   return count + ' copos de água';
 }
-console.log(hydrate("2 cervejas e 4 martinis e 56 carros"));
+console.log(hydrate("1 cerveja"));
 
 module.exports = {
   generatePhoneNumber,
