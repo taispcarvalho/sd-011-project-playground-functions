@@ -26,15 +26,16 @@ function checkRepeatdNumbers(array) {
   for (let index = 0; index < sortedNumbers.length - 1; index += 1) {
     if (sortedNumbers[index] === sortedNumbers[index + 1]) {
       count += 1;
-      if (count >= 2) {
-        return false;
-      }
     } else {
       count = 0;
     }
   }
+  if (count >= 2) {
+    return false;
+  }
   return true;
 }
+
 
 function checkIfBetween0to9(array) {
   for (let index = 0; index < array.length; index += 1) {
