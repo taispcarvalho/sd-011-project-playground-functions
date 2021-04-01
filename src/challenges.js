@@ -86,7 +86,7 @@ function fizzBuzz(arrayNumbers) {
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
-// Desafio 9
+// Desafio 9 - ok
 function encode(frase) {
   for (let index = 0; index < frase.length; index += 1) {
     frase = frase.replace('a', '1');
