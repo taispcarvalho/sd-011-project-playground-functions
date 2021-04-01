@@ -74,9 +74,14 @@ function hydrate(str) {
     let numbers = parseInt(result[index]);
     sum += numbers; 
   }
-  return sum + ' copos de água';
+  
+  if (sum > 1) {
+    return sum + ' copos de água';
+  } else {
+    return sum + ' copo de água';
+  }
 }
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+console.log(hydrate("1 cachaça"));
 
 module.exports = {
   generatePhoneNumber,
