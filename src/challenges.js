@@ -26,7 +26,7 @@ function concatName(array) {
   // seu código aqui
   let formattedName = array[array.length - 1] + ', ' + array[0];
   return formattedName;
-}; console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+}; 
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -35,10 +35,11 @@ function footballPoints(wins, ties) {
     return result;
 };
 
-let highestArray = [9, 1, 2, 3, 9, 5, 7];
+
 // Desafio 6
 function highestCount(array) {
   // seu código aqui
+  let highestArray = [9, 1, 2, 3, 9, 5, 7];
   let higherNumber = 0;
   let repeatNumber = 0;
 
