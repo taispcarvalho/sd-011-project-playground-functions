@@ -89,13 +89,21 @@ function triangleCheck(sideA, sideB, sideC) {
 }
 
 // Desafio 13
-function hydrate(drinks) {
-  drinks = drinks.replace(/\D/g,'')
+function countDrinks(drinks) {
+  drinks = drinks.replace(/\D/g, '');
   let count = 0;
   for (let index = 0; index < drinks.length; index += 1) {
     count += Number(drinks[index]);
   }
-  return `${count} copos de água`;
+  return count;
+}
+
+function hydrate(drinks) {
+  if (countDrinks(drinks) === 1) {
+    return `${countDrinks(drinks)} copo de água`; 
+  } else {
+    return `${countDrinks(drinks)} copos de água`;
+  }
 }
 
 module.exports = {
