@@ -19,14 +19,14 @@ function calcArea(base, high) {
 console.log(calcArea(51,1));
 
 // Desafio 3
-function splitSentence(sentence,separator) {
-  let arrayOfStrings = sentence.split(separator);
+function splitSentence(sentence) {
+  let arrayOfStrings = sentence.split(' ');
   return arrayOfStrings;
 }
 
-let string= "foguete";
-let space = " ";
-console.log(splitSentence(string,space))
+let string= 'Go Trybe';
+
+console.log(splitSentence(string))
 
 // Desafio 4
 function concatName(param) {
