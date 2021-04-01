@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(list, name1) {
+function techList(list, name) {
   if (list.length === 0) {
     return 'Vazio!';
   }
@@ -9,7 +9,7 @@ function techList(list, name1) {
   for (let technology of list) {
     result.push({
       tech: technology,
-      name: name1,
+      name,
     });
   }
   return result;
