@@ -84,7 +84,6 @@ function fizzBuzz(arrayNumbers) {
   }
   return comparacao;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9 - ok
 function encode(frase) {
@@ -97,7 +96,6 @@ function encode(frase) {
   }
   return frase;
 }
-console.log(encode('hi there!'));
 
 function decode(frase) {
   for (let index = 0; index < frase.length; index += 1) {

@@ -4,10 +4,10 @@ function techList(array, name) {
   if (array.length <= 0) {
     return 'Vazio!';
   }
-  for (let index = 0; index < array.length; index += 0) {
+  for (let index = 0; index < array.length; index += 1) {
     test.push = ({
       tech: array[index],
-      name: name,
+      pessoa: name,
     }
     );
   }
@@ -16,7 +16,7 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber() {
-  
+  //
 }
 
 // Desafio 12
@@ -24,7 +24,6 @@ function triangleCheck(lineA, lineB, lineC) {
   let triaA = lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
   let triaB = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
   let triaC = lineC < lineB + lineA && lineC > Math.abs(lineB - lineA);
-  
   return (triaA || triaB || triaC);
 }
 
@@ -36,13 +35,12 @@ function hydrate(string) {
     somaCopos += numeroCopos[index];
   }
   if (somaCopos > 1) {
-    return (somaCopos + ' copos de água');
+    return (`${somaCopos} copos de água`);
   } if (somaCopos >= 0 || somaCopos < 1) {
-    return (somaCopos + ' copo de água');
+    return (`${somaCopos} copo de água`);
   }
   return hydrate;
 }
-console.log(hydrate('5 cachaça'));
 
 module.exports = {
   generatePhoneNumber,
