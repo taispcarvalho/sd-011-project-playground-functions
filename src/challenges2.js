@@ -145,7 +145,6 @@ function hydrate(phrase) {
   }
   return `${sum} copos de água`;
 }
-console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
