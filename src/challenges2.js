@@ -11,7 +11,7 @@ function techList(techs, name) {
     let object = {};
     object['tech'] = orderedTechs[index];
     object['name'] = name;
-    arrayTechName.push(object);    
+    arrayTechName.push(object);
   }
   return arrayTechName;
 }
@@ -21,7 +21,7 @@ function techList(techs, name) {
 // Desafio 11
 function sizeArray(list) {
   let size = false;
-  
+
   if (list.length === 11) {
     size = true;
   }
@@ -69,30 +69,22 @@ function generatePhoneNumber(array) {
   let positiveNumberUnit = limitNumbers(array);
   let frequentNumbers = repeatedNumber(array);
   let noPhoneNumber = 'não é possível gerar um número de telefone com esses valores';
-  let phoneNumber = [];
+  let phoneNumber = ['(', '', '', ')', '_', '', '', '', '', '', '-', '', '', '', '',];
+  let position = 0;
 
   if (sizeNumbers === false) {
     return noPhoneNumber;
-  } else if ( positiveNumberUnit === false) {
+  } else if (positiveNumberUnit === false) {
     return noPhoneNumber;
   } else if (frequentNumbers === true) {
     return noPhoneNumber;
   } else {
-    for (let index = 0; index < array.length; index += 1) {
-      if (index === 0){
-        phoneNumber.push('(');
-        phoneNumber.push(array[index]);
-      } else if (index === 1) {
-        phoneNumber.push(array[index]);
-        phoneNumber.push(')');
-      } else if (index === 2) {
-        phoneNumber.push(' ');
-        phoneNumber.push(array[index]);
-      } else if (index === 6) {
-        phoneNumber.push(array[index]);
-        phoneNumber.push('-');
-      } else {
-        phoneNumber.push(array[index]);
+    for (let index = 0; index < 14; index += 1) {
+      if (phoneNumber[index] === '_') {
+        phoneNumber[index] = '';
+      } else if (phoneNumber[index] === '') {
+        phoneNumber[position] = array[position];
+        position += 1
       }
     }
     return phoneNumber.join('');
