@@ -24,26 +24,53 @@ function createObject(techName,name) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  //let phoneNumber = '(' + numbers.slice(0,2) + ') ' + numbers.slice(2,7) + '-' + numbers.slice(7,11);
-  //return phoneNumber.replace(/\,/g, '');
-//}
-
-//Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, generatePhoneNumber deverá retornar a string "não é possível gerar um número de telefone com esses valores".
-//function checkNumberConditions(numbers) {
- // if (numbers.length !== 11) {
-   // return 'Array com tamanho incorreto.'
-  //}
-
-  //for (let index = 0; index < numbers.length; index +=1) {
-    //if (numbers[index] < 0 || numbers[index] > 9 || numbers[index]) {
-      //return 'não é possível gerar um número de telefone com esses valores'
-    //}
-  //}
-
-  
+  if (arraySize(numbers) === false) {
+    return 'Array com tamanho incorreto.';
+  } else if (checkNumbers(numbers) === false) {
+    return 'não é possível gerar um número de telefone com esses valores'
+  } else {
+    let phoneNumber = '(' + numbers.slice(0,2) + ') ' + numbers.slice(2,7) + '-' + numbers.slice(7,11);
+    return phoneNumber.replace(/\,/g, '');
+  }
 }
 
-//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1,1]));
+function checkNumbers(numbers) {
+  let numberValues = true;
+  let repetitionCondition = true;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] < 0 || numbers [index] > 9) {
+      numberValues = false;
+    }
+    let numberRepetitions = 0;
+    for (let index2 = 0; index2 < numbers.length; index2 += 1) {
+      if (numbers[index] === numbers[index2]) {
+        numberRepetitions += 1;
+      }
+    }
+    if (numberRepetitions >= 3) {
+      repetitionCondition = false;
+    }
+  }
+
+
+
+  let finalCondition = true;
+  if (numberValues === true && repetitionCondition === true) {
+    finalCondition = true
+  } else {
+    finalCondition = false; 
+    
+  }
+  return finalCondition;
+}
+
+function arraySize(number) {
+  let numberSize = true;
+  if (number.length !== 11) {
+    numberSize = false;
+  }
+  return numberSize;
+}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
