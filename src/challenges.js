@@ -13,7 +13,7 @@ function splitSentence(phrase) {
 }
 // Desafio 4 -FEITO
 function concatName(arrayName) {
-  return arrayName[arrayName.length - 1].concat(", " + arrayName[0]);
+  return arrayName[arrayName.length - 1].concat(', ' + arrayName[0]);
 }
 // Desafio 5 -FEITO
 function footballPoints(wins, ties) {
@@ -24,15 +24,15 @@ function footballPoints(wins, ties) {
 function highestCount(numberArray) {
   let highestNumber = 0;
   let highestNumberCount = 0;
-for(let index = 0; index < numberArray.length; index+=1){
+for (let index = 0; index < numberArray.length; index += 1){
   if(highestNumber < numberArray[index]){
-   highestNumber = numberArray[index];
+  highestNumber = numberArray[index];
   }
 }
-for(let index2 = 0; index2 < numberArray.length; index2+=1){
-  if(highestNumber === numberArray[index2]){
+for (let index2 = 0; index2 < numberArray.length; index2 += 1){
+  if (highestNumber === numberArray[index2]){
     highestNumberCount = highestNumberCount + 1;
-  }else{
+  } else {
     highestNumberCount+=0;
   }
 }
@@ -44,38 +44,38 @@ function catAndMouse(mouse, cat1, cat2) {
  let cat1Distance = 0;
  let cat2Distance = 0;
  let result = 0;
- if(mouse >= cat1){
+ if (mouse >= cat1){
   cat1Distance = (mouse - cat1);
- }else{
-   cat1Distance = (cat1 - mouse);
+ } else {
+  cat1Distance = (cat1 - mouse);
  }
- if(mouse >= cat2){
+ if (mouse >= cat2){
   cat2Distance = (mouse - cat2);
- }else{
+ } else {
    cat2Distance = (cat2 - mouse);
  }
- if(cat1Distance === cat2Distance){
+ if (cat1Distance === cat2Distance){
   result = 'os gatos trombam e o rato foge';
- }else if(cat1Distance<cat2Distance){
-   result = 'cat1';
- }else{
-   result = 'cat2';
+ } else if (cat1Distance<cat2Distance){
+  result = 'cat1';
+ } else {
+  result = 'cat2';
  }
  return result
 }
 
-// Desafio 8 -FEITO 
+// Desafio 8 -FEITO
 function fizzBuzz(arrayFizzBuzz) {
-  secondArray=[];
-  for(index=0; index<arrayFizzBuzz.length; index+=1){
-    if(arrayFizzBuzz[index]%3===0 && arrayFizzBuzz[index]%5===0){
-      secondArray.push('fizzBuzz')
-    }else if(arrayFizzBuzz[index]%5===0){
-      secondArray.push('buzz')
-    }else if (arrayFizzBuzz[index]%3===0){
-      secondArray.push('fizz')
-    }else{
-      secondArray.push('bug!')
+  secondArray = [];
+  for (index = 0; index < arrayFizzBuzz.length; index += 1){
+    if (arrayFizzBuzz[index]%3 === 0 && arrayFizzBuzz[index]%5 === 0){
+      secondArray.push('fizzBuzz');
+    } else if (arrayFizzBuzz[index]%5 === 0){
+      secondArray.push('buzz');
+    } else if (arrayFizzBuzz[index]%3 === 0){
+      secondArray.push('fizz');
+    } else {
+      secondArray.push('bug!');
     }
   }
   return secondArray

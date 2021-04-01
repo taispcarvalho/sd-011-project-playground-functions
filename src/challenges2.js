@@ -11,30 +11,25 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"]
 // Desafio 11
 function generatePhoneNumber(numberPhone) {
   let numberOrganized = "(";
-  let result = 0;
   let count = 0;
 
-  for(index = 0; index<numberPhone.length; index+=1){
+  for(index = 0; index < numberPhone.length; index+=1){
     for(index2 = 1; index<numberPhone.length; index+=1){
       if(numberPhone[index] === numberPhone[index2]){
       count += 1;
       }
     }
     if(count >= 3){
-      result = "não é possível gerar um número de telefone com esses valores";
+      numberOrganized= "não é possível gerar um número de telefone com esses valores";
       break;
     } 
     if(numberPhone.length !== 11){
-      result = "Array com tamanho incorreto.";
+      numberOrganized = "Array com tamanho incorreto.";
       break;
-    }else{
-      result=numberOrganized;
     }
     if(numberPhone[index]<0 || numberPhone[index]>9){
-      result ="não é possível gerar um número de telefone com esses valores";
+      numberOrganized ="não é possível gerar um número de telefone com esses valores";
       break;
-    }else{
-      result = numberOrganized;
     }
     if(index === 2){
     numberOrganized += ')';
@@ -44,7 +39,7 @@ function generatePhoneNumber(numberPhone) {
    }
    numberOrganized += numberPhone[index];
   }
-return result
+return numberOrganized
 }
 
 // Desafio 12
