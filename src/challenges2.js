@@ -2,15 +2,15 @@
 function techList(technology, name) {
   let orderedListObjects = [];
   let ordered = technology.sort();
-  for (let index in ordered) {
-    if (Object.prototype.hasOwnProperty.call(ordered, index) && ordered !== 0) {
+  if (Object.keys(ordered).length !== 0 && ordered.constructor !== Object) {
+    for (let index in ordered) {
       orderedListObjects[index] = {
         tech: ordered[index],
-        name: { name },
+        name,
       };
-    } else {
-      return 'Vazio!';
     }
+  } else {
+    return 'Vazio!';
   }
   return orderedListObjects;
 }
