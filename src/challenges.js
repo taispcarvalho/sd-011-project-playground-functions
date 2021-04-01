@@ -2,8 +2,6 @@
 function compareTrue(valorA, valorB) {
   return valorA && valorB;
 }
-//    [Chamada] Desafio 1
-console.log(compareTrue(true, 0));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -14,7 +12,7 @@ function calcArea(base, height) {
 function splitSentence(string) {
   return string.split(' '); // string.split() (Stackoverflow): https://pt.stackoverflow.com/questions/204346/como-pegar-uma-palavra-dentro-de-uma-string-frase-em-node-js
 }
-console.log(splitSentence('oi tudo bem'));
+
 // Desafio 4
 function concatName(array) {
   let [u, p] = [array[array.length - 1], array[0]]; // Destructure Assignment (MDN): https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#trocando_vari%C3%A1veis
@@ -30,7 +28,6 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-
 function highestNumber(array) {
   let h = 0;
   for (let i = 0; i < array.length; i += 1) {
@@ -58,13 +55,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2P = Math.abs(mouse - cat2);
   let string;
 
-  if (cat1P < cat2P)
+  if (cat1P < cat2P) {
     string = 'cat1';
-  else if (cat2P < cat1P)
+  } else if (cat2P < cat1P) {
     string = 'cat2';
-  else
+  } else {
     string = 'os gatos trombam e o rato foge';
-  
+  }
   return string;
 }
 
