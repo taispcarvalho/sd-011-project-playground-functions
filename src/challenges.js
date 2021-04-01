@@ -42,9 +42,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = Math.abs(mouse - cat1);
   let distanciaCat2 = Math.abs(mouse - cat2);
 
- if (distanciaCat1 === distanciaCat2) return 'os fatos trombam e o rato foge';
+  if (distanciaCat1 === distanciaCat2) return 'os gatos trombam e o rato foge';
 
- return distanciaCat1 < distanciaCat2 ? 'cat1' : 'cat2'; // ? é um condicional
+  return distanciaCat1 < distanciaCat2 ? 'cat1' : 'cat2'; // ? é um condicional
 }
 
 // Desafio 8
