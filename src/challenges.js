@@ -14,7 +14,7 @@ function calcArea(base, height) {
 function splitSentence(string) {
   return string.split(' '); // Stackoverflow: https://pt.stackoverflow.com/questions/204346/como-pegar-uma-palavra-dentro-de-uma-string-frase-em-node-js
 }
-console.log(splitSentence('oi tudo bem'))
+console.log(splitSentence('oi tudo bem'));
 // Desafio 4
 function concatName(array) {
   let [u, p] = [array[array.length - 1], array[0]]; // Destructure Assignment: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#trocando_vari%C3%A1veis
@@ -30,25 +30,28 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
-  let c = 0;  
-  let h = highestNumber(array);
-  for (let i = 0; i<array.length; i+=1) {
-    if (array[i] === h)
-    c+=1;
-  }
-  return c;
-}
 
-function highestNumber (array) {
+function highestNumber(array) {
   let h = 0;
-  for (let i = 0; i<array.length; i+=1) {
-    if (array[i] > array[i+1] && array[i] > h)
-    h = array[i];
-    else if (array[i]< array[i+1] && array[i+1] > h)
-    h = array[i+1];
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] > array[i+ 1] && array[i] > h) {
+      h = array[i];
+    } else if (array[i]< array[i+ 1] && array[i+ 1]> h) {
+        h = array[i+ 1];
+    }
   }
   return h;
+}
+
+function highestCount(array) {
+  let c = 0;
+  let h = highestNumber(array);
+  for (let i = 0; i< array.length; i+= 1) {
+    if (array[i] === h) {
+      c+= 1;
+    }
+  }
+  return c;
 }
 
 // Desafio 7
