@@ -66,22 +66,13 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-
 function fizzBuzz(array) {
   let answer = [];
   for (let i = 0; i < array.length; i += 1) {
     let fizz = array[i] % 3 === 0 && array[i] % 5 !== 0;
     let buzz = array[i] % 5 === 0 && array[i] % 3 !== 0;
     let fizzbuzz = array[i] % 5 === 0 && array[i] % 3 === 0;
-    if (fizz) {
-      answer[i] = 'fizz';
-    } else if (buzz) {
-      answer[i] = 'buzz';
-    } else if (fizzbuzz) {
-      answer[i] = 'fizzBuzz';
-    } else {
-      answer[i] = 'bug!';
-    }
+    fizz ? answer[i] = 'fizz' : buzz ? answer[i] = 'buzz' : fizzbuzz ? answer[i] = 'fizzBuzz' : answer[i] = 'bug!'; // conditional operator (stackoverflow): https://stackoverflow.com/questions/6259982/how-do-you-use-the-conditional-operator-in-javascript
   }
   return answer;
 }
