@@ -10,7 +10,7 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"]
 "Lucas"))
 // Desafio 11
 function generatePhoneNumber(numberPhone) {
-  let numberOrganized = "("
+  let numberOrganized = "(";
   let result = 0;
   let count = 0;
 
@@ -28,21 +28,21 @@ function generatePhoneNumber(numberPhone) {
       result = "Array com tamanho incorreto.";
       break;
     }else{
-      result=numberOrganized
+      result=numberOrganized;
     }
     if(numberPhone[index]<0 || numberPhone[index]>9){
       result ="não é possível gerar um número de telefone com esses valores";
       break;
     }else{
-      result = numberOrganized
+      result = numberOrganized;
     }
     if(index === 2){
-    numberOrganized += ')'
+    numberOrganized += ')';
    }
    if(index === 6){
-     numberOrganized +='-'
+     numberOrganized += '-';
    }
-   numberOrganized +=numberPhone[index];
+   numberOrganized += numberPhone[index];
   }
 return result
 }

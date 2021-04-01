@@ -4,36 +4,36 @@ function compareTrue(boo1, boo2) {
 }
 // Desafio 2 -FEITO
 function calcArea(base, height) {
-  return (base * height)/2
+  return (base * height) / 2;
 }
 // Desafio 3 -FEITO
 function splitSentence(phrase) {
   let arrayPhrase = phrase.split(' ');
   return arrayPhrase;
 }
-// Desafio 4 -FEITO 
+// Desafio 4 -FEITO
 function concatName(arrayName) {
-  return arrayName[arrayName.length -1].concat(", " + arrayName[0]);
+  return arrayName[arrayName.length - 1].concat(", " + arrayName[0]);
 }
 // Desafio 5 -FEITO
 function footballPoints(wins, ties) {
-  let points=(wins * 3)+ ties;
+  let points = (wins * 3) + ties;
   return points;
 }
-// Desafio 6 -FEITO 
+// Desafio 6 -FEITO
 function highestCount(numberArray) {
-  let highestNumber= 0;
-  let highestNumberCount=0;
-for(let index = 0; index<numberArray.length; index+=1){
-    if(highestNumber<numberArray[index]){
-        highestNumber=numberArray[index]
-    }
+  let highestNumber = 0;
+  let highestNumberCount = 0;
+for(let index = 0; index < numberArray.length; index+=1){
+  if(highestNumber < numberArray[index]){
+   highestNumber = numberArray[index];
+  }
 }
-for(let index2 = 0; index2<numberArray.length; index2+=1){
-  if(highestNumber===numberArray[index2]){
-     highestNumberCount=highestNumberCount + 1;
+for(let index2 = 0; index2 < numberArray.length; index2+=1){
+  if(highestNumber === numberArray[index2]){
+    highestNumberCount = highestNumberCount + 1;
   }else{
-      highestNumberCount+=0;
+    highestNumberCount+=0;
   }
 }
 
