@@ -53,12 +53,12 @@ function catAndMouse(mouse, cat1, cat2) {
 function numberDivisor(number) {
   let newString = '';
 
-  if (number % 3 === 0) {
-    newString = 'fizz';
+  if (number % 15 === 0) {
+    newString = 'fizzBuzz';
   } else if (number % 5 === 0) {
     newString = 'buzz';
-  } else if (number % 15 === 0) {
-    newString = 'fizzBuzz';
+  } else if (number % 3 === 0) {
+    newString = 'fizz';
   } else {
     newString = 'bug!';
   }
@@ -72,6 +72,11 @@ function fizzBuzz(array) {
   }
   return formattedArray;
 }
+
+console.log(fizzBuzz([2, 15,7,9,45]));
+console.log(fizzBuzz([7,9]));
+console.log(fizzBuzz([9,25]));
+
 
 // Desafio 9
 function encode(str) {
