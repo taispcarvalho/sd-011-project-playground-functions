@@ -1,19 +1,3 @@
-function techList(array, name) {
-  let test = [];
-  if (array.length <= 0) {
-    return 'Vazio!';
-  }
-  for (let index = 0; index < array.length; index += 1) {
-    test.push = ({
-      tech: array[index],
-      pessoa: name,
-    }
-    );
-  }
-  return test;
-}
-
-// Desafio 11
 function numeroZeroNove(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < 0 || array[index] > 9) {
@@ -38,20 +22,20 @@ function repeticaoNumero(array) {
 }
 
 function generatePhoneNumber(array) {
-  if (array.length !== 11) {
+  
+  if (array.length > 11) {
     return 'Array com tamanho incorreto.';
+  }
+  if (!numeroZeroNove(array) || !repeticaoNumero(array)) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
   if (array.length === 11) {
     let primeiroNUmero = ('(' + array[0] + array[1]);
     let numeroMeio = (') ' + array[2] + array[3] + array[4] + array[5] + array[6]);
     let ultimoNumero = (' - ' + array[7] + array[8] + array[9] + array[10]);
-    return (primeiroNUmero + numeroMeio + ultimoNumero);
-  }
-  if (!numeroZeroNove(array) || repeticaoNumero(array)) {
-    return 'não é possível gerar um número de telefone com esses valores';
+    console.log(primeiroNUmero + numeroMeio + ultimoNumero);
   }
   return generatePhoneNumber(array);
 }
-
-let arraydeteste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(arraydeteste));
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 2];
+console.log(generatePhoneNumber(array));
