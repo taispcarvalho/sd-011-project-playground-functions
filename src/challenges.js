@@ -51,10 +51,10 @@ function catAndMouse(mouse, cat1, cat2) {
     cat2 = mouse - cat2;
   }
   if (cat1 > mouse) {
-    cat1 = cat1 - mouse;
+    cat1 -= mouse;
   }
   if (cat2 > mouse) {
-    cat2 = cat2 - mouse;
+     cat2 -= mouse;
   }
   if (cat1 < cat2 && cat1 !== cat2) {
     return 'cat1';
@@ -62,9 +62,8 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat2 < cat1 && cat2 !== cat1) {
     return 'cat2';
   }
-    return 'os gatos trombam e o rato foge';
-  }
-console.log(catAndMouse(20,10,19))
+  return 'os gatos trombam e o rato foge';
+}
 
 // Desafio 8
 function fizzBuzz(divArray) {
@@ -81,15 +80,24 @@ function fizzBuzz(divArray) {
   }
   return divArray;
 }
-divArray=[2, 15, 7, 9, 45]
-console.log(fizzBuzz(divArray))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(encondeParam) {
+  var encondeParam = encondeParam.replace(/a/g, "1",);
+  var encondeParam = encondeParam.replace(/e/g, "2",);
+  var encondeParam = encondeParam.replace(/i/g, "3",);
+  var encondeParam = encondeParam.replace(/o/g, "4",);
+  var encondeParam = encondeParam.replace(/u/g, "5",);
+  return encondeParam;
 }
-function decode() {
-  // seu código aqui
+
+function decode(decodeParam) {
+  var decodeParam = decodeParam.replace(/1/g, "a",);
+  var decodeParam = decodeParam.replace(/2/g, "e",);
+  var decodeParam = decodeParam.replace(/3/g, "i",);
+  var decodeParam = decodeParam.replace(/4/g, "o",);
+  var decodeParam = decodeParam.replace(/5/g, "u",);
+  return decodeParam;
 }
 
 module.exports = {
