@@ -34,21 +34,31 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(14,8));
 
 // Desafio 6
-/*function highestCount(numbers) {
-  if (numbers[0] > numbers[1]) {
-    let highest =  numbers[0];
-    for (index = 2; index < numbers.length; index += 1) {
-      if (numbers[index] > highest) {
-        return numbers[index];
-  } else {
-    let highest =  numbers[1];
-    for (index = 2; index < numbers.length; index += 1) {
-      if (numbers[index] > highest) {
-       return numbers[index];
+function highestCount(numbers) {
+  var ammount = 0;
+  let highest = highestNumber(numbers);
+  for (index2 = 0; index2 < numbers.length; index2 += 1) {
+    if ( highest === (numbers[index2])) {
+      ammount += 1;
+    }
   }
-}*/
+  return ammount;
+}
 
-console.log(highestCount([2, 1, 3]));
+function highestNumber(numbers) {
+  let storeHigher = 0;
+  if (numbers[0] > numbers[1]) {
+    storeHigher = numbers[0];
+  } else {
+    storeHigher = numbers[1];
+  }
+  for (index = 2; index < numbers.length; index += 1) {
+    if (storeHigher < numbers[index]) {
+      storeHigher = numbers[index];
+    }
+  }return storeHigher;
+}
+console.log(highestCount([1, 2, 7, 23, 23, 23, 5, 7, 11]));
 
 // Desafio 7
 function catAndMouse([mouse, cat1, cat2]) {
@@ -63,12 +73,12 @@ function catAndMouse([mouse, cat1, cat2]) {
 console.log(catAndMouse([1, 4, 3]));
 
 // Desafio 8
-/*function fizzBuzz(numbers) {
+function fizzBuzz(numbers) {
 for (index = 0; index < numbers.length; index += 1) {
   if (numbers[index] % 3 === 0 || numbers[index] % 5) {
    }
  } 
-}*/
+}
 
 // Desafio 9
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/joinfunction encode() {
@@ -92,7 +102,6 @@ for (index = 0; index < numbers.length; index += 1) {
       return assembSentence.join('');
   }
   console.log(encode('hoje vai chover'));
-
 
 function decode(sentence) {
   var originalSentence = [];
