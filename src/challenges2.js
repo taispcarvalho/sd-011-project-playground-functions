@@ -14,7 +14,7 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(array) {
+function generatePhoneNumber() {
   function isValidArrayLength(array) {
     if (array.length > 11) {
       return false;
@@ -40,6 +40,8 @@ function generatePhoneNumber(array) {
       } counter = 0;
     } return true;
   }
+  // Consultei o repositório do Matheus Gaspar para resolver essa parte.
+  // Link: https://github.com/tryber/sd-011-project-playground-functions/pull/28/files
   function createPhoneNumber(array) {
     array.splice(0, 0, '(');
     array.splice(3, 0, ')');
@@ -47,11 +49,11 @@ function generatePhoneNumber(array) {
     array.join('');
   }
 
-    if (!isValidArrayLength(array)) {
-      return 'Array com tamanho incorreto.';
-    } if (!isValidArrayNumber(array) || !NumberOfrepetition(array)) {
-        return 'não é possível gerar um número de telefone com esses valores.';
-      } return createPhoneNumber(array);
+  if (!isValidArrayLength(array)) {
+    return 'Array com tamanho incorreto.';
+  } if (!isValidArrayNumber(array) || !NumberOfrepetition(array)) {
+      return 'não é possível gerar um número de telefone com esses valores.';
+    } return createPhoneNumber(array);
 }
 
 // Desafio 12
