@@ -18,6 +18,7 @@ function checkSize(array) {
   }
   return true;
 }
+
 function checkValidity(array) {
   let counter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   for (let index = 0; index < array.length; index += 1) {
@@ -31,6 +32,7 @@ function checkValidity(array) {
   }
   return true;
 }
+
 function generatePhoneNumber(tel) {
   if (!checkSize(tel)) {
     return 'Array com tamanho incorreto.';
@@ -54,6 +56,7 @@ function checkLine(main, sideA, sideB) {
   }
   return true;
 }
+
 function triangleCheck(lineA, lineB, lineC) {
   if (!checkLine(lineA, lineB, lineC)) {
     return false;
@@ -68,8 +71,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function getSum(array) {
+  let sum = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    sum += array[index];
+  }
+  return sum;
+}
+
+function hydrate(string) {
+  let regex = /\d+/g;
+  let stringDrinks = string.match(regex);
+  let numbersDrinks = stringDrinks.map(Number);
+  let water = getSum(numbersDrinks);
+  return `${water} copos de água`;
 }
 
 module.exports = {
