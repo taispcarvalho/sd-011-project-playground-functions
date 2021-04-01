@@ -19,56 +19,9 @@ let person = 'Lucas';
 console.log(techList(arrayTechs, person));
 
 // Desafio 11
-function countRepeaterNumber(array) {
-  let count = 1;
-  for (let index = 0; index < array.length; index += 1) {
-    let save = array[index];
-    for (let num in array) {
-      if (save === array[num]) {
-        count += 1;
-      }
-    }
-  }
-  return count;
+function generatePhoneNumber() {
+  // seu código aqui
 }
-
-function transformPhoneNumber(array) {
-  let savePhone = '';
-  for (let index = 0; index < array.length; index += 1) {
-    if (index === 0) { 
-      savePhone += `( ${array[index]}${array[index + 1]})`;
-    } if (index === 6) {
-      savePhone += `${array[index]}-`;
-    }
-    savePhone += array[index];
-  }
-  return savePhone;
-}
-
-function checkPossibleNumber(array) {
-  let possibleStr = false;
-  let countStorage = countRepeaterNumber(array);
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] < 0 || array[index] > 9 || countStorage >= 3) {
-      possibleStr = true;
-    }
-  }
-  return possibleStr;
-}
-
-function generatePhoneNumber(array) {
-  let phone = transformPhoneNumber(array);
-  let possible = checkPossibleNumber(array);
-  if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  } if (possible === true) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-  return phone;
-}
-
-let numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(numberArray));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
