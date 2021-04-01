@@ -76,6 +76,16 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+
+function verifyItem(item, object) {
+  for (let j in object) {
+    if (item === j) {
+      return object[j];
+    }
+  }
+  return item;
+}
+
 function encode(word) {
   let encoded = '';
   let codes = {
@@ -86,40 +96,22 @@ function encode(word) {
     u: '5',
   };
   for (let i = 0; i < word.length; i += 1) {
-    for (let j in codes) {
-      if (word[i] === j) {
-        encoded += codes[j];
-      }
-    }
-    if (!encoded[i]) {
-      encoded += word[i];
-    }
+    encoded += verifyItem(word[i], codes);
   }
   return encoded;
 }
 
 function decode(word) {
   let decoded = '';
+  let codes = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
   for (let i = 0; i < word.length; i += 1) {
-    switch (word[i]) {
-      case '1':
-        decoded = `${decoded}a`;
-        break;
-      case '2':
-        decoded = `${decoded}e`;
-        break;
-      case '3':
-        decoded = `${decoded}i`;
-        break;
-      case '4':
-        decoded = `${decoded}o`;
-        break;
-      case '5':
-        decoded = `${decoded}u`;
-        break;
-      default:
-        decoded += word[i];
-    }
+    decoded += verifyItem(word[i], codes);
   }
   return decoded;
 }
