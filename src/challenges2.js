@@ -105,7 +105,6 @@ function hydrate(drinks) {
   return `${countDrinks(drinks)} copos de água`;
 }
 
-
 module.exports = {
   generatePhoneNumber,
   techList,
