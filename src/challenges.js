@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(valorA, valorB) {
-  return valorA && valorB;
+  return valorA && valorB; // Aula ao Vivo na Trybe
 }
 
 // Desafio 2
@@ -66,8 +66,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let answer = [];
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
+      answer[i] = 'fizz';
+    } else if (array[i] % 5 === 0 && array[i] % 3 !== 0) {
+      answer[i] = 'buzz';
+    } else if (array[i] % 5 === 0 && array[i] % 3 === 0) {
+      answer[i] = 'fizzBuzz';
+    } else {
+      answer[i] = 'bug!';
+    }
+  }
+  return answer;
 }
 
 // Desafio 9
