@@ -30,7 +30,6 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrNum) {
-
   arrNum.sort();
   let count = 0;
 
@@ -46,7 +45,6 @@ function highestCount(arrNum) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-
   let whoCatches;
   let cat1Pos = Math.abs(cat1 - mouse);
   let cat2Pos = Math.abs(cat2 - mouse);
@@ -64,10 +62,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrNum) {
-
   let result = [];
-  for (let index = 0; index < arrNum.length; index += 1) {
 
+  for (let index = 0; index < arrNum.length; index += 1) {
     if (arrNum[index] % 5 === 0 && arrNum[index] % 3 === 0) {
       result.push('fizzBuzz');
     } else if (arrNum[index] % 5 === 0) {
@@ -86,7 +83,6 @@ function encode(words) {
   let arrVowels = words.split('');
 
   for (let index = 0; index < words.length; index += 1) {
-
     switch (arrVowels[index]) {
       case 'a':
         arrVowels[index] = 1;
@@ -114,11 +110,9 @@ function encode(words) {
 }
 
 function decode(words) {
-
   let arrVowels = words.split('');
 
   for (let index = 0; index < words.length; index += 1) {
-
     switch (arrVowels[index]) {
       case '1':
         arrVowels[index] = 'a';
