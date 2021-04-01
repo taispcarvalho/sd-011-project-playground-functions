@@ -63,7 +63,6 @@ function boo3(lineA, lineB, lineC) {
   }
 }
 
-
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   return boo1(lineA, lineB, lineC) && boo2(lineA, lineB, lineC) && boo3(lineA, lineB, lineC);
