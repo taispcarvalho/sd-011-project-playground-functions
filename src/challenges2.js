@@ -5,7 +5,7 @@ function techList(list, name) {
   }
 
   let result = [];
-  result = result.sort();
+  list = list.sort();
   for (let technology of list) {
     result.push({
       tech: technology,
@@ -17,9 +17,12 @@ function techList(list, name) {
 console.log(techList(['A', 'B', 'C'], 'José'));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto';
+  }
 }
+console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9]));
 
 // Desafio 12
 function triangleCheck() {
