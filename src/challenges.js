@@ -96,113 +96,23 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encodeA(string) {
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 'a') {
-      string[index] = '1';
-    }
-  }
-  return string;
-}
-
-function encodeE(string) {
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 'e') {
-      string[index] = '2';
-    }
-  }
-  return string;
-}
-
-function encodeI(string) {
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 'i') {
-      string[index] = '3';
-    }
-  }
-  return string;
-}
-
-function encodeO(string) {
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 'o') {
-      string[index] = '4';
-    }
-  }
-  return string;
-}
-
-function encodeU(string) {
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 'u') {
-      string[index] = '5';
-    }
-  }
-  return string;
-}
-
-function decode1(string) {
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === '1') {
-      string[index] = 'a';
-    }
-  }
-  return string;
-}
-
-function decode2(string) {
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === '2') {
-      string[index] = 'e';
-    }
-  }
-  return string;
-}
-
-function decode3(string) {
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === '3') {
-      string[index] = 'i';
-    }
-  }
-  return string;
-}
-
-function decode4(string) {
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === '4') {
-      string[index] = 'o';
-    }
-  }
-  return string;
-}
-
-function decode5(string) {
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === '5') {
-      string[index] = 'u';
-    }
-  }
-  return string;
-}
-
 function encode(string) {
-  encodeA(string);
-  encodeE(string);
-  encodeI(string);
-  encodeO(string);
-  encodeU(string);
+  string = string.replace(/a/g, '1');
+  string = string.replace(/e/g, '2');
+  string = string.replace(/i/g, '3');
+  string = string.replace(/o/g, '4');
+  string = string.replace(/u/g, '5');
   console.log(string);
 }
 
 encode('macaco louco idiota pede ajuda e corre');
 
 function decode(string) {
-  decode1(string);
-  decode2(string);
-  decode3(string);
-  decode4(string);
-  decode5(string);
+  string = string.replace(/1/g, 'a');
+  string = string.replace(/2/g, 'b');
+  string = string.replace(/3/g, 'c');
+  string = string.replace(/4/g, 'd');
+  string = string.replace(/5/g, 'e');
   console.log(string);
 }
 
