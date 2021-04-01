@@ -9,23 +9,7 @@ function calcArea(base, heigth) {
 }
 
 // Desafio 3
-function splitSentence(frase) {
-  let pherase = '';
-  let result = [];
- 
-  for (let cont in frase) {
-    if (frase[cont]!== '') {
-      pherase += frase[cont];
-    } else {
-      result.push(pherase);
-      pherase = '';
-    }
-    if (cont === frase.length-1) {
-      result.push(pherase);
-      pherase = '';
-    }
-  }
-  return result;
+function splitSentence() {
 }
 // Desafio 4
 function concatName() {
@@ -43,8 +27,16 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let positionCat1 = 5
+  let positionCat2 = 3
+  if (positionCat1 > positionCat2){
+    return "cat1"
+  }else if (positionCat2 > positionCat1) {
+    return "cat2"
+  }else {
+    return "Os gatos se trombam e o rato foge. "
+  }
 }
 
 // Desafio 8
