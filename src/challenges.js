@@ -105,12 +105,61 @@ function fizzBuzz(arrayOfNumbers) {
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function soletrando(param1) {
+  let soletrando = param1.split('');
+  return soletrando;
 }
-function decode() {
-  // seu código aqui
+function confereSoletrando(param1) {
+  let string = '';
+  let confere = soletrando(param1);
+  for (let index = 0; index < confere.length; index += 1) {
+    if (param1[index] === 'a') {
+      string += 1;
+    } else if (param1[index] === 'e') {
+      string += 2;
+    } else if (param1[index] === 'i') {
+      string += 3;
+    } else if (param1[index] === 'o') {
+      string += 4;
+    }
+    else if (param1[index] === 'u') {
+      string += 5;
+    } else {
+      string += param1[index];
+    }
+  }
+  return string;
 }
+
+function encode(param1) {
+  return confereSoletrando(param1);
+}
+console.log(encode('hi there!'));
+
+function decode(param1) {
+  // seu código aqui
+  let newString = '';
+  let decoding = encode(param1);
+  for (let index = 0; index < decoding.length; index += 1) {
+    if (param1[index] === 1) {
+      newString += 'a';
+    } else if (param1[index] === 2) {
+      newString += 'e';
+    } else if (param1[index] === 3) {
+      newString += 'i';
+    } else if (param1[index] === 4) {
+      newString += 'o';
+    }
+    else if (param1[index] === 5) {
+      newString += 'u';
+    } else {
+      newString += param1[index];
+    }
+  }
+  return newString;
+}
+
+console.log(decode('hi there!'));
 
 module.exports = {
   calcArea,
