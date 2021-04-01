@@ -17,10 +17,14 @@ function splitSentence(splitPhase) {
 // Desafio 4
 
 function concatName(nameArray) {
-  let formatedString = nameArray[nameArray.length - 1] + ',' + nameArray[0];
+  let formatedString = `${nameArray[nameArray.length - 1]}, ${nameArray[0]}`;
 
   return formatedString;
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -34,13 +38,12 @@ function highestCount() {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse - cat1 === mouse - cat2){
+  if (mouse - cat1 === mouse - cat2) {
     return 'os gatos trombam e o rato foge';
   } else if (mouse - cat1 > mouse - cat2) {
     return 'cat1';
-  } else {
+  } 
     return 'cat2';
-  }
 }
 // Desafio 8
 function fizzBuzz() {
