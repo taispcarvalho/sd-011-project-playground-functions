@@ -1,6 +1,5 @@
 // Desafio 10
-function techList(value10) {
-let name = "Julio Cesar";
+function techList(value10, name) {
 let objectTest = {};
 let objectTest2 = [];
 
