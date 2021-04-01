@@ -11,7 +11,7 @@ function techList(array, name) {
     }
     );
   }
-  return test;
+  return techList(test);
 }
 
 // Desafio 11
@@ -20,7 +20,7 @@ let resultado = '';
   if(array.length !== 11) {
   let resultado =  ('Array com tamanho incorreto.')
   }
-  return resultado;
+  return generatePhoneNumber(resultado);
 }
 
 function numeroZero(array) {
@@ -31,7 +31,7 @@ generatePhoneNumber(array);
     resultado ('não é possível gerar um número de telefone com esses valores');
     }
   }
-  return resultado;
+  return numeroZero(resultado);
 }
 
 function numeroNove(array) {
@@ -42,7 +42,7 @@ generatePhoneNumber(array);
     let resultado = ('não é possível gerar um número de telefone com esses valores');
     }
   }
-  return resultado
+  return numeroNove(resultado);
 }
 
 function maiorValor(array) {
@@ -58,14 +58,15 @@ for (let index of array) {
     let resultado = ('não é possível gerar um número de telefone com esses valores');
     }
   }
-  return resultado
+  return maiorValor(resultado)
 }
 
-function generatePhoneNumber(array) {
-
-  return ('(' + array[0] + array[1] + ')' + array[2]+ array[3]+ array[4]+ array[5]+ array[6] + ' - '+ array[7]+ array[8]+ array[9]+ array[10]+ array[11]);
+function numeroTelefone(array) {
+let numeroDeTelefone = generatePhoneNumber(array);
+  let numeroDeTelefone = ('(' + array[0] + array[1] + ')' + array[2]+ array[3]+ array[4]+ array[5]+ array[6] + ' - '+ array[7]+ array[8]+ array[9]+ array[10]+ array[11]);
+  return numeroDeTelefone;
 }
-  console.log(generatePhoneNumber(array));
+  console.log(generatePhoneNumber([[3, 2, 6, 5, 8, 9, 7, 8]]));
 
 // Desafio 12 - ok
 function triangleCheck(lineA, lineB, lineC) {
@@ -73,7 +74,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let triaB = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
   let triaC = lineC < lineB + lineA && lineC > Math.abs(lineB - lineA);
   
-  return triaA || triaB || triaC;
+  return triangleCheck(triaA || triaB || triaC);
 }
 console.log(triangleCheck(10, 6, 2));
 
@@ -90,7 +91,7 @@ function hydrate(string) {
   } else {
     resultado = (somaCopos + ' copo de água');
   }
-  return resultado;
+  return hydrate(resultado);
 }
 console.log(hydrate('1 cerveja'));
 
