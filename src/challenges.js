@@ -16,9 +16,7 @@ function splitSentence(array) {
 
 // Desafio 4
 function concatName(array2) {
-  let first = array2[0];
-  let last = array2[array2.length - 1];
-  return `${last},  ${first}`;
+ return `${array2[array2.length - 1]}, ${array2[0]}`;
 }
 
 // Desafio 5
@@ -55,10 +53,18 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumber) {
   let retornar = [];
+  
   for (let index in arrayNumber) {
-    if (arrayNumber[index] % 15 === 0) retornar.push('fizzBuzz');
-    if (arrayNumber[index] % 3 === 0)  retornar.push('fizz');
-    if (arrayNumber[index] % 5 === 0)  retornar.push('buzz');
+    if (arrayNumber[index] % 15 === 0) {
+    retornar.push('fizzBuzz');
+    }
+    else if (arrayNumber[index] % 3 === 0) {
+      retornar.push('fizz');
+    }
+    else if (arrayNumber[index] % 5 === 0) {
+      retornar.push('buzz'); 
+    }
+      else
       retornar.push('bug!');
     }
   return retornar;
