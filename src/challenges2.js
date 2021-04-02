@@ -116,7 +116,22 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+  let addThem = 0;
+  let reg = /\d+/g;
+
+  let nums = words.match(reg);
+  let outWords = '';
+
+  for (let index = 0; index < nums.length; index += 1) {
+    addThem += parseInt(nums[index]);
+  }
+  
+  if (addThem === 1) {
+    outWords = `${addThem} copo de água`;
+  } else {
+    outWords = `${addThem} copos de água`;
+  }
+  return outWords;
 }
 
 module.exports = {
