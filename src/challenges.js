@@ -19,7 +19,7 @@ function splitSentence(string) {
 function concatName(array) {
   let primeiroNome = array[0];
   let ultimoNome = array[array.length - 1];
-  let fullname = `ultimoNome${', '}primeiroNome`;
+  let fullname = `${ultimoNome}, ${primeiroNome}`;
   return fullname;
 }
 
