@@ -23,6 +23,7 @@ function techList(arrTechNames, name1) {
 
 // Desafio 11
 function generatePhoneNumber(arrNum) {
+  //check numbers validity
   function checkArrNum(arr) {
     let count = 0;
     let repeat1 = [];
@@ -87,6 +88,7 @@ function generatePhoneNumber(arrNum) {
       }
     }
   }
+  // runs number validity checker
   if (checkArrNum(arrNum2) === true) {
     formNum = 'não é possível gerar um número de telefone com esses valores';
   }

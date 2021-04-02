@@ -17,7 +17,7 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(arrWords) {
-  let arrWords2 = arrWords[arrWords.length - 1] + ', ' + arrWords[0];
+  let arrWords2 = `${arrWords[arrWords.length - 1]}, ${arrWords[0]}`;
   return arrWords2;
 }
 
