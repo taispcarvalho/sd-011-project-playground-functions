@@ -49,10 +49,10 @@ function highestCount(listaDeNumeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if ((cat1 - mouse) > (cat2 - mouse)) {
+  if (cat1 > cat2) {
     return (cat2);
   }
-  if ((cat2 - mouse) > (cat1 - mouse)) {
+  if (cat2 > cat1) {
     return (cat1);
   }
 
