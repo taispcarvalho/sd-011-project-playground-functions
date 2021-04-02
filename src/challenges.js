@@ -18,11 +18,11 @@ function splitSentence(string) {
 function concatName(arrayString) {
   let firstItem = arrayString[0];
   let lastItem = arrayString[arrayString.leght - 1];
-  return firstItem.concat(lastItem);
+  return lastItem.concat(firstItem);
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
 }
 
