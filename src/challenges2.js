@@ -65,11 +65,21 @@ console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
+function testSmaller(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
-    if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
-      return true;
-    }
+    return true;
+  }
+  return false;
+}
+function testBigger(lineA, lineB, lineC) {
+  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+    return true;
+  }
+  return false;
+}
+function triangleCheck(lineA, lineB, lineC) {
+  if (testSmaller(lineA, lineB, lineC) && testBigger(lineA, lineB, lineC)) {
+    return true;
   }
   return false;
 }
