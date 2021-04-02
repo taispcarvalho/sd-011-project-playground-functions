@@ -34,7 +34,7 @@ function checkNum(checkArray) {
   for (let checkIndex = 0; checkIndex < checkArray.length; checkIndex += 1) {
     let check = checkArray[checkIndex];
     if (check < 0 || check > 9 || countNum(checkArray, check) > 2) {
-      return 'não é possível gerar um número de telefone com esses valores.';
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 }
@@ -43,7 +43,7 @@ function generatePhoneNumber(array) {
   let regexNum = /(\d{2})(\d{5})(\d{4})/;
   let genNum = '';
   let check = checkNum(array);
-  
+
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
