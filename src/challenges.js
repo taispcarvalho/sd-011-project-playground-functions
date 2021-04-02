@@ -61,8 +61,9 @@ function fizzBuzz(array) {
       mathResult.push('buzz');
     } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       mathResult.push('fizzBuzz');
-    } else 
+    } else {
       mathResult.push('bug!');
+    }
   }
   return mathResult;
 }
