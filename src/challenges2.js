@@ -34,7 +34,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(str) {
   let waterCups = str.match(/\d+/g).reduce((acc, cur) => acc + parseInt(cur, 10), 0);
-  return `${waterCups} copo${waterCups > 1 && 's'} de água`;
+  return `${waterCups} ${waterCups < 2 ? 'copo' : 'copos'} de água`;
 }
 
 module.exports = {
