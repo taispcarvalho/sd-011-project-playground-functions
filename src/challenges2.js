@@ -42,7 +42,7 @@ function hydrate(a) {
     numbers += Number(replaced[i]);
   }
   if (numbers === 1) {
-    return `1 copo de água`;
+    return '1 copo de água';
   }
   return `${numbers} copos de água`;
 }
