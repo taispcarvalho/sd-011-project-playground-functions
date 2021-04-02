@@ -42,10 +42,7 @@ function checkConsecutive(array) {
   }
 }
 
-function generatePhoneNumber(array) {
-  length(array);
-  check0to9(array);
-  checkConsecutive(array);
+function phoneNumber(array) {
   if (message === 'OK') {
     let phoneNumber = `(${array[0]}${array[1]}) `;
     for (let index = 2; index < 7; index += 1) {
@@ -57,10 +54,22 @@ function generatePhoneNumber(array) {
     }
     return phoneNumber;
   }
+}
+
+function generatePhoneNumber(array) {
+  length(array);
+  if (message !== 'OK') {
+    return message
+  }
+  check0to9(array);
+  checkConsecutive(array);
+  if (message === 'OK') {
+    return phoneNumber(array);
+  }
   return message;
 }
 
-console.log((generatePhoneNumber([5, 5, 5, 3, 2, 2, 1, 1, 9, 7, 4])));
+console.log((generatePhoneNumber([5, 5, 5, 3, 2, 2, 1, 1, 6, 6, 7])));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
