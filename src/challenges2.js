@@ -43,8 +43,7 @@ function lineTest2(l1, l2, l3) {
 }
 
 function triangleCheck(lineA, lineB, lineC) {
-  if (!lineTest1(lineA, lineB, lineC)) { return false; }
-  if (!lineTest2(lineA, lineB, lineC)) { return false; }
+  if (!lineTest1(lineA, lineB, lineC) || !lineTest2(lineA, lineB, lineC)) { return false; }
   return true;
 }
 
