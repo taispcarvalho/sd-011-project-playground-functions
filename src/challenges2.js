@@ -13,8 +13,6 @@ function techList(arrayTech, name) {
   }
   return newArrayTech;
 }
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
-console.log(techList([], 'Lucas'));
 
 // Desafio 11
 function checkRepeat(value, phone) {
@@ -57,12 +55,6 @@ function generatePhoneNumber(phone) {
   }
   return generateNumber;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10]));
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function testSmaller(lineA, lineB, lineC) {
@@ -86,7 +78,6 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate(drinks) {
@@ -103,8 +94,6 @@ function hydrate(drinks) {
   }
   return glassesOfWater;
 }
-console.log(hydrate('1 cerveja'));
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
