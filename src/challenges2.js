@@ -1,10 +1,5 @@
 // Desafio 10
-// function checkForEmptyArray(array) {
-
-// }
-
 function techList(array, nome) {
-  // checkForEmptyArray(array);
   if (array.length === 0) {
     return 'Vazio!';
   }
@@ -15,17 +10,52 @@ function techList(array, nome) {
       tech: array[index],
       name: nome,
     };
-
     finalObject[index] = insideForObject;
   }
   return finalObject;
 }
 
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function repeatedNumber(checkNumber, checkNumberOut) {
+  let repeat = 0;
+  for (let indexIn = 0; indexIn < checkNumber.length; indexIn += 1) {
+    if (checkNumberOut === checkNumber[indexIn]) {
+      repeat += 1;
+    }
+    if (repeat === 3) {
+      return true;
+    }
+  }
 }
+
+function checkForRepeatedNumbers(number) {
+  for (let index = 0; index < number.length; index += 1) {
+    repeatedNumber(number, number[index]);
+    if (number[index] < 0 || number[index] > 9 || repeatedNumber(number, number[index]) === true) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return true;
+}
+
+function checkPhoneNumber(number) {
+  if (number.length !== 11) {
+    return 'Array com tamanho incorreto';
+  }
+  let answer = checkForRepeatedNumbers(number);
+  return answer;
+}
+
+function generatePhoneNumber(array) {
+  if (checkPhoneNumber(array) === true) {
+    array = array.join('');
+    let answer = `(${array.substring(0, 2)}) ${array.substring(2, 7)}-${array.substring(7, 11)}`;
+    return answer;
+  }
+  return checkPhoneNumber(array);
+}
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
