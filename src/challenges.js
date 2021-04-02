@@ -28,7 +28,7 @@ function highestCount(valores) {
   let arrumado = valores.sort();
   let maior = arrumado[arrumado.length - 1];
   let quanVezes = 0;
-  for (let index = 0; index <= valores.length - 1; index++) {
+  for (let index = 0; index <= valores.length - 1; index += 1) {
     if (valores[index] === maior) {
       quanVezes++;
     } 
@@ -50,17 +50,19 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 function fizzBuzz(numeros) {
-  let arrayresposta = [0];
-  arrayresposta.pop();
-  for (let cont = 0;cont <= numeros.length - 1;cont++) {
+  for (let cont = 0;cont <= numeros.length - 1;cont += 1) {
     if (numeros[cont] % 3 === 0 && numeros[cont] % 5 === 0) {
-      arrayresposta.push("fizzBuzz");
+      numeros.splice(cont, cont, numeros[cont],"fizzBuzz");
+      //numeros.push("fizzBuzz");
     } else if (numeros[cont] % 3 === 0 && numeros[cont] % 5 !== 0) {
-      arrayresposta.push("fizz");
+      //arrayresposta.push("fizz");
+      numeros.splice(cont, cont, numeros[cont],"fizz");
     } else if (numeros[cont] % 3 !== 0 && numeros[cont] % 5 === 0) {
-      arrayresposta.push("buzz");
+      ///arrayresposta.push("buzz");
+      numeros.splice(cont, cont, numeros[cont],"buzz");
     } else {
-      arrayresposta.push("bug!");
+      //arrayresposta.push("bug!");
+      numeros.splice(cont, cont, numeros[cont],"bug!");
     }
   }
   return (arrayresposta);
