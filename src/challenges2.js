@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(array, name) {
+function techList(array, nome) {
   // Criação de variáveis para armazenar info
   let newArr = [];
   let objNew = {};
@@ -12,9 +12,9 @@ function techList(array, name) {
   // Criação do conteudo do objNew
   for (let i = 0; i < array.length; i += 1) {
     objNew = {
-    tech: array[i],
-    name: name
-    }
+      tech: array[i],
+      name: nome,
+    };
     newArr.push(objNew);
   }
   return newArr;
