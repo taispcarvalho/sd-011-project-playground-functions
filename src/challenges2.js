@@ -3,14 +3,14 @@ function techList(techs, name) {
   let arrayTechName = [];
   let orderedTechs = techs.sort();
 
-  if (techs == '') {
+  if (techs.length === 0) {
     return 'Vazio!';
   }
 
-  for (let index in orderedTechs) {
+  for (let index = 0; index < orderedTechs.length; index +=1) {
     let object = {};
-    object['tech'] = orderedTechs[index];
-    object['name'] = name;
+    object.tech = orderedTechs[index];
+    object.name = name;
     arrayTechName.push(object);
   }
   return arrayTechName;
@@ -46,15 +46,17 @@ function limitNumbers(list) {
 function repeatedNumber(list) {
   let repeated = false;
 
-  for (let index of list) {
+  for (let index = 0; index < list.length; index += 1) {
     let count = 0;
-    for (let number of list) {
-      if (list[index] === number) {
+    for (let number = index + 1; number <= list.length; number += 1) {
+      // if (list[index] === list[number]) {
+      //   count += 1;
+      // }
+      if (count === 2) {
+        repeated = true;
+      } else if (list[index] === list[number]) {
         count += 1;
       }
-    }
-    if (count === 3) {
-      repeated = true;
     }
   }
   return repeated;
@@ -147,25 +149,26 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return isTriangle;
 }
-console.log(triangleCheck(10, 14, 8));
-console.log(triangleCheck(10, 14, 50));
+// console.log(triangleCheck(10, 14, 8));
+// console.log(triangleCheck(10, 14, 50));
 
 // Desafio 13
 function hydrate(str) {
   let drinks = str.match(/\d+/g);
-  let numbersDrink =[];
+  let numbersDrink = [];
   let glassWater = 0;
+  let singlePlural;
   
-  for (let index =0; index < drinks.length; index += 1) {
+  for (let index = 0; index < drinks.length; index += 1) {
     numbersDrink.push(+drinks[index]);
     glassWater += numbersDrink[index];
   }
-  if (glassWater < 2){
-    return glassWater + ' copo de água';
+  if (glassWater < 2) {
+    glassWater += ' copo de água';
   } else {
-    return glassWater + ' copos de água';
+    glassWater += ' copos de água';
   }
-  
+  return glassWater;
 }
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 console.log(hydrate('1 cachaça'));
