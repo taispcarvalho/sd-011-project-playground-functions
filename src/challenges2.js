@@ -7,11 +7,12 @@ function techList(nome,lista) {
     return ("'Vazio!'");
   } else {
     for(let index = 0; index <= lista.length - 1; index+= 1) {
-      let objeto = {
+      let arrObj =[objeto = {
           tech: lista[index],
           name: nome
-        }
-    console.log(objeto)
+        }]
+    ///console.log(arrObj);
+    return (arrObj);
       //console.log('"'+objeto.tech +'"' + "\n" + '"'+ objeto.name+ '"');
       }
   }
