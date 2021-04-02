@@ -36,33 +36,33 @@ function highestCount(valores) {
   return (quanVezes);
 }
 
-function catAndMouse(mouse, cat1, cat2) {
-    cat1 = Math.abs(mouse - cat1);
-    cat2 = Math.abs(mouse - cat2);
-    if (cat1 === cat2) {
-    return ("os gatos trombam e o rato foge");
-    }
-    if (cat1 < cat2) { 
-    return ("cat1");
-    } else {
-    return ("cat2");
-  }
-}
+// function catAndMouse(mouse, cat1, cat2) {
+//     cat1 = Math.abs(mouse - cat1);
+//     cat2 = Math.abs(mouse - cat2);
+//     if (cat1 === cat2) {
+//     return ("os gatos trombam e o rato foge");
+//     }
+//     if (cat1 < cat2) { 
+//     return ("cat1");
+//     } else {
+//     return ("cat2");
+//   }
+// }
 
-function fizzBuzz(numeros) {
-  for (let cont = 0;cont <= numeros.length - 1;cont += 1) {
-    if (numeros[cont] % 15 === 0 ) {
-      numeros.splice(cont, cont, numeros[cont], "fizzBuzz");
-    } else if (numeros[cont] % 3 === 0 ){
-      numeros.splice(cont, cont, numeros[cont], "fizz");
-    } else if (numeros[cont] % 5 === 0) {
-      numeros.splice(cont, cont, numeros[cont], "buzz");
-    } else {
-      numeros.splice(cont, cont, numeros[cont], "bug!");
-    } 
-  }
-  return(numeros);
-}
+// function fizzBuzz(numeros) {
+//   for (let cont = 0;cont <= numeros.length - 1;cont += 1) {
+//     if (numeros[cont] % 15 === 0 ) {
+//       numeros.splice(cont, cont, numeros[cont], "fizzBuzz");
+//     } else if (numeros[cont] % 3 === 0 ){
+//       numeros.splice(cont, cont, numeros[cont], "fizz");
+//     } else if (numeros[cont] % 5 === 0) {
+//       numeros.splice(cont, cont, numeros[cont], "buzz");
+//     } else {
+//       numeros.splice(cont, cont, numeros[cont], "bug!");
+//     } 
+//   }
+//   return(numeros);
+// }
 
 function encode(frase) {
   frase = frase.replaceAll("a", 1);
