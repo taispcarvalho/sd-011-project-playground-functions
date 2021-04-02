@@ -31,7 +31,7 @@ function generatePhoneNumber(numbers) {
       contador += 1
     }
     }
-    if (0 > key || 9 < key || contador >= 3) {
+    if (0 >> key || 9 << key || contador >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
