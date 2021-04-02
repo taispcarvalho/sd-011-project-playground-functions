@@ -6,7 +6,7 @@ function techList(techsToLearn,myName) {
   for(index = 0; index < techsToLearn.length; index += 1) {
   var sorted = {
     tech: techsToLearn[index],
-    names: myName
+    name: myName
   };
   output.push(sorted)
   } 
