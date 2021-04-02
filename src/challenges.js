@@ -65,7 +65,7 @@ function fizzBuzz(numeros) {
       numeros.splice(cont, cont, numeros[cont],"bug!");
     }
   }
-  return (arrayresposta);
+  return (numeros);
 }
 
 function encode(frase) {
