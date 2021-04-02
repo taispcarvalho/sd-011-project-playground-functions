@@ -39,7 +39,7 @@ function joinNumber(numberArray) {
   phoneTempArray.push((numberArray.slice(2, 7)).join(''));
   phoneTempArray.push((numberArray.slice(7, 11)).join(''));
 
-  return `(${phoneTempArray[0]})${phoneTempArray[1]}-${phoneTempArray[2]}`;
+  return `(${phoneTempArray[0]})' '${phoneTempArray[1]}-${phoneTempArray[2]}`;
 }
 
 // part of Desafio 11
