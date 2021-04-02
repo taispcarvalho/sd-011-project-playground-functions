@@ -66,7 +66,7 @@ function fizzBuzz(array8) {
       array8[i] = 'fizz';
       break;
     case array8[i] % 5 === 0:
-      array8[i] = 'Buzz';
+      array8[i] = 'buzz';
       break;
     default:
       array8[i] = 'bug!';
