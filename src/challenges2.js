@@ -21,9 +21,14 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let existence = false;
+  if (Math.abs(lineA + lineB > lineC || lineA + lineC > lineB || lineB + lineC > lineA)) {
+    existence = true;
+  }
+  return existence;
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
