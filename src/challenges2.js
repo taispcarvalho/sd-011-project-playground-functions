@@ -4,11 +4,11 @@
 // Objects: https://www.w3schools.com/js/js_objects.asp
 function techList(tech, name) {
   let result = [];
-  let list = tech.sort(); // 'list' recieve 'tech sorted'
+  let list = tech.sort(); // 'list' recieve 'tech' sorted
 
   if (list.length !== 0) { // if list.length diffent from zero, it's ok to continue
     for (let i = 0; i < list.length; i += 1) {
-      result.push({ tech: list[i], name }); // just print the object
+      result.push({ tech: list[i], name }); // just print the object in a for loop
     }
   } else result = 'Vazio!';
 
@@ -42,12 +42,14 @@ function generatePhoneNumber(phone) {
 }
 
 // Desafio 12
+// References:
+// Math.abs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function triangleCheck(lineA, lineB, lineC) {
   let result = false; // if it's boolean, always start at false if you wanna true as result
   let lines = []; // empty array
   lines.push(Math.abs(lineA), Math.abs(lineB), Math.abs(lineC)); // just add the parameters to the array
   // test if one side is smaller than the sum of the others sides
-  // and if this side is bigger than the subtration of the others sides
+  // and if this side is bigger than the subtraction of the others sides
   if (lines[0] < (lines[1] + lines[2]) && lines[0] > (lines[1] - lines[2])) {
     if (lines[1] < (lines[0] + lines[2]) && lines[1] > (lines[0] - lines[2])) {
       if (lines[2] < (lines[0] + lines[1]) && lines[2] > (lines[0] - lines[1])) {
@@ -62,17 +64,19 @@ function triangleCheck(lineA, lineB, lineC) {
 // References:
 // Find numbers in strings: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
 // RegExp g Modifier (/g): https://www.w3schools.com/jsref/jsref_regexp_g.asp
+// Template Literals: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+// Legacy References (not used anymore):
 // Removing unnecessary zeros: https://stackoverflow.com/questions/3612744/remove-insignificant-trailing-zeros-from-a-number
 // parseInt(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+// Number(): https://www.w3schools.com/jsref/jsref_number.asp
 // toString(): https://www.w3schools.com/jsref/jsref_tostring_number.asp
 // Missing Radix Parameter: https://stackoverflow.com/questions/7818903/jslint-says-missing-radix-parameter
-// Template Literals: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 function hydrate(words) {
   let numbers = words.replace(/[^0-9]/g, ''); // A technique used to find the numbers inside a string with the addition of /g to search they all
-  let result = 0;
+  let result = ''; // after some tests, I delete the necessity of convert to number and just add a empty string to 'result', which has an even better result
 
   for (let i = 0; i < numbers.length; i += 1) {
-    result += parseInt(numbers[i], 10); // it's not really necessary, but converting to integer eliminates the annoying zero before numbers
+    result += numbers[i]; // after the tests, I don't need to use any method here anymore
   }
 
   if (result <= 1) {

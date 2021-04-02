@@ -22,15 +22,16 @@ function splitSentence(word) {
 // Desafio 4
 // References:
 // Template Literals: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-// Ways to declare string: https://www.digitalocean.com/community/tutorials/how-to-work-with-strings-in-javascript
-// Print the Last Item in Arrays: https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array
-function concatName(arrayText) {
-  return `${arrayText[arrayText.length - 1]}, ${arrayText[0]}`;
+// Ways to declare strings: https://www.digitalocean.com/community/tutorials/how-to-work-with-strings-in-javascript
+// Print the Last Item in Arrays (also works in Strings): https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array
+function concatName(text) {
+  return `${text[text.length - 1]}, ${text[0]}`;
 }
 
 // Desafio 5
+// Technically, it's (wins * 3) + (ties * 1), but basic math abbreviation
 function footballPoints(wins, ties) {
-  return (wins * 3) + ties; // technically, it's (wins * 3) + (ties * 1), but basic math abreviation
+  return (wins * 3) + ties;
 }
 
 // D6 Auxiliary Function
@@ -55,6 +56,7 @@ function highestCount(numbers) {
 // Desafio 7
 // Who has the smaller distance, wins
 // Math.abs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+// Modulus, aka Absolute Value: https://en.wikipedia.org/wiki/Absolute_value
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(cat1 - mouse); // Math.abs is like math's modulus, not return negative numbers
   let distCat2 = Math.abs(cat2 - mouse);
@@ -94,8 +96,6 @@ function fizzBuzz(numbers) {
   return result;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
 // References:
 // .replace: https://www.w3schools.com/jsref/jsref_replace.asp
@@ -110,6 +110,7 @@ function encode(word) {
   }
   return word;
 }
+
 function decode(word) {
   for (let i = 0; i < word.length; i += 1) {
     word = word
