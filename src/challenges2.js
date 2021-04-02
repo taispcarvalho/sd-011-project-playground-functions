@@ -7,12 +7,11 @@ function techList(array, name) {
   for (let index = 0; index < array.length; index += 1) {
     test.push = ({
       tech: 'NomeTech',
-      n0me: name,
-    }
-    );
+      nome: name,
+    });
     test.tech.sort();
   }
-  return test;
+  return array;
 }
 
 // Desafio 11
