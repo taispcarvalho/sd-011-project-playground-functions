@@ -17,7 +17,7 @@ function techList(technology, name) {
 
 // Desafio 11
 function invalidNumberAnalyzer(arrayNumbers) {
-  if (arrayNumbers.length < 2000) {
+  if (arrayNumbers.length !== 11) {
     return true;
   }
   return false;
@@ -55,8 +55,16 @@ function generatePhoneNumber(arrayOfNumbers) {
     newPhoneNumber = newPhoneNumber.toString();
     newPhoneNumber = newPhoneNumber.replace(/,/g, '');
     return newPhoneNumber;
+  } else {
+    switch (validatorSize === true || validatorRepeat === true) {
+      case validatorSize:
+        return "Array com tamanho incorreto.";
+        break;
+      case validatorRepeat:
+        return "não é possível gerar um número de telefone com esses valores";
+        break;
+    }
   }
-  return 'não é possível gerar um número de telefone com esses valores';
 }
 
 // Desafio 12
