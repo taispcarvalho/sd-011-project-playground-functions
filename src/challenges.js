@@ -7,12 +7,12 @@ function calcArea(base, altura) {
   return (areaTriangulo);
 }
 
-function splitSentence(frase){
+function splitSentence(frase) {
   let separado = frase.split(' ');
   return (separado);
 }
 
-function concatName(lista){
+function concatName(lista) {
   let primPos = lista[0];
   let ultPos = lista[lista.length - 1];
   let resposta = ultPos.concat(', ', primPos);
@@ -40,47 +40,47 @@ function catAndMouse(mouse, cat1, cat2) {
   cat1 = Math.abs(mouse - cat1);
   cat2 = Math.abs(mouse - cat2);
   if (cat1 === cat2) {
-    return ("os gatos trombam e o rato foge");
+    return ('os gatos trombam e o rato foge');
   }
   if (cat1 < cat2) { 
-    return ("cat1");
+    return ('cat1');
   } else {
-    return ("cat2");
+    return ('cat2');
   }
 }
 
 function fizzBuzz(numeros) {
-  //let arrayresposta = [0];
-  //arrayresposta.pop();
   for (let index = 0;index <= numeros.length - 1;index += 1 ) {
     if (numeros[index] % 15 === 0) {
-      numeros[index] = ("fizzBuzz");
-    } else if (numeros[index] % 3 === 0) {
-      numeros[index] = ("fizz");
-    } else if (numeros[index] % 5 === 0) {
-      numeros[index] = ("buzz");
+      numeros[index] = ('fizzBuzz') ; 
+    } 
+    if (numeros[index] % 3 === 0) {
+      numeros[index] = ('fizz');
+    } 
+    if (numeros[index] % 5 === 0) {
+      numeros[index] = ('buzz');
     } else {
-      numeros[index] = ("bug!");
+      numeros[index] = ('bug!');
     }
   }
   return (numeros);
 }
 
 function encode(frase) {
-  frase = frase.replaceAll("a", 1);
-  frase = frase.replaceAll("e", 2);
-  frase = frase.replaceAll("i", 3);
-  frase = frase.replaceAll("o", 4);
-  frase = frase.replaceAll("u", 5);
+  frase = frase.replaceAll('a', 1);
+  frase = frase.replaceAll('e', 2);
+  frase = frase.replaceAll('i', 3);
+  frase = frase.replaceAll('o', 4);
+  frase = frase.replaceAll('u', 5);
   return (frase);
 }
 
 function decode(frase) {
-  frase = frase.replaceAll("1", "a");
-  frase = frase.replaceAll("2", "e");
-  frase = frase.replaceAll("3", "i");
-  frase = frase.replaceAll("4", "o");
-  frase = frase.replaceAll("5", "u");
+  frase = frase.replaceAll('1', 'a');
+  frase = frase.replaceAll('2', 'e');
+  frase = frase.replaceAll('3', 'i');
+  frase = frase.replaceAll('4', 'o');
+  frase = frase.replaceAll('5', 'u');
   return (frase);
 }
 
