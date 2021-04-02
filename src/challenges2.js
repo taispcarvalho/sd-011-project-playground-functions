@@ -1,12 +1,14 @@
 // Desafio 10
 function techList(array, name) {
   // Criação de variáveis para armazenar info
-  let newArr=[];
+  let newArr = [];
   let objNew = {};
   // Checar se o array tem conteudo
   if (array.length === 0) {
     return 'Vazio!';
   }
+  // Colocar em ordem alfabetica
+  array = array.sort(function (a, b) {if (a > b) {return 1;}})
   // Criação do conteudo do objNew
   for (let i = 0; i < array.length; i += 1) {
       objNew = {
@@ -15,8 +17,6 @@ function techList(array, name) {
       }
       newArr.push(objNew);
   }
-  // Colocar em ordem alfabetica
-  newArr = newArr.sort(function (a, b) {if (a.tech > b.tech) {return 1;}})
   return newArr;
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Thyago'));
