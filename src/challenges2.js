@@ -39,10 +39,10 @@ function generatePhoneNumber(array) {
       }
     }
   }
-  if (valorInvalido(array) === true || maisDeTres(array) === true) {
-    return 'não é possível gerar um número de telefone com esses valores'
-  } else if (array.length !== 11) {
+  if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
+  } else if (valorInvalido(array) === true || maisDeTres(array) === true) {
+    return 'não é possível gerar um número de telefone com esses valores'
   } else {
     for (let index = 0; index < array.length; index += 1) {
       telefone += array[index];
