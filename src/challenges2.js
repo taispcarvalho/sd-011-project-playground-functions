@@ -9,7 +9,7 @@ function techList(tech, name) {
     })
   }
   if (tech === []) {
-    console.log('Vazio!');
+    tech = 'Vazio!';
   }
   return novaLista;
 }
