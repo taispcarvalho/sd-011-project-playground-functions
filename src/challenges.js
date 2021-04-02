@@ -44,9 +44,9 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 function fizzBuzz(numeros) {
   let codificado = numeros;
-  for (let index = 0;index <= codificado.length - 1;index += 1 ) {
-    if (codificado[index] % 15 === 0) {
-      codificado[index] = ('fizzBuzz'); 
+  function encoding(codificado){
+      if (codificado[index] % 15 === 0) {
+      codificado[index] = ('fizzBuzz');
     } else if (codificado[index] % 3 === 0) {
       codificado[index] = ('fizz');
     } else if (codificado[index] % 5 === 0) {
@@ -55,7 +55,10 @@ function fizzBuzz(numeros) {
       codificado[index] = ('bug!');
     }
   }
-  return (codificado);
+  for (let index = 0;index <= codificado.length - 1;index += 1) {
+  encoding(codificado);
+  }
+return (codificado);
 }
 function encode(frase) {
   frase = frase.replace(/a/g, 1);
