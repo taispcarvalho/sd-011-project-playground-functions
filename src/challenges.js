@@ -169,24 +169,24 @@ function decode(phrase) {
   let phraseDecode = '';
   for (const key of phrase) {
     switch (key) {
-      case '1':
-        phraseDecode += 'a';
-        break;
-      case '2':
-        phraseDecode += 'e';
-        break;
-      case '3':
-        phraseDecode += 'i';
-        break;
-      case '4':
-        phraseDecode += 'o';
-        break;
-      case '5':
-        phraseDecode += 'u';
-        break;
-      default:
-        phraseDecode += key;
-        break;
+    case '1':
+      phraseDecode += 'a';
+      break;
+    case '2':
+      phraseDecode += 'e';
+      break;
+    case '3':
+      phraseDecode += 'i';
+      break;
+    case '4':
+      phraseDecode += 'o';
+      break;
+    case '5':
+      phraseDecode += 'u';
+      break;
+    default:
+      phraseDecode += key;
+      break;
     }
   }
   return phraseDecode;
