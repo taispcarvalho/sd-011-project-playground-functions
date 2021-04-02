@@ -7,7 +7,7 @@ function techList(techs, name) {
     return 'Vazio!';
   }
 
-  for (let index = 0; index < orderedTechs.length; index +=1) {
+  for (let index = 0; index < orderedTechs.length; index += 1) {
     let object = {};
     object.tech = orderedTechs[index];
     object.name = name;
@@ -49,13 +49,12 @@ function repeatedNumber(list) {
   for (let index = 0; index < list.length; index += 1) {
     let count = 0;
     for (let number = index + 1; number <= list.length; number += 1) {
-      // if (list[index] === list[number]) {
-      //   count += 1;
-      // }
       if (count === 2) {
         repeated = true;
-      } else if (list[index] === list[number]) {
+      } else {
+        if (list[index] === list[number]) {
         count += 1;
+        }
       }
     }
   }
@@ -157,8 +156,7 @@ function hydrate(str) {
   let drinks = str.match(/\d+/g);
   let numbersDrink = [];
   let glassWater = 0;
-  let singlePlural;
-  
+
   for (let index = 0; index < drinks.length; index += 1) {
     numbersDrink.push(+drinks[index]);
     glassWater += numbersDrink[index];
@@ -170,8 +168,8 @@ function hydrate(str) {
   }
   return glassWater;
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
-console.log(hydrate('1 cachaça'));
+// console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+// console.log(hydrate('1 cachaça'));
 
 module.exports = {
   generatePhoneNumber,
