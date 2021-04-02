@@ -20,17 +20,14 @@ function checkIf11Numbers(array) {
 }
 
 function checkRepeatdNumbers(array) {
-  /// cria uma cópia da array reordenada, e não altera a array oiriginal
-  let sortedNumbers = [...array].sort();
-  let count = 0;
-  for (let index = 0; index < sortedNumbers.length - 1; index += 1) {
-    if (count >= 2) return false;
-    if (sortedNumbers[index] === sortedNumbers[index + 1]) count += 1; 
-    else count = 0;
+  // [...variavel] cria uma cópia da array reordenada, e não altera a array oiriginal
+  let sN = [...array].sort();
+  //sN === sortedNumbers
+  for (let ind = 0; ind < sN.length - 1; ind += 1) {
+    if (sN[ind] === sN[ind + 1] && sN[ind] === sN[ind+2]) return false;
   }
   return true;
 }
-
 
 function checkIfBetween0to9(array) {
   for (let index = 0; index < array.length; index += 1) {
