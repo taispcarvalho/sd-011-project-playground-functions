@@ -77,23 +77,23 @@ function encode(array) {
   let output = [];
   for (let n in array) {
     switch (array[n]) {
-      case 'a':
-        output.push(1);  
-        break;
-      case 'e':
-        output.push(2);   
-        break;
-      case 'i':
-        output.push(3);   
-        break;
-      case 'o':
-        output.push(4); 
-        break;
-      case 'u':
-        output.push(5);   
-        break;
-      default:
-        output.push(array[n]); 
+    case 'a':
+      output.push(1);  
+      break;
+    case 'e':
+      output.push(2);   
+      break;
+    case 'i':
+      output.push(3);   
+      break;
+    case 'o':
+      output.push(4); 
+      break;
+    case 'u':
+      output.push(5);   
+      break;
+    default:
+      output.push(array[n]); 
     }
   }
   return output.join('');
@@ -103,23 +103,23 @@ function decode(array) {
   let output = [];
   for (let n in array) {
     switch (array[n]) {
-      case '1':
-        output.push('a');  
-        break;
-      case '2':
-        output.push('e');   
-        break;
-      case '3':
-        output.push('i');   
-        break;
-      case '4':
-        output.push('o'); 
-        break;
-      case '5':
-        output.push('u');   
-        break;
-      default:
-        output.push(array[n]); 
+    case '1':
+      output.push('a');  
+      break;
+    case '2':
+      output.push('e');   
+      break;
+    case '3':
+      output.push('i');   
+      break;
+    case '4':
+      output.push('o'); 
+      break;
+    case '5':
+      output.push('u');   
+      break;
+    default:
+      output.push(array[n]); 
     }
   }
   return output.join('');
