@@ -13,10 +13,10 @@ function splitSentence(string) {
   return string.split(' ');
 }
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(name) {
+  let space = ', ';
+  return name[name.length - 1] + space + name[0];
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
