@@ -39,13 +39,13 @@ function highestCount(valores) {
 function catAndMouse(mouse, cat1, cat2) {
   cat1 = Math.abs(mouse - cat1);
   cat2 = Math.abs(mouse - cat2);
-    if (cat1 === cat2) {
+  if (cat1 === cat2) {
     return ("os gatos trombam e o rato foge");
-    }
-    if (cat1 < cat2) { 
+  }
+  if (cat1 < cat2) { 
     return ("cat1");
-    } else {
-  return ("cat2");
+  } else {
+    return ("cat2");
   }
 }
 
@@ -54,18 +54,18 @@ function fizzBuzz(numeros) {
   //arrayresposta.pop();
   for (let index = 0;index <= numeros.length - 1;index += 1 ) {
     if (numeros[index] % 15 === 0) {
-      numeros[index]=("fizzBuzz");
+      numeros[index] = ("fizzBuzz");
     } else if (numeros[index] % 3 === 0) {
-      numeros[index]=("fizz");
+      numeros[index] = ("fizz");
     } else if (numeros[index] % 5 === 0) {
-      numeros[index]=("buzz");
+      numeros[index] = ("buzz");
     } else {
-      numeros[index]=("bug!");
+      numeros[index] = ("bug!");
     }
   }
   return (numeros);
 }
-  
+
 function encode(frase) {
   frase = frase.replaceAll("a", 1);
   frase = frase.replaceAll("e", 2);
@@ -86,7 +86,7 @@ function decode(frase) {
 
 module.exports = {
   calcArea,
-  catAndMouse,
+    catAndMouse,
   compareTrue,
   concatName,
   decode,
