@@ -39,7 +39,7 @@ function generatePhoneNumber(array) {
   if (array.length > 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (!numeroZeroNove(array) || !repeticaoNumero(array)) {
+  if (!numeroZeroNove(array) || repeticaoNumero(array)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   if (array.length === 11) {
