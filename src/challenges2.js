@@ -61,19 +61,20 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string) {
   // seu código aqui
-  //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt
 
-  //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt
 
-  //https://www.w3schools.com/jsref/jsref_parseint.asp
+  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+
+  // https://www.w3schools.com/jsref/jsref_parseint.asp
   let h2o = 0;
 
   for (let index in string) {
-    if(string[index] === '1' || string[index] === '2' || string[index] === '3' || string[index] === '4' || string[index] === '5' || string[index] === '6' || string[index] === '7' || string[index] === '8' || string[index] === '9' ){
+    if (string[index] === '1' || string[index] === '2' || string[index] === '3' || string[index] === '4' || string[index] === '5' || string[index] === '6' || string[index] === '7' || string[index] === '8' || string[index] === '9') {
       h2o = h2o + parseInt(string[index]);
     }
   }
-  if(h2o === 1){
+  if (h2o === 1) {
     return h2o + ' copo de água';
   } 
     return h2o + ' copos de água';
