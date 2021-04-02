@@ -8,7 +8,10 @@ function techList(techs, name) {
   }
 
   for (let index = 0; index < orderedTechs.length; index += 1) {
-    let object = {};
+    let object = {
+      tech: '',
+      name: '',
+    };
     object.tech = orderedTechs[index];
     object.name = name;
     arrayTechName.push(object);
@@ -51,19 +54,18 @@ function repeatedNumber(list) {
     for (let number = index + 1; number <= list.length; number += 1) {
       if (count === 2) {
         repeated = true;
-      } else {
-        if (list[index] === list[number]) {
+        return repeated;
+      } else if (list[index] === list[number]) {
         count += 1;
-        }
       }
     }
   }
   return repeated;
 }
-// console.log(repeatedNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
-// console.log(repeatedNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-// console.log(repeatedNumber([1, 2, 3, 4, 5, 5, 7, 8, 9, 0, 1]));
-// console.log(repeatedNumber([1, 2, 3, 4, 4, 4, 7, 8, 9, 0, 1]));
+console.log(repeatedNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+console.log(repeatedNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(repeatedNumber([1, 2, 3, 4, 5, 5, 7, 8, 9, 0, 1]));
+console.log(repeatedNumber([1, 2, 3, 4, 4, 4, 7, 8, 9, 0, 1]));
 
 function telephoneNumber(array) {
   let maskPhoneNumber = ['(', '', '', ')', '_', '', '', '', '', '', '-', '', '', '', ''];
