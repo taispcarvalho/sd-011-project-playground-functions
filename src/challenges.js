@@ -3,37 +3,26 @@ function compareTrue(param1, param2) {
   return param1 && param2;
 }
 
-console.log(compareTrue(true, true));
-
 // Desafio 2
 function calcArea(base, altura) {
   return (base * altura) / 2;
 }
-
-console.log(calcArea(5, 2));
 
 // Desafio 3
 function splitSentence(string) {
   return string.split(' ');
 }
 
-console.log(splitSentence('foguete marlon'));
-
 // Desafio 4
-let arrr = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 
 function concatName(arr) {
   return arr[arr.length - 1].concat(', ', arr[0]);
 }
 
-console.log(concatName(arrr));
-
 // Desafio 5
 function footballPoints(wins, ties) {
   return wins * 3 + ties;
 }
-
-console.log(footballPoints(7, 2));
 
 // Desafio 6
 function Repeat(nIndx, n) {
@@ -80,26 +69,27 @@ function catAndMouse(mouse, cat1, cat2) {
   return finish;
 }
 
-console.log(catAndMouse(14, 12, 15));
-
 // Desafio 8
+function checkFb(num) {
+  let result;
+  if ((num % 15) === 0) {
+    result = 'fizzBuzz';
+  } else if ((num % 3) === 0) {
+    result = 'fizz';
+  } else if ((num % 5) === 0) {
+    result = 'buzz';
+  } else result = 'bug!';
+  return result;
+}
+
 function fizzBuzz(number) {
   let result = [];
   for (let index = 0; index < number.length; index += 1) {
-    if ((number[index] % 3) === 0 && (number[index] % 5) === 0) {
-      result.push('fizzBuzz');
-    } else if ((number[index] % 3) === 0) {
-      result.push('fizz');
-    } else if ((number[index] % 5) === 0) {
-      result.push('buzz');
-    } else {
-      result.push('bug!');
-    }
+    result.push(checkFb(number[index]));
   }
   return result;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function retunrArr(s) {
   let arr = [];
@@ -145,7 +135,7 @@ function decode(string) {
   let nStr = '';
 
   for (let index = 0; index < str.length; index += 1) {
-    if (vogal(str[index], false)) {
+    if (vogal(str[index], false) !== false) {
       str[index] = vogal((str[index]), false);
     }
     nStr += str[index];
