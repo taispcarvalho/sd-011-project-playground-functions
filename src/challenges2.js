@@ -5,7 +5,7 @@ function techList(array, name) {
   for (let index = 0; index < array.length; index += 1) {
     test.push({
       tech: array[index],
-      nome: name,
+      name,
     });
   }
   if (array.length === 0) {
