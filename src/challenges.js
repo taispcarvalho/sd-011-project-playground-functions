@@ -85,7 +85,6 @@ console.log(catAndMouse(14, 12, 15));
 // Desafio 8
 function fizzBuzz(number) {
   let result = [];
-
   for (let index = 0; index < number.length; index += 1) {
     if ((number[index] % 3) === 0 && (number[index] % 5) === 0) {
       result.push('fizzBuzz');
@@ -100,8 +99,7 @@ function fizzBuzz(number) {
   return result;
 }
 
-let num = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(num));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function retunrArr(s) {
   let arr = [];
@@ -111,8 +109,14 @@ function retunrArr(s) {
   return arr;
 }
 
-function vogal(l) {
-  let vog = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+function vogal(l, bool) {
+  let vog;
+
+  if (bool === true) {
+    vog = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  } else if (bool === false) {
+    vog = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  }
 
   for (let vIndex in vog) {
     if (vog[vIndex] === l) {
@@ -127,32 +131,27 @@ function encode(string) {
   let nStr = '';
 
   for (let index = 0; index < str.length; index += 1) {
-    if (vogal(str[index]) > 0) {
-      str[index] = vogal(str[index]);
+    if (vogal(str[index], true) > 0) {
+      str[index] = vogal(str[index], true);
     }
     nStr += str[index];
   }
   return nStr;
 }
-console.log(encode('hi there!'));
 
 function decode(string) {
   // seu código aqui
-  let vog = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   let str = retunrArr(string);
   let nStr = '';
+
   for (let index = 0; index < str.length; index += 1) {
-    for (let vIndex in vog) {
-      if (str[index] === vIndex) {
-        str[index] = vog[vIndex];
-      }
+    if (vogal(str[index], false)) {
+      str[index] = vogal((str[index]), false);
     }
     nStr += str[index];
   }
   return nStr;
 }
-
-console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
