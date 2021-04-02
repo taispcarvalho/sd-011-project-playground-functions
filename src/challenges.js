@@ -63,20 +63,14 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  string = string.replace(/a/g, '1');
-  string = string.replace(/e/g, '2');
-  string = string.replace(/i/g, '3');
-  string = string.replace(/o/g, '4');
-  string = string.replace(/u/g, '5');
+  string = string.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4')
+    .replace(/u/g, '5');
   return string;
 }
 
 function decode(string) {
-  string = string.replace(/1/g, 'a');
-  string = string.replace(/2/g, 'e');
-  string = string.replace(/3/g, 'i');
-  string = string.replace(/4/g, 'o');
-  string = string.replace(/5/g, 'u');
+  string = string.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o')
+    .replace(/5/g, 'u');
   return string;
 }
 
