@@ -2,17 +2,21 @@
 function techList(techsToLearn,myName) {
   techToLearn = techsToLearn.sort();
   let output = [];
+  if (techToLearn.length !== 0) {
   for(index = 0; index < techsToLearn.length; index += 1) {
   var sorted = {
     tech: techsToLearn[index],
-    name: myName,
+    names: myName
   };
   output.push(sorted)
   } 
   return output;
+  } else {
+    return 'Vazio!'
+  }
   }
 
-  console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Maran'))
+  console.log(techList([], 'Maran'))
 
 // Desafio 11
 function generatePhoneNumber() {
