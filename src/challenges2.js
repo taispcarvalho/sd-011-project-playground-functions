@@ -48,7 +48,7 @@ function generatePhoneNumber(phoneNumArray) {
     }
     return numberMask;
   }
-  return 'Não é possível gerar um número de telefone com esses valores.';
+  return 'não é possível gerar um número de telefone com esses valores';
 }
 
 // Desafio 12
@@ -78,8 +78,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let r = /\d+/g;
+  let waterCups = 0;
+  let nums = string.match(r).map(Number);
+  for (let num of nums) {
+    waterCups += parseInt(num, 10);
+  }
+  if (waterCups > 1) {
+    return `${waterCups} copos de água`;
+  }
+  if (waterCups === 1) {
+    return `${waterCups} copo de água`;
+  }
 }
 
 module.exports = {
