@@ -1,13 +1,13 @@
 // Desafio 10
-function techList(value, name) {
-  if (value.length === 0) {
+function techList(value, oneName) {
+  if (value.length == 0) {
     return 'Vazio!';
   } else {
     let ret = [];
     for (let index = 0; index < value.length; index += 1) {
       ret[index] = {
         tech: value.sort()[index],
-        name: name,
+        name: oneName,
       };
     }
     return ret;
@@ -16,8 +16,12 @@ function techList(value, name) {
 // Desafio 11
 function generatePhoneNumber(value) {
   if (value.length != 11) {
-    return 'Array com tamanho incorreto.'
+    return 'Array com tamanho incorreto.';
   } else {
+    let contRepeticion = 0;
+    for (let index = 0; index < value.length; index += 1) {
+
+    }
     let ret = '';
     for ()
   }
