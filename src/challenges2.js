@@ -54,7 +54,7 @@ function arraySize(numbers) {
 function combineRepNumb(numbers) {
   let masterCondition = true;
   if (checkRep(numbers) === false || checkNumb(numbers) === false) {
-    masterCondition = false;    
+    masterCondition = false;
   }
   if (checkRep(numbers) === true && checkNumb(numbers) === true) {
     masterCondition = true;
