@@ -67,11 +67,11 @@ function checkArrNum(arr) {
   let invalNum = false;
   
   for (let index1 = 0; index1 < arrNum1.length; index1 += 1) {
+    if (arrNum1[index1] < 0 || arrNum1[index1] > 9) {
+        invalNum = true;
     if (arrNum1[index1] === arrNum1[index1+1]) {
       
       repeat1.push(arrNum1[index1]);
-      if (arrNum1[index1] < 0 || arrNum1[index1] > 9) {
-          invalNum = true;
       }
       for (let index2 = index1; index2 < arrNum1.length; index2 += 1) {
         if (repeat1[repeat1.length-1] === arrNum1[index2]) {
