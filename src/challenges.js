@@ -37,23 +37,15 @@ function highestCount(valores) {
 }
 
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse > cat1) {
-    cat1 = mouse - cat1;
-  } else {
-    cat1 = cat1 - mouse;
-  }
-  if (mouse > cat2) {
-    cat2 = mouse - cat2;
-  } else {
-    cat2 = cat2 - mouse;
-  }
-  if (cat1 === cat2) {
-    return ("os gatos trombam e o rato foge");
-  }
-  if (cat1 < cat2) {
-    return ("cat1");
-  } else {
-    return ("cat2");
+    cat1 = Math.abs(mouse - cat1);
+    cat2 = Math.abs(mouse - cat2);
+    if (cat1 === cat2) {
+      return ("os gatos trombam e o rato foge");
+    }
+    if (diff(cat1,mouse) < diff(cat2,mouse)){ 
+      return ("cat1");
+    } else {
+      return ("cat2");
   }
 }
 
