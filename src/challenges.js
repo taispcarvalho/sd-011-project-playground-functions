@@ -35,8 +35,8 @@ function catAndMouse(mouse, cat1, cat2) {
   cat2 = Math.abs(mouse - cat2);
   if (cat1 === cat2) {
     return ('os gatos trombam e o rato foge');
-  
-  (cat1 < cat2) ? return ('cat1') : return ('cat2');
+  }
+  (cat1 < cat2) ? 'cat1' : 'cat2';
   
 }
 function fizzBuzz(numeros) {
