@@ -85,33 +85,33 @@ function fizzBuzz(parameterFizzBuzz) {
 function encode(phraseEncode) {
   let arrayEncode = [];
   let phraseEncodada = '';
-  for (let index1 in phraseEncode) {
+  for (let index1 = 0; index1 < phraseEncode.length; index1 += 1) {
     arrayEncode.push(phraseEncode[index1]);
   }
 
   for (let index2 in phraseEncode) {
     switch (phraseEncode[index2]){
-      case 'a':
-        arrayEncode[index2] = '1';
-        break;
-      case 'e':
-        arrayEncode[index2] = '2';
-        break;
-      case 'i':
-        arrayEncode[index2] = '3';
-        break;
-      case 'o':
-        arrayEncode[index2] = '4';
-        break;
-      case 'u':
-        arrayEncode[index2] = '5';
-        break;
-      default:
-        break;
+    case 'a':
+    arrayEncode[index2] = 1;
+    break;
+    case 'e':
+    arrayEncode[index2] = 2;
+    break;
+    case 'i':
+    arrayEncode[index2] = 3;
+    break;
+    case 'o':
+    arrayEncode[index2] = 4;
+    break;
+    case 'u':
+    arrayEncode[index2] = 5;
+    break;
+    default:
+    break;
     }
   }
 
-  for (let index3 in arrayEncode) {
+  for (let index3 = 0; index3 < arrayEncode.length; index3 += 1) {
     phraseEncodada += arrayEncode[index3];
   }
 
