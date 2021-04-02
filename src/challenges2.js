@@ -31,13 +31,11 @@ function generatePhoneNumber(numbers) {
       contador += 1
     }
     }
-    if (0 > key | 9 < key | contador >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores'
+    if (0 > key || 9 < key || contador >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  return `(${numbers[0]}${numbers[1]})
-  ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-
-  ${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
+  return `(${numbers[0]}${numbers[1]})${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
 }
 
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 9]));
