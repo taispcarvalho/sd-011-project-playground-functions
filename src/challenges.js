@@ -61,47 +61,40 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbersofArray) {
+function fizzBuzz(numbersOfArray) {
   let arrayFizzBuzz = [];
 
-  for (let index = 0; index < numbersofArray.length; index += 1) {
-    if ((numbersofArray[index] % 15 === 0)) {
+  for (let index = 0; index < numbersOfArray.length; index += 1) {
+    if ((numbersOfArray[index] % 15 === 0)) {
       arrayFizzBuzz.push('fizzBuzz');
-    if (numbersofArray[index] % 5 === 0) {
+    } else if (numbersOfArray[index] % 5 === 0) {
       arrayFizzBuzz.push('buzz');
-    if (numbersofArray[index] % 3 === 0) {
+    } else if (numbersOfArray[index] % 3 === 0) {
       arrayFizzBuzz.push('fizz');
     } else {
       arrayFizzBuzz.push('bug!');
     }
-    return arrayFizzBuzz;
   }
-}
-  }
+  return arrayFizzBuzz;
 }
 
 // Desafio 9
 function encode(string) {
-  string = string.replace('a', '1');
-  string = string.replace('e', '2');
-  string = string.replace('i', '3');
-  string = string.replace('o', '4');
-  string = string.replace('u', '5');
- 
+  string = string.replace(/a/g, '1');
+  string = string.replace(/e/g, '2');
+  string = string.replace(/i/g, '3');
+  string = string.replace(/o/g, '4');
+  string = string.replace(/u/g, '5');
   return string;
 }
 function decode(string) {
-  string = string.replace('1', 'a');
-  string = string.replace('2', 'e');
-  string = string.replace('3', 'i');
-  string = string.replace('4', 'o');
-  string = string.replace('5', 'u');
-
+  string = string.replace(/1/g, 'a');
+  string = string.replace(/2/g, 'e');
+  string = string.replace(/3/g, 'i');
+  string = string.replace(/4/g, 'o');
+  string = string.replace(/5/g, 'u');
   return string;
 }
-
-console.log(encode('hi there!'));
-console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
