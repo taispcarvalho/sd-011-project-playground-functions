@@ -47,7 +47,7 @@ function generatePhoneNumber(array) {
     for (let index = 0; index < array.length; index += 1) {
       telefone += array[index];
       if (index === 1) {
-        telefone += ')';
+        telefone += ') ';
       } else if (index === 6) {
         telefone += '-';
       }
