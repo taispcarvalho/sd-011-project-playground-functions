@@ -51,15 +51,15 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function fizzBuzz(numeros) {
   for (let cont = 0;cont <= numeros.length - 1;cont += 1) {
-    if (numeros[cont] % 3 === 0 && numeros[cont] % 5 === 0) {
+    if (numeros[cont] % 15 === 0 ) {
       numeros.splice(cont, cont, numeros[cont], "fizzBuzz");
-    } else if (numeros[cont] % 3 === 0 && numeros[cont] % 5 !== 0) {
+    } else if (numeros[cont] % 3 === 0 ){
       numeros.splice(cont, cont, numeros[cont], "fizz");
-    } else if (numeros[cont] % 3 !== 0 && numeros[cont] % 5 === 0) {
+    } else if (numeros[cont] % 5 === 0) {
       numeros.splice(cont, cont, numeros[cont], "buzz");
     } else {
       numeros.splice(cont, cont, numeros[cont], "bug!");
-    }
+    } 
   }
   return (numeros);
 }
