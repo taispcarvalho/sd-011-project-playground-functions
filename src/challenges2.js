@@ -81,9 +81,12 @@ function hydrate(drinks) {
   for (let index = 0; index < numbers.length; index += 1) {
     sum += numbers[index];
   }
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  }
   return `${sum} copos de água`;
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+console.log(hydrate('1 cachaça'));
 
 module.exports = {
   generatePhoneNumber,
