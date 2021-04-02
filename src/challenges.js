@@ -48,7 +48,7 @@ function catAndMouse(mouse, cat1, cat2){
     cat2 = Math.abs(cat2 - mouse);
   }
   if (cat1 === cat2){
-    return ("Os gatos trombam e o rato foge");
+    return ("os gatos trombam e o rato foge");
   } else if (cat1 < cat2){
     return ("cat1");
   } else {
@@ -56,15 +56,15 @@ function catAndMouse(mouse, cat1, cat2){
   }
 }
 
-function fizzBuzz(numeros){
+function fizzBuzz(numeros) {
   let arrayresposta = [0];
   arrayresposta.pop();
   for(let cont = 0;cont <= numeros.length - 1;cont++) {
-    if(numeros[cont]%3 == 0 & numeros[cont]%5 == 0) {
+    if(numeros[cont] % 3 === 0 && numeros[cont] % 5 === 0) {
       arrayresposta.push("fizzBuzz");
-    } else if(numeros[cont]%3 == 0 & numeros[cont]%5 !== 0) {
+    } else if(numeros[cont] % 3 === 0 && numeros[cont] % 5 !== 0) {
       arrayresposta.push("fizz");
-    } else if(numeros[cont]%3 !== 0 & numeros[cont]%5 == 0) {
+    } else if(numeros[cont] % 3 !== 0 && numeros[cont] % 5 === 0) {
       arrayresposta.push("buzz");
     } else {
       arrayresposta.push("bug!");
@@ -74,11 +74,11 @@ function fizzBuzz(numeros){
 }
 
 function encode(frase) {
-  frase = frase.replaceAll("a", 1);
-  frase = frase.replaceAll("e", 2);
-  frase = frase.replaceAll("i", 3);
-  frase = frase.replaceAll("o", 4);
-  frase = frase.replaceAll("u", 5);
+  frase = frase.replaceAll("a",1);
+  frase = frase.replaceAll("e",2);
+  frase = frase.replaceAll("i",3);
+  frase = frase.replaceAll("o",4);
+  frase = frase.replaceAll("u",5);
   return (frase);
 }
 function decode(frase){
