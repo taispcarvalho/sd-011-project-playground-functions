@@ -37,7 +37,6 @@ function generatePhoneNumber(arrNum) {
           invalNum = true;
       }
       if (arrNum1[index1] === arrNum1[index1 + 1]) {
-
         repeat1.push(arrNum1[index1]);
 
         for (let index2 = index1; index2 < arrNum1.length; index2 += 1) {
@@ -48,9 +47,7 @@ function generatePhoneNumber(arrNum) {
         repeat1 = newArr1;
 
         if (count < repeat1.length) {
-
           count = repeat1.length;
-
         }
         index1 += repeat1.length - 1; 
         newArr1 = [];
