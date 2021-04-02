@@ -16,30 +16,51 @@ function techList(list, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(array) {
+let message = 'OK';
+
+function length(array) {
   if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';
+    message = 'Array com tamanho incorreto.';
   }
+}
+
+function check0to9(array) {
   const sorted = [...array].sort();
   for (let index = 0; index < 11; index += 1) {
     if (sorted[index] < 0 || sorted[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-    if (sorted[index] === sorted[index + 1] && (sorted[index] === sorted[index + 2])) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      message = 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  let phoneNumber = `(${array[0]}${array[1]}) `;
-  for (let index = 2; index < 7; index += 1) {
-    phoneNumber += array[index];
-  }
-  phoneNumber += '-';
-  for (let index = 7; index < 11; index += 1) {
-    phoneNumber += array[index];
-  }
-  return phoneNumber;
 }
-console.log((generatePhoneNumber([5, 5, 5, 3, 2, 2, 1, 1, 9, 7, 8])));
+
+function checkConsecutive(array) {
+  const sorted = [...array].sort();
+  for (let index = 0; index < 11; index += 1) {
+    if (sorted[index] === sorted[index + 1] && (sorted[index] === sorted[index + 2])) {
+      message = 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+}
+
+function generatePhoneNumber(array) {
+  length(array);
+  check0to9(array);
+  checkConsecutive(array);
+  if (message === 'OK') {
+    let phoneNumber = `(${array[0]}${array[1]}) `;
+    for (let index = 2; index < 7; index += 1) {
+      phoneNumber += array[index];
+    }
+    phoneNumber += '-';
+    for (let index = 7; index < 11; index += 1) {
+      phoneNumber += array[index];
+    }
+    return phoneNumber;
+  }
+  return message;
+}
+
+console.log((generatePhoneNumber([5, 5, 5, 3, 2, 2, 1, 1, 9, 7, 4])));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
