@@ -43,7 +43,7 @@ function hydrate(string) {
   for (let index = 0; index < numbers.length; index += 1) {
     total += numbers[index];
   }
-  return (`${total} copos de água'`);
+  return (`${total} copos de água`);
 }
 console.log(hydrate('1 cachaça'));
 module.exports = {
