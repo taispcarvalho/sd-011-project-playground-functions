@@ -16,7 +16,12 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayString) {
-  return `${arrayString[arrayString.lenght - 1]}, ${arrayString[0]}`; 
+  let firstItem = arrayString[0];
+  let lastItem = arrayString[arrayString.lenght - 1]; 
+  let result = firstItem+ ',' +lastItem;
+
+  return result;
+
 }
 
 // Desafio 5
@@ -28,7 +33,7 @@ function footballPoints(wins, ties) {
 function highestCount(arrayNumber) {
   arrayNumber.sort();
   let highestNumber = arrayNumber[arrayNumber.lenght - 1];
- } // seu código aqui
+ } 
 
 // Desafio 7
 function catAndMouse() {
