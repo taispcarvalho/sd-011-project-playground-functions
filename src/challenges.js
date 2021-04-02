@@ -40,7 +40,7 @@ function highestCount(array) {
   let highest = array[0];
   let count = 0;
 
-  highest = highNum(array);
+  highest = highNum(array); // highest = Math.max(...array); ou highest = Math.max.apply(null, array);
 
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === highest) {
@@ -60,14 +60,16 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function whatWord(num) {
-  if ((num % 3 === 0) && (num % 5 === 0)) return 'fizzBuzz';
+  if (num % 15 === 0) return 'fizzBuzz';
   if (num % 3 === 0) return 'fizz';
   if (num % 5 === 0) return 'buzz';
   return 'bug!';
 }
 
 function fizzBuzz(array) {
-  for (let index = 0; index < array.length; index += 1) array[index] = whatWord(array[index]);
+  for (let index = 0; index < array.length; index += 1) {
+    array[index] = whatWord(array[index]);
+  }
   return array;
 }
 
