@@ -6,7 +6,7 @@ function techList(value, name) {
     let ret = [];
     for (let index = 0; index < value.length; index += 1) {
       ret[index] = {
-        tech: value[index],
+        tech: value.sort()[index],
         name: name,
       };
     }
@@ -17,6 +17,9 @@ function techList(value, name) {
 function generatePhoneNumber(value) {
   if (value.length != 11) {
     return 'Array com tamanho incorreto.'
+  } else {
+    let ret = '';
+    for ()
   }
 }
 
