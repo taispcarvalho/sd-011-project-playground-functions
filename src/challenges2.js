@@ -11,8 +11,6 @@ function techList(array, name) {
   } else return 'Vazio!';
   return (test);
 }
-let n = [];
-console.log(techList(n, 'Lucas'));
 
 // Desafio 11
 function numeroZeroNove(array) {
