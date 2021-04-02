@@ -40,6 +40,7 @@ function checkNum(checkArray) {
 }
 
 function generatePhoneNumber(array) {
+  // Para resolver esta parte, utilizei o conceito de 'Regular expression' com base neste site: https://stackoverflow.com/questions/4338267/validate-phone-number-with-javascript
   let regexNum = /(\d{2})(\d{5})(\d{4})/;
   let genNum = '';
   let check = checkNum(array);
@@ -61,9 +62,19 @@ function generatePhoneNumber(array) {
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let measure1 = Math.abs(lineB + lineC);
+  let measure2 = Math.abs(lineB - lineC);
+  let sum = false;
+
+  if (lineA < measure1 && lineA > measure2) {
+    sum = true;
+  }
+
+  return sum;
 }
+
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
