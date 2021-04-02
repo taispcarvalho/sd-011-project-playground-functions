@@ -103,10 +103,8 @@ function fizzBuzz(list) {
   let resultFizzBuzz = [];
 
   for (let index of list) {
-    // let isFizz = fizz(index);
-    // let isBuzz = buzz(index);
     let isFizzBuzz = fizz(index) + '' + buzz(index);
-    switch(isFizzBuzz) {
+    switch (isFizzBuzz) {
       case 'truetrue':
         resultFizzBuzz.push('fizzBuzz');
         break;
@@ -119,15 +117,6 @@ function fizzBuzz(list) {
       default:
         resultFizzBuzz.push('bug!');
     }
-    // if (isFizz === 'fizz' && isBuzz === 'buzz') {
-    //   resultFizzBuzz.push('fizzBuzz');
-    // } else if (isFizz === 'fizz' && isBuzz !== 'buzz') {
-    //   resultFizzBuzz.push('fizz');
-    // } else if (isFizz !== 'fizz' && isBuzz === 'buzz') {
-    //   resultFizzBuzz.push('buzz');
-    // } else {
-    //   resultFizzBuzz.push('bug!');
-    // }
   }
   return resultFizzBuzz;
 }

@@ -54,8 +54,7 @@ function repeatedNumber(list) {
     for (let number = index + 1; number <= list.length; number += 1) {
       if (count === 2) {
         repeated = true;
-        return repeated;
-
+        break;
       } else if (list[index] === list[number]) {
         count += 1;
       }
