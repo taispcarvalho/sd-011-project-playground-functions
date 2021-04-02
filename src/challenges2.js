@@ -13,10 +13,9 @@ function techList(array, name) {
       });
     }
   }
+  console.log(techList(array, 'Lucas'));
   return array;
 }
-let n = [];
-console.log(techList(n, 'Lucas'));
 
 // Desafio 11
 function numeroZeroNove(array) {
