@@ -19,7 +19,7 @@ function techList(array, myName) {
 }
 
 // Desafio 11
-// Para ajuda nesse desafio, obtive ajuda do Marlon Ramos, ao qual me explicou como criar as funções auxiliares. 
+// Para ajuda nesse desafio, obtive ajuda do Marlon Ramos, ao qual me explicou como criar as funções auxiliares.
 function repeatNumber(numbers, x) {
   let repetidos = 0;
   for (let index = 0; index < numbers.length; index += 1) {
@@ -39,7 +39,7 @@ function numbereleven(number) {
   }
 }
 // Para resolução final obtive ajuda do Marlon e também do Regex
-/** Soucer: https://medium.com/@alexandreservian/regex-um-guia-pratico-para-express%C3%B5es-regulares-1ac5fa4dd39f*/
+/** Soucer: https://medium.com/@alexandreservian/regex-um-guia-pratico-para-express%C3%B5es-regulares-1ac5fa4dd39f */
 function generatePhoneNumber(numberPhone) {
   let arraynumber = '';
   let numbercell = '';
