@@ -66,51 +66,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function osDois (array) {
-  let a ;
-  if ((array % 3 === 0) && (array % 5 === 0)) {
-    a = 'fizzBuzz';
-  }
-  return a;
-}
 
-function tres (array) {
-  let a ;
-  if (array % 3 === 0) {
-    a = 'fizz';
-  }
-  return a;
-}
-
-function cinco (array) {
-  let a ;
-  if (array % 5 === 0) {
-    a = 'buzz';
-  }
-  return a;
-}
-
-function bug (array) {
-  let a;
-  if (array % 5 !== 0 && array % 3 !== 0) {
-    a = 'bug!';
-  }
-  return a;
-}
-
-function fizzBuzz(m) {
-  let r = [];
-  for (let i = 0; i < m.length; i += 1) {
-    if (!(r[i] = osDois(m[i]))) {
-      if (!(r[i] = tres(m[i]))) {
-        if (!(r[i] = cinco(m[i]))) {
-          r[i] = 'bug!';
-          }
-        }
-      }
+function fizzBuzz(array) {
+  let answer = [];
+  for (let i in array) {
+    if (array[i] % 3 === 0) {
+      answer[i] = 'fizz';
+    } else if (array[i] % 5 === 0) {
+      answer[i] = 'buzz';
+    } else {
+      answer[i] = 'bug!';
     }
-  return r;
-}
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      answer[i] = 'fizzBuzz';
+    }
+  }
+  return answer;
+ }
 
 // Desafio 9
 function encode() {
