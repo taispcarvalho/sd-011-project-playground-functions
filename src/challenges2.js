@@ -1,10 +1,5 @@
 // Desafio 10
 function techList(array, name) {
-  for (let index = 0; index < array.length; index += 1) {
-    if (array.length === []) {
-      return 'Vazio!';
-    }
-  }
   if (array.length !== 0) {
     for (let tec of array) {
       array.push({
@@ -12,10 +7,11 @@ function techList(array, name) {
         nome: name,
       });
     }
-  }
-  console.log(techList(array, 'Lucas'));
+  } else return 'Vazio!';
   return array;
 }
+let arr = [1, 20, 5];
+console.log(techList(arr, 'Lucas'));
 
 // Desafio 11
 function numeroZeroNove(array) {
@@ -44,7 +40,7 @@ function generatePhoneNumber(array) {
   if (array.length > 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (!numeroZeroNove(array) || repeticaoNumero(array)) {
+  if (numeroZeroNove(array) || repeticaoNumero(array)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   if (array.length === 11) {
