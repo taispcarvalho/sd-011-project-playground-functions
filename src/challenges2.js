@@ -16,21 +16,20 @@ function techList(arr, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber(arr) {}
+function generatePhoneNumber() {}
 
 // Desafio 12
 function triangleCheck(a, b, c) {
-  let param = [a, b, c];
+  let param = [a, b, c, a, b];
   for (let i = 0; i < 3; i += 1) {
     if (
       param[i] < param[i + 1] + param[i + 2] &&
       param[i] > Math.abs(param[i + 1] - param[i + 2])
     ) {
       return true;
-    } else {
-      return false;
     }
   }
+  return false;
 }
 
 // Desafio 13
@@ -44,9 +43,8 @@ function hydrate(a) {
   }
   if (numbers === 1) {
     return `1 copo de água`;
-  } else {
-    return `${numbers} copos de água`;
   }
+  return `${numbers} copos de água`;
 }
 
 module.exports = {
