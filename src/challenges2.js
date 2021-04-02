@@ -26,7 +26,7 @@ function generatePhoneNumber(arrayD11) {
   // Check for wrong conditions
   switch (true) {
     case arrayD11.length !== 11:
-      return `Array com tamanho incorreto`;
+      return `Array com tamanho incorreto.`;
     case checkNumber (arrayD11):
       return `não é possível gerar um número de telefone com esses valores`;
     default: 
