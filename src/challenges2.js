@@ -1,5 +1,5 @@
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
   let arrayTech = [];
   let items = tech.sort();
@@ -18,7 +18,7 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {
   // seu código aqui
   //https://www.devmedia.com.br/iniciando-expressoes-regulares/6557#:~:text=Express%C3%B5es%20Regulares%20s%C3%A3o%20padr%C3%B5es%20de,sequ%C3%AAncias%20de%20caracteres%20no%20texto.
 
@@ -44,7 +44,7 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   if (lineA <= 0 || lineB <= 0 || lineC <= 0){
     return false;
