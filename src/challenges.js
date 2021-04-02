@@ -19,10 +19,10 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(value) {
   let end = value.length - 1;
-  let name = '${value[end]}, ${value[0]}';
+  let name = value[end] + ', ' + value[0];
   return name;
 }
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+// console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -42,7 +42,7 @@ function higherNumber(numbers) {
   }
   return higher;
 }
-/console.log(higherNumber([0, 4, 4, 4, 9, 2, 1]));
+// console.log(higherNumber([0, 4, 4, 4, 9, 2, 1]));
 
 // Desafio 6
 function highestCount(list) {
@@ -75,20 +75,26 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(1, 0, 3));
 
 function fizz(number) {
+  let numberOrFizz;
+
   if (number % 3 === 0) {
-    return 'fizz';
+    numberOrFizz = true;
   } else {
-    return number;
+    numberOrFizz = false;
   }
+  return numberOrFizz;
 }
 // console.log(fizz(41));
 
 function buzz(number) {
+  let numberOrBuzz;
+
   if (number % 5 === 0) {
-    return 'buzz';
+    numberOrBuzz = true;
   } else {
-    return number;
+    numberOrBuzz = false;
   }
+  return numberOrBuzz;
 }
 // console.log(buzz(41));
 
@@ -97,21 +103,36 @@ function fizzBuzz(list) {
   let resultFizzBuzz = [];
 
   for (let index of list) {
-    let isFizz = fizz(index);
-    let isBuzz = buzz(index);
-    if (isFizz === 'fizz' && isBuzz === 'buzz') {
-      resultFizzBuzz.push('fizzBuzz');
-    } else if (isFizz === 'fizz' && isBuzz !== 'buzz') {
-      resultFizzBuzz.push('fizz');
-    } else if (isFizz !== 'fizz' && isBuzz === 'buzz') {
-      resultFizzBuzz.push('buzz');
-    } else {
-      resultFizzBuzz.push('bug!');
+    // let isFizz = fizz(index);
+    // let isBuzz = buzz(index);
+    let isFizzBuzz = fizz(index) + '' + buzz(index);
+    switch(isFizzBuzz) {
+      case 'truetrue':
+        resultFizzBuzz.push('fizzBuzz');
+        break;
+      case 'truefalse':
+        resultFizzBuzz.push('fizz');
+        break;
+      case 'falsetrue':
+        resultFizzBuzz.push('buzz');
+        break;
+      default:
+        resultFizzBuzz.push('bug!');
     }
+    // if (isFizz === 'fizz' && isBuzz === 'buzz') {
+    //   resultFizzBuzz.push('fizzBuzz');
+    // } else if (isFizz === 'fizz' && isBuzz !== 'buzz') {
+    //   resultFizzBuzz.push('fizz');
+    // } else if (isFizz !== 'fizz' && isBuzz === 'buzz') {
+    //   resultFizzBuzz.push('buzz');
+    // } else {
+    //   resultFizzBuzz.push('bug!');
+    // }
   }
   return resultFizzBuzz;
 }
 // console.log(fizzBuzz([7, 9]));
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 function letterNumber(letter) {
   let options = {
