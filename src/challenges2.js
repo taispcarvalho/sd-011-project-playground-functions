@@ -24,7 +24,7 @@ function checkRepeat(phone) {
       if (phone[indexNumber] === phone[compareNumber]) {
         resp += 1;
       }
-      if (resp >= 2) {
+      if (resp >= 3) {
         return true;
       }
     }
