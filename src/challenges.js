@@ -66,7 +66,7 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 
-function cat1distance(mouse, cat1, cat2) {
+function cat1distance(mouse, cat1) {
   let cat1dist = 0;
   if (cat1 > mouse){
     for (mouse; mouse < cat1; mouse += 1){
@@ -80,7 +80,7 @@ function cat1distance(mouse, cat1, cat2) {
   return cat1dist;
 }
 
-function cat2distance(mouse, cat1, cat2) {
+function cat2distance(mouse, cat2) {
   let cat2dist = 0;
   if (cat2 > mouse){
     for (mouse; mouse < cat2; mouse += 1){
@@ -97,6 +97,8 @@ function cat2distance(mouse, cat1, cat2) {
 
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let cat1dist = cat1distance(mouse, cat1);
+  let cat2dist = cat2distance(mouse, cat2);
   if (cat1dist > cat2dist) {
     return 'cat2'
   } else if (cat1dist < cat2dist) {
