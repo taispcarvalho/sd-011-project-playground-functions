@@ -38,7 +38,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   (cat1 < cat2) ? 'cat1' : 'cat2';
   
-}
+} 
 function fizzBuzz(numeros) {
   for (let index = 0;index <= numeros.length - 1;index += 1) {
     if (numeros[index] % 15 === 0) {
