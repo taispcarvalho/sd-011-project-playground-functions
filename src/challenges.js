@@ -99,13 +99,13 @@ function translator(character, dictionary) {
   for (let key of Object.keys(dictionary)) {
     if (character === key) {
       return dictionary[key];
-    } 
+    }
   }
   return character;
 }
 
 function encode(sentence) {
-  let objectVowels = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  let objectVowels = {a: '1', e: '2', i: '3', o: '4', u: '5'};
   let encodedSentence = '';
 
   for (let index = 0; index < sentence.length; index += 1) {
@@ -114,11 +114,8 @@ function encode(sentence) {
   return encodedSentence;
 }
 
-console.log(encode('hi there!'));
-console.log(decode('h111555 a31'))
-
 function decode(sentence) {
-  let objectNumbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  let objectNumbers = {1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u'};
   let decodedSentence = '';
 
   for (let index = 0; index < sentence.length; index += 1) {
