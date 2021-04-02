@@ -22,9 +22,9 @@ function checkIf11Numbers(array) {
 function checkRepeatdNumbers(array) {
   // [...variavel] cria uma cópia da array reordenada, e não altera a array oiriginal
   let sN = [...array].sort();
-  //sN === sortedNumbers
+  // sN === sortedNumbers
   for (let ind = 0; ind < sN.length - 1; ind += 1) {
-    if (sN[ind] === sN[ind + 1] && sN[ind] === sN[ind+2]) return false;
+    if (sN[ind] === sN[ind + 1] && sN[ind] === sN[ind + 2]) return false;
   }
   return true;
 }
