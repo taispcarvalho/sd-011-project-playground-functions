@@ -15,12 +15,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(arrayString) {
-  let firstItem = arrayString[0];
-  let lastItem = arrayString[arrayString.lenght - 1]; 
-  let result = lastItem + ',' + firstItem;
- 
-  return result;
+function concatName(arrayString1) {
+  let firstItem = arrayString1[0];
+  let lastItem = arrayString1[arrayString1.lenght - 1]; 
+  return lastItem + ', ' + firstItem;
 }
 
 // Desafio 5
@@ -30,9 +28,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayNumber) {
-  arrayNumber.sort();
-  let highestNumber = arrayNumber[arrayNumber.lenght - 1];
- } 
+} 
 
 // Desafio 7
 function catAndMouse() {
