@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(valorA, valorB) {
   if (valorA && valorB === true) {
@@ -26,17 +25,20 @@ function concatName(lista) {
 function footballPoints(wins, ties) {
   return ((wins * 3) + ties);
 }
-
-// Desafio 6
-function highestCount(listaDeNumeros) {
+function getHighestNumber(listaDeNumeros) {
   let maiorNumero = 0;
-  let contador = 0;
   for (let numeroAtual of listaDeNumeros) {
     console.log(numeroAtual);
     if (numeroAtual > maiorNumero) {
       maiorNumero = numeroAtual;
     }
   }
+  return maiorNumero;
+}
+// Desafio 6
+function highestCount(listaDeNumeros) {
+  let contador = 0;
+  const maiorNumero = getHighestNumber(listaDeNumeros);
   for (let numeroAtual of listaDeNumeros) {
     if (numeroAtual === maiorNumero) {
       contador += 1;
