@@ -1,21 +1,23 @@
 // Desafio 10
 function techList(array, name) {
   let test = [];
-  let crescente = array.sort();
-  if (array !== null || array === null) {
-    for (let index of array) {
+  if (array.length !== null || array.length === null) {
+    for (let tec of array) {
       test.push({
-        tech: crescente,
+        tech: tec,
         nome: name,
-      }); return (test);
+      });
     }
-  } return 'Vazio!';
+  } else return 'Vazio!';
+  return (test);
 }
+let n = [];
+console.log(techList(n, 'Lucas'));
 
 // Desafio 11
 function numeroZeroNove(array) {
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] < null || array[index] > 9) {
+    if (array[index] < 0 || array[index] > 9) {
       return false;
     }
   }
@@ -36,7 +38,7 @@ function repeticaoNumero(array) {
 }
 
 function generatePhoneNumber(array) {
-  if (array.length > 11) {
+  if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   if (!numeroZeroNove(array) || repeticaoNumero(array)) {
