@@ -76,7 +76,6 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzbuzzDivision(numberX) {
   let divisors = [15, 5, 3, 1];
   let fizzbuzz = ['fizzBuzz', 'buzz', 'fizz', 'bug!'];
-  
   for (let index = 0; index < divisors.length; index += 1) {
     if (numberX % divisors[index] === 0) {
       return fizzbuzz[index];
@@ -105,7 +104,7 @@ function translator(character, dictionary) {
 }
 
 function encode(sentence) {
-  let objectVowels = {a: '1', e: '2', i: '3', o: '4', u: '5'};
+  let objectVowels = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   let encodedSentence = '';
 
   for (let index = 0; index < sentence.length; index += 1) {
@@ -115,7 +114,7 @@ function encode(sentence) {
 }
 
 function decode(sentence) {
-  let objectNumbers = {1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u'};
+  let objectNumbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   let decodedSentence = '';
 
   for (let index = 0; index < sentence.length; index += 1) {
