@@ -73,18 +73,18 @@ let array6 = [0, 4, 4, 4, 9, 2, 1];
 console.log(highestCount(array6));
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
+function catAndMouse(mouse, cat1, cat2) {
 
 
-  if(Math.abs(cat1-mouse)< Math.abs(cat2-mouse)){
+  if(Math.abs(mouse-cat1)< Math.abs(mouse-cat2)){
     return "cat1";
   }
 
-  else if(Math.abs(cat2-mouse)< Math.abs(cat1-mouse)){
+  else if(Math.abs(mouse-cat2)< Math.abs(mouse-cat1)){
     return "cat2";
   }
   else {
-    return console.log("os gatos trombam e o rato foge");
+    return "os gatos trombam e o rato foge";
   }
 }
 
