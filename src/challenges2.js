@@ -1,7 +1,21 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, names) {
+  if (techArray === 0) {
+    return 'Vazio!';
+  }
+
+  let finalArray = [];
+  let finalArraySort = techArray.sort();
+
+  for (let listTech of finalArraySort) {
+    finalArray.push({
+      tech: listTech,
+      name: names,
+    });
+  }
+  return finalArray;
 }
+// Para o desenvolvimento do código do Desafio 10 utilizei o código do Inacio como inspiração
 
 // Desafio 11
 function generatePhoneNumber() {
