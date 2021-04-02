@@ -63,10 +63,9 @@ function generatePhoneNumber(numbers) {
   }
   if (checkRep(numbers) === false || checkNumb(numbers) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
-  } 
+  }
   if (arraySize(numbers) === true && checkNumb(numbers) === true && checkRep(numbers) === true) {
     let phoneNumber = `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
-    
     return phoneNumber.replace(/\,/g, '');
   }
 }
@@ -108,11 +107,11 @@ function hydrate(string) {
   for (let index = 0; index < numberOfDrinks.length; index += 1) {
     numberOfWaters = numberOfWaters + parseInt(numberOfDrinks[index]);
   }
-
   if (numberOfWaters === 1) {
-    return numberOfWaters + ' copo de água';
-  } else {
-    return numberOfWaters + ' copos de água';
+    return `${numberOfWaters} copo de água`;
+  } 
+  if (numbersOfWaters !== 1) {
+    return `${numberOfWaters} copos de água`;
   }
 }
 
