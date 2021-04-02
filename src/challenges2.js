@@ -68,9 +68,10 @@ function triangleCheck(lineA, lineB, lineC) {
 
   if (lineC < angl1 && lineC > angl2) {
     value = true;
-  } else if (angl1 < lineC && angl2 > lineC) {
-    value = false;
+  } else {
+    return value = false;
   }
+  
   return value;
   // seu código aqui
 }
