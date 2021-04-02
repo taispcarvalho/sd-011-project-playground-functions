@@ -54,7 +54,7 @@ function highestCount(repeatNumber) {
 function catAndMouse(mouse, cat1, cat2) {
   let positionCat1 = Math.abs(mouse - cat1);
   let positionCat2 = Math.abs(mouse - cat2);
-  
+ 
   if (positionCat1 < positionCat2) {
     return 'cat1';
   } if (positionCat2 < positionCat1) {
@@ -65,8 +65,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(parameterFizzBuzz) {
+  let arrayFizzBuzz = []; 
+  for (let index in parameterFizzBuzz){
+    if (parameterFizzBuzz[index] % 3 === 0 && parameterFizzBuzz[index] % 5 === 0) {
+      arrayFizzBuzz.push('fizzBuzz')
+    } else if (parameterFizzBuzz[index] % 3 === 0) {
+      arrayFizzBuzz.push('fizz');
+    } else if (parameterFizzBuzz[index] % 5 === 0) {
+      arrayFizzBuzz.push('buzz');
+    } else {
+      arrayFizzBuzz.push('bug!')
+    }
+  }
+  return arrayFizzBuzz;
 }
 
 // Desafio 9
