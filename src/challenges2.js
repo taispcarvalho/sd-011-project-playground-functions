@@ -8,19 +8,19 @@ function techList(array, name) {
     return 'Vazio!';
   }
   // Colocar em ordem alfabetica
-  array = array.sort(function (a, b) {if (a > b) {return 1;}})
+  array = array.sort();
   // Criação do conteudo do objNew
   for (let i = 0; i < array.length; i += 1) {
-      objNew = {
-      tech: array[i],
-      name: name
-      }
-      newArr.push(objNew);
+    objNew = {
+    tech: array[i],
+    name: name
+    }
+    newArr.push(objNew);
   }
   return newArr;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Thyago'));
-console.log(techList(["Python"], 'Thyago'));
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Thyago'));
+console.log(techList(['Python'], 'Thyago'));
 console.log(techList([], 'Thyago'));
 
 // Desafio 11
