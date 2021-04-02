@@ -26,9 +26,12 @@ function triangleCheck(lineA, lineB, lineC) {
   if (Math.abs(lineA + lineB > lineC || lineA + lineC > lineB || lineB + lineC > lineA)) {
     existence = true;
   }
+  if (Math.abs(lineA + lineB < lineC || lineA + lineC < lineB || lineB + lineC < lineA)){
+    existence = false;
+  }
   return existence;
 }
-console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(16, 9, 2));
 
 // Desafio 13
 function hydrate() {
