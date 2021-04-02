@@ -17,41 +17,16 @@ function techList(arrayTec, name) {
 }
 
 // Desafio 11
-function repetArray(array) {
-  for (let firstIndex = 0; firstIndex < array.length; firstIndex += 1) {
-    let cont = 0;
-    for (let secondIndex = 0; secondIndex < array.length; secondIndex += 1) {
-      if (array[firstIndex] === array[secondIndex]) {
-        cont += 1;
-      }
-      if (cont >= 3) {
-        return cont;
-      }
-    }
-  }
-  return 0;
-}
-
-function validationArray(array) {
-  let repeticao = repetArray(array);
+function generatePhoneNumber(array) {
+  let phone = array.join('');
+  let repeat = [...new Set(array)];
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] < 0 || array[index] > 9 || repeticao >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
+  if (repeat.length < array.length - 1) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
-  return array;
-}
-
-function generatePhoneNumber(array) {
-  let phoneNumber = array.join('');
-  let mensagemErro = validationArray(array);
-  if (typeof(mensagemErro) === 'string') {
-    return mensagemErro;
-  } 
-  return `(${phoneNumber.substring(0,2)}) ${phoneNumber.substring(2,7)}-${phoneNumber.substring(7,11)}`
+  return `(${phone.substring(0, 2)}) ${phone.substring(2, 7)}-${phone.substring(7, 11)}`;
 }
 
 // Desafio 12
