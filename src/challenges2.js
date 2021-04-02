@@ -2,7 +2,7 @@
 function techList(value, oneName) {
   if (value.length == 0) {
     return 'Vazio!';
-  } else if (value.length == 5){
+  } else {
     let ret = [];
     for (let index = 0; index < value.length; index += 1) {
       ret[index] = {
@@ -15,7 +15,8 @@ function techList(value, oneName) {
 }
 // Desafio 11
 function generatePhoneNumber(value) {
-  if (value.length != 11) {
+  /*if (value.length != 11) {
+
     return 'Array com tamanho incorreto.';
   } else {
     let contRepeticion = 0;
@@ -24,7 +25,7 @@ function generatePhoneNumber(value) {
     }
     let ret = '';
     for ()
-  }
+  }*/
 }
 
 // Desafio 12
