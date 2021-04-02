@@ -2,13 +2,13 @@
 //let lista = ["React", "Jest", "HTML", "CSS", "JavaScript"];
 //let nome = "Wilquer";
 function techList(nome,lista) {
-//lista.sort();
-  if(lista.length === 0){
+let emOrdem=lista.sort();
+  if(emOrdem.length === 0){
     return ("'Vazio!'");
   } else {
-    for(let index = 0; index <= lista.length - 1; index += 1) {
+    for(let index = 0; index <= emOrdem.length - 1; index += 1) {
       let arrObj = [objeto = {
-          tech: lista[index],
+          tech: emOrdem[index],
           name: nome
         }]
     ///console.log(arrObj);
