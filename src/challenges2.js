@@ -23,8 +23,8 @@ function triangleCheck(a, b, c) {
   let param = [a, b, c, a, b];
   for (let i = 0; i < 3; i += 1) {
     if (
-      param[i] < param[i + 1] + param[i + 2] &&
-      param[i] > Math.abs(param[i + 1] - param[i + 2])
+      param[i] < param[i + 1] + param[i + 2]
+      && param[i] > Math.abs(param[i + 1] - param[i + 2])
     ) {
       return true;
     }
