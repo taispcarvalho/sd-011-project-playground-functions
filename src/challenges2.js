@@ -25,25 +25,25 @@ function generatePhoneNumber(arrayD11) {
 
   // Check for wrong conditions
   switch (true) {
-    case arrayD11.length !== 11:
-      return `Array com tamanho incorreto.`;
-    case checkNumber (arrayD11):
-      return `não é possível gerar um número de telefone com esses valores`;
-    default: 
-      for (let i = 0; i <= 1; i +=1) {
-        ddd.push(arrayD11[i]);   
-      }
-      for (let i = 2; i <= 6; i +=1) {
-        numPart1.push(arrayD11[i]);
-      }
-      for (let i = 7; i <= 10; i +=1) {
-        numPart2.push(arrayD11[i]);
-      }
-      return `(${ddd.join('')}) ${numPart1.join('')}-${numPart2.join('')}`;
+  case arrayD11.length !== 11:
+    return 'Array com tamanho incorreto.';
+  case checkNumber(arrayD11):
+    return 'não é possível gerar um número de telefone com esses valores';
+  default:
+    for (let i = 0; i <= 1; i += 1) {
+      ddd.push(arrayD11[i]);
+    }
+    for (let i = 2; i <= 6; i += 1) {
+      numPart1.push(arrayD11[i]);
+    }
+    for (let i = 7; i <= 10; i += 1) {
+      numPart2.push(arrayD11[i]);
+    }
+    return `(${ddd.join('')}) ${numPart1.join('')}-${numPart2.join('')}`;
   }
 }
 
-function checkNumber (arrayD11) {
+function checkNumber(arrayD11) {
   let wrongNumber = false;
   for (let i = 0; i < arrayD11.length; i += 1) {
     if (arrayD11[i] > 9 || arrayD11[i] < 0) {
@@ -51,10 +51,10 @@ function checkNumber (arrayD11) {
       return wrongNumber;
     }
     let sameNumberLoop = 0;
-    for (let i2 = i; i2 < arrayD11.length; i2 +=1) {
-      if (arrayD11[i] === arrayD11[i2]) {   
-        sameNumberLoop +=1;
-        if (sameNumberLoop >=3) {
+    for (let i2 = i; i2 < arrayD11.length; i2 += 1) {
+      if (arrayD11[i] === arrayD11[i2]) {
+        sameNumberLoop += 1;
+        if (sameNumberLoop >= 3) {
           wrongNumber = true;
           return wrongNumber;
         }
@@ -64,29 +64,41 @@ function checkNumber (arrayD11) {
 }
 
 // Desafio 12
-function triangleCheck (lineA, lineB, lineC) {
-  let check1 = false; 
-  let check2 = false; 
-  let check3 = false; 
+function triangleCheck(lineA, lineB, lineC) {
+  let check1 = false;
+  let check2 = false;
+  let check3 = false;
 
-  if (lineA + lineB > lineC && Math.abs(lineA - lineB) < lineC ) {
+  if (lineA + lineB > lineC && Math.abs(lineA - lineB) < lineC) {
     check1 = true;
-  } else { return false }
-  if (lineA + lineC > lineB && Math.abs(lineA - lineC) < lineB ) {
+  } else { return false; }
+  if (lineA + lineC > lineB && Math.abs(lineA - lineC) < lineB) {
     check2 = true;
-  } else { return false }
-  if (lineB + lineC > lineA && Math.abs(lineB - lineC) < lineA ) {
+  } else { return false; }
+  if (lineB + lineC > lineA && Math.abs(lineB - lineC) < lineA) {
     check3 = true;
-  } else { return false }
-  //Final check
-  if ( check1 && check2 && check3 ) {
+  } else { return false; }
+  // Final check
+  if (check1 && check2 && check3) {
     return true;
   }
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string13) {
+  let stringCheck = /\d+/g;
+  let drinkArray = string13.match(stringCheck);
+  let sum = 0;
+  let numOfCups = '';
+  for (let i = 0; i < drinkArray.length; i += 1) {
+    sum += parseInt(drinkArray[i]);
+  }
+  if (sum > 1) {
+    numOfCups = 'copos';
+  } else {
+    numOfCups = 'copo';
+  }
+  return `${sum} ${numOfCups} de água`;
 }
 
 module.exports = {
