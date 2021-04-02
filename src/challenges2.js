@@ -89,10 +89,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 
   return (lineAisValid && lineBisValid && lineCisValid);
-
 }
-
-console.log(triangleCheck(1, 14, 8));
 
 // Desafio 13
 function hydrate() {
