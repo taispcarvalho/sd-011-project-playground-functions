@@ -72,7 +72,10 @@ function testSmaller(lineA, lineB, lineC) {
   return false;
 }
 function testBigger(lineA, lineB, lineC) {
-  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+  let testLineA = Math.abs(lineB - lineC);
+  let testLineB = Math.abs(lineA - lineC);
+  let testlineC = Math.abs(lineA - lineB);
+  if (lineA > testLineA && lineB > testLineB && lineC > testlineC) {
     return true;
   }
   return false;
