@@ -24,45 +24,41 @@ function checkRepeatdNumbers(array) {
   let sortedNumbers = [...array].sort();
   let count = 0;
   for (let index = 0; index < sortedNumbers.length - 1; index += 1) {
+    if (count >= 2) return false;
     if (sortedNumbers[index] === sortedNumbers[index + 1]) {
       count += 1;
     } else {
       count = 0;
     }
   }
-  if (count >= 2) {
-    return false;
-  }
   return true;
 }
 
 function checkIfBetween0to9(array) {
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > 9 || array[index] < 0) {
-      return false;
-    }
+    if (array[index] > 9 || array[index] < 0) return false;
   }
   return true;
 }
 
 function transformIntoStrig(array) {
-  if (checkIfBetween0to9(array) === false) return 'Array com tamanho incorreto.';
-  if (checkIf11Numbers(array) && checkIfBetween0to9(array) === false) return 'não é possível gerar um número de telefone com esses valores';
-  let stringNumber = '';
-  for (index = 0; index < array.length; index += 1) stringNumber += array[index];
-  return stringNumber;
+  return array.join('');
 }
 
 function generatePhoneNumber(string) {  
-  
-  let formatedPhoneNumber = string.splice(0, 0, '(');
-  return formatedPhoneNumber
+  if (checkIf11Numbers(string) === false) return 'Array com tamanho incorreto.'; 
+  if (checkRepeatdNumbers(string) === false || checkIfBetween0to9(string) === false) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  let number = transformIntoStrig(string)
+  number = string.splice(0, 0, '(') + string.splice(0, 3, ') ') + string.splice(0, 6, '-') + string.splice(0, 11);
+  //let formatedNumber = number.join('');
+  return number.replace(/,/g, '')
 }
-
-let phone = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-
-console.log(generatePhoneNumber(phone));
-console.log(transformIntoStrig(phone));
+let number = [1, 2, 3, 4, 2, 6, 3, 8, 9, 0, 1]
+console.log(number);
+console.log(transformIntoStrig(number));
+console.log(generatePhoneNumber(number));
 
 // Desafio 12
 function checkSides(sideA, sideB, sideC) {
