@@ -18,15 +18,17 @@ function techList(arrayTec, name) {
 
 // Desafio 11
 function repetArray(array) {
-  for (let firstIndex = 0; firstIndex < array.length; firstIndex += 1) {
-    let cont = 0;
-    for (let secondIndex = 0; secondIndex < array.length; secondIndex += 1) {
-      if (array[firstIndex] === array[secondIndex]) {
-        cont += 1;
-      }
-      if (cont >= 3) {
-        return true;
-      }
+  let number;
+  let cont = 0;
+  array.sort();
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] !== number) {
+      number = array[index];
+      cont = 0;
+    }
+    cont += 1;
+    if (cont >= 3) {
+      return true;
     }
   }
   return false;
