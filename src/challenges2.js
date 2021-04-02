@@ -1,12 +1,13 @@
 // Desafio 10
-function checkForEmptyArray(array) {
+// function checkForEmptyArray(array) {
+
+// }
+
+function techList(array, nome) {
+  // checkForEmptyArray(array);
   if (array.length === 0) {
     return 'Vazio!';
   }
-}
-
-function techList(array, nome) {
-  checkForEmptyArray(array);
   array = array.sort();
   let finalObject = [];
   for (let index = 0; index < array.length; index += 1) {
