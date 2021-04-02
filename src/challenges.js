@@ -122,7 +122,7 @@ function fizzBuzz(numbers) {
       returnArray.push('fizzBuzz');
     } else if ((key % 3) === 0 && (key % 5) !== 0) {
       returnArray.push('fizz');
-    } else if ((key % 3 ) !== 0 && (key % 5) === 0) {
+    } else if ((key % 3) !== 0 && (key % 5) === 0) {
       returnArray.push('buzz');
     } else {
       returnArray.push('bug!');
