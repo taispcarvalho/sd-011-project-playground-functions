@@ -1,6 +1,5 @@
 // Desafio 10
 function techList() {
-  
 }
 
 // Desafio 11
