@@ -29,7 +29,6 @@ function generatePhoneNumber(arrNum) {
     let arrNum1 = arr;
     arrNum1 = arrNum1.sort();
     let newArr1 = [];
-    let number1 = 0;
     let invalNum = false;
 
     for (let index1 = 0; index1 < arrNum1.length; index1 += 1) {
@@ -50,7 +49,6 @@ function generatePhoneNumber(arrNum) {
         if (count < repeat1.length) {
 
           count = repeat1.length;
-          number1 = arrNum1[index1];
 
         }
         index1 += repeat1.length - 1; 
@@ -76,20 +74,20 @@ function generatePhoneNumber(arrNum) {
     // print formated number
     for (let index = 0; index < arrNum2.length; index += 1) {
       if (formNum.length === 0) {
-        formNum += '(' + arrNum2[0];
+        formNum += `(${arrNum2[0]}`;
 
-        formNum += arrNum2[1] + ') ';
+        formNum += `${arrNum2[1]}) `;
         index += 1;
       } else if (formNum.length > 4 && formNum.length < 9) {
         formNum += arrNum2[index];
       } else if (formNum.length > 9 && formNum.length < 11) {
-        formNum += '-' + arrNum2[index];
+        formNum += `-${arrNum2[index]}`;
       } else {
         formNum += arrNum2[index];
       }
     }
   }
-  if (checkArrNum(arrNum2) === true){
+  if (checkArrNum(arrNum2) === true) {
     formNum = 'não é possível gerar um número de telefone com esses valores';
   }
   return formNum;
@@ -122,7 +120,7 @@ function hydrate(words) {
   for (let index = 0; index < nums.length; index += 1) {
     addThem += parseInt(nums[index]);
   }
-  
+
   if (addThem === 1) {
     outWords = `${addThem} copo de água`;
   } else {
