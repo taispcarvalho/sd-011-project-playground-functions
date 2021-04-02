@@ -9,7 +9,7 @@ function techList(list, name) {
   for (let technology of list) {
     result.push({
       tech: technology,
-      name,
+      name: `${name}`,
     });
   }
   return result;
