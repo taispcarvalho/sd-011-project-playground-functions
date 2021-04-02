@@ -1,16 +1,22 @@
 // Desafio 10
 function techList(array, name) {
-  let test = [];
-  if (array !== []) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array.length === []) {
+      return 'Vazio!';
+    }
+  }
+  if (array.length !== 0) {
     for (let tec of array) {
-      test.push({
+      array.push({
         tech: tec,
         nome: name,
       });
     }
-  } else return 'Vazio!';
-  return (test);
+  }
+  return array;
 }
+let n = [];
+console.log(techList(n, 'Lucas'));
 
 // Desafio 11
 function numeroZeroNove(array) {

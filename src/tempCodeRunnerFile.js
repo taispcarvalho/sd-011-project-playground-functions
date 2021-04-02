@@ -1,14 +1,18 @@
 function techList(array, name) {
-  let test = [];
-  if (array.length === []) {
-    return 'Vazio!';
-  }
-  if (array !== []) {
-    for (let tec of array) {
-      test.push({ tech: tec, nome: name });
+  for (let index = 0; index < array.length; index += 1) {
+    if (array.length === []) {
+      return 'Vazio!';
     }
   }
-  return (test);
+  if (array.length !== 0) {
+    for (let tec of array) {
+      array.push({
+        tech: tec,
+        nome: name,
+      });
+    }
+  }
+  return array;
 }
-let tecs = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-console.log(techList(tecs, 'Islene'));
+let n = [];
+console.log(techList(n, 'Lucas'));
