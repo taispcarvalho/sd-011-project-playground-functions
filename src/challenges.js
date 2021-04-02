@@ -17,9 +17,10 @@ function concatName(name) {
   let space = ', ';
   return name[name.length - 1] + space + name[0];
 }
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
