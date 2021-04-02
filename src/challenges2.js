@@ -25,18 +25,15 @@ function invalidNumberAnalyzer(arrayNumbers) {
 
 function repeatedNumberAnalyzer(arrayNumbers) {
   let arrayClone = arrayNumbers;
-  if (arrayNumbers.lenght !== 11) {
-    return true;
-  }
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     let count = 0;
     for (let secondIndex = 0; secondIndex < arrayClone.length; secondIndex += 1) {
-      if (arrayNumbers[index] < 0 || arrayNumbers[index] > 9){
-        return true;
-      } else if (arrayNumbers[index] === arrayClone[secondIndex]) {
+      if (arrayNumbers[index] === arrayClone[secondIndex]) {
         count += 1;
         if (count === 3) {
           return true;
+        } else if (arrayNumbers[index] < 0 || arrayNumbers[index] > 9) {
+          return true;          
         }
       }
     }
@@ -61,7 +58,7 @@ function generatePhoneNumber(arrayOfNumbers) {
     newPhoneNumber = newPhoneNumber.replace(/,/g, '');
     return newPhoneNumber;
   } else {
-    switch (validatorSize !== false || validatorRepeat !== false) {
+    switch (validatorSize === true || validatorRepeat === true) {
     case validatorSize:
       return "Array com tamanho incorreto.";
       break;
