@@ -37,15 +37,15 @@ function digitValidation(phone) {
   return invalid;
 }
 
-function counterValidation(phone) {
+function counterValidation(phone, count) {
   let invalid = false;
-  let count = 0;
+  count = 0;
   for (let i = 0; i < phone.length; i += 1) {
     for (let j = 0; j < phone.length; j += 1) {
       if (phone[i] === phone[j]) count += 1;
     }
   }
-  if (count > 2) invalid = true;
+  if (count >= 3) invalid = true;
   return invalid;
 }
 
@@ -54,12 +54,16 @@ function counterValidation(phone) {
 // Template Literals: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 // Break Lines in TL: https://stackoverflow.com/questions/37321047/wrap-long-template-literal-line-to-multiline-without-creating-a-new-line-in-the
 function generatePhoneNumber(phone) {
-  let result = '';
-  if (lengthValidation(phone)) {
+  let result;
+  let lgVal = lengthValidation(phone);
+  let dgVal = digitValidation(phone);
+  let ctVal = counterValidation(phone);
+
+  if (lgVal) {
     result = 'Array com tamanho incorreto';
-  } else if (digitValidation(phone)) {
+  } else if (dgVal) {
     result = 'não é possível gerar um número de telefone com esses valores1';
-  } else if (counterValidation(phone)) {
+  } else if (ctVal) {
     result = 'não é possível gerar um número de telefone com esses valores2';
   } else {
     result = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}`
