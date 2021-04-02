@@ -38,7 +38,7 @@ function verifyRepeat(array) {
     for (let index2 = 0; index2 < array.length; index2 += 1) {
       if (array[index2] === array[index]) {
         counter += 1;
-      }  
+      }
     }
     if (counter >= 3) {
       return false;
