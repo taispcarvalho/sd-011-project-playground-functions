@@ -36,11 +36,14 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat1 === cat2) {
     return ('os gatos trombam e o rato foge');
   }
-  (cat1 < cat2) ? 'cat1' : 'cat2';
-  
-} 
+  if (cat1 < cat2) { 
+    return ('cat1');
+  } else {
+    return ('cat2');
+  }
+}
 function fizzBuzz(numeros) {
-  for (let index = 0;index <= numeros.length - 1;index += 1) {
+  for (let index = 0;index <= numeros.length - 1;index += 1 ) {
     if (numeros[index] % 15 === 0) {
       numeros[index] = ('fizzBuzz'); 
     } else if (numeros[index] % 3 === 0) {
