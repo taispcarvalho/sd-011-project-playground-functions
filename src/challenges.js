@@ -27,11 +27,11 @@ function concatName(arr) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let jogos 
-  if (jogos = wins *3 + ties * 1){
-  return jogos;
+  let jogos; 
+  if (jogos = wins * 3 + ties * 1) {
+    return jogos;
   } else {
-    jogos === 0
+    jogos === 0;
   }
   return jogos;
 }

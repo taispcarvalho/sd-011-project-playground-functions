@@ -1,3 +1,5 @@
+const { compareTrue } = require("./challenges");
+
 // Desafio 10
 function techList(techs, name) {
   if (techs.length <= 0) return 'Vazio!';
@@ -19,7 +21,7 @@ function techList(techs, name) {
 // Desafio 11
 function verificarDuplicados(array) {
   let count = {};
-  array.forEach (function(i) { count[i] = (count[i] || 0) + 1; });
+  array.forEach(function(i) { count[i] = (count[i] || 0) + 1; });
   return count;
 }
 function generatePhoneNumber(array) {
@@ -37,16 +39,35 @@ function generatePhoneNumber(array) {
     if (array[i] < 0 || array[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    format = format.replace('x', array[i]);    
+    format = format.replace('x', array[i]);  
   }
   return format;
 }
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function checkSide(main, A, B){
+  if (main>= A + B) {
+    return false;
 }
+  if (main <= Math.abs(A - B)) {
+    return false;
+  }
+   return true;
+  }
+function triangleCheck(lineA, lineB, lineC) {
+  if (!checkSide (lineA, lineB, lineC)) {
+    return false;
+  }  
+  if (!checkSide(lineB, lineC, lineA)) {
+    return false;
+}
+  if (!checkSide(lineC, lineA, lineB)) {
+    return false;
+  }
+    return true;
+}
+  console.log(triangleCheck(10,14,8))
 
 // Desafio 13
 function hydrate() {
