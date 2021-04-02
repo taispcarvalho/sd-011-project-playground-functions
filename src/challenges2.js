@@ -38,7 +38,7 @@ function countRepeats(phone, num) {
   return count;
 }
 
-function hasThriceOrMore(phone) {
+function hasThreeOrMore(phone) {
   for (let num of phone) {
     let count = countRepeats(phone, num);
     if (count >= 3) return true;
@@ -50,7 +50,7 @@ function hasThriceOrMore(phone) {
 function validatePhoneNumber(phone) {
   if (phone.length !== 11) return 'Array com tamanho incorreto.';
 
-  if (hasNonDigitNumber(phone) || hasThriceOrMore(phone)) {
+  if (hasNonDigitNumber(phone) || hasThreeOrMore(phone)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
