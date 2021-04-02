@@ -17,11 +17,11 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 console.log(techList([], 'Lucas'));
 
 // Desafio 11
-function checkRepeatedNumber(phoneNumber) {
+function checkRepeatedNumber(phone) {
   let resp = 0;
-  for (let indexNumberPhone = 0; indexNumberPhone < phoneNumber.length - 1; indexNumberPhone += 1) {
-    for (let compareNumberPhone = indexNumberPhone + 1; compareNumberPhone < phoneNumber.length; compareNumberPhone += 1) {
-      if (phoneNumber[indexNumberPhone] === phoneNumber[compareNumberPhone]) {
+  for (let indexNumber = 0; indexNumber < phone.length - 1; indexNumberPhone += 1) {
+    for (let compareNumber = indexNumber + 1; compareNumber < phone.length; compareNumber += 1) {
+      if (phone[indexNumber] === phone[compareNumber]) {
         resp += 1;
       }
     }
