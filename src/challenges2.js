@@ -102,7 +102,12 @@ function hydrate(stringDrink) {
   for (let index = 0; index < amountDrink.length; index += 1) {
     sumAmountDrink += amountDrink[index];
   }
-  return sumAmountDrink;
+  if ( sumAmountDrink === 1) {
+    amount = sumAmountDrink + ' copo de água';
+  } else {
+    amount = sumAmountDrink + ' copos de água';
+  }
+  return amount;
 }
 
 module.exports = {
