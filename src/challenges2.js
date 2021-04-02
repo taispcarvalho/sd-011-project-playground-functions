@@ -1,14 +1,11 @@
 // Desafio 10
 function techList(array, name) {
   let test = [];
-  if (array === []) {
-    return 'Vazio!';
-  }
   if (array !== []) {
     for (let tec of array) {
       test.push({ tech: tec, nome: name });
     }
-  }
+  } else return 'Vazio!';
   return (test);
 }
 
