@@ -2,11 +2,14 @@
 function techList(tech, name) {
   let nomesOrdenados = tech.sort();
   let novaLista = [];
-  if (tech.length === []) {
-    tech = 'Vazio!';
+  for (let index = 0; index <= tech.length - 1; index += 1) {
+    novaLista.push({
+      tech: nomesOrdenados[index],
+      name: name
+    })
   }
-  for (let index in nomesOrdenados) {
-    novaLista[index] = { tech: nomesOrdenados[index], name:name };
+  if (tech === []) {
+    console.log('Vazio!');
   }
   return novaLista;
 }
