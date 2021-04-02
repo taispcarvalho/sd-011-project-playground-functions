@@ -64,8 +64,24 @@ function checkNumber (arrayD11) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck (lineA, lineB, lineC) {
+  let check1 = false; 
+  let check2 = false; 
+  let check3 = false; 
+
+  if (lineA + lineB > lineC && Math.abs(lineA - lineB) < lineC ) {
+    check1 = true;
+  } else { return false }
+  if (lineA + lineC > lineB && Math.abs(lineA - lineC) < lineB ) {
+    check2 = true;
+  } else { return false }
+  if (lineB + lineC > lineA && Math.abs(lineB - lineC) < lineA ) {
+    check3 = true;
+  } else { return false }
+  //Final check
+  if ( check1 && check2 && check3 ) {
+    return true;
+  }
 }
 
 // Desafio 13
