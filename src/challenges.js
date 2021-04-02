@@ -15,10 +15,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(arr) {
-  let firstValue = arr[0];
-  let lastValue = arr[arr.length - 1];
-  // concatName mas o linter não permite concatenar ¯\_(ツ)_/¯
-  return [lastValue, firstValue].join(', ');
+  return [arr[arr.length - 1], arr[0]].join(', ');
 }
 
 // Desafio 5
@@ -38,31 +35,27 @@ function catAndMouse(mouse, cat1, cat2) {
   let firstCat = Math.abs(mouse - cat1);
   let secondCat = Math.abs(mouse - cat2);
   if (firstCat < secondCat) return 'cat1';
-  if (firstCat > secondCat) return 'cat2'; // Linter não permite else if :(
+  if (firstCat > secondCat) return 'cat2'; // Linter chorou com else :(
   return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(arr) {
   return arr.map((value) => {
-    let response;
-    if (value % 3 === 0 && value % 5 === 0) response = 'fizzBuzz';
-    else if (value % 3 === 0) response = 'fizz';
-    else if (value % 5 === 0) response = 'buzz';
-    else response = 'bug!';
-    return response;
+    if (value % 3 === 0 && value % 5 === 0) return 'fizzBuzz';
+    if (value % 3 === 0) return 'fizz';
+    if (value % 5 === 0) return 'buzz';
+    return 'bug!';
   });
 }
 
 // Desafio 9
 function encode(str) {
-  const vowels = ' aeiou';
-  return str.replace(/[aeiou]/g, (m) => vowels.indexOf(m));
+  return str.replace(/[aeiou]/g, (m) => ' aeiou'.indexOf(m));
 }
 
 function decode(str) {
-  const vowels = ' aeiou';
-  return str.replace(/[1-5]/g, (m) => vowels[m]);
+  return str.replace(/[1-5]/g, (m) => ' aeiou'[m]);
 }
 
 module.exports = {
