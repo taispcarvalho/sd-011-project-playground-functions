@@ -96,8 +96,13 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(stringDrink) {
+  let amountDrink = stringDrink.match(/\d+/g).map(Number);
+  let sumAmountDrink = 0;
+  for (let index = 0; index < amountDrink.length; index += 1) {
+    sumAmountDrink += amountDrink[index];
+  }
+  return sumAmountDrink;
 }
 
 module.exports = {
