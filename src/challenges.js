@@ -102,13 +102,13 @@ function splitSentences(sentence) {
 }
 
 function joinSentences(letterArray) {
-  let sentence = letterArray.join(',');
+  let sentence = letterArray.join('');
   return sentence;
 }
 
-function changeLetters(currentLetter, vogalToVerify, numberToReplace) {
-  if (currentLetter === vogalToVerify) {
-    return numberToReplace;
+function changeLetters(currentLetter, ToVerify, ToReplace) {
+  if (currentLetter === ToVerify) {
+    return ToReplace;
   }
   return currentLetter;
 }
@@ -132,8 +132,25 @@ function encode(phrase) {
   let encodedPhrase = joinSentences(splittedSentence);
   return encodedPhrase;
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase) {
+  let splittedSentence = splitSentences(phrase);
+
+  let vogalsArray = ['a', 'e', 'i', 'o', 'u'];
+  let numbersArray = ['1', '2', '3', '4', '5'];
+
+  for (let index = 0; index < splittedSentence.length; index += 1) {
+    let letter = splittedSentence[index];
+
+    for (let jIndex = 0; jIndex < vogalsArray.length; jIndex += 1) {
+      let vogal = vogalsArray[jIndex];
+      let number = numbersArray[jIndex];
+      letter = changeLetters(letter, number, vogal);
+      splittedSentence[index] = letter;
+    }
+  }
+  let decodedPhrase = joinSentences(splittedSentence);
+  return decodedPhrase;
 }
 
 module.exports = {
