@@ -46,24 +46,12 @@ function validationArray(array) {
 }
 
 function generatePhoneNumber(array) {
-  let telefone = [];
-  let cont = 0;
-  if (typeof validationArray(array) === 'string') {
-    return validationArray(array);
-  }
-  telefone[0] = '(';
-  telefone[3] = ')';
-  telefone[4] = ' ';
-  telefone[10] = '-';
-  for (let index = 0; index < array.length; index += 1) {
-    if (telefone[cont] !== undefined) {
-      index -= 1;
-    } else {
-      telefone[cont] = array[index].toString();
-    }
-    cont += 1;
-  }
-  return telefone.join('');
+  let phoneNumber = array.join('');
+  let mensagemErro = validationArray(array);
+  if (typeof(mensagemErro) === 'string') {
+    return mensagemErro;
+  } 
+  return `(${phoneNumber.substring(0,2)}) ${phoneNumber.substring(2,7)}-${phoneNumber.substring(7,11)}`
 }
 
 // Desafio 12

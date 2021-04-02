@@ -97,8 +97,6 @@ function fizzBuzz(arrayNumber) {
   return arrayResult;
 }
 
-console.log(fizzBuzz([9, 25]));
-
 // Desafio 9
 function encode(string) {
   string = string.replace(/a/g, '1');
