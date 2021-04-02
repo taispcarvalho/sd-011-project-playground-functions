@@ -72,10 +72,10 @@ function triangleCheck(lineA, lineB, lineC) {
 // Missing Radix Parameter: https://stackoverflow.com/questions/7818903/jslint-says-missing-radix-parameter
 function hydrate(words) {
   let numbers = words.replace(/[^0-9]/g, ''); // A technique used to find the numbers inside a string with the addition of /g to search they all
-  let result = 0; // after some tests, I delete the necessity of convert to number and just add a empty string to 'result', which has an even better result
+  let result = 0; // it's works as a counter, so it's needs to start at 0
 
   for (let i = 0; i < numbers.length; i += 1) {
-    result += Number(numbers[i]); // after the tests, I don't need to use any method here anymore
+    result += Number(numbers[i]); // converts the strings into numbers
   }
 
   if (result <= 1) {
