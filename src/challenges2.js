@@ -32,15 +32,22 @@ function checkNumb(numbers) {
 }
 
 function checkRep(numbers) {
+  //let repetitionCondition = true;
+  //for (let index = 0; index < numbers.length; index += 1) {
+   // let repetition = 0;
+    //for (let index2 = 0; index2 < numbers.length; index2 += 1) {
+     // if (numbers[index] === numbers[index2]) {
+       // repetition += 1;
+     // }
+   // }
+    //if (repetition >= 3) {
+      //repetitionCondition = false;
+    //}
+  //}
   let repetitionCondition = true;
-  for (let index = 0; index < numbers.length; index += 1) {
-    let repetition = 0;
-    for (let index2 = 0; index2 < numbers.length; index2 += 1) {
-      if (numbers[index] === numbers[index2]) {
-        repetition += 1;
-      }
-    }
-    if (repetition >= 3) {
+  let map = numbers.reduce((acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map());
+  for (let [key,value] of map) {
+    if (value >= 3) {
       repetitionCondition = false;
     }
   }
@@ -67,6 +74,7 @@ function generatePhoneNumber(numbers) {
     return phoneNumber.replace(/,/g, '');
   }
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]));
 
 // Desafio 12
 function checkLineSum(lineA, lineB, lineC) {
