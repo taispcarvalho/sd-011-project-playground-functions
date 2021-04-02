@@ -1,11 +1,11 @@
 // Desafio 10
 function techList(techArray, names) {
-  if (techArray === 0) {
-    return 'Vazio!';
-  }
-
   let finalArray = [];
   let finalArraySort = techArray.sort();
+
+  if (techArray.length === 0) {
+    return 'Vazio!';
+  }
 
   for (let listTech of finalArraySort) {
     finalArray.push({
@@ -13,8 +13,10 @@ function techList(techArray, names) {
       name: names,
     });
   }
+
   return finalArray;
 }
+console.log(techList([], 'Gabriel'));
 // Para o desenvolvimento do código do Desafio 10 utilizei o código do Inacio como inspiração
 
 // Desafio 11
