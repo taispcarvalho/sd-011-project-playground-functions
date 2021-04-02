@@ -43,7 +43,10 @@ function generatePhoneNumber(array) {
   let regexNum = /(\d{2})(\d{5})(\d{4})/;
   let genNum = '';
   let check = checkNum(array);
-
+  
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
   if (check) {
     return check;
   }
@@ -52,11 +55,6 @@ function generatePhoneNumber(array) {
     genNum += array[genIndex];
     genNum = genNum.replace(regexNum, '($1) $2-$3');
   }
-
-  if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
-
   return genNum;
 }
 
