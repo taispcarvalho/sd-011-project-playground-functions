@@ -2,10 +2,10 @@
 function compareTrue(valorA, valorB) {
   
   if (valorA && valorB === true) {
-    return ('True')
+    return (true)
   }
   else {
-    return ('false')
+    return (false)
   }
   // seu código aqui
   
