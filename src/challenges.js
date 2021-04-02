@@ -7,7 +7,7 @@ function compareTrue(n, m) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let triangle = (base*height)/2;
+  let triangle = (base * height) / 2;
   return triangle;
 }
 
@@ -39,14 +39,14 @@ function highestCount(array) {
   let biggerNumber = 0;
   let countNumber = 0;
 
-  for(let index = 0; index < array.length; index +=1){
-    if (array[index] > biggerNumber){
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > biggerNumber) { 
       biggerNumber = array[index];
     }   
   }
-  for(let index = 0; index < array.length; index +=1){
-    if (array[index] === biggerNumber){
-      countNumber +=1;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === biggerNumber) {
+      countNumber += 1;
     }
   }
   return countNumber;
@@ -58,19 +58,19 @@ function catAndMouse(mouse, cat1, cat2) {
   let longCat1 = 0;
   let longCat2 = 0;
 
-  if(mouse>cat1){
+  if (mouse>cat1) {
     longCat1 = mouse - cat1;
   } else {
     longCat1 = cat1 - mouse;
   }
-  if(mouse>cat2){
+  if (mouse>cat2){
     longcat2 = mouse - cat2;
-  }else{
+  } else {
     longCat2 = cat2 - mouse;
   }
   if (longCat1 < longCat2) {
     return('cat1')
-  }else if (longCat1 > longCat2){
+  } else if (longCat1 > longCat2) {
     return('cat2')
   } else {
     return ('os gatos trombam e o rato foge')
@@ -82,22 +82,22 @@ function fizzBuzz(array) {
   // seu código aqui
   let arrayFizzBuzz = [];
 
-  for (let index = 0; index<array.length;index+=1){
-    if (array[index] % 3 === 0 && array[index] % 5 === 0){
+  for (let index = 0; index<  array.length;index +=1 ) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       arrayFizzBuzz.push('fizzBuzz');
       console.log(array[index]);
-    }else if (array[index] % 5 === 0){
-      arrayFizzBuzz.push('buzz')
+    } else if (array[index] % 5 === 0) {
+      arrayFizzBuzz.push('buzz');
       console.log(array[index]);
-    }else if (array[index] % 3 === 0){
-      arrayFizzBuzz.push('fizz')
+    } else if (array[index] % 3 === 0) {
+      arrayFizzBuzz.push('fizz');
       console.log(array[index]);
-    }else {
+    } else {
       arrayFizzBuzz.push('bug!');
       console.log(array[index]);
     }
   }
-  return arrayFizzBuzz
+  return arrayFizzBuzz;
 }
 
 // Desafio 9
@@ -105,16 +105,16 @@ function encode(text) {
   // seu código aqui
   let encodeText = [];
 
-  for(let index in text){
+  for (let index in text) {
     if (text[index] === 'a'){
       encodeText += '1';
-    }else if (text[index] === 'e'){
+    } else if (text[index] === 'e') {
       encodeText += '2';
-    }else if (text[index] === 'i'){
+    } else if (text[index] === 'i') {
       encodeText += '3';
-    }else if (text[index] === 'o'){
+    } else if (text[index] === 'o') {
       encodeText += '4';
-    }else if (text[index] === 'u'){
+    } else if (text[index] === 'u') {
       encodeText += '5';
     } else {
       encodeText += text[index];
