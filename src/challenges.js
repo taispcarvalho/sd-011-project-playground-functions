@@ -63,26 +63,26 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     longCat1 = cat1 - mouse;
   }
-  if (mouse > cat2){
+  if (mouse > cat2) {
     longCat2 = mouse - cat2;
   } else {
     longCat2 = cat2 - mouse;
   }
   if (longCat1 < longCat2) {
-    return('cat1');
+    return ('cat1');
   } if (longCat1 > longCat2) {
-    return('cat2');
-  } else {
-    return ('os gatos trombam e o rato foge');
+    return ('cat2');
   }
+    return ('os gatos trombam e o rato foge');
 }
+
 
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
   let arrayFizzBuzz = [];
 
-  for (let index = 0; index < array.length;index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       arrayFizzBuzz.push('fizzBuzz');
       console.log(array[index]);
