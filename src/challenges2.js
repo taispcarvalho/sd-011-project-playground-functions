@@ -33,11 +33,9 @@ function checkNumb(numbers) {
 
 function checkRep(numbers) {
   let repetitionCondition = true;
-  //for (let index = 0; index < numbers.length; index += 1) {
-  for (let index of numbers) {
+  for (let index = 0; index < numbers.length; index += 1) {
     let repetition = 0;
-    //for (let index2 = 0; index2 < numbers.length; index2 += 1) {
-    for (let index2 of numbers) {
+    for (let index2 = 0; index2 < numbers.length; index2 += 1) {
       if (numbers[index] === numbers[index2]) {
         repetition += 1;
       }
