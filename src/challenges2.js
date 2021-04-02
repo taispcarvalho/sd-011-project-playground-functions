@@ -42,24 +42,23 @@ function checkPhoneNumber(number) {
   if (number.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  let answer = checkForRepeatedNumbers(number);
-  return answer;
+  return checkForRepeatedNumbers(number);
 }
 
 function generatePhoneNumber(array) {
   if (checkPhoneNumber(array) === true) {
     array = array.join('');
-    let answer = `(${array.substring(0, 2)}) ${array.substring(2, 7)}-${array.substring(7, 11)}`;
-    return answer;
+    return `(${array.substring(0, 2)}) ${array.substring(2, 7)}-${array.substring(7, 11)}`;
   }
   return checkPhoneNumber(array);
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
