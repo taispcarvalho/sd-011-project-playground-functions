@@ -17,16 +17,14 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 console.log(techList([], 'Lucas'));
 
 // Desafio 11
-function checkRepeat(phone) {
+function checkRepeat(value, phone) {
   let resp = 0;
-  for (let indexNumber = 0; indexNumber < phone.length - 1; indexNumber += 1) {
-    for (let compareNumber = indexNumber + 1; compareNumber < phone.length; compareNumber += 1) {
-      if (phone[indexNumber] === phone[compareNumber]) {
-        resp += 1;
-      }
-      if (resp >= 3) {
-        return true;
-      }
+  for (let indexNumber = 0; indexNumber < phone.length; indexNumber += 1) {
+    if (value === phone[indexNumber]) {
+      resp += 1;
+    }
+    if (resp >= 3) {
+      return true;
     }
   }
   return false;
@@ -39,7 +37,7 @@ function testPhoneNumber(phone) {
     return 'Array com tamanho incorreto.';
   }
   for (let testIndex = 0; testIndex < phone.length; testIndex += 1) {
-    if (checkOtherThanEleven(phone[testIndex]) || checkRepeat(phone) === true) {
+    if (checkOtherThanEleven(phone[testIndex]) || checkRepeat(phone[testIndex], phone)) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
