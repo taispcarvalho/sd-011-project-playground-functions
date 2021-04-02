@@ -13,6 +13,9 @@ function sortArray(tech) {
 }
 
 function techList(techArray, name) {
+  if (!techArray.length) {
+    return 'Vazio!';
+  }
   let sortedArray = sortArray(techArray);
   let techListed = [];
 
@@ -25,6 +28,7 @@ function techList(techArray, name) {
   }
   return techListed;
 }
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'paulo'));
 
 // Desafio 11
 function generatePhoneNumber() {
