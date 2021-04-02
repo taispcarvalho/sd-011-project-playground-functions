@@ -16,37 +16,7 @@ function techList(arr, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber(arr) {
-  if (arr.length < 11) {
-    return 'Array com tamanho incorreto.';
-  }
-  if (arr.filter(num0A9).length !== 11 || repeatNum(arr)) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-  console.log(arr2);
-  return `(${arr[0]}${arr[1]}) ${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`;
-}
-
-console.log(generatePhoneNumber([2, 1, 2, 4, 5, 6, 7, 8, 9, 0, 1]));
-
-function repeatNum(array) {
-  //  arrOrdenada ordena todos os números de arr de forma crescente.
-  let arrOrdenada = array.sort();
-  //  loop para verificar se o indice 0 é igual ao indice 1 e 2, caso for retornará falso, já que o array está ordenado de forma crescente, e se o indice 0 for igual ao indice 1 e 2 significa que o numero apareceu 3 vezes.
-  for (let i = 0; i < array.length; i += 1) {
-    if (
-      arrOrdenada[i] === arrOrdenada[i + 1] &&
-      arrOrdenada[i] === arrOrdenada[i + 2]
-    )
-      return true;
-  }
-  return false;
-}
-
-//função abaixo verifica se o número igual ou maior a 0 e menor que 10, 0 à 9.
-function num0A9(arr) {
-  return arr >= 0 && arr < 10;
-}
+function generatePhoneNumber() {}
 
 // Desafio 12
 function triangleCheck(a, b, c) {
