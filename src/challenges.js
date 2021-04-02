@@ -108,6 +108,8 @@ function encode(string) {
   return codedTxt;
 }
 
+console.log(encode("h3 th2r2!"));
+
 
 function decode(string) {
   let arrayUnCode = string.split('');
@@ -132,6 +134,8 @@ function decode(string) {
   let codedTxt = arrayUnCode.join('');
   return codedTxt;
 }
+
+console.log(decode("h3 th2r2"));
 
 module.exports = {
   calcArea,
