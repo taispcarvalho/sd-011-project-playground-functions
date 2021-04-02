@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(array, name) {
   let test = [];
-  if (array !== null) {
+  if (array !== null || array === []) {
     for (let tec of array) {
       test.push({
         tech: tec,
