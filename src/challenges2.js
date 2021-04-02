@@ -46,18 +46,21 @@ function boo1(lineA, lineB, lineC) {
   if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     return true;
   }
+  return false;
 }
 
 function boo2(lineA, lineB, lineC) {
   if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
     return true;
   }
+  return false;
 }
 
 function boo3(lineA, lineB, lineC) {
   if (lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) {
     return true;
   }
+  return false;
 }
 
 function triangleCheck(lineA, lineB, lineC) {
