@@ -68,18 +68,31 @@ function generatePhoneNumber(array) {
   }
   return message;
 }
+console.log(generatePhoneNumber([0, 21, 3, 4, 14, 2, 7, 8, 19, 9, 4]));
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
+let status = true;
+function sideZero(lineA, lineB, lineC) {
   if (lineA <= 0 || lineB <= 0 || lineC <= 0) {
-    return false;
+    status = false;
   }
-  if (lineA >= Math.abs(lineB + lineC) || lineB >= Math.abs(lineA + lineC) || lineC >= Math.abs(lineA + lineB)) {
-    return false;
-  }
-  return true;
 }
-console.log(triangleCheck(5, 5, 5));
+
+function sumSide(lineA, lineB, lineC) {
+  if (lineA >= Math.abs(lineB + lineC) || lineB >= Math.abs(lineA + lineC)) {
+    status = false;
+  }
+  if (lineC >= Math.abs(lineA + lineB)) {
+    status = false;
+  }
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  sideZero(lineA, lineB, lineC);
+  sumSide(lineA, lineB, lineC);
+  return status;
+}
+console.log(triangleCheck(5, 5, 9));
 
 // Desafio 13
 function hydrate(string) {
