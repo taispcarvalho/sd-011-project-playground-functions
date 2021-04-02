@@ -66,9 +66,10 @@ function generatePhoneNumber(array) {
   if (message === 'OK') {
     return phoneN(array);
   }
-  return message;
+  let retorno = message;
+  return retorno;
 }
-console.log(generatePhoneNumber([0, 21, 3, 4, 14, 2, 7, 8, 19, 9, 4]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 // Desafio 12
 let status = true;
@@ -85,8 +86,10 @@ function triangleCheck(lineA, lineB, lineC) {
     status = false;
   }
   sumSide(lineA, lineB, lineC);
-  return status;
+  let resultado = status;
+  return resultado;
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate(string) {
