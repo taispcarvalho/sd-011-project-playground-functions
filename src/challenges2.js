@@ -43,15 +43,13 @@ function generatePhoneNumber(phone) {
     return 'Array com tamanho incorreto.';
   }
   if (checkRepeat(phone) === true || checkOtherThanEleven(phone) === true) {
-    return 'não é possível gerar um número de telefone com esses valores'
+    return 'não é possível gerar um número de telefone com esses valores';
   }
 
   let check;
   for (let number = 0; number < phone.length; number += 1) {
-    check = '(' + phone[0] + phone[1] + ') ' + phone[2] + phone[3] + phone[4] + phone[5] + phone[6] + '-' + phone[7] + phone[8] + phone[9] + phone[10];
+    check = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
   }
-  
-  
   return check;
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
