@@ -1,35 +1,41 @@
 function compareTrue(valor1, valor2) {
   return (valor1 && valor2);
 }
+
 function calcArea(base, altura) {
   let areaTriangulo = (base * altura) / 2;
   return (areaTriangulo);
 }
+
 function splitSentence(frase){
   let separado = frase.split(' ');
   return (separado);
 }
+
 function concatName(lista){
   let primPos = lista[0];
   let ultPos = lista[lista.length - 1];
   let resposta = ultPos.concat(', ', primPos);
   return (resposta);
 }
+
 function footballPoints(wins, ties) {
   let totalpoints = wins * 3 + ties;
   return (totalpoints);
 }
+
 function highestCount(valores) {
   let arrumado = valores.sort();
   let maior = arrumado[arrumado.length - 1];
   let quanVezes = 0;
-  for (let index = 0; index <= valores.length - 1; index += 1) {
+  for (let index = 0; index <= valores.length - 1; index++) {
     if (valores[index] === maior) {
       quanVezes++;
     } 
   } 
   return (quanVezes);
 }
+
 function catAndMouse(mouse, cat1, cat2) {
     cat1 = Math.abs(mouse - cat1);
     cat2 = Math.abs(mouse - cat2);
@@ -44,23 +50,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 function fizzBuzz(numeros) {
-  for (let cont = 0;cont <= numeros.length - 1;cont += 1) {
+  let arrayresposta = [0];
+  arrayresposta.pop();
+  for (let cont = 0;cont <= numeros.length - 1;cont++) {
     if (numeros[cont] % 3 === 0 && numeros[cont] % 5 === 0) {
-      numeros.splice(cont, cont, numeros[cont],"fizzBuzz");
-      //numeros.push("fizzBuzz");
+      arrayresposta.push("fizzBuzz");
     } else if (numeros[cont] % 3 === 0 && numeros[cont] % 5 !== 0) {
-      //arrayresposta.push("fizz");
-      numeros.splice(cont, cont, numeros[cont],"fizz");
+      arrayresposta.push("fizz");
     } else if (numeros[cont] % 3 !== 0 && numeros[cont] % 5 === 0) {
-      ///arrayresposta.push("buzz");
-      numeros.splice(cont, cont, numeros[cont],"buzz");
+      arrayresposta.push("buzz");
     } else {
-      //arrayresposta.push("bug!");
-      numeros.splice(cont, cont, numeros[cont],"bug!");
+      arrayresposta.push("bug!");
     }
   }
   return (arrayresposta);
 }
+  
 function encode(frase) {
   frase = frase.replaceAll("a", 1);
   frase = frase.replaceAll("e", 2);
