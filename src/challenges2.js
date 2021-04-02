@@ -19,15 +19,13 @@ function techList(tech, name) {
 // References:
 // Arrow functions: https://www.w3schools.com/js/js_arrow_function.asp
 // How to Get all Non-Unique Values: https://stackoverflow.com/questions/840781/get-all-non-unique-values-i-e-duplicate-more-than-one-occurrence-in-an-array
+// sort(): https://www.w3schools.com/jsref/jsref_sort.asp
 // slice(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 
 // I used Arrow Functions just to try to lessen the code's complexity, and to learn how to use it, no particular use.
 const lengthValidation = (phone) => {
-  let invalid = false;
-  if (phone.length !== 11) {
-    invalid = true;
-  }
-  return invalid;
+  if (phone.length !== 11) return true;
+  return false;
 };
 
 const digitValidation = (phone) => {
@@ -48,8 +46,8 @@ const counterValidation = (phone) => {
   let count = 0;
   for (let i = 0; i < sorted.length - 1; i += 1) { // thanks to Stackoverflow, I have learn how to count the repeated numbers without using two fors loops
     if (sorted[i] === sorted[i + 1]) count += 1;
+    if (count >= 3) invalid = true;
   }
-  if (count >= 3) invalid = true;
   return invalid;
 };
 
@@ -77,12 +75,13 @@ function generatePhoneNumber(phone) {
 // Desafio 12
 // References:
 // Math.abs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+// sort(): https://www.w3schools.com/jsref/jsref_sort.asp
 function triangleCheck(lineA, lineB, lineC) {
   let lines = []; // empty array for lines of the triangle
   lines.push(Math.abs(lineA), Math.abs(lineB), Math.abs(lineC)); // just add the parameters to the array
-  lines.sort((a, b) => a - b); // if you sort the lines, you don't need to test it separate, you can reduce to one single test
+  lines.sort((a, b) => a - b); // if you sort the lines, you don't need to test it separately, you can reduce to one single test
 
-  if ((lines[0] + lines[1]) < lines[2]) { // after all, you don't need to test the (line[0] - line[1]) < line[2], if the first premisse is false, the second is too.
+  if ((lines[0] + lines[1]) < lines[2]) { // after all, you don't need to test the (line[0] - line[1]) < line[2], if the first premisse is false, the second is false too.
     return false;
   } return true;
 }
