@@ -96,16 +96,17 @@ function cat2distance(mouse, cat2) {
   return cat2dist;
 }
 
-
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let cat1dist = cat1distance(mouse, cat1);
   let cat2dist = cat2distance(mouse, cat2);
   if (cat1dist > cat2dist) {
     return 'cat2';
-  } else if (cat1dist < cat2dist) {
+  }
+  if (cat1dist < cat2dist) {
     return 'cat1';
-  } else if (cat1dist === cat2dist) {
+  }
+  if (cat1dist === cat2dist) {
     return 'os gatos trombam e o rato foge';
   }
 }
