@@ -40,7 +40,7 @@ function checkForRepeatedNumbers(number) {
 
 function checkPhoneNumber(number) {
   if (number.length !== 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
   let answer = checkForRepeatedNumbers(number);
   return answer;
