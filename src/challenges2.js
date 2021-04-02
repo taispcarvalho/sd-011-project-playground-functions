@@ -61,11 +61,17 @@ function isRepeatNumber (rephone) {
 }
 let phoneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 console.log(generatePhoneNumber(phoneNumber));
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
 
+// Desafio 12
+function triangleCheck(side1, side2, side3) {
+  if ((side1 > side2 + side3 || side2 > side1 + side3 || side3 > side1 + side2) && (side1 < Math.abs(side2 - side3) || side2 < Math.abs(side1 - side3) || side3 < Math.abs(side1 - side2))) {
+    return false;
+  }
+  if (side1 < side2 + side3 && side1 > Math.abs(side2 - side3) || side2 < side1 + side3 && side2 > Math.abs(side1 - side3) || side3 < side2 + side1 && side3 > Math.abs(side2 - side1)) {
+    return true;
+  }
+}
+console.log(triangleCheck(10, 14, 8));
 // Desafio 13
 function hydrate() {
   // seu código aqui
