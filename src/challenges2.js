@@ -25,14 +25,11 @@ function generatePhoneNumber(arrayD11) {
   let numPart1 = [];
   let numPart2 = [];
   
-  // Check for wrong numbers
+  // Check for wrong numbers and repetition
   for (let i = 0; i < arrayD11.length; i += 1) {
     if (arrayD11[i] > 9 || arrayD11[i] < 0) {
       wrongNumber +=1;
     }
-  }
-
-  for (let i = 0; i < arrayD11.length; i +=1) {
     let sameNumberLoop = 0;
     for (let i2 = i; i2 < arrayD11.length; i2 +=1) {
       if (arrayD11[i] === arrayD11[i2]) {   
