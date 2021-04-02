@@ -28,28 +28,29 @@ function highestCount(valores) {
   let arrumado = valores.sort();
   let maior = arrumado[arrumado.length - 1];
   let quanVezes = 0;
-  for(let index = 0; index <= valores.length - 1; index++) {
+  for (let index = 0; index <= valores.length - 1; index++) {
     if (valores[index] === maior) {
       quanVezes++;
     } 
-  }
+  } 
   return (quanVezes);
 }
 
-function catAndMouse(mouse, cat1, cat2){
-  if (mouse > cat1){
-    cat1 = Math.abs(mouse - cat1);
+function catAndMouse(mouse, cat1, cat2) {
+  if (mouse > cat1) {
+    cat1 = mouse - cat1;
   } else {
-    cat1 = Math.abs(cat1 - mouse);
+    cat1 = cat1 - mouse;
   }
-  if (mouse > cat2){
-    cat2 = Math.abs(mouse - cat2);
+  if (mouse > cat2) {
+    cat2 = mouse - cat2;
   } else {
-    cat2 = Math.abs(cat2 - mouse);
+    cat2 = cat2 - mouse;
   }
-  if (cat1 === cat2){
+  if (cat1 === cat2) {
     return ("os gatos trombam e o rato foge");
-  } else if (cat1 < cat2){
+  }
+  if (cat1 < cat2) {
     return ("cat1");
   } else {
     return ("cat2");
@@ -59,12 +60,12 @@ function catAndMouse(mouse, cat1, cat2){
 function fizzBuzz(numeros) {
   let arrayresposta = [0];
   arrayresposta.pop();
-  for(let cont = 0;cont <= numeros.length - 1;cont++) {
-    if(numeros[cont] % 3 === 0 && numeros[cont] % 5 === 0) {
+  for (let cont = 0;cont <= numeros.length - 1;cont++) {
+    if (numeros[cont] % 3 === 0 && numeros[cont] % 5 === 0) {
       arrayresposta.push("fizzBuzz");
-    } else if(numeros[cont] % 3 === 0 && numeros[cont] % 5 !== 0) {
+    } else if (numeros[cont] % 3 === 0 && numeros[cont] % 5 !== 0) {
       arrayresposta.push("fizz");
-    } else if(numeros[cont] % 3 !== 0 && numeros[cont] % 5 === 0) {
+    } else if (numeros[cont] % 3 !== 0 && numeros[cont] % 5 === 0) {
       arrayresposta.push("buzz");
     } else {
       arrayresposta.push("bug!");
@@ -74,14 +75,14 @@ function fizzBuzz(numeros) {
 }
 
 function encode(frase) {
-  frase = frase.replaceAll("a",1);
-  frase = frase.replaceAll("e",2);
-  frase = frase.replaceAll("i",3);
-  frase = frase.replaceAll("o",4);
-  frase = frase.replaceAll("u",5);
+  frase = frase.replaceAll("a", 1);
+  frase = frase.replaceAll("e", 2);
+  frase = frase.replaceAll("i", 3);
+  frase = frase.replaceAll("o", 4);
+  frase = frase.replaceAll("u", 5);
   return (frase);
 }
-function decode(frase){
+function decode(frase) {
   frase = frase.replaceAll("1", "a");
   frase = frase.replaceAll("2", "e");
   frase = frase.replaceAll("3", "i");
