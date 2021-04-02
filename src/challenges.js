@@ -54,21 +54,9 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
-  let finalArray = [];
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 15 === 0) {
-      finalArray.push('fizzBuzz');
-    } else if (array[i] % 3 === 0) {
-      finalArray.push('fizz');
-    } else {
-      finalArray.push('bug!');
-    }
-  }
-  return finalArray;
-}
+function fizzBuzz() {
 
-console.log(fizzBuzz([7, 9]));
+}
 
 // Desafio 9
 // link sobre o metodo replace utilizado neste exercicio: https://www.w3schools.com/jsref/jsref_replace.asp
