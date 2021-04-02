@@ -56,21 +56,17 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  function numberToWord(number) {
-    if (number % 3 === 0 && number % 5 === 0) {
-      return 'fizzBuzz';
-    } if (number % 3 === 0) {
-      return 'fizz';
-    } if (number % 5 === 0) {
-      return 'buzz';
-    } else {
-      return 'bug!';
-    }
-  }
-  let translation = [];
+  let arrayString = [];
   for (let number of array) {
-      translation.push(numberToWord(number));
-  } return translation;
+    if (number % 3 === 0 && number % 5 === 0) {
+      arrayString.push('fizzBuzz');
+    } if (number % 3 === 0) {
+      arrayString.push('fizz');
+    } if (number % 5 === 0) {
+      arrayString.push('buzz');
+    } arrayString.push('bug!');
+  }
+  return arrayString;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
