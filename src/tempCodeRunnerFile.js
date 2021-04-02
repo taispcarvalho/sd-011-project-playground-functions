@@ -1,12 +1,14 @@
 function techList(array, name) {
-  if (array.length !== 0) {
+  if (array.length !== []) {
     for (let tec of array) {
       array.push({
         tech: tec,
         nome: name,
       });
     }
-  } else return 'Vazio!';
+  } if (array.length = 0) {
+    return 'Vazio!';
+  }
   return array;
 }
 let arr = [1, 20, 5];
