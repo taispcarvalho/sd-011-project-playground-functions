@@ -1,14 +1,14 @@
 function techList(array, name) {
   let test = [];
-  if (array !== null) {
-    for (let tec of array) {
+  let crescente = array.sort();
+  if (array !== null || array === null) {
+    for (let index of array) {
       test.push({
-        tech: tec,
+        tech: crescente,
         nome: name,
-      });
+      }); return (test);
     }
-  } else return 'Vazio!';
-  return (test);
+  } return 'Vazio!';
 }
-let n = ['CSS', 'JS'];
-console.log(techList(n, 'Lucas'));
+let teste = ['CSS', 'JS'];
+console.log(techList(teste, 'Lucas'));

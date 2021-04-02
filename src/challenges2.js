@@ -1,21 +1,21 @@
 // Desafio 10
 function techList(array, name) {
   let test = [];
-  if (array !== null || array === []) {
-    for (let tec of array) {
+  let crescente = array.sort();
+  if (array !== null || array === null) {
+    for (let index of array) {
       test.push({
-        tech: tec,
+        tech: crescente,
         nome: name,
-      });
+      }); return (test);
     }
-  } else return 'Vazio!';
-  return (test);
+  } return 'Vazio!';
 }
 
 // Desafio 11
 function numeroZeroNove(array) {
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] < 0 || array[index] > 9) {
+    if (array[index] < null || array[index] > 9) {
       return false;
     }
   }
