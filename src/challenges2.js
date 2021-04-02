@@ -55,7 +55,7 @@ function generatePhoneNumber(array) {
   if (!verifyNumber(array) || !verifyRepeat(array)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  let firstPart = `(${array[0]}${array[1]})`;
+  let firstPart = `(${array[0]}${array[1]}) `;
   let secondPart = `${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-`;
   let thirdPart = `${array[7]}${array[8]}${array[9]}${array[10]}`;
   let phone = firstPart + secondPart + thirdPart;
