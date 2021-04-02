@@ -69,8 +69,6 @@ function generatePhoneNumber(array) {
   return message;
 }
 
-console.log((generatePhoneNumber([5, 5, 5, 3, 2, 2, 1, 1, 6, 6, 7])));
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA <= 0 || lineB <= 0 || lineC <= 0) {
