@@ -27,7 +27,7 @@ function validationPhoneNumbers1(array) {
   for (let i = 0; i < array.length; i += 1) {
     let count = 0;
     count = validationPhoneNumbers2(array, array[i], count);
-    if (array[i] < 0 || array[i] > 9 || count > 3) {
+    if (array[i] < 0 || array[i] > 9 || count >= 3) {
       validation2 = false;
     }
   }
