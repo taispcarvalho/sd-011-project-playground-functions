@@ -8,16 +8,15 @@ function numeroZeroNove(array) {
 }
 function repeticaoNumero(array) {
   let contador = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    for (let indexCont = 0; indexCont < array.length; indexCont += 1) {
-      if (array[indexCont] === array[index]) {
-        contador += 1;
-      }
+  let index = 0;
+  for (let indexCont = 0; indexCont < array.length; indexCont += 1) {
+    if (array[indexCont] === array[index]) {
+      contador += 1;
     }
-    if (contador >= 3) {
-      return false;
-    }contador = 0;
   }
+  if (contador >= 3) {
+    return false;
+  }contador = 0;
   return true;
 }
 
