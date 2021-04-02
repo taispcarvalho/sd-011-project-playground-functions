@@ -106,8 +106,25 @@ function encode(str) {
 }
 
 
-function decode() {
-  
+function decode(str) {
+  let uncodeArray = str.split('');
+
+  for (let i = 0; i < uncodeArray.length; i += 1) {
+    if (uncodeArray[i] === '1') {
+      uncodeArray.splice(i, 1, 'a');
+    } else if (uncodeArray[i] === '2') {
+      uncodeArray.splice(i, 1, 'e');
+    } else if (uncodeArray[i] === '3') {
+      uncodeArray.splice(i, 1, 'i');
+    } else if (uncodeArray[i] === '4') {
+      uncodeArray.splice(i, 1, 'o');
+    } else if (uncodeArray[i] === '5') {
+      uncodeArray.splice(i, 1, 'u');
+    }
+  }
+
+  let uncodedStr = uncodeArray.join('');
+  return uncodedStr;
 }
 
 module.exports = {
