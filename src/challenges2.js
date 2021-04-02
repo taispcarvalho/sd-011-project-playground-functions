@@ -1,4 +1,6 @@
 // Desafio 10
+// Para resolver o problema de endentação.
+/** Source:  https://eslint.org/docs/2.0.0/rules/guard-for-in */
 function techList(array, myName) {
   let retorno = [];
   for (let index in array.sort()) {
@@ -10,13 +12,14 @@ function techList(array, myName) {
     }
   }
   if (retorno.length === 0) {
-  return 'Vazio!';
-}
+    return 'Vazio!';
+  }
   return retorno;
   // seu código aqui
 }
 
 // Desafio 11
+// Para ajuda nesse desafio, obtive ajuda do Marlon Ramos, ao qual me explicou como criar as funções auxiliares. 
 function repeatNumber(numbers, x) {
   let repetidos = 0;
   for (let index = 0; index < numbers.length; index += 1) {
@@ -35,7 +38,8 @@ function numbereleven(number) {
     }
   }
 }
-
+// Para resolução final obtive ajuda do Marlon e também do Regex
+/** Soucer: https://medium.com/@alexandreservian/regex-um-guia-pratico-para-express%C3%B5es-regulares-1ac5fa4dd39f*/
 function generatePhoneNumber(numberPhone) {
   let arraynumber = '';
   let numbercell = '';
@@ -56,6 +60,7 @@ function generatePhoneNumber(numberPhone) {
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
+// Para completar o desafio, obtive ajuda do Igor Mendes e do Marlon Ramos, Ambos da Turma 11;
 function triangleCheck(lineA, lineB, lineC) {
   let angl1 = Math.abs(lineA + lineB);
   let angl2 = Math.abs(lineA - lineB);
@@ -72,6 +77,8 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
+// Para completar esse desafio eu obtive ajuda no Developer Mozilla.
+/** Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt */
 function hydrate(string) {
   let bebeAgua = 0;
   for (let index in string) {
