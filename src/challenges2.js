@@ -47,13 +47,10 @@ function generatePhoneNumber(string) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   let number = string.join('');
-  number = string.splice(0, 0, '(')
+  number = string.splice(0, 0, '(');
   number += string.splice(0, 3, ') ') + string.splice(0, 6, '-') + string.splice(0, 11);
   return number.replace(/,/g, '');
 }
-let number = [1, 2, 3, 4, 2, 6, 3, 8, 9, 0, 1]
-console.log(number);
-console.log(generatePhoneNumber(number));
 
 // Desafio 12
 function checkSides(sideA, sideB, sideC) {
@@ -64,10 +61,10 @@ function checkSides(sideA, sideB, sideC) {
 }
 
 function checkIfSidesHigherThenDiff(sideA, sideB, sideC) {
-  if (sideA >= Math.abs(sideB - sideC) && sideB >= Math.abs(sideA - sideC) && sideC >= Math.abs(sideA - sideB)) {
+  if (!sideA >= Math.abs(sideB - sideC)) return false;
+  if (!sideB >= Math.abs(sideA - sideC)) return false;
+  if (!sideC >= Math.abs(sideA - sideB)) return false;
     return true;
-  }
-  return false;
 }
 
 function triangleCheck(sideA, sideB, sideC) {
