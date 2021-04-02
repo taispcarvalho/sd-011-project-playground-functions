@@ -37,12 +37,15 @@ console.log(triangleCheck(16, 9, 2));
 function hydrate(string) {
   let numbers = string.match(/\d+/g).map(Number);
   let total = 0;
+  if (numbers = 1) {
+    return ('1 copo de água');
+  }
   for (let index = 0; index < numbers.length; index += 1) {
     total += numbers[index];
   }
-  return (`${total} copos de água`);
+  return (`${total} copos de água'`);
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+console.log(hydrate('1 cachaça'));
 module.exports = {
   generatePhoneNumber,
   techList,
