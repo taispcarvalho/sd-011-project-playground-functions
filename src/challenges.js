@@ -25,7 +25,7 @@ console.log(splitSentence('Vamo que vamo!'));
 // Desafio 4
 function concatName(names) {
   // seu código aqui
-  return names[names.length - 1] + ', ' + names[0];
+  return `${names[names.length - 1]}, ${names[0]}`;
 }
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -66,11 +66,8 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 
-function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
+function cat1distance(mouse, cat1, cat2) {
   let cat1dist = 0;
-  let cat2dist = 0;
-
   if (cat1 > mouse){
     for (mouse; mouse < cat1; mouse += 1){
       cat1dist += 1;
@@ -80,7 +77,11 @@ function catAndMouse(mouse, cat1, cat2) {
       cat1dist += 1;
     }
   }
+  return cat1dist;
+}
 
+function cat2distance(mouse, cat1, cat2) {
+  let cat2dist = 0;
   if (cat2 > mouse){
     for (mouse; mouse < cat2; mouse += 1){
       cat2dist += 1;
@@ -90,7 +91,12 @@ function catAndMouse(mouse, cat1, cat2) {
       cat2dist += 1;
     }
   }
+  return cat2dist;
+}
 
+
+function catAndMouse(mouse, cat1, cat2) {
+  // seu código aqui
   if (cat1dist > cat2dist) {
     return 'cat2'
   } else if (cat1dist < cat2dist) {
@@ -98,7 +104,6 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (cat1dist === cat2dist) {
     return 'os gatos trombam e o rato foge'
   }
-
 }
 
 console.log(catAndMouse(1, 0, 2));
