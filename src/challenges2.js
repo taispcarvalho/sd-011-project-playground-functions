@@ -48,9 +48,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function countCupsOfWater(string) {
+  // let total = 0;
+  let numbers = string.match(/\d+/g);
+  let numbersConverted = [];
+  for (let num of numbers) {
+    numbersConverted.push(parseInt(num, 10));
+  }
+  return typeof numbersConverted;
 }
+
+function hydrate(string) {
+  let cupsOfWater = countCupsOfWater(string);
+  console.log(`${cupsOfWater} copos de água`);
+}
+
+hydrate('8 copo de cerveja, 9 de vinho e 7 de cachaça');
 
 module.exports = {
   generatePhoneNumber,
