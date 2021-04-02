@@ -62,7 +62,7 @@ function highestNumber(numbers) {
 console.log(highestCount([1, 2, 7, 23, 23, 23, 5, 7, 11]));
 
 // Desafio 7
-function catAndMouse([mouse, cat1, cat2]) {
+function catAndMouse(mouse, cat1, cat2) {
    if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return 'os gatos trombam e o rato foge';
    } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
@@ -71,7 +71,7 @@ function catAndMouse([mouse, cat1, cat2]) {
      return 'cat2';
    }
 }
-console.log(catAndMouse([100, 10, 9]));
+console.log(catAndMouse([100, 104, 103]));
 
 // Desafio 8
 function fizzBuzz(numbers) {
