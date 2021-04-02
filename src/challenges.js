@@ -39,13 +39,22 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distance1 = Math.abs(mouse - cat1);
+  let distance2 = Math.abs(mouse - cat2);
+  let cat;
+  if (distance1 > distance2) {
+    cat = 'cat2';
+  } else if (distance2 > distance1) {
+    cat = 'cat1';
+  } else {
+    cat = 'os gatos trombam e o rato foge';
+  }
+  return cat;
 }
 
-// Desafio 8
+// Desafio 8   numbersArray = [2, 15, 7, 9, 45]
 function fizzBuzz() {
-  // seu código aqui
 }
 
 // Desafio 9
