@@ -36,7 +36,6 @@ function checkRepeatdNumbers(array) {
   return true;
 }
 
-
 function checkIfBetween0to9(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] > 9 || array[index] < 0) {
@@ -46,26 +45,24 @@ function checkIfBetween0to9(array) {
   return true;
 }
 
-function generatePhoneNumber(array) {
-  let formatedPhoneNumber = '';
-  if (checkRepeatdNumbers(array) && checkIf11Numbers(array) && checkIfBetween0to9(array)) {
-    for (let index = 0; index < array.length; index += 1) {
-      if (index === 0) {
-        formatedPhoneNumber += '(';
-      } else if (index === 2) {
-        formatedPhoneNumber += ') ';
-      } else if (index === 7) {
-        formatedPhoneNumber += '-';
-      }
-      formatedPhoneNumber += array[index];
-    }
-  } else if (checkIf11Numbers(array) === false) {
-    formatedPhoneNumber = 'Array com tamanho incorreto.';
-  } else if (checkIfBetween0to9(array) || checkRepeatdNumbers(array)) {
-    formatedPhoneNumber = 'não é possível gerar um número de telefone com esses valores';
-  }
-  return formatedPhoneNumber;
+function transformIntoStrig(array) {
+  if (checkIfBetween0to9(array) === false) return 'Array com tamanho incorreto.';
+  if (checkIf11Numbers(array) && checkIfBetween0to9(array) === false) return 'não é possível gerar um número de telefone com esses valores';
+  let stringNumber = '';
+  for (index = 0; index < array.length; index += 1) stringNumber += array[index];
+  return stringNumber;
 }
+
+function generatePhoneNumber(string) {  
+  
+  let formatedPhoneNumber = string.splice(0, 0, '(');
+  return formatedPhoneNumber
+}
+
+let phone = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+
+console.log(generatePhoneNumber(phone));
+console.log(transformIntoStrig(phone));
 
 // Desafio 12
 function checkSides(sideA, sideB, sideC) {
