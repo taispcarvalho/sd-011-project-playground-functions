@@ -4,15 +4,14 @@ function techList(tech, name) {
   let novaLista = [];
   let objeto = {};
   if (tech.length <= 0) {
-    console.log('Vazio!');
-  } else {
-    for (let index = 0; index < tech.length; index += 1) {
-      objeto = {
-        tech: nomesOrdenados[index],
-        name: `${name}`,
-      };
-      novaLista.push(objeto);
-    }
+    return 'Vazio!';
+  }
+  for (let index = 0; index < tech.length; index += 1) {
+    objeto = {
+      tech: nomesOrdenados[index],
+      name: `${name}`,
+    };
+    novaLista.push(objeto);
   }
   return novaLista;
 }

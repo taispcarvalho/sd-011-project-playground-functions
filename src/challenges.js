@@ -77,7 +77,7 @@ function fizzBuzz(array) {
   return arrayResultado;
 }
 
-// Desafio 9
+// Desafio 9 - ok 
 function encode(string) {
   let novaString = string.replace(/a/gi, '1')
     .replace(/e/gi, '2')
