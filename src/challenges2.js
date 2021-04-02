@@ -21,9 +21,11 @@ function techList(techArray, name) {
   return 'Vazio!';
 }
 
+let numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  let phoneNumber = [];
+  
 }
 
 // Desafio 12
