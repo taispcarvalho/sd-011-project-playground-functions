@@ -114,12 +114,46 @@ function fizzBuzz(numbers) {
   return array;
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+function giverCrypto() {
+  return { a: 1, e: 2, i: 3, o: 4, u: 5 };
 }
-function decode() {
-  // seu código aqui
+
+function isProperty(wildcard) {
+  let cryptography = giverCrypto();
+  for (let key in cryptography) {
+    if (key === wildcard) return true;
+  }
+  return false;
+}
+
+function finderCorresponding(wildChar) {
+  let cryptography = giverCrypto();
+  if (isProperty(wildChar)) {
+    return cryptography[wildChar];
+  }
+  for (let key in cryptography) {
+    if (cryptography[key] === wildChar) return key;
+  }
+}
+
+// Desafio 9
+function encode(string) {
+  let cryptoString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (isProperty(string[index])) {
+      cryptoString += finderCorresponding(string[index]);
+    } else cryptoString += string[index];
+  }
+  return cryptoString;
+}
+function decode(string) {
+  let cryptoString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] > 0 && string[index] < 6) {
+      cryptoString += finderCorresponding(parseInt(string[index], 10));
+    } else cryptoString += string[index];
+  }
+  return cryptoString;
 }
 
 module.exports = {
