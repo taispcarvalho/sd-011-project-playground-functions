@@ -37,15 +37,19 @@ function generatePhoneNumber(array) {
   let first = [];
   let second = [];
   for (let i = 0; i < array.length; i += 1) {
-    if (array.length != 11) {
+    if (array.length !== 11) {
       return 'Array com tamanho incorreto.';
-    } else if (array[i] < 0 || array[i] > 9) {
+    }
+    if (array[i] < 0 || array[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
-    } else if (i >= 0 && i < 2) {
+    }
+    if (i >= 0 && i < 2) {
       code += array[i];
-    } else if (i >= 2 && i < 6) {
+    }
+    if (i >= 2 && i < 7) {
       first += array[i];
-    } else if (i >= 6 && i <= 9) {
+    }
+    if (i >= 7 && i <= 10) {
       second += array[i];
     }
   }
