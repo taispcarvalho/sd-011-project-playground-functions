@@ -46,7 +46,7 @@ function generatePhoneNumber(arrayOfNumbers) {
     let newPhoneNumber = ['('];
     for (let index of arrayOfNumbers) {
       if (arrayOfNumbers[index] === 4) {
-        newPhoneNumber.push(')');
+        newPhoneNumber.push(') ');
       } else if (arrayOfNumbers[index] === 9) {
         newPhoneNumber.push('-');
       }
@@ -57,12 +57,14 @@ function generatePhoneNumber(arrayOfNumbers) {
     return newPhoneNumber;
   } else {
     switch (validatorSize === true || validatorRepeat === true) {
-      case validatorSize:
-        return "Array com tamanho incorreto.";
-        break;
-      case validatorRepeat:
-        return "não é possível gerar um número de telefone com esses valores";
-        break;
+    case validatorSize:
+      return "Array com tamanho incorreto.";
+      break;
+    case validatorRepeat:
+      return "não é possível gerar um número de telefone com esses valores";
+      break;
+    default:
+      break;
     }
   }
 }
