@@ -41,23 +41,18 @@ function checkIfBetween0to9(array) {
   return true;
 }
 
-function transformIntoStrig(array) {
-  return array.join('');
-}
-
-function generatePhoneNumber(string) {  
-  if (checkIf11Numbers(string) === false) return 'Array com tamanho incorreto.'; 
+function generatePhoneNumber(string) {
+  if (checkIf11Numbers(string) === false) return 'Array com tamanho incorreto.';
   if (checkRepeatdNumbers(string) === false || checkIfBetween0to9(string) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  let number = transformIntoStrig(string)
-  number = string.splice(0, 0, '(') + string.splice(0, 3, ') ') + string.splice(0, 6, '-') + string.splice(0, 11);
-  //let formatedNumber = number.join('');
-  return number.replace(/,/g, '')
+  let number = string.join('');
+  number = string.splice(0, 0, '(')
+  number += string.splice(0, 3, ') ') + string.splice(0, 6, '-') + string.splice(0, 11);
+  return number.replace(/,/g, '');
 }
 let number = [1, 2, 3, 4, 2, 6, 3, 8, 9, 0, 1]
 console.log(number);
-console.log(transformIntoStrig(number));
 console.log(generatePhoneNumber(number));
 
 // Desafio 12
