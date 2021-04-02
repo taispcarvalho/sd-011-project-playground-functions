@@ -42,9 +42,9 @@ function verifyDigit(arrayOfNumbers) {
   return true;
 }
 
-function verifyRepetition(arrayOfNumbers) {
+function verifyRepetition(arrayOfNum) {
   let repLimit = 2;
-  let repArray = arrayOfNumbers.map((num) => arrayOfNumbers.filter((n) => n === num).length > repLimit);
+  let repArray = arrayOfNum.map((num) => arrayOfNum.filter((n) => n === num).length > repLimit);
   if (repArray.length === 0) {
     return true;
   }
