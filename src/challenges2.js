@@ -55,8 +55,6 @@ function arraySize(numbers) {
   return numberSize;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
 function generatePhoneNumber(numbers) {
   if (arraySize(numbers) === false) {
     return 'Array com tamanho incorreto.';
@@ -66,7 +64,7 @@ function generatePhoneNumber(numbers) {
   }
   if (arraySize(numbers) === true && checkNumb(numbers) === true && checkRep(numbers) === true) {
     let phoneNumber = `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
-    return phoneNumber.replace(/\,/g, '');
+    return phoneNumber.replace(/,/g, '');
   }
 }
 
@@ -105,12 +103,12 @@ function hydrate(string) {
   let numberOfDrinks = string.replace(/[^0-9]/g, '');
   let numberOfWaters = 0;
   for (let index = 0; index < numberOfDrinks.length; index += 1) {
-    numberOfWaters = numberOfWaters + parseInt(numberOfDrinks[index]);
+    numberOfWaters = parseInt(numberOfDrinks[index], 10);
   }
   if (numberOfWaters === 1) {
     return `${numberOfWaters} copo de água`;
-  } 
-  if (numbersOfWaters !== 1) {
+  }
+  if (numberOfWaters !== 1) {
     return `${numberOfWaters} copos de água`;
   }
 }
