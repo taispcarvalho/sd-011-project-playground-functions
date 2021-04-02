@@ -36,7 +36,7 @@ function checkRep(numbers) {
   let map = numbers.reduce((acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map());
   for (let [key, value] of map) {
     if (value >= 3) {
-      key = key;
+      console.log(key);
       repetitionCondition = false;
     }
   }
