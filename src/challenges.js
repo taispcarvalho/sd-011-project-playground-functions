@@ -96,8 +96,41 @@ function fizzBuzz(numericArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function splitSentences(sentence) {
+  let letterArray = sentence.split('');
+  return letterArray;
+}
+
+function joinSentences(letterArray) {
+  let sentence = letterArray.join(',');
+  return sentence;
+}
+
+function changeLetters(currentLetter, vogalToVerify, numberToReplace) {
+  if (currentLetter === vogalToVerify) {
+    return numberToReplace;
+  }
+  return currentLetter;
+}
+
+function encode(phrase) {
+  let splittedSentence = splitSentences(phrase);
+
+  let vogalsArray = ['a', 'e', 'i', 'o', 'u'];
+  let numbersArray = ['1', '2', '3', '4', '5'];
+
+  for (let index = 0; index < splittedSentence.length; index += 1) {
+    let letter = splittedSentence[index];
+
+    for (let jIndex = 0; jIndex < vogalsArray.length; jIndex += 1) {
+      let vogal = vogalsArray[jIndex];
+      let number = numbersArray[jIndex];
+      letter = changeLetters(letter, vogal, number);
+      splittedSentence[index] = letter;
+    }
+  }
+  let encodedPhrase = joinSentences(splittedSentence);
+  return encodedPhrase;
 }
 function decode() {
   // seu código aqui
