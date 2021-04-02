@@ -20,8 +20,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let numbersOfDrink = drinks.match (/\d+/g)
+  let glassesOfWater = 0;
+  for (let index = 0; index < numbersOfDrink.length; index += 1) {
+    glassesOfWater += Number(numbersOfDrink[index]);
+  }
+
+  if (glassesOfWater <= 1) {
+    return (glassesOfWater + ' copo de água');
+  } else {
+    return (glassesOfWater + ' copos de água');
+  }
 }
 
 module.exports = {
