@@ -115,7 +115,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(words) {
   let addThem = 0;
   let reg = /\d+/g;
 
