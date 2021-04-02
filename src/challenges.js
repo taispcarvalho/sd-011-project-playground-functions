@@ -24,23 +24,11 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highNum(array) {
-  let highest;
-
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > highest) {
-      highest = array[index];
-    }
-  }
-
-  return highest;
-}
-
 function highestCount(array) {
   let highest = array[0];
   let count = 0;
 
-  highest = highNum(array); // highest = Math.max(...array); ou highest = Math.max.apply(null, array);
+  highest = Math.max(...array);
 
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === highest) {
