@@ -85,13 +85,6 @@ function triangleCheck(lineA, lineB, lineC) {
   return true;
 }
 
-console.log(triangleCheck(10, 14, 8));
-console.log(triangleCheck(10, 4, 14));
-console.log(triangleCheck(-4, 8, 10));
-console.log(triangleCheck(12, 12, 4));
-console.log(triangleCheck(15, 8, 12));
-console.log(triangleCheck(20, 4, 10));
-
 // Desafio 13
 function hydrate() {
   // seu código aqui
