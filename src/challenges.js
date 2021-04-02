@@ -56,11 +56,11 @@ function fizzBuzz(numeros) {
     if (numeros[index] % 15 === 0) {
       numeros[index]=("fizzBuzz");
     } else if (numeros[index] % 3 === 0) {
-      numeros[index]("fizz");
+      numeros[index]=("fizz");
     } else if (numeros[index] % 5 === 0) {
-      numeros[index]("buzz");
+      numeros[index]=("buzz");
     } else {
-      numeros[index]("bug!");
+      numeros[index]=("bug!");
     }
   }
   return (numeros);
