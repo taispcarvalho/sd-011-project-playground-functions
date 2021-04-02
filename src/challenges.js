@@ -19,6 +19,7 @@ function concatName(arrayString) {
   let firstItem = arrayString[0];
   let lastItem = arrayString[arrayString.leght - 1];
   return lastItem, firstItem;
+}
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -27,7 +28,8 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayNumber) {
-  // seu código aqui
+  arrayNumber.sort();
+  let highestNumber = arrayNumber[arrayNumber.lenght - 1];
 }
 
 // Desafio 7
