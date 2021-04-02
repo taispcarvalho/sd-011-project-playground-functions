@@ -31,10 +31,10 @@ function triangleCheck() {
 function hydrate(frase) {
   let frase2 = frase.replace(/ /g, '');
   let quant = 0;
-  let agua = '';
+  let agua = ''
 
   for (let index = 0; index < frase2.length; index += 1) {
-    if (Number.isNaN(frase2[index])) {
+    if (!isNaN(frase2[index])) {
       quant += Number(frase2[index]);
     } else if (quant <= 1) {
       agua = ' copo de água';
