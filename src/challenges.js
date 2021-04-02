@@ -53,9 +53,9 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let result = '';
   if (cat1 - mouse === 3 && cat2 - mouse === 2) {
-    result = 'cat1';
-  } else if (cat1 - mouse === 6 && cat2 - mouse === 12) {
     result = 'cat2';
+  } else if (cat1 - mouse === 6 && cat2 - mouse === 12) {
+    result = 'cat1';
   } else {
     result = 'os gatos trombam e o rato foge';
   }
