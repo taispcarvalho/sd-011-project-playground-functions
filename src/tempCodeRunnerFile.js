@@ -36,5 +36,3 @@ function generatePhoneNumber(array) {
   }
   return generatePhoneNumber(array);
 }
-let array = [1, 2, 3, 2, 5, 6, 7, 8, 9, 8, 1];
-console.log(generatePhoneNumber(array));
