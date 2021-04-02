@@ -8,14 +8,14 @@ function checkForEmptyArray(array) {
 function techList(array, nome) {
   checkForEmptyArray(array);
   array = array.sort();
-  let finalObject = {};
+  let finalObject = [];
   for (let index = 0; index < array.length; index += 1) {
     let insideForObject = {
       tech: array[index],
       name: nome,
     };
 
-    finalObject.assign(insideForObject);
+    finalObject[index] = insideForObject;
   }
   return finalObject;
 }
