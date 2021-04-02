@@ -60,7 +60,7 @@ function generatePhoneNumber(numberPhone) {
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-// Para completar o desafio, obtive ajuda do Igor Mendes e do Marlon Ramos, Ambos da Turma 11;
+// Para completar o desafio, obtive ajuda do Igor Mendes e do Marlon Ramos e o Vitor Cardoso, Ambos da Turma 11;
 function triangleCheck(lineA, lineB, lineC) {
   let angl1 = Math.abs(lineA + lineB);
   let angl2 = Math.abs(lineA - lineB);
@@ -68,14 +68,11 @@ function triangleCheck(lineA, lineB, lineC) {
 
   if (lineC < angl1 && lineC > angl2) {
     value = true;
-  } else {
-    return value = false;
   }
-  
   return value;
   // seu código aqui
 }
-console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(10, 14, 99));
 
 // Desafio 13
 // Para completar esse desafio eu obtive ajuda no Developer Mozilla.
