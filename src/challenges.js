@@ -65,26 +65,43 @@ function fizzBuzz(numbersofArray) {
   let arrayFizzBuzz = [];
 
   for (let index = 0; index < numbersofArray.length; index += 1) {
-    if ((numbersofArray[index] % 3 === 0) && (numbersofArray[index] % 5 === 0)) {
+    if ((numbersofArray[index] % 15 === 0)) {
       arrayFizzBuzz.push('fizzBuzz');
-    } else if (numbersofArray[index] % 5 === 0) {
+    if (numbersofArray[index] % 5 === 0) {
       arrayFizzBuzz.push('buzz');
-    } else if (numbersofArray[index] % 3 === 0) {
+    if (numbersofArray[index] % 3 === 0) {
       arrayFizzBuzz.push('fizz');
     } else {
       arrayFizzBuzz.push('bug!');
     }
+    return arrayFizzBuzz;
   }
-  return arrayFizzBuzz;
+}
+  }
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  string = string.replace('a', '1');
+  string = string.replace('e', '2');
+  string = string.replace('i', '3');
+  string = string.replace('o', '4');
+  string = string.replace('u', '5');
+ 
+  return string;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  string = string.replace('1', 'a');
+  string = string.replace('2', 'e');
+  string = string.replace('3', 'i');
+  string = string.replace('4', 'o');
+  string = string.replace('5', 'u');
+
+  return string;
 }
+
+console.log(encode('hi there!'));
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
