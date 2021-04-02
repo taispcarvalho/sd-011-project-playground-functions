@@ -3,10 +3,10 @@ function techList(tech, name) {
   let nomesOrdenados = tech.sort();
   let novaLista = [];
   let objeto = {};
-  if (tech.length === 0) {
+  if (tech.length <= 0) {
     console.log('Vazio!');
   } else {
-    for (let index = 0; index <= tech.length - 1; index += 1) {
+    for (let index = 0; index < tech.length; index += 1) {
       objeto = {
         tech: nomesOrdenados[index],
         name: `${name}`,
