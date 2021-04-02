@@ -75,38 +75,19 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayFizzBuzzNumbers) {
   let arrayFizzBuzz = [];
-  let dividers = [15, 5, 3, 1]
-  let fizzbuzz = ['fizzBuzz', 'buzz', 'fizz', 'bug']
+  let dividers = [15, 5, 3, 1];
+  let fizzbuzz = ['fizzBuzz', 'buzz', 'fizz', 'bug'];
 
   for (let number of arrayFizzBuzzNumbers) {
     for (let index = 0; index < dividers.length; index += 1) {
       if (number % dividers[index] === 0) {
-        arrayFizzBuzz.push(fizzbuzz[index])
-        break
+        arrayFizzBuzz.push(fizzbuzz[index]);
+        break;
       }
     }
   }
-
-
-    // let isDivisibleBy3 = number % 3 === 0;
-    // let isDivisibleBy5 = number % 5 === 0;
-    // let isDivisibleBy3and5 = number % 15 === 0;
-
-    // switch (number) {
-    //   case isDivisibleBy3and5:
-    //     arrayFizzBuzz.push('fizzBuzz'); break;
-    //   case isDivisibleBy5:
-    //     arrayFizzBuzz.push('buzz'); break;
-    //   case isDivisibleBy3:
-    //     arrayFizzBuzz.push('fizz'); break;
-    //   default:
-    //     arrayFizzBuzz.push('bug!'); break;
-  //   }
-  // }
   return arrayFizzBuzz;
 }
-
-console.log(fizzBuzz([2, 15, 20, 9, 8]))
 
 // Desafio 9
 function encode(sentence) {
