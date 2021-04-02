@@ -33,9 +33,11 @@ function checkNumb(numbers) {
 
 function checkRep(numbers) {
   let repetitionCondition = true;
-  for (let index = 0; index < numbers.length; index += 1) {
+  //for (let index = 0; index < numbers.length; index += 1) {
+  for (let index of numbers) {
     let repetition = 0;
-    for (let index2 = 0; index2 < numbers.length; index2 += 1) {
+    //for (let index2 = 0; index2 < numbers.length; index2 += 1) {
+    for (let index2 of numbers) {
       if (numbers[index] === numbers[index2]) {
         repetition += 1;
       }
@@ -103,7 +105,7 @@ function hydrate(string) {
   let numberOfDrinks = string.replace(/[^0-9]/g, '');
   let numberOfWaters = 0;
   for (let index = 0; index < numberOfDrinks.length; index += 1) {
-    numberOfWaters = parseInt(numberOfDrinks[index], 10);
+    numberOfWaters += parseInt(numberOfDrinks[index], 10);
   }
   if (numberOfWaters === 1) {
     return `${numberOfWaters} copo de água`;
