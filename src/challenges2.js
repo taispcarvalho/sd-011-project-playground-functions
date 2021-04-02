@@ -35,7 +35,7 @@ function truePhone2(numbers) {
       contador += 1;
     }
     }
-    if (0 > key | 9 < key | contador >= 3) {
+    if (key < 0 | key >  9 | contador >= 3) {
       return false;
     }
   }
@@ -46,10 +46,10 @@ function generatePhoneNumber(numbers) {
   if (truePhone1(numbers) && truePhone2(numbers) === true) {
     return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
   }
-  if (truePhone1(numbers) === false){
+  if (truePhone1(numbers) === false) {
     return 'Array com tamanho incorreto.';
   }
-  if (truePhone2(numbers) === false){
+  if (truePhone2(numbers) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 }
