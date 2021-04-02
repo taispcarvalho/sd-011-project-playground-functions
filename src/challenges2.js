@@ -44,31 +44,27 @@ function repeatedNumberAnalyzer(arrayNumbers) {
 function generatePhoneNumber(arrayOfNumbers) {
   let validatorSize = invalidNumberAnalyzer(arrayOfNumbers);
   let validatorRepeat = repeatedNumberAnalyzer(arrayOfNumbers);
+  let newArrayOfNumbers = '(xx) xxxxx-xxxx';
   if (validatorSize === false && validatorRepeat === false) {
-    let newPhoneNumber = ['('];
-    for (let index of arrayOfNumbers) {
-      if (arrayOfNumbers[index] === 4) {
-        newPhoneNumber.push(') ');
-      } else if (arrayOfNumbers[index] === 9) {
-        newPhoneNumber.push('-');
-      }
-      newPhoneNumber.push(index);
+    arrayOfNumbers = arrayOfNumbers.toString();
+    arrayOfNumbers = arrayOfNumbers.replace(/,/g, "");
+    for (let index = 0; index < arrayOfNumbers.length; index += 1) {
+      newArrayOfNumbers = newArrayOfNumbers.replace('x', arrayOfNumbers[index]);
     }
-    newPhoneNumber = newPhoneNumber.toString();
-    newPhoneNumber = newPhoneNumber.replace(/,/g, '');
-    return newPhoneNumber;
+    return newArrayOfNumbers;
   } else {
     switch (validatorSize === true || validatorRepeat === true) {
-    case validatorSize:
-      return "Array com tamanho incorreto.";
+    case (validatorSize):
+      return 'Array com tamanho incorreto.';
       break;
-    case validatorRepeat:
-      return "não é possível gerar um número de telefone com esses valores";
+    case (validatorRepeat):
+      return 'não é possível gerar um número de telefone com esses valores';
       break;
     default:
       break;
     }
   }
+  
 }
 
 // Desafio 12
