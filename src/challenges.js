@@ -43,18 +43,19 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 function fizzBuzz(numeros) {
-  for (let index = 0;index <= numeros.length - 1;index += 1 ) {
-    if (numeros[index] % 15 === 0) {
-      numeros[index] = ('fizzBuzz'); 
-    } else if (numeros[index] % 3 === 0) {
-      numeros[index] = ('fizz');
-    } else if (numeros[index] % 5 === 0) {
-      numeros[index] = ('buzz');
+  let codificado = numeros;
+  for (let index = 0;index <= codificado.length - 1;index += 1 ) {
+    if (codificado[index] % 15 === 0) {
+      codificado[index] = ('fizzBuzz'); 
+    } else if (codificado[index] % 3 === 0) {
+      codificado[index] = ('fizz');
+    } else if (codificado[index] % 5 === 0) {
+      codificado[index] = ('buzz');
     } else {
-      numeros[index] = ('bug!');
+      codificado[index] = ('bug!');
     }
   }
-  return (numeros);
+  return (codificado);
 }
 function encode(frase) {
   frase = frase.replace(/a/g, 1);
