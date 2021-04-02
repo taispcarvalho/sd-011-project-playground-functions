@@ -1,29 +1,24 @@
 function compareTrue(valor1, valor2) {
   return (valor1 && valor2);
 }
-
 function calcArea(base, altura) {
   let areaTriangulo = (base * altura) / 2;
   return (areaTriangulo);
 }
-
 function splitSentence(frase) {
   let separado = frase.split(' ');
   return (separado);
 }
-
 function concatName(lista) {
   let primPos = lista[0];
   let ultPos = lista[lista.length - 1];
   let resposta = ultPos.concat(', ', primPos);
   return (resposta);
 }
-
 function footballPoints(wins, ties) {
   let totalpoints = wins * 3 + ties;
   return (totalpoints);
 }
-
 function highestCount(valores) {
   let arrumado = valores.sort();
   let maior = arrumado[arrumado.length - 1];
@@ -35,7 +30,6 @@ function highestCount(valores) {
   }
   return (quanVezes);
 }
-
 function catAndMouse(mouse, cat1, cat2) {
   cat1 = Math.abs(mouse - cat1);
   cat2 = Math.abs(mouse - cat2);
@@ -48,16 +42,13 @@ function catAndMouse(mouse, cat1, cat2) {
     return ('cat2');
   }
 }
-
 function fizzBuzz(numeros) {
-  for (let index = 0;index <= numeros.length - 1;index += 1 ) {
+  for (let index = 0;index <= numeros.length - 1;index += 1) {
     if (numeros[index] % 15 === 0) {
-      numeros[index] = ('fizzBuzz') ; 
-    } 
-    if (numeros[index] % 3 === 0) {
+      numeros[index] = ('fizzBuzz'); 
+    } else if (numeros[index] % 3 === 0) {
       numeros[index] = ('fizz');
-    } 
-    if (numeros[index] % 5 === 0) {
+    } else if (numeros[index] % 5 === 0) {
       numeros[index] = ('buzz');
     } else {
       numeros[index] = ('bug!');
@@ -65,7 +56,6 @@ function fizzBuzz(numeros) {
   }
   return (numeros);
 }
-
 function encode(frase) {
   frase = frase.replaceAll('a', 1);
   frase = frase.replaceAll('e', 2);
@@ -74,7 +64,6 @@ function encode(frase) {
   frase = frase.replaceAll('u', 5);
   return (frase);
 }
-
 function decode(frase) {
   frase = frase.replaceAll('1', 'a');
   frase = frase.replaceAll('2', 'e');
@@ -86,7 +75,7 @@ function decode(frase) {
 
 module.exports = {
   calcArea,
-    catAndMouse,
+  catAndMouse,
   compareTrue,
   concatName,
   decode,
