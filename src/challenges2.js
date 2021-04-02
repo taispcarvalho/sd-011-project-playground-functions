@@ -27,14 +27,13 @@ function truePhone1(numbers){
 }
 
 function truePhone2(numbers) {
-
   for (const key of numbers) {
     let contador = 0;
-    for (const key2 of numbers) {
-    if (key === key2) {
-      contador += 1;
-    }
-    }
+  for (const key2 of numbers) {
+  if (key === key2) {
+    contador += 1;
+  }
+  }
     if (key < 0 | key >  9 | contador >= 3) {
       return false;
     }
