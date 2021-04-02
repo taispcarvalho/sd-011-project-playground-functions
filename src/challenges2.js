@@ -1,5 +1,4 @@
 // Desafio 10
-
 function techList(tech, name) {
   let objectTech = [];
   tech.sort();
@@ -22,14 +21,31 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let result = false;
+  let verifyA = verifyTriangle(lineA, lineB, lineC);
+  let verifyB = verifyTriangle(lineB, lineC, lineA);
+  let verifyC = verifyTriangle(lineC, lineA, lineB);
+  if (verifyA && verifyB && verifyC) {
+    result = true;
+  }
+  return result;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let sum = 0;
+  drinks = (drinks.match(/\d/g));
+  for (let index = 0; index < drinks.length; index += 1) {
+    const newLocal = drinks[index];
+    sum += parseInt(newLocal, 10);
+  }
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  }
+  return `${sum} copos de água`;
 }
+
 
 module.exports = {
   generatePhoneNumber,
