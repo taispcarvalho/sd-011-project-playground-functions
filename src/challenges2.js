@@ -58,8 +58,8 @@ function generatePhoneNumber(arrayOfNumbers) {
     newPhoneNumber = newPhoneNumber.replace(/,/g, '');
     return newPhoneNumber;
   }
+  return validator;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function sum(lineA, lineB, lineC) {
