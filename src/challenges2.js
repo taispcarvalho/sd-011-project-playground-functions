@@ -31,7 +31,8 @@ Teste:
 /* Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
 Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], generatePhoneNumber deverá retornar (12) 34567-8901. */
 function errorArrayLength(array) {
-  return array.length !== 11 ? 'Array com tamanho incorreto.' : false;
+  // Mensagem se verdadeiro 'Array com tamanho incorreto.'
+  return array.length !== 11 ? true : false;
 }
 function errorNumber(array) {
   let validationError = 0;
@@ -43,14 +44,13 @@ function errorNumber(array) {
       validationError += 1;
     }
   }
-  return validationError !== 0
-    ? 'não é possível gerar um número de telefone com esses valores'
-    : false;
+  // Mensagem se verdadeiro 'não é possível gerar um número de telefone com esses valores'
+  return validationError !== 0 ? true : false;
 }
 function repeatedNumber(array) {
   // Função feita com consulta a https://dev.to/huyddo/find-duplicate-or-repeat-elements-in-js-array-3cl3.
   let numbers = {};
-  let msgError;
+  let msgError = false;
   let passMsg = false;
   for (let index = 0; index < array.length; index += 1) {
     if (numbers[array[index]]) {
@@ -61,31 +61,51 @@ function repeatedNumber(array) {
   }
   for (let variable in numbers) {
     if (numbers[variable] > 2) {
-      msgError = 'não é possível gerar um número de telefone com esses valores';
+      // // Mensagem se verdadeiro 'não é possível gerar um número de telefone com esses valores'
+      msgError = true;
     }
   }
   return msgError || passMsg;
 }
 function generatePhoneNumber(array) {
-  errorArrayLength(array);
-  errorNumber(array);
-  repeatedNumber (array);
-  let phoneNumber = '(00) 00000-0000';
+  let msgLength = 'Array com tamanho incorreto.';
+  if (errorArrayLength(array)) {
+    return msgLength;
+  }
 
+  let msgNumber =
+    'não é possível gerar um número de telefone com esses valores';
+  if (errorNumber(array)) {
+    return msgNumber;
+  }
+
+  if (repeatedNumber(array)) {
+    return msgNumber;
+  } else {
+    let phoneNumber = '';
+    phoneNumber += '(';
+    phoneNumber += array[0];
+    phoneNumber += array[1];
+    phoneNumber += ') ';
+    phoneNumber += array[2];
+    phoneNumber += array[3];
+    phoneNumber += array[4];
+    phoneNumber += array[5];
+    phoneNumber += array[6];
+    phoneNumber += '-';
+    phoneNumber += array[7];
+    phoneNumber += array[8];
+    phoneNumber += array[9];
+    phoneNumber += array[10];
+    return phoneNumber;
+  }
 }
 
-
-/* 
-
-  
-  - Retorne a string "não é possível gerar um número de telefone com esses valores" caso algum número da array se repeti 3 vezes ou mais.
-- Retorne um número de telefone, respeitando parênteses, traços e espaços caso os números da array estejam de acordo com as restrições */
-
-/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8,]));  Tamanho incorreto*/
-/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1])); Menor que zero*/
-/* console.log(generatePhoneNumber([1, 2, 13, 4, 5, 6, 7, 8, 9, 0, 1])); maior que 9*/
-/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 7, 7, 0, 1])); */
-/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));  Retornar (12) 34567-8901*/
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1])); //Menor que zero.
+console.log(generatePhoneNumber([1, 2, 13, 4, 5, 6, 7, 8, 9, 0, 1])); //maior que 9.
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 7, 7, 0, 1])); //repete numero.
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); //Retornar (12) 34567-8901.
 
 // Desafio 12----------------------------------------
 /* Crie uma função de Condição de existência de um triângulo
