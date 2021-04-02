@@ -1,6 +1,25 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function listOfTech(tech, name) {
+  let result = '';
+  for (let index = 0; index < tech.length; index += 1) {
+    result += '{\n tech: \"' + tech[index] + '\",\n name: \"' + name + '\" \n },\n';
+  }
+  return result;
+}
+/* let teste = listOfTech(['React', 'HTML', 'CSS'], 'Daniel');
+console.log(listOfTech(['React', 'HTML', 'CSS'], 'Daniel'));
+console.log(teste[0]);
+console.log(teste[(teste.length) - 1]); */
+
+function addColchete(tech, name) {
+  let colchete = listOfTech(tech, name);
+    
+}
+console.log(addColchete(['React', 'HTML', 'CSS'], 'Daniel'));
+
+
+function techList(tech, name) {
+
 }
 
 // Desafio 11
