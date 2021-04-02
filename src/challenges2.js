@@ -32,7 +32,6 @@ function checkNum(n) {
 // Regex retiradohttps://gist.github.com/knoonrx/a180f0b7e3039e42c621
 function generatePhoneNumber(nPhone) {
   let response = '';
-  let nStrPhone = '';
   let RegExp = /(\d{2})(\d{5})(\d{4})/;
 
   if (nPhone.length !== 11) {
@@ -41,9 +40,9 @@ function generatePhoneNumber(nPhone) {
     response = 'não é possível gerar um número de telefone com esses valores';
   } else {
     for (let index of nPhone) {
-      nStrPhone = nStrPhone.concat(index);
+      response = response.concat(index);
     }
-    response = nStrPhone.replace(RegExp, '($1) $2-$3');
+    response = response.replace(RegExp, '($1) $2-$3');
   }
   return response;
 }
