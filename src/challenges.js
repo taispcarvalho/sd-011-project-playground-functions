@@ -84,9 +84,28 @@ const fizzBuzz = (arr) => {
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
+function encode(str) {
+   let array = str.split('');
+
+   for (let i = 0; i < array.lenth; i += 1) {
+     if (array[i] === 'a') {
+       array.splice(i, 1, '1');
+     } else if (array[i] === 'e') {
+       array.splice(i, 1, '2');
+     } else if (array[i] === 'i') {
+       array.splice(i, 1, '3');
+     } else if (array[i] === 'o') {
+       array.splice(i, 1, '4');
+     } else if (array[i] === 'o') {
+       array.splice(i, 1, '5');
+     }
+   }
    
+   let codeStr = array.join('');
+   return codeStr;
 }
+
+
 function decode() {
   
 }
