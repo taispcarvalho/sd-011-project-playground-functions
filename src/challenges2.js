@@ -65,7 +65,6 @@ function triangleCheck(lineA, lineB, lineC) {
 // Find numbers in strings: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
 // RegExp g Modifier (/g): https://www.w3schools.com/jsref/jsref_regexp_g.asp
 // Template Literals: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-// Legacy References (not used anymore):
 // Removing unnecessary zeros: https://stackoverflow.com/questions/3612744/remove-insignificant-trailing-zeros-from-a-number
 // parseInt(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 // Number(): https://www.w3schools.com/jsref/jsref_number.asp
@@ -73,10 +72,10 @@ function triangleCheck(lineA, lineB, lineC) {
 // Missing Radix Parameter: https://stackoverflow.com/questions/7818903/jslint-says-missing-radix-parameter
 function hydrate(words) {
   let numbers = words.replace(/[^0-9]/g, ''); // A technique used to find the numbers inside a string with the addition of /g to search they all
-  let result = ''; // after some tests, I delete the necessity of convert to number and just add a empty string to 'result', which has an even better result
+  let result = 0; // after some tests, I delete the necessity of convert to number and just add a empty string to 'result', which has an even better result
 
   for (let i = 0; i < numbers.length; i += 1) {
-    result += numbers[i]; // after the tests, I don't need to use any method here anymore
+    result += Number(numbers[i]); // after the tests, I don't need to use any method here anymore
   }
 
   if (result <= 1) {
