@@ -28,42 +28,42 @@ function highestCount(valores) {
   let arrumado = valores.sort();
   let maior = arrumado[arrumado.length - 1];
   let quanVezes = 0;
-  for (let index = 0; index <= valores.length - 1; index +=1 ) {
+  for (let index = 0; index <= valores.length - 1; index += 1) {
     if (valores[index] === maior) {
-    quanVezes += 1;
-    } 
-  } 
+      quanVezes += 1;
+    }
+  }
   return (quanVezes);
 }
 
 function catAndMouse(mouse, cat1, cat2) {
   cat1 = Math.abs(mouse - cat1);
   cat2 = Math.abs(mouse - cat2);
-  if (cat1 === cat2) {
-  return ("os gatos trombam e o rato foge");
-  }
-  if (cat1 < cat2) { 
-  return ("cat1");
-  } else {
+    if (cat1 === cat2) {
+    return ("os gatos trombam e o rato foge");
+    }
+    if (cat1 < cat2) { 
+    return ("cat1");
+    } else {
   return ("cat2");
   }
 }
 
 function fizzBuzz(numeros) {
-  let arrayresposta = [0];
-  arrayresposta.pop();
-  for (let index = 0;index <= numeros.length - 1;index +=1 ) {
+  //let arrayresposta = [0];
+  //arrayresposta.pop();
+  for (let index = 0;index <= numeros.length - 1;index += 1 ) {
     if (numeros[index] % 15 === 0) {
-      arrayresposta.push("fizzBuzz");
+      numeros[index]=("fizzBuzz");
     } else if (numeros[index] % 3 === 0) {
-      arrayresposta.push("fizz");
+      numeros[index]("fizz");
     } else if (numeros[index] % 5 === 0) {
-      arrayresposta.push("buzz");
+      numeros[index]("buzz");
     } else {
-      arrayresposta.push("bug!");
+      numeros[index]("bug!");
     }
   }
-  return (arrayresposta);
+  return (numeros);
 }
   
 function encode(frase) {
@@ -74,6 +74,7 @@ function encode(frase) {
   frase = frase.replaceAll("u", 5);
   return (frase);
 }
+
 function decode(frase) {
   frase = frase.replaceAll("1", "a");
   frase = frase.replaceAll("2", "e");
@@ -82,6 +83,7 @@ function decode(frase) {
   frase = frase.replaceAll("5", "u");
   return (frase);
 }
+
 module.exports = {
   calcArea,
   catAndMouse,
