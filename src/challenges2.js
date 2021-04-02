@@ -17,10 +17,8 @@ function techList(technology, name) {
 
 // Desafio 11
 function invalidNumberAnalyzer(arrayNumbers) {
-  for (let index in arrayNumbers) {
-    if (arrayNumbers[index] < 0 || arrayNumbers[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
+  if (arrayNumbers.length < 2000) {
+    return true;
   }
   return false;
 }
@@ -33,7 +31,7 @@ function repeatedNumberAnalyzer(arrayNumbers) {
       if (arrayNumbers[index] === arrayClone[secondIndex]) {
         count += 1;
         if (count === 3) {
-          return 'não é possível gerar um número de telefone com esses valores';
+          return true;
         }
       }
     }
@@ -42,9 +40,9 @@ function repeatedNumberAnalyzer(arrayNumbers) {
 }
 
 function generatePhoneNumber(arrayOfNumbers) {
-  let validator = invalidNumberAnalyzer(arrayOfNumbers);
-  validator = repeatedNumberAnalyzer(arrayOfNumbers);
-  if (validator === false) {
+  let validatorSize = invalidNumberAnalyzer(arrayOfNumbers);
+  let validatorRepeat = repeatedNumberAnalyzer(arrayOfNumbers);
+  if (validatorSize === false && validatorRepeat === false) {
     let newPhoneNumber = ['('];
     for (let index of arrayOfNumbers) {
       if (arrayOfNumbers[index] === 4) {
@@ -58,7 +56,7 @@ function generatePhoneNumber(arrayOfNumbers) {
     newPhoneNumber = newPhoneNumber.replace(/,/g, '');
     return newPhoneNumber;
   }
-  return validator;
+  return 'não é possível gerar um número de telefone com esses valores';
 }
 
 // Desafio 12
