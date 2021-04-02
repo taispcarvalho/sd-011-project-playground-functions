@@ -2,37 +2,26 @@
 function compareTrue(firstValue, secondValue) {
   return firstValue && secondValue;
 }
-console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, heigth) {
   return (base * heigth) / 2;
 }
-console.log(calcArea(10, 50));
-console.log(calcArea(5, 2));
-console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(splitString) {
   return splitString.split(' ');
 }
-console.log(splitSentence('Go Trybe'));
 
 // Desafio 4
 function concatName(inintialtArray) {
   return inintialtArray[inintialtArray.length - 1].concat(', ') + inintialtArray[0];
 }
-console.log(concatName(['Lucas', 'Cassiano', 'ferraz', 'Paolilo']));
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
-console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
-console.log(footballPoints(14, 8));
-console.log(footballPoints(1, 2));
-console.log(footballPoints(0, 0));
 
 // Desafio 6
 function seekGreaterNumber(numbersArray) {
@@ -53,9 +42,6 @@ function highestCount(numbersArray) {
   }
   return largestAccountant;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -71,9 +57,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   }
 }
-console.log(catAndMouse(0, 3, 2));
-console.log(catAndMouse(10, 4, 22));
-console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function conditionForFizzBuzz(value) {
@@ -95,9 +78,6 @@ function fizzBuzz(numbers) {
   }
   return newArrayFizBuzz;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-console.log(fizzBuzz([7, 9]));
-console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode(string) {
@@ -120,8 +100,6 @@ function decode(newString) {
   }
   return newString;
 }
-console.log(encode('hi there'));
-console.log(decode('h3 th2r2'));
 
 module.exports = {
   calcArea,
