@@ -1,15 +1,14 @@
 function techList(array, name) {
-  if (array.length !== []) {
+  let test = [];
+  if (array !== null) {
     for (let tec of array) {
-      array.push({
+      test.push({
         tech: tec,
         nome: name,
       });
     }
-  } if (array.length = 0) {
-    return 'Vazio!';
-  }
-  return array;
+  } else return 'Vazio!';
+  return (test);
 }
-let arr = [1, 20, 5];
-console.log(techList(arr, 'Lucas'));
+let n = ['CSS', 'JS'];
+console.log(techList(n, 'Lucas'));
