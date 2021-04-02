@@ -16,7 +16,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayString1) {
-  `${arrayString1[arrayString1.length - 1]}, ${arrayString1[0]}`;
+  return `${arrayString1[arrayString1.length - 1]}, ${arrayString1[0]}`;
 }
 
 // Desafio 5
