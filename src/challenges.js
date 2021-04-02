@@ -71,7 +71,7 @@ function fizzBuzz(numberArray) {
     divisivel3 = numberArray[index] % 3;
     divisivel5 = numberArray[index] % 5;
     if(divisivel3 === 0 && divisivel5 === 0){
-    comparation.push('fizzbuzz');
+    comparation.push('fizzBuzz');
     }
     else if (divisivel3 === 0 && divisivel5 != 0){
       comparation.push('fizz');
@@ -80,7 +80,7 @@ function fizzBuzz(numberArray) {
       comparation.push ('buzz');
     }
     else{
-      comparation.push('bug')
+      comparation.push('bug!')
     }
     }
     return comparation; 
