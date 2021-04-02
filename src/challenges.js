@@ -118,17 +118,16 @@ function fizzBuzz(numbers) {
   // seu código aqui
   let returnArray = [];
   for (const key of numbers) {
-  if ((key % 3) === 0 && (key % 5) === 0) {
-    returnArray.push('fizzBuzz');
-  } else if ((key % 3) === 0 && (key % 5) !== 0) {
-    returnArray.push('fizz');
-  } else if ((key %3 ) !== 0 && (key % 5) === 0) {
-    returnArray.push('buzz');
-  } else {
-    returnArray.push('bug!');
+    if ((key % 3) === 0 && (key % 5) === 0) {
+      returnArray.push('fizzBuzz');
+    } else if ((key % 3) === 0 && (key % 5) !== 0) {
+      returnArray.push('fizz');
+    } else if ((key % 3 ) !== 0 && (key % 5) === 0) {
+      returnArray.push('buzz');
+    } else {
+      returnArray.push('bug!');
+    }
   }
-  }
-
   return returnArray;
 }
 
