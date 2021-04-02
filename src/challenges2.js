@@ -2,7 +2,7 @@
 function techList(value, oneName) {
   if (value.length == 0) {
     return 'Vazio!';
-  } else {
+  } else if (value.length == 5){
     let ret = [];
     for (let index = 0; index < value.length; index += 1) {
       ret[index] = {
