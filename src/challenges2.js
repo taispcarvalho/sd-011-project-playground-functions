@@ -21,7 +21,7 @@ function techList(arrTechNames, name1) {
   return result;
 }
 
-// Desafio 11
+/*/ Desafio 11
 function generatePhoneNumber(arrNum) {
   //let arrNum2 = arrNum;
   let formNum = '';
@@ -96,7 +96,7 @@ function checkArrNum(arr) {
   }
   return false;
 }
-
+*/
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let result;
