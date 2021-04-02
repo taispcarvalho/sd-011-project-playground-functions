@@ -84,47 +84,53 @@ const fizzBuzz = (arr) => {
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode(str) {
-   let array = str.split('');
-
-   for (let i = 0; i < array.lenth; i += 1) {
-     if (array[i] === 'a') {
-       array.splice(i, 1, '1');
-     } else if (array[i] === 'e') {
-       array.splice(i, 1, '2');
-     } else if (array[i] === 'i') {
-       array.splice(i, 1, '3');
-     } else if (array[i] === 'o') {
-       array.splice(i, 1, '4');
-     } else if (array[i] === 'o') {
-       array.splice(i, 1, '5');
-     }
-   }
-   
-   let codeStr = array.join('');
-   return codeStr;
-}
-
-
-function decode(str) {
-  let uncodeArray = str.split('');
-
-  for (let i = 0; i < uncodeArray.length; i += 1) {
-    if (uncodeArray[i] === '1') {
-      uncodeArray.splice(i, 1, 'a');
-    } else if (uncodeArray[i] === '2') {
-      uncodeArray.splice(i, 1, 'e');
-    } else if (uncodeArray[i] === '3') {
-      uncodeArray.splice(i, 1, 'i');
-    } else if (uncodeArray[i] === '4') {
-      uncodeArray.splice(i, 1, 'o');
-    } else if (uncodeArray[i] === '5') {
-      uncodeArray.splice(i, 1, 'u');
+function encode(string) {
+  let arrayCode = string.split('');
+  for (index = 0; index < arrayCode.length; index += 1) {
+    if (arrayCode[index] === 'a') {
+      arrayCode.splice(index, 1, '1');
+    }
+    if (arrayCode[index] === 'e') {
+      arrayCode.splice(index, 1, '2');
+    }
+    if (arrayCode[index] === 'i') {
+      arrayCode.splice(index, 1, '3');
+    }
+    if (arrayCode[index] === 'o') {
+      arrayCode.splice(index, 1, '4');
+    }
+    if (arrayCode[index] === 'u') {
+      arrayCode.splice(index, 1, '5');
     }
   }
 
-  let uncodedStr = uncodeArray.join('');
-  return uncodedStr;
+  let codedTxt = arrayCode.join('');
+  return codedTxt;
+}
+
+
+function decode(string) {
+  let arrayUnCode = string.split('');
+  for (index = 0; index < arrayUnCode.length; index += 1) {
+    if (arrayUnCode[index] === '1') {
+      arrayUnCode.splice(index, 1, 'a');
+    }
+    if (arrayUnCode[index] === '2') {
+      arrayUnCode.splice(index, 1, 'e');
+    }
+    if (arrayUnCode[index] === '3') {
+      arrayUnCode.splice(index, 1, 'i');
+    }
+    if (arrayUnCode[index] === '4') {
+      arrayUnCode.splice(index, 1, 'o');
+    }
+    if (arrayUnCode[index] === '5') {
+      arrayUnCode.splice(index, 1, 'u');
+    }
+  }
+
+  let codedTxt = arrayUnCode.join('');
+  return codedTxt;
 }
 
 module.exports = {
