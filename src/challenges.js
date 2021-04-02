@@ -28,36 +28,36 @@ function highestCount(valores) {
   let arrumado = valores.sort();
   let maior = arrumado[arrumado.length - 1];
   let quanVezes = 0;
-  for (let index = 0; index <= valores.length - 1; index++) {
+  for (let index = 0; index <= valores.length - 1; index +=1 ) {
     if (valores[index] === maior) {
-      quanVezes++;
+    quanVezes += 1;
     } 
   } 
   return (quanVezes);
 }
 
 function catAndMouse(mouse, cat1, cat2) {
-    cat1 = Math.abs(mouse - cat1);
-    cat2 = Math.abs(mouse - cat2);
-    if (cat1 === cat2) {
-      return ("os gatos trombam e o rato foge");
-    }
-    if (cat1<cat2){ 
-      return ("cat1");
-    } else {
-      return ("cat2");
+  cat1 = Math.abs(mouse - cat1);
+  cat2 = Math.abs(mouse - cat2);
+  if (cat1 === cat2) {
+  return ("os gatos trombam e o rato foge");
+  }
+  if (cat1 < cat2) { 
+  return ("cat1");
+  } else {
+  return ("cat2");
   }
 }
 
 function fizzBuzz(numeros) {
   let arrayresposta = [0];
   arrayresposta.pop();
-  for (let cont = 0;cont <= numeros.length - 1;cont++) {
-    if (numeros[cont] % 3 === 0 && numeros[cont] % 5 === 0) {
+  for (let index = 0;index <= numeros.length - 1;index +=1 ) {
+    if (numeros[index] % 15 === 0) {
       arrayresposta.push("fizzBuzz");
-    } else if (numeros[cont] % 3 === 0 && numeros[cont] % 5 !== 0) {
+    } else if (numeros[index] % 3 === 0) {
       arrayresposta.push("fizz");
-    } else if (numeros[cont] % 3 !== 0 && numeros[cont] % 5 === 0) {
+    } else if (numeros[index] % 5 === 0) {
       arrayresposta.push("buzz");
     } else {
       arrayresposta.push("bug!");
