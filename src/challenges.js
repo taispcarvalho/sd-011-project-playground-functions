@@ -28,9 +28,7 @@ function footballPoints(wins, ties) {
 function highestCount(arrayNumber) {
   arrayNumber.sort();
   let highestNumber = arrayNumber[arrayNumber.lenght - 1];
-  
-
-}
+ } // seu código aqui
 
 // Desafio 7
 function catAndMouse() {
