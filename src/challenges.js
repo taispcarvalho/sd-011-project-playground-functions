@@ -53,15 +53,11 @@ function fizzBuzz(numeros) {
   for (let cont = 0;cont <= numeros.length - 1;cont += 1) {
     if (numeros[cont] % 3 === 0 && numeros[cont] % 5 === 0) {
       numeros.splice(cont, cont, numeros[cont], "fizzBuzz");
-      //numeros.push("fizzBuzz");
     } else if (numeros[cont] % 3 === 0 && numeros[cont] % 5 !== 0) {
-      //arrayresposta.push("fizz");
       numeros.splice(cont, cont, numeros[cont], "fizz");
     } else if (numeros[cont] % 3 !== 0 && numeros[cont] % 5 === 0) {
-      ///arrayresposta.push("buzz");
       numeros.splice(cont, cont, numeros[cont], "buzz");
     } else {
-      //arrayresposta.push("bug!");
       numeros.splice(cont, cont, numeros[cont], "bug!");
     }
   }
