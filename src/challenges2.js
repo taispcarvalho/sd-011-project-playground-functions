@@ -49,21 +49,28 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function countCupsOfWater(string) {
-  // let total = 0;
+  let total = 0;
   let numbers = string.match(/\d+/g);
   let numbersConverted = [];
-  for (let num of numbers) {
+  for (const num of numbers) {
     numbersConverted.push(parseInt(num, 10));
   }
-  return typeof numbersConverted;
+  for (const num of numbersConverted) {
+    total += num;
+  }
+  return total;
+  // Para implementar a primeira parte desta função busquei informações neste link: (https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript), em que o problema era extrair os numeros de uma string, e a resposta dada foi a de utilizar um comando do regex como parâmetro da função string.match para realizar a tarefa.
 }
 
 function hydrate(string) {
   let cupsOfWater = countCupsOfWater(string);
-  console.log(`${cupsOfWater} copos de água`);
+  if (cupsOfWater === 1) {
+    return (`${cupsOfWater} copo de água`);
+  }
+  if (cupsOfWater > 1) {
+    return (`${cupsOfWater} copos de água`);
+  }
 }
-
-hydrate('8 copo de cerveja, 9 de vinho e 7 de cachaça');
 
 module.exports = {
   generatePhoneNumber,
