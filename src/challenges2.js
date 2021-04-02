@@ -19,33 +19,15 @@ function techList(arrayD10, name) {
 
 // Desafio 11
 function generatePhoneNumber(arrayD11) {
-  let wrongNumber = 0;
-  let sameNumber = 0;
   let ddd = [];
   let numPart1 = [];
   let numPart2 = [];
-  
-  // Check for wrong numbers and repetition
-  for (let i = 0; i < arrayD11.length; i += 1) {
-    if (arrayD11[i] > 9 || arrayD11[i] < 0) {
-      wrongNumber +=1;
-    }
-    let sameNumberLoop = 0;
-    for (let i2 = i; i2 < arrayD11.length; i2 +=1) {
-      if (arrayD11[i] === arrayD11[i2]) {   
-        sameNumberLoop +=1;
-        if (sameNumberLoop >=3) {
-          sameNumber = true;
-        }
-      }
-    }
-  }
 
   // Check for wrong conditions
   switch (true) {
     case arrayD11.length !== 11:
       return `Array com tamanho incorreto`;
-    case wrongNumber !== 0 || sameNumber:
+    case checkNumber (arrayD11):
       return `não é possível gerar um número de telefone com esses valores`;
     default: 
       for (let i = 0; i <= 1; i +=1) {
@@ -58,6 +40,26 @@ function generatePhoneNumber(arrayD11) {
         numPart2.push(arrayD11[i]);
       }
       return `(${ddd.join('')}) ${numPart1.join('')}-${numPart2.join('')}`;
+  }
+}
+
+function checkNumber (arrayD11) {
+  let wrongNumber = false;
+  for (let i = 0; i < arrayD11.length; i += 1) {
+    if (arrayD11[i] > 9 || arrayD11[i] < 0) {
+      wrongNumber = true;
+      return wrongNumber;
+    }
+    let sameNumberLoop = 0;
+    for (let i2 = i; i2 < arrayD11.length; i2 +=1) {
+      if (arrayD11[i] === arrayD11[i2]) {   
+        sameNumberLoop +=1;
+        if (sameNumberLoop >=3) {
+          wrongNumber = true;
+          return wrongNumber;
+        }
+      }
+    }
   }
 }
 
