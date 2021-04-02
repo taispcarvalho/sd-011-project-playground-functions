@@ -57,19 +57,19 @@ function fizzBuzz(numeros) {
   return (numeros);
 }
 function encode(frase) {
-  frase = frase.replaceAll('a', 1);
-  frase = frase.replaceAll('e', 2);
-  frase = frase.replaceAll('i', 3);
-  frase = frase.replaceAll('o', 4);
-  frase = frase.replaceAll('u', 5);
+  frase = frase.replace(/a/g, 1);
+  frase = frase.replace(/e/g, 2);
+  frase = frase.replace(/i/g, 3);
+  frase = frase.replace(/o/g, 4);
+  frase = frase.replace(/u/g, 5);
   return (frase);
 }
 function decode(frase) {
-  frase = frase.replaceAll('1', 'a');
-  frase = frase.replaceAll('2', 'e');
-  frase = frase.replaceAll('3', 'i');
-  frase = frase.replaceAll('4', 'o');
-  frase = frase.replaceAll('5', 'u');
+  frase = frase.replace(/1/g, 'a');
+  frase = frase.replace(/2/g, 'e');
+  frase = frase.replace(/3/g, 'i');
+  frase = frase.replace(/4/g, 'o');
+  frase = frase.replace(/5/g, 'u');
   return (frase);
 }
 
