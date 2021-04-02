@@ -42,7 +42,7 @@ function checkConsecutive(array) {
   }
 }
 
-function phoneNumber(array) {
+function phoneN(array) {
   if (message === 'OK') {
     let phoneNumber = `(${array[0]}${array[1]}) `;
     for (let index = 2; index < 7; index += 1) {
@@ -59,12 +59,12 @@ function phoneNumber(array) {
 function generatePhoneNumber(array) {
   length(array);
   if (message !== 'OK') {
-    return message
+    return message;
   }
   check0to9(array);
   checkConsecutive(array);
   if (message === 'OK') {
-    return phoneNumber(array);
+    return phoneN(array);
   }
   return message;
 }
