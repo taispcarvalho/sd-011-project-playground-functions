@@ -25,14 +25,12 @@ function checkRepeatdNumbers(array) {
   let count = 0;
   for (let index = 0; index < sortedNumbers.length - 1; index += 1) {
     if (count >= 2) return false;
-    if (sortedNumbers[index] === sortedNumbers[index + 1]) {
-      count += 1;
-    } else {
-      count = 0;
-    }
+    if (sortedNumbers[index] === sortedNumbers[index + 1]) count += 1; 
+    else count = 0;
   }
   return true;
 }
+
 
 function checkIfBetween0to9(array) {
   for (let index = 0; index < array.length; index += 1) {
@@ -64,7 +62,7 @@ function checkIfSidesHigherThenDiff(sideA, sideB, sideC) {
   if (!sideA >= Math.abs(sideB - sideC)) return false;
   if (!sideB >= Math.abs(sideA - sideC)) return false;
   if (!sideC >= Math.abs(sideA - sideB)) return false;
-    return true;
+  return true;
 }
 
 function triangleCheck(sideA, sideB, sideC) {
