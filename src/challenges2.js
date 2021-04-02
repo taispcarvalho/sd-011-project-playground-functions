@@ -16,15 +16,21 @@ function techList(tech, name) {
 }
 
 // D11 Auxiliary Functions
-function lengthValidation(phone) {
+// References:
+// Arrow functions: https://www.w3schools.com/js/js_arrow_function.asp
+// How to Get all Non-Unique Values: https://stackoverflow.com/questions/840781/get-all-non-unique-values-i-e-duplicate-more-than-one-occurrence-in-an-array
+// slice(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+
+// I used Arrow Functions just to try to lessen the code's complexity, and to learn how to use it, no particular use.
+const lengthValidation = (phone) => {
   let invalid = false;
   if (phone.length !== 11) {
     invalid = true;
   }
   return invalid;
-}
+};
 
-function digitValidation(phone) {
+const digitValidation = (phone) => {
   let invalid = false;
   for (let i = 0; i < phone.length; i += 1) {
     if (phone[i] > 9 || phone[i] < 0) {
@@ -32,19 +38,20 @@ function digitValidation(phone) {
     }
   }
   return invalid;
-}
+};
 
-function counterValidation(phone) {
+// slice() gets a copy of the array to not mess with the code, with the sort method adding a basic function to works in numbers,
+// cause the standard behaviour is for alphabetic order of strings
+const counterValidation = (phone) => {
   let invalid = false;
+  let sorted = phone.slice().sort((a, b) => a - b);
   let count = 0;
-  for (let i = 0; i < phone.length; i += 1) {
-    for (let j = 0; j < phone.length; j += 1) {
-      if (phone[i] === phone[j]) count += 1;
-    }
+  for (let i = 0; i < sorted.length - 1; i += 1) { // thanks to stackoverflow, I have learn how to count the repeated numbers without using two fors
+    if (sorted[i] === sorted[i + 1]) count += 1;
   }
   if (count >= 3) invalid = true;
   return invalid;
-}
+};
 
 // Desafio 11
 // References:
@@ -52,16 +59,12 @@ function counterValidation(phone) {
 // Break Lines in TL: https://stackoverflow.com/questions/37321047/wrap-long-template-literal-line-to-multiline-without-creating-a-new-line-in-the
 function generatePhoneNumber(phone) {
   let result;
-  let lgVal = lengthValidation(phone);
-  let dgVal = digitValidation(phone);
-  let ctVal = counterValidation(phone);
-
-  if (lgVal) {
+  if (lengthValidation(phone)) {
     result = 'Array com tamanho incorreto';
-  } else if (dgVal) {
-    result = 'não é possível gerar um número de telefone com esses valores1';
-  } else if (ctVal) {
-    result = 'não é possível gerar um número de telefone com esses valores2';
+  } else if (digitValidation(phone)) {
+    result = 'não é possível gerar um número de telefone com esses valores';
+  } else if (counterValidation(phone)) {
+    result = 'não é possível gerar um número de telefone com esses valores';
   } else {
     result = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}`
     + `${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
@@ -78,13 +81,7 @@ function triangleCheck(lineA, lineB, lineC) {
   lines.push(Math.abs(lineA), Math.abs(lineB), Math.abs(lineC)); // just add the parameters to the array
   // test if one side is smaller than the sum of the others sides
   // and if this side is bigger than the subtraction of the others sides
-  if (lines[0] < (lines[1] + lines[2]) && lines[0] > (lines[1] - lines[2])) {
-    if (lines[1] < (lines[0] + lines[2]) && lines[1] > (lines[0] - lines[2])) {
-      if (lines[2] < (lines[0] + lines[1]) && lines[2] > (lines[0] - lines[1])) {
-        result = true; // if so, it's true
-      }
-    }
-  }
+  if ((lines[0] < (lines[1] + lines[2]) && lines[0] > (lines[1] - lines[2])) && (lines[1] < (lines[0] + lines[2]) && lines[1] > (lines[0] - lines[2])) && (lines[2] < (lines[0] + lines[1]) && lines[2] > (lines[0] - lines[1]))) result = true; // if so, it's true
   return result;
 }
 
