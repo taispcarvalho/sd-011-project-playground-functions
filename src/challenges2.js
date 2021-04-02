@@ -22,7 +22,7 @@ function techList(arrTechNames, name1) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(arrNum) {
   // check array numbers validity
   function checkArrNum(arr) {
     let count = 0;
@@ -64,39 +64,37 @@ function generatePhoneNumber() {
     return false;
   }
 
-  function generatePhoneNumber(arrNum) {
-    //let arrNum2 = arrNum;
-    let formNum = '';
-    let arrNum2 = arrNum;
-    arrNum.join('').split();
+//let arrNum2 = arrNum;
+  let formNum = '';
+  let arrNum2 = arrNum;
+  arrNum.join('').split();
 
-    // check array size
-    if (arrNum.length !== 11) {
-      formNum = 'Array com tamanho incorreto.';
-      return formNum;
-    } else {
-      // print formated number
-      for(let index = 0; index < arrNum2.length; index += 1) {
-        if (formNum.length === 0) {
-    
-          formNum += '(' + arrNum2[0];
-          
-          formNum += arrNum2[1] + ') ';
-          index += 1;
-        } else if (formNum.length > 4 && formNum.length < 9) {
-          formNum += arrNum2[index];
-        } else if (formNum.length > 9 && formNum.length < 11) {
-          formNum += '-' + arrNum2[index];
-        } else {
-          formNum += arrNum2[index];
-        }
+  // check array size
+  if (arrNum.length !== 11) {
+    formNum = 'Array com tamanho incorreto.';
+    return formNum;
+  } else {
+    // print formated number
+    for(let index = 0; index < arrNum2.length; index += 1) {
+      if (formNum.length === 0) {
+  
+        formNum += '(' + arrNum2[0];
+        
+        formNum += arrNum2[1] + ') ';
+        index += 1;
+      } else if (formNum.length > 4 && formNum.length < 9) {
+        formNum += arrNum2[index];
+      } else if (formNum.length > 9 && formNum.length < 11) {
+        formNum += '-' + arrNum2[index];
+      } else {
+        formNum += arrNum2[index];
       }
     }
-    if (checkArrNum(arrNum2) === true){
-      formNum = 'não é possível gerar um número de telefone com esses valores';  
-    }
-    return formNum;
   }
+  if (checkArrNum(arrNum2) === true){
+    formNum = 'não é possível gerar um número de telefone com esses valores';  
+  }
+  return formNum;
 }
 
 // Desafio 12
