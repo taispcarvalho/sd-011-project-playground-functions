@@ -75,35 +75,42 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayFizzBuzzNumbers) {
   let arrayFizzBuzz = [];
+  let dividers = [15, 5, 3, 1]
+  let fizzbuzz = ['fizzBuzz', 'buzz', 'fizz', 'bug']
 
   for (let number of arrayFizzBuzzNumbers) {
-    let isDivisibleBy3 = number % 3 === 0;
-    let isDivisibleBy5 = number % 5 === 0;
-    let isDivisibleBy3and5 = number % 3 === 0 && number % 5 === 0;
-
-    if (isDivisibleBy3and5) {
-      arrayFizzBuzz.push('fizzBuzz');
-    } else if (isDivisibleBy3) {
-      arrayFizzBuzz.push('fizz');
-    } else if (isDivisibleBy5) {
-      arrayFizzBuzz.push('buzz');
-    } else {
-      arrayFizzBuzz.push('bug!');
+    for (let index = 0; index < dividers.length; index += 1) {
+      if (number % dividers[index] === 0) {
+        arrayFizzBuzz.push(fizzbuzz[index])
+        break
+      }
     }
-  }  
+  }
 
+
+    // let isDivisibleBy3 = number % 3 === 0;
+    // let isDivisibleBy5 = number % 5 === 0;
+    // let isDivisibleBy3and5 = number % 15 === 0;
+
+    // switch (number) {
+    //   case isDivisibleBy3and5:
+    //     arrayFizzBuzz.push('fizzBuzz'); break;
+    //   case isDivisibleBy5:
+    //     arrayFizzBuzz.push('buzz'); break;
+    //   case isDivisibleBy3:
+    //     arrayFizzBuzz.push('fizz'); break;
+    //   default:
+    //     arrayFizzBuzz.push('bug!'); break;
+  //   }
+  // }
   return arrayFizzBuzz;
 }
 
+console.log(fizzBuzz([2, 15, 20, 9, 8]))
+
 // Desafio 9
 function encode(sentence) {
-  let objectVowels = {
-    a: '1',
-    e: '2',
-    i: '3',
-    o: '4',
-    u: '5'
-  };
+  let objectVowels = { a: '1', e: '2', i: '3', o: '4', u: '5' };
 
   for (let index = 0; index < sentence.length; index += 1) {
     for (let key of Object.keys(objectVowels)) {
@@ -117,13 +124,7 @@ function encode(sentence) {
 }
 
 function decode(sentence) {
-  let objectNumbers = {
-    1: 'a',
-    2: 'e',
-    3: 'i',
-    4: 'o',
-    5: 'u'
-  };
+  let objectNumbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
 
   for (let index = 0; index < sentence.length; index += 1) {
     for (let key of Object.keys(objectNumbers)) {
