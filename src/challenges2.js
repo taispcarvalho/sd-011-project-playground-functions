@@ -17,9 +17,9 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 console.log(techList([], 'Lucas'));
 
 // Desafio 11
-function checkRepeatedNumber(phone) {
+function checkRepeat(phone) {
   let resp = 0;
-  for (let indexNumber = 0; indexNumber < phone.length - 1; indexNumberPhone += 1) {
+  for (let indexNumber = 0; indexNumber < phone.length - 1; indexNumber += 1) {
     for (let compareNumber = indexNumber + 1; compareNumber < phone.length; compareNumber += 1) {
       if (phone[indexNumber] === phone[compareNumber]) {
         resp += 1;
@@ -31,28 +31,28 @@ function checkRepeatedNumber(phone) {
     return resp;
   }
 }
-function checkNegativeAndGreaterThanNine(phoneNumber) {
-  for (let test = 0; test < phoneNumber.length; test += 1) {
-    if (phoneNumber[test] < 0 || phoneNumber[test] > 9) {
+function checkOtherThanEleven(phone) {
+  for (let test = 0; test < phone.length; test += 1) {
+    if (phone[test] < 0 || phone[test] > 9) {
       return true;
     }
   }
 }
-function generatePhoneNumber(phoneNumber) {
-  if (phoneNumber.length !== 11) {
-    return 'Array com tamanho incorreto.'
+function generatePhoneNumber(phone) {
+  if (phone.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
-  if (checkRepeatedNumber(phoneNumber) === true || checkNegativeAndGreaterThanNine(phoneNumber) === true) {
+  if (checkRepeat(phone) === true || checkOtherThanEleven(phone) === true) {
     return 'não é possível gerar um número de telefone com esses valores'
   }
 
-  let checkPhoneNumber;
-  for (let number = 0; number < phoneNumber.length; number += 1) {
-    checkPhoneNumber = '(' + phoneNumber[0] + phoneNumber[1] + ') ' + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + '-' + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10];
+  let check;
+  for (let number = 0; number < phone.length; number += 1) {
+    check = '(' + phone[0] + phone[1] + ') ' + phone[2] + phone[3] + phone[4] + phone[5] + phone[6] + '-' + phone[7] + phone[8] + phone[9] + phone[10];
   }
   
   
-  return checkPhoneNumber;
+  return check;
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2]));
