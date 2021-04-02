@@ -19,23 +19,39 @@ function techList(tech, name) {
 console.log(techList(["React", "Jest", "HTML", "CSS", "Java"], "Lucas"));
 
 // Desafio 11
-function generatePhoneNumber(numbers) {
-  // seu código aqui
+function truePhone1(numbers){
   if (numbers.length !== 11) {
-    return 'Array com tamanho incorreto.'
+    return false;
   }
+  return true;
+}
+
+function truePhone2(numbers) {
+
   for (const key of numbers) {
     let contador = 0;
     for (const key2 of numbers) {
     if (key === key2) {
-      contador += 1
+      contador += 1;
     }
     }
     if (0 > key | 9 < key | contador >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores'
+      return false;
     }
   }
-  return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
+  return true;
+}
+function generatePhoneNumber(numbers) {
+  // seu código aqui
+  if (truePhone1(numbers) && truePhone2(numbers) === true) {
+    return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
+  }
+  if (truePhone1(numbers) === false){
+    return 'Array com tamanho incorreto.';
+  }
+  if (truePhone2(numbers) === false){
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
 }
 
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 9]));
