@@ -118,7 +118,7 @@ function decrypt(tempString, keyValue) {
   for (let index = 0; index < tempString.length; index += 1) {
     for (let letter in keyValue) {
       if (tempString[index] === keyValue[letter]) {
-        tempString[index] = letter;
+        
       }
     }
   }
