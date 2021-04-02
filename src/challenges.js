@@ -39,7 +39,6 @@ console.log(footballPoints(14, 8));
 // Desafio 6
 function anotherCount(array) {
   let higherValue = 0;
-  // cria outra funcao para resolver o problema de refatoracao
   for (let highestIndex = 0; highestIndex < array.length; highestIndex += 1) {
     if (higherValue < array[highestIndex]) {
       higherValue = array[highestIndex];
