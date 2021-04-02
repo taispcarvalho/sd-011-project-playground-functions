@@ -56,20 +56,25 @@ console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
+  let triangle = [lineA, lineB, lineC];
   let sum = lineA + lineB + lineC;
-  let checkSumA = sum - lineA;
-  let checkSumB = sum - lineB;
-  let checkSumC = sum - lineC;
-  let checkDifA = Math.abs(lineB - lineC);
-  let checkDifB = Math.abs(lineA - lineC);
-  let checkDifC = Math.abs(lineA - lineB);
-  let differences = [difference1, difference2, difference3];
+  // let checkSumA = sum - lineA;
+  // let checkSumB = sum - lineB;
+  // let checkSumC = sum - lineC;
+  // let checkDifA = Math.abs(lineB - lineC);
+  // let checkDifB = Math.abs(lineA - lineC);
+  // let checkDifC = Math.abs(lineA - lineB);
+  let differences = [differenceA, differenceB, differenceC];
+  let differenceA = Math.abs(lineB - lineC);
+  let differenceB = Math.abs(lineA - lineC);
+  let differenceC = Math.abs(lineA - lineB);
 
   for (let side in triangle) {
     if (sum - triangle[side] <= triangle[side] && differences[side] >= triangle[side]) {
       return false;
     } return true;
   }
+  if ()
 }
 
 // Desafio 13

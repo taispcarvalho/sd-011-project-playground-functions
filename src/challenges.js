@@ -74,23 +74,27 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
-  let array = string.split('');
-  let arrayOfLeters = ['a', 'e', 'i', 'o', 'u'];
-  let newArray = [];
-  for (let index of array) {
-    for (let index2 of arrayOfLeters) {
-      if (index2 === index) {
-        newArray.push(arrayOfLeters.indexOf(index2) + 1);
-      } newArray.push(index);
-    }
-  }
-  return newArray.join('');
+  let split = string.split('');
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let encoded = [];
+  for (let character of split) {
+    if (vowels.indexOf(character) >= 0) {
+        encoded.push(vowels.indexOf(character) + 1);
+    } else encoded.push(character);      
+  } return encoded.join('');
 }
-console.log(encode('hi, there!'));
-
-function decode() {
-  // seu código aqui
+function decode(encoded) {
+  let split = encoded.split('');
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let numbers = ['1', '2', '3', '4', '5'];
+  let decoded = [];
+  for (let character of split) {
+    if (numbers.indexOf(character) >= 0) {
+      decoded.push(vowels[numbers.indexOf(character)]);
+    } else decoded.push(character);
+  } return decoded.join('');
 }
+console.log(decode(encode('hi, there!')));
 
 module.exports = {
   calcArea,
