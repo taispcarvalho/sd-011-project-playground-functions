@@ -32,27 +32,23 @@ function checkNumb(numbers) {
 }
 
 function checkRep(numbers) {
-  //let repetitionCondition = true;
-  //for (let index = 0; index < numbers.length; index += 1) {
-   // let repetition = 0;
-    //for (let index2 = 0; index2 < numbers.length; index2 += 1) {
-     // if (numbers[index] === numbers[index2]) {
-       // repetition += 1;
-     // }
-   // }
-    //if (repetition >= 3) {
-      //repetitionCondition = false;
-    //}
-  //}
   let repetitionCondition = true;
   let map = numbers.reduce((acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map());
-  for (let [key,value] of map) {
+  for (let [key, value] of map) {
     if (value >= 3) {
+      key = key;
       repetitionCondition = false;
     }
   }
+
   return repetitionCondition;
 }
+
+
+console.log(checkRep([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
+
+
 
 function arraySize(numbers) {
   let numberSize = true;
@@ -62,19 +58,36 @@ function arraySize(numbers) {
   return numberSize;
 }
 
+function combineRepNumb(numbers) {
+  let masterCondition = true;
+  if (checkRep(numbers) === false || checkNumb(numbers) === false) {
+    masterCondition = false;    
+  }
+  if (checkRep(numbers) === true && checkNumb(numbers) === true) {
+    masterCondition = true;
+  }
+  return masterCondition;
+}
+
 function generatePhoneNumber(numbers) {
   if (arraySize(numbers) === false) {
     return 'Array com tamanho incorreto.';
   }
-  if (checkRep(numbers) === false || checkNumb(numbers) === false) {
+ // if (checkRep(numbers) === false || checkNumb(numbers) === false) {
+   // return 'não é possível gerar um número de telefone com esses valores';
+  //}
+  if (combineRepNumb(numbers) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  if (arraySize(numbers) === true && checkNumb(numbers) === true && checkRep(numbers) === true) {
+  //if (arraySize(numbers) === true && checkNumb(numbers) === true && checkRep(numbers) === true) {
+    //let phoneNumber = `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
+    //return phoneNumber.replace(/,/g, '');
+  if (combineRepNumb(numbers) === true) {
     let phoneNumber = `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
     return phoneNumber.replace(/,/g, '');
   }
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function checkLineSum(lineA, lineB, lineC) {
