@@ -40,9 +40,9 @@ function highestCount(array) {
   let countNumber = 0;
 
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > biggerNumber) { 
+    if (array[index] > biggerNumber) {
       biggerNumber = array[index];
-    }   
+    }
   }
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === biggerNumber) {
@@ -58,22 +58,22 @@ function catAndMouse(mouse, cat1, cat2) {
   let longCat1 = 0;
   let longCat2 = 0;
 
-  if (mouse>cat1) {
+  if (mouse > cat1) {
     longCat1 = mouse - cat1;
   } else {
     longCat1 = cat1 - mouse;
   }
-  if (mouse>cat2){
-    longcat2 = mouse - cat2;
+  if (mouse > cat2){
+    longCat2 = mouse - cat2;
   } else {
     longCat2 = cat2 - mouse;
   }
   if (longCat1 < longCat2) {
-    return('cat1')
-  } else if (longCat1 > longCat2) {
-    return('cat2')
+    return('cat1');
+  } if (longCat1 > longCat2) {
+    return('cat2');
   } else {
-    return ('os gatos trombam e o rato foge')
+    return ('os gatos trombam e o rato foge');
   }
 }
 
@@ -82,7 +82,7 @@ function fizzBuzz(array) {
   // seu código aqui
   let arrayFizzBuzz = [];
 
-  for (let index = 0; index<  array.length;index +=1 ) {
+  for (let index = 0; index < array.length;index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       arrayFizzBuzz.push('fizzBuzz');
       console.log(array[index]);
@@ -106,7 +106,7 @@ function encode(text) {
   let encodeText = [];
 
   for (let index in text) {
-    if (text[index] === 'a'){
+    if (text[index] === 'a') {
       encodeText += '1';
     } else if (text[index] === 'e') {
       encodeText += '2';
@@ -123,7 +123,7 @@ function encode(text) {
   return encodeText;
 }
 
-function decode(text){
+function decode(text) {
   let decodeText = [];
 
   for (let index in text) {
