@@ -23,52 +23,12 @@ function techList(arrTechNames, name1) {
 
 // Desafio 11
 function generatePhoneNumber(arrNum) {
-  // check array numbers validity
-  function checkArrNum(arr) {
-    let count = 0;
-    let repeat1 = [];
-    let arrNum1 = arr;
-    arrNum1 = arrNum1.sort();
-    let newArr1 = [];
-    let number1 = 0;
-    let invalNum = false;
-    
-    for (let index1 = 0; index1 < arrNum1.length; index1 += 1) {
-      if (arrNum1[index1] === arrNum1[index1+1]) {
-        
-        repeat1.push(arrNum1[index1]);
-        if (arrNum1[index1] < 0 || arrNum1[index1] > 9) {
-            invalNum = true;
-        }
-        for (let index2 = index1; index2 < arrNum1.length; index2 += 1) {
-          if (repeat1[repeat1.length-1] === arrNum1[index2]) {
-            newArr1.push(arrNum1[index1]);
-          }
-        }
-        repeat1 = newArr1;
-        
-        if (count < repeat1.length) {
-    
-          count = repeat1.length;
-          number1 = arrNum1[index1];
-    
-        }
-        index1 += repeat1.length -1; 
-        newArr1 = [];
-      }
-    }
-    
-    if (count > 2 || invalNum) {
-      return true;
-    }
-    return false;
-  }
-
-//let arrNum2 = arrNum;
+  //let arrNum2 = arrNum;
   let formNum = '';
   let arrNum2 = arrNum;
   arrNum.join('').split();
-
+  
+  
   // check array size
   if (arrNum.length !== 11) {
     formNum = 'Array com tamanho incorreto.';
@@ -95,6 +55,46 @@ function generatePhoneNumber(arrNum) {
     formNum = 'não é possível gerar um número de telefone com esses valores';  
   }
   return formNum;
+
+}
+function checkArrNum(arr) {
+  let count = 0;
+  let repeat1 = [];
+  let arrNum1 = arr;
+  arrNum1 = arrNum1.sort();
+  let newArr1 = [];
+  let number1 = 0;
+  let invalNum = false;
+  
+  for (let index1 = 0; index1 < arrNum1.length; index1 += 1) {
+    if (arrNum1[index1] === arrNum1[index1+1]) {
+      
+      repeat1.push(arrNum1[index1]);
+      if (arrNum1[index1] < 0 || arrNum1[index1] > 9) {
+          invalNum = true;
+      }
+      for (let index2 = index1; index2 < arrNum1.length; index2 += 1) {
+        if (repeat1[repeat1.length-1] === arrNum1[index2]) {
+          newArr1.push(arrNum1[index1]);
+        }
+      }
+      repeat1 = newArr1;
+      
+      if (count < repeat1.length) {
+  
+        count = repeat1.length;
+        number1 = arrNum1[index1];
+  
+      }
+      index1 += repeat1.length -1; 
+      newArr1 = [];
+    }
+  }
+  
+  if (count > 2 || invalNum) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 12
