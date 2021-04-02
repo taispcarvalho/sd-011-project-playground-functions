@@ -1,15 +1,16 @@
 // Desafio 10
 function techList(array, name) {
   let test = [];
-  if (array.length !== null || array.length === null) {
-    for (let tec of array) {
-      test.push({
-        tech: tec,
-        nome: name,
-      });
-    }
-  } else return 'Vazio!';
-  return (test);
+  for (let index = 0; index < array.length; index += 1) {
+    test.push({
+      tech: array[index],
+      nome: name,
+    });
+  } test.sort();
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+  return test;
 }
 
 // Desafio 11
@@ -36,10 +37,10 @@ function repeticaoNumero(array) {
 }
 
 function generatePhoneNumber(array) {
-  if (array.length !== 11) {
+  if (array.length > 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (!numeroZeroNove(array) || repeticaoNumero(array)) {
+  if (!numeroZeroNove(array) || !repeticaoNumero(array)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   if (array.length === 11) {
@@ -50,7 +51,8 @@ function generatePhoneNumber(array) {
   }
   return generatePhoneNumber(array);
 }
-
+let arr = [0, 1, 2, 4, 4, 5, 6, 7, 8, 9, 2];
+console.log(generatePhoneNumber(arr));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let triaA = lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
