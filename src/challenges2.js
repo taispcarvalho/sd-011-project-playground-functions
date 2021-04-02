@@ -46,7 +46,7 @@ const counterValidation = (phone) => {
   let invalid = false;
   let sorted = phone.slice().sort((a, b) => a - b);
   let count = 0;
-  for (let i = 0; i < sorted.length - 1; i += 1) { // thanks to stackoverflow, I have learn how to count the repeated numbers without using two fors
+  for (let i = 0; i < sorted.length - 1; i += 1) { // thanks to Stackoverflow, I have learn how to count the repeated numbers without using two fors loops
     if (sorted[i] === sorted[i + 1]) count += 1;
   }
   if (count >= 3) invalid = true;
@@ -72,17 +72,19 @@ function generatePhoneNumber(phone) {
   return result;
 }
 
+// D12 Global Variables
+
 // Desafio 12
 // References:
 // Math.abs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function triangleCheck(lineA, lineB, lineC) {
-  let result = false; // if it's boolean, always start at false if you wanna true as result
-  let lines = []; // empty array
+  let lines = []; // empty array for lines of the triangle
   lines.push(Math.abs(lineA), Math.abs(lineB), Math.abs(lineC)); // just add the parameters to the array
-  // test if one side is smaller than the sum of the others sides
-  // and if this side is bigger than the subtraction of the others sides
-  if ((lines[0] < (lines[1] + lines[2]) && lines[0] > (lines[1] - lines[2])) && (lines[1] < (lines[0] + lines[2]) && lines[1] > (lines[0] - lines[2])) && (lines[2] < (lines[0] + lines[1]) && lines[2] > (lines[0] - lines[1]))) result = true; // if so, it's true
-  return result;
+  lines.sort((a, b) => a - b); // if you sort the lines, you don't need to test it separate, you can reduce to one single test
+
+  if ((lines[0] + lines[1]) < lines[2]) { // after all, you don't need to test the (line[0] - line[1]) < line[2], if the first premisse is false, the second is too.
+    return false;
+  } return true;
 }
 
 // Desafio 13
