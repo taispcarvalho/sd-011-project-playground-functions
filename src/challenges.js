@@ -18,10 +18,10 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(array) {
-  let fullName = `${[array.length - 1]}, ${array[0]}`;
+  let fullName = `${array[array.length - 1]}, ${array[0]}`;
   return fullName;
 }
-// Desafio 5
+
 function footballPoints() {
   // seu código aqui
 }
