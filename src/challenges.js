@@ -58,9 +58,9 @@ function fizzBuzz(divArray) {
   for (let index = 0; index < divArray.length; index += 1) {
     if (divArray[index] % 15 === 0) {
       divArray[index] = 'fizzBuzz';
-    } else if (divArray[index] % 3 === 0){
+    } else if (divArray[index] % 3 === 0) {
       divArray[index] = 'fizz';
-    } else if (divArray[index] % 5 === 0){
+    } else if (divArray[index] % 5 === 0) {
       divArray[index] = 'buzz';
     } else if (divArray[index] % 1 === 0) {
       divArray[index] = 'bug!';
@@ -68,7 +68,7 @@ function fizzBuzz(divArray) {
   }
   return divArray;
 }
-divArray=[9, 25]
+divArray=[2, 15, 7, 9, 45]
 console.log(fizzBuzz(divArray))
 
 // Desafio 9
