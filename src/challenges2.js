@@ -16,9 +16,6 @@ function techList(tech, name) {
 }
 
 // D11 Auxiliary Functions
-// References:
-// How to count repeated numbers in arrays without using Two For Loops cause Complexibility:
-// https://stackoverflow.com/questions/19395257/how-to-count-duplicate-value-in-an-array-in-javascript
 function lengthValidation(phone) {
   let invalid = false;
   if (phone.length !== 11) {
@@ -37,9 +34,9 @@ function digitValidation(phone) {
   return invalid;
 }
 
-function counterValidation(phone, count) {
+function counterValidation(phone) {
   let invalid = false;
-  count = 0;
+  let count = 0;
   for (let i = 0; i < phone.length; i += 1) {
     for (let j = 0; j < phone.length; j += 1) {
       if (phone[i] === phone[j]) count += 1;
