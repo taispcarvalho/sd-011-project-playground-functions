@@ -73,49 +73,58 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayFizzBuzzNumbers) {
-  let arrayFizzBuzz = [];
-  let dividers = [15, 5, 3, 1];
-  let fizzbuzz = ['fizzBuzz', 'buzz', 'fizz', 'bug'];
-
-  for (let number of arrayFizzBuzzNumbers) {
-    for (let index = 0; index < dividers.length; index += 1) {
-      if (number % dividers[index] === 0) {
-        arrayFizzBuzz.push(fizzbuzz[index]);
-        break;
-      }
+function fizzbuzzDivision(numberX) {
+  let divisors = [15, 5, 3, 1];
+  let fizzbuzz = ['fizzBuzz', 'buzz', 'fizz', 'bug!'];
+  
+  for (let index = 0; index < divisors.length; index += 1) {
+    if (numberX % divisors[index] === 0) {
+      return fizzbuzz[index];
     }
   }
+}
+
+function fizzBuzz(arrayFizzBuzzNumbers) {
+  let arrayFizzBuzz = [];
+
+  for (let number of arrayFizzBuzzNumbers) {
+    arrayFizzBuzz.push(fizzbuzzDivision(number));
+  }
+
   return arrayFizzBuzz;
 }
 
 // Desafio 9
+function translator(character, dictionary) {
+  for (let key of Object.keys(dictionary)) {
+    if (character === key) {
+      return dictionary[key];
+    } 
+  }
+  return character;
+}
+
 function encode(sentence) {
   let objectVowels = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  let encodedSentence = '';
 
   for (let index = 0; index < sentence.length; index += 1) {
-    for (let key of Object.keys(objectVowels)) {
-      if (sentence[index] === key) {
-        sentence = sentence.replace(key, objectVowels[key]);
-        break;
-      }
-    }
+    encodedSentence += translator(sentence[index], objectVowels);
   }
-  return sentence;
+  return encodedSentence;
 }
+
+console.log(encode('hi there!'));
+console.log(decode('h111555 a31'))
 
 function decode(sentence) {
   let objectNumbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  let decodedSentence = '';
 
   for (let index = 0; index < sentence.length; index += 1) {
-    for (let key of Object.keys(objectNumbers)) {
-      if (sentence[index] === key) {
-        sentence = sentence.replace(key, objectNumbers[key]);
-        break;
-      }
-    }
+    decodedSentence += translator(sentence[index], objectNumbers);
   }
-  return sentence;
+  return decodedSentence;
 }
 
 module.exports = {
