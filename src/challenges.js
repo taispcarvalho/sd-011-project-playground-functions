@@ -9,7 +9,8 @@ function calcArea(base, heigth) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
+  return string.split(' ');
 }
 // Desafio 4
 function concatName() {
@@ -27,20 +28,8 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  // referencia https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math
-  let positionCat1 = Math.abs(mouse - cat1);
-  let positionCat2 = Math.abs(mouse - cat2);
-
-  if (positionCat1 > positionCat2) {
-    return 'cat1';
-  } else if (positionCat2 > positionCat1) {
-    return 'cat2';
-  } else {
-    return 'Os gatos se trombam e o rato foge';
-  }
+function catAndMouse() {
 }
-
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
