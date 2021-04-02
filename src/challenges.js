@@ -62,13 +62,13 @@ function fizzBuzz(array) {
     } else if (array[i] % 3 === 0) {
       finalArray.push('fizz');
     } else {
-      array[i] % 5 === 0 ? finalArray.push('buzz') : finalArray.push('bug!');
+      finalArray.push('bug!');
     }
   }
   return finalArray;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([7, 9]));
 
 // Desafio 9
 // link sobre o metodo replace utilizado neste exercicio: https://www.w3schools.com/jsref/jsref_replace.asp
