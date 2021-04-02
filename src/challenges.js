@@ -60,11 +60,11 @@ function fizzBuzz(array) {
   for (let number of array) {
     if (number % 3 === 0 && number % 5 === 0) {
       arrayString.push('fizzBuzz');
-    } if (number % 3 === 0) {
+    } else if (number % 3 === 0 && number % 5 !== 0) {
       arrayString.push('fizz');
-    } if (number % 5 === 0) {
+    } else if (number % 5 === 0 && number % 3 !== 0) {
       arrayString.push('buzz');
-    } arrayString.push('bug!');
+    } else arrayString.push('bug!');
   }
   return arrayString;
 }
