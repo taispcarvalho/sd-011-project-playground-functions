@@ -55,6 +55,7 @@ function repeatedNumber(list) {
       if (count === 2) {
         repeated = true;
         return repeated;
+
       } else if (list[index] === list[number]) {
         count += 1;
       }
@@ -62,10 +63,10 @@ function repeatedNumber(list) {
   }
   return repeated;
 }
-console.log(repeatedNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
-console.log(repeatedNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-console.log(repeatedNumber([1, 2, 3, 4, 5, 5, 7, 8, 9, 0, 1]));
-console.log(repeatedNumber([1, 2, 3, 4, 4, 4, 7, 8, 9, 0, 1]));
+// console.log(repeatedNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+// console.log(repeatedNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(repeatedNumber([1, 2, 3, 4, 5, 5, 7, 8, 9, 0, 1]));
+// console.log(repeatedNumber([1, 2, 3, 4, 4, 4, 7, 8, 9, 0, 1]));
 
 function telephoneNumber(array) {
   let maskPhoneNumber = ['(', '', '', ')', '_', '', '', '', '', '', '-', '', '', '', ''];

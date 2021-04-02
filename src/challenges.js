@@ -8,18 +8,18 @@ function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-console.log(calcArea(10, 50));
+// console.log(calcArea(10, 50));
 
 // Desafio 3
 function splitSentence(frase) {
   return frase.split(' ');
 }
-console.log(splitSentence('go trybe'));
+// console.log(splitSentence('go trybe'));
 
 // Desafio 4
 function concatName(value) {
   let end = value.length - 1;
-  let name = value[end] + ', ' + value[0];
+  let name = '${value[end]}, ${value[0]}';
   return name;
 }
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
@@ -31,7 +31,7 @@ function footballPoints(wins, ties) {
   let result = (wins * victory) + (ties * draw);
   return result;
 }
-console.log(footballPoints(1, 2));
+// console.log(footballPoints(1, 2));
 
 function higherNumber(numbers) {
   let higher = numbers[0];
@@ -42,7 +42,7 @@ function higherNumber(numbers) {
   }
   return higher;
 }
-console.log(higherNumber([0, 4, 4, 4, 9, 2, 1]));
+/console.log(higherNumber([0, 4, 4, 4, 9, 2, 1]));
 
 // Desafio 6
 function highestCount(list) {
@@ -55,7 +55,7 @@ function highestCount(list) {
   }
   return count;
 }
-console.log(highestCount([0, 0, 0]));
+// console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -72,7 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return result;
 }
-console.log(catAndMouse(1, 0, 3));
+// console.log(catAndMouse(1, 0, 3));
 
 function fizz(number) {
   if (number % 3 === 0) {
@@ -81,7 +81,7 @@ function fizz(number) {
     return number;
   }
 }
-console.log(fizz(41));
+// console.log(fizz(41));
 
 function buzz(number) {
   if (number % 5 === 0) {
@@ -90,7 +90,7 @@ function buzz(number) {
     return number;
   }
 }
-console.log(buzz(41));
+// console.log(buzz(41));
 
 // Desafio 8
 function fizzBuzz(list) {
@@ -111,7 +111,7 @@ function fizzBuzz(list) {
   }
   return resultFizzBuzz;
 }
-console.log(fizzBuzz([7, 9]));
+// console.log(fizzBuzz([7, 9]));
 
 function letterNumber(letter) {
   let options = {
@@ -126,7 +126,7 @@ function letterNumber(letter) {
   }
   return result;
 }
-console.log(letterNumber('a'));
+// console.log(letterNumber('a'));
 
 function numberLetter(number) {
   let options = {
@@ -141,7 +141,7 @@ function numberLetter(number) {
   }
   return result;
 }
-console.log(numberLetter('1'));
+// console.log(numberLetter('1'));
 
 // Desafio 9
 function encode(code) {
@@ -155,7 +155,7 @@ function encode(code) {
   }
   return theCode;
 }
-console.log(encode('hi there!'));
+// console.log(encode('hi there!'));
 
 function decode(uncode) {
   let codedPhrase = uncode.split('');
@@ -168,7 +168,7 @@ function decode(uncode) {
   }
   return theUncode;
 }
-console.log(decode('h3 th2r2!'));
+// console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
