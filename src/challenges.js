@@ -1,15 +1,7 @@
 // Desafio 1
 function compareTrue(n, m) {
   // seu código aqui
-  if (n === true && m === true){
-    return true;
-  }else if (n === true && m === false) {
-    return false;
-  }else if (n === false && m === true){
-    return false;
-  }else{
-    return false;
-  }
+  return n && m;
 }
 
 // Desafio 2
@@ -44,27 +36,21 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  // seu código aqui
   let biggerNumber = 0;
   let countNumber = 0;
 
-  for(let index =0; index < array.length; index+=1){
-    if(array[index] > biggerNumber){
+  for(let index = 0; index < array.length; index +=1){
+    if (array[index] > biggerNumber){
       biggerNumber = array[index];
-    }
+    }   
   }
-
-  for(let index = 0; index < array.length; index+=1){
+  for(let index = 0; index < array.length; index +=1){
     if (array[index] === biggerNumber){
-      countNumber+=1;
+      countNumber +=1;
     }
-    
   }
-
   return countNumber;
 }
-
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -74,22 +60,20 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if(mouse>cat1){
     longCat1 = mouse - cat1;
-  }else {
+  } else {
     longCat1 = cat1 - mouse;
   }
-
-  if (mouse>cat2){
-    longCat2 = mouse - cat2;
-  }else {
+  if(mouse>cat2){
+    longcat2 = mouse - cat2;
+  }else{
     longCat2 = cat2 - mouse;
   }
-
-  if (longCat1 < longCat2){
-    return('cat1');
+  if (longCat1 < longCat2) {
+    return('cat1')
   }else if (longCat1 > longCat2){
-    return('cat2');
-  }else {
-    return('os gatos trombam e o rato foge')
+    return('cat2')
+  } else {
+    return ('os gatos trombam e o rato foge')
   }
 }
 
@@ -97,21 +81,24 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   // seu código aqui
   let arrayFizzBuzz = [];
+
   for (let index = 0; index<array.length;index+=1){
     if (array[index] % 3 === 0 && array[index] % 5 === 0){
       arrayFizzBuzz.push('fizzBuzz');
-      }else if (array[index] % 5 === 0){
-       arrayFizzBuzz.push('buzz')
-      }else if (array[index] % 3 === 0){
-       arrayFizzBuzz.push('fizz')
-      }else {
-        arrayFizzBuzz.push('bug!');
-      }
+      console.log(array[index]);
+    }else if (array[index] % 5 === 0){
+      arrayFizzBuzz.push('buzz')
+      console.log(array[index]);
+    }else if (array[index] % 3 === 0){
+      arrayFizzBuzz.push('fizz')
+      console.log(array[index]);
+    }else {
+      arrayFizzBuzz.push('bug!');
+      console.log(array[index]);
+    }
   }
   return arrayFizzBuzz
 }
-  console.log(fizzBuzz([2, 15, 7, 9, 45]))
-
 
 // Desafio 9
 function encode(text) {
@@ -136,8 +123,6 @@ function encode(text) {
   return encodeText;
 }
 
-console.log(encode('how are you doing?'))
-
 function decode(text){
   let decodeText = [];
 
@@ -158,11 +143,6 @@ function decode(text){
   }
   return decodeText;
 }
-
-
-
-
-console.log(decode('h4w 1r2 y45 d43ng?'));
 
 module.exports = {
   calcArea,
