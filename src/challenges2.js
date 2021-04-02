@@ -47,34 +47,6 @@ function checkRep(numbers) {
   return repetitionCondition;
 }
 
-
-//function checkNumbers(numbers) {
-  //let numberValues = true;
-  //let repetitionCondition = true;
-  //for (let index = 0; index < numbers.length; index += 1) {
-    //if (numbers[index] < 0 || numbers[index] > 9) {
-      //numberValues = false;
-   // }
-    //let numberRepetitions = 0;
-    //for (let index2 = 0; index2 < numbers.length; index2 += 1) {
-     // if (numbers[index] === numbers[index2]) {
-     //   numberRepetitions += 1;
-      //}
-   // }
-    //if (numberRepetitions >= 3) {
-      //repetitionCondition = false;
-    //}
-  //}
-  
- // let finalCondition = true;
-  //if (numberValues === true && repetitionCondition === true) {
-   // finalCondition = true;
-  //} else {
-   // finalCondition = false;
-  //}
-  //return finalCondition;
-//}
-
 function arraySize(numbers) {
   let numberSize = true;
   if (numbers.length !== 11) {
@@ -95,13 +67,9 @@ function generatePhoneNumber(numbers) {
   if (arraySize(numbers) === true && checkNumb(numbers) === true && checkRep(numbers) === true) {
     let phoneNumber = `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
     
-   // '(' + numbers.slice(0, 2) + ') ' + numbers.slice(2, 7) + '-' + numbers.slice(7, 11);
     return phoneNumber.replace(/\,/g, '');
   }
 }
-
-
-
 
 // Desafio 12
 function checkLineSum(lineA, lineB, lineC) {
@@ -114,18 +82,18 @@ function checkLineSum(lineA, lineB, lineC) {
   return checkSum;
 }
 
-function checkLineDiff(lineA, lineB, lineC) {
+function checkLineDiff(A, B, C) {
   let checkDiff = true;
-  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+  if (A > Math.abs(B - C) && B > Math.abs(A - C) && C > Math.abs(A - B)) {
     checkDiff = true;
   } else {
     checkDiff = false;
   }
   return checkDiff;
 }
-function triangleCheck(lineA, lineB, lineC) {
+function triangleCheck(A, B, C) {
   let triangleRequirements = true;
-  if (checkLineSum(lineA, lineB, lineC) === true && checkLineDiff(lineA, lineB, lineC) === true) {
+  if (checkLineSum(A, B, C) === true && checkLineDiff(A, B, C) === true) {
     triangleRequirements = true;
   } else {
     triangleRequirements = false;
