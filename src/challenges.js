@@ -17,8 +17,8 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(lista) {
+  return `${lista[lista.length - 1]}, ${lista[0]}`;
 }
 
 // Desafio 5
