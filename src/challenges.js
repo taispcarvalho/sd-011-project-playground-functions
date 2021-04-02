@@ -139,24 +139,24 @@ function encode(phrase) {
   let phraseCode = '';
   for (const key of phrase) {
     switch (key) {
-      case 'a':
-        phraseCode += '1';
-        break;
-      case 'e':
-        phraseCode += '2';
-        break;
-      case 'i':
-        phraseCode += '3';
-        break;
-      case 'o':
-        phraseCode += '4';
-        break;
-      case 'u':
-        phraseCode += '5';
-        break;
-      default:
-        phraseCode += key;
-        break;
+    case 'a':
+      phraseCode += '1';
+      break;
+    case 'e':
+      phraseCode += '2';
+      break;
+    case 'i':
+      phraseCode += '3';
+      break;
+    case 'o':
+      phraseCode += '4';
+      break;
+    case 'u':
+      phraseCode += '5';
+      break;
+    default:
+      phraseCode += key;
+      break;
     }
   }
   return phraseCode;
