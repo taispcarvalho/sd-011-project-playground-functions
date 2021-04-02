@@ -9,24 +9,22 @@ function techList(tech, name) {
   for (let index = 0; index < tech.length; index += 1) {
     returnArray.push({
       tech: tech[index],
-      name: name
+      name: name,
     });
   }
 
   return returnArray;
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "Java"], "Lucas"));
-
 // Desafio 11
-function truePhone1(numbers){
+function truePhone1(numbers) {
   if (numbers.length !== 11) {
     return false;
   }
   return true;
 }
 
-function truePhone2(numbers){
+function truePhone2(numbers) {
   for (const key of numbers) {
     let contador = 0;
     for (const key2 of numbers) {
@@ -34,7 +32,7 @@ function truePhone2(numbers){
         contador += 1;
       }
     }
-    if (contador >= 3) {
+    if (key < 0 | key >  9 | contador >= 3) {
       return false;
     }
   }
