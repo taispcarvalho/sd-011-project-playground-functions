@@ -21,11 +21,7 @@ function techList(techArray, name) {
 }
 /* console.log(techList([],"Lucas")); */
 /* console.log(techList(['React','Jest', 'HTML', 'CSS', 'JavaScript'],'Lucas')); */
-/* O que será verificado:
-Retorne uma lista de objetos ordenados quando é passada uma lista com 5 tecnologias deve
-Retorne a mensagem de erro 'Vazio!' quando a lista tiver com 0 tecnologias
-Teste: 
- */
+
 
 // Desafio 11
 /* Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
@@ -100,28 +96,44 @@ function generatePhoneNumber(array) {
     return phoneNumber;
   }
 }
-
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
+/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1])); //Menor que zero.
 console.log(generatePhoneNumber([1, 2, 13, 4, 5, 6, 7, 8, 9, 0, 1])); //maior que 9.
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 7, 7, 0, 1])); //repete numero.
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); //Retornar (12) 34567-8901.
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); //Retornar (12) 34567-8901. */
 
 // Desafio 12----------------------------------------
 /* Crie uma função de Condição de existência de um triângulo
 Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
 Para tanto, tenha em mente algumas considerações:
-Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
-Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
+-Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois !!!!!!!e maior que o valor absoluto da diferença entre essas medidas.
+-Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
 O retorno da sua função deverá ser um booleano.
+
 Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
 O que será verificado:
 Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois
 Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas
 Retorne true quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas */
-function triangleCheck() {
-  // seu código aqui
+
+function triangleCheck(lineA, lineB, lineC) {
+  // retorna true ou false.
+  /*  - Função para achar a media de cada lado.
+      - Somar media b + media c.
+      - Comparar se lado A < que a soma das medias b e c.
+      - Comparar se a media A > abs((mediaC + mediaC) - mediaA).
+      - Retornar true ou false
+  */
+  let test1 = (lineA < (lineB + lineC));   
+  let test2 =(lineA > Math.abs(lineA - (lineB + lineC)));
+  return test1 && test2; 
 }
+console.log(triangleCheck(10,14,8));
+
+
+console.log(10 > Math.abs(10 - (14 + 8)));
+
+
 
 // Desafio 13---------------------------------------------------------
 /* Crie uma função de Bem vindo ao Bar da Trybe!
