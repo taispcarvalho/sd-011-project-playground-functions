@@ -4,15 +4,26 @@ function compareTrue(value1, value2) {
 }
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base*height)/2;
+  let area = (base * height) / 2;
   return area;
 }
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(myString) {
+  let wordArray = [];
+  let currentWord = '';
+  for (let index = 0; index < sentence.length; index += 1) {
+    if (myString[index] === ' ') {
+      wordArray.push(currentWord);
+      currentWord = '';
+    } else if (index === myString.length - 1) {
+      currentWord += myString[index];
+      wordArray.push(currentWord);
+    } else {
+      currentWord += myString[index];
+    }
+  }
+  return wordArray;
 }
-
 // Desafio 4
 function concatName() {
   // seu código aqui
