@@ -2,17 +2,17 @@
 function techList(ArrayTechList, name) {
   let result = [];
   ArrayTechList.sort();
-    if (ArrayTechList.length === 0) {
+  if (ArrayTechList.length === 0) {
     return 'Vazio!';
   }
   if (ArrayTechList !== 0) {
     for (let index = 0; index < ArrayTechList.length; index += 1) {
       let obj = {
         tech: ArrayTechList[index],
-        name: name,
+        name: name
       };
       result.push(obj);
-  }
+    }
     return result;
   }
 }
