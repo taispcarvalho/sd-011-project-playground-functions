@@ -1,5 +1,5 @@
 // Desafio 10
-//referencia: heyset (Matheus "Set" Inacio)
+// referencia: heyset (Matheus "Set" Inacio)
 function techList(arrayTech, nameTech) {
   let arrayResult = [];
   let organizedArray = arrayTech.sort();
@@ -11,7 +11,7 @@ function techList(arrayTech, nameTech) {
       }
     )
   }
-  if (arrayTech === 0){
+  if (arrayTech.length === 0){
     arrayResult = 'Vazio!';
   }
 return arrayResult
@@ -33,7 +33,7 @@ function generatePhoneNumber(numberPhone) {
       count = 0;
     }
     if (numberPhone[index] < 0 || numberPhone[index] > 9){
-      numberOrganized = "não é possível gerar um número de telefone com esses valores";
+      numberOrganized = 'não é possível gerar um número de telefone com esses valores';
       break;
     }
     if (index === 2){
@@ -45,7 +45,7 @@ function generatePhoneNumber(numberPhone) {
    numberOrganized += (numberPhone[index]);
   }
   if (numberPhone.length !== 11){
-    numberOrganized = "Array com tamanho incorreto.";
+    numberOrganized = 'Array com tamanho incorreto.';
   }
 return numberOrganized
 }
