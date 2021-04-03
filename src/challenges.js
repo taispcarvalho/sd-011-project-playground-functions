@@ -54,11 +54,10 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzzSecond(array) {
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > 0 || array[index] < 0)
-    if (array[index] % 3 !== 0 && array[index] % 5 !== 0) {
+    if (array[index] % 5 === 0) {
+    array[index] = 'buzz';
+    } else {
       array[index] = 'bug!';
-    } else if (array[index] % 5 === 0) {
-      array[index] = 'buzz';
     }
   }
   return array;
@@ -77,9 +76,32 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let charByChar = string.split('');
+  for (let index = 0; index < charByChar.length; index += 1) {
+    switch (charByChar[index]) {
+    case 'a':
+      charByChar[index] = '1';
+      break;
+    case 'e':
+      charByChar[index] = '2';
+      break;
+    case 'i':
+      charByChar[index] = '3';
+      break;
+    case 'o':
+      charByChar[index] = '4';
+      break;
+    case 'u':
+      charByChar[index] = '5';
+      break;
+    default:
+      break;
+    }
+  }
+  return charByChar.join('');
 }
+console.log(encode('oi meu amigo'));
 function decode() {
   // seu código aqui
 }
