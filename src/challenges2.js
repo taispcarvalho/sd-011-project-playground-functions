@@ -1,18 +1,25 @@
 // Desafio 10
 function techList(wantToLearn, name) {
-  let myLearningList = [];
-  if(wantToLearn === ''){
-    console.log('Vazio!')
+  let myDevTechs = [];
+
+  if (wantToLearn.lenght === 0) {
+    return 'Vazio!';
+
   } else {
     for (let index = 0; index < wantToLearn.lenght; index += 1) {
-      myLearningList.push('tech:' + wantToLearn[index], 'name' + name)
-      console.log(myLearningList)
-    }
-    return myLearningList.sort()
-  }
+      let techObject = {
+        tech: wantToLearn[index],
+        name: `${name}`,
+      }
+      myDevTechs.push(techObject);
+    }   
+    
+    return myDevTechs.sort((a,b) => (a.wantToLearn > b.wantToLearn ? 1 : -1));    
+  }    
+  
 }
 
-console.log(techList(['React', 'Python'], 'Gustavo'))
+console.log(techList(['React', 'Python', 'PHP', 'Express'], 'Gustavo'));
 
 // Desafio 11
 function generatePhoneNumber(numToBe) {
