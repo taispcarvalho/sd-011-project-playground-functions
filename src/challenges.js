@@ -69,7 +69,6 @@ function divisionFor(value1, value2) {
 
 function fizzBuzz(value) {
   let ret = [];
-  let aux = 0;
   for (let index = 0; index < value.length; index += 1) {
     if (divisionFor(value[index], 3) && divisionFor(value[index], 5)) {
       ret.push('fizzBuzz');
@@ -86,7 +85,8 @@ function fizzBuzz(value) {
 
 // Desafio 9
 function encode(value) {
-  let aux = 0, value1 = '';
+  let aux = 0;
+  let value1 = '';
   for (let letras of value) {
     if (letras === 'a') {
       value1 += '1';
@@ -107,7 +107,8 @@ function encode(value) {
 }
 
 function decode(value) {
-  let aux = 0, value1 = '';
+  let aux = 0;
+  let value1 = '';
   for (let letras of value) {
     if (letras === '1') {
       value1 += 'a';
