@@ -11,11 +11,10 @@ function tech(a, name) {
 function techList(a, name) {
   if (a.length !== 5) {
     return 'Vazio!';
-  } {
-    return tech(a, name);
   }
+    return tech(a, name);
 }
-console.log(techList([''], 'Daniel'));
+console.log(techList(['React', 'CSS', 'JavaScript', 'Node', 'HTML'], 'Daniel'));
 
 // Desafio 11
 function generatePhoneNumber() {
