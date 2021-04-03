@@ -98,34 +98,20 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function reference() {
-  let characters = {
-    code1: {
-      a: '1',
-      e: '2',
-      i: '3',
-      o: '4',
-      u: '5',
-    },
-
-    code2: {
-      1: 'a',
-      2: 'e',
-      3: 'i',
-      4: 'o',
-      5: 'u',
-    },
-  };
-  return characters;
-}
-
 function encode(value) {
   // seu código aqui
   let char = value.split('');
-  let charReference = reference().encode;
-  for (let index = 0; index < char.length; index += 1) {
-    if (charReference[char[index]]) {
-      char[index] = charReference[char[index]];
+  for (let index in char) {
+    if (char[index] === 'a') {
+      char[index] = '1';
+    } else if (char[index] === 'e') {
+      char[index] = '2'/
+    } else if (char[index] === 'i') {
+      char[index] = '3';
+    } else if (char[index] === 'o') {
+      char[index] = '4';
+    } else if (char[index] === 'u') {
+      char[index] = '5';
     }
   }
   return char.join('');
@@ -134,10 +120,17 @@ function encode(value) {
 function decode(value) {
   // seu código aqui
   let char = value.split('');
-  let charReference = reference().decode;
-  for (let index = 0; index < char.length; index += 1) {
-    if (charReference[char[index]]) {
-      char[index] = charReference[char[index]];
+  for (let index in char) {
+    if (char[index] === '1') {
+      char[index] = 'a';
+    } else if (char[index] === '2') {
+      char[index] = 'e';
+    } else if (char[index] === '3') {
+      char[index] = 'i';
+    } else if (char[index] === '4') {
+      char[index] = 'o';
+    } else if (char[index] === '5') {
+      char[index] = 'u';
     }
   }
   return char.join('');
