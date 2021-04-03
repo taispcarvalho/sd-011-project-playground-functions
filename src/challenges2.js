@@ -17,16 +17,16 @@ function techList(value, oneName) {
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf */
 function repetitioCount(array) {
   for (let index = 0; index < 10; index += 1) {
-  let indexes = [];
-  let idx = array.indexOf(index);
-  while (idx !== -1) {
-    indexes.push(idx);
-    idx = array.indexOf(index, idx + 1);
+    let indexes = [];
+    let idx = array.indexOf(index);
+    while (idx !== -1) {
+      indexes.push(idx);
+      idx = array.indexOf(index, idx + 1);
+    }
+    if (indexes.length > 2) {
+      return true;
+    }
   }
-  if (indexes.length > 2) {
-    return true;
-  }
-}
   return false;
 }
 
@@ -45,8 +45,7 @@ function generatePhoneNumber(value) {
   } if (wrongNumber(value) || repetitioCount(value)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  return `(${value[0]}${value[1]}) ${value[2]}${value[3]}${value[4]}${value[5]}${value[6]}-${value[7]}
-  ${value[8]}${value[9]}${value[10]}`;
+  return `(${value[0]}${value[1]}) ${value[2]}${value[3]}${value[4]}${value[5]}${value[6]}-${value[7]}${value[8]}${value[9]}${value[10]}`;
 }
 
 // Desafio 12
@@ -56,8 +55,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let lineBC = lineC + lineB;
   if (lineA >= lineBC || lineB >= lineAC || lineC >= lineAB) {
     return false;
-  } if (lineA <= Math.abs(lineB - lineC) || lineB <= Math.abs(lineA - lineC) || 
-  lineC <= Math.abs(lineB - lineA)) {
+  } if (lineA <= Math.abs(lineB - lineC) || lineB <= Math.abs(lineA - lineC) || lineC <= Math.abs(lineB - lineA)) {
     return false;
   }
   return true;
@@ -71,7 +69,7 @@ function hydrate(value) {
   let aux = value;
   let sum = 0;
   while (aux.match(/\d+/) != null) {
-    sum += parseInt(aux.match(/\d+/),10);
+    sum += parseInt(aux.match(/\d+/), 10);
     aux = aux.substr(aux.match(/\d+/).index + 1);
   }
   if (sum === 1) {

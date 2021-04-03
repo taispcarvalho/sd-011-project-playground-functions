@@ -61,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function divisionFor (value1, value2) {
+function divisionFor(value1, value2) {
   if (value1 % value2 === 0) {
     return true;
   } return false;
@@ -69,7 +69,7 @@ function divisionFor (value1, value2) {
 function fizzBuzz(value) {
   let ret = [];
   for (let index = 0; index < value.length; index += 1) {
-    if (divisionFor(value[index],3) && divisionFor(value[index],5)) {
+    if (divisionFor(value[index], 3) && divisionFor(value[index], 5)) {
       ret.push('fizzBuzz');
     } if (divisionFor(value[index], 3)) {
       ret.push('fizz');
