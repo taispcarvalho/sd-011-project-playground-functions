@@ -135,9 +135,6 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 /* console.log(triangleCheck(10, 14, 8)); */
 
-
-
-
 // Desafio 13
 /* Crie uma função de Bem vindo ao Bar da Trybe!
  Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
@@ -164,27 +161,26 @@ Dica: pesquise por algo similar a get all integers inside a string js.
 O que será verificado:
 Retorne a sugestão de quantos copos de água deve-se beber ao receber uma string */
 function extractNumbers(string) {
-/*   let string = '1 cachaça, 5 cervejas e 1 copo de vinho'; */
+  /*   let string = '1 cachaça, 5 cervejas e 1 copo de vinho'; */
   let drinkList = string.match(/\d+/g);
   let numberList = [];
   for (number of drinkList) {
     numberList.push(parseInt(number));
   }
-/*   console.log(numberList); */
+  /*   console.log(numberList); */
   return numberList;
 }
-
 
 function hydrate(string) {
   // Primeiro transformar todos os numeros da estring em uma lista.
   // Transformar lista de numeros em quantidade de copos (somar a lista).
   let drinkSum = 0;
-  for (number of extractNumbers(string) ) {
+  for (number of extractNumbers(string)) {
     drinkSum += number;
   }
   // Montar frase concatenando total de copos e retornar ela para a função
   if (drinkSum === 1) {
-    return ` ${drinkSum} copo de água`;
+    return `${drinkSum} copo de água`;
   } else {
     return ` ${drinkSum} copos de água`;
   }
@@ -192,7 +188,6 @@ function hydrate(string) {
 /* console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 console.log(hydrate('1 cachaça, 5 copos de vinho '));
 console.log(hydrate('1 cerveja')); */
-
 
 module.exports = {
   generatePhoneNumber,
