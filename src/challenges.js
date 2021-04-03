@@ -6,12 +6,14 @@ function compareTrue(number, number2) {
     return false;
   }
 }
-console.log(compareTrue(false))
+console.log(compareTrue(false));
 
 // Desafio 2
-function calcArea() {
-
+function calcArea(base,height) {
+  return (base*height) /2;
 }
+console.log(calcArea(5,2));
+
 
 // Desafio 3
 function splitSentence() {
@@ -31,7 +33,7 @@ function footballPoints() {
 // Desafio 6
 function highestCount() {
 
-} 
+}
 
 // Desafio 7
 function catAndMouse() {
