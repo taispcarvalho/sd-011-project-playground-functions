@@ -23,13 +23,17 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+//lado1 < lado2 + lado3 && lado > abs(lado2 - lado3)
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
 function checkNumber(string) {
-  return (string - (string -1) === 1)
+  return (string - (string - 1) === 1);
 }
 
 function hydrate(frase) {
