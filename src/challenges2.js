@@ -54,12 +54,15 @@ function generatePhoneNumber(array) {
   }
   arrayPhoneNumber = arrayPhoneNumber.concat(array);
   arrayPhoneNumber.splice(3, 0, ')');
+  arrayPhoneNumber.splice(4, 0, ' ');
+  arrayPhoneNumber.splice(10, 0, '-');
 
   for (let index = 0; index < arrayPhoneNumber; index += 1) {
     phoneNumber += arrayPhoneNumber[index];
   }
   return phoneNumber;
 }
+// Parte dessa implementação, como a função splice, utilizei recursos que encontrei no site mundojs no link https://www.mundojs.com.br/2018/08/31/adicionando-elementos-em-uma-lista-array-javascript/, data do acesso: 03/04/2021
 
 // Desafio 12
 // lado1 < lado2 + lado3 && lado > abs(lado2 - lado3)
@@ -68,9 +71,11 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
+// Função auxiliar -> verifica se é um número
 function checkNumber(string) {
   return (string - (string - 1) === 1);
 }
+// Essa função, tirei como exemplo a implementação do colega Renato Bispo, no link https://github.com/tryber/sd-011-project-playground-functions/pull/9/files/b3b05abd27a8b8d6f691b2f38ac114097fa03ff6
 
 function hydrate(frase) {
   let frase2 = frase.replace(/ /g, '');
