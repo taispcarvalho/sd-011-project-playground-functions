@@ -67,14 +67,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(valor) {
-  let result = [];
-  for (let index of valor) {
-    result.push(conditionFizzBuzz(index));
-  }
-  return result;
-}
-let arrayE = [2, 15, 7, 9, 45];
 function conditionFizzBuzz(arrayValue) {
   if (arrayValue % 3 === 0 && arrayValue % 5 === 0) {
     return 'fizzBuzz';
@@ -87,6 +79,14 @@ function conditionFizzBuzz(arrayValue) {
   }
   return 'bug!';
 }
+function fizzBuzz(valor) {
+  let result = [];
+  for (let index of valor) {
+    result.push(conditionFizzBuzz(index));
+  }
+  return result;
+}
+let arrayE = [2, 15, 7, 9, 45];
 console.log(fizzBuzz(arrayE));
 // Desafio 9
 function encode(text) {
