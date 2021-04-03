@@ -35,7 +35,7 @@ function verifyNumber(array) {
 function verifyRepeat(array) {
   const counts = [];
   for (let index = 0; index < array.length; index += 1) {
-    if (counts[array[index]] === 0) {
+    if (counts[array[index]]) {
       counts[array[index]] += 1;
     } else {
       counts[array[index]] = 1;
@@ -44,17 +44,19 @@ function verifyRepeat(array) {
   counts.sort(function (a, b) {
     return b - a;
   });
-  if (counts[0]) { return false; }
+  if (counts[0] >= 3) {
+    return false;
+  }
   return true;
   // Para implementar esta função pedi ajuda ao colega de turma Luiz Wendel e busquei informações nestes links: (https://dev.to/huyddo/find-duplicate-or-repeat-elements-in-js-array-3cl3) e (http://blog.dunderlabs.com/entendendo-ordenacao-de-arrays-em-javascript-sort-of.html)
 }
 
 function generatePhoneNumber(array) {
   if (array.length !== 11) {
-    console.log('Array com tamanho incorreto.');
+    return 'Array com tamanho incorreto.';
   }
   if (!verifyNumber(array) || !verifyRepeat(array)) {
-    console.log('não é possível gerar um número de telefone com esses valores');
+    return 'não é possível gerar um número de telefone com esses valores';
   }
   let firstPart = `(${array[0]}${array[1]}) `;
   let secondPart = `${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-`;
@@ -62,8 +64,6 @@ function generatePhoneNumber(array) {
   let phoneNumber = firstPart + secondPart + thirdPart;
   return phoneNumber;
 }
-
-generatePhoneNumber([3, 3, 3, 5, 7, 8, 9, 2, 1, 0, 4]);
 
 // Desafio 12
 function lineTest1(l1, l2, l3) {
