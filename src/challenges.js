@@ -45,7 +45,7 @@ function highestCount(array) {
   }
   let cont = 0;
   for (let index = 0; index < array.length; index +=1){
-    if (array[index] == maior)
+    if (array[index] === maior)
     cont += 1;
   }
 }
@@ -74,7 +74,7 @@ if (distCat1 > distCat2){
   return "cat2";
 }
 else {
-  return "cat1";
+ return "cat1";
 }
 }
 
