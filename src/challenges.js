@@ -31,9 +31,9 @@ function highestCount(numberArray) {
   }
   for (let index2 = 0; index2 < numberArray.length; index2 += 1) {
     if (highestNumber === numberArray[index2]) {
-      highestNumberCount = highestNumberCount + 1;
+      highestNumberCount += 1;
     } else {
-        highestNumberCount += 0;
+      highestNumberCount += 0;
     }
   }
   return highestNumberCount;
@@ -46,19 +46,19 @@ function catAndMouse(mouse, cat1, cat2) {
   if (mouse >= cat1) {
     cat1Distance = (mouse - cat1);
   } else {
-     cat1Distance = (cat1 - mouse);
+    cat1Distance = (cat1 - mouse);
   }
   if (mouse >= cat2) {
     cat2Distance = (mouse - cat2);
   } else {
-     cat2Distance = (cat2 - mouse);
+    cat2Distance = (cat2 - mouse);
   }
   if (cat1Distance === cat2Distance) {
     result = 'os gatos trombam e o rato foge';
   } else if (cat1Distance < cat2Distance) {
     result = 'cat1';
   } else {
-      result = 'cat2';
+    result = 'cat2';
   }
   return result;
 }
@@ -66,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8 -FEITO
 function fizzBuzz(arrayFizzBuzz) {
   let secondArray = [];
-  for (let index = 0; index < arrayFizzBuzz.length; index += 1){
+  for (let index = 0; index < arrayFizzBuzz.length; index += 1) {
     if (arrayFizzBuzz[index] % 3 === 0 && arrayFizzBuzz[index] % 5 === 0) {
       secondArray.push('fizzBuzz');
     } else if (arrayFizzBuzz[index] % 5 === 0) {

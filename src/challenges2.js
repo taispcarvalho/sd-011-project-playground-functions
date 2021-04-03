@@ -4,7 +4,7 @@ function techList(arrayTech, nameTech) {
   let arrayResult = [];
   let organizedArray = arrayTech.sort();
   for (let index = 0; index < arrayTech.length; index += 1) {
-    arrayResult.push({      {
+    arrayResult.push({
         tech: organizedArray[index],
         name: nameTech,
       }
