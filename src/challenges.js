@@ -48,9 +48,9 @@ function catAndMouse(cat1, cat2, mouse) {
   let dist2 = mouse - cat2;
   let winner;
   if (dist1 < dist2) {
-    winner = 'cat1';
-  } else if (dist1 > dist2) { 
-    winner = 'cat2';
+    winner = cat1;
+  } else if (dist1 > dist2) {
+    winner = cat2;
   } else {
     winner = 'os gatos trombam e o rato foge';
   }
@@ -58,7 +58,7 @@ function catAndMouse(cat1, cat2, mouse) {
 }
 
 // Desafio 8
-function fizzBuzzSolution(array) {
+function fizzBuzz(array) {
   let num = [];
   for (let index = 0; index < array.length; index += 1) {
     let valor = array[index];
@@ -73,10 +73,6 @@ function fizzBuzzSolution(array) {
     }
   }
   return num;
-}
-
-function fizzBuzz(array) {
-  return fizzBuzzSolution(array);
 }
 
 // Desafio 9
