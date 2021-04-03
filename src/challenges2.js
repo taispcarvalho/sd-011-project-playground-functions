@@ -2,10 +2,14 @@
 function techList(tech, name) {
   tech = tech.sort();
   for (let index = 0; index < tech.length; index += 1) {
-    tech[index] = {tech: tech[index], name: name};
+    tech[index] = { 
+      tech: tech[index], 
+      name: name
+    };
   }
   return tech;
 }
+console.log(techList(['jesus','bscoito','amendon'], 'Jess'));
 
 // Desafio 11
 function generatePhoneNumber() {
