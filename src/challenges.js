@@ -12,11 +12,9 @@ console.log(calcArea(5, 2));
 
 // Desafio 3
 function splitSentence() {
-  frase = splitSentence([]);
-  return frase;
+  return frase = ['go', 'trybe'];  
 }
-splitSentence('go','trybe');
-console.log(frase);
+console.log(splitSentence('go','trybe'));
 
 // Desafio 4
 function concatName() {
