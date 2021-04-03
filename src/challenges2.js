@@ -1,7 +1,7 @@
 // Desafio 10
 //referencia: heyset (Matheus "Set" Inacio)
 function techList(arrayTech, nameTech) {
-  if (arrayTech === ' '){
+  if (arrayTech == 0){
     arrayResult = 'Vazio!';
   }
   let arrayResult = [];
@@ -19,9 +19,9 @@ return arrayResult
 // Desafio 11
 function generatePhoneNumber(numberPhone) {
   let numberOrganized = "(";
-  let count = 0;
+  let count = 1;
   for(index = 0; index < numberPhone.length; index+=1){
-    for(index2 = 1; index<numberPhone.length; index+=1){
+    for(index2 = 1; index2 < numberPhone.length; index2+=1){
       if(numberPhone[index] === numberPhone[index2]){
       count += 1;
       }
@@ -29,7 +29,9 @@ function generatePhoneNumber(numberPhone) {
     if(count >= 3){
       numberOrganized = "não é possível gerar um número de telefone com esses valores";
       break;
-    } 
+    } else {
+      count = 1;
+    }
     if(numberPhone[index] < 0 || numberPhone[index] > 9){
       numberOrganized = "não é possível gerar um número de telefone com esses valores";
       break;
@@ -40,7 +42,7 @@ function generatePhoneNumber(numberPhone) {
    if(index === 6){
      numberOrganized += '-';
    }
-   numberOrganized += numberPhone[index];
+   numberOrganized += (numberPhone[index]);
   }
   if(numberPhone.length !== 11){
     numberOrganized = "Array com tamanho incorreto.";
