@@ -108,24 +108,20 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let game = [];
   for (let index = 0; index < array.length; index += 1) {
-    let word = '';
+    game[index] = 'bug!';
     if (array[index] % 3 === 0) {
-      word += 'fizz';
+      game[index] = 'fizz';
     }
     if (array[index] % 5 === 0) {
-      word += 'buzz';
+      game[index] = 'buzz';
     }
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      word = 'fizzBuzz';
-    }
-    if (array[index] % 3 !== 0 && array[index] % 5 !== 0) {
-      word += 'bug!';
-    }
-    game.push(word);
+      game[index] = 'fizzBuzz';
+    }    
   }
   return game;
 }
-console.log(fizzBuzz([9, 25]));
+/* console.log(fizzBuzz([2, 15, 7, 9, 45])); */
 
 // Desafio 9
 /* 
