@@ -90,26 +90,26 @@ console.log(fizzBuzz([9, 25]));
 // Desafio 9
 function encode(text) {
   let textEncode = text;
-  textEncode = textEncode.replace('a', '1');
-  textEncode = textEncode.replace('e', '2');
-  textEncode = textEncode.replace('i', '3');
-  textEncode = textEncode.replace('o', '4');
-  textEncode = textEncode.replace('u', '5');
+  textEncode = textEncode.replace(/a/g, '1');
+  textEncode = textEncode.replace(/e/g, '2');
+  textEncode = textEncode.replace(/i/g, '3');
+  textEncode = textEncode.replace(/o/g, '4');
+  textEncode = textEncode.replace(/u/g, '5');
   return textEncode;
 }
 
 function decode(text) {
   let textDecode = text;
-  textDecode = textDecode.replace('1', 'a');
-  textDecode = textDecode.replace('2', 'e');
-  textDecode = textDecode.replace('3', 'i');
-  textDecode = textDecode.replace('4', 'o');
-  textDecode = textDecode.replace('5', 'u');
+  textDecode = textDecode.replace(/1/g, 'a');
+  textDecode = textDecode.replace(/2/g, 'e');
+  textDecode = textDecode.replace(/3/g, 'i');
+  textDecode = textDecode.replace(/4/g, 'o');
+  textDecode = textDecode.replace(/5/g, 'u');
   return textDecode;
 }
 
-console.log(encode('aeiou!'));
-console.log(decode('12345!'));
+console.log(encode('hi there!'));
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
