@@ -5,21 +5,17 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, heigth) {
-  let area = (base * heigth) / 2;
-  return area;
+  return (base * heigth) / 2;
 }
 
 // Desafio 3
 function splitSentence(phrase) {
-  let split = phrase.split(' ');
-  return split;
+  return phrase.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
-  let out = '';
-  out = `${array[array.length - 1]}, ${array[0]}`;
-  return out;
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 /* Consultei esse artigo para utilizar a interpolação de strings, para não precisar concatenar
@@ -27,8 +23,7 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_liter
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let result = (wins * 3) + ties;
-  return result;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
@@ -86,33 +81,25 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(phrase) {
-  let target = 'aeiou';
-  let encodeKey = '12345';
 
-  for (let index in phrase) {
-    for (let index2 in target) {
-      if (phrase[index] === target[index2]) {
-        phrase = phrase.replace(phrase[index], encodeKey[index2]);
-      }
-    }
-  } return phrase;
+function encode(phrase) {
+  phrase = phrase.replace(/'a'/g, 1);
+  phrase = phrase.replace(/'e'/g, 2);
+  phrase = phrase.replace(/'i'/g, 3);
+  phrase = phrase.replace(/'o'/g, 4);
+  phrase = phrase.replace(/'u'/g, 5);
+  return phrase;
 }
 
 function decode(phrase) {
-  let target = '12345';
-  let decodeKey = 'aeiou';
-
-  for (let index in phrase) {
-    for (let index2 in target) {
-      if (phrase[index] === target[index2]) {
-        phrase = phrase.replace(phrase[index], decodeKey[index2]);
-      }
-    }
-  } return phrase;
+  phrase = phrase.replace(/'1'/g, 'a');
+  phrase = phrase.replace(/'2'/g, 'e');
+  phrase = phrase.replace(/'3'/g, 'i');
+  phrase = phrase.replace(/'4'/g, 'o');
+  phrase = phrase.replace(/'5'/g, 'u');
+  return phrase;
 }
-/* Consultei o repositório do Vitor Hugo para resolver essa parte. Link do repositório
-https://github.com/tryber/sd-011-project-playground-functions/pull/154/files#submit-review */
+/* Consultei o exemplo demonstrado pelos colegas Gisele costa e Diego Figueiredo, no slack da turma 11 */
 
 module.exports = {
   calcArea,

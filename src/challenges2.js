@@ -18,8 +18,47 @@ function techList(techname, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+// Função auxiliar -> Verifica quant de repetições
+function checkRepeat(array) {
+  for (let index = 0; index < array.length; index += 1) {
+    let contador = 0;
+    for (let index2 = 0; index2 < array.length; index2 += 1) {
+      if (contador >= 3) {
+        return true;
+      }
+      if (array[index] === array[index2]) {
+        contador += 1;
+      }
+    }
+  } return false;
+}
+// Função auxiliar -> Verifica valores maior que 9 e menor que 0
+function checkValues(array) {
+  for (let index in array) {
+    if (array[index] < 0 || array[index] > 9) {
+      return true;
+    }
+  } return false;
+}
+// Função Auxiliar -> Verifica tamanho do array
+function checkLength(array) {
+  return (array.length !== 11);
+}
+function generatePhoneNumber(array) {
+  let arrayPhoneNumber = ['('];
+  let phoneNumber = '';
+  if (checkRepeat(array) || checkValues(array)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  } if (checkLength(array)) {
+    return 'Array com tamanho incorreto';
+  }
+  arrayPhoneNumber = arrayPhoneNumber.concat(array);
+  arrayPhoneNumber.splice(3, 0, ')');
+
+  for (let index = 0; index < arrayPhoneNumber; index += 1) {
+    phoneNumber += arrayPhoneNumber[index];
+  }
+  return phoneNumber;
 }
 
 // Desafio 12
