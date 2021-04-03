@@ -13,7 +13,7 @@ function splitSentence(phrase) {
 }
 // Desafio 4 -FEITO
 function concatName(arrayName) {
-  return arrayName[arrayName.length - 1]+(', ' + arrayName[0]);
+  return arrayName[arrayName.length - 1].concat(', ' + arrayName[0]);
 }
 // Desafio 5 -FEITO
 function footballPoints(wins, ties) {
@@ -25,17 +25,17 @@ function highestCount(numberArray) {
   let highestNumber = 0;
   let highestNumberCount = 0;
   for (let index = 0; index < numberArray.length; index += 1){
-    if(highestNumber < numberArray[index]){
+    if (highestNumber < numberArray[index]){
       highestNumber = numberArray[index];
+    }
   }
-}
   for (let index2 = 0; index2 < numberArray.length; index2 += 1){
     if (highestNumber === numberArray[index2]){
     highestNumberCount = highestNumberCount + 1;
-  } else {
+    } else {
     highestNumberCount+=0;
+    }
   }
-}
 
 return highestNumberCount;
 }
@@ -82,7 +82,7 @@ function fizzBuzz(arrayFizzBuzz) {
 }
 // Desafio 9 -FEITO
 function encode(encoder) {
-  result = encoder.replace(/a/g, '1');
+  let result = encoder.replace(/a/g, '1');
   result = result.replace(/e/g, '2');
   result = result.replace(/i/g, '3');
   result = result.replace(/o/g, '4');
@@ -91,7 +91,7 @@ function encode(encoder) {
 return result
 }
 function decode(decoder) {
-  result = decoder.replace(/1/g, 'a');
+  let result = decoder.replace(/1/g, 'a');
   result = result.replace(/2/g, 'e');
   result = result.replace(/3/g, 'i');
   result = result.replace(/4/g, 'o');

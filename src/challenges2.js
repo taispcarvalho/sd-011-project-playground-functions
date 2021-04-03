@@ -1,7 +1,7 @@
 // Desafio 10
 //referencia: heyset (Matheus "Set" Inacio)
 function techList(arrayTech, nameTech) {
-  if (arrayTech === 0){
+  if (arrayTech === ' '){
     arrayResult = 'Vazio!';
   }
   let arrayResult = [];
@@ -57,7 +57,7 @@ function triangleCheck() {
 
 // Desafio 13
 function hydrate(string) {
-  let waterCup += string.replace(/\D/g, "");
+  let waterCup = string.replace(/\D/g, "");
   return console.log(waterCup + ' copos de água')
 }
 
