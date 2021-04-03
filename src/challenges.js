@@ -46,13 +46,31 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (firstDistance > secundDistance) {
     result = 'cat2';
   } else {
-    result = 'Os gatos trombam e o rato foge';
+    result = 'os gatos trombam e o rato foge';
   }
   return result;
 }
 
 // Desafio 8
-function fizzBuzz() {
+function verficar(number) {
+  if (number % 15 === 0) {
+    return 'fizzBuzz';
+  }
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
+function fizzBuzz(numbers) {
+  let result = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    result.push(verficar(numbers[index]));
+  }
+  return result;
 }
 
 // Desafio 9
