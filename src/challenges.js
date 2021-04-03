@@ -20,7 +20,8 @@ console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName() {
   let nome = ['Rafael', 'Batista', 'de', 'Oliveira'];
-  return nome[3] + ', ' + nome[0];
+  let concatena = nome[3] + ', ' + nome[0];
+  return concatena;
 }
 console.log(concatName());
 
