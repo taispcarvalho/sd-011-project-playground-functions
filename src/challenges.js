@@ -1,12 +1,8 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  return (bool1 === true && bool2 === true) 
+  return (bool1 === true && bool2 === true);
 }
 console.log(compareTrue(true, false));
-
-
-
-
 
 // Desafio 2
 function calcArea(base, height) {
@@ -91,7 +87,7 @@ function fizzBuzz(numbers) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/joinfunction encode() { // 
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/joinfunction encode() { //
 function encode(sentence) {
   let assembSentence = [];
   for (let index = 0; index < sentence.length; index += 1) {
@@ -108,28 +104,28 @@ function encode(sentence) {
     } else {
       assembSentence.push(sentence[index]);
     }
-  } 
+  }
   return assembSentence.join('');
 }
 console.log(encode('hoje vai chover'));
 
 function decode(sentence) {
-let originalSentence = [];
-for (let index = 0; index<sentence.length; index +=1) {
-if (sentence[index] === '1') {
-  originalSentence.push('a');
-    } else if (sentence[index] === '2') {
-      originalSentence.push('e');
-    } else if (sentence[index] === '3') {
-      originalSentence.push('i');
-    } else if (sentence[index] === '4') {
-      originalSentence.push('o');
-    } else if (sentence[index] === '5') {
-      originalSentence.push('u');
-    } else {
-      originalSentence.push(sentence[index]);
-    }
-  } 
+  let originalSentence = [];
+  for (let index = 0; index < sentence.length; index += 1) {
+  if (sentence[index] === '1') {
+    originalSentence.push('a');
+      } else if (sentence[index] === '2') {
+        originalSentence.push('e');
+      } else if (sentence[index] === '3') {
+        originalSentence.push('i');
+      } else if (sentence[index] === '4') {
+        originalSentence.push('o');
+      } else if (sentence[index] === '5') {
+        originalSentence.push('u');
+      } else {
+        originalSentence.push(sentence[index]);
+      }
+  }
   return originalSentence.join('');
 }
 console.log(decode('h4j2 v13 ch4v2r'));
