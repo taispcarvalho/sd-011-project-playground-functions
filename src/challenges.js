@@ -67,22 +67,21 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzCheck(number) {
   if (number % 5 === 0 && number % 3 === 0) {
     return 'fizzBuzz';
-  } else
+  } 
   if (number % 5 === 0) {
     return 'buzz';
-  } else
+  } 
   if (number % 3 === 0) {
     return 'fizz';
-  } else {
-    return 'bug!'
   }
+  return 'bug!';  
 }
 
 function fizzBuzz(array) {
   let newArray = [];
 
-    for (let index in array) {
-      newArray.push(fizzCheck(array[index]));    
+  for (let index in array) {
+    newArray.push(fizzCheck(array[index]));    
   } return newArray;
 }
 
