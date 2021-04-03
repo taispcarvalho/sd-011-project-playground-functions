@@ -78,7 +78,6 @@ function fizzBuzz(fizzBuzzArray) {
 
 // Desafio 9
 function encode(string) {
-
   let stringArray = string.split('');
 
   for (let index = 0; index < stringArray.length; index += 1) {
