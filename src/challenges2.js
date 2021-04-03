@@ -3,7 +3,7 @@ function tech(a, name) {
   a = a.sort();
   let resultado = [];
   for (let index = 0; index < a.length; index += 1) {
-    resultado.push({ tech: a[index], name: name, });
+    resultado.push({ tech: a[index], name: name });
   }
   return resultado;
 }
@@ -11,7 +11,7 @@ function tech(a, name) {
 function techList(a, name) {
   if (a.length !== 5) {
     return 'Vazio!';
-  } else {
+  } {
     return tech(a, name);
   }
 }
