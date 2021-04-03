@@ -71,27 +71,30 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function convert(arrNum) {
+  if (arrNum % 15 === 0) {
+    return 'fizzBuzz';
+  } if (arrNum % 3 === 0) {
+    return 'fizz';
+  } if (arrNum % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
 function fizzBuzz(arrNum) {
   // seu código aqui
   let result = [];
 
   for (let index = 0; index < arrNum.length; index += 1) {
-    if (arrNum[index] % 3 === 0 && arrNum[index] % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (arrNum[index] % 3 === 0) {
-      result.push('fizz');
-    } else if (arrNum[index] % 5 === 0) {
-      result.push('buzz');
-    } else {
-      result.push('bug!');
-    }
+    result.push(convert(arrNum[index]));
   }
 
   return result;
 }
 
-// let arrNum = [2, 15, 7, 9, 45];
-// console.log(fizzBuzz(arrNum));
+let arrNum = [7, 9];
+console.log(fizzBuzz(arrNum));
 
 // Desafio 9
 function encode() {
