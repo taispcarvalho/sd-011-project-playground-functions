@@ -1,16 +1,16 @@
 // Desafio 1
-function compareTrue(value1,value2) {
+function compareTrue(value1, value2) {
   return value1 && value2;
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(phrase) {
-  return phrase.split('');
+  return phrase.split(' ');
 }
 
 // Desafio 4
