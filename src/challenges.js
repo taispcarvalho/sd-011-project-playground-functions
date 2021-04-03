@@ -120,7 +120,7 @@ function fizzBuzz(array) {
   }
   return game;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+/* console.log(fizzBuzz([2, 15, 7, 9, 45])); */
 
 // Desafio 9
 /* Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
