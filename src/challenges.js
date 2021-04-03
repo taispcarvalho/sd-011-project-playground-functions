@@ -73,7 +73,7 @@ function fizzBuzz(value) {
       ret.push('fizzBuzz');
     } else if (divisionFor(value[index], 3)) {
       ret.push('fizz');
-    } else if (divisionFor(value[index], 3)) {
+    } else if (divisionFor(value[index], 5)) {
       ret.push('buzz');
     } else {
       ret.push('bug!');
