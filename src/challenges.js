@@ -58,11 +58,11 @@ function fizzBuzz(array) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       fizzBuzzArray[index] = 'fizzBuzz';
     } else if (array[index] % 3 === 0) {
-      fizzBuzzArray[index = 'fizz';];
+      fizzBuzzArray[index] = 'fizz';
     } else if (array[index] % 5 === 0) {
-      fizzBuzzArray[index = 'buzz';];
+      fizzBuzzArray[index] = 'buzz';
     } else {
-      fizzBuzzArray[index = 'bug!';];
+      fizzBuzzArray[index] = 'bug!';
     }
   }
   return fizzBuzzArray;
