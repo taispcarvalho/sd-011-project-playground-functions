@@ -76,22 +76,22 @@ console.log(triangleCheck(10, 14, 99));
 
 // Desafio 13
 // Para completar esse desafio eu obtive ajuda no Developer Mozilla.
-/** Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number*/
-/** Source: https://www.w3schools.com/jsref/jsref_regexp_digit.asp*/
+/** Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number */
+/** Source: https://www.w3schools.com/jsref/jsref_regexp_digit.asp */
 function bebeAgua(string) {
   string = string.replace(/\D/g, '');
   let numberBebidas = 0;
   for (let index = 0; index < string.length; index += 1) {
-    numberBebidas += Number(string[index])
+    numberBebidas += Number(string[index]);
   }
   return numberBebidas;
 }
 
 function hydrate(string) {
   if (bebeAgua(string) === 1) {
-    bebeAgua = `${bebeAgua(string)} copo de água`;
-  } 
-    return `${bebeAgua(string)} copos de água`;
+    return `${bebeAgua(string)} copo de água`;
+  }
+  return `${bebeAgua(string)} copos de água`;
   // seu código aqui
 }
 console.log(hydrate('1 cachaça, 5 cervejas e 3 copo de vinho'));
