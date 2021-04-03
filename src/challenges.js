@@ -83,62 +83,36 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function checkDivision(number) {
+  let by3 = (number % 3) === 0;
+  let by5 = (number % 5) === 0;
+  if (by5 === true && by3 === true) {
+    return ('fizzBuzz');
+  } if (by3 === true) {
+    return ('fizz');
+  } if (by5 === true) {
+    return ('buzz');
+  } return ('bug!');
+}
+
 function fizzBuzz(array) {
   let result = [];
   for (let number of array) {
-    if (number % 5 === 0 && number % 3 === 0) {
-      result.push('fizzBuzz');
-    } else if (number % 3 === 0) {
-      result.push('fizz');
-    } else if (number % 5 === 0) {
-      result.push('buzz');
-    } else {
-      result.push('bug!');
-    }
+    result.push(checkDivision(number));
   }
   return (result);
 }
 
 // Desafio 9
-function convertletterToNumber(letter) {
-  switch (letter) {
-  case 'a':
-    return ('1');
-  case 'e':
-    return ('2');
-  case 'i':
-    return ('3');
-  case 'o':
-    return ('4');
-  case 'u':
-    return ('5');
-  default:
-    return (letter);
-  }
-}
-
-function convertNumbertoLetter(number) {
-  switch (number) {
-  case '1':
-    return ('a');
-  case '2':
-    return ('e');
-  case '3':
-    return ('i');
-  case '4':
-    return ('o');
-  case '5':
-    return ('u');
-  default:
-    return (number);
-  }
-}
-
 function encode(string) {
   let encodedString = '';
+  let selector = ['a', 'e', 'i', 'o', 'u'];
   for (let index = 0; index < string.length; index += 1) {
     let char = string[index];
-    char = convertletterToNumber(char);
+    let tempChar = selector.indexOf(char);
+    if (tempChar !== -1) {
+      char = tempChar + 1;
+    }
     encodedString += char;
   }
   return (encodedString);
@@ -146,9 +120,13 @@ function encode(string) {
 
 function decode(string) {
   let decodedString = '';
+  let selector = ['a', 'e', 'i', 'o', 'u'];
   for (let index = 0; index < string.length; index += 1) {
     let char = string[index];
-    char = convertNumbertoLetter(char);
+    let tempChar = selector[char - 1];
+    if (tempChar !== undefined) {
+      char = tempChar;
+    }
     decodedString += char;
   }
   return (decodedString);
