@@ -26,8 +26,14 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(frase) {
+  let output = '';
+  for (let index = 0; index < frase.length; index += index) {
+    output += frase[index];
+    index = frase.length - 1;
+    output += `, ${frase[index]} `;
+  }
+  console.log(output);
 }
 
 // Desafio 5
