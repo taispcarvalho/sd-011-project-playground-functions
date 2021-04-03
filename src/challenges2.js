@@ -13,9 +13,8 @@ function techList(techsToLearn, myName) {
       output.push(sorted);
     }
     return output;
-  } else {
-    return 'Vazio!';
-  }
+  } 
+  return 'Vazio!';
 }
 console.log(techList([], 'Maran'));
 
@@ -26,11 +25,7 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA > lineB + lineC || lineA < Math.abs(lineB - lineC)) {
-    return false;
-  } else if (lineB > lineA + lineC || lineB < Math.abs(lineA - lineC)) {
-    return false;
-  } else if (lineC > lineA + lineB || lineC < Math.abs(lineA - lineB)) {
+  if (lineA > lineB + lineC || lineA < Math.abs(lineB - lineC) || lineB > lineA + lineC || lineB < Math.abs(lineA - lineC) || lineC > lineA + lineB || lineC < Math.abs(lineA - lineB)) {
     return false;
   }
     return true;
