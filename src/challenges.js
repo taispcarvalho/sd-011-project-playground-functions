@@ -9,16 +9,16 @@ function compareTrue(number, number2) {
 console.log(compareTrue(false));
 
 // Desafio 2
-function calcArea(base,height) {
-  return (base*height) /2;
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
-console.log(calcArea(5,2));
-
+console.log(calcArea(5, 2));
 
 // Desafio 3
-function splitSentence() {
-
+function splitSentence(...frase) {
+  console.log(frase);
 }
+splitSentence('go', 'trybe');
 
 // Desafio 4
 function concatName() {
