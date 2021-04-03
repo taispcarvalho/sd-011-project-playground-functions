@@ -25,24 +25,18 @@ function checkNumber(array11) {
 }
 
 function checkDuplicateNumber(array11) {
-  for (let i = 0; i < array11.length; i += 1) {
-    let sameNumberLoop = 0;
-    for (let i2 = i; i2 < array11.length; i2 += 1) {
-      if (array11[i] === array11[i2]) {
-        sameNumberLoop += 1;
-        if (sameNumberLoop >= 3) {
-          return true;
-        }
-      }
-    }
+  let counts = {};
+  for (let num of array11) {
+    counts[num] = (counts[num] || 0) + 1;
+    if (counts[num] === 3) return true;
   }
+  return false;
 }
 
 function pushNumbers(array11) {
   let ddd = array11.slice(0, 2);
   let numPart1 = array11.slice(2, 7);
   let numPart2 = array11.slice(7);
-
   return `(${ddd.join('')}) ${numPart1.join('')}-${numPart2.join('')}`;
 }
 
