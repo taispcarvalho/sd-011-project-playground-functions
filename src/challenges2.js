@@ -70,10 +70,16 @@ function triangleCheck(A, B, C) {
 function hydrate(string) {
   let numbers = string.match(/\d+/g).map(Number);
   let sum = 0;
+  let text = '';
   for (let i in numbers) {
     sum += numbers[i];
   }
-  return `${sum} copos de água`;
+  if (sum === 1) {
+    text = `${sum} copo de água`;
+  } else {
+    text = `${sum} copos de água`;
+  }
+  return text;
 }
 
 module.exports = {
