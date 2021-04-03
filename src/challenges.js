@@ -24,16 +24,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
+function highest(array) {
   let maior = 0;
-  let counter = 0;
   for (let i in array) {
     if (array[i] > maior) {
       maior = array[i];
     }
   }
+  return maior;
+}
+
+function highestCount(array) {
+  let counter = 0;
   for (let i in array) {
-    if (array[i] === maior) {
+    if (array[i] === highest(array)) {
       counter += 1;
     }
   }
@@ -56,71 +60,71 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function writeText(number) {
+  let text = 'bug!';
+  if (number % 15 === 0) {
+    text = 'fizzBuzz';
+  } else if (number % 3 === 0) {
+    text = 'fizz';
+  } else if (number % 5 === 0) {
+    text = 'buzz';
+  }
+  return text;
+}
+
 function fizzBuzz(array) {
   let output = [];
   for (let n in array) {
-    if (array[n] % 3 === 0 && array[n] % 5 === 0) {
-      output.push('fizzBuzz');
-    } else if (array[n] % 3 === 0) {
-      output.push('fizz');
-    } else if (array[n] % 5 === 0) {
-      output.push('buzz');
-    } else {
-      output.push('bug!');
-    }
+    output.push(writeText(array[n]));
   }
   return output;
 }
 
 // Desafio 9
+function letterForNumber(letter) {
+  let number = letter;
+  if (letter === 'a') {
+    number = '1';
+  } else if (letter === 'e') {
+    number = '2';
+  } else if (letter === 'i') {
+    number = '3';
+  } else if (letter === 'o') {
+    number = '4';
+  } else if (letter === 'u') {
+    number = '5';
+  }
+  return number;
+}
+
 function encode(array) {
   let output = [];
   for (let n in array) {
-    switch (array[n]) {
-    case 'a':
-      output.push(1);
-      break;
-    case 'e':
-      output.push(2);
-      break;
-    case 'i':
-      output.push(3);
-      break;
-    case 'o':
-      output.push(4);
-      break;
-    case 'u':
-      output.push(5);
-      break;
-    default:
-      output.push(array[n]);
-    }
+    output.push(letterForNumber(array[n]));
   }
   return output.join('');
+}
+
+function numberForLetter(number) {
+  let letter = number;
+  if (number === '1') {
+    letter = 'a';
+  } else if (number === '2') {
+    letter = 'e';
+  } else if (number === '3') {
+    letter = 'i';
+  } else if (number === '4') {
+    letter = 'o';
+  } else if (number === '5') {
+    letter = 'u';
+  }
+  return letter;
 }
 
 function decode(array) {
   let output = [];
   for (let n in array) {
-    switch (array[n]) {
-    case '1':
-      output.push('a');
-      break;
-    case '2':
-      output.push('e');
-      break;
-    case '3':
-      output.push('i');
-      break;
-    case '4':
-      output.push('o');
-      break;
-    case '5':
-      output.push('u');
-      break;
-    default:
-      output.push(array[n]);
-    }
+    output.push(numberForLetter(array[n]));
   }
   return output.join('');
 }
