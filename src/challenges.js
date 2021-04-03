@@ -105,7 +105,7 @@ function encode(value) {
     if (char[index] === 'a') {
       char[index] = '1';
     } else if (char[index] === 'e') {
-      char[index] = '2'/
+      char[index] = '2';
     } else if (char[index] === 'i') {
       char[index] = '3';
     } else if (char[index] === 'o') {
