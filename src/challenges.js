@@ -78,13 +78,11 @@ console.log(catAndMouse(0, 1, 1));
 function fizzBuzz(num) {
   let array = [];
   for (let index in num) {
-    let div3 = num[index] % 3 === 0;
-    let div5 = num[index] % 5 === 0;
     if (num[index] % 15 === 0) {
       array.push('fizzBuzz');
-    } else if (div3) {
+    } else if (num[index] % 3 === 0) {
       array.push('fizz');
-    } else if (div5) {
+    } else if (num[index] % 5 === 0) {
       array.push('buzz');
     } else {
       array.push('bug');
