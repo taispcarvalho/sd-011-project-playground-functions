@@ -148,17 +148,14 @@ function triangleCheck(lineA, lineB, lineC) {
   let subLineB = Math.abs(lineC - lineA);
   let subLineC = Math.abs(lineA - lineB);
 
-  if (lineA > sumLineA || lineB > sumLineB || lineC > sumLineC || lineA < subLineA || lineB < subLineB || lineC < subLineC) {
-    return false; 
-  } else {
-  return true;
+  if (lineA < sumLineA || lineB < sumLineB || lineC < sumLineC || lineA > subLineA || lineB > subLineB || lineC > subLineC) {
+    return true;
   }
 }
-/* console.log(triangleCheck(10, 14, 8)); */
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-/* 
-  Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
+/* Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
   Crie a função hydrate que recebe uma string, e retorne a sugestão de quantos copos de água você deve beber. Exemplos:
   String recebida:
     "1 cerveja"
@@ -177,34 +174,33 @@ function triangleCheck(lineA, lineB, lineC) {
   O número na frente de cada bebida está no intervalo entre 1 e 9.
   Dica: pesquise por algo similar a get all integers inside a string js.
   O que será verificado:
-  Retorne a sugestão de quantos copos de água deve-se beber ao receber uma string
-*/
+  Retorne a sugestão de quantos copos de água deve-se beber ao receber uma string */
 function extractNumbers(string) {
   // Video utilizado para entender a expressão regular necessaria: https://www.youtube.com/watch?v=pfkkdzeyx6U&ab_channel=AllThingsJavaScript%2CLLC
   let drinkList = string.match(/\d+/g);
   let numberList = [];
-  for (number of drinkList) {
+  for (let number of drinkList) {
     numberList.push(parseInt(number));
   }
-  /*   console.log(numberList); */
   return numberList;
 }
 
 function hydrate(string) {
   let drinkSum = 0;
-  for ( let number of extractNumbers(string)) {
+  for (let number of extractNumbers(string)) {
     drinkSum += number;
   }
   // Montar frase concatenando total de copos e retornar ela para a função
   if (drinkSum === 1) {
     return `${drinkSum} copo de água`;
-  } else {
+  }
+  if (drinkSum > 1) {
     return `${drinkSum} copos de água`;
   }
 }
-/* console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
  console.log(hydrate('1 cachaça, 5 copos de vinho '));
- console.log(hydrate('1 cerveja')); */
+ console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
