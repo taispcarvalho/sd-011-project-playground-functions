@@ -1,31 +1,36 @@
 // Desafio 1
+// Para este desafio utilizei o que aprendi em aula.
 function compareTrue(valorOne, ValorTwo) {
   return valorOne && ValorTwo;
 }
 
 // Desafio 2
+// Para este desafio utilizei o que aprendi em aula.
 function calcArea(base, height) {
   return (base * height) / 2;
 }
 
 // Desafio 3
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 function splitSentence(SeparateWords) {
   return (SeparateWords.split(' '));
 }
 
 // Desafio 4
+// Para este desafio utilizei o que aprendi em aula.
 function concatName(myArray) {
-  let formatName = myArray[myArray.length - 1] + ', ' + myArray[0];
-  return formatName;
+  return myArray[myArray.length - 1] + ', ' + myArray[0]; ;
 }
 
 // Desafio 5
+// Para este desafio utilizei o que aprendi em aula.
 function footballPoints(wins, ties) {
   let points = wins * 3 + ties * 1;
   return points;
 }
 
 // Desafio 6
+// Para este desafio utilizei o que aprendi em aula.
 function highestCount(listOfNumbers) {
   let count = 0;
   let highestNumber = listOfNumbers[0];
@@ -43,6 +48,7 @@ function highestCount(listOfNumbers) {
 }
 
 // Desafio 7
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) > (cat2 - mouse)) {
     return 'cat2';
@@ -54,6 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+// Para este desafio utilizei o que aprendi em aula.
 function fizzBuzz(divArray) {
   for (let index = 0; index < divArray.length; index += 1) {
     if (divArray[index] % 15 === 0) {
@@ -70,6 +77,7 @@ function fizzBuzz(divArray) {
 }
 
 // Desafio 9
+// https://www.w3schools.com/jsref/jsref_replace.asp
 function encode(encondeParam) {
   encondeParam = encondeParam.replace(/a/g, '1');
   encondeParam = encondeParam.replace(/e/g, '2');
