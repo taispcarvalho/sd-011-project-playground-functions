@@ -1,11 +1,11 @@
 // Desafio 10
 
-// function techList(learningTechnology, name) {
-//   let outExit = [];
-//   if (learningTechnology.length === 0) { return 'Vazio!'; }
-//   for (let key of learningTechnology.sort()) { outExit.push({ tech: key, name: name }); } 
-//   return outExit;
-// } 
+function techList(learningTechnology, name) {
+  let outExit = [];
+  if (learningTechnology.length === 0) { return 'Vazio!'; }
+  for (let key of learningTechnology.sort()) { outExit.push({ tech: key, name: name }); } 
+  return outExit;
+} 
 
 // Desafio 11 Obs: Vitor Cardoso, Julio Felizzolla, Maicon me ajudaram.
 
@@ -43,7 +43,6 @@ function generatePhoneNumber(number1) {
 } 
   
 
-  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12-
 
 function triangleCheck(lineA, lineB, lineC) {
@@ -64,7 +63,7 @@ function hydrate() {
 
 module.exports = {
   generatePhoneNumber,
-  //techList,
+  techList,
   hydrate,
   triangleCheck,
 };
