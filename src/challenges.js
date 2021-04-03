@@ -106,7 +106,7 @@ function encode(frase) {
 }
 function decode(frase) {
   // seu código aqui
-  let cript = frase.replace(/a/g, '1')
+  let cript = frase.replace(/1/g, 'a')
     .replace(/2/g, 'e')
     .replace(/3/g, 'i')
     .replace(/4/g, 'o')
