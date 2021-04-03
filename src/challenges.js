@@ -55,8 +55,8 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzzSecond(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 5 === 0) {
-    array[index] = 'buzz';
-    } else {
+      array[index] = 'buzz';
+    } else if (array[index] > 0 || array[index] < 0) {
       array[index] = 'bug!';
     }
   }
@@ -76,6 +76,25 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+function encodeSecond(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
+    case 'i':
+      string[index] = '3';
+      break;
+    case 'o':
+      string[index] = '4';
+      break;
+    case 'u':
+      string[index] = '5';
+      break;
+    default:
+      break;
+    }
+  }
+  return string.join('');
+}
+
 function encode(string) {
   let charByChar = string.split('');
   for (let index = 0; index < charByChar.length; index += 1) {
@@ -86,24 +105,46 @@ function encode(string) {
     case 'e':
       charByChar[index] = '2';
       break;
-    case 'i':
-      charByChar[index] = '3';
+    default:
       break;
-    case 'o':
-      charByChar[index] = '4';
+    }
+  }
+  return encodeSecond(charByChar);
+}
+
+function decodeSecond(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
+    case '3':
+      string[index] = 'i';
       break;
-    case 'u':
-      charByChar[index] = '5';
+    case '4':
+      string[index] = 'o';
+      break;
+    case '5':
+      string[index] = 'u';
       break;
     default:
       break;
     }
   }
-  return charByChar.join('');
+  return string.join('');
 }
-console.log(encode('oi meu amigo'));
 function decode() {
-  // seu código aqui
+  let charByChar = string.split('');
+  for (let index = 0; index < charByChar.length; index += 1) {
+    switch (charByChar[index]) {
+    case '1':
+      charByChar[index] = 'a';
+      break;
+    case '2':
+      charByChar[index] = 'e';
+      break; 
+    default:
+      break;
+    }
+  }
+  return decodeSecond(charByChar);
 }
 
 module.exports = {
