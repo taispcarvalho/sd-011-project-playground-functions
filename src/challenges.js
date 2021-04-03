@@ -69,23 +69,25 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(valor) {
   let result = [];
-  for (let index = 0; index < valor.length; index += 1) {
-    if (valor[index] % 3 === 0 && valor[index] % 5 === 0) {
-      valor[index] = 'fizzBuzz';
-    } else if (valor[index] % 3 === 0) {
-      valor[index] = 'fizz';
-    } else if (valor[index] % 5 === 0) {
-      valor[index] = 'buzz';
-    } else {
-      valor[index] = 'bug!';
-    }
-    result.push(valor[index]);
+  for (let index of valor) {
+    result.push(conditionFizzBuzz(index));
   }
   return result;
 }
 let arrayE = [2, 15, 7, 9, 45];
+function conditionFizzBuzz(arrayValue) {
+  if (arrayValue % 3 === 0 && arrayValue % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (arrayValue % 3 === 0) {
+    return 'fizz';
+  }
+  if (arrayValue % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
 console.log(fizzBuzz(arrayE));
-
 // Desafio 9
 function encode(text) {
   let eVogals = { a: '1', e: '2', i: '3', o: '4', u: '5' };
