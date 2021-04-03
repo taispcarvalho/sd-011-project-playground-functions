@@ -57,11 +57,12 @@ function generatePhoneNumber(array) {
   arrayPhoneNumber.splice(4, 0, ' ');
   arrayPhoneNumber.splice(10, 0, '-');
 
-  for (let index = 0; index < arrayPhoneNumber; index += 1) {
+  for (let index = 0; index < arrayPhoneNumber.length; index += 1) {
     phoneNumber += arrayPhoneNumber[index];
   }
   return phoneNumber;
 }
+
 // Parte dessa implementação, como a função splice, utilizei recursos que encontrei no site mundojs no link https://www.mundojs.com.br/2018/08/31/adicionando-elementos-em-uma-lista-array-javascript/, data do acesso: 03/04/2021
 
 // Desafio 12
