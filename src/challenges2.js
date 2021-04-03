@@ -78,15 +78,11 @@ function generatePhoneNumber(array11) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let array12 = [lineA, lineB, lineC];
-  let triangle = false;
-  for (i = 0; i < array12.length; i+=1) {
-    for (j = i + 1; i < array12.length; i+=1) {
-      if (array12[i] + array12[j] > array12[2 - i] && Math.abs(array12[i] - array12[j]) < array12[2 - i]) {
-        triangle = true;
-      } else { return false }
+  for (let i = 0; i < array12.length; i += 1) {
+    for (let j = i + 1; i < array12.length; i += 1) {
+      return array12[i] + array12[j] > array12[2 - i] && Math.abs(array12[i] - array12[j]) < array12[2 - i];
     }
   }
-  return triangle;
 }
 
 // Desafio 13
