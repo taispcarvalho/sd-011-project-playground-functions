@@ -11,11 +11,11 @@ function calcArea(base, height) {
 console.log(calcArea(5, 2));
 
 // Desafio 3
-function splitSentence(p, s) {
-  let frase = [p, s];
-  console.log(frase);
+function splitSentence(nome) {
+  let frase = nome.split(" ");
+  return frase;
 }
-splitSentence('go','trybe');
+console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName() {
