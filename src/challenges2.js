@@ -12,7 +12,7 @@ function techList(a, name) {
   if (a.length !== 5) {
     return 'Vazio!';
   }
-    return tech(a, name);
+  return tech(a, name);
 }
 console.log(techList(['React', 'CSS', 'JavaScript', 'Node', 'HTML'], 'Daniel'));
 
