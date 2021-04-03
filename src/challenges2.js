@@ -18,14 +18,14 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   let telefone = '(';
-  function valorInvalido(array) {
+  function valorInvalido() {
     for (let index = 0; index < array.length; index += 1) {
       if (array[index] < 0 || array[index] > 9) {
         return true;
       }
     }
   }
-  function maisDeTres(array) {
+  function maisDeTres() {
     let contador = 0;
     for (let index = 0; index < array.length; index += 1) {
       contador = 0;
