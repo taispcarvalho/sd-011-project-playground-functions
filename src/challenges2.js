@@ -23,7 +23,7 @@ function checkRepeat(array) {
   for (let index = 0; index < array.length; index += 1) {
     let contador = 0;
     for (let index2 = 0; index2 < array.length; index2 += 1) {
-      if (contador >= 2) {
+      if (contador === 3) {
         return true;
       }
       if (array[index] === array[index2]) {
@@ -47,10 +47,11 @@ function checkLength(array) {
 function generatePhoneNumber(array) {
   let arrayPhoneNumber = ['('];
   let phoneNumber = '';
+  if (checkLength(array)) {
+    return 'Array com tamanho incorreto.';
+  }
   if (checkRepeat(array) || checkValues(array)) {
     return 'não é possível gerar um número de telefone com esses valores';
-  } if (checkLength(array)) {
-    return 'Array com tamanho incorreto.';
   }
   arrayPhoneNumber = arrayPhoneNumber.concat(array);
   arrayPhoneNumber.splice(3, 0, ')');
