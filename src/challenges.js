@@ -85,8 +85,8 @@ function encode(strCode) {
   };
   encoded = strCode.replace(/a|e|i|o|u/gi, function (letra) {
     let lt = listSub[letra];
-    let letraList = lt.replace(/(?:^|\s)\S/g, function (element){return element; });
-    return letraList
+    let letraList = lt.replace(/(?:^|\s)\S/g, function (element) { return element; });
+    return letraList;
   });
   return encoded;
 }
@@ -99,10 +99,10 @@ function decode(numCode) {
     "4": "o",
     "5": "u"
   };
-  decoded = numCode.replace(/1|2|3|4|5/gi, function(num) {
+  decoded = numCode.replace(/1|2|3|4|5/gi, function (num) {
     let n = listSub[num];
-    let numList = n.replace(/(?:^|\s)\S/g, function(element) {return element; });
-    return numList
+    let numList = n.replace(/(?:^|\s)\S/g, function (element) { return element; });
+    return numList;
   });
   return decoded;
 }
