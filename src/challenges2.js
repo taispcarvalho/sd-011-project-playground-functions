@@ -42,7 +42,6 @@ function generatePhoneNumber(number1) {
     return myNumbers; 
 } 
   
-
 // Desafio 12-
 
 function triangleCheck(lineA, lineB, lineC) {
@@ -56,9 +55,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-let shoop = '1 cerveja';
-function hydrate() {
-  // digite o código aqui
+
+function hydrate(newString) {
+  
+  newString = newString.replace(/\D/g, '');
+  let myNumber = 0;
+
+  for( let index = 0; index < newString.length; index += 1){
+    myNumber += Number(newString[index]);
+  }
+  if(myNumber === 1){
+    return `${myNumber} copo de água`;
+  } return `${myNumber} copos de água`;
 }
 
 module.exports = {
