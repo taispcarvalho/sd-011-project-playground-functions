@@ -56,33 +56,17 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  // let arrayString = [];
-  // for (let number of array) {
-  //   if (number % 3 === 0 && number % 5 === 0) {
-  //     arrayString.push('fizzBuzz');
-  //   } else if (number % 3 === 0) {
-  //     arrayString.push('fizz');
-  //   } else if (number % 5 === 0) {
-  //     arrayString.push('buzz');
-  //   } else arrayString.push('bug!');
-  // }
-  // return arrayString;
-
-  // Consultei o repositório da Ana Clara Kyotoku e me baseei em seu código para encontrar uma solução que considero mais simples para este desafio.
-// Link: https://github.com/tryber/sd-011-project-playground-functions/blob/anaclarabck-project-playground-functions/src/challenges.js
-  function translation(number) {
-    let divisors = [15, 3, 5];
-    let words = ['fizzBuzz', 'fizz', 'buzz'];
-    for (let index = 0; index < divisors.length; index += 1) {
-      if (number % divisors[index] === 0) {
-        return words[index];
-      } return 'bug!'
-    }
-  }
-  let newArray = [];
+  let arrayString = [];
   for (let number of array) {
-    newArray.push(translation(number));
-  } return newArray;
+    if (number % 3 === 0 && number % 5 === 0) {
+      arrayString.push('fizzBuzz');
+    } else if (number % 3 === 0) {
+      arrayString.push('fizz');
+    } else if (number % 5 === 0) {
+      arrayString.push('buzz');
+    } else arrayString.push('bug!');
+  }
+  return arrayString;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
