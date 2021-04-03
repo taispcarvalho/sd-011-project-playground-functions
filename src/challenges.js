@@ -52,7 +52,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzzSecond(array) {
+function fizzBuzzSecondProcess(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 5 === 0) {
       array[index] = 'buzz';
@@ -71,12 +71,12 @@ function fizzBuzz(array) {
       array[index] = 'fizz';
     }
   }
-  array = fizzBuzzSecond(array);
+  array = fizzBuzzSecondProcess(array);
   return array;
 }
 
 // Desafio 9
-function encodeSecond(string) {
+function encodeSecondProcess(string) {
   for (let index = 0; index < string.length; index += 1) {
     switch (string[index]) {
     case 'i':
@@ -109,10 +109,10 @@ function encode(string) {
       break;
     }
   }
-  return encodeSecond(charByChar);
+  return encodeSecondProcess(charByChar);
 }
 
-function decodeSecond(string) {
+function decodeSecondProcess(string) {
   for (let index = 0; index < string.length; index += 1) {
     switch (string[index]) {
     case '3':
@@ -144,7 +144,7 @@ function decode(string) {
       break;
     }
   }
-  return decodeSecond(charByChar);
+  return decodeSecondProcess(charByChar);
 }
 
 module.exports = {
