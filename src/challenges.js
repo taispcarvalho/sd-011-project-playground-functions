@@ -9,8 +9,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  let arrrayPhrase = phrase.split(' ');
+
+  return arrrayPhrase;
 }
 
 // Desafio 4
@@ -90,24 +92,24 @@ function encode(phraseEncode) {
   }
 
   for (let index2 in phraseEncode) {
-    switch (phraseEncode[index2]){
+    switch (phraseEncode[index2]) {
     case 'a':
-    arrayEncode[index2] = 1;
-    break;
+      arrayEncode[index2] = 1;
+      break;
     case 'e':
-    arrayEncode[index2] = 2;
-    break;
+      arrayEncode[index2] = 2;
+      break;
     case 'i':
-    arrayEncode[index2] = 3;
-    break;
+      arrayEncode[index2] = 3;
+      break;
     case 'o':
-    arrayEncode[index2] = 4;
-    break;
+      arrayEncode[index2] = 4;
+      break;
     case 'u':
-    arrayEncode[index2] = 5;
-    break;
+      arrayEncode[index2] = 5;
+      break;
     default:
-    break;
+      break;
     }
   }
 
@@ -119,9 +121,6 @@ function encode(phraseEncode) {
 
   return phraseEncode;
 }
-
-let a = 'hi there!';
-console.log(encode(a));
 
 function decode() {
 }
