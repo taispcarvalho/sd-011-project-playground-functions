@@ -1,4 +1,5 @@
 // Desafio 10
+// Utilizei desta fonte para aplicação do sort: https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/
 function techList(wantToLearn, name) {
   let myDevTechs = [];
 
@@ -6,15 +7,15 @@ function techList(wantToLearn, name) {
     return 'Vazio!';
 
   } else {
-    for (let index = 0; index < wantToLearn.lenght; index += 1) {
-      let techObject = {
-        tech: wantToLearn[index],
-        name: `${name}`,
-      }
-      myDevTechs.push(techObject);
-    }   
-    
-    return myDevTechs.sort((a,b) => (a.wantToLearn > b.wantToLearn ? 1 : -1));    
+    for (let techs of wantToLearn){
+			let object = {
+				tech: techs,
+				name: name,
+			}
+			myDevTechs.push(object)
+		}
+				    
+    return myDevTechs.sort((a,b) => (a.wantToLearn > b.wantToLearn ? 1 : -1));
   }    
   
 }
@@ -72,7 +73,9 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(5, 6, 10));
 
 // Desafio 13
-// 
+// Utilizei como embasamento:
+// https://www.codegrepper.com/code-examples/javascript/extract+number+from+string+javascript
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 function hydrate(drinkWater) {
   let numOfDrinks = drinkWater.replace(/[^0-9]/g,'');	
 
