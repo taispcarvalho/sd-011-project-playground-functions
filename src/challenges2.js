@@ -22,8 +22,8 @@ function techList(listDevTech, name) {
 function validateNumberOccurrence(numbers) {
   for (let num of numbers) {
     let occurrences = 0;
-    for (let index = 0; index > numbers.length; index += 1) {
-      if (num === numbers[index]) {
+    for (let key in numbers) {
+      if (num === numbers[key]) {
         occurrences += 1;
       }
     }
@@ -52,7 +52,7 @@ function adjustPhoneNumber(numbers) {
       phoneNumber += numbers[atribuitionIndex];
       atribuitionIndex += 1;
     } else {
-      phoneNumber += baseNumber[key]; 
+      phoneNumber += baseNumber[key];
     }
   }
   return phoneNumber;
@@ -66,7 +66,7 @@ function generatePhoneNumber(phoneNumber) {
   if (validateNumberOccurrence(phoneNumber) && checkNumberCeiling(phoneNumber)) {
     return adjustPhoneNumber(phoneNumber);
   }
-  return 'não é possível gerar um número de telefone com esses valores'
+  return 'não é possível gerar um número de telefone com esses valores';
 }
 
 // Desafio 12
