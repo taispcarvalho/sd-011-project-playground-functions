@@ -80,18 +80,17 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
+  let dicionario = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
   let secondString = '';
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 'a') {
-      secondString += '1';
-    } else if (string[index] === 'e') {
-      secondString += '2';
-    } else if (string[index] === 'i') {
-      secondString += '3';
-    } else if (string[index] === 'o') {
-      secondString += '4';
-    } else if (string[index] === 'u') {
-      secondString += '5';
+    if (dicionario[string[index]]) {
+      secondString += dicionario[string[index]];
     } else {
       secondString += string[index];
     }
@@ -100,18 +99,17 @@ function encode(string) {
 }
 
 function decode(string) {
+  let dicionario = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
   let secondString = '';
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === '1') {
-      secondString += 'a';
-    } else if (string[index] === '2') {
-      secondString += 'e';
-    } else if (string[index] === '3') {
-      secondString += 'i';
-    } else if (string[index] === '4') {
-      secondString += 'o';
-    } else if (string[index] === '5') {
-      secondString += 'u';
+    if (dicionario[string[index]]) {
+      secondString += dicionario[string[index]];
     } else {
       secondString += string[index];
     }
