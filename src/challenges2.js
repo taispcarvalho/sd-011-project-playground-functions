@@ -2,6 +2,7 @@
 function techList() {
   // seu código aqui
 }
+//console.logtechList(('React', 'Jest', 'HTML', 'CSS', 'JavaScript'));
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -14,13 +15,15 @@ function triangleCheck(lineA, lineB, lineC) {
   let sizeA = Math.abs(lineB - lineC);
   let sizeB = Math.abs(lineA - lineC);
   let sizeC = Math.abs(lineA - lineB);
-  if (lineA < (lineB + lineC) && lineA > sizeA && lineB < (lineA + lineC) && lineB > sizeB && lineC < (lineA + lineB) && lineC > sizeC) {
+  let sizeBC = lineB + lineC;
+  let sizeAC = lineA + lineC;
+  let sizeAB = lineA + lineB;
+  if (lineA < sizeBC && lineA > sizeA && lineB < sizeAC && lineB > sizeB && lineC < sizeAB && lineC > sizeC) {
   return true;
 } 
-  else (lineA > (lineB + lineC) && lineA < sizeA && lineB > (lineA + lineC) && lineB < sizeB && lineC > (lineA + lineB) && lineC < sizeC) 
+  else 
   return false;
 }
-
 //console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13

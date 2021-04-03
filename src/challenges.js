@@ -76,33 +76,23 @@ function fizzBuzz(param1) {
   let arrayFiBu = [];
   for (let index = 0; index < param1.length; index += 1) {
     if (param1[index] % 3 === 0 && param1[index] % 5 === 0) {
-  param1[index] = 'fizzBuzz';
-  arrayFiBu.push(param1[index]);
-    } else if (param1[index] % 5 === 0 && param1[index] % 3 !== 0) {
+  arrayFiBu.push('fizzBuzz');
+  } else if (param1[index] % 5 === 0 && param1[index] % 3 !== 0) {
   param1[index] = 'buzz';
   arrayFiBu.push(param1[index]);
     } else if (param1[index] % 3 === 0 && param1[index] % 5 !== 0) {
-      param1[index] = 'fizz';
-      arrayFiBu.push(param1[index]);
+  arrayFiBu.push('fizz');
     } else {
-      param1[index] = 'bug!';
-      arrayFiBu.push(param1[index]);
+  arrayFiBu.push('bug!');
   }
 }
-      return arrayFiBu;
-  }
-  console.log(fizzBuzz([3, 5, 15, 13]));
+    return arrayFiBu;
+}
+// console.log(fizzBuzz([3, 5, 15, 13]));
    
   // Desafio 9
 function encode(letters) {
-  let num = { a:1,
-  e:2,
-  i:3,
-  o:4,
-  u:5
-}
-  // seu código aqui
-}
+  
 function decode() {
   // seu código aqui
 }
