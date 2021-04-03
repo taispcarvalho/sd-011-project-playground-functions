@@ -24,44 +24,43 @@ function footballPoints(wins, ties) {
 function highestCount(numberArray) {
   let highestNumber = 0;
   let highestNumberCount = 0;
-  for (let index = 0; index < numberArray.length; index += 1){
-    if (highestNumber < numberArray[index]){
+  for (let index = 0; index < numberArray.length; index += 1) {
+    if (highestNumber < numberArray[index]) {
       highestNumber = numberArray[index];
     }
   }
-  for (let index2 = 0; index2 < numberArray.length; index2 += 1){
-    if (highestNumber === numberArray[index2]){
-    highestNumberCount = highestNumberCount + 1;
+  for (let index2 = 0; index2 < numberArray.length; index2 += 1) {
+    if (highestNumber === numberArray[index2]) {
+      highestNumberCount = highestNumberCount + 1;
     } else {
-    highestNumberCount+=0;
+    highestNumberCount += 0;
     }
   }
-
-return highestNumberCount;
+  return highestNumberCount;
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
- let cat1Distance = 0;
- let cat2Distance = 0;
- let result = 0;
- if (mouse >= cat1){
-  cat1Distance = (mouse - cat1);
- } else {
-  cat1Distance = (cat1 - mouse);
- }
- if (mouse >= cat2){
-  cat2Distance = (mouse - cat2);
- } else {
+  let cat1Distance = 0;
+  let cat2Distance = 0;
+  let result = 0;
+  if (mouse >= cat1) {
+   cat1Distance = (mouse - cat1);
+  } else {
+   cat1Distance = (cat1 - mouse);
+  }
+  if (mouse >= cat2) {
+   cat2Distance = (mouse - cat2);
+  } else {
    cat2Distance = (cat2 - mouse);
- }
- if (cat1Distance === cat2Distance){
+  }
+  if (cat1Distance === cat2Distance) {
   result = 'os gatos trombam e o rato foge';
- } else if (cat1Distance<cat2Distance){
+  } else if (cat1Distance < cat2Distance) {
   result = 'cat1';
- } else {
+  } else {
   result = 'cat2';
- }
- return result
+  }
+  return result;
 }
 
 // Desafio 8 -FEITO
@@ -78,7 +77,7 @@ function fizzBuzz(arrayFizzBuzz) {
       secondArray.push('bug!');
     }
   }
-  return secondArray
+  return secondArray;
 }
 // Desafio 9 -FEITO
 function encode(encoder) {
@@ -88,7 +87,7 @@ function encode(encoder) {
   result = result.replace(/o/g, '4');
   result = result.replace(/u/g, '5');
     
-return result
+return result;
 }
 function decode(decoder) {
   let result = decoder.replace(/1/g, 'a');
@@ -97,7 +96,7 @@ function decode(decoder) {
   result = result.replace(/4/g, 'o');
   result = result.replace(/5/g, 'u');
     
-return result  
+return result;
 }
 
 module.exports = {
