@@ -18,10 +18,11 @@ function techList(tech, name) {
 // D11 Auxiliary Functions
 // References:
 // Arrow functions: https://www.w3schools.com/js/js_arrow_function.asp
+// Legacy References: (not used anymore)
 // slice(): https://www.w3schools.com/jsref/jsref_slice_array.asp
 // sort() with function for numbers: https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
 
-// I used Arrow Functions just to try to lessen the code's complexity, and to learn how to use it, no particular use.
+// I have used Arrow Functions just to try to lessen the code's complexity, and to learn how to use it, no special use.
 const lengthValidation = (phone) => {
   if (phone.length !== 11) return true;
   return false;
@@ -29,6 +30,7 @@ const lengthValidation = (phone) => {
 
 const digitValidation = (phone) => {
   let invalid = false;
+
   for (let i = 0; i < phone.length; i += 1) {
     if (phone[i] > 9 || phone[i] < 0) {
       invalid = true;
@@ -39,12 +41,16 @@ const digitValidation = (phone) => {
 
 // How to use forEach to count duplicate numbers: https://stackoverflow.com/questions/19395257/how-to-count-duplicate-value-in-an-array-in-javascript
 // Convert Object to Array = https://www.samanthaming.com/tidbits/76-converting-object-to-array/
-// Cause using two 'for loops' for it cause Code Complexibility's problem
+// Cause using two 'for loops' for it cause Code Complexibility's problem, so I had to use this technique with the ForEach
+// It's print the numbers of times the number repeats in Object.values
 const counterValidation = (phone) => {
   let count = {};
   let countNum = 0;
 
-  phone.forEach(function (x) { count[x] = (count[x] || 0) + 1; });
+  phone.forEach(function (x) {
+    count[x] = (count[x] || 0) + 1; /* The expression counts[x] || 0 returns the value of counts[x] if it is set, otherwise 0.
+                                       Then just add one and set it again in the object and the count is done. */
+  });
 
   let auxCount = Object.values(count);
 
