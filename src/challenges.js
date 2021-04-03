@@ -83,17 +83,15 @@ function fizzBuzz(num) {
     } else {
       if (num[index] % 3 === 0 ) {
         array.push('fizz');
-      } else {
-        if (num[index] % 5 === 0 ) {
-      array.push('buzz');
-        } else {
-          array.push('bug');
+      } else if (num[index] % 5 === 0 ) {
+        array.push('buzz');
+          } else {
+            array.push('bug');
+          }
         }
       }
-    }
+    return array;
   }
-  return array;
-}
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
