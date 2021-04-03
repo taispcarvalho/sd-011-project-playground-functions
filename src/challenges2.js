@@ -19,14 +19,20 @@ function techList(listDevTech, name) {
 }
 
 // Desafio 11
-function validateNumberOccurrence(numbers) {
-  for (let num of numbers) {
-    let occurrences = 0;
-    for (let key in numbers) {
-      if (num === numbers[key]) {
-        occurrences += 1;
-      }
+function countOccurrences(num, numbers) {
+  let repetitions = 0;
+  for (let key in numbers) {
+    if (numbers[key] === num) {
+      repetitions += 1;
     }
+  }
+  return repetitions;
+}
+
+function validateNumbers(numbers) {
+  let occurrences = 0;
+  for (let num of numbers) {
+    occurrences = countOccurrences(num, numbers);
     if (occurrences >= 3) {
       return false;
     }
@@ -63,7 +69,7 @@ function generatePhoneNumber(phoneNumber) {
   if (size !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (validateNumberOccurrence(phoneNumber) && checkNumberCeiling(phoneNumber)) {
+  if (validateNumbers(phoneNumber) && checkNumberCeiling(phoneNumber)) {
     return adjustPhoneNumber(phoneNumber);
   }
   return 'não é possível gerar um número de telefone com esses valores';
