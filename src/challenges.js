@@ -53,19 +53,25 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let fizzBuzzArray = [];
   for (let index = 0; index < array.length - 1; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      fizzBuzzArray[index] = 'fizzBuzz';
+      array[index] = 'fizzBuzz';
     } else if (array[index] % 3 === 0) {
-      fizzBuzzArray[index] = 'fizz';
-    } else if (array[index] % 5 === 0) {
-      fizzBuzzArray[index] = 'buzz';
-    } else {
-      fizzBuzzArray[index] = 'bug!';
+      array[index] = 'fizz';
     }
   }
-  return fizzBuzzArray;
+  array = fizzBuzzSecond(array);
+  return array;
+}
+function fizzBuzzSecond(array) {
+  for (let index = 0; index < array.length - 1; index += 1) {
+    if (array[index] % 3 !== 0 && array[index] % 5 !== 0) {
+      array[index] = 'bug!';
+    } else if (array[index] % 5 === 0) {
+      array[index] = 'buzz';
+    }
+  }
+  return array;
 }
 
 // Desafio 9
