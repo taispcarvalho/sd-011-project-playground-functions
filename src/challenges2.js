@@ -76,23 +76,25 @@ console.log(triangleCheck(10, 14, 99));
 
 // Desafio 13
 // Para completar esse desafio eu obtive ajuda no Developer Mozilla.
-/** Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt */
+/** Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number*/
+/** Source: https://www.w3schools.com/jsref/jsref_regexp_digit.asp*/
+function bebeAgua(string) {
+  string = string.replace(/\D/g, '');
+  let numberBebidas = 0;
+  for (let index = 0; index < string.length; index += 1) {
+    numberBebidas += Number(string[index])
+  }
+  return numberBebidas;
+}
+
 function hydrate(string) {
-  let bebeAgua = 0;
-  for (let index in string) {
-    if (string[index] === '1' || string[index] === '2' || string[index] === '3' || string[index] === '4' || string[index] === '5' || string[index] === '6' || string[index] === '7' || string[index] === '8' || string[index] === '9') {
-      bebeAgua += parseInt(string[index]);
-    }
-  }
-  if (bebeAgua === 1) {
-    bebeAgua = `${bebeAgua} copo de água`;
-  } else {
-    return `${bebeAgua} copos de água`;
-  }
-  return bebeAgua;
+  if (bebeAgua(string) === 1) {
+    bebeAgua = `${bebeAgua(string)} copo de água`;
+  } 
+    return `${bebeAgua(string)} copos de água`;
   // seu código aqui
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+console.log(hydrate('1 cachaça, 5 cervejas e 3 copo de vinho'));
 module.exports = {
   generatePhoneNumber,
   techList,
