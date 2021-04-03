@@ -5,8 +5,11 @@ function techList(nametf) {
 // Desafio 11
 function generatePhoneNumber(numberArray) {
   let counts = {}
-  for (i = 0; i < numberArray.length; i += 1) {
-    if (counts[numberArray[i]]) {
+  for (i = 0; i <= numberArray.length; i += 1) {
+    if (numberArray[i] < 0 || numberArray[i] > 9) {
+    return 'não é possível gerar um número de telefone com esses valores'
+    }
+    else if (counts[numberArray[i]]) {
     counts[numberArray[i]] += 1;
     } else {
     counts[numberArray[i]] = 1;
@@ -14,7 +17,7 @@ function generatePhoneNumber(numberArray) {
   }
   //https://dev.to/huyddo/find-duplicate-or-repeat-elements-in-js-array-3cl3
   for (let prop in counts) {
-    if (counts[prop] >= 3 || counts[prop] < 0 || counts[prop] > 9) {
+    if (counts[prop] >= 3) {
     return 'não é possível gerar um número de telefone com esses valores'
     }
   }
@@ -30,7 +33,8 @@ function generatePhoneNumber(numberArray) {
   return 'Array com tamanho incorreto.'
   }
 };
-
+numberArray=[9, 2, 3, 0, 5, ]
+console.log(generatePhoneNumber(numberArray))
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
