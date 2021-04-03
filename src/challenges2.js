@@ -23,13 +23,13 @@ console.log(techList(['React', 'Python', 'PHP', 'Express'], 'Gustavo'));
 
 // Desafio 11
 function generatePhoneNumber(numToBe) {
-  let count = {};
+  let count = 0;
 
-  for (let index of numToBe){
-    if(value in numToBe) {
-      count[value] = count[value] + 1;
+  for (let index in numToBe){
+    if(index in numToBe) {
+      count[index] = count[index] + 1;
     } else {
-      count[value] = 1;
+      count[index] = 1;
     }
   }
 
@@ -39,20 +39,19 @@ function generatePhoneNumber(numToBe) {
   } else if (numToBe.lenght < 11) {
     return "Array com tamanho incorreto.";
   
-  }
+  } else {
+    let phoneNumber = '(xx) xxxxx-xxxx'
 
-  let phoneNumber = '(xx) xxxxx-xxxx'
+    for(let index = 0; index < numToBe.lenght; index += 1){  
+      if (numToBe[index] < 0){
+        return "não é possível gerar um número de telefone com esses valores";      
 
-  for(let index = 0; index < numToBe.lenght; index += 1){  
-    if (numToBe[index] < 0 || numToBe[index] > 9){
-      return "não é possível gerar um número de telefone com esses valores";      
-
-    } else {
-      phoneNumber = phoneNumber.replace('x', numToBe[index]);
+      } else {
+        phoneNumber = phoneNumber.replace(/'x'/ig, numToBe[index]);
+      }
     }
-    
+      
     return phoneNumber;
-
   }
 } 
 
@@ -73,21 +72,24 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(5, 6, 10));
 
 // Desafio 13
+// 
 function hydrate(drinkWater) {
-  let hhTrybe = drinkWater.match(/\d+/g);
-  let intHHTrybe = [];
-  let sumAllWater = 0
+  let numOfDrinks = drinkWater.replace(/[^0-9]/g,'');	
 
-  for (let index = 0; index < hhTrybe.lenght; index += 1) {
-    intHHTrybe = parseInt(hhTrybe[index]);
-    sumAllWater = sumAllWater + intHHTrybe[index];
+	let parsedDrinks = 0
+	for (let index of numOfDrinks) {
+		parsedDrinks += parseInt(index, 10);
+	}
 
-  }
+	if (parsedDrinks === 1) {
+		return '1 copo de água'
+	} else {
+		return `${parsedDrinks} copos de água`
+	}
 
-  return `${sumAllWater} copos de água`
 }
 
-console.log(hydrate('1 cerveja e 2 drink'))
+console.log(hydrate('9 cerveja'))
 
 module.exports = {
   generatePhoneNumber,
