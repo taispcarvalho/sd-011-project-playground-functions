@@ -57,7 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 function fbDivider(num) {
-  if ((num % 3 === 0) && (num % 5 === 0)) return 'fizzbuzz';
+  if ((num % 3 === 0) && (num % 5 === 0)) return 'fizzBuzz';
   if (num % 3 === 0) return 'fizz';
   if (num % 5 === 0) return 'buzz';
   return 'bug!';

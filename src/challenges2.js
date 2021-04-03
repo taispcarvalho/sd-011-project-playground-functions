@@ -29,11 +29,10 @@ function countNumber(value1, numbersArr) {
 }
 
 function isValidArrLength(numbersArr) {
-  let isValid = true;
-  if (!numbersArr.length === 11) {
-    return !isValid;
+  if (numbersArr.length === 11) {
+    return true;
   }
-  return isValid;
+  return false;
 }
 
 function isValidPhoneNumber(numbersArr) {
@@ -66,8 +65,6 @@ function generatePhoneNumber(phoneNumberArr) {
   //  número máximo de caracteres numa linha == 100
   //  return `(${phoneNumberArr.slice(0,2).join().replace(/,/g, '')}) ${phoneNumberArr.slice(2,7).join().replace(/,/g, '')}-${phoneNumberArr.slice(7,11).join().replace(/,/g, '')}`;
 }
-
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
