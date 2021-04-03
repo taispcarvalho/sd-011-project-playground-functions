@@ -29,8 +29,16 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = cat1 - mouse;
+  let distanceCat2 = cat2 - mouse;
+  if (distanceCat1 < distanceCat2) {
+    return 'cat1';
+  }
+  if (distanceCat2 < distanceCat1) {
+    return 'cat2';
+  } 
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -59,8 +67,8 @@ function encode(string) {
     o: 4,
     u: 5,
   };
-  const words = string.split('').map((key) => 
-  substitute[key] ? substitute[key] : key);
+  const words = string.split('').map((key) =>
+    substitute[key] ? substitute[key] : key);
   return words.join('');
 }
 
@@ -73,12 +81,12 @@ function decode(stringN) {
     5: 'u',
   };
   const numbers = stringN.split('').map((key) => {
-    if (substitute [key]) {
-      return substitute [key];
-    } else {
-      return key;
-    }})
-    return numbers.join('');
+    if (substitute[key]) {
+      return substitute[key];
+    }
+    return key;
+    });
+  return numbers.join('');
 }
 
 module.exports = {
