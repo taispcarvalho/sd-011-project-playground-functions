@@ -77,9 +77,9 @@ console.log(catAndMouse(0, 1, 1));
 // Desafio 8
 function fizzBuzz(num) {
   let array = [];
-  for (let index = 0; index < num.length; index += 1) {
+  for (let index in num) {
     let div3 = num[index] % 3 === 0;
-    let div5 = num[index] % 5 === 0
+    let div5 = num[index] % 5 === 0;
     if (num[index] % 15 === 0) {
       array.push('fizzBuzz');
     } else if (div3) {
@@ -91,7 +91,7 @@ function fizzBuzz(num) {
     }
   }
   return array;
-  }
+}
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
