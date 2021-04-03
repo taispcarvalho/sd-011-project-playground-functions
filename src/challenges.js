@@ -84,31 +84,31 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode (string) {
-  let substituicao = {  // Objetos com replace()(Blog da Trybe): https://blog.betrybe.com/javascript/javascript-replace/
+function encode(string) {
+  let substituicao = { // Objetos com replace()(Blog da Trybe): https://blog.betrybe.com/javascript/javascript-replace/
     a: '1',
     e: '2',
     i: '3',
     o: '4',
-    u: '5'
-  }
+    u: '5',
+  };
 
-  let alterado = string.replace(/a|e|i|o|u/g, function(x) { // replace() com regexp (W3S): https://www.w3schools.com/jsref/jsref_replace.asp
-  let trocado = substituicao[x];    // regexp (MDN): https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
-  return trocado;
-  });
-  return alterado;
+  let alterado = string.replace(/a|e|i|o|u/g, function (x) { // replace() com regexp (W3S): https://www.w3schools.com/jsref/jsref_replace.asp
+    let trocado = substituicao[x]; // regexp (MDN): https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+    return trocado;
+    });
+    return alterado;
 }
 
 function decode(string) {
   let substituicao = {
-   1: 'a',
-   2: 'e',
-   3: 'i',
-   4: 'o',
-   5: 'u'
-  }
-  let alterado = string.replace(/1|2|3|4|5/g, function(x) {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let alterado = string.replace(/1|2|3|4|5/g, function (x) {
     let trocado = substituicao[x];
     return trocado;
     });
