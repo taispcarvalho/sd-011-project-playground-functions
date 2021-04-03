@@ -33,7 +33,7 @@ function highestCount(numberArray) {
     if (highestNumber === numberArray[index2]) {
       highestNumberCount = highestNumberCount + 1;
     } else {
-    highestNumberCount += 0;
+        highestNumberCount += 0;
     }
   }
   return highestNumberCount;
@@ -44,21 +44,21 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2Distance = 0;
   let result = 0;
   if (mouse >= cat1) {
-   cat1Distance = (mouse - cat1);
+    cat1Distance = (mouse - cat1);
   } else {
-   cat1Distance = (cat1 - mouse);
+     cat1Distance = (cat1 - mouse);
   }
   if (mouse >= cat2) {
-   cat2Distance = (mouse - cat2);
+    cat2Distance = (mouse - cat2);
   } else {
-   cat2Distance = (cat2 - mouse);
+     cat2Distance = (cat2 - mouse);
   }
   if (cat1Distance === cat2Distance) {
-  result = 'os gatos trombam e o rato foge';
+    result = 'os gatos trombam e o rato foge';
   } else if (cat1Distance < cat2Distance) {
-  result = 'cat1';
+    result = 'cat1';
   } else {
-  result = 'cat2';
+      result = 'cat2';
   }
   return result;
 }
@@ -67,11 +67,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayFizzBuzz) {
   let secondArray = [];
   for (let index = 0; index < arrayFizzBuzz.length; index += 1){
-    if (arrayFizzBuzz[index]%3 === 0 && arrayFizzBuzz[index] % 5 === 0){
+    if (arrayFizzBuzz[index] % 3 === 0 && arrayFizzBuzz[index] % 5 === 0) {
       secondArray.push('fizzBuzz');
-    } else if (arrayFizzBuzz[index] % 5 === 0){
+    } else if (arrayFizzBuzz[index] % 5 === 0) {
       secondArray.push('buzz');
-    } else if (arrayFizzBuzz[index] % 3 === 0){
+    } else if (arrayFizzBuzz[index] % 3 === 0) {
       secondArray.push('fizz');
     } else {
       secondArray.push('bug!');
@@ -87,7 +87,7 @@ function encode(encoder) {
   result = result.replace(/o/g, '4');
   result = result.replace(/u/g, '5');
     
-return result;
+  return result;
 }
 function decode(decoder) {
   let result = decoder.replace(/1/g, 'a');
@@ -95,8 +95,8 @@ function decode(decoder) {
   result = result.replace(/3/g, 'i');
   result = result.replace(/4/g, 'o');
   result = result.replace(/5/g, 'u');
-    
-return result;
+
+  return result;
 }
 
 module.exports = {
