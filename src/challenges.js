@@ -97,7 +97,6 @@ function fizzBuzz(value) {
   return ret;*/
   return pushFizzBuzz(value, 3, 5, 'fizzBuzz', 'fizz', 'buzz');
 }
-console.table(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(value) {
