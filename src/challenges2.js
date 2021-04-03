@@ -80,10 +80,21 @@ function generatePhoneNumber(GrossPhone) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function checkLengthOfSides(sideA, sideB, sideC) {
+  let check1 = (sideA < (sideB + sideC));
+  let check2 = (sideB < (sideA + sideC));
+  let check3 = (sideC < (sideB + sideA));
+  return check1 && check2 && check3;
 }
-
+function checkAbsoluteDifference(sideA, sideB, sideC) {
+  let check1 = (sideA > Math.abs(sideB - sideC));
+  let check2 = (sideB > Math.abs(sideA - sideC));
+  let check3 = (sideC > Math.abs(sideB - sideA));
+  return check1 && check2 && check3;
+}
+function triangleCheck(sideA, sideB, sideC) {
+  return (checkAbsoluteDifference(sideA, sideB, sideC) && checkLengthOfSides(sideA, sideB, sideC));
+}
 // Desafio 13
 function hydrate() {
   // seu código aqui
