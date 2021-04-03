@@ -21,14 +21,23 @@ function concatName(array) {
   let fullName = `${array[array.length - 1]}, ${array[0]}`;
   return fullName;
 }
-
+// // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
-
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+// // Desafio 6
+function highestCount(number) {
+  let maiorNum = 0;
+  let contador = 0;
+  for (let index = 0; index < number.length; index += 1) {
+    if (number[index] > maiorNum) {
+      maiorNum = number[index];
+      contador = 1;
+    } else if (maiorNum === number[index]) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
