@@ -51,7 +51,7 @@ function checkRepetitions(GrossPhone) {
 }
 function checkIfNumberIsValid(GrossPhone) {
   if (checkIsElevenNumbers(GrossPhone) === false) {
-    return 'Array com tamanho incoreto.';
+    return 'Array com tamanho incorreto.';
   } if (checkRepetitions(GrossPhone) === false || checkOutsideRange(GrossPhone) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
@@ -76,7 +76,7 @@ function generatePhoneNumber(GrossPhone) {
   if (checkIfNumberIsValid(GrossPhone) === true) {
     fillTheNumber(GrossPhone);
   } else {
-    return console.log(checkIfNumberIsValid(GrossPhone));
+    return checkIfNumberIsValid(GrossPhone);
   }
 }
 
