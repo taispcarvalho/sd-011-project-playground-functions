@@ -80,14 +80,18 @@ function fizzBuzz(num) {
   for (let index = 0; index < num.length; index += 1) {
     if (num[index] % 15 === 0) {
       array.push('fizzBuzz');
-    } else if (num[index] % 3 === 0 ) {
+    } else {
+    if (num[index] % 3 === 0 ) {
       array.push('fizz');
-    } else if (num[index] % 5 === 0 ) {
+    } else {
+    if (num[index] % 5 === 0 ) {
       array.push('buzz');
     } else {
       array.push('bug');
     }
   }
+}
+}
   return array;
   }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
