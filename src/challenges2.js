@@ -69,11 +69,11 @@ function triangleCheck(A, B, C) {
 // Desafio 13
 function hydrate(string) {
   let numbers = string.match(/\d+/g).map(Number);
-  let soma = 0;
+  let sum = 0;
   for (let i in numbers) {
-    soma += numbers[i];
+    sum += numbers[i];
   }
-  return `${soma} copos de água`;
+  return `${sum} copos de água`;
 }
 
 module.exports = {
