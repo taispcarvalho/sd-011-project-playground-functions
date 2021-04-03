@@ -57,20 +57,22 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  function menorQueSoma(lineA, lineB, lineC) {
+  function menorQueSoma() {
     if (lineA < lineB + lineC && lineB < lineC + lineA && lineC < lineB + lineA) {
       return true;
     }
     return false;
   }
-  function maiorQueAbsoluto(lineA, lineB, lineC) {
+  function maiorQueAbsoluto() {
     if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineB - lineA)) {
       return true;
     }
     return false;
   }
-  return menorQueSoma(lineA, lineB, lineC) && maiorQueAbsoluto(lineA, lineB, lineC);
+  return menorQueSoma() && maiorQueAbsoluto();
 }
+
+console.log(triangleCheck(10, 100, 12));
 
 // Desafio 13
 function hydrate(string) {
