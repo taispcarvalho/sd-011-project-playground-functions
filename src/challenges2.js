@@ -1,14 +1,11 @@
 // Desafio 10
 
-function techList(learningTechnology, name) {
-  let outExit = [];
-  if (learningTechnology.length === 0)
-  return 'Vazio!'
-  for (let key of learningTechnology.sort()) {
-  outExit.push({tech: key, name: name}); 
-  } 
-  return outExit;
-} 
+// function techList(learningTechnology, name) {
+//   let outExit = [];
+//   if (learningTechnology.length === 0) { return 'Vazio!'; }
+//   for (let key of learningTechnology.sort()) { outExit.push({ tech: key, name: name }); } 
+//   return outExit;
+// } 
 
 // Desafio 11 Obs: Vitor Cardoso, Julio Felizzolla, Maicon me ajudaram.
 
@@ -23,31 +20,31 @@ if (numbers1[index] === response){
 }
 
 function possibilities(arrayNumber) {
-  for (let index of arrayNumber) { 
-  if (index < 0 || index > 9 || numberCont(arrayNumber, index) > 2){
-  return true;
+  for (let index = 0; index < arrayNumber.length; index += 1) { 
+  if (arrayNumber[index] < 0 || arrayNumber[index] > 9 || numberCont(arrayNumber, arrayNumber[index]) > 2){
+  return 'não é possível gerar um número de telefone com esses valores';
   }
 }
 }
 
 function generatePhoneNumber(number1) {
   let regex = /(\d{2})(\d{5})(\d{4})/;
-  let responseFinish ='';
   let myNumbers ='';
-  if (number1.length !== 11) { 
-    return 'Array com tamanho incorreto.'
-  } else if (possibilities(number1) === true){
-    return 'não é possível gerar um número de telefone com esses valores';
-  } else {
-  for (let index of number1) {
-    myNumbers += number1[index];
-    } 
-    responseFinish = myNumbers.replace(regex, '($1) $2-$3');
-} 
-  return responseFinish;
+  let verify = possibilities(number1);
+  if (number1.length !== 11) return 'Array com tamanho incorreto.';
+  if (verify) { 
+    return verify; 
   }
+    for (let index of number1) {
+    myNumbers += index;
+    myNumbers = myNumbers.replace(regex, '($1) $2-$3');
+    }
+    return myNumbers; 
+} 
   
-// Desafio 12
+
+  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// Desafio 12-
 
 function triangleCheck(lineA, lineB, lineC) {
   let sizeLineA = Math.abs(lineA + lineB);
@@ -67,7 +64,7 @@ function hydrate() {
 
 module.exports = {
   generatePhoneNumber,
-  techList,
+  //techList,
   hydrate,
   triangleCheck,
 };
