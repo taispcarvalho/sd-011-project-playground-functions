@@ -31,7 +31,7 @@ function triangleCheck() {
 function hydrate(frase) {
   let frase2 = frase.replace(/ /g, '');
   let quant = 0;
-  let agua = ''
+  let agua = '';
 
   for (let index = 0; index < frase2.length; index += 1) {
     if (!isNaN(frase2[index])) {

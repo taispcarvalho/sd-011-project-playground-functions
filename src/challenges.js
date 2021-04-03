@@ -18,15 +18,12 @@ function splitSentence(phrase) {
 // Desafio 4
 function concatName(array) {
   let out = '';
-  let last = array.length - 1;
-  out += array[last];
-
-  for (let index = array.length; index >= 0; index -= 1) {
-    if (index === 0) {
-      out = out + ', ' + array[index];
-    }
-  } return out;
+  out = `${array[array.length - 1]}, ${array[0]}`
+  return out;
 }
+
+/* Consultei esse artigo para utilizar a interpolação de strings, para não precisar concatenar
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals */
 
 // Desafio 5
 function footballPoints(wins, ties) {
