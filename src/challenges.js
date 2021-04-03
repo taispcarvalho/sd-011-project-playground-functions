@@ -66,15 +66,15 @@ function divisionFor(value1, value2) {
     return true;
   } return false;
 }
-function pushFizzBuzz(array, value1, value2, stringInput1, stringInput2, stringInput3) {
+function pushFizzBuzz(array, value1, value2) {
   let ret = [];
-  for (let index = 0; index < array.length; index += 1){
-    if (divisionFor(array[index],value1) && divisionFor(array[index],value2)) {
-      ret.push(stringInput1);
-    } else if (divisionFor(array[index],value1)) {
-      ret.push(stringInput2);
-    } else if (divisionFor(array[index],value2)) {
-      ret.push(stringInput3);
+  for (let index = 0; index < array.length; index += 1) {
+    if (divisionFor(array[index], value1) && divisionFor(array[index], value2)) {
+      ret.push('fizzBuzz');
+    } else if (divisionFor(array[index], value1)) {
+      ret.push('fizz');
+    } else if (divisionFor(array[index], value2)) {
+      ret.push('buzz');
     } else {
       ret.push('bug!');
     }
@@ -82,7 +82,7 @@ function pushFizzBuzz(array, value1, value2, stringInput1, stringInput2, stringI
   return ret;
 }
 function fizzBuzz(value) {
-  /*let ret = [];
+  /* let ret = [];
   for (let index = 0; index < value.length; index += 1) {
     if (divisionFor(value[index], 3) && divisionFor(value[index], 5)) {
       ret.push('fizzBuzz');
@@ -94,8 +94,8 @@ function fizzBuzz(value) {
       ret.push('bug!');
     }
   }
-  return ret;*/
-  return pushFizzBuzz(value, 3, 5, 'fizzBuzz', 'fizz', 'buzz');
+  return ret; */
+  return pushFizzBuzz(value, 3, 5);
 }
 
 // Desafio 9
