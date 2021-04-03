@@ -54,8 +54,7 @@ console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  total = wins * 3 + ties;
-  return total;
+  return wins * 3 + ties;
 }
 console.log(footballPoints(14, 8));
 console.log(footballPoints(1, 2));
