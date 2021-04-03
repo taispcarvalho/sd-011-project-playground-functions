@@ -3,7 +3,7 @@ function techList(array, name) {
   let output = [];
   let object = {};
   let vetor = array.sort();
-  for (let n in vetor) {
+  for (let n = 0; n < vetor.length; n += 1) {
     object = {
       tech: vetor[n],
       name,
@@ -19,7 +19,7 @@ function techList(array, name) {
 // Desafio 11
 function repeatNumber(number, array) {
   let counter = 0;
-  for (let n in array) { // varre elementos e compara com o number
+  for (let n = 0; n < array.length; n += 1) { // varre elementos e compara com o number
     if (array[n] === number) {
       counter += 1;
     }
@@ -29,13 +29,21 @@ function repeatNumber(number, array) {
 
 function testeCondicoes(array) {
   let ok = true;
-  for (let i in array) {
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] < 0 || array[i] > 9 || repeatNumber(array[i], array) >= 3) {
       ok = false;
     }
   }
   return ok;
 }
+
+function formatNumber(array) {
+  let ddd = array.slice(0, 2);
+  let part1 = array.slice(2, 7);
+  let part2 = array.slice(7);
+  return `(${ddd.join('')}) ${part1.join('')}-${part2.join('')}`;
+}
+console.log(formatNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 function generatePhoneNumber(array) {
   let output = '';
@@ -44,7 +52,7 @@ function generatePhoneNumber(array) {
   } else if (testeCondicoes(array) === false) {
     output = 'não é possível gerar um número de telefone com esses valores';
   } else {
-    output = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+    output = formatNumber(array);
   }
   return output;
 }
@@ -71,8 +79,8 @@ function hydrate(string) {
   let numbers = string.match(/\d+/g).map(Number);
   let sum = 0;
   let text = '';
-  for (let i in numbers) {
-    sum += numbers[i];
+  for (let n = 0; n < numbers.length; n += 1) {
+    sum += numbers[n];
   }
   if (sum === 1) {
     text = `${sum} copo de água`;

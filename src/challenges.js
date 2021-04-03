@@ -24,20 +24,10 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highest(array) {
-  let maior = 0;
-  for (let i in array) {
-    if (array[i] > maior) {
-      maior = array[i];
-    }
-  }
-  return maior;
-}
-
 function highestCount(array) {
   let counter = 0;
-  for (let i in array) {
-    if (array[i] === highest(array)) {
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === Math.max(...array)) {
       counter += 1;
     }
   }
@@ -74,7 +64,7 @@ function writeText(number) {
 
 function fizzBuzz(array) {
   let output = [];
-  for (let n in array) {
+  for (let n = 0; n < array.length; n += 1) {
     output.push(writeText(array[n]));
   }
   return output;
@@ -99,7 +89,7 @@ function letterForNumber(letter) {
 
 function encode(array) {
   let output = [];
-  for (let n in array) {
+  for (let n = 0; n < array.length; n += 1) {
     output.push(letterForNumber(array[n]));
   }
   return output.join('');
@@ -123,7 +113,7 @@ function numberForLetter(number) {
 
 function decode(array) {
   let output = [];
-  for (let n in array) {
+  for (let n = 0; n < array.length; n += 1) {
     output.push(numberForLetter(array[n]));
   }
   return output.join('');
