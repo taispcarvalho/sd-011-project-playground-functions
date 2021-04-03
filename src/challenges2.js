@@ -63,8 +63,16 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(array) {
+  /*como encontrar números em strings foi retirado de https://stackoverflow.com/questions/10003683/how-can-i-extract-a-number-from-a-string-in-javascript
+  como retirar valores de string foi retirado de https://www.tutorialspoint.com/how-to-remove-text-from-a-string-in-javascript*/ 
+  let aux = array;
+  let sum = 0;
+  while (aux.match(/\d+/) != null) {
+    sum += parseInt(aux.match(/\d+/));
+    aux = aux.substr(aux.match(/\d+/).index +1);
+  }
+  return `${sum} copos de água`;
 }
 
 module.exports = {
