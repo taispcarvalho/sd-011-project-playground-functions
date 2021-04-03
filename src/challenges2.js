@@ -25,7 +25,7 @@ if (numbers1[index] === response){
 function possibilities(arrayNumber) {
   for (let index = 0; index < arrayNumber.length; index += 1) { 
   if (arrayNumber[index] < 0 || arrayNumber[index] > 9 || numberCont(arrayNumber, arrayNumber[index]) > 2){
-  return 'não é possivel gerar um número de telefone com esses valores';
+  return 'não é possível gerar um número de telefone com esses valores';
   }
 }
 }
@@ -35,13 +35,13 @@ function generatePhoneNumber(number1) {
   let regex = /(\d{2})(\d{5})(\d{4})/;
   let myNumbers ='';
   if (number1.length !== 11) { 
-    return 'Array com tamanho incorreto'
+    return 'Array com tamanho incorreto.'
   } else if (posible){
     return posible;
   }
   for (let index of number1) {
     myNumbers += number1[index];
-    myNumbers = myNumbers.replace(regex, '($1)$2-$3');
+    myNumbers = myNumbers.replace(regex, '($1) $2-$3');
   }
   return myNumbers;
   }
@@ -61,7 +61,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 let shoop = '1 cerveja';
 function hydrate() {
-  
+  // digite o código aqui
 }
 
 module.exports = {
