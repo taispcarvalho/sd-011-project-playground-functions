@@ -1,23 +1,23 @@
 // Desafio 10
 function techList(techsToLearn, myName) {
+  let sorted = '';
   let techToLearn = [];
   techToLearn = techsToLearn.sort();
   let output = [];
   if (techToLearn.length !== 0) {
     for (let index = 0; index < techsToLearn.length; index += 1) {
-      var sorted = {
+      sorted = {
         tech: techsToLearn[index],
-        name: myName
+        name: myName,
       };
-    output.push(sorted)
-    } 
+      output.push(sorted);
+    }
     return output;
   } else {
-    return 'Vazio!'
+    return 'Vazio!';
   }
 }
-
-  console.log(techList([], 'Maran'))
+console.log(techList([], 'Maran'));
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -36,7 +36,7 @@ function triangleCheck(lineA, lineB, lineC) {
     return true;
   }
 }
-console.log(triangleCheck(28, 14, 14))
+console.log(triangleCheck(28, 14, 14));
 
 // Desafio 13
 function hydrate() {
