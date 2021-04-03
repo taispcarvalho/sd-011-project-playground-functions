@@ -18,11 +18,11 @@ function splitSentence(str) {
 
 // Desafio 4
 /*
-  Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
-  O que será verificado:
-  Retorne 'Paolillo, Lucas' quando o parâmetro passado na funcão concatName seja ['Lucas', 'Cassiano','Ferraz','Paolillo']
-  Retorne 'ré, foguete' quando o parâmetro passado na funcão concatName seja ['foguete','não','tem','ré']
-  Retorne 'captain,captain'quando o parâmetro passado na funcão concatName seja['captain','my','captain']
+ Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
+ O que será verificado:
+ Retorne 'Paolillo, Lucas' quando o parâmetro passado na funcão concatName seja ['Lucas', 'Cassiano','Ferraz','Paolillo']
+ Retorne 'ré, foguete' quando o parâmetro passado na funcão concatName seja ['foguete','não','tem','ré']
+ Retorne 'captain,captain'quando o parâmetro passado na funcão concatName seja['captain','my','captain']
 */
 function concatName(array) {
   return `${array[array.length - 1]}, ${array[0]}`;
@@ -66,7 +66,7 @@ function highestCount(array) {
 
 // Desafio 7
 /*
-  Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que ambos estão atrás de um rato chamado mouse.Imagine que cada um dos três animais está em uma posição representada por um número. Sabendo disso, crie uma função chamada catAndMouse que, ao receber a posição de mouse, cat1 e cat2, nessa ordem, calcule as distâncias entre o rato e os gatos e retorne qual dos felinos irá alcançar o rato primeiro (sendo aquele que estará mais perto). Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades,sua função deverá retornar "cat2". Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam e o rato foge".
+Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que ambos estão atrás de um rato chamado mouse.Imagine que cada um dos três animais está em uma posição representada por um número. Sabendo disso, crie uma função chamada catAndMouse que, ao receber a posição de mouse, cat1 e cat2, nessa ordem, calcule as distâncias entre o rato e os gatos e retorne qual dos felinos irá alcançar o rato primeiro (sendo aquele que estará mais perto). Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades,sua função deverá retornar "cat2". Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam e o rato foge".
   O que será verificado:
   Retorne a string 'cat2' caso a função catAndMouse receba o parâmetros onde gato cat2 esteja a 2 unidades de distância do rato e cat1 esteja a 3 unidades de distância do rato
   Retorne a string 'cat1' caso a função catAndMouse receba o parâmetros onde gato cat1 esteja a 6 unidades de distância do rato e cat2 esteja a 12 unidades de distância do rato
