@@ -42,11 +42,11 @@ console.log(splitSentence('foquete'));
 // Desafio 4
 function concatName(names) {
   let firstName = names[0];
-  let lastName = names[names.length-1];
-  let space = ' '
+  let lastName = names[names.length - 1];
+  let space = ' ';
 
   let reverseName = lastName + space + firstName;
-  return  reverseName;
+  return reverseName;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
