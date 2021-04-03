@@ -16,8 +16,10 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(param) {
+  let names = String;
+  names = param[param.length - 1] + ', ' + param[0];
+  return names;
 }
 
 // Desafio 5
