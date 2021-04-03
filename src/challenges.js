@@ -66,8 +66,9 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else if (Math.abs(distCat1) < Math.abs(distCat2)) {
     return 'cat1';
+  } else {
+  return 'os gatos trombam e o rato foge';
   }
-    return 'os gatos trombam e o rato foge';
 }
 console.log(catAndMouse(0, 3, 2));
 console.log(catAndMouse(0, 6, 12));
@@ -76,18 +77,18 @@ console.log(catAndMouse(0, 1, 1));
 // Desafio 8
 function fizzBuzz(num) {
   let array = [];
-for (let index = 0; index < num.length; index += 1) {
-  if (num[index] % 3 === 0 && num[index] % 5 === 0) {
-    array.push("fizzBuzz");
+    for (let index = 0; index < num.length; index += 1) {
+      if (num[index] % 3 === 0 && num[index] % 5 === 0) {
+    array.push('fizzBuzz');
       } else if (num[index] % 3 === 0 && num[index] % 5 !== 0) {
-    array.push("fizz");
+    array.push('fizz');
       } else if (num[index] % 5 === 0 && num[index] % 3 !== 0) {
-    array.push("buzz");
+    array.push('buzz');
       } else {
-    array.push("bug");
-      }
-    }
-    return array;
+    array.push('bug');
+  }
+  }
+return array;
   }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
@@ -100,7 +101,7 @@ function encode(sentence) {
     sentence = sentence.replace('o', 4);
     sentence = sentence.replace('u', 5);
   }
-  return sentence;
+return sentence;
  }
 console.log(encode('hi there!'));
 
@@ -112,7 +113,7 @@ function decode(sentence2) {
     sentence2 = sentence2.replace(4, 'o');
     sentence2 = sentence2.replace(5, 'u');
   }
-  return sentence2
+  return sentence2;
 }
 console.log(decode('h3 th2r2!'));
 
