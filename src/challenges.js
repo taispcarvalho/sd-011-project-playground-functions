@@ -15,17 +15,13 @@ function concatName(arrayDeString) {
   let firstName = arrayDeString[0]
   let lastName = arrayDeString[arrayDeString.length - 1]
   /* let testOverFLow =  arrayDeString.slice(-1)[0]  */
-
   return lastName.split().concat(firstName)
   /* return lastName + " " + firstName */
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
-
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties)
 }
-
 // Desafio 6
 let arrayTest = [9, 1, 3, 9, 5, 7];
 
@@ -98,13 +94,11 @@ function fizzBuzz(arrayFizzBuzz) {
   return arrayString
 }
 
-console.log(fizzBuzz(arrayFizzBuzz))
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
 }
+
 function decode() {
-  // seu código aqui
 }
 
 module.exports = {
