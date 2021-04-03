@@ -40,13 +40,15 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let whichCatWins = '';
   if (mouse - cat1 > mouse - cat2) {
-    return 'cat2';
-  } else if (mouse - cat1 < mouse -cat2) {
-    return 'cat1';
-  } else if (mouse - cat1 === mouse -cat2) {
-    return 'os gatos trombam e o rato foge';
+    whichCatWins = 'cat2';
+  } else if (mouse - cat1 < mouse - cat2) {
+    whichCatWins = 'cat1';
+  } else if (mouse - cat1 === mouse - cat2) {
+    whichCatWins = 'os gatos trombam e o rato foge';
   }
+  return whichCatWins;
 }
 
 // Desafio 8
