@@ -52,16 +52,15 @@ function generatePhoneNumber(array11) {
 }
 
 // Desafio 12
+function triangleCheckLine(lA, lB, lC) {
+  return lA < (lB + lC) && lA > Math.abs(lB - lC);
+}
+
 function triangleCheck(lineA, lineB, lineC) {
-  let ar12 = [lineA, lineB, lineC];
-  let i = 0;
-  let j = i + 1;
-  for (i = 0; i < ar12.length; i += 1) {
-    if (ar12[i] + ar12[j] > ar12[2 - i] && Math.abs(ar12[i] - ar12[j]) < ar12[2 - i]) {
-      return true;
-    }
-  }
-  return false;
+  let checkOne = triangleCheckLine(lineA, lineB, lineC);
+  let checkTwo = triangleCheckLine(lineB, lineA, lineC);
+  let checkThree = triangleCheckLine(lineC, lineA, lineB);
+  return checkOne || checkTwo || checkThree;
 }
 
 // Desafio 13
