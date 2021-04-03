@@ -13,8 +13,7 @@ function techList(value, oneName) {
   return ret;
 }
 // Desafio 11
-/* a função que descobre se um número foi repetido por mais de 3 vezes foi obtida utilizando a lógica contida em
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf */
+/* a função que descobre se um número foi repetido por mais de 3 vezes foi obtida utilizando a lógica contida em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf */
 function repetitioCount(array) {
   for (let index = 0; index < 10; index += 1) {
     let indexes = [];
@@ -63,8 +62,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(value) {
-  /* como encontrar números em strings foi retirado de https://stackoverflow.com/questions/10003683
-  /how-can-i-extract-a-number-from-a-string-in-javascript como retirar valores de string foi retirado
+  /* como encontrar números em strings foi retirado de https://stackoverflow.com/questions/10003683/how-can-i-extract-a-number-from-a-string-in-javascript como retirar valores de string foi retirado
   de https://www.tutorialspoint.com/how-to-remove-text-from-a-string-in-javascript */
   let aux = value;
   let sum = 0;
