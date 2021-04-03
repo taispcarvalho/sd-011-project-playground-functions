@@ -86,9 +86,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  string = string.replace(/[^0-9]/g, '');
+  string = string.split('');
+  let totalCount = 0;
+  for (let index = 0; index < string.length; index += 1) {
+    totalCount += parseInt(string[index], 10);
+  }
+  if (totalCount === 1) return '1 copo de água';
+  return `${totalCount} copos de água`;
 }
+
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
