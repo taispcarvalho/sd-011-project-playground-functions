@@ -76,8 +76,40 @@ function generatePhoneNumber(phoneNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function sumSides(line, numbers) {
+  let sum = 0;
+  for (num of numbers) {
+    if (num !== line) {
+      sum += num;
+    }
+  }
+  return line < sum;
+}
+
+function checkDiffSides(key, numbers){
+  let diff = 0;
+  switch (key) {
+    case 0:
+      diff = numbers[key + 1] - numbers[key + 2];
+      break;
+    case 1:
+      diff = numbers[key - 1] - numbers[key + 1];
+      break;
+    default:
+      diff = numbers[key - 1] - numbers[key - 2];
+  }
+  return numbers[key] > Math.abs(diff);
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let numbers = [lineA, lineB, lineC];
+  for (let key in numbers) {
+    valid = sumSides(numbers[key], numbers) && checkDiffSides(parseInt(key, 10), numbers);
+    if (!valid) {
+      return false;
+    }
+  }
+  return true;
 }
 
 // Desafio 13
