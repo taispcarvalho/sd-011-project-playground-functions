@@ -8,7 +8,7 @@ function techList(tech, name) {
 
   if (list.length !== 0) { // if list.length is different from zero, it's ok to continue
     for (let i = 0; i < list.length; i += 1) {
-      result.push({ tech: list[i], name }); // just print the object in a for loop
+      result.push({ tech: list[i], name }); // just print the object in a "for loop"
     }
   } else result = 'Vazio!';
 
@@ -107,7 +107,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Number(): https://www.w3schools.com/jsref/jsref_number.asp
 // Legacy References: ( not used anymore )
 // parseInt(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
-// Missing Radix Parameter: https://stackoverflow.com/questions/7818903/jslint-says-missing-radix-parameter ( just when you use parseInt() )
+// Missing Radix Parameter: https://stackoverflow.com/questions/7818903/jslint-says-missing-radix-parameter
 function hydrate(words) {
   let numbers = words.replace(/[^0-9]/g, ''); // A technique used to find the numbers inside a string with the addition of /g to search they all
   let result = 0; // it's works as a counter, so it's needs to start at 0

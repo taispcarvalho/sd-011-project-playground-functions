@@ -1,6 +1,6 @@
 // Desafio 1
 // Reference:
-// Conditional Ternary: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+// Conditional (ternary) operator: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 function compareTrue(value1, value2) {
   return value1 && value2; /* Example: return condition ? true : false; but booleans are not necessary in ternary conditionals,
                               so it's could be abreviate to just "return value1 && value2;". */
@@ -58,7 +58,7 @@ function highestCount(numbers) {
 // Math.abs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 // Modulus, aka Absolute Value: https://en.wikipedia.org/wiki/Absolute_value
 function catAndMouse(mouse, cat1, cat2) {
-  let distCat1 = Math.abs(cat1 - mouse); // Math.abs is like math's modulus, not return negative numbers
+  let distCat1 = Math.abs(cat1 - mouse);
   let distCat2 = Math.abs(cat2 - mouse);
 
   if (distCat1 === distCat2) return 'os gatos trombam e o rato foge';
