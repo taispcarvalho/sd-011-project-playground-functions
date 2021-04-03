@@ -12,8 +12,72 @@ function techList(techToLearn, myName) {
   return listOfTechToLearn;
 }
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function checkIsElevenNumbers(GrossPhone) {
+  return (GrossPhone.length === 11);
+}
+function checkOutsideRange(GrossPhone) {
+  let checker = true;
+  for (let index = 0; index < 11; index += 1) {
+    if (GrossPhone[index] > 9 || GrossPhone < 0) {
+      checker = false;
+      break;
+    }
+  }
+  return checker;
+}
+function countRepetitions(GrossPhone, index) {
+  let repetions = 0;
+  for (let checking = 0; checking < 11; checking += 1) {
+    if (GrossPhone[index] === GrossPhone[checking]) {
+      repetions += 1;
+    }
+  }
+  if ((repetions) >= 3) {
+    return false;
+  }
+}
+function checkRepetitions(GrossPhone) {
+  let checker = true;
+  for (let index = 0; index < 11; index += 1) {
+    checker = countRepetitions(GrossPhone, index);
+    if (checker === false) {
+      break;
+    }
+    if (checker === undefined) {
+      checker = true;
+    }
+  }
+  return checker;
+}
+function checkIfNumberIsValid(GrossPhone) {
+  if (checkIsElevenNumbers(GrossPhone) === false) {
+    return 'Array com tamanho incoreto.';
+  } if (checkRepetitions(GrossPhone) === false || checkOutsideRange(GrossPhone) === false) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return true;
+}
+function fillTheNumber(GrossPhone) {
+  let phoneNumber = ['('];
+  for (let index = 0; index < 2; index += 1) {
+    phoneNumber.push(GrossPhone[index]);
+  }
+  phoneNumber.push(')');
+  for (let index = 2; index < 7; index += 1) {
+    phoneNumber.push(GrossPhone[index]);
+  }
+  phoneNumber.push('-');
+  for (let index = 7; index < 11; index += 1) {
+    phoneNumber.push(GrossPhone[index]);
+  }
+  return console.log(phoneNumber.join(''));
+}
+function generatePhoneNumber(GrossPhone) {
+  if (checkIfNumberIsValid(GrossPhone) === true) {
+    fillTheNumber(GrossPhone);
+  } else {
+    return console.log(checkIfNumberIsValid(GrossPhone));
+  }
 }
 
 // Desafio 12
