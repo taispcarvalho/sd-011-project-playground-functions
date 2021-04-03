@@ -28,10 +28,10 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function checkNumber (string) {
-  if (isNaN(string)) {
+function checkNumber(string) {
+  if (Number.isNaN(string)) {
     return false;
-  } 
+  }
   return true;
 }
 
