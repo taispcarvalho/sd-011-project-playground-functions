@@ -72,7 +72,9 @@ function hydrate(array) {
     sum += parseInt(aux.match(/\d+/));
     aux = aux.substr(aux.match(/\d+/).index +1);
   }
-  return `${sum} copos de água`;
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  } return `${sum} copos de água`;
 }
 
 module.exports = {
