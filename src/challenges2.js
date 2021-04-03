@@ -4,6 +4,9 @@ referencia para o uso do metodo sort > https://flaviocopes.com/how-to-sort-array
 Referencia sobre o uso do 'ternary operator': https://www.w3schools.com/jsref/jsref_operators.asp
 */
 function techList(tech, name) {
+  if (tech === []) {
+    return ('Vazio!');
+  }
   let technologies = [];
   for (let techno of tech) {
     let technology = { tech: '', name: '' };
