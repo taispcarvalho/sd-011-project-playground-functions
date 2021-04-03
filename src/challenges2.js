@@ -48,7 +48,7 @@ const counterValidation = (phone) => {
   let auxCount = Object.values(count);
 
   for (let i of auxCount) {
-    if (auxCount[i] >= 3) return true;
+    if (auxCount[i] > 2) return true;
     return false;
   }
 };
