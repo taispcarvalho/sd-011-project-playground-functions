@@ -75,13 +75,38 @@ function fizzBuzz(fizzArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(strCode) {
+  let listSub = {
+    a:"1",
+    e:"2",
+    i:"3",
+    o:"4",
+    u:"5"
+  };
+  encoded = strCode.replace(/a|e|i|o|u/gi, function(letra) {
+    let lt = listSub[letra];
+    let letraList = lt.replace(/(?:^|\s)\S/g, function(element){return element; });
+    return letraList
+  });
+  return encoded
 }
 
+function decode(numCode) {
+  let listSub = {
+    "1":"a",
+    "2":"e",
+    "3":"i",
+    "4":"o",
+    "5":"u"
+  };
+  decoded = numCode.replace(/1|2|3|4|5/gi, function(num) {
+    let n = listSub[num];
+    let numList = n.replace(/(?:^|\s)\S/g, function(element){return element; });
+    return numList
+  });
+  return decoded
+}
+  
 module.exports = {
   calcArea,
   catAndMouse,
