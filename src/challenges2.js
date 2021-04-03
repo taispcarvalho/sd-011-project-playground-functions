@@ -26,6 +26,9 @@ function checkNumber(array11) {
     wrongNumber = true;
     return wrongNumber;
   }
+}
+function checkDuplicateNumber(array11) {
+  let wrongNumber = false;
   for (let i = 0; i < array11.length; i += 1) {
     let sameNumberLoop = 0;
     for (let i2 = i; i2 < array11.length; i2 += 1) {
@@ -40,16 +43,6 @@ function checkNumber(array11) {
   }
 }
 
-function generatePhoneNumber(array11) {
-  switch (true) {
-  case array11.length !== 11:
-    return 'Array com tamanho incorreto.';
-  case checkNumber(array11):
-    return 'não é possível gerar um número de telefone com esses valores';
-  default:
-    return pushNumbers(array11);
-  }
-}
 function pushNumbers(array11) {
   let ddd = [];
   let numPart1 = [];
@@ -70,25 +63,30 @@ function pushNumbers(array11) {
   return `(${ddd.join('')}) ${numPart1.join('')}-${numPart2.join('')}`;
 }
 
+function generatePhoneNumber(array11) {
+  let wrongNumber = false;
+  switch (true) {
+  case array11.length !== 11:
+    return 'Array com tamanho incorreto.';
+  case checkNumber(array11) || checkDuplicateNumber(array11):
+    return 'não é possível gerar um número de telefone com esses valores';
+  default:
+    return pushNumbers(array11);
+  }
+}
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let check1 = false;
-  let check2 = false;
-  let check3 = false;
-
-  if (lineA + lineB > lineC && Math.abs(lineA - lineB) < lineC) {
-    check1 = true;
-  } else { return false; }
-  if (lineA + lineC > lineB && Math.abs(lineA - lineC) < lineB) {
-    check2 = true;
-  } else { return false; }
-  if (lineB + lineC > lineA && Math.abs(lineB - lineC) < lineA) {
-    check3 = true;
-  } else { return false; }
-  // Final check
-  if (check1 && check2 && check3) {
-    return true;
+  let array12 = [lineA, lineB, lineC];
+  let triangle = false;
+  for (i = 0; i < array12.length; i+=1) {
+    for (j = i + 1; i < array12.length; i+=1) {
+      if (array12[i] + array12[j] > array12[2 - i] && Math.abs(array12[i] - array12[j]) < array12[2 - i]) {
+        triangle = true;
+      } else { return false }
+    }
   }
+  return triangle;
 }
 
 // Desafio 13
