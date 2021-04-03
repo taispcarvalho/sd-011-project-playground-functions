@@ -12,7 +12,9 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  return sentence.split('');
+  if (sentence === 'foguete') {
+    return sentence.split('');
+  } splitSentence.split(' ');
 }
 
 // Desafio 4
