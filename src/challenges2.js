@@ -71,7 +71,6 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
 }
-console.log(triangleCheck(2, 13, 2));
 
 // Desafio 13
 function hydrate() {
