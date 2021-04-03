@@ -71,10 +71,10 @@ function hydrate(string) {
   for (index = 0; index < numbersArray.length; index += 1) {
     numberAdiction += parseInt(numbersArray[index]);
   }
-  if (numberAdiction === 0){
+  if (numberAdiction === 1){
     return numberAdiction + ' copo de água'
   } else {
-  return numberAdiction + ' copos de água'
+    return numberAdiction + ' copos de água'
   }
 }
 
