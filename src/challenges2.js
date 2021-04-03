@@ -19,23 +19,19 @@ function techList(techname, nome) {
 
 // Desafio 11
 // Função auxiliar -> Verifica quant de repetições
-function checkRepeat(array) {
+function checkRepeat(array, number) {
+  let contador = 0;
   for (let index = 0; index < array.length; index += 1) {
-    let contador = 0;
-    for (let index2 = 0; index2 < array.length; index2 += 1) {
-      if (contador === 3) {
-        return true;
-      }
-      if (array[index] === array[index2]) {
-        contador += 1;
-      }
+    if (array[index] === number) {
+      contador += 1;
     }
-  } return false;
+  } return contador;
 }
+// Para resolução dessa parte do código, tive ajuda do colega Julio Filizzola
 // Função auxiliar -> Verifica valores maior que 9 e menor que 0
 function checkValues(array) {
-  for (let index in array) {
-    if (array[index] < 0 || array[index] > 9) {
+  for (let index of array) {
+    if (index < 0 || index > 9 || checkRepeat(array, index) > 2) {
       return true;
     }
   } return false;
@@ -44,13 +40,14 @@ function checkValues(array) {
 function checkLength(array) {
   return (array.length !== 11);
 }
+
 function generatePhoneNumber(array) {
   let arrayPhoneNumber = ['('];
   let phoneNumber = '';
   if (checkLength(array)) {
     return 'Array com tamanho incorreto.';
   }
-  if (checkRepeat(array) || checkValues(array)) {
+  if (checkValues(array)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   arrayPhoneNumber = arrayPhoneNumber.concat(array);
