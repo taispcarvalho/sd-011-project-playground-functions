@@ -22,15 +22,15 @@ function splitSentence(sentence) {
   let words = [];
   let cutSpace = '';
 
-  for (let i = 0; i < sentence.length; i += 1) {
-    if (sentence[i] === ' ') {
+  for (let index = 0; index < sentence.length; index += 1) {
+    if (sentence[index] === ' ') {
       words.push(cutSpace);
       cutSpace = '';
-    } else if (i === sentence.length - 1) {
-      cutSpace += sentence[i];
+    } else if (index === sentence.length - 1) {
+      cutSpace += sentence[index];
       words.push(cutSpace);
     } else {
-      cutSpace += sentence[i];
+      cutSpace += sentence[index];
     }
   }
   return words;
