@@ -135,7 +135,10 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 /* console.log(triangleCheck(10, 14, 8)); */
 
-// Desafio 13---------------------------------------------------------
+
+
+
+// Desafio 13
 /* Crie uma função de Bem vindo ao Bar da Trybe!
  Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
 Crie a função hydrate que recebe uma string, e retorne a sugestão de quantos copos de água você deve beber. Exemplos:
@@ -144,6 +147,7 @@ String recebida:
   "1 cerveja"
 String retornada:
   "1 copo de água"
+
 String recebida:
   "1 cachaça, 5 cervejas e 1 copo de vinho"
 String retornada:
@@ -159,10 +163,36 @@ O número na frente de cada bebida está no intervalo entre 1 e 9.
 Dica: pesquise por algo similar a get all integers inside a string js.
 O que será verificado:
 Retorne a sugestão de quantos copos de água deve-se beber ao receber uma string */
-
-function hydrate() {
-  // seu código aqui
+function extractNumbers(string) {
+/*   let string = '1 cachaça, 5 cervejas e 1 copo de vinho'; */
+  let drinkList = string.match(/\d+/g);
+  let numberList = [];
+  for (number of drinkList) {
+    numberList.push(parseInt(number));
+  }
+/*   console.log(numberList); */
+  return numberList;
 }
+
+
+function hydrate(string) {
+  // Primeiro transformar todos os numeros da estring em uma lista.
+  // Transformar lista de numeros em quantidade de copos (somar a lista).
+  let drinkSum = 0;
+  for (number of extractNumbers(string) ) {
+    drinkSum += number;
+  }
+  // Montar frase concatenando total de copos e retornar ela para a função
+  if (drinkSum === 1) {
+    return ` ${drinkSum} copo de água`;
+  } else {
+    return ` ${drinkSum} copos de água`;
+  }
+}
+/* console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+console.log(hydrate('1 cachaça, 5 copos de vinho '));
+console.log(hydrate('1 cerveja')); */
+
 
 module.exports = {
   generatePhoneNumber,
@@ -170,3 +200,12 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+// Video utilizado para entender a expressão regular necessaria: https://www.youtube.com/watch?v=pfkkdzeyx6U&ab_channel=AllThingsJavaScript%2CLLC
+/* let texto = '1 cachaça, 5 cervejas e 1 copo de vinho 7 copos de água 1 cachaça, 5 cervejas e 1 copo de vinho 7 copos de água';
+let found = texto.match(/\d+/g);
+//console.log(found);
+let list = [];
+for (number of found) { // se colocar in no lugar de of vai retornar os índices 
+  list.push(parseInt(number));
+}
+console.log(list); */
