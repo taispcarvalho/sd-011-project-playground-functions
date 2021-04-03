@@ -1,13 +1,14 @@
 // Desafio 10
 function techList(arrtec, name) {
-  arrtec.sort()
-  listaCompleta = []
-  if (arrtec.length > 1){
-    for (let p = 0; p < arrtec.length; p += 1){
-      objList = { name: name, tech: arrtec[p] }
-      listaCompleta.push(objList);}
+  arrtec.sort();
+  listaCompleta = [];
+  if (arrtec.length > 1) {
+    for (let p = 0; p < arrtec.length; p += 1) {
+      objList = { name: name, tech: arrtec[p] };
+      listaCompleta.push(objList); 
+    }
   } else {
-    return "Vazio!"
+    return "Vazio!";
   }
 return listaCompleta;
 }
