@@ -7,8 +7,8 @@ function techList(tech, name) {
   let list = tech.sort(); // 'list' recieve 'tech' sorted
 
   if (list.length !== 0) { // if list.length is different from zero, it's ok to continue
-    for (let i = 0; i < list.length; i += 1) {
-      result.push({ tech: list[i], name }); // just print the object in a "for loop"
+    for (let i of list) {
+      result.push({ tech: list[i], name }); // push the object into the list
     }
   } else result = 'Vazio!';
 

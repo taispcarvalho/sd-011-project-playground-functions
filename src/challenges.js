@@ -29,26 +29,28 @@ function concatName(text) {
 }
 
 // Desafio 5
-// Technically, it's (wins * 3) + (ties * 1), but basic math abbreviation
+// Technically, it's (wins * 3) + (ties * 1), but math abbreviation
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 
 // D6 Auxiliary Function
 // Function to take the higher number
-function highestNumber(numbers) {
+/* function highestNumber(numbers) {
   let highNumber = 0;
-  for (let i in numbers) {
+  for (let i of numbers) {
     if (numbers[i] >= highNumber) highNumber = numbers[i];
   }
   return highNumber;
-}
+} */
 
 // Desafio 6
-// Counter for numbers of times the higher number appears
+// Counter for the numbers of times the higher number appears
+// Math.max: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+// Spread: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 function highestCount(numbers) {
   let count = 0;
-  let highNumber = highestNumber(numbers);
+  let highNumber = Math.max(...numbers);
   for (let i in numbers) if (highNumber === numbers[i]) count += 1;
   return count;
 }
@@ -70,7 +72,8 @@ function catAndMouse(mouse, cat1, cat2) {
 // If divisible by 3, fizz, by 5 buzz, by 15 (which is the same as by 3 and 5) fizzBuzz
 // And if is not, bug!
 // LCD: https://en.wikipedia.org/wiki/Lowest_common_denominator
-function fbLoop(numbers) {
+// Break in default: https://stackoverflow.com/questions/26138994/should-we-break-the-default-case-in-switch-statement/26139061
+const fbLoop = (numbers) => {
   let result = [];
   for (let i = 0; i < numbers.length; i += 1) {
     switch (true) { // switch had to be used to avoid Code Complexilibity
@@ -85,15 +88,15 @@ function fbLoop(numbers) {
       break;
     default:
       result.push('bug!');
+      break;
     }
   }
   return result;
-}
+};
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  let result = fbLoop(numbers);
-  return result;
+  return fbLoop(numbers);
 }
 
 // Desafio 9
