@@ -26,11 +26,11 @@ function makePhoneNumber(numberArray) {
     phoneNumber += numberArray[index];
   }
   phoneNumber += ')';
-  for (let index = 2; index < 6; index += 1) {
+  for (let index = 2; index < 7; index += 1) {
     phoneNumber += numberArray[index];
   }
   phoneNumber += '-';
-  for (let index = 6; index < 11; index += 1) {
+  for (let index = 7; index < 11; index += 1) {
     phoneNumber += numberArray[index];
   }
 
