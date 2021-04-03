@@ -28,7 +28,7 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let frequencyOfBigger = 1; let bigger = array[0];
   for (let index = 1; index < array.length; index += 1) {
-    if (array[index] > array[index - 1]) {
+    if (array[index] > bigger) {
       frequencyOfBigger = 1;
       bigger = array[index];
     } else if (array[index] === bigger) {
