@@ -28,13 +28,20 @@ function triangleCheck() {
 }
 
 // Desafio 13
+function checkNumber (string) {
+  if (isNaN(string)) {
+    return false;
+  } 
+  return true;
+}
+
 function hydrate(frase) {
   let frase2 = frase.replace(/ /g, '');
   let quant = 0;
   let agua = '';
 
-  for (let index = 0; index < frase2.length; index += 1) {
-    if (isNumber(frase2[index])) {
+  for (let index in frase2) {
+    if (checkNumber(index)) {
       quant += Number(frase2[index]);
     } else if (quant <= 1) {
       agua = ' copo de água';
