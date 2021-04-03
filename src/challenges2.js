@@ -24,9 +24,19 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lines) {
+  if (lines[0] > lines[1] + lines[2] || lines[0] < Math.abs(lines[1] - lines[2])) {
+    return false
+  } else if (lines[1] > lines[0] + lines[2] || lines[1] < Math.abs(lines[0] - lines[2])) { 
+    return false;
+  }else if (lines[1] > lines[0] + lines[2] || lines[1] < Math.abs(lines[0] - lines[2])) {
+    return false;
+  }else {
+    return true;
+  }
 }
+console.log(triangleCheck([30, 29, 0.99999999]))
+
 
 // Desafio 13
 function hydrate() {
