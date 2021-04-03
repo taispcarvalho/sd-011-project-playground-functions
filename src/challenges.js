@@ -97,12 +97,32 @@ function fizzBuzz(nums) {
 console.log(fizzBuzz([9, 25]))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(encSentence) {  
+  
+  let newEncSentence = encSentence.replace(/a/ig, 1)
+                                  .replace(/e/ig, 2)
+                                  .replace(/i/ig, 3)
+                                  .replace(/o/ig, 4)
+                                  .replace(/u/ig, 5)
+  
+  return newEncSentence;
+                                  
 }
-function decode() {
-  // seu código aqui
+
+function decode(decSentence) {
+  
+  let newDecSentence = decSentence.replace(/1/ig, 'a')
+                                  .replace(/2/ig, 'e')
+                                  .replace(/3/ig, 'i')
+                                  .replace(/4/ig, 'o')
+                                  .replace(/5/ig, 'u')
+
+  return newDecSentence;
+  
 }
+
+console.log(decode("h3 th2r2!"))
+console.log(encode("She's a wonderwoman!"))
 
 module.exports = {
   calcArea,
