@@ -88,26 +88,28 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode(string) {
-  let stringEncode = '';
-  for (let index = 0; index < string.length; index += 1) {
-    switch (string[index]) {
-    case 'a': stringEncode += '1'; break;
-    case 'e': stringEncode += '2'; break;
-    case 'i': stringEncode += '3'; break;
-    case 'o': stringEncode += '4'; break;
-    case 'u': stringEncode += '5'; break;
-    default: stringEncode += string[index]; break;
-    }
-  }
-  return stringEncode;
+function encode(text) {
+  let textEncode = text;
+  textEncode = textEncode.replace('a', '1');
+  textEncode = textEncode.replace('e', '2');
+  textEncode = textEncode.replace('i', '3');
+  textEncode = textEncode.replace('o', '4');
+  textEncode = textEncode.replace('u', '5');
+  return textEncode;
 }
 
-console.log(encode('aeiou bbbb ba be bi bo bu!'));
-
-function decode() {
-  // seu código aqui
+function decode(text) {
+  let textDecode = text;
+  textDecode = textDecode.replace('1', 'a');
+  textDecode = textDecode.replace('2', 'e');
+  textDecode = textDecode.replace('3', 'i');
+  textDecode = textDecode.replace('4', 'o');
+  textDecode = textDecode.replace('5', 'u');
+  return textDecode;
 }
+
+console.log(encode('aeiou!'));
+console.log(decode('12345!'));
 
 module.exports = {
   calcArea,
