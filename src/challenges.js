@@ -23,16 +23,15 @@ return result;
 }
 
 // Desafio 4
-
 function concatName(names) {
  let resultado = "";
- resultado = names[names.length -1] + names[0];
+ resultado = names[names.length -1] + ", " + names[0];
  return resultado;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+ 
 }
 
 // Desafio 6
