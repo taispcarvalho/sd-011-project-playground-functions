@@ -50,7 +50,6 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-
 function testaLado(ladoTeste, lado1, lado2) {
   let ok = false;
   if (ladoTeste < lado1 + lado2 && ladoTeste > Math.abs(lado1 - lado2)) {
@@ -59,17 +58,22 @@ function testaLado(ladoTeste, lado1, lado2) {
   return ok;
 }
 
-function triangleCheck(lineA, lineB, lineC) {
+function triangleCheck(A, B, C) {
   let ok = false;
-  if (testaLado(lineA, lineB, lineC) === true && testaLado(lineB, lineA, lineC) === true && testaLado(lineC, lineA, lineB) === true) {
+  if (testaLado(A, B, C) === true && testaLado(B, A, C) === true && testaLado(C, A, B) === true) {
     ok = true;
   }
   return ok;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numbers = string.match(/\d+/g).map(Number);
+  let soma = 0;
+  for (let i in numbers) {
+    soma += numbers[i];
+  }
+  return `${soma} copos de água`;
 }
 
 module.exports = {
