@@ -41,7 +41,7 @@ function generatePhoneNumber(array) {
   }
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } if (valorInvalido(array) === true || maisDeTres(array) === true) {
+  } if (valorInvalido() === true || maisDeTres() === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   for (let index = 0; index < array.length; index += 1) {
