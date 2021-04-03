@@ -16,7 +16,7 @@ function techList(array, myName) {
   return techName;
 }
 
-console.log(techList([], 'Vitor'));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Vitor'));
 
 // Desafio 11
 function countNum(array, num) {
@@ -77,9 +77,22 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  string = string.replace(/\D/g, '');
+  let num = 0; 
+
+  for (let index = 0; index < string.length; index += 1) {
+    num += Number(string[index]);
+  }
+
+  if (num === 1) {
+    return `${num} copo de água`;
+  }
+
+  return `${num} copos de água`;
 }
+
+console.log(hydrate("1 cachaça"));
 
 module.exports = {
   generatePhoneNumber,
