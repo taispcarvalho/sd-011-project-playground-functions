@@ -6,8 +6,7 @@ function compareTrue(number, number2) {
     return false;
   }
 }
-console.log(compareTrue(false));
-
+console.log(compareTrue(false))
 
 // Desafio 2
 function calcArea() {
@@ -18,20 +17,20 @@ function calcArea() {
 function splitSentence() {
 
 }
- 
+
 // Desafio 4
 function concatName() {
 
 }
 
 // Desafio 5
-function footballPoints(wins, ties) {
+function footballPoints() {
 
 }
 
 // Desafio 6
 function highestCount() {
-  
+
 } 
 
 // Desafio 7
