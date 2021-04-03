@@ -21,10 +21,9 @@ function techList(arrayD10, name) {
 function checkNumber(array11) {
   let biggest = Math.max(...array11);
   let lowest = Math.min(...array11);
-  if (biggest > 9 || lowest < 0) {
-    return true;
-  }
+  return biggest > 9 || lowest < 0;
 }
+
 function checkDuplicateNumber(array11) {
   for (let i = 0; i < array11.length; i += 1) {
     let sameNumberLoop = 0;
@@ -40,23 +39,10 @@ function checkDuplicateNumber(array11) {
 }
 
 function pushNumbers(array11) {
-  let ddd = [];
-  let numPart1 = [];
-  let numPart2 = [];
-  for (let i = 0; i < array11.length; i += 1) {
-    switch (true) {
-    case i >= 0 && i < 2:
-      ddd.push(array11[i]);
-      break;
-    case i >= 2 && i <= 6:
-      numPart1.push(array11[i]);
-      break;
-    case i > 6 && i <= 10:
-      numPart2.push(array11[i]);
-      break;
-    default: false; break;
-    }
-  }
+  let ddd = array11.slice(0, 2);
+  let numPart1 = array11.slice(2, 7);
+  let numPart2 = array11.slice(7);
+
   return `(${ddd.join('')}) ${numPart1.join('')}-${numPart2.join('')}`;
 }
 
