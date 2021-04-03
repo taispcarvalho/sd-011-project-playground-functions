@@ -11,7 +11,7 @@ function calcArea(base, height) {
 function splitSentence(myString) {
   let wordArray = [];
   let currentWord = '';
-  for (let index = 0; index < sentence.length; index += 1) {
+  for (let index = 0; index < myString.length; index += 1) {
     if (myString[index] === ' ') {
       wordArray.push(currentWord);
       currentWord = '';
