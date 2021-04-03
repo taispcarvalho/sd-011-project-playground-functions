@@ -24,18 +24,18 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck(lines) {
-  if (lines[0] > lines[1] + lines[2] || lines[0] < Math.abs(lines[1] - lines[2])) {
-    return false
-  } else if (lines[1] > lines[0] + lines[2] || lines[1] < Math.abs(lines[0] - lines[2])) { 
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > lineB + lineC || lineA < Math.abs(lineB - lineC)) {
     return false;
-  }else if (lines[2] > lines[0] + lines[1] || lines[2] < Math.abs(lines[0] - lines[1])) {
+  } else if (lineB > lineA + lineC || lineB < Math.abs(lineA - lineC)) { 
+    return false;
+  }else if (lineC > lineA + lineB || lineC < Math.abs(lineA - lineB)) {
     return false;
   }else {
     return true;
   }
 }
-console.log(triangleCheck([30, 29, 0.99999999]))
+console.log(triangleCheck(28, 14, 14))
 
 
 // Desafio 13
