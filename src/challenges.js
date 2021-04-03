@@ -95,7 +95,7 @@ function fizzBuzz(arrNum) {
 
 // Desafio 9
 function encode(frase) {
-  // seu código aqui
+  // seu código aqui.
   let cript = frase.replace(/a/g, '1')
     .replace(/e/g, '2')
     .replace(/i/g, '3')
