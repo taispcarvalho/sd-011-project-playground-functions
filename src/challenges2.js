@@ -20,7 +20,10 @@ return arrayResult
 function generatePhoneNumber(numberPhone) {
   let numberOrganized = "(";
   let count = 0;
-
+  if(numberPhone.length !== 11){
+    numberOrganized = "Array com tamanho incorreto.";
+    break;
+  }
   for(index = 0; index < numberPhone.length; index+=1){
     for(index2 = 1; index<numberPhone.length; index+=1){
       if(numberPhone[index] === numberPhone[index2]){
@@ -28,15 +31,11 @@ function generatePhoneNumber(numberPhone) {
       }
     }
     if(count >= 3){
-      numberOrganized= "não é possível gerar um número de telefone com esses valores";
+      numberOrganized = "não é possível gerar um número de telefone com esses valores";
       break;
     } 
-    if(numberPhone.length !== 11){
-      numberOrganized = "Array com tamanho incorreto.";
-      break;
-    }
-    if(numberPhone[index]<0 || numberPhone[index]>9){
-      numberOrganized ="não é possível gerar um número de telefone com esses valores";
+    if(numberPhone[index] < 0 || numberPhone[index] > 9){
+      numberOrganized = "não é possível gerar um número de telefone com esses valores";
       break;
     }
     if(index === 2){
