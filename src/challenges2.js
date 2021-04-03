@@ -9,7 +9,7 @@ function techList(ArrayTechList, name) {
     for (let index = 0; index < ArrayTechList.length; index += 1) {
       let obj = {
         tech: ArrayTechList[index],
-        name: name
+        name: name,
       };
       result.push(obj);
     }
