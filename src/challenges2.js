@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(ArrayTechList, Listrowner) {
+function techList(ArrayTechList, listrOwner) {
   let result = [];
   ArrayTechList.sort();
   if (ArrayTechList.length === 0) {
@@ -9,7 +9,7 @@ function techList(ArrayTechList, Listrowner) {
     for (let index = 0; index < ArrayTechList.length; index += 1) {
       let obj = {
         tech: ArrayTechList[index],
-        name: Listrowner,
+        name: listrOwner,
       };
       result.push(obj);
     }
