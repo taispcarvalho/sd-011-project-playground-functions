@@ -15,10 +15,10 @@ function calcArea(base, height) {
 console.log(calcArea(5, 2));
 
 // Desafio 3
-function splitSentence(...frase) {
-  console.log(frase);
+function splitSentence(a, b) {
+  return [a, b];
 }
-splitSentence('go', 'trybe');
+console.log(splitSentence('go', 'trybe'));
 
 // Desafio 4
 function concatName() {
