@@ -53,15 +53,28 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(letra) {
+  for (let index = 0; index < letra.length; index += 1) {
+    letra = letra.replace('a', '1');
+    letra = letra.replace('e', '2');
+    letra = letra.replace('i', '3');
+    letra = letra.replace('o', '4');
+    letra = letra.replace('u', '5');
+  }
+  return letra;
 }
-function decode() {
-  // seu código aqui
+function decode(number) {
+  for (let index = 0; index < number.length; index += 1) {
+    number = number.replace('1', 'a');
+    number = number.replace('2', 'e');
+    number = number.replace('3', 'i');
+    number = number.replace('4', 'o');
+    number = number.replace('5', 'u');
+  }
+  return number;
 }
 
 module.exports = {
