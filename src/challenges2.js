@@ -1,10 +1,11 @@
 // Desafio 10
-// para o entendimento de desafio precisei olhar o código de colegas 
+// para o entendimento desse desafio precisei comparar o código de colegas no slack
+// https://trybecourse.slack.com/archives/C01PLFW7347/p1617330837144600
 function techList(tech, name) {
   let returnArray = [];
   let orderedTech = tech.sort();
-  if (orderedTech.length !== 0) {// retorna em ordem alfabetica
-    for (let i in orderedTech) {// pega cada indice da variavel 0 e retorna junto com o nome
+  if (orderedTech.length !== 0) { // retorna em ordem alfabetica
+    for (let i in orderedTech) { // pega cada indice da variavel 0 e retorna junto com o nome
       returnArray[i] = {
         tech: tech[i],
         name: name,
@@ -27,7 +28,7 @@ function generatePhoneNumber(numberArray) {
     if (numberArray[i] < 0 || numberArray[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    else if (counts[numberArray[i]]) {
+    if (counts[numberArray[i]]) {
       counts[numberArray[i]] += 1;
     } else {
       counts[numberArray[i]] = 1;
@@ -50,7 +51,7 @@ function generatePhoneNumber(numberArray) {
 }
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  // seu código
 }
 
 // Desafio 13

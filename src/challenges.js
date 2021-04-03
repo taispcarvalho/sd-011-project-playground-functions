@@ -19,7 +19,7 @@ function splitSentence(SeparateWords) {
 // Desafio 4
 // Para este desafio utilizei o que aprendi em aula.
 function concatName(myArray) {
-  return myArray[myArray.length - 1] + ', ' + myArray[0]; ;
+  return myArray[myArray.length - 1] + ', ' + myArray[0];
 }
 
 // Desafio 5
