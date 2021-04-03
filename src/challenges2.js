@@ -3,7 +3,7 @@ function techList(arrTech, nameDev) {
   // seu código aqui
   // 1.1 - Caso vazio return vazio
   if (arrTech.length === 0) {
-    return 'vazio';
+    return 'Vazio!';
   }
   // 1.2 - criar um novo array em ordem alfabética.
   let orderArrTech = [];
