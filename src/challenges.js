@@ -92,7 +92,18 @@ function fizzBuzz(param1) {
    
   // Desafio 9
 function encode(letters) {
-  
+  let num = { a:1,
+  e:2,
+  i:3,
+  o:4,
+  u:5,
+}
+for (let index = 0; index < letters.length; index += 1) {
+  if (letters[index] === num);
+  return num = letters[index];
+}
+  }
+  //console.log(encode('hi there!'));
 function decode() {
   // seu código aqui
 }
