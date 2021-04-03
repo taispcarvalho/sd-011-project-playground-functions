@@ -47,7 +47,7 @@ function generatePhoneNumber(genNum) {
   let sNum = '';
   let verify = numVerify(genNum);
   if (genNum.length !== 11) return 'Array com tamanho incorreto.';
-  if (verify === true) {
+  if (verify) {
     return verify;
   }
   for (let count = 0; count < genNum.length; count += 1) {
@@ -56,7 +56,7 @@ function generatePhoneNumber(genNum) {
   }
   return sNum;
 }
-console.log(generatePhoneNumber([1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+console.log(generatePhoneNumber([1, 1, 2, 3, 4, 5, 6, 7, 9, 9, 8], 9));
 
 // Desafio 12
 function triangleCheck() {
