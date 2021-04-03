@@ -20,14 +20,15 @@ console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName() {
   let nome = ['Rafael', 'Batista', 'de', 'Oliveira'];
-  console.log(nome[3],nome[0]);
+  console.log(nome[3], nome[0]);
 }
 concatName();
 
 // Desafio 5
-function footballPoints() {
-
+function footballPoints(wins, ties) {
+  return wins * 3 + ties * 1;
 }
+console.log(footballPoints(1,2));
 
 // Desafio 6
 function highestCount() {
