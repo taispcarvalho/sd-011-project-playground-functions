@@ -56,8 +56,7 @@ function techList(techArray, name) {
 /* console.log(techList(['React','Jest', 'HTML', 'CSS', 'JavaScript'],'Lucas')); */
 
 // Desafio 11
-/* 
-  Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
+/* Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando    parênteses, traços e espaços.
   Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], generatePhoneNumber deverá retornar (12) 34567-8901.
   Se a função receber um array com tamanho diferente de 11, a mesma deve retornar "Array com tamanho incorreto.".
   Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, generatePhoneNumber deverá retornar a string "não é possível gerar um número de telefone com esses valores".
@@ -66,8 +65,7 @@ function techList(techArray, name) {
   Retorne a string "não é possível gerar um número de telefone com esses valores" caso algum dos números da array seja menor que 0
   Retorne a string "não é possível gerar um número de telefone com esses valores" caso algum número da array seja maior que 9
   Retorne a string "não é possível gerar um número de telefone com esses valores" caso algum número da array se repeti 3 vezes ou mais
-  Retorne um número de telefone, respeitando parênteses, traços e espaços caso os números da array estejam de acordo com as restrições 
-*/
+  Retorne um número de telefone, respeitando parênteses, traços e espaços caso os números da array estejam de acordo com as restrições */
 function errorArrayLength(array) {
   // Mensagem se verdadeiro 'Array com tamanho incorreto.'
   return array.length !== 11 ? true : false;
@@ -83,7 +81,7 @@ function errorNumber(array) {
     }
   }
   // Mensagem se verdadeiro 'não é possível gerar um número de telefone com esses valores'
-  return validationError !== 0 ? true : false;
+  return validationError !== 0; // ? true : false;
 }
 function repeatedNumber(array) {
   // Função feita com consulta a https://dev.to/huyddo/find-duplicate-or-repeat-elements-in-js-array-3cl3.
@@ -111,8 +109,7 @@ function generatePhoneNumber(array) {
     return msgLength;
   }
 
-  let msgNumber =
-    'não é possível gerar um número de telefone com esses valores';
+  let msgNumber ='não é possível gerar um número de telefone com esses valores';
   if (errorNumber(array)) {
     return msgNumber;
   }
@@ -138,27 +135,23 @@ function generatePhoneNumber(array) {
     return phoneNumber;
   }
 }
-/* 
-  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
-  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1])); //Menor que zero.
-  console.log(generatePhoneNumber([1, 2, 13, 4, 5, 6, 7, 8, 9, 0, 1])); //maior que 9.
-  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 7, 7, 0, 1])); //repete numero.
-  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); //Retornar (12) 34567-8901. 
-*/
+/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
+ console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1])); //Menor que zero.
+ console.log(generatePhoneNumber([1, 2, 13, 4, 5, 6, 7, 8, 9, 0, 1])); //maior que 9.
+ console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 7, 7, 0, 1])); //repete numero.
+ console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); //Retornar (12) 34567-8901. */
 
 // Desafio 12
-/* 
-  Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
-  Para tanto, tenha em mente algumas considerações:
-  Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
-  Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
-  O retorno da sua função deverá ser um booleano.
-  Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
-  O que será verificado:
-  Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois
-  Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas
-  Retorne true quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas
-*/
+/* Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
+ Para tanto, tenha em mente algumas considerações:
+ Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
+ Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
+ O retorno da sua função deverá ser um booleano.
+ Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
+ O que será verificado:
+ Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois
+ Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas
+ Retorne true quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas */
 
 function triangleCheck(lineA, lineB, lineC) {
   let sumLineA = lineB + lineC;
@@ -226,11 +219,9 @@ function hydrate(string) {
     return `${drinkSum} copos de água`;
   }
 }
-/* 
-  console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
-  console.log(hydrate('1 cachaça, 5 copos de vinho '));
-  console.log(hydrate('1 cerveja')); 
- */
+/* console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+ console.log(hydrate('1 cachaça, 5 copos de vinho '));
+ console.log(hydrate('1 cerveja')); */
 
 module.exports = {
   generatePhoneNumber,
@@ -238,4 +229,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-
