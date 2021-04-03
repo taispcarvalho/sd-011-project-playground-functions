@@ -46,10 +46,12 @@ function highestCount(numbersArray) {
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = Math.abs(cat1 - mouse);
   let dist2 = Math.abs(cat2 - mouse);
-  let winner;  
+  let winner;
 
-  winner = (dist1 === dist2) ? winner = 'os gatos trombam o rato foge' : ((dist1 < dist2) ? winner = 'cat1' : winner = 'cat2'); 
-
+  winner = (dist1 < dist2) ? winner = 'cat1' : winner = 'cat2';
+  if (dist1 === dist2) {
+    winner = 'os gatos trombam o rato foge';
+  }
   return winner;
 }
 
