@@ -72,7 +72,7 @@ function errorArrayLength(array) {
 }
 function errorNumber(array) {
   let validationError = false;
-  for ( let number of array) {
+  for (let number of array) {
     if (array[number] < 0 || array[number] > 9) {
       validationError = true;
     }
@@ -82,8 +82,6 @@ function errorNumber(array) {
 function repeatedNumber(array) {
   // Função feita com consulta a https://dev.to/huyddo/find-duplicate-or-repeat-elements-in-js-array-3cl3.
   let numbers = {};
-  let msgError = false;
-  let passMsg = false;
   for (let index = 0; index < array.length; index += 1) {
     if (numbers[array[index]]) {
       numbers[array[index]] += 1;
@@ -94,10 +92,9 @@ function repeatedNumber(array) {
   for (let variable in numbers) {
     if (numbers[variable] > 2) {
       // // Mensagem se verdadeiro 'não é possível gerar um número de telefone com esses valores'
-      msgError = true;
+      return true;
     }
   }
-  return msgError || passMsg;
 }
 function generatePhoneNumber(array) {
   let msgLength = 'Array com tamanho incorreto.';
@@ -125,11 +122,11 @@ function generatePhoneNumber(array) {
     return phoneNumber;
   }
 }
-/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1])); //Menor que zero.
 console.log(generatePhoneNumber([1, 2, 13, 4, 5, 6, 7, 8, 9, 0, 1])); //maior que 9.
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 7, 7, 0, 1])); //repete numero.
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); //Retornar (12) 34567-8901. */
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); //Retornar (12) 34567-8901.
 
 // Desafio 12
 /* Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
