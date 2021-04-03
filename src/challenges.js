@@ -9,8 +9,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(' ');
 }
 
 // Desafio 4
@@ -37,7 +37,7 @@ function catAndMouse() {
 function fizzBuzz(array) {
   let numeros = [];
   for (let index in array) {
-    if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
+    if (array[index] % 15 === 0) {
       numeros.push('fizzBuzz');
     } else if (array[index] % 5 === 0) {
       numeros.push('buzz');
@@ -59,18 +59,10 @@ function encode(string) {
     o: 4,
     u: 5,
   };
-  const words = string.split('').map(key => substitute[key] ? substitute[key] : key);
-   
+  const words = string.split('').map((key) => 
+  substitute[key] ? substitute[key] : key);
   return words.join('');
 }
-
-console.log(encode('hi there!'));
-
-/*  if (substitute[char]) {
-      return substitute[char]
-    }else {
-      return char
-    }}) */
 
 function decode(stringN) {
   const substitute = {
@@ -80,15 +72,14 @@ function decode(stringN) {
     4: 'o',
     5: 'u',
   };
-const numbers = stringN.split('').map(key => {
-  if (substitute [key]) {
-    return substitute [key];
-  } else {
-    return key;
-  }})
-  return numbers.join('');
+  const numbers = stringN.split('').map((key) => {
+    if (substitute [key]) {
+      return substitute [key];
+    } else {
+      return key;
+    }})
+    return numbers.join('');
 }
-console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
