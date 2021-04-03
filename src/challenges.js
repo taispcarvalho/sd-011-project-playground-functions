@@ -96,8 +96,8 @@ function encode(string) {
   let alterado = string.replace(/a|e|i|o|u/g, function (x) { // replace() com regexp (W3S): https://www.w3schools.com/jsref/jsref_replace.asp
     let trocado = substituicao[x]; // regexp (MDN): https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
     return trocado;
-    });
-    return alterado;
+  });
+  return alterado;
 }
 
 function decode(string) {
@@ -111,8 +111,8 @@ function decode(string) {
   let alterado = string.replace(/1|2|3|4|5/g, function (x) {
     let trocado = substituicao[x];
     return trocado;
-    });
-    return alterado;
+  });
+  return alterado;
 }
 
 module.exports = {
