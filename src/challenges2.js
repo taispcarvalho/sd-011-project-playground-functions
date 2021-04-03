@@ -50,7 +50,7 @@ function generatePhoneNumber(array) {
   if (checkRepeat(array) || checkValues(array)) {
     return 'não é possível gerar um número de telefone com esses valores';
   } if (checkLength(array)) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
   arrayPhoneNumber = arrayPhoneNumber.concat(array);
   arrayPhoneNumber.splice(3, 0, ')');
