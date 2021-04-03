@@ -111,7 +111,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return true;
 }
-triangleCheck(8, 14, 10);
+
 // Desafio 13
 function hydrate() {
   // seu código aqui
