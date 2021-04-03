@@ -29,7 +29,7 @@ function triangleCheck(lines) {
     return false
   } else if (lines[1] > lines[0] + lines[2] || lines[1] < Math.abs(lines[0] - lines[2])) { 
     return false;
-  }else if (lines[1] > lines[0] + lines[2] || lines[1] < Math.abs(lines[0] - lines[2])) {
+  }else if (lines[2] > lines[0] + lines[1] || lines[2] < Math.abs(lines[0] - lines[1])) {
     return false;
   }else {
     return true;
