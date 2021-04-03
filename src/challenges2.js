@@ -42,16 +42,21 @@ const digitValidation = (phone) => {
 // Cause using two 'for loops' for it cause Code Complexibility's problem
 const counterValidation = (phone) => {
   let count = {};
+  let countNum = 0;
 
   phone.forEach(function (x) { count[x] = (count[x] || 0) + 1; });
 
   let auxCount = Object.values(count);
 
-  for (let i of auxCount) {
-    if (auxCount[i] > 2) return true;
-    return false;
+  for (let i = 0; i < auxCount.length; i += 1) {
+    if (auxCount[i] > 2) countNum += 1;
   }
+
+  if (countNum !== 0) return true;
+  return false;
 };
+
+console.log(counterValidation([1, 1, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 11
 // References:
