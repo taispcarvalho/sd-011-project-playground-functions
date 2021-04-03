@@ -13,7 +13,7 @@ function techList(techsToLearn, myName) {
       output.push(sorted);
     }
     return output;
-  } 
+  }
   return 'Vazio!';
 }
 console.log(techList([], 'Maran'));
@@ -28,7 +28,7 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineA > lineB + lineC || lineA < Math.abs(lineB - lineC) || lineB > lineA + lineC || lineB < Math.abs(lineA - lineC) || lineC > lineA + lineB || lineC < Math.abs(lineA - lineB)) {
     return false;
   }
-    return true;
+  return true;
 }
 console.log(triangleCheck(28, 14, 14));
 

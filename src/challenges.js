@@ -19,7 +19,7 @@ console.log(splitSentence('Vivian Maria Braga'));
 
 // Desafio 4
 function concatName(names) {
-  return (names[names.length - 1] + ', ' + names[0]);
+  return `${names[names.length - 1], }` `${names[0]}`;
 }
 console.log(concatName(['Vivian', 'Maria', 'Braga']));
 
@@ -33,7 +33,7 @@ console.log(footballPoints(14, 8));
 // Ajuda do aluno Luiz Wendel,  que demonstrou com muita sapiência que uma função nao consegue chamar uma varável contida em função, e que pra isso era necessario nomear uma variável com o retorno da funcao para dai, sim, a mesma ser usado na funcao desejada.
 function highestCount(numbers) {
   let ammount = 0;
-  let highest = 0;
+  let highestNumber = 0;
   highest = highestNumber(numbers);
   for (let index2 = 0; index2 < numbers.length; index2 += 1) {
     if (highest === (numbers[index2])) {
