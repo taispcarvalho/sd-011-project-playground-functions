@@ -130,7 +130,7 @@ function decodeSecond(string) {
   }
   return string.join('');
 }
-function decode() {
+function decode(string) {
   let charByChar = string.split('');
   for (let index = 0; index < charByChar.length; index += 1) {
     switch (charByChar[index]) {
@@ -139,7 +139,7 @@ function decode() {
       break;
     case '2':
       charByChar[index] = 'e';
-      break; 
+      break;
     default:
       break;
     }
