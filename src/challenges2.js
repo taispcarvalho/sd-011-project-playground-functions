@@ -8,8 +8,8 @@ function techList(ArrayTechList, name) {
   if (ArrayTechList !== 0) {
     for (let index = 0; index < ArrayTechList.length; index += 1) {
       let obj = {
-        'tech': ArrayTechList[index], 
-        'name': name,
+        tech: ArrayTechList[index],
+        name: name,
       };
       result.push(obj);
     }
