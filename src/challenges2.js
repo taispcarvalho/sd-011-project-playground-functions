@@ -55,8 +55,8 @@ function generatePhoneNumber(numbers) {
   }
   if (numbers.length !== 11) {
     return ('Array com tamanho incorreto.');
-  } else if (zero > 2 || one > 2 || two > 2 || three > 2 || four > 2 || five > 2 || six > 2 || seven > 2
-    || eight > 2 || nine > 2 || error > 0) {
+  } else if (zero > 2 || one > 2 || two > 2 || three > 2 || four > 2 || five > 2 || six > 2
+    || seven > 2 || eight > 2 || nine > 2 || error > 0) {
     return ('não é possível gerar um número de telefone com esses valores');
   } else {
     numbersOutput.push('(');
