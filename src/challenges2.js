@@ -18,7 +18,6 @@ function techList(tech, name) {
 // D11 Auxiliary Functions
 // References:
 // Arrow functions: https://www.w3schools.com/js/js_arrow_function.asp
-// How to Get all Non-Unique Values: https://stackoverflow.com/questions/840781/get-all-non-unique-values-i-e-duplicate-more-than-one-occurrence-in-an-array
 
 // I used Arrow Functions just to try to lessen the code's complexity, and to learn how to use it, no particular use.
 const lengthValidation = (phone) => {
@@ -36,12 +35,16 @@ const digitValidation = (phone) => {
   return invalid;
 };
 
-const counterValidation = (value, phone) => {
+const counterValidation = (phone) => {
   let count = 0;
-  for (let i = 0; i < phone.length; i += 1) {
-    if (value === phone[i]) count += 1;
+  let auxPhone = phone.sort((a, b) => a - b);
+
+  for (let i of auxPhone) {
+    if (auxPhone[i] === auxPhone[i + 1]) {
+      count += 1;
+    }
   }
-  if (count >= 3) return true;
+  if (count > 2) return true;
   return false;
 };
 
@@ -51,25 +54,19 @@ const counterValidation = (value, phone) => {
 // Break Lines in TL: https://stackoverflow.com/questions/37321047/wrap-long-template-literal-line-to-multiline-without-creating-a-new-line-in-the
 function generatePhoneNumber(phone) {
   let result;
+
   if (lengthValidation(phone)) {
     result = 'Array com tamanho incorreto.';
   } else if (digitValidation(phone)) {
     result = 'não é possível gerar um número de telefone com esses valores';
-  }
-
-  for (let i = 0; i < phone.length; i += 1) {
-    if (counterValidation(phone[i], phone)) {
-      result = 'não é possível gerar um número de telefone com esses valores';
-    } else {
-      result = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}`
+  } else if (counterValidation(phone)) {
+    result = 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    result = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}`
     + `${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
-    }
   }
-
   return result;
 }
-
-console.log(generatePhoneNumber([1, 1, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 // References:
