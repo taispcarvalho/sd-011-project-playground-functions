@@ -91,7 +91,7 @@ function encode(phraseEncode) {
     arrayEncode.push(phraseEncode[index1]);
   }
 
-  for (let index2 in phraseEncode) {
+  for (let index2 = 0; index2 < phraseEncode.length; index2 +=1) {
     switch (phraseEncode[index2]) {
     case 'a':
       arrayEncode[index2] = 1;
@@ -122,7 +122,45 @@ function encode(phraseEncode) {
   return phraseEncode;
 }
 
-function decode() {
+let a = 'hi, trere';
+console.log(encode(a));
+
+function decode(phraseDecode) {
+  let arrayDecode = [];
+  let phraseDecodada = '';
+  for (let index1 = 0; index1 < phraseDecode.length; index1 += 1) {
+    arrayDecode.push(phraseDecode[index1]);
+  }
+
+  for (let index2 = 0; index2 < phraseDecode.length; index2 +=1) {
+    switch (phraseDecode[index2]) {
+    case '1':
+      arrayDecode[index2] = 'a';
+      break;
+    case '2':
+      arrayDecode[index2] = 'e';
+      break;
+    case '3':
+      arrayDecode[index2] = 'i';
+      break;
+    case '4':
+      arrayDecode[index2] = 'o';
+      break;
+    case '5':
+      arrayDecode[index2] = 'u';
+      break;
+    default:
+      break;
+    }
+  }
+
+  for (let index3 = 0; index3 < arrayDecode.length; index3 += 1) {
+    phraseDecodada += arrayDecode[index3];
+  }
+
+  phraseDecode = phraseDecodada;
+
+  return phraseDecode;
 }
 
 module.exports = {
