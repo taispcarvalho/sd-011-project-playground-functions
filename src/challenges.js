@@ -111,11 +111,9 @@ function fizzBuzz(array) {
     game[index] = 'bug!';
     if (array[index] % 3 === 0) {
       game[index] = 'fizz';
-    }
-    if (array[index] % 5 === 0) {
+    } else if (array[index] % 5 === 0) {
       game[index] = 'buzz';
-    }
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+    } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       game[index] = 'fizzBuzz';
     }    
   }
