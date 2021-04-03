@@ -2,16 +2,16 @@
 function techList() {
   // seu código aqui
 }
- 
+
 // Desafio 11
 function generatePhoneNumber(numberArray) {
   let counts = {};
+  if (numberArray.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
   for (let i = 0; i <= numberArray.length; i += 1) {
-    if (numberArray.length != 11) {
-      return 'Array com tamanho incorreto.'
-    }
-    else if (numberArray[i] < 0 || numberArray[i] > 9) {
-    return 'não é possível gerar um número de telefone com esses valores'
+    if (numberArray[i] < 0 || numberArray[i] > 9) {
+    return 'não é possível gerar um número de telefone com esses valores';
     }
     else if (counts[numberArray[i]]) {
     counts[numberArray[i]] += 1;
@@ -22,19 +22,18 @@ function generatePhoneNumber(numberArray) {
   // https://dev.to/huyddo/find-duplicate-or-repeat-elements-in-js-array-3cl3
   for (let prop in counts) {
     if (counts[prop] >= 3) {
-    return 'não é possível gerar um número de telefone com esses valores'
+    return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   // Filter only numbers from the input
   // https://learnersbucket.com/examples/javascript/how-to-format-phone-number-in-javascript/
-    let cleaned = ('' + numberArray).replace(/\D/g, '');
-    // Check if the input is of correct length
-    let match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/);
-    if (match) {
-    return '(' + match[1] + ') ' + match[2] + '-' + match[3]
-    }
+  let cleaned = ('' + numberArray).replace(/\D/g, '');
+  // Check if the input is of correct length
+  let match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/);
+  if (match) {
+  return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+  }
 }
-
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
