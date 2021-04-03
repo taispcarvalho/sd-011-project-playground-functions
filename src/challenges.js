@@ -18,9 +18,28 @@ console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  let words = [];
+  let cutSpace = '';
+
+  for (let i = 0; i < sentence.length; i += 1) {
+    if (sentence[i] === ' ') {
+      words.push(cutSpace);
+      cutSpace = '';
+
+    } else if (i === sentence.length - 1) {
+      cutSpace += sentence[i];
+      words.push(cutSpace);
+
+    } else {
+      cutSpace += sentence[i];
+    }
+  }
+  return words;
 }
+console.log(splitSentence('Go Trybe'))
+console.log(splitSentence('Vamo que vamo'))
+console.log(splitSentence('foquete'))
 
 // Desafio 4
 function concatName() {
