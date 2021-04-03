@@ -23,7 +23,7 @@ function checkRepeat(array) {
   for (let index = 0; index < array.length; index += 1) {
     let contador = 0;
     for (let index2 = 0; index2 < array.length; index2 += 1) {
-      if (contador >= 3) {
+      if (contador >= 2) {
         return true;
       }
       if (array[index] === array[index2]) {
