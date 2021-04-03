@@ -66,23 +66,10 @@ function divisionFor(value1, value2) {
     return true;
   } return false;
 }
-function pushFizzBuzz(array, value1, value2) {
-  let ret = [];
-  for (let index = 0; index < array.length; index += 1) {
-    if (divisionFor(array[index], value1) && divisionFor(array[index], value2)) {
-      ret.push('fizzBuzz');
-    } else if (divisionFor(array[index], value1)) {
-      ret.push('fizz');
-    } else if (divisionFor(array[index], value2)) {
-      ret.push('buzz');
-    } else {
-      ret.push('bug!');
-    }
-  }
-  return ret;
-}
+
 function fizzBuzz(value) {
-  /* let ret = [];
+  let ret = [];
+  let aux = 0;
   for (let index = 0; index < value.length; index += 1) {
     if (divisionFor(value[index], 3) && divisionFor(value[index], 5)) {
       ret.push('fizzBuzz');
@@ -94,14 +81,12 @@ function fizzBuzz(value) {
       ret.push('bug!');
     }
   }
-  return ret; */
-  return pushFizzBuzz(value, 3, 5);
+  return ret;
 }
 
 // Desafio 9
 function encode(value) {
-  let aux = 0;
-  let value1 = '';
+  let aux = 0, value1 = '';
   for (let letras of value) {
     if (letras === 'a') {
       value1 += '1';
@@ -122,8 +107,7 @@ function encode(value) {
 }
 
 function decode(value) {
-  let aux = 0;
-  let value1 = '';
+  let aux = 0, value1 = '';
   for (let letras of value) {
     if (letras === '1') {
       value1 += 'a';
