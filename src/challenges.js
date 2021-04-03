@@ -56,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function calcFizzBuzz(number) {
   if (number % 5 === 0 && number % 3 === 0) {
-    return 'fizzbuzz';
+    return 'fizzBuzz';
   }
   if (number % 3 === 0) {
     return 'fizz';
@@ -64,7 +64,7 @@ function calcFizzBuzz(number) {
   if (number % 5 === 0) {
     return 'buzz';
   }
-  return 'bug';
+  return 'bug!';
 }
 
 function fizzBuzz(number) {
