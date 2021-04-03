@@ -27,12 +27,10 @@ function splitSentence(sentence) {
       words.push(cutSpace);
       cutSpace = '';
     }
-    
     else if (i === sentence.length - 1) {
       cutSpace += sentence[i];
       words.push(cutSpace);
     }
-
     else {
       cutSpace += sentence[i];
     }
