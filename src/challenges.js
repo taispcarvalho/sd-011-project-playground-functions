@@ -12,15 +12,17 @@ console.log(calcArea(5, 2));
 
 // Desafio 3
 function splitSentence(nome) {
-  let frase = nome.split(" ");
+  let frase = nome.split(' ');
   return frase;
 }
 console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName() {
-
+    let nome = ['Rafael', 'Batista', 'de', 'Oliveira'];
+    return(nome[3] + ', ' +  nome[0]);
 }
+console.log(concatName());
 
 // Desafio 5
 function footballPoints() {
