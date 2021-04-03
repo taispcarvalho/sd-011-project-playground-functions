@@ -39,14 +39,16 @@ const digitValidation = (phone) => {
 
 const counterValidation = (phone) => {
   let count = 0;
-  let auxPhone = phone.slice().sort((a, b) => a - b);
+  let auxPhone = phone.slice();
+  auxPhone = auxPhone.sort((a, b) => a - b);
 
   for (let i of auxPhone) {
     if (auxPhone[i] === auxPhone[i + 1]) {
       count += 1;
     }
   }
-  if (count > 2) return true;
+
+  if (count >= 3) return true;
   return false;
 };
 
