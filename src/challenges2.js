@@ -67,10 +67,13 @@ function generatePhoneNumber(phoneNumberArr) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(l1, l2, l3) {
+  if (l1 < l2 + l3 && l1 > Math.abs(l2 - l3)) {
+    return true;
+  }
+  return false;
 }
-
+console.log(triangleCheck(10, 14, 8));
 // Desafio 13
 function hydrate() {
   // seu código aqui
