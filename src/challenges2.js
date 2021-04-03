@@ -78,20 +78,17 @@ console.log(triangleCheck(10, 14, 99));
 // Para completar esse desafio eu obtive ajuda no Developer Mozilla.
 /** Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number */
 /** Source: https://www.w3schools.com/jsref/jsref_regexp_digit.asp */
-function bebeAgua(string) {
+
+function hydrate(string) {
   string = string.replace(/\D/g, '');
   let numberBebidas = 0;
   for (let index = 0; index < string.length; index += 1) {
     numberBebidas += Number(string[index]);
   }
-  return numberBebidas;
-}
-
-function hydrate(string) {
-  if (bebeAgua(string) === 1) {
-    return `${bebeAgua(string)} copo de água`;
+  if (numberBebidas === 1) {
+    return `${numberBebidas} copo de água`;
   }
-  return `${bebeAgua(string)} copos de água`;
+  return `${numberBebidas} copos de água`;
   // seu código aqui
 }
 console.log(hydrate('1 cachaça, 5 cervejas e 3 copo de vinho'));
