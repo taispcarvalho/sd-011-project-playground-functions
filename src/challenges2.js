@@ -1,12 +1,45 @@
 // Desafio 10
-/* 10 - Crie uma função de Lista de tecnologias
-Crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo parâmetro chamado name com um nome. 
-Para cada tecnologia no array, crie um objeto com a seguinte estrutura:
-{
-  tech: "NomeTech",
-  name: name
-} 
-Caso o array venha vazio sua função deve retornar 'Vazio!'*/
+/*
+  Crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo parâmetro chamado name com um nome.
+  Para cada tecnologia no array, crie um objeto com a seguinte estrutura:
+  {
+    tech: "NomeTech",
+    name: name
+  }
+  Estes objetos devem ser inseridos em uma nova lista em ordem crescente a partir do campo tech no objeto.
+  A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos com o formato acima.
+  Exemplo:
+  Entradas da função:
+  ["React", "Jest", "HTML", "CSS", "JavaScript"]
+  "Lucas"
+  // Saída:
+  [
+    {
+      tech: "CSS",
+      name: "Lucas"
+    },
+    {
+      tech: "HTML",
+      name: "Lucas"
+    },
+    {
+      tech: "JavaScript",
+      name: "Lucas"
+    },
+    {
+      tech: "Jest",
+      name: "Lucas"
+    },
+    {
+      tech: "React",
+      name: "Lucas"
+    }
+  ]
+  Caso o array venha vazio sua função deve retornar 'Vazio!'
+  O que será verificado:
+  Retorne uma lista de objetos ordenados quando é passada uma lista com 5 tecnologias deve
+  Retorne a mensagem de erro 'Vazio!' quando a lista tiver com 0 tecnologias
+*/
 function techList(techArray, name) {
   let objectArray = [];
   let arraySorted = techArray.sort();
@@ -23,8 +56,18 @@ function techList(techArray, name) {
 /* console.log(techList(['React','Jest', 'HTML', 'CSS', 'JavaScript'],'Lucas')); */
 
 // Desafio 11
-/* Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
-Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], generatePhoneNumber deverá retornar (12) 34567-8901. */
+/* 
+  Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
+  Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], generatePhoneNumber deverá retornar (12) 34567-8901.
+  Se a função receber um array com tamanho diferente de 11, a mesma deve retornar "Array com tamanho incorreto.".
+  Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, generatePhoneNumber deverá retornar a string "não é possível gerar um número de telefone com esses valores".
+  O que será verificado:
+  Retorne a string "Array com tamanho incorreto." caso o array tenha o tamanho diferente de 11
+  Retorne a string "não é possível gerar um número de telefone com esses valores" caso algum dos números da array seja menor que 0
+  Retorne a string "não é possível gerar um número de telefone com esses valores" caso algum número da array seja maior que 9
+  Retorne a string "não é possível gerar um número de telefone com esses valores" caso algum número da array se repeti 3 vezes ou mais
+  Retorne um número de telefone, respeitando parênteses, traços e espaços caso os números da array estejam de acordo com as restrições 
+*/
 function errorArrayLength(array) {
   // Mensagem se verdadeiro 'Array com tamanho incorreto.'
   return array.length !== 11 ? true : false;
@@ -95,25 +138,27 @@ function generatePhoneNumber(array) {
     return phoneNumber;
   }
 }
-/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1])); //Menor que zero.
-console.log(generatePhoneNumber([1, 2, 13, 4, 5, 6, 7, 8, 9, 0, 1])); //maior que 9.
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 7, 7, 0, 1])); //repete numero.
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); //Retornar (12) 34567-8901. */
+/* 
+  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
+  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1])); //Menor que zero.
+  console.log(generatePhoneNumber([1, 2, 13, 4, 5, 6, 7, 8, 9, 0, 1])); //maior que 9.
+  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 7, 7, 0, 1])); //repete numero.
+  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); //Retornar (12) 34567-8901. 
+*/
 
 // Desafio 12
-/* Crie uma função de Condição de existência de um triângulo
-Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
-Para tanto, tenha em mente algumas considerações:
--Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois !!!!!!!e maior que o valor absoluto da diferença entre essas medidas.
--Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
-O retorno da sua função deverá ser um booleano.
-
-Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
-O que será verificado:
-Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois
-Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas
-Retorne true quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas */
+/* 
+  Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
+  Para tanto, tenha em mente algumas considerações:
+  Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
+  Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
+  O retorno da sua função deverá ser um booleano.
+  Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
+  O que será verificado:
+  Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois
+  Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas
+  Retorne true quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas
+*/
 
 function triangleCheck(lineA, lineB, lineC) {
   let sumLineA = lineB + lineC;
@@ -136,32 +181,30 @@ function triangleCheck(lineA, lineB, lineC) {
 /* console.log(triangleCheck(10, 14, 8)); */
 
 // Desafio 13
-/* Crie uma função de Bem vindo ao Bar da Trybe!
- Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
-Crie a função hydrate que recebe uma string, e retorne a sugestão de quantos copos de água você deve beber. Exemplos:
-
-String recebida:
-  "1 cerveja"
-String retornada:
-  "1 copo de água"
-
-String recebida:
-  "1 cachaça, 5 cervejas e 1 copo de vinho"
-String retornada:
-  "7 copos de água"
-String recebida:
-  "1 cachaça, 5 cervejas e 1 copo de vinho"
-String retornada:
-  "7 copos de água"
-
+/* 
+  Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
+  Crie a função hydrate que recebe uma string, e retorne a sugestão de quantos copos de água você deve beber. Exemplos:
+  String recebida:
+    "1 cerveja"
+  String retornada:
+    "1 copo de água"
+  String recebida:
+    "1 cachaça, 5 cervejas e 1 copo de vinho"
+  String retornada:
+    "7 copos de água"
+  String recebida:
+    "1 cachaça, 5 cervejas e 1 copo de vinho"
+  String retornada:
+    "7 copos de água"
   Notas
-Para simplificar, consideraremos que qualquer coisa com um número à frente é uma bebida e que a sua string sempre virá com o formato quantidade (em número) + tipo da bebida.
-O número na frente de cada bebida está no intervalo entre 1 e 9.
-Dica: pesquise por algo similar a get all integers inside a string js.
-O que será verificado:
-Retorne a sugestão de quantos copos de água deve-se beber ao receber uma string */
+  Para simplificar, consideraremos que qualquer coisa com um número à frente é uma bebida e que a sua string sempre virá com o formato quantidade (em número) + tipo da bebida.
+  O número na frente de cada bebida está no intervalo entre 1 e 9.
+  Dica: pesquise por algo similar a get all integers inside a string js.
+  O que será verificado:
+  Retorne a sugestão de quantos copos de água deve-se beber ao receber uma string
+*/
 function extractNumbers(string) {
-  /*   let string = '1 cachaça, 5 cervejas e 1 copo de vinho'; */
+  // Video utilizado para entender a expressão regular necessaria: https://www.youtube.com/watch?v=pfkkdzeyx6U&ab_channel=AllThingsJavaScript%2CLLC
   let drinkList = string.match(/\d+/g);
   let numberList = [];
   for (number of drinkList) {
@@ -172,8 +215,6 @@ function extractNumbers(string) {
 }
 
 function hydrate(string) {
-  // Primeiro transformar todos os numeros da estring em uma lista.
-  // Transformar lista de numeros em quantidade de copos (somar a lista).
   let drinkSum = 0;
   for (number of extractNumbers(string)) {
     drinkSum += number;
@@ -182,12 +223,14 @@ function hydrate(string) {
   if (drinkSum === 1) {
     return `${drinkSum} copo de água`;
   } else {
-    return ` ${drinkSum} copos de água`;
+    return `${drinkSum} copos de água`;
   }
 }
-/* console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
-console.log(hydrate('1 cachaça, 5 copos de vinho '));
-console.log(hydrate('1 cerveja')); */
+/* 
+  console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+  console.log(hydrate('1 cachaça, 5 copos de vinho '));
+  console.log(hydrate('1 cerveja')); 
+ */
 
 module.exports = {
   generatePhoneNumber,
@@ -195,12 +238,4 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-// Video utilizado para entender a expressão regular necessaria: https://www.youtube.com/watch?v=pfkkdzeyx6U&ab_channel=AllThingsJavaScript%2CLLC
-/* let texto = '1 cachaça, 5 cervejas e 1 copo de vinho 7 copos de água 1 cachaça, 5 cervejas e 1 copo de vinho 7 copos de água';
-let found = texto.match(/\d+/g);
-//console.log(found);
-let list = [];
-for (number of found) { // se colocar in no lugar de of vai retornar os índices 
-  list.push(parseInt(number));
-}
-console.log(list); */
+

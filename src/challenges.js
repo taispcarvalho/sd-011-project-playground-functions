@@ -20,9 +20,9 @@ function splitSentence(str) {
 /*
   Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
   O que será verificado:
-  Retorne 'Paolillo, Lucas' quando o parâmetro passado na funcão concatName seja ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
-  Retorne 'ré, foguete' quando o parâmetro passado na funcão concatName seja ['foguete', 'não', 'tem', 'ré']
-  Retorne 'captain, captain' quando o parâmetro passado na funcão concatName seja ['captain', 'my', 'captain'] 
+  Retorne 'Paolillo, Lucas' quando o parâmetro passado na funcão concatName seja ['Lucas', 'Cassiano','Ferraz','Paolillo']
+  Retorne 'ré, foguete' quando o parâmetro passado na funcão concatName seja ['foguete', 'não','tem','ré']
+  Retorne 'captain, captain'quando o parâmetro passado na funcão concatName seja ['captain','my','captain'] 
 */
 function concatName(array) {
   return `${array[array.length - 1]}, ${array[0]}`;
@@ -30,10 +30,10 @@ function concatName(array) {
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   return wins * 3 + ties * 1;
 }
-/* console.log(footballPoints(0, 0));*/
+/* console.log(footballPoints(0, 0)); */
 
 // Desafio 6
 /*
@@ -45,45 +45,37 @@ function footballPoints(wins,ties) {
   */
 function findHighestNumber(array1) {
   let highestNumber = 0;
-  for (index = 0; index <= array1.length; index += 1) {
+  for (let index = 0; index <= array1.length; index += 1) {
     if (array1[index] > highestNumber) {
       highestNumber = array1[index];
     }
   }
   return highestNumber;
 }
-/*  teste da função */
 /* console.log(findHighestNumber([9, 1, 2, 3, 9, 5, 7])); */
-/*
-  - Criar uma variável countHighest = 0.
-  - [Inicio função ex 6 de fato] [conta quantas vezes ele aparece no array.]Com o maior numero em mãos 
-  Se forem iguais acrescenta um no contador de maior e passa.
-  7 - return countHighest
-  */
 function highestCount(array) {
   let countHighest = 0;
-  for (index1 = 0; index1 <= array.length; index1 += 1) {
+  for (let index1 = 0; index1 <= array.length; index1 += 1) {
     if (array[index1] === findHighestNumber(array)) {
       countHighest += 1;
     }
   }
   return countHighest;
 }
-/* Teste da função */
 /* console.log(highestCount([9, 1, 2, 3, 9, 5, 7])); */
 
 // Desafio 7
-/* Recebe 3 posições numericas que representa a posição de cada animal. A ideia  e ver a distância numerica entre as posições e devolver o gato que estiver mais próximo do rato.
-Para isso tenho que comparar a distância do gato1 com o rato, gato2 com o rato e se os gatos estão na mesma distância.
-Se gato 1 estiver mais próximo retorna gato1.
-Se gato2 estiver mais próximo retorna gato 2.
-Se os gatos estiverem na mesma distância retorna frase "os gatos trombam e o rato foge". */
-
+/* 
+  Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que ambos estão atrás de um rato chamado mouse. Imagine que cada um dos três animais está em uma posição representada por um número. Sabendo disso, crie uma função chamada catAndMouse que, ao receber a posição de mouse, cat1 e cat2, nessa ordem, calcule as distâncias entre o rato e os gatos e retorne qual dos felinos irá alcançar o rato primeiro (sendo aquele que estará mais perto). Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades, sua função deverá retornar "cat2". Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam e o rato foge".
+  O que será verificado:
+  Retorne a string 'cat2' caso a função catAndMouse receba o parâmetros onde gato cat2 esteja a 2 unidades de distância do rato e cat1 esteja a 3 unidades de distância do rato
+  Retorne a string 'cat1' caso a função catAndMouse receba o parâmetros onde gato cat1 esteja a 6 unidades de distância do rato e cat2 esteja a 12 unidades de distância do rato
+  Retorne a string 'os gatos trombam e o rato foge' caso a função catAndMouse receba o parâmetros onde gatos estejam na mesma distância do rato
+*/
 function betweenDistance(mouse, cat) {
   return Math.abs((mouse -= cat));
 }
 /* console.log(betweenDistance(1, 7)); */
-
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Distance = betweenDistance(mouse, cat1);
   let cat2Distance = betweenDistance(mouse, cat2);
@@ -95,15 +87,20 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   }
 }
-/* console.log(catAndMouse(1, 2, 2)); ------------------------------*/
+/* console.log(catAndMouse(1, 2, 2)); */
 
-/* Desafio 8
-Jogo FizzBuzzBug
-Recebe um array.
-Se o numero for divisével por 3 - fizz
-Se o numero for divisével por 5 - Buzz
-Se o numero for divisével por 3 e por 5 -FizzBuzz
-Se o numero nõ for divisével nem por 3 e nem por 5 - Bug
+//Desafio 8
+/*
+  Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
+  Para cada número da Array que seja divisível apenas por 3, apresente uma string "fizz";
+  Para cada número da Array que seja divisível apenas por 5, apresente uma string "buzz";
+  Caso o número seja divisível por 3 e 5, retorne a string "fizzBuzz";
+  Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
+  Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
+  O que será verificado:
+  Retorne as strings ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] quando é passado os parâmetros [2, 15, 7, 9, 45] para função fizzBuzz
+  Retorne as strings ['bug!', 'fizz'] quando é passado os parâmetros [7, 9] para função fizzBuzz
+  Retorne as strings ['fizz', 'buzz'] quando é passado os parâmetros [9, 25] para função fizzBuzz
 */
 function fizzBuzz(array) {
   let game = [];
@@ -113,10 +110,13 @@ function fizzBuzz(array) {
       word += 'fizz';
     }
     if (array[index] % 5 === 0) {
-      word += 'Buzz';
+      word += 'buzz';
+    }
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      word = 'fizzBuzz';
     }
     if (array[index] % 3 !== 0 && array[index] % 5 !== 0) {
-      word += 'bug';
+      word += 'bug!';
     }
     game.push(word);
   }
@@ -125,24 +125,20 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-/* O que será verificado:
-Retorne uma string codificada quando a função encode for utilizada
-Retorne uma string decodificada quando a função decode for utilizada
-A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
-
-O que será verificado:
-Retorne uma string codificada quando a função encode for utilizada
-Retorne uma string decodificada quando a função decode for utilizada
-*/
-/* Crie duas funções: a primeira deverá se chamar encode e recebe uma string como parâmetro, */
-function encode(encodeStr) {
-  /*   deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+/* 
+  Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
   a -> 1
   e -> 2
   i -> 3
   o -> 4
   u -> 5
-  Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!". */
+  Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!".
+  A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
+  O que será verificado:
+  Retorne uma string codificada quando a função encode for utilizada
+  Retorne uma string decodificada quando a função decode for utilizada
+*/
+function encode(encodeStr) {
   let msg = '';
   for (let index = 0; index < encodeStr.length; index += 1) {
     switch (encodeStr[index]) {
@@ -168,9 +164,6 @@ function encode(encodeStr) {
   return msg;
 }
 /* console.log(encode('hi there!')); */
-
-/* A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
- */
 function decode(decodeStr) {
   let msg = '';
   for (let index = 0; index < decodeStr.length; index += 1) {
