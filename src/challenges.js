@@ -11,7 +11,7 @@ function calcArea(base, height) {
 console.log(calcArea(5, 10));
 
 // Desafio 3
-//https://www.w3schools.com/jsref/jsref_split.asp // 
+// https://www.w3schools.com/jsref/jsref_split.asp //
 function splitSentence(sentence) {
   return sentence.split(' ');
 }
@@ -25,15 +25,16 @@ console.log(concatName(['Vivian', 'Maria', 'Braga']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins *  3 + ties;
+  return wins * 3 + ties;
 }
 console.log(footballPoints(14, 8));
 
 // Desafio 6
-// Ajuda do aluno Luiz Wendel,  que demosntrou com muita sapiência que uma função nao consegue chamar uma varável contida em função, e que pra isso era necessario nomear uma variável com o retorno da funcao para dai, sim, a mesma ser usado na funcao desejada.
+// Ajuda do aluno Luiz Wendel,  que demonstrou com muita sapiência que uma função nao consegue chamar uma varável contida em função, e que pra isso era necessario nomear uma variável com o retorno da funcao para dai, sim, a mesma ser usado na funcao desejada.
 function highestCount(numbers) {
   let ammount = 0;
-  let highest = highestNumber(numbers);
+  let highest = 0;
+  highest = highestNumber(numbers);
   for (let index2 = 0; index2 < numbers.length; index2 += 1) {
     if (highest === (numbers[index2])) {
       ammount += 1;
@@ -73,7 +74,7 @@ console.log(catAndMouse([100, 104, 103]));
 function fizzBuzz(numbers) {
   let fizzBuzz1 = [];
   for (let index = 0; index < numbers.length; index += 1) {
-    if ((numbers[index]) % 5 === 0 && (numbers[index]) % 3 === 0 ) {
+    if ((numbers[index]) % 5 === 0 && (numbers[index]) % 3 === 0) {
       fizzBuzz1.push('fizzBuzz');
     } else if ((numbers[index] % 3) === 0) {
       fizzBuzz1.push('fizz');
@@ -87,7 +88,7 @@ function fizzBuzz(numbers) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/joinfunction encode() { //
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/joinfunction encode() { //
 function encode(sentence) {
   let assembSentence = [];
   for (let index = 0; index < sentence.length; index += 1) {
@@ -112,19 +113,19 @@ console.log(encode('hoje vai chover'));
 function decode(sentence) {
   let originalSentence = [];
   for (let index = 0; index < sentence.length; index += 1) {
-  if (sentence[index] === '1') {
-    originalSentence.push('a');
-      } else if (sentence[index] === '2') {
-        originalSentence.push('e');
-      } else if (sentence[index] === '3') {
-        originalSentence.push('i');
-      } else if (sentence[index] === '4') {
-        originalSentence.push('o');
-      } else if (sentence[index] === '5') {
-        originalSentence.push('u');
-      } else {
-        originalSentence.push(sentence[index]);
-      }
+    if (sentence[index] === '1') {
+      originalSentence.push('a');
+    } else if (sentence[index] === '2') {
+      originalSentence.push('e');
+    } else if (sentence[index] === '3') {
+      originalSentence.push('i');
+    } else if (sentence[index] === '4') {
+      originalSentence.push('o');
+    } else if (sentence[index] === '5') {
+      originalSentence.push('u');
+    } else {
+      originalSentence.push(sentence[index]);
+    }
   }
   return originalSentence.join('');
 }
