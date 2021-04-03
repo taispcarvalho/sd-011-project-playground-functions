@@ -17,19 +17,26 @@ console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let space = ' ';
+  let sentence = string.split(space);
+  return sentence;
 }
+console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let newArray = `${array[array.length - 1]}, ${array[0]}`;
+  return newArray
 }
+console.log(concatName(['foguete', 'não', 'tem', 'ré']))
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+  let game = wins * 3 + ties * 1;
+  return game;
 }
+console.log(footballPoints(14, 8))
 
 // Desafio 6
 function highestCount() {
