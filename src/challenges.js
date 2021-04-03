@@ -14,8 +14,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
@@ -24,20 +24,28 @@ function footballPoints() {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  const sortedNumbers = (numbers.sort());
+  let highestNumber = sortedNumbers[sortedNumbers.length -1];
+  let count = 0;
+  
+  for (let index in numbers) {
+    
+
+  }
+  
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = cat1 - mouse;
-  let distanceCat2 = cat2 - mouse;
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
   }
   if (distanceCat2 < distanceCat1) {
     return 'cat2';
-  } 
+  }
   return 'os gatos trombam e o rato foge';
 }
 
@@ -57,6 +65,7 @@ function fizzBuzz(array) {
   }
   return numeros;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
@@ -67,8 +76,12 @@ function encode(string) {
     o: 4,
     u: 5,
   };
-  const words = string.split('').map((key) =>
-    substitute[key] ? substitute[key] : key);
+  const words = stringN.split('').map((key) => {
+    if (substitute[key]) {
+      return substitute[key];
+    }
+    return key;
+  });
   return words.join('');
 }
 
@@ -85,7 +98,7 @@ function decode(stringN) {
       return substitute[key];
     }
     return key;
-    });
+  });
   return numbers.join('');
 }
 
