@@ -45,7 +45,8 @@ const counterValidation = (phone, count) => {
   let invalid = false;
   let sorted = phone.slice().sort((a, b) => a - b);
   count = 0;
-  for (let i = 0; i < sorted.length - 1; i += 1) { // thanks to Stackoverflow, I have learn how to count the repeated numbers without using two fors loops
+  for (let i = 0; i < sorted.length - 1; i += 1) { /* thanks to Stackoverflow, I have learn how to count the repeated
+                                                      numbers without using two fors loops */
     if (sorted[i] === sorted[i + 1]) count += 1;
     if (count >= 3) invalid = true;
   }
@@ -60,7 +61,7 @@ function generatePhoneNumber(phone) {
   let result;
   let count = 0;
   if (lengthValidation(phone)) {
-    result = 'Array com tamanho incorreto';
+    result = 'Array com tamanho incorreto.';
   } else if (digitValidation(phone)) {
     result = 'não é possível gerar um número de telefone com esses valores';
   } else if (counterValidation(phone, count)) {
@@ -72,8 +73,6 @@ function generatePhoneNumber(phone) {
   return result;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 8, 9]));
-
 // Desafio 12
 // References:
 // Math.abs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
@@ -82,7 +81,8 @@ function triangleCheck(lineA, lineB, lineC) {
   lines.push(Math.abs(lineA), Math.abs(lineB), Math.abs(lineC)); // just add the parameters (lines) to the array
   lines.sort((a, b) => a - b); // if you sort the lines, you don't need to test it separately, you can reduce it to one single test
 
-  if ((lines[0] + lines[1]) < lines[2]) { // after all, you don't need to test the (line[0] - line[1]) < line[2], if the first premisse is false, the second is false too.
+  if ((lines[0] + lines[1]) < lines[2]) { /* after all, you don't need to test the (line[0] - line[1]) < line[2],
+                                             if the first premisse is false, the second is false too. */
     return false;
   } return true;
 }
