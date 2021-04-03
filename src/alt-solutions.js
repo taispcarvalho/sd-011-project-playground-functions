@@ -115,4 +115,5 @@ function generatePhoneNumber(numbers) {
   return phoneNumber.replace(/\d{2}/g, formatPhoneNumber);
 }
 
+console.log(decode(encode('hi there!')));
 console.log(generatePhoneNumber([1, 1, 9, 5, 9, 8, 5, 2, 7, 2, 3]));
