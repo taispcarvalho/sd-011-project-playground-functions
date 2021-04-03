@@ -18,6 +18,8 @@ function techList(tech, name) {
 // D11 Auxiliary Functions
 // References:
 // Arrow functions: https://www.w3schools.com/js/js_arrow_function.asp
+// slice(): https://www.w3schools.com/jsref/jsref_slice_array.asp
+// sort() with function for numbers: https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
 
 // I used Arrow Functions just to try to lessen the code's complexity, and to learn how to use it, no particular use.
 const lengthValidation = (phone) => {
@@ -37,7 +39,7 @@ const digitValidation = (phone) => {
 
 const counterValidation = (phone) => {
   let count = 0;
-  let auxPhone = phone.sort((a, b) => a - b);
+  let auxPhone = phone.slice().sort((a, b) => a - b);
 
   for (let i of auxPhone) {
     if (auxPhone[i] === auxPhone[i + 1]) {
@@ -71,7 +73,6 @@ function generatePhoneNumber(phone) {
 // Desafio 12
 // References:
 // Math.abs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
-// sort() with function for numbers: https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
 function triangleCheck(lineA, lineB, lineC) {
   let lines = []; // empty array for lines of the triangle
   lines.push(Math.abs(lineA), Math.abs(lineB), Math.abs(lineC)); // just add the parameters (lines) to the array
