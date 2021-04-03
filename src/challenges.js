@@ -8,8 +8,7 @@ function calcArea(base, height) {
   return  base*height/2
 }
 // Desafio 3
-function splitSentence()  {
-let splitSentence = " go, Trybe"
+function splitSentence(go, Trybe)  {
 return splitSentence.split(' ')
 }
 
