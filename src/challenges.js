@@ -67,14 +67,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzCheck(number) {
   if (number % 5 === 0 && number % 3 === 0) {
     return 'fizzBuzz';
-  } 
+  }
   if (number % 5 === 0) {
     return 'buzz';
-  } 
+  }
   if (number % 3 === 0) {
     return 'fizz';
   }
-  return 'bug!';  
+  return 'bug!';
 }
 
 function fizzBuzz(array) {
