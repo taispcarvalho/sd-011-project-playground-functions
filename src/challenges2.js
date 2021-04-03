@@ -55,13 +55,23 @@ function generatePhoneNumber(genNum) {
     sNum = sNum.replace(regex, '($1) $2-$3');
   }
   return sNum;
-}
-console.log(generatePhoneNumber([1, 1, 2, 3, 4, 5, 6, 7, 9, 9, 8], 9));
+} 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+// Meus agracecimentos aos amigos que me ajudaram a entender a lógica por trás deste desafio.
+// J. Felizzola & Vitor Cardoso.
+function triangleCheck(lineA, lineB, lineC) {
+  
+  let c1 = Math.abs(lineB + lineC);
+  let c2 = Math.abs(lineB - lineC);
+
+  if (lineA < c1 && lineA > c2) {
+    return true;
+  } else {
+    return false;
+  }
 }
+console.log(triangleCheck(2, 13, 2));
 
 // Desafio 13
 function hydrate() {
