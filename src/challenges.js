@@ -25,7 +25,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + (ties * 1);
+  return wins * 3 + ties * 1;
 }
 /* console.log(footballPoints(0, 0));  */
 
@@ -72,20 +72,20 @@ Se gato 1 estiver mais próximo retorna gato1.
 Se gato2 estiver mais próximo retorna gato 2.
 Se os gatos estiverem na mesma distância retorna frase "os gatos trombam e o rato foge". */
 
-function betweenDistance (mouse, cat){
-    return Math.abs(mouse -= cat); 
-  }    
+function betweenDistance(mouse, cat) {
+  return Math.abs((mouse -= cat));
+}
 /* console.log(betweenDistance(1, 7)); */
 
-function catAndMouse(mouse, cat1, cat2){
-  let cat1Distance = betweenDistance (mouse, cat1);
-  let cat2Distance = betweenDistance (mouse, cat2);
-  if (cat1Distance === cat2Distance){
-    return "os gatos trombam e o rato foge";
-  }else if (cat2Distance < cat1Distance){
-    return "Cat2"; 
-  }else{
-    return "cat1";
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Distance = betweenDistance(mouse, cat1);
+  let cat2Distance = betweenDistance(mouse, cat2);
+  if (cat1Distance === cat2Distance) {
+    return 'os gatos trombam e o rato foge';
+  } else if (cat2Distance < cat1Distance) {
+    return 'Cat2';
+  } else {
+    return 'cat1';
   }
 }
 /* console.log(catAndMouse(1, 2, 2)); ------------------------------*/
@@ -100,25 +100,22 @@ Se o numero nõ for divisével nem por 3 e nem por 5 - Bug
 */
 function fizzBuzz(array) {
   let game = [];
-  for (let index = 0; index < array.length; index += 1){
+  for (let index = 0; index < array.length; index += 1) {
     let word = '';
-    if (array[index] % 3 === 0){
-      word += "fizz";
+    if (array[index] % 3 === 0) {
+      word += 'fizz';
     }
-    if (array[index] % 5 === 0){
+    if (array[index] % 5 === 0) {
       word += 'Buzz';
     }
-    if (array[index] % 3 !== 0 && array[index] % 5 !== 0){
-      word += 'Bug';
+    if (array[index] % 3 !== 0 && array[index] % 5 !== 0) {
+      word += 'bug';
     }
     game.push(word);
   }
   return game;
 }
-/* console.log(fizzBuzz([9, 25])); */
-
-
-
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 /* O que será verificado:
@@ -132,16 +129,16 @@ Retorne uma string decodificada quando a função decode for utilizada
 */
 /* Crie duas funções: a primeira deverá se chamar encode e recebe uma string como parâmetro, */
 function encode(encodeStr) {
-/*   deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+  /*   deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
   a -> 1
   e -> 2
   i -> 3
   o -> 4
   u -> 5
   Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!". */
-  let msg = "";
-  for (let index =0; index < encodeStr.length; index += 1){
-    switch (encodeStr[index]){
+  let msg = '';
+  for (let index = 0; index < encodeStr.length; index += 1) {
+    switch (encodeStr[index]) {
       case 'a':
         msg += '1';
         break;
@@ -159,7 +156,7 @@ function encode(encodeStr) {
         break;
       default:
         msg += encodeStr[index];
-    } 
+    }
   }
   return msg;
 }
@@ -168,9 +165,9 @@ function encode(encodeStr) {
 /* A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
  */
 function decode(decodeStr) {
-  let msg = "";
-  for (let index =0; index < decodeStr.length; index += 1){
-    switch (decodeStr[index]){
+  let msg = '';
+  for (let index = 0; index < decodeStr.length; index += 1) {
+    switch (decodeStr[index]) {
       case '1':
         msg += 'a';
         break;
@@ -188,7 +185,7 @@ function decode(decodeStr) {
         break;
       default:
         msg += decodeStr[index];
-    } 
+    }
   }
   return msg;
 }
