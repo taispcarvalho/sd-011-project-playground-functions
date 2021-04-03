@@ -90,8 +90,8 @@ function encode(phrase) {
   let target = 'aeiou';
   let encodeKey = '12345';
 
-  for (let index = 0; index < phrase.length; index += 1) {
-    for (let index2 = 0; index2 < target.length; index += 1) {
+  for (let index in phrase) {
+    for (let index2 in target) {
       if (phrase[index] === target[index2]) {
         phrase = phrase.replace(phrase[index], encodeKey[index2]);
       }
