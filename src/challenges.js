@@ -2,7 +2,6 @@
 function compareTrue(param1, param2) {
   return param1 && param2;
 }
-
 /* console.log(compareTrue(true, false)); */
 
 // Desafio 2
@@ -18,24 +17,32 @@ function splitSentence(str) {
 /* console.log(splitSentence('foguete')); */
 
 // Desafio 4
+/*
+  Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
+  O que será verificado:
+  Retorne 'Paolillo, Lucas' quando o parâmetro passado na funcão concatName seja ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+  Retorne 'ré, foguete' quando o parâmetro passado na funcão concatName seja ['foguete', 'não', 'tem', 'ré']
+  Retorne 'captain, captain' quando o parâmetro passado na funcão concatName seja ['captain', 'my', 'captain'] 
+*/
 function concatName(array) {
-  return array[array.length - 1] + ', ' + array[0];
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
-/* console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])); */
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints(wins, ties) {
+function footballPoints(wins,ties) {
   return wins * 3 + ties * 1;
 }
-/* console.log(footballPoints(0, 0));  */
+/* console.log(footballPoints(0, 0));*/
 
-/* Desafio 6
- Retorne a quantidade de vezes que o maior deles se repete.
-Primeiro achar o maior numero
-  - Criar uma variável highestNumber = 0.
-  - PERCORRER o array de entrada com o for.
-  - [Acha o maior numero.] Salvar na variável maiorNumero o maior entre o primeiro numero do array vs variável maior numero.
-  - No proximo loop comparar maior numero com proximo item do array.(se o segundo for maior que var maiorNumero salva o segundo. Se não, faz nada. Fazer isso para todo o arrei.) Fazer a dinamica disso com o index do for.*/
+// Desafio 6
+/*
+  Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a quantidade de vezes que o maior deles se repete.Exemplo: caso o parâmetro de highestCount seja uma array com valores [9, 1, 2, 3, 9, 5, 7], a função deverá retornar 2, que é a quantidade de vezes que o número 9 (maior número do array) se repete.
+  O que será verificado:
+  Retorne 2 quando o parâmetro passado na funcão highestCount seja [9, 1, 2, 3, 9, 5, 7]
+  Retorne 1 quando o parâmetro passado na funcão highestCount seja [0, 4, 4, 4, 9, 2, 1]
+  Retorne 3 quando o parâmetro passado na funcão highestCount seja [0, 0, 0]
+  */
 function findHighestNumber(array1) {
   let highestNumber = 0;
   for (index = 0; index <= array1.length; index += 1) {
