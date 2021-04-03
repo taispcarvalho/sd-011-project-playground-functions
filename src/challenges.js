@@ -30,10 +30,11 @@ function highestCount(numbers) {
   let count = 0;
   
   for (let index in numbers) {
-    
-
+    if (numbers[index] === highestNumber) {
+      count += 1;
+    }
   }
-  
+  return count
 }
 
 // Desafio 7
