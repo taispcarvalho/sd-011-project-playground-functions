@@ -18,7 +18,7 @@ function checkIsElevenNumbers(GrossPhone) {
 function checkOutsideRange(GrossPhone) {
   let checker = true;
   for (let index = 0; index < 11; index += 1) {
-    if (GrossPhone[index] > 9 || GrossPhone < 0) {
+    if (GrossPhone[index] > 9 || GrossPhone[index] < 0) {
       checker = false;
       break;
     }
@@ -62,7 +62,7 @@ function fillTheNumber(GrossPhone) {
   for (let index = 0; index < 2; index += 1) {
     phoneNumber.push(GrossPhone[index]);
   }
-  phoneNumber.push(')');
+  phoneNumber.push(') ');
   for (let index = 2; index < 7; index += 1) {
     phoneNumber.push(GrossPhone[index]);
   }
@@ -70,14 +70,13 @@ function fillTheNumber(GrossPhone) {
   for (let index = 7; index < 11; index += 1) {
     phoneNumber.push(GrossPhone[index]);
   }
-  return console.log(phoneNumber.join(''));
+  return phoneNumber.join('');
 }
 function generatePhoneNumber(GrossPhone) {
   if (checkIfNumberIsValid(GrossPhone) === true) {
-    fillTheNumber(GrossPhone);
-  } else {
-    return checkIfNumberIsValid(GrossPhone);
+    return fillTheNumber(GrossPhone);
   }
+  return checkIfNumberIsValid(GrossPhone);
 }
 
 // Desafio 12
