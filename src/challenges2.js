@@ -45,7 +45,6 @@ function generatePhoneNumber(number1) {
   }
   return myNumbers;
   }
-console.log(generatePhoneNumber([1, 9, 3, 4, 6, 6, 7, 5, 9, 0, 1]));
 
 // Desafio 12
 
