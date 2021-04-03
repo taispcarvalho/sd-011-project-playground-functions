@@ -71,9 +71,9 @@ function fizzBuzz(value) {
   for (let index = 0; index < value.length; index += 1) {
     if (divisionFor(value[index], 3) && divisionFor(value[index], 5)) {
       ret.push('fizzBuzz');
-    } if (divisionFor(value[index], 3)) {
+    } else if (divisionFor(value[index], 3)) {
       ret.push('fizz');
-    } if (divisionFor(value[index], 3)) {
+    } else if (divisionFor(value[index], 3)) {
       ret.push('buzz');
     } else {
       ret.push('bug!');
@@ -81,6 +81,7 @@ function fizzBuzz(value) {
   }
   return ret;
 }
+console.table(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(value) {
