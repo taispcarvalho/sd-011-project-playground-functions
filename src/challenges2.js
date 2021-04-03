@@ -63,19 +63,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate(array) {
+function hydrate(value) {
   /*como encontrar números em strings foi retirado de https://stackoverflow.com/questions/10003683/how-can-i-extract-a-number-from-a-string-in-javascript
   como retirar valores de string foi retirado de https://www.tutorialspoint.com/how-to-remove-text-from-a-string-in-javascript*/ 
-  let aux = array;
+  let aux = value;
   let sum = 0;
   while (aux.match(/\d+/) != null) {
     sum += parseInt(aux.match(/\d+/));
-    aux = aux.substr(aux.match(/\d+/).index +1);
+    aux = aux.substr(aux.match(/\d+/).index + 1);
   }
   if (sum === 1) {
     return `${sum} copo de água`;
   } return `${sum} copos de água`;
 }
+console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
