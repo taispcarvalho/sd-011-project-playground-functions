@@ -134,56 +134,23 @@ function fizzBuzz(array) {
  O que será verificado:
  Retorne uma string codificada quando a função encode for utilizada
  Retorne uma string decodificada quando a função decode for utilizada */
-function encode(encodeStr) {
-  let msg = '';
-  for (let index = 0; index < encodeStr.length; index += 1) {
-    switch (encodeStr[index]) {
-      case 'a':
-        msg += '1';
-        break;
-      case 'e':
-        msg += '2';
-        break;
-      case 'i':
-        msg += '3';
-        break;
-      case 'o':
-        msg += '4';
-        break;
-      case 'u':
-        msg += '5';
-        break;
-      default:
-        msg += encodeStr[index];
-    }
-  }
-  return msg;
+ function encode(encodeStr) {
+  encodeStr = encodeStr.replace(/a/g, '1')
+  encodeStr = encodeStr.replace(/e/g, '2')
+  encodeStr = encodeStr.replace(/i/g, '3')
+  encodeStr = encodeStr.replace(/o/g, '4')
+  encodeStr = encodeStr.replace(/u/g, '5')
+  return encodeStr;
 }
 /* console.log(encode('hi there!')); */
+
 function decode(decodeStr) {
-  let msg = '';
-  for (let index = 0; index < decodeStr.length; index += 1) {
-    switch (decodeStr[index]) {
-      case '1':
-        msg += 'a';
-        break;
-      case '2':
-        msg += 'e';
-        break;
-      case '3':
-        msg += 'i';
-        break;
-      case '4':
-        msg += 'o';
-        break;
-      case '5':
-        msg += 'u';
-        break;
-      default:
-        msg += decodeStr[index];
-    }
-  }
-  return msg;
+  decodeStr = decodeStr.replace(/1/g,'a')
+  decodeStr = decodeStr.replace(/2/g,'e')
+  decodeStr = decodeStr.replace(/3/g,'i')
+  decodeStr = decodeStr.replace(/4/g,'o')
+  decodeStr = decodeStr.replace(/5/g,'u')
+  return decodeStr;
 }
 /* console.log(decode('h3 th2r2!')); */
 
