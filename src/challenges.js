@@ -23,10 +23,11 @@ return result;
 }
 
 // Desafio 4
-function concatName() {
-  let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-  names.lastIndexOf(searchElement[fromIndex = names.length - 1]);
-  return names;
+
+function concatName(names) {
+ let resultado = "";
+ resultado = names[names.length -1] + names[0];
+ return resultado;
 }
 
 // Desafio 5
