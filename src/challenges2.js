@@ -104,23 +104,23 @@ function generatePhoneNumber(array) {
     return msgLength;
   } else if (errorNumber(array) || repeatedNumber(array)) {
     return msgNumber;
-  } else {
-    let phoneNumber = '(';
-    phoneNumber += array[0];
-    phoneNumber += array[1];
-    phoneNumber += ') ';
-    phoneNumber += array[2];
-    phoneNumber += array[3];
-    phoneNumber += array[4];
-    phoneNumber += array[5];
-    phoneNumber += array[6];
-    phoneNumber += '-';
-    phoneNumber += array[7];
-    phoneNumber += array[8];
-    phoneNumber += array[9];
-    phoneNumber += array[10];
-    return phoneNumber;
   }
+  let phoneNumber = '(';
+  phoneNumber += array[0];
+  phoneNumber += array[1];
+  phoneNumber += ') ';
+  phoneNumber += array[2];
+  phoneNumber += array[3];
+  phoneNumber += array[4];
+  phoneNumber += array[5];
+  phoneNumber += array[6];
+  phoneNumber += '-';
+  phoneNumber += array[7];
+  phoneNumber += array[8];
+  phoneNumber += array[9];
+  phoneNumber += array[10];
+  return phoneNumber;
+
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1])); // Menor que zero.
@@ -198,9 +198,9 @@ function hydrate(string) {
     return `${drinkSum} copos de água`;
   }
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
- console.log(hydrate('1 cachaça, 5 copos de vinho '));
- console.log(hydrate('1 cerveja'));
+/* console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+console.log(hydrate('1 cachaça, 5 copos de vinho '));
+console.log(hydrate('1 cerveja')); */
 
 module.exports = {
   generatePhoneNumber,
