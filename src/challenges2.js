@@ -98,11 +98,11 @@ function repeatedNumber(array) {
 }
 function generatePhoneNumber(array) {
   let msgLength = 'Array com tamanho incorreto.';
-  let msgNumber ='não é possível gerar um número de telefone com esses valores';
+  let msgNumber = 'não é possível gerar um número de telefone com esses valores';
 
   if (errorArrayLength(array)) {
     return msgLength;
-  } else if (errorNumber(array)|| repeatedNumber(array)) {
+  } else if (errorNumber(array) || repeatedNumber(array)) {
     return msgNumber;
   } else {
     let phoneNumber = '(';
@@ -122,11 +122,11 @@ function generatePhoneNumber(array) {
     return phoneNumber;
   }
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1])); //Menor que zero.
-console.log(generatePhoneNumber([1, 2, 13, 4, 5, 6, 7, 8, 9, 0, 1])); //maior que 9.
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 7, 7, 0, 1])); //repete numero.
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); //Retornar (12) 34567-8901.
+/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1])); // Menor que zero.
+console.log(generatePhoneNumber([1, 2, 13, 4, 5, 6, 7, 8, 9, 0, 1])); // maior que 9.
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 7, 7, 0, 1])); // repete numero.
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // Retornar (12) 34567-8901. */
 
 // Desafio 12
 /* Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
@@ -139,7 +139,6 @@ console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); //Retornar 
  Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois
  Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas
  Retorne true quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas */
-
 function triangleCheck(lineA, lineB, lineC) {
   let sumLineA = lineB + lineC;
   let sumLineB = lineC + lineA;
@@ -149,13 +148,10 @@ function triangleCheck(lineA, lineB, lineC) {
   let subLineB = Math.abs(lineC - lineA);
   let subLineC = Math.abs(lineA - lineB);
 
-  if (lineA > sumLineA || lineB > sumLineB || lineC > sumLineC) {
-    return false;
-  }
-  if (lineA < subLineA || lineB < subLineB || lineC < subLineC) {
-    return false;
+  if (lineA > sumLineA || lineB > sumLineB || lineC > sumLineC || lineA < subLineA || lineB < subLineB || lineC < subLineC) {
+    return false; 
   } else {
-    return true;
+  return true;
   }
 }
 /* console.log(triangleCheck(10, 14, 8)); */
@@ -196,7 +192,7 @@ function extractNumbers(string) {
 
 function hydrate(string) {
   let drinkSum = 0;
-  for (number of extractNumbers(string)) {
+  for ( let number of extractNumbers(string)) {
     drinkSum += number;
   }
   // Montar frase concatenando total de copos e retornar ela para a função

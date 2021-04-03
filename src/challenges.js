@@ -116,7 +116,7 @@ function fizzBuzz(array) {
     }
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       game[index] = 'fizzBuzz';
-    }    
+    }
   }
   return game;
 }
