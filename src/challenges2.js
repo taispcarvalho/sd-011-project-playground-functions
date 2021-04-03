@@ -25,7 +25,7 @@ function makePhoneNumber(numberArray) {
   for (let index = 0; index < 2; index += 1) {
     phoneNumber += numberArray[index];
   }
-  phoneNumber += ')';
+  phoneNumber += ') ';
   for (let index = 2; index < 7; index += 1) {
     phoneNumber += numberArray[index];
   }
@@ -68,7 +68,7 @@ function generatePhoneNumber(phoneNumberArray) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
 }
 
