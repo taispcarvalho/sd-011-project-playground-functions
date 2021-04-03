@@ -66,8 +66,12 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  let waterCup = string.replace(/\D/g, "");
-  return console.log(waterCup + ' copos de água')
+  let numbersArray = string.match(/\d+/g);
+  let numberAdiction = 0;
+  for (index = 0; index < numbersArray.length; index += 1) {
+    numberAdiction += parseInt(numbersArray[index]);
+  }
+  return numberAdiction + ' copos de água'
 }
 
 module.exports = {
