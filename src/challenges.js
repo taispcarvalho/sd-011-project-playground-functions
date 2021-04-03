@@ -13,7 +13,7 @@ function splitSentence(phrase) {
 }
 // Desafio 4 -FEITO
 function concatName(arrayName) {
-  return arrayName[arrayName.length - 1].concat(', ' + arrayName[0]);
+  return arrayName[arrayName.length - 1]+(', ' + arrayName[0]);
 }
 // Desafio 5 -FEITO
 function footballPoints(wins, ties) {
