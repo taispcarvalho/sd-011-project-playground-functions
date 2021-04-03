@@ -19,9 +19,9 @@ return arrayResult
 // Desafio 11
 function generatePhoneNumber(numberPhone) {
   let numberOrganized = "(";
-  let count = 1;
-  for (let index = 0; index < numberPhone.length; index+=1){
-    for (let index2 = 1; index2 < numberPhone.length; index2+=1){
+  let count = 0;
+  for (let index = 0; index < numberPhone.length; index += 1){
+    for (let index2 = 0; index2 < numberPhone.length; index2 += 1){
       if (numberPhone[index] === numberPhone[index2]){
       count += 1;
       }
@@ -30,7 +30,7 @@ function generatePhoneNumber(numberPhone) {
       numberOrganized = "não é possível gerar um número de telefone com esses valores";
       break;
     } else {
-      count = 1;
+      count = 0;
     }
     if (numberPhone[index] < 0 || numberPhone[index] > 9){
       numberOrganized = "não é possível gerar um número de telefone com esses valores";
