@@ -37,9 +37,9 @@ function generatePhoneNumber(numberPhone) {
       break;
     }
     if(index === 2){
-    numberOrganized += ')';
+    numberOrganized += ') ';
    }
-   if(index === 6){
+   if(index === 7){
      numberOrganized += '-';
    }
    numberOrganized += (numberPhone[index]);
