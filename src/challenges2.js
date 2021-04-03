@@ -32,9 +32,8 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   } else if (lineC > lineA + lineB || lineC < Math.abs(lineA - lineB)) {
     return false;
-  } else {
-    return true;
   }
+    return true;
 }
 console.log(triangleCheck(28, 14, 14));
 
