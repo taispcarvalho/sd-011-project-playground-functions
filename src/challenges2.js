@@ -103,15 +103,15 @@ function checkDiffSides(key, numbers) {
 
 function triangleCheck(lineA, lineB, lineC) {
   let numbers = [lineA, lineB, lineC];
-  for (let key in numbers) {
-    let valid = sumSides(numbers[key], numbers) && checkDiffSides(parseInt(key, 10), numbers);
+  for (let index = 0; index < numbers.length; index += 1) {
+    let valid = sumSides(numbers[index], numbers) && checkDiffSides(index, numbers);
     if (!valid) {
       return false;
     }
   }
   return true;
 }
-
+triangleCheck(8, 14, 10);
 // Desafio 13
 function hydrate() {
   // seu código aqui
