@@ -46,14 +46,14 @@ function highestCount(numbersArray) {
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = Math.abs(cat1 - mouse);
   let dist2 = Math.abs(cat2 - mouse);
-  let winner;
+  let winner;  
 
-  winner = (dist1 < dist2) ? winner = 'cat1' : winner = 'cat2';
-  if (dist1 === dist2) {
-    winner = 'os gatos trombam o rato foge';
-  }
+  
+  winner = (dist1 === dist2) ? winner = 'os gatos trombam e o rato foge' : ((dist1 < dist2) ? winner = 'cat1' : winner = 'cat2'); 
+
   return winner;
 }
+
 
 // Desafio 8
 const fizzBuzzSolution = (array) => {
