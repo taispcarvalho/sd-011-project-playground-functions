@@ -11,7 +11,6 @@ function techList(tech, name) {
       result.push({ tech: list[i], name }); // push the object into the list
     }
   } else result = 'Vazio!';
-
   return result;
 }
 
