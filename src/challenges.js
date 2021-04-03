@@ -64,7 +64,7 @@ function calcFizzBuzz(number) {
   if (number % 5 === 0) {
     return 'buzz';
   }
-  return 'bug!git';
+  return 'bug';
 }
 
 function fizzBuzz(number) {
