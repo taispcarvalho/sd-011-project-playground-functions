@@ -54,11 +54,14 @@ function generatePhoneNumber(array11) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let ar12 = [lineA, lineB, lineC];
-  for (let i = 0; i < ar12.length; i += 1) {
-    for (let j = i + 1; i < ar12.length; i += 1) {
-      return ar12[i] + ar12[j] > ar12[2 - i] && Math.abs(ar12[i] - ar12[j]) < ar12[2 - i];
+  let i = 0;
+  let j = i + 1;
+  for (i = 0; i < ar12.length; i += 1) {
+    if (ar12[i] + ar12[j] > ar12[2 - i] && Math.abs(ar12[i] - ar12[j]) < ar12[2 - i]) {
+      return true;
     }
   }
+  return false;
 }
 
 // Desafio 13
