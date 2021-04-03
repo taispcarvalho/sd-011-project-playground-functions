@@ -68,9 +68,45 @@ function generatePhoneNumber(phoneNumberArray) {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  // seu código aqui
+function triangleSum(a, b, c) {
+  let exist = false;
+  let bc = Math.abs(b - c);
+  let ac = Math.abs(a - c);
+  let ab = Math.abs(a - b);
+  let sumbc = b + c;
+  let sumac = a + c;
+  let sumab = a + b;
+
+  if (bc < a && a < sumbc) {
+    exist = true;
+  } else {
+    return false;
+  }
+
+  if (ac < b && b < sumac) {
+    exist = true;
+  } else {
+    return false;
+  }
+
+  if (ab < c && c < sumab) {
+    exist = true;
+  } else {
+    return false;
+  }
+
+  return exist;
 }
+
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA <= 0 || lineB <= 0 || lineC <= 0) {
+    return false;
+  }
+
+  let exists = triangleSum(lineA, lineB, lineC);
+  return exists;
+}
+
 
 // Desafio 13
 function hydrate() {
