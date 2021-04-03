@@ -37,19 +37,20 @@ const digitValidation = (phone) => {
   return invalid;
 };
 
+// How to use forEach to count duplicate numbers: https://stackoverflow.com/questions/19395257/how-to-count-duplicate-value-in-an-array-in-javascript
+// Convert Object to Array = https://www.samanthaming.com/tidbits/76-converting-object-to-array/
+// Cause using two 'for loops' for it cause Code Complexibility's problem
 const counterValidation = (phone) => {
-  let count = 0;
-  let auxPhone = phone.slice();
-  auxPhone = auxPhone.sort((a, b) => a - b);
+  let count = {};
 
-  for (let i of auxPhone) {
-    if (auxPhone[i] === auxPhone[i + 1]) {
-      count += 1;
-    }
+  phone.forEach(function (x) { count[x] = (count[x] || 0) + 1; });
+
+  let auxCount = Object.values(count);
+
+  for (let i of auxCount) {
+    if (auxCount[i] >= 3) return true;
+    return false;
   }
-
-  if (count >= 3) return true;
-  return false;
 };
 
 // Desafio 11
