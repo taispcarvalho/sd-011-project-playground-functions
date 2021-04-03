@@ -11,10 +11,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(sentence){
-  return sentence.split(' ');
+function splitSentence(sentence) {
+  return sentence.split('');
 }
-
 
 // Desafio 4
 function concatName() {
@@ -24,13 +23,13 @@ function concatName() {
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
-} 
+}
 
 // Desafio 6
 function highestCount() {
 
 }
- 
+
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
