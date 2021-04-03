@@ -78,7 +78,7 @@ function generatePhoneNumber(phoneNumber) {
 // Desafio 12
 function sumSides(line, numbers) {
   let sum = 0;
-  for (num of numbers) {
+  for (let num of numbers) {
     if (num !== line) {
       sum += num;
     }
@@ -86,17 +86,17 @@ function sumSides(line, numbers) {
   return line < sum;
 }
 
-function checkDiffSides(key, numbers){
+function checkDiffSides(key, numbers) {
   let diff = 0;
   switch (key) {
-    case 0:
-      diff = numbers[key + 1] - numbers[key + 2];
-      break;
-    case 1:
-      diff = numbers[key - 1] - numbers[key + 1];
-      break;
-    default:
-      diff = numbers[key - 1] - numbers[key - 2];
+  case 0:
+    diff = numbers[key + 1] - numbers[key + 2];
+    break;
+  case 1:
+    diff = numbers[key - 1] - numbers[key + 1];
+    break;
+  default:
+    diff = numbers[key - 1] - numbers[key - 2];
   }
   return numbers[key] > Math.abs(diff);
 }
@@ -104,7 +104,7 @@ function checkDiffSides(key, numbers){
 function triangleCheck(lineA, lineB, lineC) {
   let numbers = [lineA, lineB, lineC];
   for (let key in numbers) {
-    valid = sumSides(numbers[key], numbers) && checkDiffSides(parseInt(key, 10), numbers);
+    let valid = sumSides(numbers[key], numbers) && checkDiffSides(parseInt(key, 10), numbers);
     if (!valid) {
       return false;
     }
