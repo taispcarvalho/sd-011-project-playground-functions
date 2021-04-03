@@ -19,24 +19,20 @@ function techList(arrayD10, name) {
 
 // Desafio 11
 function checkNumber(array11) {
-  let wrongNumber = false;
   let biggest = Math.max(...array11);
   let lowest = Math.min(...array11);
   if (biggest > 9 || lowest < 0) {
-    wrongNumber = true;
-    return wrongNumber;
+    return true;
   }
 }
 function checkDuplicateNumber(array11) {
-  let wrongNumber = false;
   for (let i = 0; i < array11.length; i += 1) {
     let sameNumberLoop = 0;
     for (let i2 = i; i2 < array11.length; i2 += 1) {
       if (array11[i] === array11[i2]) {
         sameNumberLoop += 1;
         if (sameNumberLoop >= 3) {
-          wrongNumber = true;
-          return wrongNumber;
+          return true;
         }
       }
     }
@@ -47,7 +43,7 @@ function pushNumbers(array11) {
   let ddd = [];
   let numPart1 = [];
   let numPart2 = [];
-  for (let i = 0; i <= 10; i += 1) {
+  for (let i = 0; i < array11.length; i += 1) {
     switch (true) {
     case i >= 0 && i < 2:
       ddd.push(array11[i]);
@@ -58,13 +54,13 @@ function pushNumbers(array11) {
     case i > 6 && i <= 10:
       numPart2.push(array11[i]);
       break;
+    default: false; break;
     }
   }
   return `(${ddd.join('')}) ${numPart1.join('')}-${numPart2.join('')}`;
 }
 
 function generatePhoneNumber(array11) {
-  let wrongNumber = false;
   switch (true) {
   case array11.length !== 11:
     return 'Array com tamanho incorreto.';
@@ -77,10 +73,10 @@ function generatePhoneNumber(array11) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let array12 = [lineA, lineB, lineC];
-  for (let i = 0; i < array12.length; i += 1) {
-    for (let j = i + 1; i < array12.length; i += 1) {
-      return array12[i] + array12[j] > array12[2 - i] && Math.abs(array12[i] - array12[j]) < array12[2 - i];
+  let ar12 = [lineA, lineB, lineC];
+  for (let i = 0; i < ar12.length; i += 1) {
+    for (let j = i + 1; i < ar12.length; i += 1) {
+      return ar12[i] + ar12[j] > ar12[2 - i] && Math.abs(ar12[i] - ar12[j]) < ar12[2 - i];
     }
   }
 }
@@ -92,7 +88,7 @@ function hydrate(string13) {
   let sum = 0;
   let numOfCups = '';
   for (let i = 0; i < drinkArray.length; i += 1) {
-    sum += parseInt(drinkArray[i]);
+    sum += parseInt(drinkArray[i], 10); // Add radix
   }
   if (sum > 1) {
     numOfCups = 'copos';
