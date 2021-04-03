@@ -11,15 +11,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(string, array) {
-  if (string === 'go Trybe') {
-    return array = string.split(' ');
-  } if (string === 'vamo que vamo') {
-    return array === string.split(' ');
-  } if (string === 'foguete') {
-    return array = string.split('');
-  }
+function splitSentence(sentence){
+  return sentence.split(' ');
 }
+
 
 // Desafio 4
 function concatName() {
