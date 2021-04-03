@@ -93,17 +93,27 @@ function fizzBuzz(arrNum) {
   return result;
 }
 
-let arrNum = [7, 9];
-console.log(fizzBuzz(arrNum));
-
 // Desafio 9
-function encode() {
+function encode(frase) {
   // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+  let cript = frase.replace(/a/g, '1')
+    .replace(/e/g, '2')
+    .replace(/i/g, '3')
+    .replace(/o/g, '4')
+    .replace(/u/g, '5');
 
+  return cript;
+}
+function decode(frase) {
+  // seu código aqui
+  let cript = frase.replace(/a/g, '1')
+    .replace(/2/g, 'e')
+    .replace(/3/g, 'i')
+    .replace(/4/g, 'o')
+    .replace(/5/g, 'u');
+
+  return cript;
+}
 module.exports = {
   calcArea,
   catAndMouse,
