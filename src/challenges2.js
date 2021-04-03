@@ -44,11 +44,11 @@ function generatePhoneNumber(phoneNumber) {
   let firstPart = [];
   let secondPart = [];
   let repeat = repeatNum(phoneNumber);
-  if (phoneNumber != 11) {
+  if (phoneNumber !== 11) {
     return 'Array com tamanho incorreto';
   }
   for (let index = 0; index < 11; index += 1) {
-    if (phoneNumber[index] < 0 || phoneNumber > 9 || repeat == true) {
+    if (phoneNumber[index] < 0 || phoneNumber > 9 || repeat === true) {
       return 'não é possível gerar um número de telefone com esses valores';
     } 
   }
@@ -70,15 +70,15 @@ function generatePhoneNumber(phoneNumber) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  if (lineA + lineB < Math.abs(lineC) || lineA - lineB > Math.abs(lineC) || lineB - lineA > Math.abs(lineC)) {
-    return false;
-  } else if (lineB + lineC < Math.abs(lineA) || lineB - lineC > Math.abs(lineA) || lineC - lineB > Math.abs(lineA)) {
-    return false;
-  } else if (lineA + lineC < Math.abs(lineB) || lineA - lineC > Math.abs(lineB) || lineC - lineA > Math.abs(lineB)) {
-    return false;
-  } else {
-    return true;
-  }
+  // if (lineA + lineB < Math.abs(lineC) || lineA - lineB > Math.abs(lineC) || lineB - lineA > Math.abs(lineC)) {
+  //   return false;
+  // } else if (lineB + lineC < Math.abs(lineA) || lineB - lineC > Math.abs(lineA) || lineC - lineB > Math.abs(lineA)) {
+  //   return false;
+  // } else if (lineA + lineC < Math.abs(lineB) || lineA - lineC > Math.abs(lineB) || lineC - lineA > Math.abs(lineB)) {
+  //   return false;
+  // } else {
+  //   return true;
+  // }
 }
 
 // Desafio 13
