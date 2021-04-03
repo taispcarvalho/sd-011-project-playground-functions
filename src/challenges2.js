@@ -23,29 +23,30 @@ if (numbers1[index] === response){
 }
 
 function possibilities(arrayNumber) {
-  for (let index = 0; index < arrayNumber.length; index += 1) { 
-  if (arrayNumber[index] < 0 || arrayNumber[index] > 9 || numberCont(arrayNumber, arrayNumber[index]) > 2){
-  return 'não é possível gerar um número de telefone com esses valores';
+  for (let index of arrayNumber) { 
+  if (index < 0 || index > 9 || numberCont(arrayNumber, index) > 2){
+  return true;
   }
 }
 }
 
 function generatePhoneNumber(number1) {
-  let posible = possibilities(number1)
   let regex = /(\d{2})(\d{5})(\d{4})/;
+  let responseFinish ='';
   let myNumbers ='';
   if (number1.length !== 11) { 
     return 'Array com tamanho incorreto.'
-  } else if (posible){
-    return posible;
-  }
+  } else if (possibilities(number1) === true){
+    return 'não é possível gerar um número de telefone com esses valores';
+  } else {
   for (let index of number1) {
     myNumbers += number1[index];
-    myNumbers = myNumbers.replace(regex, '($1) $2-$3');
+    } 
+    responseFinish = myNumbers.replace(regex, '($1) $2-$3');
+} 
+  return responseFinish;
   }
-  return myNumbers;
-  }
-
+  
 // Desafio 12
 
 function triangleCheck(lineA, lineB, lineC) {
