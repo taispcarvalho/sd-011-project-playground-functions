@@ -26,20 +26,18 @@ function splitSentence(sentence) {
     if (sentence[i] === ' ') {
       words.push(cutSpace);
       cutSpace = '';
-    }
-    else if (i === sentence.length - 1) {
+    } else if (i === sentence.length - 1) {
       cutSpace += sentence[i];
       words.push(cutSpace);
-    }
-    else {
+    } else {
       cutSpace += sentence[i];
     }
   }
   return words;
 }
-console.log(splitSentence('Go Trybe'))
-console.log(splitSentence('Vamo que vamo'))
-console.log(splitSentence('foquete'))
+console.log(splitSentence('Go Trybe'));
+console.log(splitSentence('Vamo que vamo'));
+console.log(splitSentence('foquete'));
 
 // Desafio 4
 function concatName() {
