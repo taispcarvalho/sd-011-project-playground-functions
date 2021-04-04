@@ -93,19 +93,22 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  let numbs = string.replace(/[^0-9]/g, ',');
-  numbs = [numbs];
+  let numbs = string.replace(/[^0-9]/g, '');
+  numbs = numbs.split('');
   let whaterCups = 0;
   for (let index = 0; index < numbs.length; index += 1) {
-    whaterCups += numbs[index];
+    whaterCups += parseInt(numbs[index], 10);
   }
   if (whaterCups > 1) {
+    whaterCups = whaterCups.toString();
     whaterCups = whaterCups.concat(' copos de água');
   } else {
+    whaterCups = whaterCups.toString();
     whaterCups = whaterCups.concat(' copo de água');
   }
   return whaterCups;
 }
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
