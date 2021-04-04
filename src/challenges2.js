@@ -3,7 +3,7 @@ function techList(technology, name) {
   let orderedListObjects = [];
   let ordered = technology.sort();
   if (Object.keys(ordered).length !== 0 && ordered.constructor !== Object) {
-    for (let index in ordered) {
+    for (let index = 0; index < technology.length; index += 1) {
       orderedListObjects[index] = {
         tech: ordered[index],
         name,
