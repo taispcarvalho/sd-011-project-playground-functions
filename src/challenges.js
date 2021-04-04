@@ -34,7 +34,7 @@ function highestCount(listNumbers) {
   let highestNumber = listNumbers[0];
   let appearNumber = 0;
 
-  for (let index =0; index < listNumbers.lenght; index +=1)){
+  for (let index =0; index < listNumbers.lenght; index +=1){
     if (listNumbers[index] > highestNumber){
       highestNumber = listNumbers[index];
     }
@@ -47,7 +47,6 @@ function highestCount(listNumbers) {
   }
   return appearNumber;
 }
-
 
 // Desafio 7
 function catAndMouse() {
