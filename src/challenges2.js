@@ -61,8 +61,10 @@ function withElevenNumbers(array) {
 }
 function generatePhoneNumber(array) {
   let phoneNumber = [];
-  if (array.length !== 11 || betweenZeroNine(array) !== true || lessThanThreeReps(array) !== true) {
+  if (array.length !== 11) {
     phoneNumber = 'Array com tamanho incorreto.';
+  } else if (betweenZeroNine(array) !== true || lessThanThreeReps(array) !== true) {
+    phoneNumber = 'não é possível gerar um número de telefone com esses valores';
   } else {
     phoneNumber = withElevenNumbers(array);
   }
