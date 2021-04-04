@@ -54,8 +54,9 @@ function catAndMouse(mouse, cat1, cat2) {
     catWins = 'os gatos trombam e o rato foge';
   } else if (mouse - cat1 > mouse - cat2) {
     catWins = 'cat2';
-  } 
+  } else {
   catWins = 'cat1';
+  }
   return catWins;
 }
 // Desafio 8
