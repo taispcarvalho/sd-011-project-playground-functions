@@ -1,11 +1,12 @@
 // Desafio 1
 function compareTrue() {
-let n1 = 11;
+let n1 = 9;
 let n2 = 13;
- if (n1 > 10 && n2 > 10){
-return true;
+
+  if (n1 > 10 && n2 > 10){
+    return true;
  } else{
-   return false;
+      return false;
  }
 
 }
