@@ -14,31 +14,37 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function lessThanThreeRepetitions(array) {
+function lessThanThreeRepsSecond(index, array) {
+  let lessThanThree = true;
   let counterOfRep = 0;
-  let lessTranThreeReps = true;
-  for (let index = 0; index < array.length; index += 1) {
-    for (let index2 = 1; index2 < array.length; index += 1) {
-      if (array[index] === array[index2]) {
-        counterOfRep += 1;
-      }
+  for (let index2 = 1; index2 < array.length; index2 += 1) {
+    if (array[index] === array[index2]) {
+      counterOfRep += 1;
     }
-    if (counterOfRep > 2) {
-      lessThanThreeReps = false;
-    }
-    counterOfRep = 0;
   }
-} 
-function betweenZeroAndNine(array) {
-  let betweenZeroAndNine = true;
-  let counter = 0;
+  if (counterOfRep > 2) {
+    lessThanThree = false;
+  }
+  return lessThanThree;
+}
+function lessThanThreeReps(array) {
+  let lessThanThree = true;
+  for (let index = 0; index < array.length; index += 1) {
+    lessThanThree = lessThanThreeRepsSecond(index, array);
+    if (lessThanThree === false) {
+      break;
+    }
+  }
+  return lessThanThree;
+}
+function betweenZeroNine(array) {
+  let zeroAndNine = true;
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < 0 || array[index] > 9) {
-      counter += 1;
-      betweenZeroAndNine = false;
+      zeroAndNine = false;
     }
   }
-  return betweenZeroAndNine;
+  return zeroAndNine;
 }
 function withElevenNumbers(array) {
   let phoneNumber = ['(', 0, 0, ') ', 0, 0, 0, 0, 0, '-', 0, 0, 0, 0];
@@ -55,7 +61,7 @@ function withElevenNumbers(array) {
 }
 function generatePhoneNumber(array) {
   let phoneNumber = [];
-  if (array.length !== 11 || betweenZeroAndNine(array) !== true || lessThanThreeRepetitions(array)) {
+  if (array.length !== 11 || betweenZeroNine(array) !== true || lessThanThreeReps(array) !== true) {
     phoneNumber = 'Array com tamanho incorreto.';
   } else {
     phoneNumber = withElevenNumbers(array);
