@@ -60,7 +60,7 @@ function generatePhoneNumber(arrayOfNumbers) {
     }
     return newArrayOfNumbers;
   }
-  if (arrayOfNumbers.length !== 11) {
+  if (checkRangeNumber) {
     newArrayOfNumbers = 'Array com tamanho incorreto.';
   } else {
     newArrayOfNumbers = 'não é possível gerar um número de telefone com esses valores';
