@@ -62,7 +62,6 @@ function fizzBuzzSecondProcess(array) {
   }
   return array;
 }
-
 function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
@@ -94,7 +93,6 @@ function encodeSecondProcess(string) {
   }
   return string.join('');
 }
-
 function encode(string) {
   let charByChar = string.split('');
   for (let index = 0; index < charByChar.length; index += 1) {
