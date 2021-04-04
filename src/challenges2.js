@@ -18,8 +18,35 @@ function techList(tech, name) {
 }
 
 // Desafio 11
+function checkRepeatedNumbers(array) {
+  let results = [];
+  for (let number of array) {
+    let counter = 0;
+    for (let index = 1; index < array.length; index += 1) {
+      if (number === array[index]) {
+        counter += 1;
+      }
+    }
+    if (counter >= 3){
+      return (false);
+    }
+  }
+  return (true);
+}
+
+function checkRange(array) {
+  for (let number of array) {
+    if (number > 9 || number < 0) {
+      return (false);
+    }
+  }
+  return (true);
+}
+
+
+
 function generatePhoneNumber() {
-  // seu código aqui
+
 }
 
 // Desafio 12
