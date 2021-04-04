@@ -11,10 +11,10 @@ function splitSentence(string) {
   return string.split(' ');
 }
 // Desafio 4
-let array1 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 function concatName(arrayDeString) {
-  return arrayDeString[arrayDeString.length - 1] + " " + arrayDeString[0];
+  return `${arrayDeString[arrayDeString.length - 1]}  ${arrayDeString[0]}`;
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties);
@@ -42,16 +42,15 @@ function catAndMouse(mouse, cat1, cat2) {
   let catClose2 = mouse - cat2;
   let winner;
   if (catCLose1 === catClose2) {
-    winner = "os gatos trombam e o rato foge"
+    winner = "os gatos trombam e o rato foge";
   } else if (catCLose1 < catClose2) {
-    winner = "cat1"
+    winner = "cat1";
   } else {
-    winner = "cat2"
+    winner = "cat2";
   }
   return winner
 }
 // Desafio 8
-let arrayFizzBuzz = [2, 15, 7, 9, 45];
 function fizzBuzz(arrayFizzBuzz) {
   let arrayString = [];
   for (let index in arrayFizzBuzz) {
