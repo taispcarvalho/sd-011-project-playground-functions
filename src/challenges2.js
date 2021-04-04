@@ -1,4 +1,4 @@
-// Desafio 10
+// Desafio 10 - Tive Ajuda do  Maicon, Vitor, Julio e Vitor. Me explicaram e descutimos o cógido.
 
 function techList(learningTechnology, name) {
   let outExit = [];
@@ -11,7 +11,7 @@ function techList(learningTechnology, name) {
   return outExit;
 }
 
-// Desafio 11 Obs: Vitor Cardoso, Julio Filizzola, Maicon me ajudaram.
+// Desafio 11 - Vitor Cardoso, Julio Filizzola, Maicon e Igor me ajudaram. Me explicaram e descutimos o cógido.
 
 function numberCont(numbers1, response) {
   let result = 0;
@@ -49,7 +49,7 @@ function generatePhoneNumber(number1) {
   return myNumbers;
 }
 
-// Desafio 12-
+// Desafio 12- Tive Ajuda do Igor, Maicon e Julio. Me explicaram e descutimos o cógido.
 
 function triangleCheck(lineA, lineB, lineC) {
   let sizeLineA = Math.abs(lineA + lineB);
@@ -61,7 +61,7 @@ function triangleCheck(lineA, lineB, lineC) {
   return response;
 }
 
-// Desafio 13
+// Desafio 13 - Tive ajuda do Julio Filizzola. Me explicaram e descutimos o cógido.
 
 function hydrate(newString) {
   newString = newString.replace(/\D/g, '');
