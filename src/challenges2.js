@@ -54,16 +54,14 @@ function generatePhoneNumber(arrayOfNumbers) {
   let verifyDuplicateNumber = duplicateNumber(arrayOfNumbers);
   let validateArrayNumber = validateNumbers(arrayOfNumbers);
   let newArrayOfNumbers = '(xx) xxxxx-xxxx';
-  if ((checkRangeNumber || verifyDuplicateNumber || validateArrayNumber) === false) {
-    for (let index = 0; index < arrayOfNumbers.length; index += 1) {
-      newArrayOfNumbers = newArrayOfNumbers.replace('x', arrayOfNumbers[index]);
-    }
-    return newArrayOfNumbers;
+  if (checkRangeNumber === true) {
+    return 'Array com tamanho incorreto.';
   }
-  if (checkRangeNumber) {
-    newArrayOfNumbers = 'Array com tamanho incorreto.';
-  } else {
-    newArrayOfNumbers = 'não é possível gerar um número de telefone com esses valores';
+  if ((verifyDuplicateNumber || validateArrayNumber) === true) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
+    newArrayOfNumbers = newArrayOfNumbers.replace('x', arrayOfNumbers[index]);
   }
   return newArrayOfNumbers;
 }
