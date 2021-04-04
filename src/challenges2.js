@@ -58,7 +58,9 @@ function generatePhoneNumber(arrayOfNumbers) {
     for (let index = 0; index < arrayOfNumbers.length; index += 1) {
       newArrayOfNumbers = newArrayOfNumbers.replace('x', arrayOfNumbers[index]);
     }
-  } else if (checkRange === true && (verifyDuplicateNumber && validateArrayNumber) === false) {
+    return newArrayOfNumbers;
+  }
+  if (arrayOfNumbers.length !== 11) {
     newArrayOfNumbers = 'Array com tamanho incorreto.';
   } else {
     newArrayOfNumbers = 'não é possível gerar um número de telefone com esses valores';
