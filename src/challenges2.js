@@ -24,9 +24,9 @@ console.log(techList(['Python'], 'Thyago'));
 console.log(techList([], 'Thyago'));
 
 // Desafio 11
-function counterRepeat (array){
-  let checker = array.reduce(function (allNumbers, number){
-    if (number in allNumbers){
+function counterRepeat(array) {
+  let checker = array.reduce(function (allNumbers, number) {
+    if (number in allNumbers) {
       allNumbers[number] += 1;
     } else {
       allNumbers[number] = 1;
@@ -72,7 +72,13 @@ function triangleCheck(lineA, lineB, lineC) {
   let lineAComp = Math.abs(lineA);
   let lineBComp = Math.abs(lineB);
   let lineCComp = Math.abs(lineC);
-  if (lineAComp > lineBComp + lineCComp || lineBComp > lineAComp + lineCComp || lineCComp > lineBComp + lineAComp) {
+  if (lineAComp > lineBComp + lineCComp) {
+    return false;
+  }
+  if (lineBComp > lineAComp + lineCComp) {
+    return false;
+  }
+  if (lineCComp > lineBComp + lineAComp) {
     return false;
   }
   return true;
