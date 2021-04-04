@@ -91,11 +91,11 @@ function triangleCheck(lineA, lineB, lineC) {
   let lineAComp = Math.abs(lineA);
   let lineBComp = Math.abs(lineB);
   let lineCComp = Math.abs(lineC);
-  if (lineAComp >= lineBComp + lineCComp){
+  if (lineAComp > lineBComp + lineCComp){
     return false;
-  } else if (lineBComp >= lineAComp + lineCComp){
+  } else if (lineBComp > lineAComp + lineCComp){
     return false;
-  } else if (lineCComp >= lineBComp + lineAComp){
+  } else if (lineCComp > lineBComp + lineAComp){
     return false;
   } else {
     return true;
