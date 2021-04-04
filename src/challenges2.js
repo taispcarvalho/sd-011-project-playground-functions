@@ -6,7 +6,10 @@ function techList(techno, name) {
     return 'Vazio!';
   }
   for (let index = 0; index < techno.length; index += 1) {
-    resulTech.push({ tech: techno[index], name: name });
+    resulTech.push({
+      tech: techno[index],
+      name,
+    });
   }
   return resulTech;
 }
