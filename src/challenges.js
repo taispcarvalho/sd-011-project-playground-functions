@@ -26,7 +26,7 @@ console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName(nameString) {
   let firstName = nameString[0];
-  let lastName = nameString[nameString.length-1];
+  let lastName = nameString[nameString.length - 1];
   let concatString = `${lastName}, ${firstName}`;
 
   return concatString;
@@ -37,7 +37,7 @@ console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins*3) + ties;  
+  return (wins * 3) + ties;
 }
 console.log(footballPoints(14, 8));
 console.log(footballPoints(1, 2));
@@ -47,16 +47,16 @@ console.log(footballPoints(0, 0));
 function highestCount(listNumbers) {
   let highestNumber = listNumbers[0];
   
-  for (let index=0; index < listNumbers.lenght; index += 1){
-    if (listNumbers[index] > highestNumber){
+  for (let index = 0; index < listNumbers.lenght; index += 1) {
+    if (listNumbers[index] > highestNumber) {
       highestNumber = listNumbers[index];
     }
   }
-  
+
   let appearNumber = 0;
-  for (let index=0; index < listNumbers.lenght; index += 1) {
-    if (listNumbers[index]===highestNumber){
-      appearNumber = appearNumber + 1;
+  for (let index = 0; index < listNumbers.lenght; index += 1) {
+    if (listNumbers[index] === highestNumber) {
+      appearNumber = appearNumber +1;
       }
   }
   return appearNumber;
