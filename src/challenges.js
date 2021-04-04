@@ -49,9 +49,8 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let results = [];
-  
   for(let index= 0; index < numbers.length; index += 1){
-   if(numbers[index % 3 === 0 && numbers[index] % 5 !== 0]){
+   if(numbers[index] % 3 === 0 && numbers[index] % 5 !== 0){
      results.push('fizz');
    }else if(numbers[index % 5 === 0 && numbers[index] % 3 !==0]){
      results.push('buzz')
@@ -60,7 +59,7 @@ function fizzBuzz(numbers) {
    }else {
      results.push('bug!')
    }
-   
+
   }
   return results;
 }
