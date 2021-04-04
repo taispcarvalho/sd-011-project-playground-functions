@@ -42,16 +42,15 @@ function phoneNumber(array) {
 }
 
 function generatePhoneNumber(array) {
-  let errorText = 'Array com tamanho incorreto.';
-  let errorText2 = 'não é possível gerar um número de telefone com esses valores';
   let phone = phoneNumber(array);
   if (array.length !== 11) {
-    return errorText;
+    return 'Array com tamanho incorreto.';
   } if (numbersCondition(array) === false) {
-    return errorText2;
+    return 'não é possível gerar um número de telefone com esses valores';
   }
   return phone;
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 1, 3, 2, 9]))
 /* https://www.florin-pop.com/blog/2019/04/jcc-create-a-phone-number/ */
 
 // Desafio 12
