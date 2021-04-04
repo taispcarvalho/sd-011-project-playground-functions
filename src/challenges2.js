@@ -55,37 +55,32 @@ function generatePhoneNumber(genNum) {
     sNum = sNum.replace(regex, '($1) $2-$3');
   }
   return sNum;
-} 
-
+}
 // Desafio 12
 // Meus agracecimentos aos amigos que me ajudaram a entender a lógica por trás deste desafio.
 // J. Felizzola & Vitor Cardoso.
 function triangleCheck(lineA, lineB, lineC) {
-  
   let c1 = Math.abs(lineB + lineC);
   let c2 = Math.abs(lineB - lineC);
 
   if (lineA < c1 && lineA > c2) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 13
 // Para realizar este desafio, me baseei no código do colega Julio Filizzola.
 function hydrate(string) {
-  string = string.replace(/\d/g, '');
+  string = string.replace(/\D/g, '');
   let num = 0;
-  
   for (let index = 0; index < string.length; index += 1) {
     num += Number(string[index]);
   }
   if (num === 1) {
     return `${num} copo de água`;
-  } else {
-    return `${num} copos de água`;
   }
+  return `${num} copos de água`;
 }
 
 module.exports = {
