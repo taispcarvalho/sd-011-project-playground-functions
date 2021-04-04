@@ -75,24 +75,30 @@ function generatePhoneNumber(array) {
 console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0]));
 
 // Desafio 12
-let status = true;
 function sumSide(lineA, lineB, lineC) {
-  if (lineA >= Math.abs(lineB + lineC) || lineB >= Math.abs(lineA + lineC)) {
-    status = false;
+  if (lineA > lineB + lineC || lineB > lineA + lineC) {
+    return false;
   }
-  if (lineC >= Math.abs(lineA + lineB)) {
-    status = false;
+  if (lineC > lineA + lineB) {
+    return false;
   }
+  return true;
 }
+
+function diffSide(lineA, lineB, lineC) {
+  if (lineA > Math.abs(lineB - lineC) || lineB > Math.abs(lineA - lineB)) {
+    return true;
+  }
+  if (lineC > Math.abs(lineB - lineC)) {
+    return true;
+  }
+  return false;
+}
+
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA <= 0 || lineB <= 0 || lineC <= 0) {
-    status = false;
-  }
-  sumSide(lineA, lineB, lineC);
-  let resultado = status;
-  return resultado;
+  return (sumSide(lineA, lineB, lineC) && diffSide(lineA, lineB, lineC));
 }
-console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(10, 0, 8));
 
 // Desafio 13
 function hydrate(string) {
