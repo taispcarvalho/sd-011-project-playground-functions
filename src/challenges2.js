@@ -26,7 +26,7 @@ function numberCont(numbers1, response) {
 function possibilities(arrayNumber) {
   for (let index = 0; index < arrayNumber.length; index += 1) {
     let resoluction = arrayNumber[index];
-    if (resoluction < 0 || resoluction > 9 || numberCont(arrayNumber, response > 2)) {
+    if (resoluction < 0 || resoluction > 9 || numberCont(arrayNumber, resoluction > 2)) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
