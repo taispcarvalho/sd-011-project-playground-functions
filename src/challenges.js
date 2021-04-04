@@ -7,10 +7,10 @@ function compareTrue(value1, value2) {
 function calcArea(base, height) {
   return (base * height)/2
 }
-console.log(calcArea(51,1))
+
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  
 }
 
 // Desafio 4
