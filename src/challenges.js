@@ -45,7 +45,6 @@ function footballPoints(wins, ties) {
   let pts = wins * 3 + ties;
   return pts;
 }
-footballPoints(14, 8);
 // Desafio 6
 function highestCount() {
   // seu código aqui
