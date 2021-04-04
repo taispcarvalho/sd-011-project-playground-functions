@@ -102,18 +102,20 @@ console.log(triangleCheck(10, 0, 8));
 
 // Desafio 13
 function hydrate(string) {
+  let m;
   let count = 0;
   let r = /\d+/g;
   while ((m = r.exec(string)) != null) {
     let number = parseInt(m[0]);
     count += number;
   }
-  if (count == 1) {
+  if (count === 1) {
     return '1 copo de água';
   }
-  return count + ' copos de água';
+  return `${count}|copos de água`;
+  // https://stackoverflow.com/questions/46858840/unexpected-string-concatenation
 }
-console.log(hydrate("1 cerveja"));
+console.log(hydrate('1 cerveja, 3 rums'));
 
 module.exports = {
   generatePhoneNumber,
