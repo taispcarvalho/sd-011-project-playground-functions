@@ -20,44 +20,64 @@ function techList(lista, nameName) {
 }
 
 // Desafio 11
-//Função auxiliar
-function repetition(numbers) {
-  let cont = 0;
-  for (let index of numbers) {
-    for (let index2 = 1; index2 < numbers.length; index2 += 1) {
-      if (index2 === numbers[index]) {
-        cont += 1;
-      }
-    }
-    if (cont >= 3) {
+
+// Função auxiliar  - retorna true caso a afirmação seja verdadeira
+function quantNumbers(numbers) {
+  if (numbers.length === 11) {    
+    return true;
+  }
+}
+
+// Função auxiliar - retorna true caso a condição seja satisfeita
+function validNumber(numbers) {
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (index < 0 || index > 9) {
       return false;
     }
-    cont = 0;
   } 
   
   return true;
 }
 
-//Função principal
-function generatePhoneNumber(numbers) {
-  if (numbers.length !== 11) {
-    return 'Array com tamanho incorreto.';
+// Função auxiliar - realiza contagem de repetiçãoes - retorna true se tem menos de 2 algarismos repetidos na string
+function repetition(numbers) {
+  let cont = 0;
+  for (let index2 of numbers) {
+    for (let index3 = 1; index3 < numbers.length; index3 += 1) {
+      if (index2 === numbers[index3]) {
+        cont += 1;
+      }
+    }
+
+    if (cont <= 2) {
+      return true;
+    }
+
+    cont = 0; // zera contagem apos o segundo for comparar todos index com o index 2 e assim sucessivamente
   }
 
-  for (let index of numbers) {
-   if (numbers[index] < 0 || numbers[index] > 9) {
-     return 'não é possível gerar um número de telefone com esses valores.';
-   }
+  return false;
+}
+
+// Função auxiliar - Adicionando parenteses na string com splice
+function phoneOrganizer(numbers) {
+  numbers.splice(0, 0, '(');
+  numbers.splice(3, 0, ') ');
+  numbers.splice(9, 0, '-');
+  return numbers.join('');
+}
+
+// Função original
+function generatePhoneNumber(numbers) {
+  if (!quantNumbers(numbers)) {
+    return 'Array com tamanho incorreto.';
+  } 
+  
+  if (!validNumber(numbers) || !repetition(numbers)) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
   
-  if (!repetition(numbers)) {  //se a condição da função repetition for verdadeira
-    numbers.splice(0, 0, '(');
-    numbers.splice(3, 0, ') ');
-    numbers.splice(9, 0, '-');
-    return numbers.join('');
-  }
-
-  return 'não é possível gerar um número de telefone com esses valores.';
+  return phoneOrganizer(numbers);
 }
 
 // Desafio 12
