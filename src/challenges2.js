@@ -110,7 +110,7 @@ function hydrate(drinks) {
 
   if (glassesOfWater <= 1) {
     return glassesOfWater + ' copo de água';
-  } 
+  }
   return glassesOfWater + ' copos de água';
 }
 
