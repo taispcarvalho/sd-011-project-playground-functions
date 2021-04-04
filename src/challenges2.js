@@ -25,8 +25,8 @@ function numberCont(numbers1, response) {
 
 function possibilities(arrayNumber) {
   for (let index = 0; index < arrayNumber.length; index += 1) {
-    let resoluction = arrayNumber[index];
-    if (resoluction < 0 || resoluction > 9 || numberCont(arrayNumber, resoluction > 2)) {
+    let resolution = arrayNumber[index];
+    if (resolution < 0 || resolution > 9 || numberCont(arrayNumber, resolution) > 2) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
@@ -36,7 +36,9 @@ function generatePhoneNumber(number1) {
   let regex = /(\d{2})(\d{5})(\d{4})/;
   let myNumbers = '';
   let verify = possibilities(number1);
-  if (number1.length !== 11) return 'Array com tamanho incorreto.';
+  if (number1.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
   if (verify) {
     return verify;
   }
