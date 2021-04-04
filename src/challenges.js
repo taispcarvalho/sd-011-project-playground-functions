@@ -16,11 +16,7 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName(nameList, abnt1, abnt2, abnt3) {
-  for (index === 0; index < nameList.length; index += 1) {
-    abnt1 = nameList[nameList.length - 1];
-    abnt2 = nameList[0];
-  } return abnt3 = abnt1.concat(abnt2);
+function concatName() {
 }
 
 // Desafio 5
