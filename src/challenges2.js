@@ -61,8 +61,11 @@ function verificaNumero(array) { // verificando se o array seja menor que 0, mai
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA + lineB <= lineC || lineA + lineC <= lineB || lineB + lineC <= lineA) {
+    return 'false';
+  }
+  return 'true';
 }
 
 // Desafio 13
