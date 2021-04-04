@@ -97,12 +97,61 @@ function fizzBuzz(numbersArray) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(lowercaseVowels) {
+  let fraseEncode = [];
+  for (let index = 0; index < lowercaseVowels.length; index += 1) {  
+    switch (lowercaseVowels[index]) {
+      case 'a':
+        fraseEncode.push('1');
+        break;
+      case 'e':
+        fraseEncode.push('2');
+        break;
+      case 'i':
+        fraseEncode.push('3');
+        break;
+      case 'o':
+        fraseEncode.push('4');
+        break;
+      case 'u':
+        fraseEncode.push('5');
+        break;
+      default:
+        fraseEncode.push(lowercaseVowels[index]);
+    }
+  }
+  return fraseEncode;
 }
-function decode() {
-  // seu código aqui
+
+console.log(encode('hi there!'));
+
+function decode(uppercaseVowels) {
+  let fraseDecode = [];
+  for (let index = 0; index < uppercaseVowels.length; index += 1) {  
+    switch (uppercaseVowels[index]) {
+      case '1':
+        fraseDecode.push('a');
+        break;
+      case '2':
+        fraseDecode.push('e');
+        break;
+      case '3':
+        fraseDecode.push('i');
+        break;
+      case '4':
+        fraseDecode.push('o');
+        break;
+      case '5':
+        fraseDecode.push('u');
+        break;
+      default:
+        fraseDecode.push(uppercaseVowels[index]);
+    }
+  }
+  return fraseDecode;
 }
+
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
