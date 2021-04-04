@@ -92,8 +92,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numbs = string.replace(/[^0-9]/g, ',');
+  numbs = [numbs];
+  let whaterCups = 0;
+  for (let index = 0; index < numbs.length; index += 1) {
+    whaterCups += numbs[index];
+  }
+  if (whaterCups > 1) {
+    whaterCups = whaterCups.concat(' copos de água');
+  } else {
+    whaterCups = whaterCups.concat(' copo de água');
+  }
+  return whaterCups;
 }
 
 module.exports = {
