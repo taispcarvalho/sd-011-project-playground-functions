@@ -43,18 +43,24 @@ function joinNumber(numberArray) {
 }
 
 // part of Desafio 11
-function verifyRepeatedNumber(numberArray) {
-  for (let index = 0; index < numberArray.length; index += 1) {
-    let appearedTimes = 0;
-    for (let number of numberArray) {
-      if (number === numberArray[index]) {
-        appearedTimes += 1;
-        if (appearedTimes >= 3) {
-          return appearedTimes;
-        }
+function appearedTimes(index, numberArray) {
+  let appearedTimes = 0;
+  for (let number of numberArray) {
+    if (number === numberArray[index]) {
+      appearedTimes += 1;
+      if (appearedTimes >= 3) {
+        return appearedTimes;
       }
     }
   }
+}
+
+// part of Desafio 11
+function verifyRepeatedNumber(numberArray) {
+  for (let index = 0; index < numberArray.length; index += 1) {
+    return appearedTimes(index, numberArray);
+  }
+
 }
 
 // Desafio 11
@@ -72,7 +78,7 @@ function generatePhoneNumber(numberArray) {
   return joinNumber(numberArray);
 }
 
-// part of Desafio
+// part of Desafio 12
 function lineTester(lineToTest, lineX, lineY) {
   if (lineToTest < (lineX + lineY) && lineToTest > Math.abs(lineX - lineY)) {
     return true;
