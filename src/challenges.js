@@ -59,18 +59,15 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 // Para este desafio utilizei o que aprendi em aula.
 function fizzBuzz(divArray) {
-  for (let i = 0; i < divArray.length; i += 1) {
-    if (divArray[i] % 15 === 0) {
-      divArray[i] = 'fizzBuzz';
-    }  
-    if (divArray[i] % 3 === 0) {
-      divArray[i] = 'fizz';
-    }
-    if (divArray[i] % 5 === 0) {
-      divArray[i] = 'buzz';
-    }
-    if (divArray[i] % 1 === 0) {
-      divArray[i] = 'bug!';
+  for (let index = 0; index < divArray.length; index += 1) {
+    if (divArray[index] % 15 === 0) {
+      divArray[index] = 'fizzBuzz';
+    } else if (divArray[index] % 3 === 0) {
+      divArray[index] = 'fizz';
+    } else if (divArray[index] % 5 === 0) {
+      divArray[index] = 'buzz';
+    } else if (divArray[index] % 1 === 0) {
+      divArray[index] = 'bug!';
     }
   }
   return divArray;
