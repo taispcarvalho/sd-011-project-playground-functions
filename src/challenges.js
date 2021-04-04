@@ -30,16 +30,28 @@ function highestCount(arrayNumber) {
   let highestNumber = newOrder[newOrder.length - 1];
   let repetition = 0;
   for (let number in newOrder) {
-    if (number === highestNumber) {
-        repetition += 1;
+    if (newOrder[number] === highestNumber) {
+      repetition += 1;
     }
   }
   return repetition;
-} 
+}
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distance1 = Math.abs(mouse - cat1)
+  let distance2 = Math.abs(mouse - cat2)
+
+  if (distance1 > distance2) {
+    return 'cat1';
+  }
+  else if (distance2 > distance1) {
+      return 'cat2';
+  }
+  else {
+      return 'os gatos trombam e o rato foge';
+  }
+
 }
 
 // Desafio 8
