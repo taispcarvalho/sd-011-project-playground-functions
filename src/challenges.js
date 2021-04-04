@@ -61,14 +61,25 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumbers) {
   // seu código aqui
 }
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  mouse;
+  if (cat1 === cat2) {
+    return 'The cats bump and the mouse scape';
+  }
+  else if (cat1 > cat2) {
+    return 'cat2';
+  }
+  else {
+    return 'cat1';
+  }
 }
+console.log(catAndMouse(0, 3, 2));
+console.log(catAndMouse(0, 6, 12));
+console.log(catAndMouse(0, 2, 2));
 
 // Desafio 8
 function fizzBuzz() {
