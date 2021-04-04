@@ -25,12 +25,12 @@ function techList(array, student) {
 }
 
 // Desafio 11
+let count;
 function generatePhoneNumber(array) {
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < array.length; index += 1) {
-    let count = 0;
     for (let indexJ = 0; indexJ < array.length; indexJ += 1) {
       let avaliator = array[index];
       if (avaliator === array[indexJ]) {
@@ -46,8 +46,6 @@ function generatePhoneNumber(array) {
   let num2 = `-${array[7]}${array[8]}${array[9]}${array[10]}`;
   return `${ddd}${num1}${num2}`;
 }
-let a = [1, 0, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-console.log(generatePhoneNumber(a));
 
 // Desafio 12
 function triangleCheck() {
