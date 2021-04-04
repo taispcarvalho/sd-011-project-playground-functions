@@ -27,29 +27,32 @@ function footballPoints(wins, ties) {
 function higherthNumber(arrayNumbers) {
   let bigNumber = arrayNumbers[0];
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-  if (arrayNumbers[index] > bigNumber) {
-  bigNumber = arrayNumbers[index];
-}
-}
+    if (arrayNumbers[index] > bigNumber) {
+      bigNumber = arrayNumbers[index];
+    }
+  }
  return bigNumber;
 }
 function highestCount(arrayNumbers) {
   let timesNumberAppears = 0;
   let higherth = higherthNumber(arrayNumbers);
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-  if (arrayNumbers[index] === higherth) {
-    timesNumberAppears = timesNumberAppears + 1;
-}
-}
+    if (arrayNumbers[index] === higherth) {
+      timesNumberAppears = timesNumberAppears + 1;
+    }
+  }
   return timesNumberAppears;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
-    return 'cat2';
-  } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-    return 'cat1';
+  let position1 = Math.abs(cat1 - mouse);
+  let position2 = Math.abs(cat2 - mouse);
+  let response;
+  if (position1 > position2) {
+    response = 'cat2';
+  } else if (position1 < position2) {
+    response = 'cat1';
   } 
   return 'os gatos trombam e o rato foge';  
 }
@@ -58,59 +61,41 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(myArray) {
   let returnArray =[];
   for (let index = 0; index < myArray.length; index += 1){
-  if (myArray[index] % 3 === 0 && myArray[index] % 5 === 0){
-    returnArray.push('fizzBuzz');
-  } else if(myArray[index] % 3 === 0) {
-    returnArray.push('fizz');
-  } else if (myArray[index] % 5 === 0) {
-    returnArray.push('buzz');
-  }else {
-    returnArray.push('bug!');
+    if (myArray[index] % 15 === 0){
+      returnArray.push('fizzBuzz');
+    } else if(myArray[index] % 3 === 0) {
+      returnArray.push('fizz');
+    } else if (myArray[index] % 5 === 0) {
+      returnArray.push('buzz');
+    } else {
+      returnArray.push('bug!');
+    }
   }
-}
   return returnArray;
 }
 
 // Desafio 9
 
 function encode(transformString) {
-  let newPhrase = [];
   for (let index = 0; index < transformString.length; index += 1){
-    if (transformString[index] === 'a') {
-      newPhrase += '1';
-    } else if (transformString[index] === 'e') {
-      newPhrase += '2';
-    } else if (transformString[index] === 'i') {
-      newPhrase += '3';
-    } else if (transformString[index] === 'o') {
-      newPhrase += '4';
-    } else if (transformString[index] === 'u') {
-      newPhrase += '5';
-    } else {
-      newPhrase += transformString[index];
-    }
+    transformString = transformString.replace('a', '1');
+    transformString = transformString.replace('e', '2');
+    transformString = transformString.replace('i', '3');
+    transformString = transformString.replace('o', '4');
+    transformString = transformString.replace('u', '5');
   }
-  return newPhrase;
+  return transformString;
 }
 
 function decode(transformString) {
-    let newPhrase = [];
     for (let index = 0; index < transformString.length; index += 1) {
-      if (transformString[index] === '1') {
-        newPhrase += 'a';
-      } else if (transformString[index] === '2') {
-        newPhrase += 'e';
-      } else if (transformString[index] === '3') {
-        newPhrase += 'i';
-      } else if (transformString[index] === '4') {
-        newPhrase += 'o';
-      } else if (transformString[index] === '5') {
-        newPhrase += 'u';
-      } else {
-        newPhrase += transformString[index];
-      }
+      transformString = transformString.replace('1', 'a');
+      transformString = transformString.replace('2', 'e');
+      transformString = transformString.replace('3', 'i');
+      transformString = transformString.replace('4', 'o');
+      transformString = transformString.replace('5', 'u');
     }
-    return newPhrase;
+    return transformString;
   }
 
 module.exports = {
