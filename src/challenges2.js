@@ -39,9 +39,10 @@ function generatePhoneNumber(fone) {
     }
   }
   if (validatorPhoneNumber(fone) === true) {
-    return `(${fone[0]}${fone[1]}) `
+    fone = `(${fone[0]}${fone[1]}) `
       + `${fone[2]}${fone[3]}${fone[4]}${fone[5]}${fone[6]}-`
       + `${fone[7]}${fone[8]}${fone[9]}${fone[10]}`;
+    return fone;
   }
   return validatorPhoneNumber(fone);
 }
