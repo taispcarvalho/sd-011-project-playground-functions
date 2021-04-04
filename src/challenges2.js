@@ -95,7 +95,9 @@ function hydrate(string) {
   for (let index = 0; index < numArray.length; index += 1) {
     cupOfWater += numArray[index];
   }
-
+  if (cupOfWater === 1) {
+    return (`${cupOfWater} copo de água`);
+  }
   return (`${cupOfWater} copos de água`);
 }
 
