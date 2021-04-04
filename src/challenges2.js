@@ -34,7 +34,7 @@ function numbersCondition(array) {
 }
 
 function phoneNumber(array) {
-  let phone = '(xx)xxxxx-xxxx';
+  let phone = '(xx) xxxxx-xxxx';
   array.forEach((item) => {
     phone = phone.replace('x', item);
   });
