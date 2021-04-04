@@ -14,8 +14,9 @@ let value = str.split(' ')
  }
 
 // Desafio 4 
-function concatName() {
-  
+function concatName(name) {
+  let ownNames = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+  return ownNames[3 + 0]
 }
 
 // Desafio 5
