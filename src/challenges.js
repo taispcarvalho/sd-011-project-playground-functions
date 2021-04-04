@@ -91,9 +91,9 @@ function fizzBuzz(numbers) {
 
   if (numbers % 5 === 0) {
     return 'buzz';
-  } else {
-    return 'bug!';
   }
+
+  return 'bug!';
 }
 
 function saveFizzBuzz(saveNumbers) {
@@ -107,8 +107,6 @@ function saveFizzBuzz(saveNumbers) {
 console.log(saveFizzBuzz([2, 15, 7, 9, 45]));
 console.log(saveFizzBuzz([7, 9]));
 console.log(saveFizzBuzz([9, 25]));
-
-
 
 // Desafio 9
 function encode() {
