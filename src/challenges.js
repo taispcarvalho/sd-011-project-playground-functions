@@ -40,8 +40,12 @@ function highestCount(higherNumber) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, gat1, gat2) {
+  if (Math.abs(mouse - gat1) < Math.abs(mouse - gat2)) {
+    return 'gat1';
+  } if (Math.abs(mouse - gat1) > Math.abs(mouse - gat2)) {
+    return 'gat2';
+  } return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
