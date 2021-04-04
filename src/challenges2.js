@@ -19,8 +19,39 @@ function techList(tecnologias, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function validaOcorrenciasArrayMenorTres(numbers) {
+  for (let index = 0; index < numbers.length; index += 1) {
+    let contador = 0;
+    for (let index2 = 0; index2 < numbers.length; index2 += 1) {
+      if (numbers[index] === numbers[index2]) {
+        contador += 1;
+      }
+    }
+    if (contador >= 3) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function generatePhoneNumber(numbers) {
+  const erroGerarNumero = 'não é possível gerar um número de telefone com esses valores';
+
+  if (validaOcorrenciasArrayMenorTres(numbers) === false) {
+    return erroGerarNumero;
+  }
+  if (numbers.some((elemento) => elemento < 0)) {
+    return erroGerarNumero;
+  }
+  if (numbers.some((elemento) => elemento > 9)) {
+    return erroGerarNumero;
+  }
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}
+      ${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}
+      ${numbers[10]}`;
 }
 
 // Desafio 12
