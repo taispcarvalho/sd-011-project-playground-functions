@@ -32,33 +32,31 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  let arr = [];
+function highestCount(arr) {
   let maior = arr[0];
-  let cont = 0;
+  let cont = 1;
 
   for (index = 1; index < arr.length; index += 1) {
     if (arr[index] > maior) {
+      cont = 1;
       maio = arr[index];
+    } else if (arr[index] === maior) {
+      cont +=1;
     }
   }
-
-  for (index = 0; index < arr.length; index +=1) {
-    if (arr[index] === maior)
-    cont +=1;
-  }
-  return highestCount();
+  return cont;
 }
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let catWins = '';
   if (mouse - cat1 === mouse - cat2) {
-    return 'os gatos trombam e o rato foge';
+    catWins = 'os gatos trombam e o rato foge';
   } else if (mouse - cat1 > mouse - cat2) {
-    return 'cat1';
+    catWins = 'cat2';
   } 
-  return 'cat2';
+  catWins = 'cat1';
+  return catWins;
 }
 // Desafio 8
 function fizzBuzz() {
