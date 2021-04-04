@@ -24,48 +24,9 @@ console.log(techList(['Python'], 'Thyago'));
 console.log(techList([], 'Thyago'));
 
 // Desafio 11
-function counterRepeat(array) {
-  let checker = array.reduce(function (allNumbers, number) {
-    if (number in allNumbers) {
-      allNumbers[number] += 1;
-    } else {
-      allNumbers[number] = 1;
-    }
-    return allNumbers;
-  }, {});
-  console.log(checker);
-}
-console.log(counterRepeat([1, 2, 3, 3, 3, 3, 7, 8, 9, 0, 1]));
-
 function generatePhoneNumber(array) {
-  let code = [];
-  let first = [];
-  let second = [];
-  for (let i = 0; i < array.length; i += 1) {
-    if (array.length !== 11) {
-      return 'Array com tamanho incorreto.';
-    }
-    if (array[i] < 0 || array[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-    if (i >= 0 && i < 2) {
-      code += array[i];
-    }
-    if (i >= 2 && i < 7) {
-      first += array[i];
-    }
-    if (i >= 7 && i <= 10) {
-      second += array[i];
-    }
-  }
-  let phone = `(${code}) ${first}-${second}`;
-  return phone;
+  // escreva seu código aqui
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 0]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 11]));
-console.log(generatePhoneNumber([1, 2, 3, 3, 3, 3, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -90,9 +51,9 @@ console.log(triangleCheck(10, 1, 8));
 function hydrate(string) {
   let amount = string.match(/\d+/g);
   let result = 0;
-  for (let i = 0; i < amount.length; i++){
-    result += parseInt(amount[i]);
-  } 
+  for (let i = 0; i < amount.length; i += 1) {
+    result += parseInt(amount[i], 10);
+  }
   if (result === 1) {
     return `${result} copo de água`;
   }
