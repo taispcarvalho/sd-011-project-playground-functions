@@ -11,13 +11,12 @@ function splitSentence(string) {
   return string.split(' ');
 }
 // Desafio 4
+let array1 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 function concatName(arrayDeString) {
-  let firstName = arrayDeString[0]
-  let lastName = arrayDeString[arrayDeString.length - 1]
-  /* let testOverFLow =  arrayDeString.slice(-1)[0]  */
-  return lastName.split().concat(firstName)
-  /* return lastName + " " + firstName */
+  return arrayDeString[arrayDeString.length -1] + " " + arrayDeString[0]
 }
+console.log(concatName(array1))
+
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties)
@@ -66,7 +65,9 @@ function highestCount(arrayHigherNumber) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let result;
+  let result = " ";
+  let catCLose1 = cat1 - cat2
+  let catClose2 = cat2 - cat1
   if (cat1 === cat2) {
     result = 'os gatos trombam e o rato foge';
   } else if (cat1 < cat2) {
