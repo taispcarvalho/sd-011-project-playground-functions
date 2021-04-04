@@ -66,7 +66,6 @@ function highestCount(arrayNumbers) {
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let mouse;
   if (cat1 === cat2) {
     return 'The cats bump and the mouse scape';
   } else if (cat1 > cat2) {
