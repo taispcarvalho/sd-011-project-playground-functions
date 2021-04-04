@@ -18,6 +18,18 @@ function techList(tech, name) {
 }
 
 // Desafio 11
+function phoneNumber(numberArray) {
+  // Filter only numbers from the input
+  // https://learnersbucket.com/examples/javascript/how-to-format-phone-number-in-javascript/
+  let cleaned = ('' + numberArray).replace(/\D/g, '');
+  // Check if the input is of correct length
+  let match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/);
+  if (match) {
+    return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+  }
+  return numberArray;
+}
+
 // Para esta parte do desafio utilizei o que aprendi em aula.
 function generatePhoneNumber(numberArray) {
   let counts = {};
@@ -40,14 +52,9 @@ function generatePhoneNumber(numberArray) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  // Filter only numbers from the input
-  // https://learnersbucket.com/examples/javascript/how-to-format-phone-number-in-javascript/
-  let cleaned = ('' + numberArray).replace(/\D/g, '');
-  // Check if the input is of correct length
-  let match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/);
-  if (match) {
-    return '(' + match[1] + ') ' + match[2] + '-' + match[3];
-  }
+  
+  numberArray = phoneNumber(numberArray);
+  return numberArray;
 }
 
 // Desafio 12
