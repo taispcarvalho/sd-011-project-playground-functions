@@ -65,18 +65,37 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+/**function catAndMouse(mouse, cat1, cat2) {
+  mouse;
   if (cat1 === cat2) {
     return 'The cats bump and the mouse scape';
   }
-  if (cat1 > cat2) {
+  else if (cat1 > cat2) {
     return 'cat2';
   }
+  else {
+    return 'cat1';
+  }
+} */
+
+function catAndMouse(mouse, cat1, cat2) {
+  cat1Unity = Math.abs(cat1 - mouse);
+  cat2Unity = Math.abs(cat2 - mouse);
+
+  if (cat1Unity === cat2Unity) {
+    return 'The cats bump and the mouse scape';
+  }
+
+  if (cat1Unity > cat2Unity) {
+    return 'cat2';
+  }
+
   return 'cat1';
 }
 console.log(catAndMouse(0, 3, 2));
 console.log(catAndMouse(0, 6, 12));
 console.log(catAndMouse(0, 2, 2));
+console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(numbers) {
