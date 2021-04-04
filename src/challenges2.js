@@ -18,6 +18,23 @@ let nome = 'Marcelo';
 console.log(techList(tec, nome));
 
 // Desafio 11
+function isRepeatNumber(rephone) {
+  let largeNumbCount = null;
+  let moreCount = -1;
+  for (let index = 0; index < rephone.length; index += 1) {
+    let count = 1;
+    for (let index2 = index + 1; index2 < rephone.length; index2 += 1) {
+      if (rephone[index] === rephone[index2]) {
+        count += 1;
+      }
+      if (count > moreCount) {
+        largeNumbCount = rephone[index];
+        moreCount = count;
+      }
+    }
+  }
+  return largeNumbCount;
+}
 function generatePhoneNumber(phone) {
   if (phone.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -42,26 +59,8 @@ function generatePhoneNumber(phone) {
     result += phone[pos];
   }
   return `(${result.slice(0, 2)}) ${result.slice(2, 7)}-${result.slice(7, 11)}`;
-
 }
 
-function isRepeatNumber (rephone) {
-  let largeNumbCount = null;
-  let moreCount = -1;
-  for (let index = 0; index < rephone.length; index += 1) {
-    let count = 1;
-    for (let index2 = index + 1; index2 < rephone.length; index2 += 1) {
-      if (rephone[index] === rephone[index2]) {
-        count += 1;
-      }
-      if (count > moreCount) {
-        largeNumbCount = rephone[index];
-        moreCount = count;
-      }
-    }
-  }
-  return largeNumbCount;
-}
 let phoneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 console.log(generatePhoneNumber(phoneNumber));
 
