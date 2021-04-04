@@ -15,7 +15,11 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(names) {
+<<<<<<< HEAD
   let firstAndLast = names[names.length - 1].concat(', ') + names[0];
+=======
+  let firstAndLast = names[names.length - 1].concat(', ') + names[0]
+>>>>>>> 185557e3b63404597a94e635e379a9c02c84e207
   return firstAndLast.toString();
 }
 // Desafio 5
