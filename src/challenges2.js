@@ -62,7 +62,8 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function checkForInteger(string) {
+function hydrate(string) {
+  string = string.split('');
   let sum = 0;
   for (let index = 0; index < string.length; index += 1) {
     let insideValue = parseInt(string[index], 10);
@@ -70,18 +71,12 @@ function checkForInteger(string) {
       sum += insideValue;
     }
   }
-  return sum;
-}
-
-function hydrate(string) {
-  string = string.split('');
-  let answer = checkForInteger(string);
-  if (answer === 1) {
-    answer += ' copo de água';
-    return answer;
+  if (sum === 1) {
+    sum += ' copo de água';
+    return sum;
   }
-  answer += ' copos de água';
-  return answer;
+  sum += ' copos de água';
+  return sum;
 }
 
 module.exports = {
