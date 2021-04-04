@@ -19,16 +19,15 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins*3) + ties;
 }
 
 // Desafio 6
 function highestCount(numbers) {
   const sortedNumbers = (numbers.sort());
-  let highestNumber = sortedNumbers[sortedNumbers.length -1];
+  let highestNumber = sortedNumbers[sortedNumbers.length - 1];
   let count = 0;
-  
   for (let index in numbers) {
     if (numbers[index] === highestNumber) {
       count += 1;
@@ -77,7 +76,7 @@ function encode(string) {
     o: 4,
     u: 5,
   };
-  const words = stringN.split('').map((key) => {
+  const words = string.split('').map((key) => {
     if (substitute[key]) {
       return substitute[key];
     }
@@ -87,18 +86,18 @@ function encode(string) {
 }
 
 function decode(stringN) {
-  const substitute = {
+  const substituteInverted = {
     1: 'a',
     2: 'e',
     3: 'i',
     4: 'o',
     5: 'u',
   };
-  const numbers = stringN.split('').map((key) => {
-    if (substitute[key]) {
-      return substitute[key];
+  const numbers = stringN.split('').map((num) => {
+    if (substituteInverted[num]) {
+      return substituteInverted[num];
     }
-    return key;
+    return num;
   });
   return numbers.join('');
 }
