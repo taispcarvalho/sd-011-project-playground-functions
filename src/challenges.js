@@ -14,7 +14,7 @@ function splitSentence(string) {
 function concatName(arrayDeString) {
   let firstName = arrayDeString[0];
   let lastName = arrayDeString[arrayDeString.length - 1];
-  let concat = `${lastName}, ${firstName}`
+  let concat = `${lastName}, ${firstName}`;
   return concat;
 }
 // Desafio 5
@@ -40,8 +40,8 @@ function highestCount(arrayHigherNumber) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let catCLose1 = (mouse - cat1);
-  let catClose2 = (mouse - cat2);
+  let catCLose1 = (cat1 - mouse);
+  let catClose2 = (cat2 - mouse);
   if (catCLose1 < catClose2) {
     winner = "cat1";
   } else if (catClose2 < catClose1) {
