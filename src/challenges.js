@@ -19,7 +19,7 @@ function splitSentence(SeparateWords) {
 // Desafio 4
 // Para este desafio utilizei o que aprendi em aula.
 function concatName(myArray) {
-  return myArray[myArray.length - 1] + ', ' + myArray[0];
+  return myArray[myArray.length - 1] + myArray[0];
 }
 
 // Desafio 5
@@ -33,12 +33,7 @@ function footballPoints(wins, ties) {
 // Para este desafio utilizei o que aprendi em aula.
 function highestCount(listOfNumbers) {
   let count = 0;
-  let highestNumber = listOfNumbers[0];
-  for (let index = 1; index < listOfNumbers.length; index += 1) {
-    if (listOfNumbers[index] > highestNumber) {
-      highestNumber = listOfNumbers[index];
-    }
-  }
+  let highestNumber = Math.max.apply(null, listOfNumbers);
   for (let index = 0; index < listOfNumbers.length; index += 1) {
     if (listOfNumbers[index] === highestNumber) {
       count += 1;
@@ -46,7 +41,7 @@ function highestCount(listOfNumbers) {
   }
   return count;
 }
-
+console.log(highestCount([9,9,9,9,9,99]))
 // Desafio 7
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
