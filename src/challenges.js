@@ -15,11 +15,12 @@ let value = str.split(' ')
 
 // Desafio 4 
 function concatName(name) {
-  let name = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
- for(index = 0; index<name.length; index =+ 1){
-let sum = name [3] + name[0]
- }
- return sum
+  let start = name[name.length-1];
+  let first = name[0]
+  let concatenation = start + ', ' + first
+}
+
+ return concatenation
 }
 
 
