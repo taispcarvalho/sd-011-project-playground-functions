@@ -1,7 +1,5 @@
 // Desafio 10
 function techList(techName, name) {
-  techName = ['js', 'java', 'css']
-  name= 'dada'
   let arrayObj = []
   let techObj = {} 
   for (index = 0; index < techName.length; index += 1){
