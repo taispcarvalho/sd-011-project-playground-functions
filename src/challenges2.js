@@ -4,9 +4,9 @@ function techList(techName, name) {
   let arrayObj = [];
   let techObj = {}; 
   if(techName.length <= 0){
-    return 'vazio!'
+    return 'Vazio!'
   }
-  for (index = 0; index < techName.length; index += 1){
+  for (let index = 0; index < techName.length; index += 1){
     techObj = {
     tech: ordemName[index],
     name: name,
