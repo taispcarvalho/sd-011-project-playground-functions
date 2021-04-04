@@ -64,24 +64,14 @@ function highestCount(sequencia) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 === cat2) {
-    return 'os gatos trombam e o rato foge';
-  }
-  let cat1Dif = 0;
-  let cat2Dif = 0;
-  if (mouse > 0) {
-    cat1Dif = mouse - cat1;
-    cat2Dif = mouse - cat2;
-  } else {
-    cat1Dif = cat1 - mouse;
-    cat2Dif = cat2 - mouse;
-  }
-  if (cat1Dif < cat2Dif) {
+  let mouseDistanceCat1 = Math.abs(mouse - cat1);
+  let mouseDistanceCat2 = Math.abs(mouse - cat2);
+  if (mouseDistanceCat1 < mouseDistanceCat2) {
     return 'cat1';
-  }
-  if (cat2Dif < cat1Dif) {
+  } if (mouseDistanceCat2 < mouseDistanceCat1) {
     return 'cat2';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
