@@ -39,12 +39,12 @@ function highestCount(numArray) {
 function catAndMouse(mouse, cat1, cat2) {
   let positionCat1 = Math.abs(mouse - cat1);
   let positionCat2 = Math.abs(mouse - cat2);
-  if (positionCat1 === positionCat2) {
-    return 'os gatos trombam o rato';
+  if (positionCat2 > positionCat1) {
+    return 'cat2';
   } else if (positionCat1 > positionCat2) {
     return 'cat1';
   } 
-  return 'cat2';
+  return 'os gatos trombam o rato';
 }
 
 // Desafio 8
