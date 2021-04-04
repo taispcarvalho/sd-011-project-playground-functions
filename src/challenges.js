@@ -64,8 +64,15 @@ function highestCount(sequencia) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Dif = mouse - cat1;
-  let cat2Dif = mouse - cat2;
+  let cat1Dif = 0;
+  let cat2Dif = 0;
+  if (mouse > 0) {
+    cat1Dif = mouse - cat1;
+    cat2Dif = mouse - cat2;
+  } else {
+    cat1Dif = cat1 - mouse;
+    cat2Dif = cat2 - mouse;
+  }
   if (cat1Dif < cat2Dif) {
     return 'cat1';
   }
