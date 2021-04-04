@@ -71,7 +71,7 @@ function generatePhoneNumber(numbers) {
   } else if (zero > 2 || one > 2 || two > 2 || three > 2 || four > 2 || five > 2 || six > 2
     || seven > 2 || eight > 2 || nine > 2 || error > 0) {
     return ('não é possível gerar um número de telefone com esses valores');
-  } else {
+  }
     numbersOutput.push('(');
     for (let index = 0; index < 2; index += 1) {
       numbersOutput.push(numbers[index]);
@@ -86,7 +86,7 @@ function generatePhoneNumber(numbers) {
     }
     numbersOutput = numbersOutput.join('');
     return numbersOutput;
-  }
+
 }
 
 // Desafio 12
