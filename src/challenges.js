@@ -79,7 +79,7 @@ console.log(catAndMouse(0, 2, 2));
 
 // Desafio 8
 function fizzBuzz(numbersArray) {
-  let resultArray = 0;
+  let resultArray = [];
   for (let index = 0; index < numbersArray.length; index += 1) {
     if (numbersArray[index] % 3 === 0) {
       resultArray.push('fizz');
