@@ -75,21 +75,28 @@ console.log(catAndMouse(0, 6, 12));
 console.log(catAndMouse(0, 1, 1));
 
 // Desafio 8
-function fizzBuzz(num) {
-  let array = [];
-  for (let index in num) {
-    if (num[index] % 15 === 0) {
-      array.push('fizzBuzz');
-    } else if (num[index] % 3 === 0) {
-      array.push('fizz');
-    } else if (num[index] % 5 === 0) {
-      array.push('buzz');
+function secondFizzBuzz(numbers) {
+  let text = 0;
+    if (numbers % 15 === 0) {
+      text = 'fizzBuzz';
+    } else if (numbers  % 3 === 0) {
+      text = 'fizz';
+    } else if (numbers  % 5 === 0) {
+      text = 'buzz';
     } else {
-      array.push('bug');
+      text = ('bug');
     }
-  }
-  return array;
+  return text;
 }
+
+function fizzBuzz(array) {
+  let result = [];
+  for (let index = 0; index < array.length; index += 1) {
+    result.push(secondFizzBuzz(array[index]));
+  }
+  return result
+}
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(sentence) {
