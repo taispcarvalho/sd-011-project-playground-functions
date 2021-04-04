@@ -1,6 +1,8 @@
 // Desafio 10
 function techList(tecnologias, nome) {
-  tecnologias.sort();
+  if (tecnologias.length === 5) {
+    tecnologias.sort();
+  }
   let objRetorno = [];
 
   for (let tecnologia of tecnologias) {
