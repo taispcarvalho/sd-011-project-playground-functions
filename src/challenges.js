@@ -16,12 +16,12 @@ function calcArea(base, height) {
   return area;
 }
 // Desafio 3
-function splitSentence() {
+function splitSentence(goTrybe) {
   // seu código aqui
-  let goTrybe = 'Go trybe';
   let result = goTrybe.split(' ');
   return result;
 }
+splitSentence('Go trybe');
 // Desafio 4
 function concatName() {
   // seu código aqui
