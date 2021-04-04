@@ -69,13 +69,14 @@ function catAndMouse(mouse, cat1, cat2) {
   let result;
   if (cat1 === cat2) {
     result = 'os gatos trombam e o rato foge';
-  } else if (cat1 < cat2 && cat1 >= mouse) {
+  } else if (cat1 < cat2) {
     result = 'cat1'
-  } else if (cat2 < cat1 && cat2 >= mouse) {
+  } else if (cat2 < cat1) {
     result = 'cat2'
   }
   return result
 }
+console.log(catAndMouse(0,4,4))
 // Desafio 8
 let arrayFizzBuzz = [2, 15, 7, 9, 45];
 function fizzBuzz(arrayFizzBuzz) {
