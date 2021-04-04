@@ -15,9 +15,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(words) {
-   let space = ' '
-  return space.concat(words[words.length-1], ', ', words[0])
+function concatName(array) {
+  let space = ' ';
+  return space.concat(array[array.length-1], ', ', array[0]);
 }
 
 // Desafio 5
@@ -27,7 +27,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  
 }
 
 // Desafio 7
