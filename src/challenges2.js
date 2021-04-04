@@ -44,11 +44,13 @@ function verifyDigit(arrayOfNumbers) {
 
 function verifyRepetition(arrayOfNum) {
   let repLimit = 2;
-  let repArray = arrayOfNum.map((num) => arrayOfNum.filter((n) => n === num).length > repLimit);
-  if (repArray.length === 0) {
-    return true;
+  let boolArray = arrayOfNum.map((num) => arrayOfNum.filter((n) => n === num).length > repLimit);
+  for (let index = 0; index < boolArray.length; index += 1) {
+    if (boolArray[index] === true) {
+      return false;
+    }
+  return true;
   }
-  return false;
 }
 
 function generatePhoneNumber(arrayOfNumbers) {
