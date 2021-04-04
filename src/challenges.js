@@ -15,10 +15,10 @@ function calcArea(base, height) {
 function splitSentence(frase) {
   let output = [];
   let text = '';
-  for (let index = 0; index < frase.length; index += 1) {  
+  for (let index = 0; index < frase.length; index += 1) {
     if (frase[index] === ' ') {
-      index++
-      output.push(text); 
+      index += 1;
+      output.push(text);
       text = '';
     }
     text += frase[index];
