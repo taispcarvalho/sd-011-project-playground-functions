@@ -3,21 +3,21 @@
 function techList(wantToLearn, name) {
   let myDevTechs = [];
 
-  if (wantToLearn.lenght === 0) {
-    return 'Vazio!';
-
-  } else {
+  if (wantToLearn.length > 0 ) {
     for (let techs of wantToLearn){
 			let object = {
-				tech: techs,
-				name: name,
+				tech: techs, 
+				name: name, 
 			}
 			myDevTechs.push(object);
 		}
 				    
     return myDevTechs.sort((a,b) => (a.wantToLearn > b.wantToLearn ? 1 : -1));
-  }  
-}
+  }
+
+  return 'Vazio!'
+}  
+
 
 console.log(techList(['React', 'Python', 'PHP', 'Express'], 'Gustavo'));
 
