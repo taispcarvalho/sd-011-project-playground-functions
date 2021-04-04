@@ -88,10 +88,11 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
+  let cupOfWater = 0;
   let filter = /[1-9]/g;
   let stringArray = string.match(filter);
   let numArray = stringArray.map((num) => parseInt(num));
-  let cupOfWater = 0;
+  
   for (let index = 0; index < numArray.length; index += 1) {
     cupOfWater += numArray[index];
   }
