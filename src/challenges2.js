@@ -1,9 +1,9 @@
 // Desafio 10
 function techList(array, student) {
-  let newArray = [];
   if (array.length === 0) {
     return 'Vazio!';
   }
+  let newArray = [];
   for (let index = 0; index < array.length; index += 1) {
     newArray.push({
       tech: array[index],
@@ -27,14 +27,16 @@ function generatePhoneNumber(array) {
   if (array.length > 11) {
     return 'Array com tamanho incorreto.';
   }
-  let cont;
+
   for (let index = 0; index < array.length; index += 1) {
+    let count = 0;
     for (let indexJ = 0; indexJ < array.length; indexJ += 1) {
       let avaliator = array[index];
       if (avaliator === array[indexJ]) {
-        cont += 1;
+        count += 1;
+        console.log(count);
       }
-      if (cont >= 3 || array[indexJ] < 0 || array[indexJ] > 9) {
+      if (count > 2 || array[indexJ] < 0 || array[indexJ] > 9) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
     }
