@@ -53,18 +53,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function checkCondition(numbersDivisors) {
+  if (numbersDivisors % 15 === 0) {
+    return 'fizzBuzz';
+  }
+  if (numbersDivisors % 3 === 0) {
+    return 'fizz';
+  }
+  if (numbersDivisors % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
 function fizzBuzz(arrayNumbers) {
   let resultArray = [];
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if ((arrayNumbers[index] % 3 === 0) && arrayNumbers[index] % 5 === 0) {
-      resultArray.push('fizzBuzz');
-    } else if ((arrayNumbers[index] % 3 === 0)) {
-      resultArray.push('fizz');
-    } else if (arrayNumbers[index] % 5 === 0) {
-      resultArray.push('buzz');
-    } else {
-      resultArray.push('bug!');
-    }
+    resultArray[index] = checkCondition(arrayNumbers[index]);
   }
   return resultArray;
 }
