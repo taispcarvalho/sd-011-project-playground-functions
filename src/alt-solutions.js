@@ -16,6 +16,49 @@ function decode(encodedMessage) {
   });
 }
 
+// Auxiliary function for requirement 10
+function maySwap(arr, index) {
+  let arrElement1;
+
+  if (arr[index] > arr[index + 1]) {
+    arrElement1 = arr[index];
+    arr[index] = arr[index + 1];
+    arr[index + 1] = arrElement1;
+  }
+}
+
+// Auxiliary function for requirement 10
+function bubbleSort(arr) {
+  let arrSize = arr.length;
+  let indexA;
+  let indexB;
+
+  for (indexA = 1; indexA < arrSize - 1; indexA += 1) {
+    for (indexB = 0; indexB < arrSize - indexA; indexB += 1) {
+      maySwap(arr, indexB);
+    }
+  }
+
+  return arr;
+}
+
+// Desafio 10
+function techList(techs, name) {
+  if (techs.length === 0) {
+    return 'Vazio!';
+  }
+
+  let sortedTechs = bubbleSort(techs);
+  let finalList = [];
+  for (let tech of sortedTechs) {
+    finalList.push({ tech, name });
+  }
+
+  return finalList;
+}
+
+// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Bia'));
+
 // Auxiliary function for Desafio 11
 function getBiggestNumber(numbers) {
   let index;
@@ -115,5 +158,5 @@ function generatePhoneNumber(numbers) {
   return phoneNumber.replace(/\d{2}/g, formatPhoneNumber);
 }
 
-console.log(decode(encode('hi there!')));
-console.log(generatePhoneNumber([1, 1, 9, 5, 9, 8, 5, 2, 7, 2, 3]));
+// console.log(decode(encode('hi there!')));
+// console.log(generatePhoneNumber([1, 1, 9, 5, 9, 8, 5, 2, 7, 2, 3]));
