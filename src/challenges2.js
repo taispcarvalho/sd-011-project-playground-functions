@@ -92,12 +92,11 @@ function hydrate(string) {
   let filter = /[1-9]/g;
   let stringArray = string.match(filter);
   let numArray = stringArray.map((num) => parseInt(num));
-  
   for (let index = 0; index < numArray.length; index += 1) {
     cupOfWater += numArray[index];
   }
 
-  return (cupOfWater + ' copos de água');
+  return (`${cupOfWater} copos de água`);
 }
 
 module.exports = {
