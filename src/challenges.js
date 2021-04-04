@@ -64,18 +64,17 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(lista) {
   let novaLista = [];
   for (let numeroAtual of lista) {
-    if (numeroAtual % 3 == 0) {
-      novaLista.push('fizz');
-    }
-    if (numeroAtual % 5 == 0) {
-      novaLista.push('buzz');
-    }
-    if (novaLista % 15 == 0) {
+    if (numeroAtual % 15 === 0) {
       novaLista.push('fizzBuzz');
+    } else if (numeroAtual % 5 === 0) {
+      novaLista.push('buzz');
+    } else if (numeroAtual % 3 === 0) {
+      novaLista.push('fizz');
     } else {
       novaLista.push('bug!');
     }
   }
+  return novaLista;
 }
 
 // Desafio 9
