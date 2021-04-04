@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(arrayValue, name) {
+function techList(arrayValue, nome) {
   arrayValue = arrayValue.sort();
   let arrayOfObjects = [];
   if (arrayValue.length === 0) {
@@ -8,7 +8,7 @@ function techList(arrayValue, name) {
   for (let index = 0; index < arrayValue.length; index += 1) {
     let objectArray = {
       tech: arrayValue[index],
-      name: name
+      name: nome;
     };
     arrayOfObjects.push(objectArray);
   }
