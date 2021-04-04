@@ -3,7 +3,8 @@
 function ordenadorTech(a, b) {
   if (a.tech > b.tech) {
     return 1;
-  } else if (a.tech < b.tech) {
+  }
+  if (a.tech < b.tech) {
     return -1;
   }
   return 0;
@@ -25,7 +26,6 @@ function techList(array, student) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  console.log(array);
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
@@ -41,16 +41,21 @@ function generatePhoneNumber(array) {
       }
     }
   }
-  return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+  let ddd = `(${array[0]}${array[1]})`;
+  let num1 = ` ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}`;
+  let num2 = `-${array[7]}${array[8]}${array[9]}${array[10]}`;
+  return `${ddd}${num1}${num2}`;
 }
+let a = [1, 0, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+console.log(generatePhoneNumber(a));
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
+function triangleCheck() {
   // seu código aqui
 }
 
 // Desafio 13
-function hydrate(string) {}
+function hydrate() {}
 
 module.exports = {
   generatePhoneNumber,
