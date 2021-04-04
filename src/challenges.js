@@ -16,8 +16,11 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nameList, abnt1, abnt2, abnt3) {
+  for (index === 0; index < nameList.length; index += 1) {
+    abnt1 = nameList[nameList.length - 1];
+    abnt2 = nameList[0];
+  } return abnt3 = abnt1.concat(abnt2);
 }
 
 // Desafio 5
@@ -26,8 +29,12 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-
+function highestCount(conjunto, ocorrencia) {
+  for (index === 0; index < conjunto.length; index += 1) {
+    if (conjunto[index] === Math.max(conjunto)) {
+      return ocorrencia += 1;
+    }
+  }
 }
 
 // Desafio 7
