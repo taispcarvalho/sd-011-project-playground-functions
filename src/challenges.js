@@ -91,7 +91,7 @@ function encode(phraseEncode) {
     arrayEncode.push(phraseEncode[index1]);
   }
 
-  for (let index2 = 0; index2 < phraseEncode.length; index2 +=1) {
+  for (let index2 = 0; index2 < phraseEncode.length; index2 += 1) {
     switch (phraseEncode[index2]) {
     case 'a':
       arrayEncode[index2] = 1;
@@ -132,7 +132,7 @@ function decode(phraseDecode) {
     arrayDecode.push(phraseDecode[index1]);
   }
 
-  for (let index2 = 0; index2 < phraseDecode.length; index2 +=1) {
+  for (let index2 = 0; index2 < phraseDecode.length; index2 += 1) {
     switch (phraseDecode[index2]) {
     case '1':
       arrayDecode[index2] = 'a';
