@@ -2,9 +2,10 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
   return true;
-} else {
+  } else {
   return false;
-} } ;
+  } 
+} ;
 
 // Desafio 2
 function calcArea(base, height) {
@@ -33,19 +34,20 @@ function footballPoints(wins, ties) {
 function findMaxNumber (numbers) { 
   let maxNumber = numbers[0];
   for (let index = 0 ; index < numbers.length; index += 1) { 
-  if (numbers[index] > maxNumber) {
+    if (numbers[index] > maxNumber) {
     maxNumber = numbers[index];
+    }
   }
-}
   return maxNumber;
 } 
+
 function highestCount(numbers) {
   let numbersOfNumbers = 0;
   for(let index = 0; index < numbers.length; index += 1) {
-  if (findMaxNumber(numbers) === numbers[index]) {
+    if (findMaxNumber(numbers) === numbers[index]) {
     numbersOfNumbers += 1;
-  }
-} 
+    }
+  } 
 return numbersOfNumbers;
 }
 

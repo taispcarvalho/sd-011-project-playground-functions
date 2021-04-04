@@ -49,20 +49,17 @@ function validate (numbers) {
 //função auxiliar final para gerar o number em formato: | //referencia: https://www.w3schools.com/jsref/jsref_concat_string.asp;
   
 function generatePhoneNumber(numbers) { 
-  let phoneNumber = [];
+  let phoneNumber = numbers;
   
   if (numbers.length != 11) {
     return 'Array com tamanho incorreto.'
   } else if (validate(numbers) === false) {
       return 'não é possível gerar um número de telefone com esses valores'
   } else { 
-      for(let index = 0; index < numbers.length; index +=1) {
-        phoneNumber.push(numbers[index]); 
-      }
       return concat = '(' + phoneNumber[0] + phoneNumber[1] + ') ' + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + '-' + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10];
-  }
+    }
     return phoneNumber; 
-} ;
+} ; 
 
 
 // Desafio 12
@@ -74,13 +71,28 @@ function triangleCheck(lineA, lineB, lineC) {
   } else {
     return false;
   }
-} console.log(triangleCheck(50,1,52));
+} 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(phrase) {
 
+  let reg = /\d+/g;
+  let result = phrase.match(reg);
+  let sum = 0;
+  
+  console.log(result);
+  
+    for (index = 0; index < result.length; index += 1) {
+      sum += parseInt(result[index]);
+    }   console.log(sum);
+  
+  
+    if(sum === 1) {
+      return '1 copo de água';
+    } else  {
+      return sum + ' copos de água';
+    } 
+  }
 module.exports = {
   generatePhoneNumber,
   techList,
