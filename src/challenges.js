@@ -39,9 +39,9 @@ function highestCount(numArray) {
 function catAndMouse(mouse, cat1, cat2) {
   let positionCat1 = Math.abs(mouse - cat1);
   let positionCat2 = Math.abs(mouse - cat2);
-  if(positionCat1 === positionCat2){
+  if (positionCat1 === positionCat2) {
     return 'os gatos trombam e o rato foge';
-  }else if(positionCat1 < positionCat2){
+  }else if (positionCat1 < positionCat2) {
     return 'cat1';
   }
   return 'cat2';
@@ -52,12 +52,12 @@ function fizzBuzz(numbers) {
   for(let index= 0; index < numbers.length; index += 1){
    if(numbers[index] % 3 === 0 && numbers[index] % 5 !== 0){
      results.push('fizz');
-   }else if(numbers[index % 5 === 0 && numbers[index] % 3 !==0]){
-     results.push('buzz')
+   }else if(numbers[index] % 5 === 0 && numbers[index] % 3 !== 0){
+     results.push('buzz');
    }else if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0 ){
-     results.push('fizzBuzz')
+     results.push('fizzBuzz');
    }else {
-     results.push('bug!')
+     results.push('bug!');
    }
 
   }
