@@ -1,6 +1,19 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnologias, nome) {
+  tecnologias.sort();
+  let objRetorno = [];
+
+  for (let tecnologia of tecnologias) {
+    objRetorno.push({
+      tech: tecnologia,
+      name: nome,
+    });
+  }
+
+  if (objRetorno.length === 0) {
+    return 'Vazio!';
+  }
+  return objRetorno;
 }
 
 // Desafio 11
