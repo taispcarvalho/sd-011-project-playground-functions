@@ -8,7 +8,7 @@ function techList(arrayValue, nome) {
   for (let index = 0; index < arrayValue.length; index += 1) {
     let objectArray = {
       tech: arrayValue[index],
-      name: nome;
+      name: nome
     };
     arrayOfObjects.push(objectArray);
   }
