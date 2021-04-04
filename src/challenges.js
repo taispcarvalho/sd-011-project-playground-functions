@@ -23,9 +23,15 @@ console.log(calcArea(5,2));
 console.log(calcArea(51,1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  
+  return string.split(" ")
+  
+  
 }
+console.log(splitSentence('go Trybe'))
+console.log(splitSentence('Vamo que Vamo'))
+console.log(splitSentence('foguete'))
 
 // Desafio 4
 function concatName() {
