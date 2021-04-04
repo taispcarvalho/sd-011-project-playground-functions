@@ -36,7 +36,7 @@ function highestCount(var1) {
   }
   for (let index = 0; index < var1.length; index += 1) {
     if (number === var1[index]){
-      resultado +=1;
+      resultado += 1;
     }
   }
   return resultado;
@@ -70,10 +70,23 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode(var1) {
- 
+function encode(code) {
+  code = code.split('');
+  for (let index = 0; index < code.length; index += 1) {
+    if (code[index] === 'a') {
+      code[index] = '1'
+    } else if (code[index] === 'e') {
+      code[index] = '2'
+    } else if (code[index] === 'i') {
+      code[index] = '3'
+    } else if (code[index] === 'o') {
+      code[index] = '4'
+    } else if (code[index] === 'u') {
+      code[index] = '5'
+    }
+  }
+  return code.join('');
 }
-console.log(encode())
 function decode() {
   // seu código aqui
 }
