@@ -29,7 +29,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(frase) {
   let output = '';
-  for (let index = 0; index < frase.length; index += index) {
+  for (let index = 0; index < frase.length; index += 1) {
     output += frase[index];
     index = frase.length - 1;
     output += `, ${frase[index]} `;
