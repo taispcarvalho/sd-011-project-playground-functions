@@ -32,8 +32,9 @@ function concatName(frase) {
   for (let index = 0; index < frase.length; index += 1) {
     output += frase[index];
     index = frase.length - 1;
-    output += `, ${frase[index]} `;
+    output += `, ${frase[index]}`;
   }
+  return output;
 }
 
 // Desafio 5
