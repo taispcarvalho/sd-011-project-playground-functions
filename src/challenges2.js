@@ -15,10 +15,40 @@ function techList(skills, name) {
   return packageSkills;
 }
 
+//console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
+
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function validatorPhoneNumber(fone) {
+  let repeatCaracter = 1;
+  if (fone.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index in fone) {
+    if (fone[index] === fone[index + 1]) {
+      repeatCaracter += 1;
+    }
+  }
+  if (repeatCaracter >= 3) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return true;
 }
+
+function generatePhoneNumber(fone) {
+  for (let index in fone) {
+    if (fone[index] < 0 || fone[index] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  if (validatorPhoneNumber(fone) === true) {
+    return `(${fone[0]}${fone[1]}) `
+      + `${fone[2]}${fone[3]}${fone[4]}${fone[5]}${fone[6]}-`
+      + `${fone[7]}${fone[8]}${fone[9]}${fone[10]}`;
+  }
+  return validatorPhoneNumber(fone);
+}
+
+//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9]));
 
 // Desafio 12
 function triangleCheck() {
