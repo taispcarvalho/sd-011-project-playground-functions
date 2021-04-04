@@ -65,7 +65,7 @@ function highestCount() {
 }
 
 // Desafio 7
-/**function catAndMouse(mouse, cat1, cat2) {
+  /**function catAndMouse(mouse, cat1, cat2) {
   mouse;
   if (cat1 === cat2) {
     return 'The cats bump and the mouse scape';
@@ -79,8 +79,8 @@ function highestCount() {
 } */
 
 function catAndMouse(mouse, cat1, cat2) {
-  cat1Unity = Math.abs(cat1 - mouse);
-  cat2Unity = Math.abs(cat2 - mouse);
+  let cat1Unity = Math.abs(cat1 - mouse);
+  let cat2Unity = Math.abs(cat2 - mouse);
 
   if (cat1Unity === cat2Unity) {
     return 'The cats bump and the mouse scape';
