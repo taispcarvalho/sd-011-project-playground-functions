@@ -143,12 +143,31 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(message) {
+  let characters = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  message = message.replace(/[aeiou]/gi, (index) => characters[index]);
+  return message;
 }
-function decode() {
-  // seu código aqui
+
+function decode(message) {
+  let characters = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  message = message.replace(/[12345]/gi, (index) => characters[index]);
+  return message;
 }
+console.log(encode('Hi, there!'));
+console.log(encode('Rogerio Martins!'));
 
 module.exports = {
   calcArea,
