@@ -101,7 +101,7 @@ function fizzBuzz(array) {
 
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
-// Desafio 9
+// Desafio 9. Para resolver este desafio, utilizei o seguinte material como base: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 function encode(string) {
   for (let index = 0; index < string.length; index += 1) {
     string = string.replace('a', '1');
