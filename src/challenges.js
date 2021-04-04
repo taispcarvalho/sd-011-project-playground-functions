@@ -52,12 +52,11 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbers) {
-  let numbers = [2, 15, 7, 9, 45];
+function fizzBuzz(numArray) {
   let result = [];
 
-  for (let index = 0; index < numbers.length; index +=1) {
-    let element = numeros[index];
+  for (let index = 0; index < numArray.length; index +=1) {
+    let element = numArray[index];
 
     if (element % 3 || element % 5 >= 1) {
       result.push('bug!');
