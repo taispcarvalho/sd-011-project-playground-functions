@@ -18,10 +18,11 @@ function concatName(name) {
   let start = name[name.length-1];
   let first = name[0]
   let concatenation = start + ', ' + first
+
+  return concatenation
 }
 
- return concatenation
-}
+
 
 
 // Desafio 5
