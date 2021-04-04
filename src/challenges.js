@@ -42,15 +42,13 @@ console.log(footballPoints(14, 8));
 function highestCount(array) {
   let maiorNumero = 0;
   let numeroRepetido = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    let possivelMaiorNumero = maiorNumero;
-    maiorNumero = array[index];
-    if (maiorNumero < possivelMaiorNumero) {
-      maiorNumero = possivelMaiorNumero;
+  for (let index in array) {
+    if (array[index] > maiorNumero) {
+      maiorNumero = array[index];
     }
   }
-  for (let secondIndex = 0; secondIndex < array.length; secondIndex += 1) {
-    if (maiorNumero === array[secondIndex]) {
+  for (let secondIndex in array) {
+    if (array[secondIndex] === maiorNumero) {
       numeroRepetido += 1;
     }
   }
@@ -75,26 +73,15 @@ console.log(catAndMouse(0, 6, 12));
 console.log(catAndMouse(0, 1, 1));
 
 // Desafio 8
-function secondFizzBuzz(numbers) {
-  let text = 0;
-  if (numbers % 15 === 0) {
-    text = 'fizzBuzz';
-  } else if (numbers % 3 === 0) {
-    text = 'fizz';
-  } else if (numbers % 5 === 0) {
-    text = 'buzz';
-  } else {
-    text = ('bug');
-  }
-  return text;
-}
-
-function fizzBuzz(array) {
-  let result = [];
-  for (let index = 0; index < array.length; index += 1) {
-    result.push(secondFizzBuzz(array[index]));
-  }
-  return result;
+function fizzBuzz(arr) {
+  return arr.map((value) => {
+    let response;
+    if (value % 3 === 0 && value % 5 === 0) response = 'fizzBuzz';
+    else if (value % 3 === 0) response = 'fizz';
+    else if (value % 5 === 0) response = 'buzz';
+    else response = 'bug!';
+    return response;
+  });
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
