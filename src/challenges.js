@@ -74,15 +74,15 @@ function encode(code) {
   code = code.split('');
   for (let index = 0; index < code.length; index += 1) {
     if (code[index] === 'a') {
-      code[index] = '1'
+      code[index] = '1';
     } else if (code[index] === 'e') {
-      code[index] = '2'
+      code[index] = '2';
     } else if (code[index] === 'i') {
-      code[index] = '3'
+      code[index] = '3';
     } else if (code[index] === 'o') {
-      code[index] = '4'
+      code[index] = '4';
     } else if (code[index] === 'u') {
-      code[index] = '5'
+      code[index] = '5';
     }
   }
   return code.join('');
@@ -91,20 +91,20 @@ function decode(text) {
   text = text.split('');
   for (let index = 0; index < text.length; index += 1) {
     if (text[index] === '1') {
-      text[index] = 'a'
+      text[index] = 'a';
     } else if (text[index] === '2') {
-      text[index] = 'e'
+      text[index] = 'e';
     } else if (text[index] === '3') {
-      text[index] = 'i'
+      text[index] = 'i';
     } else if (text[index] === '4') {
-      text[index] = 'o'
+      text[index] = 'o';
     } else if (text[index] === '5') {
-      text[index] = 'u'
+      text[index] = 'u';
     }
   }
   return text.join('');
 }
-}
+
 
 module.exports = {
   calcArea,
