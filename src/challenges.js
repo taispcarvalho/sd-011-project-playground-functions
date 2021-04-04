@@ -87,8 +87,23 @@ function encode(code) {
   }
   return code.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(text) {
+  text = text.split('');
+  for (let index = 0; index < text.length; index += 1) {
+    if (text[index] === '1') {
+      text[index] = 'a'
+    } else if (text[index] === '2') {
+      text[index] = 'e'
+    } else if (text[index] === '3') {
+      text[index] = 'i'
+    } else if (text[index] === '4') {
+      text[index] = 'o'
+    } else if (text[index] === '5') {
+      text[index] = 'u'
+    }
+  }
+  return text.join('');
+}
 }
 
 module.exports = {
