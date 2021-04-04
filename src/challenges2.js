@@ -113,8 +113,14 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebidas) {
+  // Source: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+  let regex = /[+-]?\d+(?:\.\d+)?/g;
+  let waterCups = 0;
+  while (match = regex.exec(bebidas)) {
+    waterCups += parseInt(match[0], 10);
+  }
+  return waterCups;
 }
 
 module.exports = {
