@@ -60,10 +60,27 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let counter = 0;
+  let biggest = 0;
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    if(numbers[index] > biggest) {
+      biggest = numbers[index];
+    }
+  }
+  for (let index = 0; index < numbers.length; index += 1) {
+    if(numbers[index] === biggest) {
+      biggest = numbers[index];
+      counter += 1;
+    }
+  }  
+  return counter
 }
 
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
+console.log(highestCount([0, 0, 0]))
 // Desafio 7
 /** function catAndMouse(mouse, cat1, cat2) {
   mouse;
