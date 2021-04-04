@@ -33,8 +33,8 @@ function generatePhoneNumber(numbers) {
    }
   }
 
-  for (index2 of numbers) {
-    for (index3 = 1; index3 < numbers.length; index += 1) {
+  for (let index2 of numbers) {
+    for (let index3 = 1; index3 < numbers.length; index += 1) {
       if (index2 === numbers[index3]) {
         cont += 1;
       }
@@ -42,16 +42,16 @@ function generatePhoneNumber(numbers) {
     }
   }
   
-  if (cont < 2) {
+  if (cont < 3) {
     numbers.splice(0, 0, '(');
-    numbers.splice(3, 0, ') ');
+    numbers.splice(3, 0, ')');
     numbers.splice(9, 0, '-');
     return numbers.join('');
   }
 
   return 'não é possível gerar um número de telefone com esses valores.';
 }
-
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
