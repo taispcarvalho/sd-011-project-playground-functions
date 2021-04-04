@@ -23,20 +23,14 @@ function checkRange(arrayNumbers) {
   return false;
 }
 
-function duplicateNumber(arrayNumbers) {
-  let validate = false;
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    let count = 0;
-    for (let indexSec = 0; indexSec < arrayNumbers.length; indexSec += 1) {
-      if (arrayNumbers[index] === arrayNumbers[indexSec]) {
-        count += 1;
-        if (count === 3) {
-          validate = true;
-        }
-      }
+function triplicateNumber(arrayNumbers) {
+  let sortedArray = arrayNumbers.slice().sort();
+  for (let index = 0; index < arrayNumbers.length - 1; index += 1) {
+    if (sortedArray[index + 2] === (sortedArray[index + 1] && sortedArray[index])) {
+      return true;
     }
   }
-  return validate;
+  return false;
 }
 
 function validateNumbers(arrayNumbers) {
@@ -51,13 +45,13 @@ function validateNumbers(arrayNumbers) {
 
 function generatePhoneNumber(arrayOfNumbers) {
   let checkRangeNumber = checkRange(arrayOfNumbers);
-  let verifyDuplicateNumber = duplicateNumber(arrayOfNumbers);
+  let verifyTriplicateNumber = triplicateNumber(arrayOfNumbers);
   let validateArrayNumber = validateNumbers(arrayOfNumbers);
   let newArrayOfNumbers = '(xx) xxxxx-xxxx';
   if (checkRangeNumber === true) {
     return 'Array com tamanho incorreto.';
   }
-  if ((verifyDuplicateNumber || validateArrayNumber) === true) {
+  if ((verifyTriplicateNumber || validateArrayNumber) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   for (let index = 0; index < arrayOfNumbers.length; index += 1) {
