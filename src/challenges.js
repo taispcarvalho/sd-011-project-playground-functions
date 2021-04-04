@@ -45,7 +45,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } 
   return 'cat2';
-
 }
 
 // Desafio 8
