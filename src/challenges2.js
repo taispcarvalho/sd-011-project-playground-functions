@@ -31,7 +31,7 @@ function quantNumbers(numbers) {
 // Função auxiliar - retorna true caso a condição seja satisfeita
 function validNumber(numbers) {
   for (let index = 0; index < numbers.length; index += 1) {
-    if (index < 0 || index > 9) {
+    if (numbers[index] < 0 || numbers[index] > 9) {
       return false;
     }
   } 
@@ -49,14 +49,14 @@ function repetition(numbers) {
       }
     }
 
-    if (cont <= 2) {
-      return true;
+    if (cont >= 3) {
+      return false;
     }
 
     cont = 0; // zera contagem apos o segundo for comparar todos index com o index 2 e assim sucessivamente
   }
 
-  return false;
+  return true;
 }
 
 // Função auxiliar - Adicionando parenteses na string com splice
@@ -79,6 +79,7 @@ function generatePhoneNumber(numbers) {
   
   return phoneOrganizer(numbers);
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
