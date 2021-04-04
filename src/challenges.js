@@ -18,8 +18,9 @@ function splitSentence(SeparateWords) {
 
 // Desafio 4
 // Para este desafio utilizei o que aprendi em aula.
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals
 function concatName(myArray) {
-  return myArray[myArray.length - 1] + myArray[0];
+  return `${myArray[myArray.length - 1]}, ${myArray[0]}`;
 }
 
 // Desafio 5
@@ -31,6 +32,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 // Para este desafio utilizei o que aprendi em aula.
+// https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
 function highestCount(listOfNumbers) {
   let count = 0;
   let highestNumber = Math.max.apply(null, listOfNumbers);
@@ -41,7 +43,7 @@ function highestCount(listOfNumbers) {
   }
   return count;
 }
-console.log(highestCount([9,9,9,9,9,99]))
+
 // Desafio 7
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
@@ -57,15 +59,18 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 // Para este desafio utilizei o que aprendi em aula.
 function fizzBuzz(divArray) {
-  for (let index = 0; index < divArray.length; index += 1) {
-    if (divArray[index] % 15 === 0) {
-      divArray[index] = 'fizzBuzz';
-    } else if (divArray[index] % 3 === 0) {
-      divArray[index] = 'fizz';
-    } else if (divArray[index] % 5 === 0) {
-      divArray[index] = 'buzz';
-    } else if (divArray[index] % 1 === 0) {
-      divArray[index] = 'bug!';
+  for (let i = 0; i < divArray.length; i += 1) {
+    if (divArray[i] % 15 === 0) {
+      divArray[i] = 'fizzBuzz';
+    }  
+    if (divArray[i] % 3 === 0) {
+      divArray[i] = 'fizz';
+    }
+    if (divArray[i] % 5 === 0) {
+      divArray[i] = 'buzz';
+    }
+    if (divArray[i] % 1 === 0) {
+      divArray[i] = 'bug!';
     }
   }
   return divArray;
