@@ -81,12 +81,12 @@ console.log(catAndMouse(0, 2, 2));
 function fizzBuzz(numbersArray) {
   let resultArray = [];
   for (let index = 0; index < numbersArray.length; index += 1) {
-    if (numbersArray[index] % 3 === 0) {
+    if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 === 0) {
+      resultArray.push('fizzBuzz');
+    } else if (numbersArray[index] % 3 === 0) {
       resultArray.push('fizz');
     } else if (numbersArray[index] % 5 === 0) {
       resultArray.push('buzz');
-    } else if (numbersArray[index] % 5 === 0 && numbersArray[index] % 3 === 0) {
-      resultArray.push('fizzBuzz');
     } else {
       resultArray.push('bug!');
     }
@@ -149,6 +149,7 @@ function decode(uppercaseVowels) {
 }
 console.log(decode('h3 th2r2!'));
 console.log(encode('hi there!'));
+
 module.exports = {
   calcArea,
   catAndMouse,
