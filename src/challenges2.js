@@ -65,9 +65,26 @@ function triangleCheck(lineA, lineB, lineC) {
 /* https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs */
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function drinksCounter(drinks) {
+  drinks = drinks.replace(/\D/g, '');
+  let sum = 0;
+  for (let index = 0; index < drinks.length; index += 1) {
+    sum += Number(drinks[index]);
+  }
+  return sum;
 }
+
+function hydrate(drinks) {
+  let text = '';
+  if (drinksCounter(drinks) === 1) {
+    text = `${drinksCounter(drinks)} copo de água`;
+  } else {
+    text = `${drinksCounter(drinks)} copos de água`;
+  }
+  return text;
+}
+/* https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp ;
+  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number */
 
 module.exports = {
   generatePhoneNumber,
