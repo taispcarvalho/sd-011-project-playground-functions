@@ -10,20 +10,24 @@ function techList(array, student) {
       name: student,
     });
   }
-  newArray.sort(function (techA, techB) {
+  return comparator(newArray);
+}
+
+function comparator(comparator) {
+  comparator.sort(function (techA, techB) {
     if (techA.tech > techB.tech) {
       return 1;
-    }
-    if (techA.tech < techB.tech) {
+    } else if (echA.tech < techB.tech) {
       return -1;
     }
     return 0;
   });
-  return newArray;
+  return comparator;
 }
 
 // Desafio 11
 function generatePhoneNumber(array) {
+  console.log(array);
   if (array.length > 11) {
     return 'Array com tamanho incorreto.';
   }
