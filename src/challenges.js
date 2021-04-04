@@ -15,9 +15,13 @@ let value = str.split(' ')
 
 // Desafio 4 
 function concatName(name) {
-  let ownNames = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
-  return ownNames[3] + ownNames[0]
+  let name = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+ for(index = 0; index<name.length; index =+ 1){
+let sum = name [3] + name[0]
+ }
+ return sum
 }
+
 
 // Desafio 5
 function footballPoints() {
