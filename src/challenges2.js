@@ -2,7 +2,7 @@
 function techList(array, student) {
   let newArray = [];
   if (array.length === 0) {
-    return "Vazio!";
+    return 'Vazio!';
   }
   for (let index = 0; index < array.length; index += 1) {
     newArray.push({
@@ -10,6 +10,15 @@ function techList(array, student) {
       name: student,
     });
   }
+  newArray.sort(function (techA, techB) {
+    if (techA.tech > techB.tech) {
+      return 1;
+    }
+    if (techA.tech < techB.tech) {
+      return -1;
+    }
+    return 0;
+  });
   return newArray;
 }
 
@@ -19,13 +28,13 @@ function generatePhoneNumber(array) {
     return 'Array com tamanho incorreto.';
   }
   let cont;
-  for (let index = 0; index < array, length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     for (let indexJ = 0; indexJ < array.length; indexJ += 1) {
-      cont = array[index];
-      if (cont === array[indexJ]) {
+      let avaliator = array[index];
+      if (avaliator === array[indexJ]) {
         cont += 1;
       }
-      if (cont > 2 || array[indexJ] < 0 || array[indexJ] > 9) {
+      if (cont >= 3 || array[indexJ] < 0 || array[indexJ] > 9) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
     }
