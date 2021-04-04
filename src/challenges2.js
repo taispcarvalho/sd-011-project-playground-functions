@@ -16,19 +16,18 @@ function techList(techArray, name) {
 }
 
 // Desafio 11
-let arrayTest = [1, 2, 3, 4, 5, 6, 7, 3, 9, 3, 1];
+let arrayTest = [1, 3, 3, 4, 3, 6, 7, 4, 4, 0];
 
-function countNumberRepeats(numbersArray) {
-  let max = 0;
+function NumberRepeats(numbersArray) {
   let freq = 0;
+  let max = 0;
   numbersArray = numbersArray.sort();
   for (let index = 0; index < numbersArray.length; index += 1) {
     if (numbersArray[index] === numbersArray[index + 1]) {
       freq += 1;
     } else {
       freq = 0;
-    }
-    if (freq > max) {
+    } if (freq > max) {
       max = freq;
     }
   }
@@ -42,18 +41,14 @@ function generatePhoneNumber(numbersArray) {
     return 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < numbersArray.length; index += 1) {
-    if (numbersArray[index] < 0 || numbersArray[index] > 9) {
+    if (numbersArray[index] < 0 || numbersArray[index] > 9 || NumberRepeats(numbersArray) >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  if (countNumberRepeats(numbersArray) >= 2) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-
   return `(${dddNumber}) ${firsPartNumber}-${secondPartNumber}`;
 }
 
-console.log(generatePhoneNumber(arrayTest));
+console.log(NumberRepeats(arrayTest));
 
 // Desafio 12
 function linesSum(lineA, lineB, lineC) {
