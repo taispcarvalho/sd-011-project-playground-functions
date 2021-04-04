@@ -34,7 +34,6 @@ function concatName(frase) {
     index = frase.length - 1;
     output += `, ${frase[index]} `;
   }
-  console.log(output);
 }
 
 // Desafio 5
