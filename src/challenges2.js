@@ -72,7 +72,7 @@ function generatePhoneNumber(numberArray) {
   return joinNumber(numberArray);
 }
 
-// part of Desafio 12
+// part of Desafio
 function lineTester(lineToTest, lineX, lineY) {
   if (lineToTest < (lineX + lineY) && lineToTest > Math.abs(lineX - lineY)) {
     return true;
