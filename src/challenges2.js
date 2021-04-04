@@ -16,17 +16,8 @@ function techList(arr, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber(arr) {
-  if (arr.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  } else if (num0A9(arr) || numbersRepeat(arr)) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-  return returnNum(arr);
-}
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
+//  Função criada para imprimir o número de telefone;
 function returnNum(arr) {
   let ddd = `${arr[0]}${arr[1]}`;
   let firstNumber = `${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}`;
@@ -34,6 +25,7 @@ function returnNum(arr) {
   return `(${ddd}) ${firstNumber}-${secondNumber}`;
 }
 
+//  Função criada para verificar se algum número do array é maior que 9 e menor que 0, caso for retornando true;
 function num0A9(arr) {
   for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] < 0 || arr[i] > 9) {
@@ -43,6 +35,7 @@ function num0A9(arr) {
   return false;
 }
 
+//  Função criada para ver quantas vezes o número se repete, criado uma cópia do array para não alterar o mesmo com um sort(), para ordena-los de forma crescente, após isso adicionado um loop para verificar se o indice i é igual o i + 1 && i + 2, caso for o número repetiu 3 vezes, ja que está ordenado em forma crescente assim retornando true; link: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 function numbersRepeat(arr) {
   let sorted = [...arr].sort();
   for (let i = 0; i < sorted.length; i += 1) {
@@ -52,8 +45,20 @@ function numbersRepeat(arr) {
   }
   return false;
 }
+
+function generatePhoneNumber(arr) {
+  if (arr.length !== 11) {
+    return 'Array com tamanho incorreto.';
+    //  neste else if abaixo, caso a função num0A9 que verifica se o número é menor que 0 e maior que nove retornar true ou o numbersRepeat que verifica se o número aparece mais que 3 vezes retornar true, o return será executado retornando 'não é possivel...'
+  } else if (num0A9(arr) || numbersRepeat(arr)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return returnNum(arr);
+}
+
 // Desafio 12
 function triangleCheck(a, b, c) {
+  //  coloquei mais 1 a e 1 b neste array para verificar com todos os número, caso contrário na segunda verificação o b já verificaria em cima de um undefined;
   let param = [a, b, c, a, b];
   for (let i = 0; i < 5; i += 1) {
     if (
