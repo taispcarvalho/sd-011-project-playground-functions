@@ -1,4 +1,14 @@
 // Desafio 10
+
+function ordenadorTech(a, b) {
+  if (a.tech > b.tech) {
+    return 1;
+  } else if (a.tech < b.tech) {
+    return -1;
+  }
+  return 0;
+}
+
 function techList(array, student) {
   if (array.length === 0) {
     return 'Vazio!';
@@ -10,17 +20,7 @@ function techList(array, student) {
       name: student,
     });
   }
-  newArray.sort(ordenadorTech);
-  return;
-}
-
-function ordenadorTech(a, b) {
-  if (a.tech > b.tech) {
-    return 1;
-  } else if (a.tech < b.tech) {
-    return -1;
-  }
-  return 0;
+  return newArray.sort(ordenadorTech);
 }
 
 // Desafio 11
