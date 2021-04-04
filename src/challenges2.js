@@ -68,24 +68,25 @@ function generatePhoneNumber(numbers) {
   }
   if (numbers.length !== 11) {
     return ('Array com tamanho incorreto.');
-  } else if (zero > 2 || one > 2 || two > 2 || three > 2 || four > 2 || five > 2 || six > 2
+  }
+  if (zero > 2 || one > 2 || two > 2 || three > 2 || four > 2 || five > 2 || six > 2
     || seven > 2 || eight > 2 || nine > 2 || error > 0) {
     return ('não é possível gerar um número de telefone com esses valores');
   }
-    numbersOutput.push('(');
-    for (let index = 0; index < 2; index += 1) {
-      numbersOutput.push(numbers[index]);
-    }
-    numbersOutput.push(') ');
-    for (let index = 2; index < 7; index += 1) {
-      numbersOutput.push(numbers[index]);
-    }
-    numbersOutput.push('-');
-    for (let index = 7; index < 11; index += 1) {
-      numbersOutput.push(numbers[index]);
-    }
-    numbersOutput = numbersOutput.join('');
-    return numbersOutput;
+  numbersOutput.push('(');
+  for (let index = 0; index < 2; index += 1) {
+    numbersOutput.push(numbers[index]);
+  }
+  numbersOutput.push(') ');
+  for (let index = 2; index < 7; index += 1) {
+    numbersOutput.push(numbers[index]);
+  }
+  numbersOutput.push('-');
+  for (let index = 7; index < 11; index += 1) {
+    numbersOutput.push(numbers[index]);
+  }
+  numbersOutput = numbersOutput.join('');
+  return numbersOutput;
 
 }
 
@@ -109,9 +110,9 @@ function hydrate(drinks) {
   }
 
   if (glassesOfWater <= 1) {
-    return glassesOfWater + ' copo de água';
+  return glassesOfWater + ' copo de água';
   } 
-    return glassesOfWater + ' copos de água';
+  return glassesOfWater + ' copos de água';
 }
 
 module.exports = {
