@@ -73,12 +73,12 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzzValidation(numbers) {
-  for (let index in numbers) {
-    if (numbers[index] % 15 === 0) {
-      numbers[index] = 'fizzbuzz';
-    } else if (numbers[index] % 5 !== 0 && numbers[index] % 3 !== 0) {
-      numbers[index] = 'bug!';
+function fizzBuzzValidation(anotherNumbers) {
+  for (let index in anotherNumbers) {
+    if (anotherNumbers[index] % 15 === 0) {
+      anotherNumbers[index] = 'fizzbuzz';
+    } else if (anotherNumbers[index] % 3 !== 0 && anotherNumbers[index] % 5 !== 0) {
+      anotherNumbers[index] = 'bug!';
     }
   }
 }

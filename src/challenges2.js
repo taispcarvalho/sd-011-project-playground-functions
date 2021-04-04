@@ -21,7 +21,7 @@ function validatorPhoneNumber(fone) {
   if (fone.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for (let index in fone) {
+  for (let index = 0; index < fone.length; index += 1) {
     if (fone[index] === fone[index + 1]) {
       repeatCaracter += 1;
     }
@@ -35,7 +35,7 @@ function validatorPhoneNumber(fone) {
 function generatePhoneNumber(fone) {
   for (let index in fone) {
     if (fone[index] < 0 || fone[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      fone = 'não é possível gerar um número de telefone com esses valores';
     }
   }
   if (validatorPhoneNumber(fone) === true) {
