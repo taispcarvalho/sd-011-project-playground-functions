@@ -39,30 +39,24 @@ function telephoneGenerator2(arrTel) {
   return newString2;
 }
 
-function repeatedNumberCounter(arrNumbers2) {
+function numberToCount(arr, number) {
   let count = 0;
-  let currentCount = 0;
-  for (let index = 0; index < arrNumbers2.length; index += 1) {
-    count = 0;
-    for (let index2 = 1; index2 < arrNumbers2.length; index2 += 1) {
-      if (arrNumbers2[index] === arrNumbers2[index2]) {
-        count += 1;
-      }
-    }
-    if (currentCount < count) {
-      currentCount = count;
+  for (let index = 0; index < arr.length; index += 1) {
+    if (number === arr[index]) {
+      count += 1;
     }
   }
-  return currentCount;
+  return count;
 }
 
-function repeatedNumberFinder(arrNumbers2) {
-  let numberDetected = repeatedNumberCounter(arrNumbers2);
-  if (numberDetected >= 3) {
-    return true;
+function repeatedToCount(arrNumbers2) {
+  for (let index = 0; index < arrNumbers2.length; index += 1) {
+    let numberCount = numberToCount(arrNumbers2, arrNumbers2[index]);
+    if (numberCount >= 3) {
+      return true;
+    }
   }
 }
-console.log(repeatedNumberFinder([5, 2, 2, 2, 5, 3, 7, 2, 8, 9, 0]));
 
 function isValidTelephone(arrTelephone) {
   for (let index = 0; index < arrTelephone.length; index += 1) {
@@ -73,7 +67,7 @@ function isValidTelephone(arrTelephone) {
 }
 
 function generatePhoneNumber(arrNumbers) {
-  let repeatedNumber = repeatedNumberFinder(arrNumbers);
+  let repeatedNumber = repeatedToCount(arrNumbers);
   let validNumber = isValidTelephone(arrNumbers);
   if (arrNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -86,7 +80,7 @@ function generatePhoneNumber(arrNumbers) {
   return telephoneGenerated;
 }
 
-console.log(generatePhoneNumber([1, 2, 2, 2, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
