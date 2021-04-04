@@ -18,40 +18,33 @@ let nome = 'Marcelo';
 console.log(techList(tec, nome));
 
 // Desafio 11
-function isRepeatNumber(rephone) {
-  let largeNumbCount = null;
-  let moreCount = -1;
-  for (let index = 0; index < rephone.length; index += 1) {
-    let count = 1;
-    for (let index2 = index + 1; index2 < rephone.length; index2 += 1) {
-      if (rephone[index] === rephone[index2]) {
-        count += 1;
-      }
-      if (count > moreCount) {
-        largeNumbCount = rephone[index];
-        moreCount = count;
-      }
+function repeatNumber(phone) {
+  let repeat = {};
+  for (let index = 0; index < phone.length; index += 1) {
+    if (repeat[phone[index]]) {
+      repeat[phone[index]] += 1;
+    } else {
+      repeat[phone[index]] = 1;
     }
   }
-  return largeNumbCount;
+  for (let index2 in repeat) {
+    if (repeat[index2] >= 3) {
+      return true;
+    }
+  }
+}
+function checkNumber(phone) {
+  for (let index in phone) {
+    if (phone[index] < 0 || phone[index] > 9) {
+      return true;
+    }
+  }
 }
 function generatePhoneNumber(phone) {
   if (phone.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for (let index in phone) {
-    if (phone[index] < 0 || phone[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-  }
-  let idx = [];
-  let element = isRepeatNumber(phone);
-  let nIdx = phone.indexOf(element);
-  while (nIdx !== -1) {
-    idx.push(nIdx);
-    nIdx = phone.indexOf(element, nIdx + 1);
-  }
-  if (idx.length >= 3) {
+  if (repeatNumber(phone) || checkNumber(phone)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   let result = '';
