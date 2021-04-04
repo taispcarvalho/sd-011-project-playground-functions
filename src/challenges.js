@@ -14,10 +14,13 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  return phrase.split ('');
+  let arrayPhrase = phrase.split (' ');
+  return arrayPhrase;
 }
 
 // Desafio 4
+let name = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+
 function concatName(name) {
   for (let index = 0; index <= name.length; index++) {
     return name.toString ((index = name.length - 1) + (index = 0))
@@ -25,13 +28,14 @@ function concatName(name) {
 }
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  if (points === wins) {
-    return 3    
-  } else if (points === ties) {
-    return 1    
+nPoint = 3
+function footballPoints(wins = 3, ties = 1) {
+  if (nPoint === wins) {
+    return wins * nPoint
+  } else if (nPoint === ties) {
+    return ties * nPoint
   } else {}
-  return points = wins + ties
+  return wins + ties 
 }
 
 // Desafio 6
