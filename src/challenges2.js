@@ -24,6 +24,19 @@ console.log(techList(['Python'], 'Thyago'));
 console.log(techList([], 'Thyago'));
 
 // Desafio 11
+function counterRepeat (array){
+  let checker = array.reduce(function (allNumbers, number){
+    if (number in allNumbers){
+      allNumbers[number] += 1;
+    } else {
+      allNumbers[number] = 1;
+    }
+    return allNumbers;
+  }, {});
+  console.log(checker);
+}
+console.log(counterRepeat([1, 2, 3, 3, 3, 3, 7, 8, 9, 0, 1]));
+
 function generatePhoneNumber(array) {
   let code = [];
   let first = [];
@@ -52,12 +65,44 @@ console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 0]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 11]));
+console.log(generatePhoneNumber([1, 2, 3, 3, 3, 3, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+//Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
 
+// Para tanto, tenha em mente algumas considerações:
+// 
+// Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
+// 
+// Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
+// 
+// O retorno da sua função deverá ser um booleano.
+// 
+// Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
+// 
+// O que será verificado:
+// 
+// Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois
+// 
+// Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas
+// 
+// Retorne true quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas
+function triangleCheck(lineA, lineB, lineC) {
+  let lineAComp = Math.abs(lineA);
+  let lineBComp = Math.abs(lineB);
+  let lineCComp = Math.abs(lineC);
+  if (lineAComp >= lineBComp + lineCComp){
+    return false;
+  } else if (lineBComp >= lineAComp + lineCComp){
+    return false;
+  } else if (lineCComp >= lineBComp + lineAComp){
+    return false;
+  } else {
+    return true;
+  }
+}
+console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(10, 1, 8));
 // Desafio 13
 function hydrate() {
   // seu código aqui
