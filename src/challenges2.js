@@ -115,6 +115,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(str) {
   // Source: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+  // Source²: https://www.codegrepper.com/code-examples/javascript/extract+number+from+string+javascript
   let regex = /[+-]?\d+(?:\.\d+)?/g;
   let waterCups = 0;
   let drinks = str.match(regex);
