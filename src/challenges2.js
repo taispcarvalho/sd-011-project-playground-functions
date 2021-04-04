@@ -1,5 +1,17 @@
 // Desafio 10
-function techList(array, name) {}
+function techList(array, student) {
+  let newArray = [];
+  if (array.length === 0) {
+    return "Vazio!";
+  }
+  for (let index = 0; index < array.length; index += 1) {
+    newArray.push({
+      tech: array[index],
+      name: student,
+    });
+  }
+  return newArray;
+}
 
 // Desafio 11
 function generatePhoneNumber(array) {

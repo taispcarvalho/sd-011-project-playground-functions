@@ -98,11 +98,11 @@ function encode(string) {
 }
 
 function decode(string) {
-  let stringDecode = string.replace(/1/g, "a");
-  stringDecode = stringDecode.replace(/2/g, "e");
-  stringDecode = stringDecode.replace(/3/g, "i");
-  stringDecode = stringDecode.replace(/4/g, "o");
-  stringDecode = stringDecode.replace(/5/g, "u");
+  let stringDecode = string.replace(/1/g, 'a');
+  stringDecode = stringDecode.replace(/2/g, 'e');
+  stringDecode = stringDecode.replace(/3/g, 'i');
+  stringDecode = stringDecode.replace(/4/g, 'o');
+  stringDecode = stringDecode.replace(/5/g, 'u');
   return stringDecode;
 }
 
