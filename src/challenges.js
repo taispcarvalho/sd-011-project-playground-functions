@@ -8,13 +8,12 @@ function calcArea(base, height) {
   return  base*height/2
 }
 // Desafio 3
-function splitSentence(go, Trybe)  {
-return splitSentence.split(' ')
-}
-
-
-
-// Desafio 4
+function splitSentence()  {
+let value = splitSentence.split(',')
+  return value
+ }
+console.log('go', 'Trybe')
+// Desafio 4 
 function concatName() {
   // seu código aqui
 }
