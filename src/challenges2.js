@@ -45,12 +45,14 @@ function verifyDigit(arrayOfNumbers) {
 function verifyRepetition(arrayOfNum) {
   let repLimit = 2;
   let boolArray = arrayOfNum.map((num) => arrayOfNum.filter((n) => n === num).length > repLimit);
-  for (let index = 0; index < boolArray.length; index += 1) {
+  let index = 0;
+  while (index < boolArray.length) {
     if (boolArray[index] === true) {
       return false;
     }
-  return true;
+    index += 1;
   }
+  return true;
 }
 
 function generatePhoneNumber(arrayOfNumbers) {
