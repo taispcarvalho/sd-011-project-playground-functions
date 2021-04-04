@@ -68,12 +68,13 @@ function highestCount(arrayNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   if (cat1 === cat2) {
     return 'The cats bump and the mouse scape';
+    
   } else if (cat1 > cat2) {
-      return 'cat2';
-  } else {
-      return 'cat1';
+    return 'cat2';
   }
-}
+    return 'cat1';
+  }
+
 console.log(catAndMouse(0, 3, 2));
 console.log(catAndMouse(0, 6, 12));
 console.log(catAndMouse(0, 2, 2));
