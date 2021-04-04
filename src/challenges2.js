@@ -24,7 +24,7 @@ console.log(techList(['Python'], 'Thyago'));
 console.log(techList([], 'Thyago'));
 
 // Desafio 11
-function generatePhoneNumber(array) {
+function generatePhoneNumber() {
   // escreva seu código aqui
 }
 
