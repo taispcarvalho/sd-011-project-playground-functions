@@ -21,13 +21,12 @@ console.log(techList(tec, nome));
 function isRepeatNumber(rephone) {
   let largeNumbCount = null;
   let moreCount = -1;
-  for (let index = 0; index < rephone.length; index += 1) {
+  for (let index of rephone) {
     let count = 1;
     for (let index2 = index + 1; index2 < rephone.length; index2 += 1) {
       if (rephone[index] === rephone[index2]) {
         count += 1;
-      }
-      if (count > moreCount) {
+      } else if (count > moreCount) {
         largeNumbCount = rephone[index];
         moreCount = count;
       }
@@ -66,10 +65,14 @@ console.log(generatePhoneNumber(phoneNumber));
 
 // Desafio 12
 function triangleCheck(side1, side2, side3) {
-  if ((side1 > side2 + side3 || side2 > side1 + side3 || side3 > side1 + side2) && (side1 < Math.abs(side2 - side3) || side2 < Math.abs(side1 - side3) || side3 < Math.abs(side1 - side2))) {
+  let testFirst = side1 > side2 + side3 || side2 > side1 + side3 || side3 > side1 + side2;
+  let testSec = side1 < Math.abs(side2 - side3) || side2 < Math.abs(side1 - side3) || side3 < Math.abs(side1 - side2);
+  let thirdTest = side1 < side2 + side3 && side1 > Math.abs(side2 - side3) || side2 < side1 + side3;
+  let fourTest = side2 > Math.abs(side1 - side3) || side3 < side2 + side1 && side3 > Math.abs(side2 - side1);
+  if ((testFirst) && (testSec)) {
     return false;
   }
-  if (side1 < side2 + side3 && side1 > Math.abs(side2 - side3) || side2 < side1 + side3 && side2 > Math.abs(side1 - side3) || side3 < side2 + side1 && side3 > Math.abs(side2 - side1)) {
+  if (thirdTest && fourTest) {
     return true;
   }
 }
