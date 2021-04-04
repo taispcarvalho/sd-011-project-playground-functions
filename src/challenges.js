@@ -40,15 +40,12 @@ console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount(array) {
-  let maiorNumero = 0;
+  let ordena = array.sort()
+  let maiorNumero = ordena[array.length - 1];
   let numeroRepetido = 0;
+
   for (let index in array) {
-    if (array[index] > maiorNumero) {
-      maiorNumero = array[index];
-    }
-  }
-  for (let secondIndex in array) {
-    if (array[secondIndex] === maiorNumero) {
+    if (array[index] === maiorNumero) {
       numeroRepetido += 1;
     }
   }
