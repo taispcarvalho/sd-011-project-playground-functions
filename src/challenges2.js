@@ -72,21 +72,23 @@ function generatePhoneNumber(numberArray) {
   return joinNumber(numberArray);
 }
 
+// part of Desafio 12
+function lineTester(lineToTest, lineX, lineY) {
+  if (lineToTest < (lineX + lineY) && lineToTest > Math.abs(lineX - lineY)) {
+    return true;
+  }
+  return false;
+}
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let lineAisValid = false;
   let lineBisValid = false;
   let lineCisValid = false;
 
-  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
-    lineAisValid = true;
-  }
-  if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
-    lineBisValid = true;
-  }
-  if (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
-    lineCisValid = true;
-  }
+  lineAisValid = lineTester(lineA, lineB, lineC);
+  lineBisValid = lineTester(lineB, lineA, lineC);
+  lineCisValid = lineTester(lineC, lineA, lineB);
 
   return (lineAisValid && lineBisValid && lineCisValid);
 }
