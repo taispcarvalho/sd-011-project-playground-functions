@@ -60,18 +60,28 @@ function catAndMouse(mouse, cat1, cat2) {
 // Para este desafio utilizei o que aprendi em aula.
 function fizzBuzz(divArray) {
   for (let index = 0; index < divArray.length; index += 1) {
-    if (divArray[index] % 15 === 0) {
+    if (divArray[index] % 3 === 0 && divArray[index] % 5 === 0) {
       divArray[index] = 'fizzBuzz';
-    } else if (divArray[index] % 3 === 0) {
-      divArray[index] = 'fizz';
     } else if (divArray[index] % 5 === 0) {
       divArray[index] = 'buzz';
+    }
+  }
+  divArray = fizzBug(divArray);
+  return divArray;
+}
+
+function fizzBug(divArray) {
+  for (let index = 0; index < divArray.length; index += 1) {
+    if (divArray[index] % 3 === 0) {
+      divArray[index] = 'fizz';
     } else if (divArray[index] % 1 === 0) {
       divArray[index] = 'bug!';
     }
   }
   return divArray;
 }
+
+console.log(fizzBuzz([7,8,10,11,13,14,16,17,19,21]))
 
 // Desafio 9
 // https://www.w3schools.com/jsref/jsref_replace.asp

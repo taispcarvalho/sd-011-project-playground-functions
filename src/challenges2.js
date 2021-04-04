@@ -7,8 +7,8 @@ function techList(tech, name) {
   if (orderedTech.length !== 0) { // retorna em ordem alfabetica
     for (let i in orderedTech) { // pega cada indice da variavel 0 e retorna junto com o nome
       returnArray[i] = {
-        tech: tech[i],
-        name: name,
+        tech: `${tech[i]}`,
+        name: `${name}`,
       };
     }
   } else {
@@ -42,17 +42,17 @@ function generatePhoneNumber(numberArray) {
   }
   // Filter only numbers from the input
   // https://learnersbucket.com/examples/javascript/how-to-format-phone-number-in-javascript/
-  let cleaned = `${('' + numberArray).replace(/\D/g, '')}`;
+  let cleaned = ('' + numberArray).replace(/\D/g, '');
   // Check if the input is of correct length
   let match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/);
   if (match) {
-    return `${'('}` + match[1] + `${') '}` + match[2] + `${'-'}` + match[3];
+    return '(' + match[1] + ') ' + match[2] + '-' + match[3];
   }
 }
 
 // Desafio 12
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
-function triangleCheck(lineA, lineB,lineC) {
+function triangleCheck(lineA, lineB, lineC) {
   if (lineA < (lineB + lineC) && Math.abs(lineA) > lineB && lineC) {
     return true;
   }
