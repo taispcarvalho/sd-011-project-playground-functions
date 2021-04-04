@@ -65,7 +65,7 @@ function highestCount() {
 }
 
 // Desafio 7
-  /**function catAndMouse(mouse, cat1, cat2) {
+/** function catAndMouse(mouse, cat1, cat2) {
   mouse;
   if (cat1 === cat2) {
     return 'The cats bump and the mouse scape';
