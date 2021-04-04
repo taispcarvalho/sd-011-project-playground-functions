@@ -43,40 +43,32 @@ function joinNumber(numberArray) {
 }
 
 // part of Desafio 11
-function appearedTimes(index, numberArray) {
-  let appearedTimes = 0;
-  for (let number of numberArray) {
-    if (number === numberArray[index]) {
-      appearedTimes += 1;
-      if (appearedTimes >= 3) {
-        return appearedTimes;
+function verifyRepeatedNumber(numberArray) {
+  for (let index = 0; index < numberArray.length; index += 1) {
+    let appearedTimes = 0;
+    for (let number of numberArray) {
+      if (number === numberArray[index]) {
+        appearedTimes += 1;
+        if (appearedTimes >= 3) {
+          return appearedTimes;
+        }
       }
     }
   }
 }
 
-// part of Desafio 11
-function verifyRepeatedNumber(numberArray) {
-  for (let index = 0; index < numberArray.length; index += 1) {
-    return appearedTimes(index, numberArray);
-  }
-
-}
-
 // Desafio 11
 function generatePhoneNumber(numberArray) {
   if (numberArray.length !== 11) return 'Array com tamanho incorreto.';
-
   if (outOffLimit(numberArray) !== 0) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-
   if (verifyRepeatedNumber(numberArray) >= 3) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-
   return joinNumber(numberArray);
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // part of Desafio 12
 function lineTester(lineToTest, lineX, lineY) {
