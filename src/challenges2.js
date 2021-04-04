@@ -16,55 +16,54 @@ function techList(technology, name) {
 }
 
 // Desafio 11
-function invalidNumberAnalyzer(arrayNumbers) {
+function checkRange(arrayNumbers) {
   if (arrayNumbers.length !== 11) {
     return true;
   }
   return false;
 }
 
-function repeatedNumberAnalyzer(arrayNumbers) {
-  let arrayClone = arrayNumbers;
+function duplicateNumber(arrayNumbers) {
+  let validate = false;
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     let count = 0;
-    for (let secondIndex = 0; secondIndex < arrayClone.length; secondIndex += 1) {
-      if (arrayNumbers[index] === arrayClone[secondIndex]) {
+    for (let indexSec = 0; indexSec < arrayNumbers.length; indexSec += 1) {
+      if (arrayNumbers[index] === arrayNumbers[indexSec]) {
         count += 1;
         if (count === 3) {
-          return true;
-        } else if (arrayNumbers[index] < 0 || arrayNumbers[index] > 9) {
-          return true;          
+          validate = true;
         }
       }
     }
   }
-  return false;
+  return validate;
+}
+
+function validateNumbers(arrayNumbers) {
+  let validNumber = false;
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] < 0 || arrayNumbers[index] > 9) {
+      validNumber = true;
+    }
+  }
+  return validNumber;
 }
 
 function generatePhoneNumber(arrayOfNumbers) {
-  let validatorSize = invalidNumberAnalyzer(arrayOfNumbers);
-  let validatorRepeat = repeatedNumberAnalyzer(arrayOfNumbers);
+  let checkRangeNumber = checkRange(arrayOfNumbers);
+  let verifyDuplicateNumber = duplicateNumber(arrayOfNumbers);
+  let validateArrayNumber = validateNumbers(arrayOfNumbers);
   let newArrayOfNumbers = '(xx) xxxxx-xxxx';
-  if (validatorSize === false && validatorRepeat === false) {
-    arrayOfNumbers = arrayOfNumbers.toString();
-    arrayOfNumbers = arrayOfNumbers.replace(/,/g, "");
+  if ((checkRangeNumber || verifyDuplicateNumber || validateArrayNumber) === false) {
     for (let index = 0; index < arrayOfNumbers.length; index += 1) {
       newArrayOfNumbers = newArrayOfNumbers.replace('x', arrayOfNumbers[index]);
     }
-    return newArrayOfNumbers;
+  } else if (checkRange === true && (verifyDuplicateNumber && validateArrayNumber) === false) {
+    newArrayOfNumbers = 'Array com tamanho incorreto.';
   } else {
-    switch (validatorSize === true || validatorRepeat === true) {
-    case (validatorSize):
-      return 'Array com tamanho incorreto.';
-      break;
-    case (validatorRepeat):
-      return 'não é possível gerar um número de telefone com esses valores';
-      break;
-    default:
-      break;
-    }
+    newArrayOfNumbers = 'não é possível gerar um número de telefone com esses valores';
   }
-  
+  return newArrayOfNumbers;
 }
 
 // Desafio 12
@@ -99,13 +98,14 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(stringDrink) {
   let amountDrink = stringDrink.match(/\d+/g).map(Number);
   let sumAmountDrink = 0;
+  let amount = 0;
   for (let index = 0; index < amountDrink.length; index += 1) {
     sumAmountDrink += amountDrink[index];
   }
-  if ( sumAmountDrink === 1) {
-    amount = sumAmountDrink + ' copo de água';
+  if (sumAmountDrink === 1) {
+    amount = `${sumAmountDrink} copo de água`;
   } else {
-    amount = sumAmountDrink + ' copos de água';
+    amount = `${sumAmountDrink} copos de água`;
   }
   return amount;
 }
