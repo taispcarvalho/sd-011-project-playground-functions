@@ -12,11 +12,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  if (sentence === 'vamo que vamo') {
-    return sentence.split(' ');
-  } if (sentence === 'foguete') {
-    return sentence.split('');
-  }
+  return sentence.split("");
 }
 
 // Desafio 4
