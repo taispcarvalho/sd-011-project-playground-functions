@@ -18,9 +18,9 @@ function techList(tech, name) {
 }
 
 // Desafio 11
+// https://learnersbucket.com/examples/javascript/how-to-format-phone-number-in-javascript/
 function phoneNumber(numberArray) {
   // Filter only numbers from the input
-  // https://learnersbucket.com/examples/javascript/how-to-format-phone-number-in-javascript/
   let cleaned = ('' + numberArray).replace(/\D/g, '');
   // Check if the input is of correct length
   let match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/);
@@ -52,7 +52,6 @@ function generatePhoneNumber(numberArray) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  
   numberArray = phoneNumber(numberArray);
   return numberArray;
 }
@@ -73,9 +72,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let drinksReturn = /\d+/g;
+  let cupsOfWater = 0;
+  let totalDrinks = drinks.match(drinksReturn);
+  for (let i = 0; i < totalDrinks.length; i +=1) {
+    cupsOfWater += + totalDrinks[i];
+  }
+  if (cupsOfWater === 1) {
+    return cupsOfWater + ' copo de água';
+  }
+  return cupsOfWater + ' copos de água';
 }
+drinks = '2 shots de tequila, 2 cervejas e 1 corote'
+console.log(hydrate(drinks))
 
 module.exports = {
   generatePhoneNumber,
