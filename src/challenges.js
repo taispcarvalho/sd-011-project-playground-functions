@@ -20,7 +20,7 @@ console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName() {
   let nome = ['Rafael', 'Batista', 'de', 'Oliveira'];
-  console.log(nome[3] , nome[0]);
+  console.log(nome[3], nome[0]);
 }
 concatName();
 
@@ -45,19 +45,19 @@ console.log(footballPoints(1, 2));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse < cat2 && cat2 > cat1 ) {
+  if (mouse < cat2 && cat2 > cat1) {
     return ('cat1');
-  } else if( cat1 === cat2){
+  } else if (cat1 === cat2) {
     return ('os gatos trombam e o rato foge');
   } else {
     return ('cat2');
   }
 }
-console.log(catAndMouse(0,6,6));
+console.log(catAndMouse(0, 6, 6));
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  for (let i = 0; )
 }
 
 // Desafio 9
@@ -76,7 +76,6 @@ module.exports = {
   decode,
   encode,
   fizzBuzz,
-  footballPoints,
-  highestCount,
+  footballPoints,  
   splitSentence,
 };
