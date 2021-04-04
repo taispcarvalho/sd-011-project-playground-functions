@@ -4,8 +4,11 @@ function techList(tech, name) {
   for (let index = 0; index < tech.length; index += 1) {
     tech[index] = {
       tech: tech[index],
-      name: name,
+      'name': name,
     };
+  }
+  if (tech.length === 0) {
+    tech = 'Vazio!';
   }
   return tech;
 }
