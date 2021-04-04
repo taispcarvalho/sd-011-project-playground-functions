@@ -15,8 +15,6 @@ function techList(skills, name) {
   return packageSkills;
 }
 
-//console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
-
 // Desafio 11
 function validatorPhoneNumber(fone) {
   let repeatCaracter = 1;
@@ -47,8 +45,6 @@ function generatePhoneNumber(fone) {
   }
   return validatorPhoneNumber(fone);
 }
-
-//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9]));
 
 // Desafio 12
 function triangleCheck() {
