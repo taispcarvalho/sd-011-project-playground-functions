@@ -100,9 +100,9 @@ function hydrate(string) {
     glassesOfWater += parseInt(number, 10);
   }
   if (glassesOfWater > 1) {
-    return `${glassesOfWater} copos de água`
+    return `${glassesOfWater} copos de água`;
   }
-  return `${glassesOfWater} copo de água`
+  return `${glassesOfWater} copo de água`;
 }
 
 module.exports = {
