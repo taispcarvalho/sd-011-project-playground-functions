@@ -12,7 +12,7 @@ function splitSentence(string) {
 }
 // Desafio 4
 function concatName(arrayDeString) {
-  return `${arrayDeString[arrayDeString.length - 1]}  ${arrayDeString[0]}`;
+  return `${arrayDeString[arrayDeString.length - 1]},  ${arrayDeString[0]}`;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 // Desafio 5
