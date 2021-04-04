@@ -43,9 +43,8 @@ console.log(splitSentence('foquete'));
 function concatName(names) {
   let firstName = names[0];
   let lastName = names[names.length - 1];
-  let space = ' ';
 
-  let reverseName = lastName + space + firstName;
+  let reverseName = `${lastName}, ${firstName}`;
   return reverseName;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
