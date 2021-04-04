@@ -1,20 +1,20 @@
 // Desafio 10
 // para o entendimento desse desafio precisei comparar o código de colegas no slack
 // https://trybecourse.slack.com/archives/C01PLFW7347/p1617330837144600
+// https://github.com/tryber/sd-011-project-playground-functions/pull/168/files
+// vendo o codigo do guilheme pereira no github, ficou muito claro o entendimento desse desafio
 function techList(tech, name) {
-  let returnArray = [];
-  let orderedTech = tech.sort();
-  if (orderedTech.length !== 0) { // retorna em ordem alfabetica
-    for (let i in orderedTech) { // pega cada indice da variavel 0 e retorna junto com o nome
-      returnArray[i] = {
-        tech: `${tech[i]}`,
-        name: `${name}`,
-      };
-    }
-  } else {
-    return 'Vazio!';
+  tech = tech.sort();
+  for (let index = 0; index < tech.length; index += 1) {
+    tech[index] = {
+      tech: tech[index],
+      name,
+    };
   }
-  return returnArray;
+  if (tech.length === 0) {
+    tech = 'Vazio!';
+  }
+  return tech;
 }
 
 // Desafio 11
@@ -23,9 +23,9 @@ function phoneNumber(numberArray) {
   // Filter only numbers from the input
   let cleaned = ('' + numberArray).replace(/\D/g, '');
   // Check if the input is of correct length
-  let match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/);
+  let match = cleaned.match(/^(\d{$2})(\d{$5})(\d{$4})$/);
   if (match) {
-    return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+    return `${'(' + match[1] + ') ' + match[2] + '-' + match[3]}`;
   }
   return numberArray;
 }
@@ -72,20 +72,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
+// https://www.youtube.com/watch?v=pfkkdzeyx6U&ab_channel=AllThingsJavaScript%2CLLC
 function hydrate(drinks) {
   let drinksReturn = /\d+/g;
   let cupsOfWater = 0;
-  let totalDrinks = drinks.match(drinksReturn);
-  for (let i = 0; i < totalDrinks.length; i +=1) {
-    cupsOfWater += + totalDrinks[i];
+  drinks = drinks.match(drinksReturn);
+  for (let i = 0; i < drinks.length; i += 1) {
+    cupsOfWater += Number(drinks[i]);
   }
   if (cupsOfWater === 1) {
-    return cupsOfWater + ' copo de água';
+    return `${cupsOfWater} copo de água`;
   }
-  return cupsOfWater + ' copos de água';
+  return `${cupsOfWater} copos de água`;
 }
-drinks = '2 shots de tequila, 2 cervejas e 1 corote'
-console.log(hydrate(drinks))
 
 module.exports = {
   generatePhoneNumber,
