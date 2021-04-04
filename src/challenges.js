@@ -38,6 +38,7 @@ function highestCount(numberArrays) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  //referencia usada no codigo https://github.com/tryber/sd-011-project-playground-functions/blob/islenegomes-playground-functions/src/challenges.js
   let firstDistance = Math.abs(cat1 - mouse);
   let secundDistance = Math.abs(cat2 - mouse);
   let result = '';
@@ -66,6 +67,7 @@ function verficar(number) {
 }
 
 function fizzBuzz(numbers) {
+  //referecia usada no codigo https://github.com/tryber/sd-011-project-playground-functions/blob/islenegomes-playground-functions/src/challenges.js
   let result = [];
   for (let index = 0; index < numbers.length; index += 1) {
     result.push(verficar(numbers[index]));
