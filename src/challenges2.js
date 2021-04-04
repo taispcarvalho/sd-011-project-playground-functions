@@ -9,7 +9,7 @@ function techList(tech, name) {
   for (let index = 0; index < tech.length; index += 1) {
     objt = {
       tech: techSort[index],
-      name: name,
+      name,
     };
     outputInfo.push(objt);
   }
