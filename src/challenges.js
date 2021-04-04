@@ -43,9 +43,9 @@ function concatName(frase) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let pts = wins * 3 + ties;
-  return `${pts} pontos`;
+  return pts;
 }
-
+footballPoints(14, 8);
 // Desafio 6
 function highestCount() {
   // seu código aqui
