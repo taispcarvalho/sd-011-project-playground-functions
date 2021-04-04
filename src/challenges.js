@@ -2,7 +2,7 @@
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
-} 
+  }
   return false;
 }
 // console.log(compareTrue(true, true));
@@ -22,7 +22,7 @@ function splitSentence(stringPhrase) {
 }
 // console.log(splitSentence('Go Trybe'));
 
-// Desafio 4 
+// Desafio 4
 function concatName(namesList) {
   return (namesList[namesList.length - 1] + ',' + ' ' + namesList[0]);
 }
@@ -51,7 +51,7 @@ function highestCount(numbers) {
     if (numbers[i] === highestNumber) {
       repetitions += 1;
     }
-} 
+  }
   return repetitions;
 }
 // console.log(highestCount([ 0, 0, 0]));
@@ -64,7 +64,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if ((distance2) < (distance1)) {
     return 'cat2';
-  } else ((distance1 === distance2))  
+  } else 
   return 'os gatos trombam e o rato foge';
 }
 // console.log(catAndMouse(1, 0, 2))
@@ -75,29 +75,44 @@ function fizzBuzz(param1) {
   let arrayFiBu = [];
   for (let index = 0; index < param1.length; index += 1) {
     if (param1[index] % 3 === 0 && param1[index] % 5 === 0) {
-  arrayFiBu.push('fizzBuzz');
-  } else if (param1[index] % 5 === 0 && param1[index] % 3 !== 0) {
-    arrayFiBu.push('buzz');
+      arrayFiBu.push('fizzBuzz');
+    } else if (param1[index] % 5 === 0 && param1[index] % 3 !== 0) {
+      arrayFiBu.push('buzz');
     } else if (param1[index] % 3 === 0 && param1[index] % 5 !== 0) {
-  arrayFiBu.push('fizz');
+      arrayFiBu.push('fizz');
     } else {
-  arrayFiBu.push('bug!');
+      arrayFiBu.push('bug!');
+    }
   }
-}
-    return arrayFiBu;
+  return arrayFiBu;
 }
 // console.log(fizzBuzz([3, 5, 15, 13]));
-   
-  // Desafio 9
-function encode(letters) {
-  
- 
-}
 
-  //console.log(encode('hi there!'));
-function decode() {
-  // seu código aqui
+// Desafio 9
+function encode(letters) {
+  for (let index = 0; index < letters.length; index += 1) {
+  letters = letters.replace ('a', 1);
+  letters = letters.replace ('e', 2);
+  letters = letters.replace ('i', 3);
+  letters = letters.replace ('o', 4);
+  letters = letters.replace ('u', 5);
+  }
+  return letters;
 }
+ // console.log(encode('hi there!'));
+
+function decode(numbers) {
+  // seu código aqui
+  for (let index = 0; index < numbers.length; index += 1) {
+ numbers = numbers.replace (1, 'a');
+ numbers = numbers.replace (2, 'e');
+ numbers = numbers.replace (3, 'i');
+ numbers = numbers.replace ( 4,'o') ;
+ numbers = numbers.replace (5, 'u');
+  }
+  return numbers;
+}
+// console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
