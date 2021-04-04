@@ -40,14 +40,15 @@ function highestCount(arrayHigherNumber) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let catCLose1 = (cat1 - mouse);
-  let catClose2 = (cat2 - mouse);
-  if (catCLose1 < catClose2) {
-    winner = "cat1";
+  let catClose1 = Math.abs(cat1 - mouse);
+  let catClose2 = Math.abs(cat2 - mouse);
+  if (catClose1 < catClose2){
+    return "cat1"
   } else if (catClose2 < catClose1) {
-    winner = "cat2";
+    return "cat2"
+  } else {
+    return "os gatos trombam e o rato foge"
   }
-  return "os gatos trombam e o rato foge"
 }
 // Desafio 8
 function fizzBuzz(arrayFizzBuzz) {
