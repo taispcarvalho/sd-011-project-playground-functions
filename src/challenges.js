@@ -16,18 +16,18 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let space = ' ';
-  return space.concat(array[array.length-1], ', ', array[0]);
+  let space = '';
+  return space.concat(array[array.length-1]+', '+array[0]);
 }
-
+console.log(concatName(['queijo', 'frango', 'batata']))
 // Desafio 5
 function footballPoints(wins, ties) {
   return wins * 3 + ties
 }
 
 // Desafio 6
-function highestCount() {
-  
+function highestCount(array) {
+  let higher ; let higherCount = 0
 }
 
 // Desafio 7
