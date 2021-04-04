@@ -89,10 +89,11 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string) {
   let filter = /[1-9]/g;
-  let result = string.match(filter);
+  let stringArray = string.match(filter);
+  let numArray = stringArray.map((num) => parseInt(num));
   let cupOfWater = 0;
-  for (let index = 0; index < result.length; index += 1) {
-    cupOfWater += parseInt(result[index]);
+  for (let index = 0; index < numArray.length; index += 1) {
+    cupOfWater += numArray[index];
   }
 
   return (cupOfWater + ' copos de água');
