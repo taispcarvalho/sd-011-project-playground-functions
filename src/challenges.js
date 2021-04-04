@@ -15,11 +15,9 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(names) {
-  let firstAndLast = [];
-  firstAndLast.push(names[names.length - 1], ' ' + names[0]);
+  let firstAndLast = names[names.length - 1].concat(', ') + names[0];
   return firstAndLast.toString();
 }
-
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties);
