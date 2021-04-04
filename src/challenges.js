@@ -80,9 +80,35 @@ console.log(catAndMouse(0, 6, 12));
 console.log(catAndMouse(0, 2, 2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  if (numbers % 3 === 0 && numbers % 5 === 0) {
+    return 'fizzBuzz';
+  }
+
+  if (numbers % 3 === 0) {
+    return 'fizz';
+  }
+
+  if (numbers % 5 === 0) {
+    return 'buzz';
+  } else {
+    return 'bug!';
+  }
 }
+
+function saveFizzBuzz(saveNumbers) {
+  let arrayFizzBuzz = [];
+
+  for (let index of saveNumbers) {
+    arrayFizzBuzz.push(fizzBuzz(index));
+  }
+  return arrayFizzBuzz;
+}
+console.log(saveFizzBuzz([2, 15, 7, 9, 45]));
+console.log(saveFizzBuzz([7, 9]));
+console.log(saveFizzBuzz([9, 25]));
+
+
 
 // Desafio 9
 function encode() {
