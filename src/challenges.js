@@ -14,18 +14,25 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(strArray) {
+  return `${strArray.slice(-1)}, ${strArray[0]}`;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3 ) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numArray) {
+   let highestValue =Math.max.apply(null,numArray);
+   let repeat = 0;
+   for(let index=0; index < numArray.length;index +=1){
+       if(highestValue === numArray[index]){
+         repeat += 1
+       }
+   }
+   return repeat;
 }
 
 // Desafio 7
