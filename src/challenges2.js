@@ -86,8 +86,13 @@ function condTh(a, b, c) {
     return true;
   }
 }
-function triangleCheck(lineA, lineB, lineC) {
+function isFalse(lineA, lineB, lineC) {
   if (conditionCheckOne(lineA, lineB, lineC) || conditionCheckTwo(lineA, lineB, lineC)) {
+    return true;
+  }
+}
+function triangleCheck(lineA, lineB, lineC) {
+  if (isFalse(lineA, lineB, lineC) === true) {
     return false;
   }
   if (condOne(lineA, lineB, lineC) || condTwo(lineA, lineB, lineC) || condTh(lineA, lineB, lineC)) {
