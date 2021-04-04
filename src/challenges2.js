@@ -91,7 +91,7 @@ function hydrate(string) {
   return `${numberBebidas} copos de água`;
   // seu código aqui
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 3 copo de vinho'));
+console.log(hydrate('1 cachaça, -5 cervejas e 3 copo de vinho'));
 module.exports = {
   generatePhoneNumber,
   techList,
