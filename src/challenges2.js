@@ -50,13 +50,19 @@ function generatePhoneNumber(array) {
   }
   return phone;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 1, 3, 2, 9]))
 /* https://www.florin-pop.com/blog/2019/04/jcc-create-a-phone-number/ */
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let triangle = true;
+  if (lineA > lineB + lineC) {
+    triangle = false;
+  } if (lineA < Math.abs(lineB - lineC)) {
+    triangle = false;
+  }
+  return triangle;
 }
+/* https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs */
 
 // Desafio 13
 function hydrate() {
