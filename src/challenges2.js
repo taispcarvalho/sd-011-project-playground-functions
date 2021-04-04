@@ -2,6 +2,8 @@
 function techList(techArr, name) {
   let newArrTech = [];
   techArr = techArr.sort();
+  // O método sort() foi uma sugestao do meu amigo Renato Bispo, eu aprendi como utiliza-lo da maneira
+  // correta no seguinte link : https://www.w3schools.com/js/js_array_sort.asp
   if (techArr.length > 1) {
     for (let index = 0; index < techArr.length; index += 1) {
       let object = {
@@ -38,6 +40,9 @@ function telephoneGenerator2(arrTel) {
   }
   return newString2;
 }
+
+// A ideia para refatorar o codigo para contar os numeros repetidos veio do meu amigo Inacio
+// que sugeriu que eu criasse uma funcao separada para contar os numeros (numberToCount)
 
 function numberToCount(arr, number) {
   let count = 0;

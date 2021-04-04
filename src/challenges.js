@@ -15,6 +15,9 @@ function calcArea(base, high) {
 console.log(calcArea(10, 50));
 
 // Desafio 3
+
+// Neste desafio eu consultei a utilizacao do método split() no link: https://www.w3schools.com/jsref/jsref_split.asp
+
 function splitSentence(initialStr) {
   let newArr;
   newArr = initialStr.split(' ');
