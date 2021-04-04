@@ -4,14 +4,16 @@ function techList(array, name) {
   let nome = name;
   let resultado = [];
 
-  for (let index = 0; index <= sortArray.length; index += 1) {
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+
+  for (let index = 0; index < sortArray.length; index += 1) {
     if (sortArray.length > 0) {
       resultado.push({
         tech: sortArray[index],
         name: nome,
       });
-    } else {
-      resultado = 'Vazio!';
     }
   }
   return resultado;
