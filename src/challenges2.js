@@ -51,7 +51,7 @@ function generatePhoneNumber(numbers) {
 
   return 'não é possível gerar um número de telefone com esses valores.';
 }
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
