@@ -56,7 +56,7 @@ function fizzBuzzSecondProcess(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 5 === 0) {
       array[index] = 'buzz';
-    } else if (typeof array[index] === number) {
+    } else if (typeof array[index] === 'number') {
       array[index] = 'bug!';
     }
   }

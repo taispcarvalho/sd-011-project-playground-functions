@@ -15,10 +15,10 @@ function techList(tech, name) {
 
 // Desafio 11
 function withElevenNumbers(array) {
-  let phoneNumber = ['(', 0, 0, ')', 0, 0, 0, 0, 0, '-', 0, 0, 0, 0];
+  let phoneNumber = ['(', 0, 0, ') ', 0, 0, 0, 0, 0, '-', 0, 0, 0, 0];
   let difOfIndex = 1;
   for (let index = 0; index < array.length; index += 1) {
-    if (index === 2 || index === 8) {
+    if (index === 2 || index === 7) {
       difOfIndex += 1;
       phoneNumber[index + difOfIndex] = array[index];
     } else {
@@ -36,7 +36,7 @@ function generatePhoneNumber(array) {
   }
   return phoneNumber;
 }
-
+console.log (generatePhoneNumber([1,1,9,8,4,4,9,8,0,6,0]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
