@@ -47,16 +47,14 @@ function numbersRepeat(arr) {
 }
 
 function generatePhoneNumber(arr) {
-  let value;
   if (arr.length !== 11) {
-    value.push('Array com tamanho incorreto.');
-    //  neste else if abaixo, caso a função num0A9 que verifica se o número é menor que 0 e maior que nove retornar true ou o numbersRepeat que verifica se o número aparece mais que 3 vezes retornar true, o return será executado retornando 'não é possivel...'
-  } else if (num0A9(arr) || numbersRepeat(arr)) {
-    value.push('não é possível gerar um número de telefone com esses valores');
-  } else {
-    value.push(returnNum(arr));
+    return 'Array com tamanho incorreto.';
+    //  neste else if abaixo, caso a função num0A9 que verifica se o número é menor que 0 e maior que nove retornar true ou o numbersRepeat que verifica se o número aparece mais que 3 vezes retornar true, o push será executado e colcoado em value, retornando 'não é possivel...'
   }
-  return value;
+  if (num0A9(arr) || numbersRepeat(arr)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return returnNum(arr);
 }
 
 // Desafio 12
@@ -65,7 +63,7 @@ function triangleCheck(a, b, c) {
   let param = [a, b, c, a, b];
   for (let i = 0; i < 5; i += 1) {
     if (
-      param[i] < param[i + 1] + param[i + 2]
+      param[i] < param[i + 1] + param[i + 2] 
       && param[i] > Math.abs(param[i + 1] - param[i + 2])
     ) {
       return true;
