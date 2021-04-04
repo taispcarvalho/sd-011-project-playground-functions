@@ -31,14 +31,14 @@ function higherthNumber(arrayNumbers) {
       bigNumber = arrayNumbers[index];
     }
   }
- return bigNumber;
+  return bigNumber;
 }
 function highestCount(arrayNumbers) {
   let timesNumberAppears = 0;
   let higherth = higherthNumber(arrayNumbers);
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] === higherth) {
-      timesNumberAppears = timesNumberAppears + 1;
+      timesNumberAppears += 1;
     }
   }
   return timesNumberAppears;
@@ -48,22 +48,24 @@ function highestCount(arrayNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let position1 = Math.abs(cat1 - mouse);
   let position2 = Math.abs(cat2 - mouse);
-  let response;
+  let response = '';
   if (position1 > position2) {
     response = 'cat2';
   } else if (position1 < position2) {
     response = 'cat1';
-  } 
-  return 'os gatos trombam e o rato foge';  
+  } else {
+    response = 'os gatos trombam e o rato foge';
+  }
+  return response;
 }
 
 // Desafio 8
 function fizzBuzz(myArray) {
-  let returnArray =[];
-  for (let index = 0; index < myArray.length; index += 1){
-    if (myArray[index] % 15 === 0){
+  let returnArray = [];
+  for (let index = 0; index < myArray.length; index += 1) {
+    if (myArray[index] % 15 === 0) {
       returnArray.push('fizzBuzz');
-    } else if(myArray[index] % 3 === 0) {
+    } else if (myArray[index] % 3 === 0) {
       returnArray.push('fizz');
     } else if (myArray[index] % 5 === 0) {
       returnArray.push('buzz');
@@ -77,7 +79,7 @@ function fizzBuzz(myArray) {
 // Desafio 9
 
 function encode(transformString) {
-  for (let index = 0; index < transformString.length; index += 1){
+  for (let index = 0; index < transformString.length; index += 1) {
     transformString = transformString.replace('a', '1');
     transformString = transformString.replace('e', '2');
     transformString = transformString.replace('i', '3');
@@ -88,15 +90,15 @@ function encode(transformString) {
 }
 
 function decode(transformString) {
-    for (let index = 0; index < transformString.length; index += 1) {
-      transformString = transformString.replace('1', 'a');
-      transformString = transformString.replace('2', 'e');
-      transformString = transformString.replace('3', 'i');
-      transformString = transformString.replace('4', 'o');
-      transformString = transformString.replace('5', 'u');
-    }
-    return transformString;
+  for (let index = 0; index < transformString.length; index += 1) {
+    transformString = transformString.replace('1', 'a');
+    transformString = transformString.replace('2', 'e');
+    transformString = transformString.replace('3', 'i');
+    transformString = transformString.replace('4', 'o');
+    transformString = transformString.replace('5', 'u');
   }
+  return transformString;
+}
 
 module.exports = {
   calcArea,
