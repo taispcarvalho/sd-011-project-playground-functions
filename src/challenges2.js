@@ -73,10 +73,18 @@ function triangleCheck(l1, l2, l3) {
   }
   return false;
 }
-console.log(triangleCheck(10, 14, 8));
+
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(strDrink) {
+  let drinks = strDrink.match(/\d+/g).join('');
+  let water = 0;
+  for (let index = 0; index < drinks.length; index += 1) {
+    water += parseInt(drinks.charAt(index), 10);
+  }
+  if (water <= 1) {
+    return `${water} copo de água`;
+  }
+  return `${water} copos de água`;
 }
 
 module.exports = {
