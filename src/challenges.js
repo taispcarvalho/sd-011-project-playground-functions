@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
-  return true;
-  } 
+    return true;
+} 
   return false;
 }
 // console.log(compareTrue(true, true));
@@ -13,7 +13,7 @@ function calcArea(base, height) {
   area = (base * height) / 2;
   return area;
 }
-//console.log(calcArea(10, 2));
+// console.log(calcArea(10, 2));
 
 // Desafio 3
 function splitSentence(stringPhrase) {
@@ -24,7 +24,7 @@ function splitSentence(stringPhrase) {
 
 // Desafio 4 
 function concatName(namesList) {
-  return (namesList[namesList.length - 1] +',' + ' ' + namesList[0]);
+  return (namesList[namesList.length - 1] + ',' + ' ' + namesList[0]);
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
@@ -46,13 +46,13 @@ function highestCount(numbers) {
     if (numbers[index] > highestNumber) {
       highestNumber = numbers[index];
     }
-}
+  }
   for (let i = 0; i < numbers.length; i += 1) {
-  if (numbers[i] === highestNumber) {
-  repetitions += 1;
-   }
+    if (numbers[i] === highestNumber) {
+      repetitions += 1;
+    }
 } 
-return repetitions;
+  return repetitions;
 }
 // console.log(highestCount([ 0, 0, 0]));
 
@@ -64,8 +64,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if ((distance2) < (distance1)) {
     return 'cat2';
-  }
-  else ((distance1 === distance2))  
+  } else ((distance1 === distance2))  
   return 'os gatos trombam e o rato foge';
 }
 // console.log(catAndMouse(1, 0, 2))
@@ -78,8 +77,7 @@ function fizzBuzz(param1) {
     if (param1[index] % 3 === 0 && param1[index] % 5 === 0) {
   arrayFiBu.push('fizzBuzz');
   } else if (param1[index] % 5 === 0 && param1[index] % 3 !== 0) {
-  param1[index] = 'buzz';
-  arrayFiBu.push(param1[index]);
+    arrayFiBu.push('buzz');
     } else if (param1[index] % 3 === 0 && param1[index] % 5 !== 0) {
   arrayFiBu.push('fizz');
     } else {
@@ -92,17 +90,10 @@ function fizzBuzz(param1) {
    
   // Desafio 9
 function encode(letters) {
-  let num = { a:1,
-  e:2,
-  i:3,
-  o:4,
-  u:5,
+  
+ 
 }
-for (let index = 0; index < letters.length; index += 1) {
-  if (letters[index] === num);
-  return num = letters[index];
-}
-  }
+
   //console.log(encode('hi there!'));
 function decode() {
   // seu código aqui

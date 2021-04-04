@@ -15,16 +15,14 @@ function triangleCheck(lineA, lineB, lineC) {
   let sizeA = Math.abs(lineB - lineC);
   let sizeB = Math.abs(lineA - lineC);
   let sizeC = Math.abs(lineA - lineB);
-  let sizeBC = lineB + lineC;
-  let sizeAC = lineA + lineC;
-  let sizeAB = lineA + lineB;
-  if (lineA < sizeBC && lineA > sizeA && lineB < sizeAC && lineB > sizeB && lineC < sizeAB && lineC > sizeC) {
-  return true;
-} 
-  else 
+  if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
   return false;
+} else if (lineA < sizeA || lineB < sizeB || lineC < sizeC) {
+  return false;
+} else
+  return true;
 }
-//console.log(triangleCheck(10, 14, 8));
+// console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
