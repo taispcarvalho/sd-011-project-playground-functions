@@ -61,15 +61,36 @@ let phoneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 console.log(generatePhoneNumber(phoneNumber));
 
 // Desafio 12
-function triangleCheck(side1, side2, side3) {
-  let testFirst = side1 > side2 + side3 || side2 > side1 + side3 || side3 > side1 + side2;
-  let testSec = side1 < Math.abs(side2 - side3) || side2 < Math.abs(side1 - side3) || side3 < Math.abs(side1 - side2);
-  let thirdTest = side1 < side2 + side3 && side1 > Math.abs(side2 - side3) || side2 < side1 + side3;
-  let fourTest = side2 > Math.abs(side1 - side3) || side3 < side2 + side1 && side3 > Math.abs(side2 - side1);
-  if ((testFirst) && (testSec)) {
+function conditionCheckOne(a, b, c) {
+  if (a > b + c || b > a + c || c > a + b) {
+    return true;
+  }
+}
+function conditionCheckTwo(a, b, c) {
+  if (a < Math.abs(b - c) || b < Math.abs(a - c) || c < Math.abs(a - b)) {
+    return true;
+  }
+}
+function condOne(a, b, c) {
+  if (a < b + c && a > Math.abs(b - c)) {
+    return true;
+  }
+}
+function condTwo(a, b, c) {
+  if (b < a + c && b > Math.abs(a - c)) {
+    return true;
+  }
+}
+function condTh(a, b, c) {
+  if (c < a + b && c > Math.abs(a - b)) {
+    return true;
+  }
+}
+function triangleCheck(lineA, lineB, lineC) {
+  if (conditionCheckOne(lineA, lineB, lineC) || conditionCheckTwo(lineA, lineB, lineC)) {
     return false;
   }
-  if (thirdTest && fourTest) {
+  if (condOne(lineA, lineB, lineC) || condTwo(lineA, lineB, lineC) || condTh(lineA, lineB, lineC)) {
     return true;
   }
 }
