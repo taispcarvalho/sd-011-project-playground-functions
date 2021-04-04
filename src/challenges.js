@@ -1,11 +1,10 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true){ 
-    return true;
-  } else {
-    return false;
-  }
+  return value1 && value2
 }
+console.log(compareTrue(false, true));
+console.log(compareTrue(true, false));
+console.log(compareTrue(false, false));
 console.log(compareTrue(true, true));
 
 // Desafio 2
@@ -25,14 +24,16 @@ console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName(string) {
-  let firstString = string[0];
-  let lastString = string[string.lenght-1];
-  return firstString + ', ' + lastString;
+function concatName(nameString) {
+  let firstName = nameString[0];
+  let lastName = nameString[nameString.length-1];
+  let concatString = `${lastName}, ${firstName}`;
+
+  return concatString;
 }
-console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo'));
-console.log(concatName('foguete', 'não', 'tem', 'ré'));
-console.log(concatName('captain', 'my', 'captain'));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -45,17 +46,17 @@ console.log(footballPoints(0, 0));
 // Desafio 6
 function highestCount(listNumbers) {
   let highestNumber = listNumbers[0];
-  let appearNumber = 0;
-
-  for (let index =0; index < listNumbers.lenght; index +=1){
+  
+  for (let index=0; index < listNumbers.lenght; index += 1){
     if (listNumbers[index] > highestNumber){
       highestNumber = listNumbers[index];
     }
   }
   
-  for (let index =0; index < listNumbers.lenght; index +=1) {
-    if (listNumbers[index] === highestNumber){
-      appearNumber += 1;
+  let appearNumber = 0;
+  for (let index=0; index < listNumbers.lenght; index += 1) {
+    if (listNumbers[index]===highestNumber){
+      appearNumber = appearNumber + 1;
       }
   }
   return appearNumber;
