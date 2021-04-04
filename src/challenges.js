@@ -56,15 +56,17 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 
 function buzzIf(n) {
+  let finalValue;
   if (n % 15 === 0) {
-    return 'fizzBuzz';
+    finalValue.push('fizzBuzz');
   } else if (n % 3 === 0) {
-    return 'fizz';
+    finalValue.push('fizz');
   } else if (n % 5 === 0) {
-    return 'buzz';
+    finalValue.push('buzz');
   } else {
-    return 'bug!';
+    finalValue.push('bug!');
   }
+  return finalValue;
 }
 
 function fizzBuzz(arr) {
