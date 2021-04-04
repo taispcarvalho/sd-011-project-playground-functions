@@ -25,25 +25,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(conjunto, ocorrencia) {
-  for (index === 0; index < conjunto.length; index += 1) {
-    if (conjunto[index] === Math.max(conjunto)) {
-      return ocorrencia += 1;
-    }
-  }
+function highestCount() {
+
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distance1 = cat1 - mouse;
-  let distance2 = cat2 - mouse;
-  if (distance1 > distance2) {
+  let distanciaCat1 = Math.abs(cat1 - mouse);
+  let distanciaCat2 = Math.abs(cat2 - mouse);
+  if (distanciaCat1 > distanciaCat2) {
     return 'cat2';
-  } if (distance2 > distance1) {
+  } if (distanciaCat2 > distanciaCat1) {
     return 'cat1';
-  } if (distance1 === distance2) {
-    return 'os gatos trombam e o rato foge';
-  }
+  } return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
