@@ -1,7 +1,13 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqu
+function compareTrue(n1, n2) {
+ if (n1 > 10 && n2 > 10){
+return true;
+ } else{
+   return false;
+ }
+
 }
+console.log(compareTrue(11,8));
 
 // Desafio 2
 function calcArea() {
