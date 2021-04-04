@@ -28,7 +28,7 @@ console.log(splitSentence('go trybe'));
 function concatName(arrayOfStrings) {
   let firstItem = arrayOfStrings[0];
   let lastItem = arrayOfStrings[arrayOfStrings.length - 1];
-  let stringConcat = lastItem + ' , ' + firstItem;
+  let stringConcat = lastItem + ', ' + firstItem;
   return stringConcat;
 }
 
