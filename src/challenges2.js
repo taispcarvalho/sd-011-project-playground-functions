@@ -87,7 +87,6 @@ function generatePhoneNumber(numbers) {
   }
   numbersOutput = numbersOutput.join('');
   return numbersOutput;
-
 }
 
 // Desafio 12
@@ -110,7 +109,7 @@ function hydrate(drinks) {
   }
 
   if (glassesOfWater <= 1) {
-  return glassesOfWater + ' copo de água';
+    return glassesOfWater + ' copo de água';
   } 
   return glassesOfWater + ' copos de água';
 }
