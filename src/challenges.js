@@ -46,18 +46,16 @@ function highestCount(array) {
   return numeroRepetido;
 }
 
-// Desafio 7 - ok - verificar
+// Desafio 7 - ok -refatorar
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaMouseCat1 = Math.abs(mouse - cat1);
   let distanciaMouseCat2 = Math.abs(mouse - cat2);
-  
   if (distanciaMouseCat1 < distanciaMouseCat2) {
     return 'cat1';
-  } else if (distanciaMouseCat1 > distanciaMouseCat2) {
+  } else (distanciaMouseCat1 > distanciaMouseCat2) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
-  }
+  } 
+  return 'os gatos trombam e o rato foge';  
 }
 
 // Desafio 8 - ok - verificar

@@ -17,7 +17,7 @@ function techList(tech, name) {
 }
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Fernando'));
 
-// Desafio 11
+// Desafio 11-ok-refatorar
 function generatePhoneNumber(array) {
   let telDdd = [];
   let tel1 = [];
@@ -60,7 +60,7 @@ function verificaNumero(array) { // verificando se o array seja menor que 0, mai
   }
 }
 
-// Desafio 12
+// Desafio 12-ok
 function triangleCheck(lineA, lineB, lineC) {
   let area1 = lineA < lineB + lineC && lineA > Math.abs(lineB - lineC); // Math.abs, retorna o valor absoluto de um número.
   let area2 = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
