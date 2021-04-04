@@ -60,18 +60,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function isDivisible(number) {
+  let resultArray = '';
+  if (number % 15 === 0) {
+    resultArray = 'fizzBuzz';
+  } else if (number % 5 === 0) {
+    resultArray = 'buzz';
+  } else if (number % 3 === 0) {
+    resultArray = 'fizz';
+  } else {
+    resultArray = 'bug!';
+  }
+  return resultArray;
+}
+
 function fizzBuzz(arrayNumbers) {
   let resultArray = [];
+  let temp = '';
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers[index] % 15 === 0) {
-      resultArray.push('fizzBuzz');
-    } else if (arrayNumbers[index] % 5 === 0) {
-      resultArray.push('buzz');
-    } else if (arrayNumbers[index] % 3 === 0) {
-      resultArray.push('fizz');
-    } else {
-      resultArray.push('bug!');
-    }
+    temp = isDivisible(arrayNumbers[index]);
+    resultArray.push(temp);
   }
   return resultArray;
 }
