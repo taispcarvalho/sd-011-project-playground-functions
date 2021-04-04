@@ -1,20 +1,22 @@
-const { compareTrue } = require("./challenges");
-
 // Desafio 10
 function techList(arrayValue, name) {
   arrayValue = arrayValue.sort();
   let arrayOfObjects = [];
   if (arrayValue.length === 0) {
-    return "Vazio!";
+    return 'Vazio!';
   }
   for (let index = 0; index < arrayValue.length; index += 1) {
-    let objectArray = {}
-    objectArray['tech'] = arrayValue[index];
-    objectArray['name'] = name;
+    let objectArray = {
+      tech: arrayValue[index],
+      name: name
+    };
     arrayOfObjects.push(objectArray);
   }
   return arrayOfObjects;
 }
+
+let a = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+console.log(techList(a, 'leo'));
 
 // Desafio 11
 function generatePhoneNumber() {
