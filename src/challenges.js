@@ -68,41 +68,45 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numberArray) {
   let comparation = []
   for (let index = 0; index < numberArray.length; index += 1){
-    divisivel3 = numberArray[index] % 3;
-    divisivel5 = numberArray[index] % 5;
+  let  divisivel3 = numberArray[index] % 3;
+  let  divisivel5 = numberArray[index] % 5;
     if(divisivel3 === 0 && divisivel5 === 0){
     comparation.push('fizzBuzz');
     }
-    else if (divisivel3 === 0 && divisivel5 != 0){
+    else if (divisivel3 === 0 && divisivel5 !== 0){
       comparation.push('fizz');
     }
+
     else if (divisivel5 === 0 && divisivel3 != 0){
       comparation.push ('buzz');
     }
-    else{
+
+    else {
       comparation.push('bug!')
     }
-    }
-    return comparation; 
+
+}
+
+return comparation; 
 }
 
 // Desafio 9
 function encode(encodeText){
 codeText = encodeText.replace(/u/g, '5')
-                     .replace(/a/g, '1')
-                     .replace(/e/g, '2')
-                     .replace(/i/g, '3')
-                     .replace(/o/g, '4')
-                     .replace(/u/g, '5')
+    .replace(/a/g, '1')
+    .replace(/e/g, '2')
+    .replace(/i/g, '3')
+    .replace(/o/g, '4') 
+    .replace(/u/g, '5')
  return codeText
 }
 function decode(decodeText) {
   undecodeText = decodeText.replace(/5/g, 'u')
-                       .replace(/1/g, 'a')
-                       .replace(/2/g, 'e')
-                       .replace(/3/g, 'i')
-                       .replace(/4/g, 'o')
-                       .replace(/5/g, 'u')
+    .replace(/1/g, 'a')
+    .replace(/2/g, 'e')
+    .replace(/3/g, 'i') 
+    .replace(/4/g, 'o')
+    .replace(/5/g, 'u')
  return undecodeText
 }
 
