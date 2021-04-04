@@ -12,9 +12,11 @@ function splitSentence(string) {
 }
 // Desafio 4
 function concatName(arrayDeString) {
-  return `${arrayDeString[arrayDeString.length - 1]},  ${arrayDeString[0]}`;
+  let firstName = arrayDeString[0];
+  let lastName = arrayDeString[arrayDeString.length - 1];
+  let concat = `${lastName}, ${firstName}`
+  return concat;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties);
@@ -29,7 +31,7 @@ function highestCount(arrayHigherNumber) {
     }
   }
   for (let index in arrayHigherNumber) {
-    if (higherNumber == arrayHigherNumber[index]) {
+    if (higherNumber === arrayHigherNumber[index]) {
       recurrentNumber += 1;
     }
   }
@@ -38,17 +40,14 @@ function highestCount(arrayHigherNumber) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let catCLose1 = mouse - cat1;
-  let catClose2 = mouse - cat2;
-  let winner;
-  if (catCLose1 === catClose2) {
-    winner = "os gatos trombam e o rato foge";
-  } else if (catCLose1 < catClose2) {
+  let catCLose1 = (mouse - cat1);
+  let catClose2 = (mouse - cat2);
+  if (catCLose1 < catClose2) {
     winner = "cat1";
-  } else {
+  } else if (catClose2 < catClose1) {
     winner = "cat2";
   }
-  return winner
+  return "os gatos trombam e o rato foge"
 }
 // Desafio 8
 function fizzBuzz(arrayFizzBuzz) {
