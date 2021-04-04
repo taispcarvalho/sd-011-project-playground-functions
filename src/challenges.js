@@ -8,7 +8,7 @@ function compareTrue(valorA, valorB) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return ((base * height) / 2);
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -23,7 +23,7 @@ function concatName(lista) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return ((wins * 3) + ties);
+  return wins * 3 + ties;
 }
 function getHighestNumber(listaDeNumeros) {
   let maiorNumero = 0;
@@ -44,20 +44,20 @@ function highestCount(listaDeNumeros) {
       contador += 1;
     }
   }
-  return (contador);
+  return contador;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
- let distCat1 = mouse - cat1;
- let distCat2 = mouse - cat2;
-  if (distCat1 > distCat2){
-    return ('cat2')
+  let distCat1 = mouse - cat1;
+  let distCat2 = mouse - cat2;
+  if (distCat1 > distCat2) {
+    return 'cat2';
   }
-  else if (distCat2 > distCat1){
-    return('cat1')
+  if (distCat2 > distCat1) {
+    return 'cat1';
   }
-  return ('os gatos trombam e o rato foge');
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
