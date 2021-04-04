@@ -42,14 +42,15 @@ function generatePhoneNumber(numbers) {
     }
   }
   
-  if (cont < 3) {
-    numbers.splice(0, 0, '(');
-    numbers.splice(3, 0, ')');
-    numbers.splice(9, 0, '-');
-    return numbers.join('');
+  if (cont >= 3) {
+    return 'não é possível gerar um número de telefone com esses valores.';
   }
 
-  return 'não é possível gerar um número de telefone com esses valores.';
+  numbers.splice(0, 0, '(');
+  numbers.splice(3, 0, ') ');
+  numbers.splice(9, 0, '-');
+  return numbers.join('');
+  
 }
 
 // Desafio 12
