@@ -1,11 +1,11 @@
 // Desafio 10
-function techList(technologies, name) {
+function techList(array, name) {
   let result = [];
   let objects = {};
-  let ordenado = technologies.sort();
+  let ordenado = array.sort();
   for (let index = 0; index < ordenado.length; index += 1) {
     objects = {
-      technologies: ordenado[index],
+      tech: ordenado[index],
       name,
     };
     result.push(objects);
@@ -19,13 +19,24 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Alan'));
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (Math.abs(lineA) > lineB + lineC || Math.abs(lineB) > lineA + lineC || Math.abs(lineC) > lineA + lineB) {
+    return false;
+  }
+  if (Math.abs(lineA) < lineB - lineC || Math.abs(lineB) < lineA - lineC || Math.abs(lineC) < lineA - lineB) {
+    return false;
+  }
+  if (Math.abs(lineA) < lineC - lineB || Math.abs(lineB) < lineC - lineA || Math.abs(lineC) < lineB - lineA) {
+    return false;
+  } else {
+    return true;
+  }
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
