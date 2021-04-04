@@ -49,8 +49,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let blend = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 15 === 0) {
+      blend.push('fizzBuzz');
+    }
+    if (blend[index] !== 'fizzBuzz') {
+      if (numbers[index] % 3 === 0) {
+        blend.push('fizz');
+      } if (numbers[index] % 5 === 0) {
+        blend.push('buzz');
+      } if (blend[index] !== 'fizz' && blend[index] !== 'buzz') {
+        blend.push('bug!');
+      }
+    }
+  }
+  return blend;
 }
 
 // Desafio 9
