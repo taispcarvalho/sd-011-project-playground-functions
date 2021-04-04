@@ -75,7 +75,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse(1, 0, 2));
+console.log(catAndMouse(1, 2, 2));
 
 // Desafio 8
 function fizzBuzz(numbersArray) {
@@ -94,13 +94,13 @@ function fizzBuzz(numbersArray) {
   return resultArray;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(lowercaseVowels) {
   let fraseEncode = [''];
   for (let index = 0; index < lowercaseVowels.length; index += 1) {
-  switch (lowercaseVowels[index]) {
+    switch (lowercaseVowels[index]) {
     case 'a':
       fraseEncode = fraseEncode + '1';
       break;
@@ -111,7 +111,7 @@ function encode(lowercaseVowels) {
       fraseEncode = fraseEncode + '3';
       break;
     case 'o':
-      fraseEncode = fraseEncode +'4';
+      fraseEncode = fraseEncode + '4';
       break;
     case 'u':
       fraseEncode = fraseEncode + '5';
