@@ -76,7 +76,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 console.log(triangleCheck(10, 14, 8));
 
-// Desafio 13 
+// Desafio 13
 // Deixo meus agradecimentos aos colegas de turma Julio Filizzola e Vinicius Gouveia por me auxiliarem com realizacao deste desafio. Para resolver o problema de encontrar valores numericos com o objeto 'Number()' foi utilizado o material do seguinte local: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number
 function hydrate(string) {
   string = string.replace(/\D/g, '');
