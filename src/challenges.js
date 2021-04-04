@@ -60,19 +60,24 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
+function getWordFromNumber(number) {
+  if (number % 15 === 0) {
+    return 'fizzBuzz';
+  }
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  return 'bug!';
+}
+
 // Desafio 8
 function fizzBuzz(lista) {
   let novaLista = [];
   for (let numeroAtual of lista) {
-    if (numeroAtual % 15 === 0) {
-      novaLista.push('fizzBuzz');
-    } else if (numeroAtual % 5 === 0) {
-      novaLista.push('buzz');
-    } else if (numeroAtual % 3 === 0) {
-      novaLista.push('fizz');
-    } else {
-      novaLista.push('bug!');
-    }
+    novaLista.push(getWordFromNumber(numeroAtual));
   }
   return novaLista;
 }
