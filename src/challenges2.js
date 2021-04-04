@@ -59,7 +59,7 @@ function generatePhoneNumber(arrayOfNumbers) {
   if (arrayOfNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (verifyDigit(arrayOfNumbers) === true && verifyRepetition === true) {
+  if (verifyDigit(arrayOfNumbers) === true && verifyRepetition(arrayOfNumbers) === true) {
     return phoneNumber(arrayOfNumbers);
   }
   return 'não é possível gerar um número de telefone com esses valores';
