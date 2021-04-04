@@ -14,7 +14,7 @@ let value = str.split(' ')
  }
 
 // Desafio 4 
-function concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo') {
+function concatName() {
   
 }
 
