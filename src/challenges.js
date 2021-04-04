@@ -77,15 +77,15 @@ console.log(catAndMouse(0, 1, 1));
 // Desafio 8
 function secondFizzBuzz(numbers) {
   let text = 0;
-    if (numbers % 15 === 0) {
-      text = 'fizzBuzz';
-    } else if (numbers  % 3 === 0) {
-      text = 'fizz';
-    } else if (numbers  % 5 === 0) {
-      text = 'buzz';
-    } else {
-      text = ('bug');
-    }
+  if (numbers % 15 === 0) {
+    text = 'fizzBuzz';
+  } else if (numbers % 3 === 0) {
+    text = 'fizz';
+  } else if (numbers % 5 === 0) {
+    text = 'buzz';
+  } else {
+    text = ('bug');
+  }
   return text;
 }
 
@@ -94,7 +94,7 @@ function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
     result.push(secondFizzBuzz(array[index]));
   }
-  return result
+  return result;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
