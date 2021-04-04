@@ -21,12 +21,13 @@ console.log(techList(tec, nome));
 function isRepeatNumber(rephone) {
   let largeNumbCount = null;
   let moreCount = -1;
-  for (let index of rephone) {
+  for (let index = 0; index < rephone.length; index += 1) {
     let count = 1;
     for (let index2 = index + 1; index2 < rephone.length; index2 += 1) {
       if (rephone[index] === rephone[index2]) {
         count += 1;
-      } else if (count > moreCount) {
+      }
+      if (count > moreCount) {
         largeNumbCount = rephone[index];
         moreCount = count;
       }
