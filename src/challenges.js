@@ -98,7 +98,7 @@ console.log(catAndMouse(0, 2, 2));
 console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
-function fizzBuzz(numbers) {
+function saveFizzBuzz(numbers) {
   if (numbers % 3 === 0 && numbers % 5 === 0) {
     return 'fizzBuzz';
   }
@@ -114,17 +114,17 @@ function fizzBuzz(numbers) {
   return 'bug!';
 }
 
-function saveFizzBuzz(saveNumbers) {
+function fizzBuzz(saveNumbers) {
   let arrayFizzBuzz = [];
 
   for (let index of saveNumbers) {
-    arrayFizzBuzz.push(fizzBuzz(index));
+    arrayFizzBuzz.push(saveFizzBuzz(index));
   }
   return arrayFizzBuzz;
 }
-console.log(saveFizzBuzz([2, 15, 7, 9, 45]));
-console.log(saveFizzBuzz([7, 9]));
-console.log(saveFizzBuzz([9, 25]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
