@@ -83,7 +83,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2Unity = Math.abs(cat2 - mouse);
 
   if (cat1Unity === cat2Unity) {
-    return 'The cats bump and the mouse scape';
+    return 'os gatos trombam e o rato foge';
   }
 
   if (cat1Unity > cat2Unity) {
