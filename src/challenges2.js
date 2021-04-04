@@ -107,12 +107,20 @@ function triangleCheck(lineA, lineB, lineC) {
   return exists;
 }
 
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(arrayDrink) {
+  let matches = arrayDrink.match(/\d/g).map(Number);
+  let drinksSum = 0;
+  for (let index = 0; index < matches.length; index += 1) {
+    drinksSum += matches[index];
+  }
 
+  if (drinksSum === 1) {
+    return `${drinksSum} copo de água`;
+  }
+  return `${drinksSum} copos de água`;
+}
+// Para o desenvolvimento desse código utilizei as seguintes fontes: 'https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994' e 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map'
 module.exports = {
   generatePhoneNumber,
   techList,
