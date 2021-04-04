@@ -16,60 +16,63 @@ function techList(list, name) {
 }
 
 // Desafio 11
-let message = 'OK';
-
 function length(array) {
-  if (array.length !== 11) {
-    message = 'Array com tamanho incorreto.';
-  }
+  return (array.length === 11);
 }
 
 function check0to9(array) {
-  const sorted = [...array].sort();
+  let situation = true;
   for (let index = 0; index < 11; index += 1) {
-    if (sorted[index] < 0 || sorted[index] > 9) {
-      message = 'não é possível gerar um número de telefone com esses valores';
+    if (array[index] < 0 || array[index] > 9) {
+      situation = false;
+      break;
+      // 'não é possível gerar um número de telefone com esses valores';
     }
   }
+  return situation;
 }
 
 function checkConsecutive(array) {
   const sorted = [...array].sort();
+  let situation = true;
   for (let index = 0; index < 11; index += 1) {
     if (sorted[index] === sorted[index + 1] && (sorted[index] === sorted[index + 2])) {
-      message = 'não é possível gerar um número de telefone com esses valores';
+      situation = false;
+      // 'não é possível gerar um número de telefone com esses valores';
     }
   }
+  return situation;
 }
 
-function phoneN(array) {
-  if (message === 'OK') {
-    let phoneNumber = `(${array[0]}${array[1]}) `;
-    for (let index = 2; index < 7; index += 1) {
-      phoneNumber += array[index];
-    }
-    phoneNumber += '-';
-    for (let index = 7; index < 11; index += 1) {
-      phoneNumber += array[index];
-    }
-    return phoneNumber;
+function finalCheck(array) {
+  if (length(array) === false) {
+    return 'Array com tamanho incorreto.';
+  } if (check0to9(array) === false || checkConsecutive(array) === false) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
+  return true;
+}
+
+function thePhoneNumber(array) {
+  let phoneNumber = `(${array[0]}${array[1]}) `;
+  for (let index = 2; index < 7; index += 1) {
+    phoneNumber += array[index];
+  }
+  phoneNumber += '-';
+  for (let index = 7; index < 11; index += 1) {
+    phoneNumber += array[index];
+  }
+  return phoneNumber;
 }
 
 function generatePhoneNumber(array) {
-  length(array);
-  if (message !== 'OK') {
-    return message;
+  if (finalCheck(array) === true) {
+    return thePhoneNumber(array);
   }
-  check0to9(array);
-  checkConsecutive(array);
-  if (message === 'OK') {
-    return phoneN(array);
-  }
-  let retorno = message;
-  return retorno;
+  return finalCheck(array);
 }
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0]));
 
 // Desafio 12
 let status = true;
