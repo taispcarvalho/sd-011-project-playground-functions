@@ -4,7 +4,7 @@ function techList(list, name) {
   let objeto = {};
   if (list.length <= 0) {
     return 'Vazio!';
-  } else {
+  }
     for (let index = 0; index < list.length; index += 1) {
       objeto = {
         tech: list.sort()[index],
@@ -13,7 +13,6 @@ function techList(list, name) {
       saida.push(objeto);
     }
     return saida;
-  }
 }
 
 // Desafio 11
