@@ -12,7 +12,7 @@ function splitSentence()  {
 let value = splitSentence.split(',')
   return value
  }
-console.log('go', 'Trybe')
+
 // Desafio 4 
 function concatName() {
   // seu código aqui
