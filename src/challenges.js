@@ -13,7 +13,7 @@ function splitSentence(string) {
   let words = string.split(' ')
   return words
 }
-console.log(splitSentence('vamo que vamo'))
+
 // Desafio 4
 function concatName() {
   // seu código aqui
