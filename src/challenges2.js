@@ -73,8 +73,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// Para realizar este desafio, me baseei no código do colega Julio Filizzola.
+function hydrate(string) {
+  string = string.replace(/\d/g, '');
+  let num = 0;
+  
+  for (let index = 0; index < string.length; index += 1) {
+    num += Number(string[index]);
+  }
+  if (num === 1) {
+    return `${num} copo de água`;
+  } else {
+    return `${num} copos de água`;
+  }
 }
 
 module.exports = {
