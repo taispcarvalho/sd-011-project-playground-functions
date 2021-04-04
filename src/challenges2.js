@@ -14,8 +14,9 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function withElevenNumbers(array){
-  let phoneNumber = ['(', 0, 0, ')', 0, 0, 0, 0, 0, '-', 0, 0, 0, 0], difOfIndex = 1;
+function withElevenNumbers(array) {
+  let phoneNumber = ['(', 0, 0, ')', 0, 0, 0, 0, 0, '-', 0, 0, 0, 0];
+  let difOfIndex = 1;
   for (let index = 0; index < array.length; index += 1) {
     if (index === 2 || index === 8) {
       difOfIndex += 1;
@@ -27,11 +28,13 @@ function withElevenNumbers(array){
   return phoneNumber.join('');
 }
 function generatePhoneNumber(array) {
+  let phoneNumber = [];
   if (array.length === 11) {
-    return withElevenNumbers(array);
+    phoneNumber = withElevenNumbers(array);
   } else {
-    return 'Array com tamanho incorreto.';
+    phoneNumber = 'Array com tamanho incorreto.';
   }
+  return phoneNumber;
 }
 
 // Desafio 12
