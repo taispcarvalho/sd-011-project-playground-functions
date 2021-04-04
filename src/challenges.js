@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  return value1 && value2
+  return value1 && value2;
 }
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2
+  return (base * height) / 2;
 }
 // Desafio 3
 function splitSentence(string) {
@@ -13,71 +13,43 @@ function splitSentence(string) {
 // Desafio 4
 let array1 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 function concatName(arrayDeString) {
-  return arrayDeString[arrayDeString.length -1] + " " + arrayDeString[0]
+  return arrayDeString[arrayDeString.length - 1] + " " + arrayDeString[0];
 }
-console.log(concatName(array1))
-
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + (ties)
+  return (wins * 3) + (ties);
 }
 // Desafio 6
-let arrayTest = [9, 1, 3, 9, 5, 7];
-
-/* function arrayNumber(arrayTest) {
-  let higherNumber = 0;
-  for (let index of arrayTest) {
-    if (higherNumber < index) {
-      higherNumber = index
-    }
-  }
-  return higherNumber
-}
-console.log(arrayNumber(arrayTest))
-
-function highestCount(arrayHigherNumber) {
-  let recurrentNumber = 0;
-  for (let index in arrayHigherNumber) {
-    if (arrayNumber(arrayTest) == arrayHigherNumber[index]) {
-      recurrentNumber += 1
-    }
-  }
-  return recurrentNumber
-} */
 function highestCount(arrayHigherNumber) {
   let higherNumber = 0;
   let recurrentNumber = 0;
   for (let index of arrayHigherNumber) {
     if (higherNumber < index) {
-      higherNumber = index
-      console.log(higherNumber)
+      higherNumber = index;
     }
   }
-
   for (let index in arrayHigherNumber) {
     if (higherNumber == arrayHigherNumber[index]) {
-      recurrentNumber += 1
-      console.log(recurrentNumber)
+      recurrentNumber += 1;
     }
   }
-  return recurrentNumber
+  return recurrentNumber;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let result = " ";
-  let catCLose1 = cat1 - cat2
-  let catClose2 = cat2 - cat1
-  if (cat1 === cat2) {
-    result = 'os gatos trombam e o rato foge';
-  } else if (cat1 < cat2) {
-    result = 'cat1'
-  } else if (cat2 < cat1) {
-    result = 'cat2'
+  let catCLose1 = mouse - cat1;
+  let catClose2 = mouse - cat2;
+  let winner;
+  if (catCLose1 === catClose2) {
+    winner = "os gatos trombam e o rato foge"
+  } else if (catCLose1 < catClose2) {
+    winner = "cat1"
+  } else {
+    winner = "cat2"
   }
-  return result
+  return winner
 }
-console.log(catAndMouse(0,4,4))
 // Desafio 8
 let arrayFizzBuzz = [2, 15, 7, 9, 45];
 function fizzBuzz(arrayFizzBuzz) {
@@ -87,13 +59,13 @@ function fizzBuzz(arrayFizzBuzz) {
       arrayString.push('fizzBuzz');
     } else if (arrayFizzBuzz[index] % 3 !== 0 && arrayFizzBuzz[index] % 5 !== 0) {
       arrayString.push('bug!');
-    } else if (arrayFizzBuzz[index] % 3 == 0) {
+    } else if (arrayFizzBuzz[index] % 3 === 0) {
       arrayString.push('fizz');
-    } else if (arrayFizzBuzz[index] % 5 == 0) {
-      arrayString.push('buzz')
+    } else if (arrayFizzBuzz[index] % 5 === 0) {
+      arrayString.push('buzz');
     }
   }
-  return arrayString
+  return arrayString;
 }
 
 // Desafio 9
