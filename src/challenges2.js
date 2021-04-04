@@ -18,6 +18,13 @@ let nome = 'Marcelo';
 console.log(techList(tec, nome));
 
 // Desafio 11
+function checkRepeat(repeat) {
+  for (let index in repeat) {
+    if (repeat[index] >= 3) {
+      return true;
+    }
+  }
+}
 function repeatNumber(phone) {
   let repeat = {};
   for (let index = 0; index < phone.length; index += 1) {
@@ -27,11 +34,7 @@ function repeatNumber(phone) {
       repeat[phone[index]] = 1;
     }
   }
-  for (let index2 in repeat) {
-    if (repeat[index2] >= 3) {
-      return true;
-    }
-  }
+  return checkRepeat(repeat);
 }
 function checkNumber(phone) {
   for (let index in phone) {
