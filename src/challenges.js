@@ -32,7 +32,7 @@ console.log(footballPoints(14, 8));
 // Desafio 6
 // Ajuda do aluno Luiz Wendel, que demonstrou com muita sapiência que uma função nao consegue chamar uma varável contida em função, e que pra isso era necessario nomear uma variável com o retorno da funcao para dai, sim, a mesma ser usado na funcao desejada.
 function highestNumber(numbers) {
-  let storeHigher = 0;
+  let storeHigher = [];
   if (numbers[0] > numbers[1]) {
     storeHigher = numbers[0];
   } else {
