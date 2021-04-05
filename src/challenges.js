@@ -80,14 +80,28 @@ function fizzBuzz(numbers) {
   }
   return retorno;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  for (let index = 0; index <= frase.length; index += 1) {
+    frase = frase.replace('a', '1');
+    frase = frase.replace('e', '2');
+    frase = frase.replace('i', '3');
+    frase = frase.replace('o', '4');
+    frase = frase.replace('u', '5');
+  }
+  return frase;
 }
-function decode() {
-  // seu código aqui
+
+function decode(frase) {
+  for (let index = 0; index <= frase.length; index += 1) {
+    frase = frase.replace('1', 'a');
+    frase = frase.replace('2', 'e');
+    frase = frase.replace('3', 'i');
+    frase = frase.replace('4', 'o');
+    frase = frase.replace('5', 'u');
+  }
+  return frase;
 }
 
 module.exports = {
