@@ -20,7 +20,7 @@ function checkSize(array) {
   return true;
 }
 function checkNumbers(array) {
-  for (let index = 0; index < array.length; index += 1){
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] < 0 || array[index] > 9) {
       return false;
     }
@@ -28,10 +28,9 @@ function checkNumbers(array) {
   return true;
 }
 function checkArray(array) {
-  if (!checkNumbers(array)){
+  if (!checkNumbers(array)) {
     return false;
   }
-  
   let number = 0;
   let count = 0;
   for (let index = 0; index < array.length; index += 1) {
@@ -48,7 +47,6 @@ function checkArray(array) {
   }
   return true;
 }
-  
 function generatePhoneNumber(vetor) {
   if (!checkSize(vetor)) {
     return 'Array com tamanho incorreto.';
