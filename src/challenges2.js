@@ -10,7 +10,9 @@ function techList(array, name) {
   }
   return newObject;
 }
-console.log(techList());
+// let lista = ["React", "Jest", "HTML", "CSS", "JavaScript"]
+// let name = "Lucas"
+// console.log(techList(lista, name));
 // Desafio 11
 function generatePhoneNumber() {
 }
@@ -21,6 +23,7 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineB < lineA + lineC && lineB > Math.abs(lineC - lineA)) return true;
   return false;
 }
+console.log(triangleCheck(10, 14, 8));
 // Desafio 13
 function transformStringToArray(string) {
   return string.split(' ');
