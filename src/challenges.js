@@ -74,7 +74,7 @@ function fizzBuzz(numbers) {
     case (numbers[index] % 5 === 0):
       phrase.push('buzz');
       break;
-    default: 
+    default:
       phrase.push('bug!');
     }
   }
