@@ -4,9 +4,9 @@ function techList(array, name) {
     return 'Vazio!';
   } let newarray = [];
   array = array.sort();
-  for (let tech = 0; tech < array.length; tech += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     newarray.push({
-      tech: 'array[tech]',
+      tech: array.indexOf(),
       name,
     });
   }
