@@ -23,10 +23,10 @@ function splitSentence(goTrybe) {
 }
 splitSentence('Go trybe');
 // Desafio 4
-function concatName(names) {
+function concatName(string) {
   // seu código aqui
-  let first = names.shift();
-  let last = names.pop();
+  let first = string.shift();
+  let last = string.pop();
   return `${first} ${last}`;
 }
 // Desafio 5
