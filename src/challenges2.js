@@ -9,7 +9,7 @@ function techList(array, name) {
   for (let i = 0; i < array.length; i += 1) {
     let objeto = {
       tech: array[i],
-      name: name,
+      name,
     };
     result.push(objeto);
   }
@@ -29,11 +29,11 @@ function repeatedNumber(array, number) {
 function generatePhoneNumber(array) {
   let result = 0;
   if (array.length !== 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] < 0 || array[i] > 9 || repeatedNumber(array, array[i]) >= 3) {
-      return 'Não é possível gerar um número de telefone com esses valores.';
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   let ddd = array.slice(0, 2).join('');
