@@ -69,8 +69,6 @@ function generatePhoneNumber(array) {
   return finalCheck(array);
 }
 
-
-
 // Desafio 12
 function sumSide(lineA, lineB, lineC) {
   if (lineA > lineB + lineC || lineB > lineA + lineC) {
@@ -96,27 +94,23 @@ function triangleCheck(lineA, lineB, lineC) {
   return (sumSide(lineA, lineB, lineC) && diffSide(lineA, lineB, lineC));
 }
 
-
-
 // Desafio 13
 function hydrate(string) {
-  let m;
+  let reduction = /\d+/g;
+  let quantity = string.match(reduction).map(Number);
   let count = 0;
-  let r = /\d+/g;
-  while ((m = r.exec(string)) !== null) {
-    let number = parseInt(m[0], 10);
-    count += number;
-  // while - https://stackoverflow.com/questions/52189621/extract-numbers-from-array-mixed-with-strings-javascript
-  // https://github.com/airbnb/javascript/issues/1439
-  // replace
-  // regex
+  for (let index of quantity) {
+    count += index;
   }
-  if (count === 1) {
-    return '1 copo de água';
+  if (count > 1) {
+    return `${count} copos de água`;
   }
-  return `${count} copos de água`;
+  return `${count} copo de água`;
 }
-console.log(hydrate('1 cerveja, 5 doses de whiskey, 7 doses '));
+
+// Referências
+// https://www.freecodecamp.org/news/15-useful-javascript-examples-of-map-reduce-and-filter-74cbbb5e0a1f/
+// https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
 
 module.exports = {
   generatePhoneNumber,
