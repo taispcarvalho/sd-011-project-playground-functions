@@ -7,7 +7,7 @@ function techList(lista, nameName) {
       tech: lista[index],
       name: nameName,
     };
-      list.push(object);
+    list.push(object);
   }
 
   if (lista.length === 0) {
