@@ -51,10 +51,11 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz() {
 
-  // Desafio 9
+// Desafio 9
 function encode() {
-  // seu código aqui
+
 }
+
 function decode() {
   // seu código aqui
 }
@@ -70,4 +71,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
