@@ -27,11 +27,8 @@ function concatName(string) {
   // seu código aqui
   let first = string.shift();
   let last = string.pop();
-  let concat = `${first}, ${last}`;
-  return concat;
+  return `${first}, ${last}`;
 }
-let string = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-concatName(string);
 // Desafio 5
 function footballPoints() {
   // seu código aqui
