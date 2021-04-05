@@ -1,24 +1,3 @@
-// Desafio 10
-function techList(techs, name) {
-  if (techs.length === 0) {
-    return 'Vazio!';
-  }
-
-  techs = techs.sort();
-  let newList = [];
-
-  for (let index = 0; index < techs.length; index += 1) {
-    newList.push({
-      tech: techs[index],
-      name,
-    });
-  }
-  return newList;
-}
-
-
-
-// Desafio 11
 function checkRepeated(param1) {
   let countrepeated = 0;
   let result = 0;
@@ -52,37 +31,4 @@ function generatePhoneNumber(numbers) {
   return result;
 }
 
-// Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  let result;
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
-    result = true;
-  } else {
-    result = false;
-  }
-  return result;
-}
-
-// Desafio 13
-function hydrate(param1) {
-  let reg = /\d+/g;
-  let cupsOfWater = param1.match(reg);
-  let sumResult = 0;
-  let result;
-  for (let index = 0; index < cupsOfWater.length; index += 1) {
-    sumResult += parseInt(cupsOfWater[index]);
-  }
-  if (sumResult > 1) {
-    result = `${sumResult} copos de água`;
-  } else {
-    result = `${sumResult} copo de água`;
-  }
-  return result;
-}
-
-module.exports = {
-  generatePhoneNumber,
-  techList,
-  hydrate,
-  triangleCheck,
-};
+console.log(generatePhoneNumber([0, 21, 3, 4, 14, 2, 7, 8, 19, 9, 4]));
