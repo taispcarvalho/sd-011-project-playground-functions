@@ -99,7 +99,7 @@ function sideSize(lineA, lineB, lineC) {
 }
 function triangleCheck(lineA, lineB, lineC) {
   let condition2 = false;
-  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) 
+  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC)
   && lineC > Math.abs(lineB - lineA)) {
     condition2 = true;
   }
