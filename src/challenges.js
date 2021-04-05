@@ -2,9 +2,8 @@
 function compareTrue(param1, param2) {
   if (param1 && param2 === true) {
     return true;
-  } else {
-    return false;
   }
+    return false;
 }
 
 console.log(compareTrue(true, false));
@@ -44,7 +43,6 @@ console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount(arrayNumbers) {
-  //Maior numero
   let currentNum = arrayNumbers[0];
   for (let index = 1; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] > currentNum) {
@@ -54,7 +52,7 @@ function highestCount(arrayNumbers) {
   let repetHigherNum = 0;
   for (let index2 = 0; index2 < arrayNumbers.length; index2 += 1) {
     if (arrayNumbers[index2] === currentNum) {
-      repetHigherNum = repetHigherNum += 1;
+      repetHigherNum += 1;
     }
   }
   return repetHigherNum;
@@ -100,22 +98,22 @@ function encode(lowercaseVowels) {
   for (let index = 0; index < lowercaseVowels.length; index += 1) {
     switch (lowercaseVowels[index]) {
     case 'a':
-      fraseEncode = fraseEncode + '1';
+      fraseEncode += '1';
       break;
     case 'e':
-      fraseEncode = fraseEncode + '2';
+      fraseEncode += '2';
       break;
     case 'i':
-      fraseEncode = fraseEncode + '3';
+      fraseEncode += '3';
       break;
     case 'o':
-      fraseEncode = fraseEncode + '4';
+      fraseEncode += '4';
       break;
     case 'u':
-      fraseEncode = fraseEncode + '5';
+      fraseEncode += '5';
       break;
     default:
-      fraseEncode = fraseEncode + lowercaseVowels[index];
+      fraseEncode += lowercaseVowels[index];
     }
   }
   return fraseEncode;
@@ -126,24 +124,24 @@ console.log(encode('hi there!'));
 function decode(uppercaseVowels) {
   let fraseDecode = [];
   for (let index = 0; index < uppercaseVowels.length; index += 1) {
-  switch (uppercaseVowels[index]) {
+    switch (uppercaseVowels[index]) {
     case '1':
-      fraseDecode = fraseDecode + 'a';
+      fraseDecode += 'a';
       break;
     case '2':
-      fraseDecode = fraseDecode + 'e';
+      fraseDecode += 'e';
       break;
     case '3':
-      fraseDecode = fraseDecode + 'i';
+      fraseDecode += 'i';
       break;
     case '4':
-      fraseDecode = fraseDecode + 'o';
+      fraseDecode += 'o';
       break;
     case '5':
-      fraseDecode = fraseDecode + 'u';
+      fraseDecode += 'u';
       break;
     default:
-      fraseDecode = fraseDecode + uppercaseVowels[index];
+      fraseDecode += uppercaseVowels[index];
     }
   }
   return fraseDecode;

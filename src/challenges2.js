@@ -7,11 +7,11 @@ function techList(techNames, name) {
     console.log(techObject);  
   }
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Gabriela'));
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Gabriela'));
 
 // Desafio 11
-/* function generatePhoneNumber(telNumbers) {
-  if (telNumbers.length === 11 && checkNumbers === false) {
+function generatePhoneNumber(telNumbers) {
+ /*  if (telNumbers.length === 11 && checkNumbers === false) {
     console.log('(' + telNumbers[0] + telNumbers[1] + ') ' + telNumbers[2] + telNumbers[3] + telNumbers[4] + telNumbers[5] + telNumbers[6] + '-' + telNumbers[7] + telNumbers[8] + telNumbers[9] + telNumbers[10]);
   } else if (telNumbers.length !== 11 && checkNumbers === false) {
     console.log('Array com tamanho incorreto.');
@@ -53,7 +53,7 @@ function triangleCheck(lineA, lineB, lineC) {
   } else if (lineA < valorAbsolut || lineB < valorAbsolut || lineC < valorAbsolut) {
     check = false;
   }
-  return check
+  return check;
 }
 
 console.log(triangleCheck(10, 14, 8));
