@@ -105,17 +105,17 @@ function hydrate(string) {
   let m;
   let count = 0;
   let r = /\d+/g;
-  while ((m = r.exec(string)) != null) {
-    let number = parseInt(m[0]);
+  while ((m = r.exec(string)) !== null) {
+    let number = parseInt(m[0], 10);
     count += number;
   }
   if (count === 1) {
     return '1 copo de água';
   }
-  return `${count}|copos de água`;
+  return `${count} copos de água`;
   // https://stackoverflow.com/questions/46858840/unexpected-string-concatenation
 }
-console.log(hydrate('1 cerveja, 3 rums'));
+console.log(hydrate('1 cerveja, 5 rums'));
 
 module.exports = {
   generatePhoneNumber,
