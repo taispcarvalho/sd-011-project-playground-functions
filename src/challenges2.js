@@ -4,22 +4,23 @@
 // Source: https://eslint.org/docs/2.0.0/rules/guard-for-in
 function techList(techs, names) {
   let skills = [];
-  if (techs.length > 0) {
-    for (let index in techs.sort()) {
-      if ({}.hasOwnProperty.call(techs, index)) {
-        skills[index] = {
-          tech: techs[index],
-          name: names,
-        };
-      }
+  for (let index in techs.sort()) {
+    if ({}.hasOwnProperty.call(techs, index)) {
+      skills[index] = {
+        tech: techs[index],
+        name: names,
+      };
     }
-  } else return 'Vazio!';
+  }
+  if (skills.length === 0) {
+    return 'Vazio!';
+  }
   return skills;
 }
+
 // Desafio 11
 // Para conclusão deste desafio eu obtive ajuda de algumas pessoas e artigos.
 // Meus agradecimentos aos amigos: J. Filizzola, Renato Bispo e Vitor Cardoso.
-// ===
 // Créditos ao knoonrx/nove_digitos.js | Seu código que mostra como funciona formatação de números através de Expressões Regulares.
 // Source: https://gist.github.com/knoonrx/a180f0b7e3039e42c621
 // Expressões Regulares | Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
