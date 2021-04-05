@@ -61,15 +61,15 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbersOfArray) {
+function fizzBuzz(arrNum) {
   let arrayFizzBuzz = [];
 
-  for (let index = 0; index < numbersOfArray.length; index += 1) {
-    if ((numbersOfArray[index] % 15 === 0)) {
+  for (let index = 0; index < arrNum.length; index += 1) {
+    if ((arrNum[index] % 15 === 0)) {
       arrayFizzBuzz.push('fizzBuzz');
-    } else if (numbersOfArray[index] % 5 === 0) {
+    } else if (arrNum[index] % 5 === 0) {
       arrayFizzBuzz.push('buzz');
-    } else if (numbersOfArray[index] % 3 === 0) {
+    } else if (arrNum[index] % 3 === 0) {
       arrayFizzBuzz.push('fizz');
     } else {
       arrayFizzBuzz.push('bug!');
