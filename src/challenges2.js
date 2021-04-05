@@ -1,4 +1,4 @@
-// Desafio 10
+/// Desafio 10
 function techList(lista, nameName) {
   let list = [];
   lista.sort();
@@ -16,19 +16,19 @@ function techList(lista, nameName) {
   }
 
   return list;
-  ///https://pt.stackoverflow.com/questions/46600/como-ordenar-uma-array-de-objetos-com-array-sort
+  /// https://pt.stackoverflow.com/questions/46600/como-ordenar-uma-array-de-objetos-com-array-sort
 }
 
 // Desafio 11
 
-// Função auxiliar  - retorna true caso a afirmação seja verdadeira
+/// Função auxiliar  - retorna true caso a afirmação seja verdadeira
 function quantNumbers(numbers) {
   if (numbers.length === 11) {    
     return true;
   }
 }
 
-// Função auxiliar - retorna true caso a condição seja satisfeita
+/// Função auxiliar - retorna true caso a condição seja satisfeita
 function validNumber(numbers) {
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] < 0 || numbers[index] > 9) {
@@ -39,7 +39,7 @@ function validNumber(numbers) {
   return true;
 }
 
-// Função auxiliar - realiza contagem de repetiçãoes - retorna true se tem menos de 2 algarismos repetidos na string
+/// Função auxiliar - realiza contagem de repetiçãoes - retorna true se tem menos de 2 algarismos repetidos na string
 function repetition(numbers) {
   let cont = 0;
   for (let index2 of numbers) {
@@ -53,13 +53,13 @@ function repetition(numbers) {
       return false;
     }
 
-    cont = 0; // zera contagem apos o segundo for comparar todos index com o index 2 e assim sucessivamente
+    cont = 0; /// zera contagem apos o segundo for comparar todos index com o index 2 e assim sucessivamente
   }
 
   return true;
 }
 
-// Função auxiliar - Adicionando parenteses na string com splice
+/// Função auxiliar - Adicionando parenteses na string com splice
 function phoneOrganizer(numbers) {
   numbers.splice(0, 0, '(');
   numbers.splice(3, 0, ') ');
@@ -67,7 +67,7 @@ function phoneOrganizer(numbers) {
   return numbers.join('');
 }
 
-// Função original
+/// Função original
 function generatePhoneNumber(numbers) {
   if (!quantNumbers(numbers)) {
     return 'Array com tamanho incorreto.';
@@ -80,39 +80,40 @@ function generatePhoneNumber(numbers) {
   return phoneOrganizer(numbers);
 }
 
-// Desafio 12
-// Função auxiliar
+/// Desafio 12
+/// Função auxiliar
 function sumFace(lineA, lineB, lineC) {
-  if (lineA + lineB > lineC) {
-    return true;
+  if (lineA + lineB < lineC) {
+    return false;
   }
 
-  if (lineB + lineC > lineA) {
-    return true;
+  if (lineB + lineC < lineA) {
+    return false;
   }
 
-  if (lineA + lineC > lineB) {
-    return true;
+  if (lineA + lineC < lineB) {
+    return false;
   }
 
-  return false;
+  return true;
 }
 
-//Função auxiliar
+/// Função auxiliar
 function diFace(lineA, lineB, lineC) {
-  if (Math.abs(lineA - lineB) < lineC) {
-    return true;
+  let score = 0;
+  if (Math.abs(lineA - lineB) > lineC) {
+    return false;
   }
 
-  if (Math.abs(lineB - lineC) < lineA) {
-    return true;
+  if (Math.abs(lineB - lineC) > lineA) {
+    return false;
   }
 
-  if (Math.abs(lineA - lineC) < lineB) {
-    return true;
+  if (Math.abs(lineA - lineC) > lineB) {
+    return false;
   }
 
-  return false;
+  return true;
 }
 
 function triangleCheck(lineA, lineB, lineC) {
@@ -122,6 +123,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
   return true;
 }
+console.log(triangleCheck(10, 13, 2));
 
 // Desafio 13
 function hydrate() {
