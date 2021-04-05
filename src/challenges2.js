@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(list, codiname) {
   for (index = 0; index < list.length; index += 1) {
-    return {
+    return  objeto = {
       tech: list,
       name: codiname,
     };

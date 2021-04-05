@@ -16,8 +16,11 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-}
+function concatName(listName) {
+  let ultimo = listName.slice(listName.length, listName.length);
+  let primeiro = listName.slice(0, 0);
+  return ultimo.concat(primeiro);
+} console.log(concatName);
 
 // Desafio 5
 function footballPoints(wins, ties) {
