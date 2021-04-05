@@ -9,8 +9,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-// Consultei a documentação de W3Schools sobre método .split() para resolução deste problema.
-// Link: https://www.w3schools.com/jsref/jsref_split.asp
+/** Consultei a documentação de W3Schools sobre método .split() para resolução deste problema. */
+/** Source: https://www.w3schools.com/jsref/jsref_split.asp */
 function splitSentence(string) {
   return string.split(' ');
 }
@@ -26,9 +26,9 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-//* Obtive a ajuda do colega Renato Bispo para entender melhor a refatoração das funções. Imensamente agradecido!
-//* A forma de fazer o if feita nas funções foi retirada de DevMedia.com.br
-//* Source: https://www.devmedia.com.br/javascript-estrutura-condicional-if/40611#:~:text=A%20estrutura%20condicional%20if%20permite,uma%20determinada%20condi%C3%A7%C3%A3o%20for%20verdadeira.&text=Nesse%20exemplo%2C%20a%20instru%C3%A7%C3%A3o%20console,preco%20for%20maior%20que%20100.
+/** Obtive a ajuda do colega Renato Bispo para entender melhor a refatoração das funções. Imensamente agradecido! */
+/** A forma de fazer o if feita nas funções foi retirada de DevMedia.com.br */
+/** Source: https://www.devmedia.com.br/javascript-estrutura-condicional-if/40611#:~:text=A%20estrutura%20condicional%20if%20permite,uma%20determinada%20condi%C3%A7%C3%A3o%20for%20verdadeira.&text=Nesse%20exemplo%2C%20a%20instru%C3%A7%C3%A3o%20console,preco%20for%20maior%20que%20100 */
 function maxCount(numbers) {
   let highestNumber = 0;
   for (let arrayCount = 0; arrayCount < numbers.length; arrayCount += 1) {
@@ -47,8 +47,8 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-// Para tratar os números contidos nos parâmentros, foi utilizada a função Math.abs()
-// Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+/** Para tratar os números contidos nos parâmentros, foi utilizada a função Math.abs() */
+/** Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs */
 function catAndMouse(mouse, cat1, cat2) {
   let result;
   let distance1 = Math.abs(cat1 - mouse);
@@ -60,21 +60,28 @@ function catAndMouse(mouse, cat1, cat2) {
 
   return result;
 }
-// Desafio 8 //FALTA AJEITAR O LINT
+// Desafio 8
+/** Agradecimentos ao queriado colega Filizzola, que me ajudou a refatorar o código para que o mesmo passasse nos testes do ESLint! */
 function fizzBuzz(array) {
   let arrayResult = [];
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0) arrayResult[index] = 'fizz';
-    if (array[index] % 5 === 0) arrayResult[index] = 'buzz';
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) arrayResult[index] = 'fizzBuzz';
-    if (array[index] % 3 !== 0 && array[index] % 5 !== 0) arrayResult[index] = 'bug!';
+    let mult3 = array[index] % 3 === 0;
+    let mult5 = array[index] % 5 === 0;
+    arrayResult[index] = 'bug!';
+    if (array[index] % 15 === 0) {
+      arrayResult[index] = 'fizzBuzz';
+    } else if (mult3) {
+      arrayResult[index] = 'fizz';
+    } else if (mult5) {
+      arrayResult[index] = 'buzz';
+    }
   }
   return arrayResult;
 }
 
 // Desafio 9
-// Foi verificada a informação no site DevMedia sobre o funcionamento da função .replace()
-// Source: https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
+/** Foi verificada a informação no site DevMedia sobre o funcionamento da função .replace() */
+/** Source: https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176 */
 function encode(phrase) {
   for (let index = 0; index < phrase.length; index += 1) {
     phrase = phrase.replace('a', '1');
