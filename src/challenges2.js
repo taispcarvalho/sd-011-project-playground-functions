@@ -30,8 +30,8 @@ function repeats(numbers, array) {
 
 function arrayNumber(array) {
   let number = true;
-  for (let secondIndex = 0; secondIndex < array.length; secondIndex += 1) {
-    if (array[secondIndex] < 0 || array[secondIndex] > 9 || repeats(array[secondIndex], array) >= 3) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] < 0 || array[index] > 9 || repeats(array[index], array) >= 3) {
       number = false;
     }
   }
@@ -66,8 +66,8 @@ function triangleCheck(lineA, lineB, lineC) {
   if (Math.abs(lineA) < lineC - lineB || Math.abs(lineB) < lineC - lineA || Math.abs(lineC) < lineB - lineA) {
     return false;
   }
-    return true;
-  }
+  return true;
+}
 
 console.log(triangleCheck(10, 14, 8));
 
