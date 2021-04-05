@@ -49,14 +49,16 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(entrada) {
   let numerico = [];
   for (let index in entrada) {
-    if (entrada[index] % 3 === 0) {
-      return numerico.push('fizz');
-    } if (entrada[index] % 5 === 0) {
-      return numerico.push('buzz');
-    } if (entrada[index] % 15 === 0) {
-      return numerico.push('fizzBuzz');
-    } else return numerico.push('bug!');
-  }
+    if (entrada[index] % 15 === 0) {
+      numerico.push('fizzBuzz');
+    } else if (entrada[index] % 5 === 0) {
+      numerico.push('buzz');
+    } else if (entrada[index] % 3 === 0) {
+      numerico.push('fizz');
+    } else {
+      numerico.push('bug!');
+    }
+  } return numerico;
 }
 
 // Desafio 9
