@@ -68,24 +68,24 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 
 function fiBu(fb) {
-  if (fb % 3 == 0 && fb % 5 == 0) {
+  if (fb % 3 === 0 && fb % 5 === 0) {
     return 'fizzBuzz';
   }
 }
 
 function fizz(fz) {
-  if (fz % 3 == 0) {
+  if (fz % 3 === 0) {
     return 'fizz';
   }
 }
 
-function buzz(bz) {  
-  if (bz % 5 == 0) {
+function buzz(bz) {
+  if (bz % 5 === 0) {
     return 'buzz';
   }
 }
 
-function bug(bg) {   
+function bug(bg) {
   if (bg % 3 !== 0 && bg % 5 !== 0) {
     return 'bug!';
   }
