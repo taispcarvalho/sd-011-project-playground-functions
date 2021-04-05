@@ -97,13 +97,59 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encodeChar(character) {
+  let code = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  let encodedChar;
+  if (code[character] === undefined) {
+    encodedChar = character;
+  } else {
+    encodedChar = code[character];
+  }
+  return encodedChar;
 }
+// console.log(encodeChar('a'));
 
-function decode() {
-  // seu código aqui
+function encode(string) {
+  let encodedString = '';
+  for (let character of string) {
+    encodedString += encodeChar(character);
+  }
+  return encodedString;
 }
+console.log(encode('hi there!'));
+
+function decodeChar(character) {
+  let code = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let decodedChar;
+  if (code[character] === undefined) {
+    decodedChar = character;
+  } else {
+    decodedChar = code[character];
+  }
+  return decodedChar;
+}
+// console.log(decodeChar(1));
+
+function decode(string) {
+  let decodedString = '';
+  for (let character of string) {
+    decodedString += decodeChar(character);
+  }
+  return decodedString;
+}
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
