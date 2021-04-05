@@ -66,7 +66,7 @@ function fizzBuzz(arrayFizzBuzz) {
   }
   return arrayString;
 }
-
+ 
 // Desafio 9
 function encode(phase) {
   let phaseLetter = phase.split();
