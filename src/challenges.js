@@ -18,8 +18,10 @@ function splitSentence(palavra) {
 
 // Desafio 4
 
-function concatName(array) {
-  return {array[array.length - 1]} , ${array[0]};
+function concatName(string) {
+  let first = string[0];
+  let last = string[string.length-1]
+  return last + ',' + ' ' + first;
 }
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -67,25 +69,30 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayOfNumbers) {
-  let = fizzArrayStr = [];
 
-  for (let fizziindex = 0; fizziindex < arrayOfNumbers.length; fizziindex += 1) {
-    if (arrayOfNumbers[fizziindex] % 3 === 0 && arrayOfNumbers[fizziindex] % 5 === 0) {
-      fizzArrayStr.push('fizz');
-    } else if (arrayOfNumbers[fizziindex] % 5 === 0) {
-      fizzArrayStr.push('buzz');
-    } else if (arrayOfNumbers[fizziindex] % 3 === 0) {
-      fizzArrayStr.push('fizzBuzz');
+function secondFizzBuzz(numbers) {
+    let text = 0;
+    if (numbers % 15 === 0) {
+      text = 'fizzBuzz';
+    } else if (numbers % 3 === 0) {
+      text = 'fizz';
+    } else if (numbers % 5 === 0) {
+      text = 'buzz';
     } else {
-      fizzArrayStr.push('bug');
+      text = ('bug');
     }
-  }
-  return fizzArrayStr;
+    return text;
 }
 
-let arrayOfNumbers = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(arrayOfNumbers));
+function fizzBuzz(array) {
+  let result = [];
+  for (let index = 0; index < array.length; index += 1) {
+
+    result.push (secondFizzBuzz(array[index]));
+  }
+  return result;
+}
+
 
 // Desafio 9
 function encode() {
