@@ -76,17 +76,20 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(sequencia) {
-  let output;
   for (let index = 0; index < sequencia.length; index += 1) {
+  // usando o for ... in foi https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in
+  for (let index in sequencia) {
     if (sequencia[index] % 15 === 0) {
-      output('fizzBuzz');
+      sequencia[index] = 'fizzBuzz';
     } else if (sequencia[index] % 3 === 0) {
-      output.push('fizz');
+      sequencia[index] = 'fizz';
     } else if (sequencia[index] % 5 === 0) {
-      output.push('fizz');
+      sequencia[index] = 'buzz';
+    } else {
+      sequencia[index] = 'bug!';
     }
   }
-  return 'bug!';
+  return sequencia;
 }
 
 // Desafio 9
