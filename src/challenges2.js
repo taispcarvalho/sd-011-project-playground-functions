@@ -5,18 +5,14 @@ function techList(techArray, name) {
   if (techArray.length === 0) {
     return 'Vazio!';
   }
-  for (let index = 0; techArray.length; index += 1) {
+  for (let index = 0; index < techArray.length; index += 1) {
     technologyList.push({
       tech: techArray[index],
       name: name,
     });
   }
-  
   return technologyList;
-  }
-    
-
-  return technologyList;
+}
 
 
 // Desafio 11
