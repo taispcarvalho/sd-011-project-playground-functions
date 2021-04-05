@@ -1,3 +1,5 @@
+const { ESLint } = require("eslint");
+
 // Desafio 1
 function compareTrue(number, number2) {
   return number && number2 === true;
@@ -56,9 +58,23 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(0, 6, 6));
 
 // Desafio 8
+
 function fizzBuzz() {
-  for (let i = 0; )
+  let numeros  = [2, 15, 7, 9, 45];
+  for (let index = 0; index < numeros.length; index ++) {
+    
+    if ((numeros[index] % 3) === 0 && ((numeros[index] % 5) === 0)) {
+      console.log(numeros[index],'fizzBuzz');
+    }else if ((numeros[index] % 3) === 0 ) {
+      console.log(numeros[index],'fizz');
+    }else if ((numeros[index] % 5) === 0 ) {
+      console.log(numeros[index],'buzz');  
+    }else if ((numeros[index] % 5) != 0 && ((numeros[index] % 5) != 0)) {
+      console.log(numeros[index],'bug');  
+    }
+  }        
 }
+fizzBuzz();
 
 // Desafio 9
 function encode() {
