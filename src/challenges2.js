@@ -104,8 +104,15 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// Font: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+// Aprofundar: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
+function hydrate(string) {
+  let numbers = string.match(/\d+/g).map(Number);
+  let glassOfWater = 0;
+  for (let number of numbers) {
+    glassOfWater += number;
+  }
+  return `${glassOfWater} copos de água`;
 }
 
 module.exports = {
