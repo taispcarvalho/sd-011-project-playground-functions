@@ -30,7 +30,7 @@ console.log(splitSentence(string))
 
 // Desafio 4
 function concatName(param) {
-  let newArray = [param[param.length-1] + ', ' + param[0]];
+  let newArray = param[param.length-1]+', '+param[0];
   return newArray;
 }
 
