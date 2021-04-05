@@ -43,25 +43,26 @@ function catAndMouse(mouse, cat1, cat2) {
     return ('cat2');
   }
 }
-function troca(codificado, index) {
-  if (numeros[index] % 15 === 0) {
-    codificado.push('fizzBuzz');
-  } else if (numeros[index] % 3 === 0) {
-    codificado.push('fizz');
-  } else if (numeros[index] % 5 === 0) {
-    codificado.push('buzz');
-  } else {
-    codificado.push('bug!');
+function troca(numero) {
+  if (numero % 15 === 0) {
+    return "fizzBuzz";
   }
+  if (numero % 3 === 0) {
+    return "fizz";
+  } 
+  if (numero % 5 === 0) {
+    return "buzz";
+  } 
+  return 'bug!';
 }
 function fizzBuzz(numeros) {
   let codificado = [];
   for (let index = 0; index <= numeros.length - 1; index += 1) {
-    troca(codificado,   index);
+    codificado.push(troca(numeros[index]));
   }
   return (codificado);
 }
-function encode(frase) {
+  function encode(frase) {
   frase = frase.replace(/a/g, 1);
   frase = frase.replace(/e/g, 2);
   frase = frase.replace(/i/g, 3);
