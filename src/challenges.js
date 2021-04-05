@@ -31,19 +31,6 @@ console.log(footballPoints(14, 8));
 
 // Desafio 6
 // Ajuda do aluno Luiz Wendel, que demonstrou com muita sapiência que uma função nao consegue chamar uma varável contida em função, e que pra isso era necessario nomear uma variável com o retorno da funcao para dai, sim, a mesma ser usado na funcao desejada.
-function highestCount(numbers) {
-  let ammount = 0;
-  let highestNumber = 0;
-  let highest = 0;
-  highest = highestNumber(numbers);
-  for (let index2 = 0; index2 < numbers.length; index2 += 1) {
-    if (highest === (numbers[index2])) {
-      ammount += 1;
-    }
-  }
-  return ammount;
-}
-
 function highestNumber(numbers) {
   let storeHigher = 0;
   if (numbers[0] > numbers[1]) {
@@ -55,7 +42,20 @@ function highestNumber(numbers) {
     if (storeHigher < numbers[index]) {
       storeHigher = numbers[index];
     }
-  } return storeHigher;
+  } 
+  return storeHigher;
+}
+
+function highestCount(numbers) {
+  let ammount = 0;
+  let highest = 0;
+  highest = highestNumber(numbers);
+  for (let index2 = 0; index2 < numbers.length; index2 += 1) {
+    if (highest === (numbers[index2])) {
+      ammount += 1;
+    }
+  }
+  return ammount;
 }
 console.log(highestCount([1, 2, 7, 23, 23, 23, 5, 7, 11]));
 
@@ -65,9 +65,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
-  } else {
-    return 'cat2';
-  }
+  } 
+  return 'cat2';
 }
 console.log(catAndMouse([100, 104, 103]));
 
