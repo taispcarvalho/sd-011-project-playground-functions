@@ -8,16 +8,17 @@ function calcArea(base, height) {
   return area;
 }
 // Desafio 3
-let myString = 'go trybe';
 function splitSentence(myString) {
   myString = myString.split(' ');
   return myString;
 }
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let myArray = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+function concatName(myArray) {
+  let firstIten = myArray[0];
+  let lastIten = myArray[myArray.length-1];
+  let newArray = `${lastIten}, ${firstIten}`;
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
