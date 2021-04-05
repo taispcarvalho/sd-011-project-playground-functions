@@ -18,9 +18,6 @@ function techList(array, name) {
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Alan'));
 
 // Desafio 11
-function arraySize(array) {
-
-
 function repeats(numbers, array) {
   let count = 0;
   for (let thirdIndex = 0; thirdIndex < array.length; thirdIndex += 1) {
@@ -69,8 +66,8 @@ function triangleCheck(lineA, lineB, lineC) {
   if (Math.abs(lineA) < lineC - lineB || Math.abs(lineB) < lineC - lineA || Math.abs(lineC) < lineB - lineA) {
     return false;
   }
-  return true;
-}
+    return true;
+  }
 
 console.log(triangleCheck(10, 14, 8));
 
