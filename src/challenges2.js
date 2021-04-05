@@ -90,14 +90,19 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  let isTriangle = false;
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)
-  && lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)
-  && lineC < lineB + lineA && lineC > Math.abs(lineB - lineA)) {
-    isTriangle = true;
+function sideSize (lineA, lineB, lineC) {
+  let condition1 = false
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
+    condition1 = true
   }
-  return isTriangle;
+  return condition1
+}
+function triangleCheck (lineA, lineB, lineC) {
+  let condition2 = false
+  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineB - lineA)) {
+    condition2 = true
+  }
+  return condition2 && sideSize (lineA, lineB, lineC)
 }
 
 // Desafio 13
