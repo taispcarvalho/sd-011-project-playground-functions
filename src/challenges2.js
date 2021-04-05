@@ -16,18 +16,20 @@ function techList(techName, devName) {
   }
   return technologies;
 }
-
 console.log(techList(['Java', 'Js'], ['Roge']));
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
+    return true;
+  }
+  return false;
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
