@@ -30,7 +30,8 @@ function concatName(array) {
   let newArray = array.shift();
   let arrayReverse = array.reverse();
   let newArray2 = arrayReverse.shift();
-  return newArray2 + ', ' + newArray;
+  let completeArray = newArray2 + ', ' + newArray
+  return completeArray;
 }
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -77,7 +78,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (distanceCat2 < distanceCat1) {
     return 'cat2';
-  } else {
+  } else if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -117,6 +118,7 @@ console.log(fizzBuzz([9, 25]));
 // Desafio 9
 function encode(string) {
   let encodedMessage = '';
+
   for (let index = 0; index < string.length; index += 1) {
     if (string[index].toLowerCase() === string[index]) {
       switch (string[index]) {
