@@ -73,20 +73,20 @@ function catAndMouse(mouse, cat1, cat2) {
 function secondFizzBuzz(numbers) {
   let text = 0;
   if (numbers % 15 === 0) {
-    text = 'fizzBuzz';
+    text = "fizzBuzz";
   } else if (numbers % 3 === 0) {
-    text = 'fizz';
+    text = "fizz";
   } else if (numbers % 5 === 0) {
-    text = 'buzz';
+    text = "buzz";
   } else {
-    text = ('bug');
+    text = ("bug!");
   }
   return text;
 }
 
 function fizzBuzz(array) {
   let result = [];
-  for(let index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
 
     result.push(secondFizzBuzz(array[index]));
   }
