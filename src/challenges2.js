@@ -104,23 +104,23 @@ function generatePhoneNumber(array) {
     return msgLength;
   } else if (errorNumber(array) || repeatedNumber(array)) {
     return msgNumber;
+  } else {
+    let phoneNumber = '(';
+    phoneNumber += array[0];
+    phoneNumber += array[1];
+    phoneNumber += ') ';
+    phoneNumber += array[2];
+    phoneNumber += array[3];
+    phoneNumber += array[4];
+    phoneNumber += array[5];
+    phoneNumber += array[6];
+    phoneNumber += '-';
+    phoneNumber += array[7];
+    phoneNumber += array[8];
+    phoneNumber += array[9];
+    phoneNumber += array[10];
+    return phoneNumber;
   }
-  let phoneNumber = '(';
-  phoneNumber += array[0];
-  phoneNumber += array[1];
-  phoneNumber += ') ';
-  phoneNumber += array[2];
-  phoneNumber += array[3];
-  phoneNumber += array[4];
-  phoneNumber += array[5];
-  phoneNumber += array[6];
-  phoneNumber += '-';
-  phoneNumber += array[7];
-  phoneNumber += array[8];
-  phoneNumber += array[9];
-  phoneNumber += array[10];
-  return phoneNumber;
-
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1])); // Menor que zero.
@@ -141,18 +141,14 @@ console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // Retornar
  Retorne true quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas */
 function triangleCheck(lineA, lineB, lineC) {
   let sumLineA = lineB + lineC;
-  let sumLineB = lineC + lineA;
-  let sumLineC = lineA + lineB;
-
   let subLineA = Math.abs(lineB - lineC);
-  let subLineB = Math.abs(lineC - lineA);
-  let subLineC = Math.abs(lineA - lineB);
-
-  if (lineA < sumLineA || lineB < sumLineB || lineC < sumLineC || lineA > subLineA || lineB > subLineB || lineC > subLineC) {
-    return true;
+  let value = false;
+  if (lineA < sumLineA || lineA < subLineA ) {
+    value = true;
   }
+  return value;
 }
-console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(10,14,800));
 
 // Desafio 13
 /* Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
@@ -198,9 +194,9 @@ function hydrate(string) {
     return `${drinkSum} copos de água`;
   }
 }
-/* console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
-console.log(hydrate('1 cachaça, 5 copos de vinho '));
-console.log(hydrate('1 cerveja')); */
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+ console.log(hydrate('1 cachaça, 5 copos de vinho '));
+ console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
