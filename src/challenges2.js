@@ -1,12 +1,16 @@
 // Desafio 10
 function techList(list, codiname) {
-  for (index = 0; index < list.length; index += 1) {
-    return  objeto = {
-      tech: list,
-      name: codiname,
-    };
+  if (list.length === 0) {
+    return 'Vazio!';
   }
-} console.log(techList);
+  let objeto = [];
+  for (let index = 0; index < list.length; index += 1) {
+    objeto.push = ({
+      tech: list[index],
+      name: codiname,
+    });
+  } return objeto;
+}
 
 // Desafio 11
 function generatePhoneNumber() {
