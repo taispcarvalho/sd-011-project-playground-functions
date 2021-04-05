@@ -56,8 +56,8 @@ function highestCount(listNumbers) {
   let appearNumber = 0;
   for (let index = 0; index < listNumbers.lenght; index += 1) {
     if (listNumbers[index] === highestNumber) {
-      appearNumber = appearNumber +1;
-      }
+      appearNumber = appearNumber + 1;
+    }
   }
   return appearNumber;
 }
@@ -67,9 +67,23 @@ console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let positionCat1 = Math.abs(cat1 - mouse);
+  let positionCat2 = Math.abs(cat2 - mouse);
+
+  if (positionCat1 === positionCat2) {
+    return 'Os gatos trombam e o rato foge'
+  }
+  
+  if (positionCat1 > positionCat2) {
+    return 'Cat2';
+  }
+
+  return 'Cat1'
 }
+console.log(catAndMouse(0, 3, 2));
+console.log(catAndMouse(0, 6, 12));
+console.log(catAndMouse(0, 6, -6));
 
 // Desafio 8
 function fizzBuzz() {
