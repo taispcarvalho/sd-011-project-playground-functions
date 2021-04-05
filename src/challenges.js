@@ -67,7 +67,7 @@ function fizzBuzz(numArray) {
     } else if (element % 3 === 0 && element % 5 === 0) {
       result[element].push = 'fizzBuzz';
 
-    } else (element % 3 >= 1 && element % 5 >= 1) {
+    } else {
       result[element].push = 'bug!'
 
     }
