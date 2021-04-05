@@ -76,21 +76,16 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(sequencia) {
-  let output;
+  let output = [];
   for (let index = 0; index < sequencia.length; index += 1) {
-    switch (sequencia[index]) {
-    case sequencia[index] % 15 === 0:
-      output.push('FizzBuzz');
-      break;
-    case sequencia[index] % 3 === 0:
+    if (sequencia[index] % 15 === 0) {
+      output.push('fizzBuzz');
+    } else if (sequencia[index] % 3 === 0) {
       output.push('fizz');
-      break;
-    case sequencia[index] % 5 === 0:
+    } else if (sequencia[index] % 5 === 0) {
       output.push('buzz');
-      break;
-    default:
+    } else {
       output.push('bug!');
-      break;
     }
   }
   return output;
