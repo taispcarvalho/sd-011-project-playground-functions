@@ -8,10 +8,10 @@ function calcArea(base, height) {
   return area;
 }
 // Desafio 3
-let myString = 'go trybe';
+myString = 'go trybe';
 function splitSentence(myString) {
-  myString = myString.split(" ");
-  return myString;
+  myString = myString.split(' ');
+    return myString;
 }
 splitSentence(myString);
 // Desafio 4
