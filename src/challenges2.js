@@ -60,16 +60,16 @@ ${numbers[10]}`;
 
 // Desafio 12
 function triangleCheck(linhaA, linhaB, linhaC) {
-  let resultadoAB = Math.abs(linhaA + linhaB);
-  let resultadoAC = Math.abs(linhaA + linhaC);
-  let resultadoCB = Math.abs(linhaC + linhaB);
+  let resultadoAB = linhaA + linhaB;
+  let resultadoAC = linhaA + linhaC;
+  let resultadoCB = linhaC + linhaB;
   let diferencaA = Math.abs(linhaC - linhaB);
   let diferencaB = Math.abs(linhaA - linhaC);
   let diferencaC = Math.abs(linhaA - linhaB);
 
   if ((linhaA < resultadoCB && linhaA > diferencaA)
     || (linhaB < resultadoAC && linhaB > diferencaB)
-    || (linhaC < resultadoAB && linhaB > diferencaC)) {
+    || (linhaC < resultadoAB && linhaC > diferencaC)) {
     return true;
   }
   return false;
