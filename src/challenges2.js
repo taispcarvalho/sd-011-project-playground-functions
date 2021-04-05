@@ -10,7 +10,7 @@ function techList(array, name) {
     })
   }
 
-  return JSON.stringify(arrayTech, null, 3)
+  return arrayTech
 }
 
 // Desafio 11
