@@ -45,14 +45,12 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   }
   return 'cat2';
-
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let results = [];
   for (let index = 0; index < numbers.length; index += 1) {
-
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       results.push('fizzBuzz');
     }
