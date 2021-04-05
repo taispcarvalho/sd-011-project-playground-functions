@@ -90,19 +90,20 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function sideSize (lineA, lineB, lineC) {
-  let condition1 = false
+function sideSize(lineA, lineB, lineC) {
+  let condition1 = false;
   if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
-    condition1 = true
+    condition1 = true;
   }
-  return condition1
+  return condition1;
 }
-function triangleCheck (lineA, lineB, lineC) {
-  let condition2 = false
-  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineB - lineA)) {
-    condition2 = true
+function triangleCheck(lineA, lineB, lineC) {
+  let condition2 = false;
+  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) 
+  && lineC > Math.abs(lineB - lineA)) {
+    condition2 = true;
   }
-  return condition2 && sideSize (lineA, lineB, lineC)
+  return condition2 && sideSize(lineA, lineB, lineC);
 }
 
 // Desafio 13
