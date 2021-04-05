@@ -1,7 +1,12 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(list, codiname) {
+  for (index = 0; index < list.length; index += 1) {
+    return {
+      tech: list,
+      name: codiname,
+    };
+  }
+} console.log(techList);
 
 // Desafio 11
 function generatePhoneNumber() {
