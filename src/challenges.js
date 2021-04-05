@@ -95,7 +95,7 @@ function fizzBuzz(numArray) {
 
 // part of Desafio 9
 function encrypt(tempString, keyValue) {
-  for (let index in tempString) {
+  for (let index = 0; index < tempString.length; index += 1) {
     for (let letter in keyValue) {
       if (tempString[index] === letter) {
         tempString[index] = keyValue[letter];
@@ -115,7 +115,7 @@ function encode(string) {
 
 // part of Desafio 9
 function decrypt(tempString, keyValue) {
-  for (let index in tempString) {
+  for (let index = 0; index < tempString.length; index += 1) {
     for (let letter in keyValue) {
       if (tempString[index] === keyValue[letter]) {
         tempString[index] = letter;
