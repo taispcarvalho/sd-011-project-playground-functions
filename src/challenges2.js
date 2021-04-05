@@ -20,6 +20,9 @@ function orderList(arrayOfObjects) {
 }
 
 function techList(array, name) {
+  if (array.length === 0){
+    return 'Vazio!';
+  }
   let techObjects = [];
   for (let tech of array) {
     let newObject = { tech, name };
