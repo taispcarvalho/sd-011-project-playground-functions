@@ -17,7 +17,7 @@ function splitSentence(frase) {
   return arrayFrase;
 }
 
-// Desafio 4 - ok - verificar
+// Desafio 4 - ok
 function concatName(array) {
   let nome = array[0];
   let ultimoNome = array[array.length - 1];
@@ -34,7 +34,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6 - ok - verificar
 function highestCount(array) {
-  let maiorNumero = 0;
+  let maiorNumero = array[0];
   let numeroRepetido = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] > maiorNumero) {
@@ -49,7 +49,7 @@ function highestCount(array) {
   return numeroRepetido;
 }
 
-// Desafio 7 - ok -refatorar
+// Desafio 7 - ok
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaMouseCat1 = Math.abs(mouse - cat1);
   let distanciaMouseCat2 = Math.abs(mouse - cat2);
@@ -65,11 +65,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let arrayResultado = [];
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
+    if (array[index] % 3 === 0) {
       arrayResultado.push('fizz');
-    } else if (array[index] % 5 === 0 && array[index] % 3 !== 0) {
+    } else if (array[index] % 5 === 0) {
       arrayResultado.push('buzz');
-    } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+    } else if (array[index] % 15 === 0) {
       arrayResultado.push('fizzBuzz');
     } else {
       arrayResultado.push('bug!');
@@ -78,7 +78,7 @@ function fizzBuzz(array) {
   return arrayResultado;
 }
 
-// Desafio 9 - ok 
+// Desafio 9 - ok
 function encode(string) {
   let novaString = string.replace(/a/gi, '1')
     .replace(/e/gi, '2')
