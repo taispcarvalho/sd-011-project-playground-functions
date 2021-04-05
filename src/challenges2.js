@@ -10,13 +10,10 @@ function techList(array, name) {
   }
   return newObject;
 }
+console.log(techList());
 // Desafio 11
-function generatePhoneNumber(array) {
-//   return `(${})${array[3]}`;
-// }
-// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]
-// console.log(generatePhoneNumber(numbers));
-
+function generatePhoneNumber() {
+}
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineC < lineA + lineB && lineC > Math.abs(lineB - lineA)) return true;
