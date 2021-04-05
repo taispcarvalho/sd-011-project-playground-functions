@@ -32,8 +32,12 @@ function concatName(names) {
 let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 concatName(names);
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let vitoria = 14;
+  let empate = 8;
+  let score = (vitoria * wins) + (empate * ties);
+  return score;
 }
 
 // Desafio 6
