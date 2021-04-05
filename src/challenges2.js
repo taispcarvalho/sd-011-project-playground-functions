@@ -112,7 +112,7 @@ function hydrate(string) {
   for (let number of numbers) {
     glassOfWater += number;
   }
-  return `${glassOfWater} copos de água`;
+  return glassOfWater > 1 ? `${glassOfWater} copos de água` : `${glassOfWater} copo de água`;
 }
 
 module.exports = {
