@@ -34,14 +34,22 @@ concatName(names);
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let vitoria = 3;
-  let empate = 1;
-  let score = vitoria * wins + empate * ties;
+  let vitoria = 3 * wins;
+  let empate = 1 * ties;
+  let score = vitoria + empate;
   return score;
 }
 // Desafio 6
 function highestCount() {
   // seu código aqui
+  let numeros = [9, 1, 9, 2, 3, 9, 5, 9, 7];
+  let numeroRepetido;
+  let numeroMaior = Math.max(...numeros);
+  for (let index = 0; index < numeros.length; index += 1) {
+    if (numeroMaior === numeros) {
+      numeroMaior = numeroRepetido + 1;
+    }
+  }
 }
 
 // Desafio 7
