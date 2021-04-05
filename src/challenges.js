@@ -52,8 +52,15 @@ function highestCount(numeros) {
   return numeroRepetido;
 }
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distCat01 = cat1 - mouse;
+  let distCat02 = cat2 - mouse;
+  if (distCat01 > distCat02) {
+    return cat1;
+  } if (distCat02 === distCat01) {
+    return 'Os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
