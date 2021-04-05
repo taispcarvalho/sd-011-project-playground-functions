@@ -96,6 +96,7 @@ function hydrate(phrase) {
   }
 }
 
+// Para realização do projeto realizei pesquisas pela documentação w3schools, developer.mozilla.org e estudo plataforma Trybe.
 module.exports = {
   generatePhoneNumber,
   techList,
