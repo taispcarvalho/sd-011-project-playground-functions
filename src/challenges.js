@@ -67,22 +67,26 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let answer = [];
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 === 0) {
-      answer[i] = 'fizz';
-    } else if (array[i] % 5 === 0) {
-      answer[i] = 'buzz';
-    } else {
-      answer[i] = 'bug!';
-    }
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      answer[i] = 'fizzBuzz';
+  obj = {
+    f(a) {
+      let answer = [];
+        for (let i = 0; i < array.length; i += 1) {
+          if (array[i] % 3 === 0) {
+            answer[i] = 'fizz';
+          } else if (array[i] % 5 === 0) {
+            answer[i] = 'buzz';
+          } else {
+            answer[i] = 'bug!';
+          }
+          if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+            answer[i] = 'fizzBuzz';
+          }
+        }
+      return answer;
     }
   }
-  return answer;
+return obj.f(array);
 }
-
 // Desafio 9
 function encode(string) {
   let substituicao = { // Objetos com replace()(Blog da Trybe): https://blog.betrybe.com/javascript/javascript-replace/
