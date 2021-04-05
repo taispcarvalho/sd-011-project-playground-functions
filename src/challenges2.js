@@ -10,7 +10,7 @@ function techList(techNames, name) {
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Gabriela'));
 
 // Desafio 11
-function generatePhoneNumber(telNumbers) {
+/* function generatePhoneNumber(telNumbers) {
   if (telNumbers.length === 11 && checkNumbers === false) {
     console.log('(' + telNumbers[0] + telNumbers[1] + ') ' + telNumbers[2] + telNumbers[3] + telNumbers[4] + telNumbers[5] + telNumbers[6] + '-' + telNumbers[7] + telNumbers[8] + telNumbers[9] + telNumbers[10]);
   } else if (telNumbers.length !== 11 && checkNumbers === false) {
@@ -40,12 +40,23 @@ function checkNumbers(telNumbers) {
 }
 
 console.log(checkNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); */
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let check = 0;
+  let valorAbsolut = Math.abs(lineA - lineB - lineC);
+  if ((lineA < (lineB + lineC) || lineB < (lineA + lineC) || lineC < (lineA + lineB)) && (lineA > valorAbsolut || lineB > valorAbsolut || lineC > valorAbsolut)) {
+    check = true;
+  } else if (lineA > (lineB + lineC) || lineB > (lineA + lineC) || lineC > (lineA + lineB)) {
+    check = false;
+  } else if (lineA < valorAbsolut || lineB < valorAbsolut || lineC < valorAbsolut) {
+    check = false;
+  }
+  return check
 }
+
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
