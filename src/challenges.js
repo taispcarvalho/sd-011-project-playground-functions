@@ -65,17 +65,17 @@ function fizzBuzz(numbers) {
   let phrase = [];
   for (let index = 0; index < numbers.length; index += 1) {
     switch (true) {
-      case (numbers[index] % 15 === 0):
-        phrase.push('fizzBuzz');
-        break;
-      case (numbers[index] % 3 === 0):
-        phrase.push('fizz');
-        break;
-      case (numbers[index] % 5 === 0):
-        phrase.push('buzz');
-        break;
-     default: 
-        phrase.push('bug!');
+    case (numbers[index] % 15 === 0):
+      phrase.push('fizzBuzz');
+      break;
+    case (numbers[index] % 3 === 0):
+      phrase.push('fizz');
+      break;
+    case (numbers[index] % 5 === 0):
+      phrase.push('buzz');
+      break;
+    default: 
+      phrase.push('bug!');
     }
   }
   return phrase;
