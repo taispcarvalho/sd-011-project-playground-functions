@@ -28,8 +28,16 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinkIt) {
+  let drinkReg = drinkIt.replace(/[^0-9]/g, '').split('');
+  let resultCupWater = 0;
+  for (let index = 0; index < drinkReg.length; index += 1) {
+    resultCupWater += parseInt(drinkReg[index], 9);
+  }
+  if (resultCupWater === 1) {
+    return '1 copo de água';
+  }
+  return `${resultCupWater} copos de água`;
 }
 
 module.exports = {
