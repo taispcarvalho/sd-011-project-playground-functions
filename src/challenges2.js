@@ -1,18 +1,18 @@
 // Desafio 10
-function techList(list, codiname) {
-  if (list.length === 0) {
+function techList(array, name) {
+  if (array.length <= 0) {
     return 'Vazio!';
-  }
-  list = list.sort();
-  let objeto = [];
-  for (let index = 0; index < list.length; index += 1) {
-    objeto.push = ({
-      name: codiname,
-      tech: list[index],
+  } let newarray = [];
+  array = array.sort();
+  // eslint-disable-next-line space-infix-ops
+  for (let tech = 0; tech < array.length; tech =+1) {
+    newarray.push({
+      tech: array[tech],
+      // eslint-disable-next-line object-shorthand
+      name: name,
     });
-  } return objeto;
+  } return newarray;
 }
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
