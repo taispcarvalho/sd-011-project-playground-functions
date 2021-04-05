@@ -8,10 +8,10 @@ if (array10.length === 0){
   return ('Vazio!');
 }
 
-else{
-  for (let index = 0; index < array10.length; index +=1){
+else {
+  for (let index = 0; index < array10.length; index +=1 ){
     let object = {
-      tech : array10[index],
+      tech: array10[index],
       name: name
     };
 
@@ -32,12 +32,12 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if(lineA< lineB+ lineC && lineB<lineA+lineC && lineC<lineA+lineB){
-    if(lineA>Math.abs(lineB-lineC) && lineB>Math.abs(lineA-lineC) && lineC>Math.abs(lineA-lineB)){
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB){
+    if(lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)){
      return true; 
     }
   }
-  else{
+  else {
     return false;
   }
 }
@@ -49,10 +49,10 @@ function hydrate(string) {
   
   onlyNumbers(string);
 
-  if(sum === 1){
+  if (sum === 1){
     return sum + ' copo de água';
   }
-  else{
+  else {
     
     return sum + ' copos de água' ;
   }
@@ -61,9 +61,9 @@ function hydrate(string) {
 
 function onlyNumbers(string) 
 { 
-    sum = 0;
+    let sum = 0;
     var numsStr = string.replace(/[^0-9]/g,'');
-    for(let index=0; index < numsStr.length; index +=1){
+    for (let index=0; index < numsStr.length; index +=1 ){
       let n = parseInt(numsStr[index]);
       sum = sum + n;
     }

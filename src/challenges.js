@@ -1,22 +1,22 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if(valor1 == true && valor2 == true){
+  if (valor1 === true && valor2 === true) {
     return true;
   }
-  else{
+  else {
     return false;
   }
-  
-}
-console.log(compareTrue(true,true));
+
+} 
+console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, high) {
   let area = 0;
-  area = (base*high)/2;
+  area = (base * high) / 2;
   return area;
 }
-console.log(calcArea(51,1));
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(sentence) {
@@ -24,13 +24,13 @@ function splitSentence(sentence) {
   return arrayOfStrings;
 }
 
-let string= 'Go Trybe';
+let string = 'Go Trybe';
 
-console.log(splitSentence(string))
+console.log(splitSentence(string));
 
 // Desafio 4
 function concatName(param) {
-  let newArray = param[param.length-1]+', '+param[0];
+  let newArray = param[param.length-1] + ', ' + param[0];
   return newArray;
 }
 
@@ -39,30 +39,31 @@ console.log(concatName(names));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pointsWins=0;
-  let pointsTies=0;
-  pointsWins=wins*3;  
-  pointsTies=ties*1;
-  return totalPoints= pointsTies+pointsWins;
+  let pointsWins = 0;
+  let pointsTies = 0;
+  let totalPoints = 0;
+  pointsWins = wins * 3;  
+  pointsTies = ties * 1;
+  return totalPoints = pointsTies+pointsWins;
 
 }
 
-let numberWins=14;
-let numberTies=8;
+let numberWins = 14;
+let numberTies = 8;
 console.log(footballPoints(numberWins, numberTies));
 
 // Desafio 6
 function highestCount(array) {
-  let maior =0;
+  let maior = 0;
   let contador = 0;
-  for (let index=0; index<array.length; index +=1){
-    if(array[index]>maior){
+  for (let index = 0; index < array.length; index += 1 ){
+    if (array[index] > maior){
       maior = array[index];
     }
   }
-  for (let index2=0; index2<array.length; index2 +=1){
-    if(maior === array[index2]){
-      contador = contador +1;
+  for (let index2=0; index2<array.length; index2 +=1 ){
+    if (maior === array[index2]){
+      contador = contador + 1;
     }
   }
   console.log(maior);
@@ -76,11 +77,11 @@ console.log(highestCount(array6));
 function catAndMouse(mouse, cat1, cat2) {
 
 
-  if(Math.abs(mouse-cat1)< Math.abs(mouse-cat2)){
+  if (Math.abs(mouse-cat1) < Math.abs(mouse-cat2)){
     return "cat1";
   }
 
-  else if(Math.abs(mouse-cat2)< Math.abs(mouse-cat1)){
+  else if (Math.abs(mouse-cat2) < Math.abs(mouse-cat1)){
     return "cat2";
   }
   else {
@@ -89,7 +90,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 let positionMouse = 0;
-let positionCat1 =3;
+let positionCat1 = 3;
 let positionCat2 = 2;
 
 console.log(catAndMouse(positionMouse,positionCat1,positionCat2));
@@ -99,9 +100,9 @@ function fizzBuzz(array){
 
 let concatenatedArray = [];
 
-for (let index = 0; index < array.length; index +=1){
+for (let index = 0; index < array.length; index += 1){
   
-  if(array[index]%3 === 0 && array[index]%5 === 0){
+  if (array[index]%3 === 0 && array[index]%5 === 0){
     concatenatedArray.push('fizzBuzz');
   }
 
