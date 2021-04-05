@@ -81,7 +81,7 @@ console.log(catAndMouse(0, 6, -6));
 // Desafio 8
 function fizzBuzzInfo(arrayNumber) {
   if ((arrayNumber % 3 === 0) && (arrayNumber % 5 === 0)) {
-    return 'fizzbuzz';
+    return 'fizzBuzz';
   }
   if (arrayNumber % 3 === 0) {
     return 'fizz';
