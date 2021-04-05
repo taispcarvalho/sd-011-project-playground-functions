@@ -44,7 +44,7 @@ function highestCount(listaNumeros) {
 highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 function highestNumber(listaNumeros) {
-  let maiorNumero = listaNumeros[0];
+  let maiorNumero = 0;
   for (let index = 1; index < listaNumeros.length; index += 1) {
     if (maiorNumero < listaNumeros[index]) {
       maiorNumero = listaNumeros[index];
@@ -55,10 +55,18 @@ function highestNumber(listaNumeros) {
 highestNumber([9, 1, 2, 3, 9, 5, 7]);
 
 
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (mouse === cat1) {
+    console.log('cat1');
+  } if (mouse === cat2) {
+    console.log('cat2');
+  } else {
+    console.log('os gatos trombam e o rato foge');
+  }
 }
+catAndMouse(10, 20, 20);
 
 // Desafio 8
 function fizzBuzz() {
