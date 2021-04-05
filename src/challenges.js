@@ -1,6 +1,7 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   return value1 && value2;
+  // Oliva ajudou a turma fazendo esse desafio.
   // seu código aqui
 }
 
@@ -84,6 +85,7 @@ function fizzBuzz(array) {
   }
   return retorno;
 }
+// Igor Mendes me ajudou a tirar a complexidade da questão 8.
 
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Igor Mendes [Turma 11], ajudou a tirar a complexidade dessa função.
