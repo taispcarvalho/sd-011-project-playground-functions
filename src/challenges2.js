@@ -66,10 +66,10 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function drinksCounter(drinks) {
-  drinks = drinks.replace(/\D/g, '');
+  drinks = drinks.match(/\d/g, '').map(Number);
   let sum = 0;
   for (let index = 0; index < drinks.length; index += 1) {
-    sum += Number(drinks[index]);
+    sum += drinks[index];
   }
   return sum;
 }
