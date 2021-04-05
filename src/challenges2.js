@@ -107,8 +107,9 @@ function hydrate(string) {
 
   countWaterCoups = countWaterCoups.map((count) => parseInt(count, 10));
 
-  let totalCount = 
-  countWaterCoups.reduce((accumulator, currentValue) => accumulator + currentValue);
+  let totalCount = countWaterCoups.reduce(
+  (accumulator, currentValue) => accumulator + currentValue
+  );
 
   if (totalCount === 1) {
     return '1 copo de água';
