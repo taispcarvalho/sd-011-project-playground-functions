@@ -25,8 +25,8 @@ splitSentence('Go trybe');
 // Desafio 4
 function concatName(string) {
   // seu código aqui
-  let first = string[0];
-  let last = string[string.length - 1];
+  let first = string.shift();
+  let last = string.pop();
   let concat = `${first}, ${last}`;
   return concat;
 }
