@@ -36,7 +36,7 @@ function footballPoints(wins, ties) {
   // seu código aqui
   let vitoria = 14;
   let empate = 8;
-  let score = (vitoria * wins) + (empate * ties);
+  let score = vitoria * wins + empate * ties;
   return score;
 }
 footballPoints(3, 1);
