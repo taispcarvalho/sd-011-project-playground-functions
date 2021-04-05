@@ -39,7 +39,6 @@ function footballPoints(wins, ties) {
   let score = vitoria * wins + empate * ties;
   return score;
 }
-footballPoints(3, 1);
 // Desafio 6
 function highestCount() {
   // seu código aqui
