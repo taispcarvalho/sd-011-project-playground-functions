@@ -19,7 +19,7 @@ console.log(splitSentence('Vivian Maria Braga'));
 
 // Desafio 4
 function concatName(names) {
-  return names[names.length - 1] + ', ' + names[0];
+  return `${names[names.length - 1]}, ${names[0]}`;
 }
 console.log(concatName(['Vivian', 'Maria', 'Braga']));
 
@@ -65,10 +65,11 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
-  } 
-  return 'cat2';
+  } else {
+    return 'cat2';
+  }
 }
-console.log(catAndMouse([100, 104, 103]));
+console.log(catAndMouse([100, 99, 104]));
 
 // Desafio 8
 function fizzBuzz(numbers) {
