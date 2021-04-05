@@ -2,19 +2,22 @@
 function techList(value10, name) {
 let objectTest = {};
 let objectTest2 = [];
-
+value10.sort()
 
 for (let i = 0; i < value10.length; i+=1){
 objectTest = {
   tech: value10[i],
   name: name,
 }
+
 objectTest2.push(objectTest);
 }
+
 if (value10.length === 0){
   let arrayVazio = 'Vazio!';
   objectTest2.push(arrayVazio);
 }
+
   return objectTest2;
 }
 
