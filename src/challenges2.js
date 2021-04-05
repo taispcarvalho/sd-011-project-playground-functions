@@ -1,5 +1,5 @@
 // Desafio 10
-function createObject (techName, nameName) {
+function createObject(techName, nameName) {
   let object = {
     tech: techName,
     name: nameName,
@@ -20,9 +20,19 @@ function techList(array, nameName) {
   }
   return 'Vazio!';
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Laura'));
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Laura'));
 
 // Desafio 11
+// function countNum(array, number) {
+//   let count = 0;
+//   for (let num of array) {
+//     if (num === number) {
+//       count += 1;
+//     }
+//   }
+//   return count;
+// }
+
 function generatePhoneNumber() {
   // seu código aqui
 }
