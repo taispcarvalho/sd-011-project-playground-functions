@@ -3,11 +3,12 @@ function techList(list, codiname) {
   if (list.length === 0) {
     return 'Vazio!';
   }
+  list = list.sort();
   let objeto = [];
   for (let index = 0; index < list.length; index += 1) {
     objeto.push = ({
-      tech: list[index],
       name: codiname,
+      tech: list[index],
     });
   } return objeto;
 }
