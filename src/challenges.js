@@ -78,11 +78,16 @@ function fizzBuzz(numArray) {
 // console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(param) {
+  param = param.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
+
+    return param;
 }
-function decode() {
-  // seu código aqui
+
+function decode(param) {
+  param = param.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+ 
+  return param;
 }
 
 module.exports = {
