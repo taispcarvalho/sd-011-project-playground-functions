@@ -1,6 +1,18 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnologias, nome) {
+  let techs = [];
+  if (tecnologias.length === 0) {
+    return 'Vazio!';
+  }
+  for (let index in tecnologias.sort()) {
+    if ({}.hasOwnProperty.call(tecnologias, index)) { // da uma propriedade propria pro for in, pra nao ter resultados inesperados.
+      techs[index] = {
+        tech: tecnologias[index],
+        name: nome,
+      };
+    }
+  }
+  return techs;
 }
 
 // Desafio 11
