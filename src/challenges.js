@@ -86,17 +86,23 @@ function encode(phrase) {
   let leters = phrase.split('');
   let output = [];
   for (let index = 0; index < leters.length; index += 1) {
-    if (leters[index] === 'a') {
+    switch (true) {
+    case (leters[index] === 'a'):
       output.push(1);
-    } else if (leters[index] === 'e') {
+      break;
+    case (leters[index] === 'e'):
       output.push(2);
-    } else if (leters[index] === 'i') {
+      break;
+     case (leters[index] === 'i'):
       output.push(3);
-    } else if (leters[index] === 'o') {
+      break;
+     case (leters[index] === 'o'):
       output.push(4);
-    } else if (leters[index] === 'u') {
+      break;
+     case (leters[index] === 'u'):
       output.push(5);
-    } else {
+      break;
+     default: 
       output.push(leters[index]);
     }
   }
