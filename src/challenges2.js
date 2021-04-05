@@ -11,10 +11,9 @@ function techList(technologies, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numbers) {
+function generatePhoneNumber() {
 
 }
-let arrayPhoneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 
 // Desafio 12
 function triangleCheck() {
@@ -22,9 +21,19 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let regExp = /\D+/g;
+  let newString = Array.from(string.replace(regExp, ''));
+  let waterCups = 0;
+  for (let number of newString) {
+    number = Number(number);
+    waterCups += number;
+  }
+  return waterCups;
 }
+
+let string = '1 cachaça, 5 cervejas e 1 copo de vinho';
+console.log(hydrate(string));
 
 module.exports = {
   generatePhoneNumber,
