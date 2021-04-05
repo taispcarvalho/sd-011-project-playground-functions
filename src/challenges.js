@@ -82,50 +82,61 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(array1) {
+  let result = '';
   for (let i = 0; i < array1.length; i += 1) {
     switch (true) {
       case array1[i] === 'a':
-      return i = '1';
-      break;
+        result += '1';
+        break;
       case array1[i] === 'e':
-      return i = '2';
-      break;
+        result += '2';
+        break;
       case array1[i] === 'i':
-      return i = '3';
-      break;
+        result += '3';
+        break;
       case array1[i] === 'o':
-      return i = '4';
-      break;
+        result += '4';
+        break;
       case array1[i] === 'u':
-      return i = '5';
-      break;
+        result += '5';
+        break;
+
+      default:
+        result += array1[i];
+        break;
     }
   }
-  return array1;
+  return result;
 }
 
 function decode(array2) {
+  let result2 = '';
   for (let index = 0; index < array2.length; index += 1) {
     switch (true) {
       case array2[index] === '1':
-      return index = 'a';
-      break;
+        result2 += 'a';
+        break;
       case array2[index] === '2':
-      return index = 'e';
-      break;
+        result2 += 'e';
+        break;
       case array2[index] === '3':
-      return index = i;
-      break;
+        result2 += 'i';
+        break;
       case array2[index] === '4':
-      return index = o;
-      break;
+        result2 += 'o';
+        break;
       case array2[index] === '5':
-      return index = u;
-      break;
+        result2 += 'u';
+        break;
+
+      default:
+        result2 += array2[index];
+        break;
     }
   }
-  return array2;
-} 
+  return result2;
+}
+console.log(decode("h3 th2r2!")); 
 
 module.exports = {
   calcArea,
