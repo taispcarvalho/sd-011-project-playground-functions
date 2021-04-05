@@ -5,14 +5,13 @@ function techList(lista, nameName) {
   for (let index = 0; index < lista.length; index += 1) {
     let object = {
       tech: lista[index],
-      name: nameName,    
+      name: nameName,
     };
-  list.push(object);
+    list.push(object);
   }
 
   if (lista.length === 0) {
     return 'Vazio!';
-    
   }
 
   return list;
@@ -23,7 +22,7 @@ function techList(lista, nameName) {
 
 /// Função auxiliar  - retorna true caso a afirmação seja verdadeira
 function quantNumbers(numbers) {
-  if (numbers.length === 11) {    
+  if (numbers.length === 11) {
     return true;
   }
 }
@@ -34,8 +33,8 @@ function validNumber(numbers) {
     if (numbers[index] < 0 || numbers[index] > 9) {
       return false;
     }
-  } 
-  
+  }
+
   return true;
 }
 
@@ -71,13 +70,14 @@ function phoneOrganizer(numbers) {
 function generatePhoneNumber(numbers) {
   if (!quantNumbers(numbers)) {
     return 'Array com tamanho incorreto.';
-  } 
-  
+  }
+
   if (!validNumber(numbers) || !repetition(numbers)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   
-  return phoneOrganizer(numbers);
+return phoneOrganizer(numbers);
+
 }
 
 /// Desafio 12
@@ -100,7 +100,6 @@ function sumFace(lineA, lineB, lineC) {
 
 /// Função auxiliar
 function diFace(lineA, lineB, lineC) {
-  let score = 0;
   if (Math.abs(lineA - lineB) > lineC) {
     return false;
   }
@@ -128,18 +127,19 @@ function triangleCheck(lineA, lineB, lineC) {
 /// Neste desafio consultei o repositório de meu colega Renan Menezes
 /// Link: https://github.com/tryber/sd-011-project-playground-functions/tree/menezesrenan7-project-playground-functions/
 function hydrate(drinks) {
-  let parameter = /\d+/gm;  /// indica todos caracteres numéricos
+  let parameter = /\d+/gm; /// indica todos caracteres numéricos
   let list = drinks.match(parameter).map(Number);  
   let sum = 0;
   for (let index of list) {
     sum += index;
   }
-  
+
   if (sum > 1) {
     return `${sum} copos de água`;
   }
 
-  return `${sum} copo de água`;
+return `${sum} copo de água`;
+
 }
 
 module.exports = {
