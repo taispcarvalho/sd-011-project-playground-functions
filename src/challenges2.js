@@ -11,7 +11,7 @@ function techList(tech, name) {
   return result;
 }
 // Desafio 11
-let vetor = [9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1];
+let vetor = [9, 2, 3, 0, 5, 6, 7, 8, 7, 0, 1];
 
 function checkSize (array) {
   if (array.length !== 11) {
@@ -47,7 +47,7 @@ function generatePhoneNumber (vetor){
     return 'Array com tamanho incorreto.';
   }
   if (!checkArray(vetor)) {
-    return 'não é possível gerar um número de vetorefone com esses valores';
+    return 'não é possível gerar um número de telefone com esses valores';
   }
   let ddd = `(${vetor[0]}${vetor[1]}) `;
   let firstFive = `${vetor[2]}${vetor[3]}${vetor[4]}${vetor[5]}${vetor[6]}`;
