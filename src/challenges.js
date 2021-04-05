@@ -57,7 +57,7 @@ function aux(number) {
     return 'fizz';
   }
   if (number % 5 === 0) {
-    return 'fizz';
+    return 'buzz';
   }
   return 'bug!';
 }
@@ -68,6 +68,9 @@ function fizzBuzz(numberOfArray) {
   }
   return arrayAux;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([9, 25]));
 // Desafio 9
 function encode() {
   // seu código aqui
