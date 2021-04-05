@@ -42,19 +42,19 @@ function highestCount(arrayHigherNumber) {
 function catAndMouse(mouse, cat1, cat2) {
   let catClose1 = Math.abs(cat1 - mouse);
   let catClose2 = Math.abs(cat2 - mouse);
-  if (catClose1 < catClose2){
-    return "cat1"
-  } else if (catClose2 < catClose1) {
-    return "cat2"
+  if (catClose1 < catClose2) {
+    return 'cat1';
+  } if (catClose2 < catClose1) {
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge"
+    return 'os gatos trombam e o rato foge';
   }
 }
 // Desafio 8
 function fizzBuzz(arrayFizzBuzz) {
   let arrayString = [];
   for (let index in arrayFizzBuzz) {
-    if (arrayFizzBuzz[index] % 3 == 0 && arrayFizzBuzz[index] % 5 == 0) {
+    if (arrayFizzBuzz[index] % 3 === 0 && arrayFizzBuzz[index] % 5 === 0) {
       arrayString.push('fizzBuzz');
     } else if (arrayFizzBuzz[index] % 3 !== 0 && arrayFizzBuzz[index] % 5 !== 0) {
       arrayString.push('bug!');
@@ -68,9 +68,23 @@ function fizzBuzz(arrayFizzBuzz) {
 }
 
 // Desafio 9
-function encode(string) {
-}
+function encode(phase) {
+  let phaseLetter = phase.split();
 
+  console.log(phaseLetter)
+  let switchLetter = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  }
+  for (let index = 0; index < phase.length; index += 1) {
+    console.log(switchLetter[index]);
+  }
+
+}
+console.log(encode(["React", "Jest", "HTML", "CSS", "JavaScript"], "Antonio"))
 function decode() {
 }
 
