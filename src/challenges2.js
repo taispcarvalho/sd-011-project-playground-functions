@@ -11,16 +11,16 @@ function techList(tech, name) {
   return result;
 }
 // Desafio 11
-let vetor = [9, 2, 3, 0, 5, 6, 7, 8, 7, 0, 1];
+let vetor = [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4];
 
-function checkSize (array) {
+function checkSize(array) {
   if (array.length !== 11) {
     return false;
   }
   return true;
 }
 
-function checkArray (array) {
+function checkArray(array) {
   let number = 0;
   let count = 0;
   for (let index = 0; index < array.length; index += 1) {
@@ -28,21 +28,20 @@ function checkArray (array) {
       return false;
     }
     number = array[index];
-    for (let secondIndex = 0; secondIndex < array.length; secondIndex += 1){
-      if (number === array[secondIndex]){
+    for (let secondIndex = 0; secondIndex < array.length; secondIndex += 1) {
+      if (number === array[secondIndex]) {
         count += 1;
       }
     }
-
-  count = 0;
-  if (count >= 3) {
-    return false;
-  }
+    if (count >= 3) {
+      return false;
+    }
+    count = 0;
   }
   return true;
 }
 
-function generatePhoneNumber (vetor){
+function generatePhoneNumber(vetor) {
   if (!checkSize(vetor)) {
     return 'Array com tamanho incorreto.';
   }
