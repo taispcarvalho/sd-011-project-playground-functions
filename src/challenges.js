@@ -101,76 +101,32 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function testEncode(character) {
-  let newCharacter = '';
-
-  switch (character) {
-  case 'a':
-    newCharacter = '1';
-    break;
-  case 'e':
-    newCharacter = '2';
-    break;
-  case 'i':
-    newCharacter = '3';
-    break;
-  case 'o':
-    newCharacter = '4';
-    break;
-  case 'u':
-    newCharacter = '5';
-    break;
-  default:
-    newCharacter = character;
-  }
-
-  return newCharacter;
-}
-
 function encode(sentence) {
-  let newSentence = '';
+  let chars = { 
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
 
-  for (let character of sentence) {
-    newSentence += testEncode(character);
-  }
+  sentence = sentence.replace(/[aeiou]/g, () => chars[i]);
 
-  return newSentence;
-}
-
-function testDecode(character) {
-  let newCharacter = '';
-
-  switch (character) {
-  case '1':
-    newCharacter = 'a';
-    break;
-  case '2':
-    newCharacter = 'e';
-    break;
-  case '3':
-    newCharacter = 'i';
-    break;
-  case '4':
-    newCharacter = 'o';
-    break;
-  case '5':
-    newCharacter = 'u';
-    break;
-  default:
-    newCharacter = character;
-  }
-
-  return newCharacter;
+  return sentence;
 }
 
 function decode(sentence) {
-  let newSentence = '';
+  let chars = { 
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
 
-  for (let character of sentence) {
-    newSentence += testDecode(character);
-  }
+  sentence = sentence.replace(/[12345]/g, () => chars[i]);
 
-  return newSentence;
+  return sentence;
 }
 
 module.exports = {
