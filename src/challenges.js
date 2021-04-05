@@ -69,7 +69,7 @@ function fizzBuzz(arrayFizzBuzz) {
  
 // Desafio 9
 function encode(phase) {
-  let phaseLetter = phase.split();
+ /*  let phaseLetter = phase.split();
 
   console.log(phaseLetter)
   let switchLetter = {
@@ -82,9 +82,8 @@ function encode(phase) {
   for (let index = 0; index < phase.length; index += 1) {
     console.log(switchLetter[index]); 
   }
-
+ */
 }
-console.log(encode(["React", "Jest", "HTML", "CSS", "JavaScript"], "Antonio"))
 function decode() {
 }
 
