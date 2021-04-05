@@ -10,10 +10,15 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(a, b, c) {
-  // let soma = (a + b > c && a + c > b && c + b > a);
-  // let abs = (Math.abs(a - b) < c && Math.abs(a - c) < b && Math.abs(c - b) < a);
-  // return soma && abs;
-  return (a + b > c && a + c > b && c + b > a) && (Math.abs(a - b) < c && Math.abs(a - c) < b && Math.abs(c - b) < a);
+  let obj = {
+    'soma': function (a, b, c) {
+      return (a + b > c && a + c > b && c + b > a);
+    },
+    'abs': function (a, b, c) {
+      return Math.abs(a - b) < c && Math.abs(a - c) < b && Math.abs(c - b) < a;
+    },
+  };
+  return obj['soma'](a, b, c) && obj['abs'](a, b, c);
 }
 
 // Desafio 13
