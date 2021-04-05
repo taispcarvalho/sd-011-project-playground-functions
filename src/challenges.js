@@ -27,12 +27,11 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(conjunto) {
-  let contador = [];
-  let element = Math.max(conjunto);
-  let idx = conjunto.indexOf(element);
-  while (idx !== -1) {
-    contador.push(idx);
-    idx = conjunto.indexOf(element, idx + 1);
+  let contador = 0;
+  for (let index = 0; index < conjunto.length; index += 1) {
+    if (conjunto[index] === Math.max(conjunto)) {
+      contador += 1;
+    }
   }
 }
 
