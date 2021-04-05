@@ -3,16 +3,12 @@ function techList(lista, nome) {
   let arrObj = [];
   if (emOrdem.length === 0) {
     return 'Vazio!';
-  } else {
-    for (let index = 0; index <= emOrdem.length - 1; index += 1) {
-      arrObj.push({
-      tech: emOrdem[index],
-      name: nome
-      })
-      }
-    }
-  return (arrObj);
   }
+  for (let index = 0; index <= emOrdem.length - 1; index += 1) {
+    arrObj.push({ tech: emOrdem[index], name: nome });
+  }
+  return (arrObj);
+}
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
