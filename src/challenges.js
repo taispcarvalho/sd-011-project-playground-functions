@@ -9,7 +9,7 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 console.log(calcArea(5, 10));
-git
+
 // Desafio 3
 // https://www.w3schools.com/jsref/jsref_split.asp //
 function splitSentence(sentence) {
@@ -34,6 +34,7 @@ console.log(footballPoints(14, 8));
 function highestCount(numbers) {
   let ammount = 0;
   let highestNumber = 0;
+  let highest = 0;
   highest = highestNumber(numbers);
   for (let index2 = 0; index2 < numbers.length; index2 += 1) {
     if (highest === (numbers[index2])) {
