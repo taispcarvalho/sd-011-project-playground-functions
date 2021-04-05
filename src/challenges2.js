@@ -4,14 +4,13 @@ function techList(array, name) {
     return 'Vazio!';
   } let newarray = [];
   array = array.sort();
-  // eslint-disable-next-line space-infix-ops
-  for (let tech = 0; tech < array.length; tech =+1) {
+  for (let tech = 0; tech < array.length; tech += 1) {
     newarray.push({
-      tech: array[tech],
-      // eslint-disable-next-line object-shorthand
-      name: name,
+      tech: 'array[tech]',
+      nome: 'name',
     });
-  } return newarray;
+  }
+  return newarray;
 }
 // Desafio 11
 function generatePhoneNumber() {
