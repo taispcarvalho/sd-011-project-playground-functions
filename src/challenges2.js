@@ -7,7 +7,7 @@ function techList(array, name) {
   for (let tech = 0; tech < array.length; tech += 1) {
     newarray.push({
       tech: 'array[tech]',
-      nome: 'name',
+      name,
     });
   }
   return newarray;
