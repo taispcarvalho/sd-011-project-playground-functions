@@ -46,8 +46,9 @@ function highestCount() {
   let numeroRepetido;
   let numeroMaior = Math.max(...numeros);
   for (let index = 0; index < numeros.length; index += 1) {
-    if (numeroMaior === numeros) {
+    if (numeroMaior === numeros.length) {
       numeroMaior = numeroRepetido + 1;
+      return numeroRepetido;
     }
   }
 }
