@@ -27,8 +27,7 @@ function concatName(names) {
   // seu código aqui
   let first = names.shift();
   let last = names.pop();
-  let concat = `${first} ${last}`;
-  return concat;
+  return `${first} ${last}`;
 }
 // Desafio 5
 function footballPoints() {
