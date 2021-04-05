@@ -14,7 +14,7 @@ function techList(tech, name) {
 let vetor = [9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1];
 
 function checkSize (array) {
-  if (array.length !== 11){
+  if (array.length !== 11) {
     return false;
   }
   return true;
