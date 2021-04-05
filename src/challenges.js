@@ -46,7 +46,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distCat1 > distCat2) {
     return 'cat2';
   }
-    return 'cat1';
+  return 'cat1';
 }
 // Desafio 8
 function fizzBuzz() {
