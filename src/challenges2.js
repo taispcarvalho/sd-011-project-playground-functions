@@ -2,7 +2,7 @@
 function techList(techArray, name) {
   techArray.sort();
   let technologyList = [];
-  if (techArray.lengthlength === 0) {
+  if (techArray.length === 0) {
     return 'Vazio!';
   }
   for (let index = 0; techArray.length; index += 1) {
