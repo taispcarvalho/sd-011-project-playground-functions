@@ -3,15 +3,6 @@ function techList(arrayTech, name) {
   if (arrayTech.length <= 0) {
     return 'Vazio!';
   }
-  let newArrayTech = [];
-  arrayTech = arrayTech.sort();
-  for (let tech = 0; tech < arrayTech.length; tech += 1) {
-    newArrayTech.push({
-      tech: arrayTech[tech],
-      name,
-    });
-  }
-  return newArrayTech;
 }
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 console.log(techList([], 'Lucas'));
@@ -26,14 +17,14 @@ function generatePhoneNumber(telNumbers) {
     console.log('não é possível gerar um número de telefone com esses valores');
   }
 function checkNumbers(telNumbers) {
-  let check = false;
-  for (let index = 0; index < telNumbers.length; index += 1) {
-    if (telNumbers[index] < 0 || telNumbers[index] > 9) {
-      check === true;
+    let check = false;
+    for (let index = 0; index < telNumbers.length; index += 1) {
+      if (telNumbers[index] < 0 || telNumbers[index] > 9) {
+        check === true;
+      }
     }
-  } 
     let repetNumber = 0;
-    for (let index2 = 0; index2 < telNumbers.length; index +=1) {
+    for (let index2 = 0; index2 < telNumbers.length; index += 1) {
       if (telNumbers[index] ===  telNumbers[index2]) {
         repetNumber += 1; 
         if (repetNumber >= 3) {
