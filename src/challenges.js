@@ -3,7 +3,7 @@
 function compareTrue(valueA, valueB) {
   return (valueA && valueB);
 }
-//Oliva fez a demonstração em aula desse desafio
+// Oliva fez a demonstração em aula desse desafio
 
 // Desafio 2
 
@@ -15,10 +15,16 @@ function calcArea(base, height) {
 function splitSentence(sentence) {
   return sentence.split(' ');
 }
+/** source https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split */
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+
+function concatName(sentence) {
+  let lastItem = sentence[sentence.length -1];
+  let firstItem = [0];
+  return lastItem + ' ' + firstItem
+
+ 
 }
 
 // Desafio 5
