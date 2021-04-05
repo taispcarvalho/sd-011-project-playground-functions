@@ -46,20 +46,17 @@ console.log(footballPoints(0, 0));
 // Desafio 6
 function highestCount(listNumbers) {
   let highestNumber = listNumbers[0];
-  for (let index = 0; index < listNumbers.lenght; index += 1) {
+  let appearNumber = 1
+  for (let index = 1; index < listNumbers.length; index += 1) {
     if (listNumbers[index] > highestNumber) {
       highestNumber = listNumbers[index];
-    }
-  }
-  let appearNumber = 0;
-  for (let index = 0; index < listNumbers.lenght; index += 1) {
-    if (listNumbers[index] === highestNumber) {
-      appearNumber = appearNumber + 1;
+      appearNumber = 1;
+    } else if (listNumbers[index] === highestNumber) {
+      appearNumber += 1;
     }
   }
   return appearNumber;
 }
-
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 console.log(highestCount([0, 0, 0]));
@@ -83,7 +80,7 @@ console.log(catAndMouse(0, 6, -6));
 
 // Desafio 8
 function fizzBuzz(arrayNumber) {
-  if ((arrayNumber % 3 === 0) && (arrayNumber % 5 === 0)){
+  if ((arrayNumber % 3 === 0) && (arrayNumber % 5 === 0)) {
     return 'fizzbuzz';
   }
   if (arrayNumber % 3 === 0) {
