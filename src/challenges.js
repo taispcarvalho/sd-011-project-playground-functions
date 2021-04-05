@@ -80,7 +80,7 @@ function encode(phase) {
     u: '5',
   }
   for (let index = 0; index < phase.length; index += 1) {
-    console.log(switchLetter[index]);
+    console.log(switchLetter[index]); 
   }
 
 }
