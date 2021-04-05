@@ -43,11 +43,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let distance2 = Math.abs(mouse - cat2);
   if (distance1 < distance2) {
     return 'cat1';
-  }
-  else if (distance2 < distance1) {
+  } else if (distance2 < distance1) {
     return 'cat2';
-  }
-  else {
+  } else {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -57,16 +55,13 @@ function fizzBuzz(arrayNumber1) {
   let fizzBuzzArray = [];
   for (let number = 0;number <= arrayNumber1.length - 1;number += 1) {
     if (arrayNumber1[number] % 15 === 0) {
-          fizzBuzzArray.push ('fizzBuzz');
-    }
-    else if (arrayNumber1[number] % 3 === 0) {
-      fizzBuzzArray.push ('fizz');
-    }
-    else if (arrayNumber1[number] % 5 === 0) {
-      fizzBuzzArray.push ('buzz');
-    }
-    else {
-      fizzBuzzArray.push ('bug!');
+      fizzBuzzArray.push('fizzBuzz');
+    } else if (arrayNumber1[number] % 3 === 0) {
+      fizzBuzzArray.push('fizz');
+    } else if (arrayNumber1[number] % 5 === 0) {
+      fizzBuzzArray.push('buzz');
+    } else {
+      fizzBuzzArray.push('bug!');
     }
   }
   return fizzBuzzArray;
