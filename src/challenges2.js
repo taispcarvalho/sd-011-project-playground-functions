@@ -4,16 +4,16 @@ function techList(array, name) {
     return 'Vazio!';
   }
 
-  let techList = [];
+  let techListArray = [];
   let sortedTechNames = array.sort();
 
   for (let techName of sortedTechNames) {
-    techList.push({
+    techListArray.push({
       tech: techName,
       name: name,
     });
   }
-  return techList;
+  return techListArray;
 }
 
 console.log(techList([]));
@@ -78,7 +78,6 @@ function generatePhoneNumber(array) {
   return phoneNumber;
 }
 
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA <= 0 || lineB <= 0 || lineC <= 0) {
@@ -108,16 +107,15 @@ function hydrate(string) {
 
   countWaterCoups = countWaterCoups.map((count) => parseInt(count, 10));
 
-  let totalCount = countWaterCoups.reduce((accumulator, currentValue) => accumulator + currentValue); //soma todos numeros da array
+  let totalCount = countWaterCoups.reduce((accumulator, currentValue) => accumulator + currentValue);
 
   if (totalCount === 1) {
     return '1 copo de água';
   }
 
-  return totalCount + ' copos de água';
+  totalCount += ' copos de água';
+  return totalCount
 }
-
-console.log(hydrate('1 copo de cerva, 1 copo de pinga, 1 copo de pitu'))
 
 module.exports = {
   generatePhoneNumber,

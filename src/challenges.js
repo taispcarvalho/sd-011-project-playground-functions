@@ -117,7 +117,6 @@ console.log(fizzBuzz([9, 25]));
 // Desafio 9
 function encode(string) {
   let encodedMessage = '';
-
   for (let index = 0; index < string.length; index += 1) {
     if (string[index].toLowerCase() === string[index]) {
       switch (string[index]) {
