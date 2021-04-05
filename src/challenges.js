@@ -1,5 +1,3 @@
-const { ESLint } = require("eslint");
-
 // Desafio 1
 function compareTrue(number, number2) {
   return number && number2 === true;
@@ -27,25 +25,15 @@ function concatName() {
 concatName();
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  return wins * 3 + ties * 1;
+function footballPoints() {
+
 }
-console.log(footballPoints(1, 2));
 
 // Desafio 6
-// function highestCount(numero) {
-//   numero = Math.max(...[5,4,4,2,10,15,15,12,6,15]);  
-//   let maiorNumero = numero;
-//   for (let i = 1; i < numero.length; i++) {
-//     if(numero[i] > maiorNumero) {
-//       maiorNumero = numero[i];
-//     }
-//   }
-//   return maiorNumero;   
-// }
-// console.log(highestCount());
+function highestCount(){
 
-// Desafio 7
+}
+
 function catAndMouse(mouse, cat1, cat2) {
   if (mouse < cat2 && cat2 > cat1) {
     return ('cat1');
@@ -60,21 +48,20 @@ console.log(catAndMouse(0, 6, 6));
 // Desafio 8
 
 function fizzBuzz() {
-  let numeros  = [2, 15, 7, 9, 45];
-  for (let index = 0; index < numeros.length; index ++) {
-    
+  let numeros  = [7, 9];
+  for (let index = 0; index < numeros.length; index ++) {    
     if ((numeros[index] % 3) === 0 && ((numeros[index] % 5) === 0)) {
-      console.log(numeros[index],'fizzBuzz');
+      return (numeros[index],'fizzBuzz');
     }else if ((numeros[index] % 3) === 0 ) {
-      console.log(numeros[index],'fizz');
+      return (numeros[index],'fizz');
     }else if ((numeros[index] % 5) === 0 ) {
-      console.log(numeros[index],'buzz');  
+      return (numeros[index],'buzz');
     }else if ((numeros[index] % 5) != 0 && ((numeros[index] % 5) != 0)) {
-      console.log(numeros[index],'bug');  
+      return (numeros[index],'bug');
     }
-  }        
+  }
 }
-fizzBuzz();
+console.log(fizzBuzz());
 
 // Desafio 9
 function encode() {
@@ -91,7 +78,8 @@ module.exports = {
   concatName,
   decode,
   encode,
+  highestCount,
   fizzBuzz,
-  footballPoints,  
+  footballPoints,
   splitSentence,
-};
+}
