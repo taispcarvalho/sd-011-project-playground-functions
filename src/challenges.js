@@ -25,9 +25,9 @@ splitSentence('Go trybe');
 // Desafio 4
 function concatName(names) {
   // seu código aqui
-  let first = [...names].shift();
-  let last = [...names].pop();
-  let concat = first + last;
+  let first = names.shift();
+  let last = names.pop();
+  let concat = `${first} ${last}`;
   return concat;
 }
 let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
