@@ -71,8 +71,6 @@ function fizzBuzz() {
     }
     return arr;
   }
-
-  function fizzBuzz(arr) {
     for (let index = 0; index < arr.length; index += 1) {
       if (arr[index] % 3 === 0 && arr[index] % 5 === 0) {
         arr[index] = 'fizzBuzz';
@@ -105,4 +103,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-};
+
