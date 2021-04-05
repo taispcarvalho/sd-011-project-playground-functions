@@ -21,50 +21,42 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11
 
-function repeatNumber(array) {
-  let count = 1;
-  let repeats = false;
-
-  let sortedArray = [...array].sort();
-
-  for (let i = 1; i < sortedArray.length; i += 1) {
-    if (sortedArray[i] === sortedArray[i - 1]) {
-      count += 1;
-
-      if (count === 3) {
-        repeats = true;
-        break;
-      }
-    } else {
-      count = 1;
-    }
+function checkDuplicateNumber(array) {
+  let counts = {};
+  for (let num of array) {
+    counts[num] = (counts[num] || 0) + 1;
+    if (counts[num] === 3) return true;
   }
-  return repeats;
+  return false;
 }
+
+function checkNumber(array) {
+  let biggest = Math.max(...array);
+  let lowest = Math.min(...array);
+  return biggest > 9 || lowest < 0;
+  }
+
 
 function generatePhoneNumber(array) {
   let mask = '(xx) xxxxx-xxxx';
   array.forEach(function (item) {
     mask = mask.replace('x', item);
   });
-  for (let index = 0; index < array.length; index++) {
-    if (array.length === 11 && array[index] !== repeatNumber(array)) {
-      return mask
-    } else if (array[index] < 0 || array[index] > 9 || array < 0) {
-      return 'não é possível gerar um numero de telefone com esses valores'
-    }
-    if (array.length !== 11) {
-      return 'Array com tamanho incorreto'
-    }
-    return arrayNotPossible;
+  switch (true) {
+    case checkNumber(array) || checkDuplicateNumber(array):
+      return 'não é possível gerar um número de telefone com esses valores';
+    case array.length !== 11:
+      return 'Array com tamanho incorreto.';
+    default:
+      return mask;
   }
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
-console.log(generatePhoneNumber([1, 2, 3, 0, 1]))
-console.log(generatePhoneNumber([2, 3, 4, 5, 6, 7, 8, 21]))
-console.log(generatePhoneNumber([2, 3, 4, 5, 6, 7, 8, -21]))
-console.log(generatePhoneNumber([2, 2, 2, 2, 2, 5, 6, 7, 8, 1, 3]))
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 0, 1]));
+console.log(generatePhoneNumber([2, 3, 4, 5, 6, 7, 8, 21]));
+console.log(generatePhoneNumber([2, 3, 4, 5, 6, 7, 8, -21]));
+console.log(generatePhoneNumber([2, 2, 2, 2, 2, 5, 6, 7, 8, 1, 3]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
