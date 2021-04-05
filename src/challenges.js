@@ -20,14 +20,16 @@ console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName() {
   let nome = ['Rafael', 'Batista', 'de', 'Oliveira'];
-  return (nome[3]) + ',' + (nome[0]);
+  let myarr = (nome[3]) + ',' + (nome[0]);
+  console.log(myarr);
 }
-console.log(concatName());
+concatName();
 
 // Desafio 5
-function footballPoints() {
-
+function footballPoints(wins, ties) {
+  return (wins * 3 + ties * 1);
 }
+console.log(footballPoints(1,2));
 
 // Desafio 6
 function highestCount() {
@@ -43,7 +45,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return ('cat2');
   }
 }
-console.log(catAndMouse(0, 6, 6));
+console.log(catAndMouse(0, 6, 12));
 
 // Desafio 8
 
