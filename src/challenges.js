@@ -49,28 +49,51 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numeros) {
-    let arrayFizzBuzz = [];
-    for (let index = 0; index < numeros.length; index += 1) {
-      let restoDiv3 = numeros[index] % 3;
-      let restoDiv5 = numeros[index] % 5;
-      let restoDiv15 = numeros[index] % 15;
-      if (restoDiv15 === 0) {
-        arrayFizzBuzz.push('fizzBuzz');
-      } else if (restoDiv3 === 0) {
-        arrayFizzBuzz.push('fizz');
-      } else if (restoDiv5 === 0) {
-        arrayFizzBuzz.push('buzz');
-      } else { arrayFizzBuzz.push('bug!'); }
-    } return arrayFizzBuzz;
+funcion numFizzBuzz(numero) {
+  if (numero % 15 === 0) {
+    return 'fizzBuzz';
+  } if (numero % 3 === 0) {
+    return 'fizz';
+  } if (numero % 5 === 0) {
+    return 'buzz';
   }
-  
-// Desafio 9
-function encode() {
-  // seu código aqui
+  return 'bug!';
 }
-function decode() {
-  // seu código aqui
+
+function fizzBuzz(numeros) {
+  let arrayFizzBuzz = [];
+  for (let num of numeros){
+    arrayFizzBuzz.push(numFizzBuzz(num));
+  }
+  return arrayFizzBuzz;
+}
+
+// Desafio 9
+
+function encode(string) {
+  let encryptoDictionary = { a: 1, e: 2, i: 3, o: 4, u: 5, } 
+  let encodeString = '';
+  for (let char of string) {
+    if (encryptoDictionary[char]) {
+    encodeString += encryptoDictionary[char]; 
+  } else {
+    encodeString += char;
+  }
+}
+return encodeString;
+}
+
+function decode(string) {
+  let decryptoDictionary = { 1: 'a', 2: 'e', 3: 'i', 4: 'o',5: 'u', }
+  let decodeString = '';
+  for (let char of string) {
+    if (parseInt(char, 10) > 0 && parseInt(char, 10) < 6) {
+      decodeString += decryptoDictionary[parseInt(char, 10)];
+    } else {
+      decodeString += char;
+    }
+  }
+  return decodeString;
 }
 
 module.exports = {
