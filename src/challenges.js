@@ -45,10 +45,9 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   }
   return 'cat2';
+
 }
-// Desafio 8
-function fizzBuzz(numbers) {
-  let results = [];
+  /* let results = [];
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 3 === 0) {
       results.push('fizz');
@@ -57,6 +56,26 @@ function fizzBuzz(numbers) {
     } else if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       results.push('fizzBuzz');
     } else {
+      results.push('bug!');
+    }
+  }
+  return results;
+  } */
+
+// Desafio 8
+function fizzBuzz(numbers) { 
+  let results = [];
+  for(let index = 0; index < numbers.length; index +=1){
+    if(numbers[index] % 3 === 0 && numbers[index] % 5 === 0){
+      results.push('fizzBuzz');
+    } 
+    if(numbers[index] % 3 === 0){
+      results.push('fizz');
+    } 
+    if(numbers[index] % 5 === 0){
+      results.push('buzz');
+    }
+    else{
       results.push('bug!');
     }
   }
