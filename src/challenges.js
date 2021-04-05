@@ -8,22 +8,12 @@ function calcArea(base, height) {
   return area;
 }
 // Desafio 3
+let myString = 'go trybe';
 function splitSentence(myString) {
-  let wordArray = [];
-  let currentWord = '';
-  for (let index = 0; index < myString.length; index += 1) {
-    if (myString[index] === ' ') {
-      wordArray.push(currentWord);
-      currentWord = '';
-    } else if (index === myString.length - 1) {
-      currentWord += myString[index];
-      wordArray.push(currentWord);
-    } else {
-      currentWord += myString[index];
-    }
-  }
-  return wordArray;
+  myString = myString.split(" ");
+  return myString;
 }
+splitSentence(myString);
 // Desafio 4
 function concatName() {
   // seu código aqui
