@@ -1,21 +1,21 @@
 // Desafio 10
 function techList(value10, name) {
-let objectTest = [];
+let objectTest = {};
+let objectTest2 = [];
+
 
 for (let i = 0; i < value10.length; i+=1){
 objectTest = {
   tech: value10[i],
   name: name,
 }
-objectTest.push(objectTest);
+objectTest2.push(objectTest);
 }
-
 if (value10.length === 0){
   let arrayVazio = 'Vazio!';
-  objectTest.push(arrayVazio);
-
+  objectTest2.push(arrayVazio);
 }
-  return objectTest;
+  return objectTest2;
 }
 
 // Desafio 11
