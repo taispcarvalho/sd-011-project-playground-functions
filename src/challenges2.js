@@ -5,8 +5,11 @@ function techList(list, owner) {
   for (let index = 0; index < orderedList.length; index += 1) {
     techListname.push({ tech: orderedList[index], name: owner });
   }
-  return techListname;
+  if (orderedList.length <= 0) {
+    return 'Vazio!';
+  } return techListname;
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
