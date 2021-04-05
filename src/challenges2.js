@@ -96,16 +96,9 @@ function repeatedNumber(array) {
     }
   }
 }
-function generatePhoneNumber(array) {
-  let msgLength = 'Array com tamanho incorreto.';
-  let msgNumber = 'não é possível gerar um número de telefone com esses valores';
 
-  if (errorArrayLength(array)) {
-    return msgLength;
-  } else if (errorNumber(array) || repeatedNumber(array)) {
-    return msgNumber;
-  } else {
-    let phoneNumber = '(';
+function doNumber (array) {
+  let phoneNumber = '(';
     phoneNumber += array[0];
     phoneNumber += array[1];
     phoneNumber += ') ';
@@ -120,7 +113,20 @@ function generatePhoneNumber(array) {
     phoneNumber += array[9];
     phoneNumber += array[10];
     return phoneNumber;
+}
+
+function generatePhoneNumber(array) {
+  let msgLength = 'Array com tamanho incorreto.';
+  let msgNumber = 'não é possível gerar um número de telefone com esses valores';
+
+  if (errorArrayLength(array)) {
+    return msgLength;
   }
+  if (errorNumber(array) || repeatedNumber(array)) {
+    return msgNumber;
+   } else {
+     return doNumber (array);
+   } 
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1])); // Menor que zero.
