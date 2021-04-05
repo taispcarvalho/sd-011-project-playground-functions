@@ -84,9 +84,7 @@ function fizzBuzz() {
     arr = condicao(arr);
     return arr;
   }
-}
-
-
+  
 // Desafio 9
 function encode() {
   // seu código aqui
