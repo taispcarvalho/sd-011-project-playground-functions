@@ -53,8 +53,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumber1) {
+  for (let number in arrayNumber1) {
+    if (arrayNumber1[number] % 3 === 0) {
+      return 'fizz';
+    }
+    else if (arrayNumber1[number] % 5 === 0) {
+      return 'buzz';
+    }
+    else if (arrayNumber1[number] % 3 && arrayNumber1[number] % 5 === 0) {
+      return 'fizzBuzz'
+    }
+    else {
+      return 'bug!'
+    }
+  }
 }
 
 // Desafio 9
