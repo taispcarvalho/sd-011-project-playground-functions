@@ -11,7 +11,7 @@ function techList(array, name) {
   return newObject;
 }
 // Desafio 11
-function checkRepeadtedNumber(array) {
+function areNumbersRepeatedTooMuch(array) {
   for (let numbers of array) {
     let count = 0;
     for (let element of array) {
@@ -19,27 +19,21 @@ function checkRepeadtedNumber(array) {
         count += 1;
       }
     }
-    return count;
+    if (count >= 3) return true;
   }
+  return false;
 }
 
-function checkArrayLength(array) {
-  if (array.length !== 11) return 'Array com tamanho incorreto.';
-}
-
-function checkNumbers(array) {
+function numbersOutOfRangeExist(array) {
   for (let numbers of array) {
-    let frase = 'não é possível gerar um número de telefone com esses valores';
-    if (numbers < 0 || numbers > 9) return frase;
+    if (numbers < 0 || numbers > 9) return true;
   }
+  return false;
 }
 
 function generatePhoneNumber(array) {
-  if (checkArrayLength(array) >= 3) {
-    return 'Array com tamanho incorreto.';
-  }
-  if (checkNumbers(array));
-  if (checkRepeadtedNumber(array));
+  if (areNumbersRepeatedTooMuch(array) || numbersOutOfRangeExist(array)) return 'não é possível gerar um número de telefone com esses valores';
+  if (array.length !== 11) return 'Array com tamanho incorreto.';
   return `(${array[0]}${array[1]})${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 }
 
