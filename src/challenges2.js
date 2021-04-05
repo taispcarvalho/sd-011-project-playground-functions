@@ -1,7 +1,7 @@
 // Desafio 10
-// Obrigado ao amigo Vitor Cardoso e Marlon pela ajuda!
-// Foi usado como referência para resolução deste desafio um pequeno artigo de ESLint.org
-// Source: https://eslint.org/docs/2.0.0/rules/guard-for-in
+/** Obrigado ao amigo Vitor Cardoso e Marlon pela ajuda! */
+/** Foi usado como referência para resolução deste desafio um pequeno artigo de ESLint.org */
+/** Source: https://eslint.org/docs/2.0.0/rules/guard-for-in */
 function techList(techs, names) {
   let skills = [];
   for (let index in techs.sort()) {
@@ -19,12 +19,12 @@ function techList(techs, names) {
 }
 
 // Desafio 11
-// Para conclusão deste desafio eu obtive ajuda de algumas pessoas e artigos.
-// Meus agradecimentos aos amigos: J. Filizzola, Renato Bispo e Vitor Cardoso.
-// Créditos ao knoonrx/nove_digitos.js | Seu código que mostra como funciona formatação de números através de Expressões Regulares.
-// Source: https://gist.github.com/knoonrx/a180f0b7e3039e42c621
-// Expressões Regulares | Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
-// Medium / Alexandre Servian | Source: https://medium.com/@alexandreservian/regex-um-guia-pratico-para-express%C3%B5es-regulares-1ac5fa4dd39f
+/** Para conclusão deste desafio eu obtive ajuda de algumas pessoas e artigos. */
+/** Meus agradecimentos aos amigos: J. Filizzola, Renato Bispo e Vitor Cardoso. */
+/** Créditos ao knoonrx/nove_digitos.js | Seu código que mostra como funciona formatação de números através de Expressões Regulares. */
+/** Source: https://gist.github.com/knoonrx/a180f0b7e3039e42c621 */
+/** Expressões Regulares | Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions */
+/** Medium / Alexandre Servian | Source: https://medium.com/@alexandreservian/regex-um-guia-pratico-para-express%C3%B5es-regulares-1ac5fa4dd39f */
 function findRepetition(telNum, num) {
   let repeater = 0;
   for (let count = 0; count < telNum.length; count += 1) {
@@ -58,8 +58,8 @@ function generatePhoneNumber(genNum) {
   return sNum;
 }
 // Desafio 12
-// Meus agracecimentos aos amigos que me ajudaram a entender a lógica por trás deste desafio.
-// J. Felizzola & Vitor Cardoso.
+/** Meus agracecimentos aos amigos que me ajudaram a entender a lógica por trás deste desafio. */
+/** J. Felizzola & Vitor Cardoso. */
 function triangleCheck(lineA, lineB, lineC) {
   let c1 = Math.abs(lineB + lineC);
   let c2 = Math.abs(lineB - lineC);
@@ -71,7 +71,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-// Para realizar este desafio, me baseei no código do colega Julio Filizzola.
+/** Para realizar este desafio, me baseei no código do colega Julio Filizzola. */
 function hydrate(string) {
   string = string.replace(/\D/g, '');
   let num = 0;
