@@ -25,8 +25,6 @@ function check0to9(array) {
   for (let index = 0; index < 11; index += 1) {
     if (array[index] < 0 || array[index] > 9) {
       situation = false;
-      break;
-      // 'não é possível gerar um número de telefone com esses valores';
     }
   }
   return situation;
@@ -38,7 +36,6 @@ function checkConsecutive(array) {
   for (let index = 0; index < 11; index += 1) {
     if (sorted[index] === sorted[index + 1] && (sorted[index] === sorted[index + 2])) {
       situation = false;
-      // 'não é possível gerar um número de telefone com esses valores';
     }
   }
   return situation;
@@ -72,7 +69,7 @@ function generatePhoneNumber(array) {
   return finalCheck(array);
 }
 
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0]));
+
 
 // Desafio 12
 function sumSide(lineA, lineB, lineC) {
@@ -98,7 +95,8 @@ function diffSide(lineA, lineB, lineC) {
 function triangleCheck(lineA, lineB, lineC) {
   return (sumSide(lineA, lineB, lineC) && diffSide(lineA, lineB, lineC));
 }
-console.log(triangleCheck(10, 0, 8));
+
+
 
 // Desafio 13
 function hydrate(string) {
@@ -108,14 +106,17 @@ function hydrate(string) {
   while ((m = r.exec(string)) !== null) {
     let number = parseInt(m[0], 10);
     count += number;
+  // while - https://stackoverflow.com/questions/52189621/extract-numbers-from-array-mixed-with-strings-javascript
+  // https://github.com/airbnb/javascript/issues/1439
+  // replace
+  // regex
   }
   if (count === 1) {
     return '1 copo de água';
   }
   return `${count} copos de água`;
-  // https://stackoverflow.com/questions/46858840/unexpected-string-concatenation
 }
-console.log(hydrate('1 cerveja, 5 rums'));
+console.log(hydrate('1 cerveja, 5 doses de whiskey, 7 doses '));
 
 module.exports = {
   generatePhoneNumber,
