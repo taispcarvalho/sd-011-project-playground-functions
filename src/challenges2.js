@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(techArray, name) {
+/* function techList(techArray, name) {
   let technologyList = [];
   techArray.sort();
   if (techArray.lengthlength === 0) {
@@ -13,10 +13,8 @@ function techList(techArray, name) {
   }
   return technologyList;
 }
- 
+  */
 // Desafio 11
-// verificar se um número é válido 
-// montar o nuḿero e retornar
 function generatePhoneNumber() {
 
   function repeatedNumber(n, number){
