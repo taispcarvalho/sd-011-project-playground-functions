@@ -8,8 +8,10 @@ function techList(techNames, name) {
   } else {
     let object = {};
     for (let index = 0; index < arraySort.length; index += 1) {
-    object.tech = arraySort[index];
-    object.name = name;
+    object = {
+      tech: arraySort[index],
+      name: name,
+    };
     listObjects.push(object);
     }
   } 
