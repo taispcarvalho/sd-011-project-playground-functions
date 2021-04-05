@@ -54,19 +54,19 @@ function highestNumber(listaNumeros) {
 }
 highestNumber([9, 1, 2, 3, 9, 5, 7]);
 
-
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse === cat1) {
+  distan1 = mouse - cat1;
+  distan2 = mouse - cat2;
+  if (distan1 < distan2) {
     console.log('cat1');
-  } if (mouse === cat2) {
+  } else if (distan1 < distan2) {
     console.log('cat2');
   } else {
     console.log('os gatos trombam e o rato foge');
   }
 }
-catAndMouse(10, 20, 20);
+catAndMouse(20, 10, 10);
 
 // Desafio 8
 function fizzBuzz() {
