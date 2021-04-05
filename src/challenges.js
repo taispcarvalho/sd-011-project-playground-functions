@@ -49,27 +49,26 @@ function highestCount(arrayOfNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Distance = cat1 - mouse;
   let cat2Distance = cat2 - mouse;
-  if (cat1Distance < cat2Distance) {
-    return "cat1";
-  } else if (cat1Distance == cat2Distance) {
-    return "os gatos trombam e o rato foge";
-  } else {
-    return "cat2";
-  }
+  if (cat1Distance < cat2Distance) return 'cat1';
+  if (cat1Distance === cat2Distance) return 'os gatos trombam e o rato foge';
+  return 'cat2';
 }
 
 // Desafio 8
 function fizzBuzz(numbersArray) {
   let response = [];
-  for (number of numbersArray) {
-    if (number % 3 == 0 && number % 5 == 0) {
-      response.push('fizzBuzz')
-    } else if (number % 5 == 0) {
-      response.push('buzz')
-    } else if (number % 3 == 0) {
-      response.push('fizz')
-    } else {
-      response.push('bug!')
+  for (let number of numbersArray) {
+    if (number % 3 === 0 && number % 5 === 0) {
+      response.push('fizzBuzz');
+    }
+    if (number % 5 === 0) {
+      response.push('buzz');
+    }
+    if (number % 3 === 0) {
+      response.push('fizz');
+    }
+    else {
+      response.push('bug!');
     }
   }
   return response;

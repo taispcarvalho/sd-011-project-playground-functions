@@ -2,11 +2,10 @@
 function techList(technologies, name) {
   let arrayOfTechonlogies = [];
 
-  if (technologies.length === 0) {
-    return 'Vazio!'
-  }
+  if (technologies.length === 0) return 'Vazio!';
+
   for (let index = 0; index < technologies.length; index += 1) {
-    arrayOfTechonlogies.push({ 'tech': technologies[index], 'name': name })
+    arrayOfTechonlogies.push(technologies[index], name);
   }
   return arrayOfTechonlogies;
 }
