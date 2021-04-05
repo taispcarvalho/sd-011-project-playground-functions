@@ -10,10 +10,9 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(a, b, c) {
-  let ok, soma, abs = false;
 
-  soma = a + b > c && a + c > b && c + b > a;
-  abs = Math.abs(a - b) < c && Math.abs(a - c) < b && Math.abs(c - b) < a;
+  let soma = a + b > c && a + c > b && c + b > a;
+  let abs = Math.abs(a - b) < c && Math.abs(a - c) < b && Math.abs(c - b) < a;
 
   return soma && abs;
 }
