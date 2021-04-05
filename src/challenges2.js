@@ -88,10 +88,10 @@ function hydrate(phrase) {
     soma += parseInt(quantCopos[index], 10);
   }
 
-  if (quantCopos === 1) {
+  if (soma === 1) {
     return `${soma} copo de água`;
   }
-  if (quantCopos > 1) {
+  if (soma > 1) {
     return `${soma} copos de água`;
   }
 }
