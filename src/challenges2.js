@@ -8,12 +8,12 @@ function techList(techArray, name) {
   for (let index = 0; techArray.length; index += 1) {
     technologyList.push({
       tech: techArray[index],
-      name: name
+      name: name,
     });
   }
   return technologyList;
 }
-// evaluator job error
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
@@ -23,7 +23,6 @@ function generatePhoneNumber() {
 function triangleCheck() {
   // seu código aqui
 }
-
 // Desafio 13
 function hydrate() {
   // seu código aqui
