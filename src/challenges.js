@@ -25,7 +25,7 @@ splitSentence('Go trybe');
 // Desafio 4
 function concatName(item01, item02) {
   // seu código aqui
-  let concat = `${item01} ${item02}`;
+  let concat = item01 + item02;
   return concat;
 }
 let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
