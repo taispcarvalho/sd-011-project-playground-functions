@@ -73,8 +73,14 @@ function encode(frase) {
   return frase;
 }
 
-function decode() {
-  // seu código aqui
+function decode(oracao) {
+  for (let index = 0; index < oracao.length; index += 1) {
+    oracao = oracao.replace('1', 'a');
+    oracao = oracao.replace('2', 'e');
+    oracao = oracao.replace('3', 'i');
+    oracao = oracao.replace('4', 'o');
+    oracao = oracao.replace('5', 'u');
+  } return oracao;
 }
 
 module.exports = {
