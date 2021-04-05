@@ -25,8 +25,13 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-
+function highestCount(conjunto) {
+  let contador = 0;
+  for (let highnumber of conjunto) {
+    if (highnumber === Math.max(conjunto)) {
+      contador += 1;
+    }
+  } return contador;
 }
 
 // Desafio 7
@@ -41,8 +46,17 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-
+function fizzBuzz(entrada) {
+  let numerico = [];
+  for (let index in entrada) {
+    if (entrada[index] % 3 === 0) {
+      return numerico.push('fizz');
+    } if (entrada[index] % 5 === 0) {
+      return numerico.push('buzz');
+    } if (entrada[index] % 15 === 0) {
+      return numerico.push('fizzBuzz');
+    } else return numerico.push('bug!');
+  }
 }
 
 // Desafio 9
