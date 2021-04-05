@@ -2,10 +2,10 @@
 function createObject(techs, name) {
   let arrayObject = [];
   techs = techs.sort();
-  
+
   for (let index of techs) {
-    let objectTech = {tech: '', name: ''};
-    
+    let objectTech = { tech: '', name: '' };
+
     objectTech.tech = index;
     objectTech.name = name;
 
@@ -26,12 +26,6 @@ function techList(techs, name) {
 
   return arrayObject;
 }
-
-
-let techs = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-let name = 'Lucas';
-
-console.log(techList(techs, name));
 
 // Desafio 11
 function generatePhoneNumber() {
