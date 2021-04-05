@@ -60,19 +60,19 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-// eslint-disable-next-line sonarjs/cognitive-complexity
-function highestCount(numbers) {
-  let counter = 0;
+function biggestNumber(numbers) {
   let biggest = 0;
-
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] > biggest) {
       biggest = numbers[index];
     }
   }
+  return biggest;
+}
+function highestCount(numbers) {
+  let counter = 0;
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] === biggest) {
-      biggest = numbers[index];
+    if (numbers[index] === biggestNumber(numbers)) {
       counter += 1;
     }
   }
