@@ -23,10 +23,12 @@ function splitSentence(goTrybe) {
 }
 splitSentence('Go trybe');
 // Desafio 4
-function concatName() {
+function concatName(concatenando) {
   // seu código aqui
+  return concatenando;
 }
-
+let concatenando = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+concatName(concatenando[0][concatenando.length - 1]);
 // Desafio 5
 function footballPoints() {
   // seu código aqui
