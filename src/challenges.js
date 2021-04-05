@@ -45,14 +45,14 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 function troca(numero) {
   if (numero % 15 === 0) {
-    return "fizzBuzz";
+    return 'fizzBuzz';
   }
   if (numero % 3 === 0) {
-    return "fizz";
-  } 
+    return 'fizz';
+  }
   if (numero % 5 === 0) {
-    return "buzz";
-  } 
+    return 'buzz';
+  }
   return 'bug!';
 }
 function fizzBuzz(numeros) {
@@ -62,7 +62,7 @@ function fizzBuzz(numeros) {
   }
   return (codificado);
 }
-  function encode(frase) {
+function encode(frase) {
   frase = frase.replace(/a/g, 1);
   frase = frase.replace(/e/g, 2);
   frase = frase.replace(/i/g, 3);

@@ -1,14 +1,14 @@
-function techList(lista,nome) {
+function techList(lista, nome) {
   let emOrdem = lista.sort();
   let arrObj = [];
-    if (emOrdem.length === 0) {
-      return 'Vazio!';
-    } else {
-      for (let index = 0; index <= emOrdem.length - 1; index += 1) {
-        arrObj.push({
-            tech: emOrdem[index],
-            name: nome
-          })
+  if (emOrdem.length === 0) {
+    return 'Vazio!';
+  } else {
+    for (let index = 0; index <= emOrdem.length - 1; index += 1) {
+      arrObj.push({
+      tech: emOrdem[index],
+      name: nome
+      })
       }
     }
   return (arrObj);
