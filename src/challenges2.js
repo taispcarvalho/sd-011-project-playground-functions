@@ -3,9 +3,9 @@ function techList(array, name) {
   let listNewObj = [];
   if (array.length > 0) {
     for (let index of array.sort()) {
-      listNewObj.push({tech: index, nome: name});
+      listNewObj.push({ tech: index, nome: name });
     }
-  } else {
+  } else if (array.length === 0) {
     return 'Vazio!';   
   }
   return listNewObj;
@@ -14,9 +14,21 @@ function techList(array, name) {
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Victor'));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let counts = 0;
+  for (index = 0; index < array.length; index += 1) {
+    if ((array.indexOf(array[index])) !== array.lastIndexOf(array[index])) {
+      counts += 1;
+    } else if (array[index] < 0 || array[index] > 9 || counts > 3) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    } else if (array.length !== 11) {
+      return 'Array com tamanho incorreto.'
+    } else if (array.length === 11) {
+      return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
+    }
+  }
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
