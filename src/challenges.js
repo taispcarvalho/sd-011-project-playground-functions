@@ -62,10 +62,10 @@ function fizzBuzz(arrayNumber1) {
       return 'buzz';
     }
     else if (arrayNumber1[number] % 3 && arrayNumber1[number] % 5 === 0) {
-      return 'fizzBuzz'
+      return 'fizzBuzz';
     }
     else {
-      return 'bug!'
+      return 'bug!';
     }
   }
 }
