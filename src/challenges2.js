@@ -19,11 +19,11 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   } else if (lineA < sizeA || lineB < sizeB || lineC < sizeC) {
     return false;
-  } else {
+  } {
     return true;
   }
 }
-// console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
