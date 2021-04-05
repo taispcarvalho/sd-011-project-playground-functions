@@ -139,17 +139,32 @@ console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // Retornar
  Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois
  Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas
  Retorne true quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas */
-function triangleCheck(lineA, lineB, lineC) {
-  let sumLineA = lineB + lineC;
-  let subLineA = Math.abs(lineB - lineC);
-  let value = false;
-  if (lineA < sumLineA || lineA < subLineA ) {
-    value = true;
-  }
-  return value;
-}
-console.log(triangleCheck(10,14,800));
 
+ function sideCheck(lineA, lineB, lineC) {
+   // Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois
+  let test = true;
+  if ( lineA > (lineB + lineC) || lineB > (lineC + lineA) || lineC > (lineA + lineB)) {
+    test = false;
+  }
+  return test;
+}
+
+function diferenceBetweenCheck(lineA, lineB, lineC) {
+   // Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas
+   let test = true;
+   if ( lineA < Math.abs((lineB - lineC)) || lineB < Math.abs((lineC - lineA))  || lineC < Math.abs((lineA - lineB))) {
+    test = false;
+  }
+  return test;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  return sideCheck(lineA, lineB, lineC) && diferenceBetweenCheck(lineA, lineB, lineC);  
+}
+/* console.log(triangleCheck(10,14,8));
+console.log(triangleCheck(100,14,8));
+console.log(triangleCheck(100,140,8));
+console.log(triangleCheck(100,140,80)); */
 // Desafio 13
 /* Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
   Crie a função hydrate que recebe uma string, e retorne a sugestão de quantos copos de água você deve beber. Exemplos:
