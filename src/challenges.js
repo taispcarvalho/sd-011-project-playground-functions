@@ -83,50 +83,20 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(phrase) {
-  let leters = phrase.split('');
-  let output = [];
-  for (let index = 0; index < leters.length; index += 1) {
-    switch (true) {
-    case (leters[index] === 'a'):
-      output.push(1);
-      break;
-    case (leters[index] === 'e'):
-      output.push(2);
-      break;
-     case (leters[index] === 'i'):
-      output.push(3);
-      break;
-     case (leters[index] === 'o'):
-      output.push(4);
-      break;
-     case (leters[index] === 'u'):
-      output.push(5);
-      break;
-     default: 
-      output.push(leters[index]);
-    }
-  }
-  return output.join('');
+  phrase = phrase.replace(/a/g,1);
+  phrase = phrase.replace(/e/g,2);
+  phrase = phrase.replace(/i/g,3);
+  phrase = phrase.replace(/o/g,4);
+  phrase = phrase.replace(/u/g,5);
+  return phrase;
 }
 function decode(phrase) {
-  let leters = phrase.split('');
-  let output = [];
-  for (let index = 0; index < leters.length; index += 1) {
-    if (leters[index] === '1') {
-      output.push('a');
-    } else if (leters[index] === '2') {
-      output.push('e');
-    } else if (leters[index] === '3') {
-      output.push('i');
-    } else if (leters[index] === '4') {
-      output.push('o');
-    } else if (leters[index] === '5') {
-      output.push('u');
-    } else {
-      output.push(leters[index]);
-    }
-  }
-  return output.join('');
+  phrase = phrase.replace(/1/g,'a')
+  phrase = phrase.replace(/2/g,'e')
+  phrase = phrase.replace(/3/g,'i')
+  phrase = phrase.replace(/4/g,'o')
+  phrase = phrase.replace(/5/g,'u')
+  return phrase;
 }
 
 module.exports = {
