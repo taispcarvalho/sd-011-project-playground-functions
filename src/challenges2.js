@@ -66,7 +66,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   let numbersArray = string.match(/\d+/g);
   let numberAdiction = 0;
-  for (index = 0; index < numbersArray.length; index += 1) {
+  for (let index = 0; index < numbersArray.length; index += 1) {
     numberAdiction += parseInt(numbersArray[index]);
   }
   if (numberAdiction === 1){
