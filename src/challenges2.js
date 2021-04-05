@@ -123,24 +123,23 @@ function triangleCheck(lineA, lineB, lineC) {
 
   return true;
 }
-console.log(triangleCheck(10, 13, 2));
 
 /// Desafio 13
 /// Neste desafio consultei o repositório de meu colega Renan Menezes
 /// Link: https://github.com/tryber/sd-011-project-playground-functions/tree/menezesrenan7-project-playground-functions/
-function hydrate(string) {
-  let parameter = /\d+/gm;  /// captura todos caracteres numéricos
-  let list = string.match(parameter).map(Number);  
+function hydrate(drinks) {
+  let parameter = /\d+/gm;  /// indica todos caracteres numéricos
+  let list = drinks.match(parameter).map(Number);  
   let sum = 0;
   for (let index of list) {
     sum += index;
   }
   
   if (sum > 1) {
-    return `${soma} copos de água`;
+    return `${sum} copos de água`;
   }
 
-  return `${soma} copo de água`;
+  return `${sum} copo de água`;
 }
 
 module.exports = {
