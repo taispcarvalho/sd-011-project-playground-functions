@@ -96,12 +96,31 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let chars = { a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  string = string.replace(/[aeiou]/g, (i) => chars[i]);
+  return string;
 }
-function decode() {
-  // seu código aqui
+
+console.log(encode('hi there!'))
+
+function decode(string) {
+  let chars = { 1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  string = string.replace(/[12345]/g, (i) => chars[i]);
+  return string;
 }
+
+console.log(decode('h3 th2r2!'))
 
 module.exports = {
   calcArea,
