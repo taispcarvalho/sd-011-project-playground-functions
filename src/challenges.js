@@ -49,10 +49,25 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'cat1';
 }
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function aux(number) {
+  if (number % 3 ===0 && number % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  if (number % 5 === 0) {
+    return 'fizz';
+  }
+  return 'bug!';
 }
-
+function fizzBuzz(numberOfArray) {
+  let arrayAux = [];
+  for (let index of numberOfArray) {
+    arrayAux.push(aux(index));
+  }
+  return arrayAux;
+}
 // Desafio 9
 function encode() {
   // seu código aqui
