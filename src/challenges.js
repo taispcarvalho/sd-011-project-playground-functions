@@ -61,7 +61,7 @@ console.log(footballPoints(0,0));
 
 // Desafio 6
 function highestCount(numbers) {
-  //Encontrar o maior valor
+  
   let highestNumber = 0;
   let countHighestNumberAppears = 0
   for(let index =0; index < numbers.length; index += 1){
@@ -85,6 +85,7 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+
   let distanceMouseCat1 = Math.abs(mouse - cat1);
   let distanceMouseCat2 = Math.abs(mouse - cat2);
   if(distanceMouseCat1<distanceMouseCat2){
@@ -92,7 +93,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }else if(distanceMouseCat1 > distanceMouseCat2){
     return 'cat2'
   }else{
-    return 'Os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge'
   }
 }
 console.log(catAndMouse(4,1,2));
