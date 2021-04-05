@@ -20,7 +20,7 @@ if (value10.length === 0){
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  // seu código aqi
 }
 
 // Desafio 12
