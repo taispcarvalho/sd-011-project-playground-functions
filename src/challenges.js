@@ -86,8 +86,7 @@ function encode(phrase) {
   for (let letter of phrase) {
     if (encodeDictionary[letter]) {
       phraseEncode += encodeDictionary[letter];
-    }
-    else {
+    } else {
       phraseEncode += letter;
     }
   }
@@ -98,8 +97,7 @@ function decode(phrase) {
   for (let letter of phrase) {
     if (encodeDictionary[letter]) {
       phraseDecode += encodeDictionary[letter];
-    }
-    else {
+    } else {
       phraseDecode += letter;
     }
   }
