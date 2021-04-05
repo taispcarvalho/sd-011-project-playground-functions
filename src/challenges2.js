@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(techArray, name) {
-  let technologyList = [];
   techArray.sort();
+  let technologyList = [];
   if (techArray.lengthlength === 0) {
     return 'Vazio!';
   }
