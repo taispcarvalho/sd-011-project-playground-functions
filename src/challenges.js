@@ -56,8 +56,8 @@ highestNumber([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  distan1 = cat1 - mouse;
-  distan2 = cat2 - mouse;
+  let distan1 = cat1 - mouse;
+  let distan2 = cat2 - mouse;
   if (distan1 < distan2) {
     return ('cat1');
   } else if (distan1 > distan2) {
