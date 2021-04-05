@@ -4,15 +4,14 @@ function techList(techs, name) {
     return 'Vazio!';
   }
 
-  techs = techs.sort()
+  techs = techs.sort();
   let newList = [];
 
   for (let index = 0; index < techs.length; index += 1) {
     newList.push({
       tech: techs[index],
-      name: name, 
-    }
-    )
+      name,
+    });
   }
   return newList;
 }
@@ -36,21 +35,24 @@ function checkRepeated(param1) {
 }
 
 function generatePhoneNumber(numbers) {
-let repeatedNumber = checkRepeated(numbers);
-if (repeatedNumber === true) {
-  return 'não é possível gerar um número de telefone com esses valores';
-}
-if (numbers.length > 11) {
-  return 'Array com tamanho incorreto.'
-}
-for (let index = 0; index < numbers.length; index += 1) {
-  if (numbers[index] > 9 || numbers[index] < 0) {
-    return 'não é possível gerar um número de telefone com esses valores'
+  let repeatedNumber = checkRepeated(numbers);
+  let result;
+  if (repeatedNumber === true) {
+    result = 'não é possível gerar um número de telefone com esses valores';
+  } else if (numbers.length > 11) {
+    result = 'Array com tamanho incorreto.';
+  } else {
+    for (let index = 0; index < numbers.length; index += 1) {
+      if (numbers[index] > 9 || numbers[index] < 0) {
+        result = 'não é possível gerar um número de telefone com esses valores';
+      } else {
+        result = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
+      }
+    }
   }
-} 
-return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`
+  return result;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 1, 1, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 1, 8, 9]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
