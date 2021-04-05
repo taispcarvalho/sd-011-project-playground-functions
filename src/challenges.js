@@ -51,8 +51,6 @@ function highestCount(numeros) {
   }
   return numeroRepetido;
 }
-let numeros = [9, 1, 2, 3, 9, 5, 7];
-highestCount(numeros);
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
