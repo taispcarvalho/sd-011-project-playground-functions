@@ -64,8 +64,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if ((distance2) < (distance1)) {
     return 'cat2';
-  } else 
-  return 'os gatos trombam e o rato foge';
+  } else
+    return 'os gatos trombam e o rato foge';
 }
 // console.log(catAndMouse(1, 0, 2))
 
@@ -78,7 +78,7 @@ function fizzBuzz(param1) {
       arrayFiBu.push('fizzBuzz');
     } else if (param1[index] % 5 === 0 && param1[index] % 3 !== 0) {
       arrayFiBu.push('buzz');
-    } else if (param1[index] % 3 === 0 && param1[index] % 5 !== 0) {
+    } else if (param1[index] % 15 === 0) {
       arrayFiBu.push('fizz');
     } else {
       arrayFiBu.push('bug!');
@@ -104,11 +104,11 @@ function encode(letters) {
 function decode(numbers) {
   // seu código aqui
   for (let index = 0; index < numbers.length; index += 1) {
-   numbers = numbers.replace(1, 'a');
-   numbers = numbers.replace(2, 'e');
-   numbers = numbers.replace(3, 'i');
-   numbers = numbers.replace(4, 'o') ;
-   numbers = numbers.replace(5, 'u');
+    numbers = numbers.replace(1, 'a');
+    numbers = numbers.replace(2, 'e');
+    numbers = numbers.replace(3, 'i');
+    numbers = numbers.replace(4, 'o') ;
+    numbers = numbers.replace(5, 'u');
   }
   return numbers;
 }

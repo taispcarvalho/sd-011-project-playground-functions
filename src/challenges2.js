@@ -1,10 +1,8 @@
 // Desafio 10
 function techList() {
   // seu código aqui
-  let name = Natalia;
-  let technologyList = '';
 }
-// console.logtechList(('React', 'Jest', 'HTML', 'CSS', 'JavaScript'));
+// console.log(techList('React', 'Jest', 'HTML', 'CSS', 'JavaScript'))
 
 // Desafio 11
 function generatePhoneNumber() {
