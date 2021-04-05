@@ -27,7 +27,8 @@ function concatName(string) {
   // seu código aqui
   let first = string[0];
   let last = string[string.length - 1];
-  return `${first} ${last}`;
+  let concat = `${first} ${last}`;
+  return concat;
 }
 let string = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 concatName(string);
