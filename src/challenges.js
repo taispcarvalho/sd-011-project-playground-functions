@@ -29,6 +29,8 @@ function concatName(string) {
   let last = string[string.length - 1];
   return `${first} ${last}`;
 }
+let string = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+concatName(string);
 // Desafio 5
 function footballPoints() {
   // seu código aqui
