@@ -38,14 +38,15 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (cat1 < cat2) {
     return ('cat1');
-  } else {
+  } 
+  if (cat1 > cat2){
     return ('cat2');
   }
 }
 function fizzBuzz(numeros) {
   let codificado = [];
-  for (let index = 0;index <= numeros.length - 1;index += 1) {
-    if (numeros[index] % 15 === 0) {
+  function troca(codificado,index){
+  if (numeros[index] % 15 === 0) {
     codificado.push('fizzBuzz');
     } else if (numeros[index] % 3 === 0) {
     codificado.push('fizz');
@@ -55,6 +56,10 @@ function fizzBuzz(numeros) {
     codificado.push('bug!');
     }
   }
+  for (let index = 0;index <= numeros.length - 1;index += 1) {
+    troca(array,index);
+  }
+  
   return (codificado);
 }
 function encode(frase) {
