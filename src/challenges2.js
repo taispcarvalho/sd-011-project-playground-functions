@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(techArray, name) {
+/* function techList(techArray, name) {
   let technologyList = [];
   techArray.sort();
   if (techArray.lengthlength === 0) {
@@ -12,11 +12,11 @@ function techList(techArray, name) {
     });
   }
   return technologyList;
-}
-// evaliador com erro 
+} */
+ 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  // 
 }
 
 // Desafio 12
