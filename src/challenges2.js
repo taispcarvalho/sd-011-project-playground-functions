@@ -2,19 +2,22 @@
 function techList(techName, namePerson) {
   techName.sort();
   let outputArray = [];
+  let obj = {};
 
   for (let index = 0; index < techName.length; index += 1){
-    outputArray[index] = {
+    obj = {
       tech: techName[index],
       name: namePerson
-    };
-    if (techName === null){
-      return 'Vazio!';
-    }
+    }; 
+    outputArray.push(obj);
+  }
+  if (techName.length <= 0){
+    return 'Vazio!';
   }
 
   return outputArray;
 }
+console.log(techList(['tech', 'css'], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber(phoneNumber) {
@@ -23,7 +26,13 @@ function generatePhoneNumber(phoneNumber) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // seu código aqui
+  let triangle = false;
+
+  if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)){
+    triangle = true;
+  } 
+
+  return triangle;
 }
 
 // Desafio 13

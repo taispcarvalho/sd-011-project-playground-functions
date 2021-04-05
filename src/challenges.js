@@ -28,21 +28,16 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbersArray) {
-  let number = {};
-  let numCompare = 0;
-  let highestNumber = 0;
-  for (let index = 0; index < numbersArray.length; index += 1) {
-    let val = numbersArray[index];
-    number[val] = (number[val] === undefined) ? number[val] = 1 : number[val] += 1;
-    if (number[val] > numCompare) {
-      numCompare = number[val];
-      highestNumber = numbersArray[index];
+  let highestNumber = Math.max.apply(Math, numbersArray);
+  let repeatCount = 0;
+
+  for (let index = 0; index < numbersArray.length; index += 1){
+    if (numbersArray[index] === highestNumber){
+      repeatCount += 1;
     }
   }
-  return highestNumber;
+  return repeatCount;
 }
-
-console.log(highestCount([1, 2, 2, 2, 5, 8, 9]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
