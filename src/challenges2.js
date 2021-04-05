@@ -17,7 +17,7 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numbers) {
+function possibleErrors(numbers) {
   let zero = 0;
   let one = 0;
   let two = 0;
@@ -29,7 +29,6 @@ function generatePhoneNumber(numbers) {
   let eight = 0;
   let nine = 0;
   let error = 0;
-  let numbersOutput = [];
   for (let index = 0; index < numbers.length; index += 1) {
     switch (numbers[index]) {
     case 0:
@@ -72,6 +71,13 @@ function generatePhoneNumber(numbers) {
   if (zero > 2 || one > 2 || two > 2 || three > 2 || four > 2 || five > 2 || six > 2
     || seven > 2 || eight > 2 || nine > 2 || error > 0) {
     return ('não é possível gerar um número de telefone com esses valores');
+  }
+  return 0
+}
+function generatePhoneNumber(numbers) {
+  let numbersOutput = [];
+  if(possibleErrors(numbers) != 0) {
+    return possibleErrors (numbers)
   }
   numbersOutput.push('(');
   for (let index = 0; index < 2; index += 1) {
