@@ -7,7 +7,7 @@ function techList(lista, nameName) {
       tech: lista[index],
       name: nameName,
     };
-    list.push(object);
+      list.push(object);
   }
 
   if (lista.length === 0) {
@@ -75,9 +75,8 @@ function generatePhoneNumber(numbers) {
   if (!validNumber(numbers) || !repetition(numbers)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  
-return phoneOrganizer(numbers);
 
+  return phoneOrganizer(numbers);
 }
 
 /// Desafio 12
@@ -128,7 +127,7 @@ function triangleCheck(lineA, lineB, lineC) {
 /// Link: https://github.com/tryber/sd-011-project-playground-functions/tree/menezesrenan7-project-playground-functions/
 function hydrate(drinks) {
   let parameter = /\d+/gm; /// indica todos caracteres numéricos
-  let list = drinks.match(parameter).map(Number);  
+  let list = drinks.match(parameter).map(Number);
   let sum = 0;
   for (let index of list) {
     sum += index;
@@ -138,8 +137,7 @@ function hydrate(drinks) {
     return `${sum} copos de água`;
   }
 
-return `${sum} copo de água`;
-
+  return `${sum} copo de água`;
 }
 
 module.exports = {
