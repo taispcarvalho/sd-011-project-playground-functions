@@ -11,7 +11,7 @@ if (array10.length === 0){
 else {
   for (let index = 0; index < array10.length; index +=1 ){
     let object = {
-      tech: array10[index],
+      tech : array10[index],
       name: name
     };
 
@@ -61,7 +61,7 @@ function hydrate(string) {
 
 function onlyNumbers(string) 
 { 
-    let sum = 0;
+    sum = 0;
     var numsStr = string.replace(/[^0-9]/g,'');
     for (let index=0; index < numsStr.length; index +=1 ){
       let n = parseInt(numsStr[index]);
