@@ -67,15 +67,17 @@ console.log(teste6);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let resultado = '';
   let distanceCat1 = Math.abs(cat1 - mouse);
   let distanceCat2 = Math.abs(cat2 - mouse);
   if (distanceCat1 < distanceCat2) {
-    return 'cat1';
+    resultado += 'cat1';
   } else if (distanceCat2 < distanceCat1) {
-    return 'cat2';
+    resultado += 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge';
+    resultado += 'os gatos trombam e o rato foge';
   }
+  return resultado;
 }
 let desafio7 = catAndMouse(0, 6, 6);
 console.log(desafio7);
