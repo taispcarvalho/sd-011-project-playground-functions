@@ -48,9 +48,9 @@ function highestCount() {
   for (let index = 0; index < numeros.length; index += 1) {
     if (numeroMaior === numeros[index]) {
       numeroRepetido += 1;
-      return numeroRepetido;
     }
   }
+  return numeroRepetido;
 }
 // Desafio 7
 function catAndMouse() {
