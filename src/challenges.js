@@ -60,9 +60,28 @@ console.log(footballPoints(1,2));
 console.log(footballPoints(0,0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  //Encontrar o maior valor
+  let highestNumber = 0;
+  let countHighestNumberAppears = 0
+  for(let index =0; index < numbers.length; index += 1){
+    if(numbers[index]> highestNumber ){
+      highestNumber = numbers[index];
+    }
+   
+  }
+  //Contar o número de vezes que o maior valor aparece.
+
+for(let index =0; index < numbers.length; index +=1  ){
+    if(numbers[index] === highestNumber){
+    countHighestNumberAppears += 1;
+  }
+    return countHighestNumberAppears;
 }
+}
+
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse() {
