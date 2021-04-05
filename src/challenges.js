@@ -95,10 +95,10 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'Os gatos trombam e o rato foge'
   }
 }
-console.log(catAndMouse(4,2,1));
 console.log(catAndMouse(4,1,2));
+console.log(catAndMouse(18,12,6));
 console.log(catAndMouse(4,2,2));
-console.log(catAndMouse(1,0,2));
+
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
