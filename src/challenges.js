@@ -60,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function conditionForFizzBuzz(value) {
-  if (value % 3 === 0 && value % 5 === 0) {
+  if (value % 15 === 0) {
     return 'fizzBuzz';
   }
   if (value % 3 === 0) {
@@ -78,6 +78,7 @@ function fizzBuzz(numbers) {
   }
   return newArrayFizBuzz;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45] ));
 
 // Desafio 9
 function encode(string) {
