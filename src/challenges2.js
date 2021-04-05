@@ -21,42 +21,63 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11
 
-function checkDuplicateNumber(array) {
-  let counts = {};
-  for (let num of array) {
-    counts[num] = (counts[num] || 0) + 1;
-    if (counts[num] === 3) return true;
+function lessThanThreeRepsSecond(index, array) {
+  let lessThanThree = true;
+  let counterOfRep = 0;
+  for (let index2 = 1; index2 < array.length; index2 += 1) {
+    if (array[index] === array[index2]) {
+      counterOfRep += 1;
+    }
   }
-  return false;
+  if (counterOfRep > 2) {
+    lessThanThree = false;
+  }
+  return lessThanThree;
 }
-
-function checkNumber(array) {
-  let biggest = Math.max(...array);
-  let lowest = Math.min(...array);
-  return biggest > 9 || lowest < 0;
+function lessThanThreeReps(array) {
+  let lessThanThree = true;
+  for (let index = 0; index < array.length; index += 1) {
+    lessThanThree = lessThanThreeRepsSecond(index, array);
+    if (lessThanThree === false) {
+      break;
+    }
   }
-
-
+  return lessThanThree;
+}
+function betweenZeroNine(array) {
+  let zeroAndNine = true;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] < 0 || array[index] > 9) {
+      zeroAndNine = false;
+    }
+  }
+  return zeroAndNine;
+}
+function withElevenNumbers(array) {
+  let phoneNumber = ['(', 0, 0, ') ', 0, 0, 0, 0, 0, '-', 0, 0, 0, 0];
+  let difOfIndex = 1;
+  for (let index = 0; index < array.length; index += 1) {
+    if (index === 2 || index === 7) {
+      difOfIndex += 1;
+      phoneNumber[index + difOfIndex] = array[index];
+    } else {
+      phoneNumber[index + difOfIndex] = array[index];
+    }
+  }
+  return phoneNumber.join('');
+}
 function generatePhoneNumber(array) {
-  let mask = '(xx) xxxxx-xxxx';
-  array.forEach(function (item) {
-    mask = mask.replace('x', item);
-  });
-  switch (true) {
-    case checkNumber(array) || checkDuplicateNumber(array):
-      return 'não é possível gerar um número de telefone com esses valores';
-    case array.length !== 11:
-      return 'Array com tamanho incorreto.';
-    default:
-      return mask;
+  let phoneNumber = [];
+  if (array.length !== 11) {
+    phoneNumber = 'Array com tamanho incorreto.';
+  } else if (betweenZeroNine(array) !== true || lessThanThreeReps(array) !== true) {
+    phoneNumber = 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    phoneNumber = withElevenNumbers(array);
   }
+  return phoneNumber;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-console.log(generatePhoneNumber([1, 2, 3, 0, 1]));
-console.log(generatePhoneNumber([2, 3, 4, 5, 6, 7, 8, 21]));
-console.log(generatePhoneNumber([2, 3, 4, 5, 6, 7, 8, -21]));
-console.log(generatePhoneNumber([2, 2, 2, 2, 2, 5, 6, 7, 8, 1, 3]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
