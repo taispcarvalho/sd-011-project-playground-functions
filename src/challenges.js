@@ -85,19 +85,19 @@ function encode(array1) {
   for (let i = 0; i < array1.length; i += 1) {
     switch (true) {
       case array1[i] === 'a':
-      return i = 1;
+      return i = '1';
       break;
       case array1[i] === 'e':
-      return i = 2;
+      return i = '2';
       break;
       case array1[i] === 'i':
-      return i = 3;
+      return i = '3';
       break;
       case array1[i] === 'o':
-      return i = 4;
+      return i = '4';
       break;
       case array1[i] === 'u':
-      return i = 5;
+      return i = '5';
       break;
     }
   }
@@ -107,19 +107,19 @@ function encode(array1) {
 function decode(array2) {
   for (let index = 0; index < array2.length; index += 1) {
     switch (true) {
-      case array2[index] === 1:
+      case array2[index] === '1':
       return index = 'a';
       break;
-      case array2[index] === 2:
+      case array2[index] === '2':
       return index = 'e';
       break;
-      case array2[index] === 3:
+      case array2[index] === '3':
       return index = i;
       break;
-      case array2[index] === 4:
+      case array2[index] === '4':
       return index = o;
       break;
-      case array2[index] === 5:
+      case array2[index] === '5':
       return index = u;
       break;
     }
