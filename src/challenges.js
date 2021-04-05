@@ -54,20 +54,22 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayNumber1) {
-  for (let number in arrayNumber1) {
+  let fizzBuzzArray = [];
+  for (let number = 0;number <= arrayNumber1.length - 1;number += 1) {
     if (arrayNumber1[number] % 3 === 0) {
-      return 'fizz';
+      fizzBuzzArray.push ('fizz');
     }
     else if (arrayNumber1[number] % 5 === 0) {
-      return 'buzz';
+      fizzBuzzArray.push ('buzz');
     }
-    else if (arrayNumber1[number] % 3 && arrayNumber1[number] % 5 === 0) {
-      return 'fizzBuzz';
+    else if (arrayNumber1[number] % 15 === 0) {
+      fizzBuzzArray.push ('fizzBuzz');
     }
     else {
-      return 'bug!';
+      fizzBuzzArray.push ('bug!');
     }
   }
+  return fizzBuzzArray;
 }
 
 // Desafio 9
