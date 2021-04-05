@@ -62,9 +62,10 @@ function fizzBuzz(entrada) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  return frase.replace(/(a|e|i|o|u)/gi, /(1|2|3|4|5)/);
 }
+
 function decode() {
   // seu código aqui
 }
