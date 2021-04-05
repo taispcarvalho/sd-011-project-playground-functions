@@ -7,7 +7,7 @@ function techList(tech, name) {
   if ( tech.length <= 0 || tech.length === undefined) {
     return 'Vazio';
   } else {
-    for (let index = 0; index < tech.length; index += 1) {
+    for (let index in tech) {
       listTec = {
         tech: ordenedNames[index],
         name: `${name}`,
@@ -15,9 +15,9 @@ function techList(tech, name) {
       list.push(listTec)
     }
   }
-  return listTec
+  return list
 }
-console.table(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Antonio"));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Antonio"));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
