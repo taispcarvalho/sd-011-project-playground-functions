@@ -43,21 +43,21 @@ function catAndMouse(mouse, cat1, cat2) {
     return ('cat2');
   }
 }
-function fizzBuzz(numeros) {
-  let codificado = [];
-  function troca(codificado,index){
+function troca(codificado, index) {
   if (numeros[index] % 15 === 0) {
     codificado.push('fizzBuzz');
-    } else if (numeros[index] % 3 === 0) {
+  } else if (numeros[index] % 3 === 0) {
     codificado.push('fizz');
-    } else if (numeros[index] % 5 === 0) {
+  } else if (numeros[index] % 5 === 0) {
     codificado.push('buzz');
-    } else {
+  } else {
     codificado.push('bug!');
-    }
   }
-  for (let index = 0;index <= numeros.length - 1;index += 1) {
-    troca(codificado,index);
+}
+function fizzBuzz(numeros) {
+  let codificado = [];
+  for (let index = 0; index <= numeros.length - 1; index += 1) {
+    troca(codificado,   index);
   }
   return (codificado);
 }
