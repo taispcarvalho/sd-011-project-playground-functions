@@ -56,9 +56,10 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distCat01 = mouse - cat1;
   let distCat02 = mouse - cat2;
-  if (distCat01 > distCat02) {
+  if (distCat01 < distCat02) {
     return 'cat1';
-  } if (distCat02 === distCat01) {
+  }
+  if (distCat02 === distCat01) {
     return 'Os gatos trombam e o rato foge';
   }
 }
