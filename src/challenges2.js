@@ -15,7 +15,7 @@ objectTest2.push(objectTest);
 
 if (value10.length === 0){
   let arrayVazio = 'Vazio!';
-  objectTest2 = arrayVazio;
+  return arrayVazio;
 }
 
   return objectTest2;
