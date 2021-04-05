@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  return value1 && value2
+  return value1 && value2;
 }
 console.log(compareTrue(false, true));
 console.log(compareTrue(true, false));
@@ -46,13 +46,11 @@ console.log(footballPoints(0, 0));
 // Desafio 6
 function highestCount(listNumbers) {
   let highestNumber = listNumbers[0];
-  
-  for (let index = 0; index < listNumbers.lenght; index += 1) {
+    for (let index = 0; index < listNumbers.lenght; index += 1) {
     if (listNumbers[index] > highestNumber) {
       highestNumber = listNumbers[index];
     }
   }
-
   let appearNumber = 0;
   for (let index = 0; index < listNumbers.lenght; index += 1) {
     if (listNumbers[index] === highestNumber) {
@@ -72,14 +70,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let positionCat2 = Math.abs(cat2 - mouse);
 
   if (positionCat1 === positionCat2) {
-    return 'Os gatos trombam e o rato foge'
+    return 'Os gatos trombam e o rato foge';
   }
-  
   if (positionCat1 > positionCat2) {
     return 'Cat2';
   }
-
-  return 'Cat1'
+  return 'Cat1';
 }
 console.log(catAndMouse(0, 3, 2));
 console.log(catAndMouse(0, 6, 12));
