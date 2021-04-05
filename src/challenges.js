@@ -28,7 +28,8 @@ function concatName(concatenando) {
   return concatenando;
 }
 let concatenando = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-concatName(concatenando[0][concatenando.length - 1]);
+
+concatName(concatenando[0][3]);
 // Desafio 5
 function footballPoints() {
   // seu código aqui
