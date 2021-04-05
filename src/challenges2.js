@@ -16,8 +16,40 @@ function techList(tecnologias, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function calculaRepeticoes(numeros, number) {
+  let repeticoes = 0;
+  for (let index = 0; index <= numeros.length; index += 1) {
+    if (number === numeros[index]) {
+      repeticoes += 1;
+    }
+  }
+  return repeticoes;
+}
+
+function verificaNumeros(numeros) {
+  for (let index = 0; index <= numeros.length; index += 1) {
+    let moto = numeros[index];
+    if (moto > 9 || moto < 0 || calculaRepeticoes(numeros, moto) > 2) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+}
+
+function generatePhoneNumber(numeros) {
+  let func = verificaNumeros(numeros);
+  if (numeros.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (func) {
+    return func;
+  }
+  let strNumber = '';
+  let ordenedNumbers = /(\d{2})(\d{5})(\d{4})/;
+  for (let index = 0; index <= numeros.length; index += 1) {
+    strNumber += numeros[index];
+    strNumber = strNumber.replace(ordenedNumbers, '($1) $2-$3');
+  }
+  return strNumber;
 }
 
 // Desafio 12
