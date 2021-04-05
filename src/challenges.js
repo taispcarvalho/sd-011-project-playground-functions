@@ -21,16 +21,21 @@ function concatName(myArray) {
 }
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins*3)+ties;
+  return (wins * 3) + ties;
 }
-footballPoints(0, 0);
-
-
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(arrayNumbers) {
+  let arrayAux = arrayNumbers.sort((a, b) => b - a);
+  let count = 1;
+  let highest = arrayAux[0];
 
+  for (let index = 1; index < arrayAux.length; index += 1) {
+    if (arrayAux[index] === highest) {
+      count += 1;
+    }
+  }
+  return count;
+}
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
