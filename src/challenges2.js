@@ -11,7 +11,7 @@ function techList(array, name) {
   return newObject;
 }
 // Desafio 11
-function checkNumbers(array) {
+function checkRepeadtedNumber(array) {
   for (let numbers of array) {
     let count = 0;
     for (let element of array) {
@@ -19,21 +19,32 @@ function checkNumbers(array) {
         count += 1;
       }
     }
-    if (count >= 3) return 'não é possível gerar um número de telefone com esses valores';
+    return count;
+  }
+}
+
+function checkArrayLength(array) {
+  if (array.length !== 11) return 'Array com tamanho incorreto.';
+}
+
+function checkNumbers(array) {
+  for (let numbers of array) {
+    let frase = 'não é possível gerar um número de telefone com esses valores';
+    if (numbers < 0 || numbers > 9) return frase;
   }
 }
 
 function generatePhoneNumber(array) {
-  if (array.length !== 11) return 'Array com tamanho incorreto.';
-  for (let numbers of array) {
-    if (numbers < 0 && numbers > 9) return 'não é possível gerar um número de telefone com esses valores';
+  if (checkArrayLength(array) >= 3) {
+    return 'Array com tamanho incorreto.';
   }
-  checkNumbers(array);
+  if (checkNumbers(array));
+  if (checkRepeadtedNumber(array));
   return `(${array[0]}${array[1]})${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 }
 
-let randomNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(randomNumbers));
+let phoneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 1];
+console.log(generatePhoneNumber(phoneNumber));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineC < lineA + lineB && lineC > Math.abs(lineB - lineA)) return true;
