@@ -67,25 +67,34 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
+  let answer = [];
   let obj = {
-    f(a) {
-      let answer = [];
-      for (let i = 0; i < a.length; i += 1) {
-        if (a[i] % 3 === 0) {
-          answer[i] = 'fizz';
-        } else if (a[i] % 5 === 0) {
-          answer[i] = 'buzz';
-        } else {
-          answer[i] = 'bug!';
-        }
-        if (a[i] % 3 === 0 && a[i] % 5 === 0) {
-          answer[i] = 'fizzBuzz';
-        }
+    fiBu(fb) {
+      if (fb % 3 == 0 && fb % 5 == 0) {
+        return 'fizzBuzz';
       }
-      return answer;
     },
+    fizz(fz) {
+      if (fz % 3 == 0) {
+        return 'fizz';
+      }
+    }, 
+    buzz(bz) {  
+      if (bz % 5 == 0) 
+        return 'buzz';
+    },
+   
+    bug(bg) {   
+      if (bg % 3 !== 0 && bg % 5 !== 0) {
+          return 'bug!';
+        } else return bg;
+      }
   };
-  return obj.f(array);
+  
+  for (let i = 0; i < array.length; i += 1) {
+    answer[i] = obj.fiBu(array[i]) || obj.fizz(array[i]) || obj.buzz(array[i]) || obj.bug(array[i]);
+  }
+  return answer;
 }
 
 // Desafio 9
