@@ -21,9 +21,9 @@ function techList(tech, name) {
 // https://learnersbucket.com/examples/javascript/how-to-format-phone-number-in-javascript/
 function phoneNumber(numberArray) {
   // Filter only numbers from the input
-  let cleaned = ('' + numberArray).replace(/\D/g, '');
+  let cleaned = `${('' + numberArray).replace(/\D/g, '')}`;
   // Check if the input is of correct length
-  let match = cleaned.match(/^(\d{$2})(\d{$5})(\d{$4})$/);
+  let match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/);
   if (match) {
     return `${'(' + match[1] + ') ' + match[2] + '-' + match[3]}`;
   }
