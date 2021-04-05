@@ -23,15 +23,15 @@ function splitSentence(goTrybe) {
 }
 splitSentence('Go trybe');
 // Desafio 4
-function concatName(first, last) {
+function concatName(names) {
   // seu código aqui
-  let concat = first + last;
+  let first = [...names].shift();
+  let last = [...names].pop();
+  let concat = `${first} ${last}`;
   return concat;
 }
 let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-let first = [...names].shift();
-let last = [...names].pop();
-concatName(first, last);
+concatName(names);
 // Desafio 5
 function footballPoints() {
   // seu código aqui
