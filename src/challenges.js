@@ -17,8 +17,8 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(listName) {
-  let ultimo = listName.slice(listName.length, listName.length);
-  let primeiro = listName.slice(0, 0);
+  let ultimo = listName[listName.length - 1];
+  let primeiro = listName[listName[0]];
   return ultimo.concat(primeiro);
 } console.log(concatName);
 
