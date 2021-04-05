@@ -85,7 +85,7 @@ function encode(phrase) {
   let phraseEncode = '';
   for (let letter of phrase) {
     if (encodeDictionary[letter]) {
-    phraseEncode += encodeDictionary[letter];
+      phraseEncode += encodeDictionary[letter];
     }
     else {
       phraseEncode += letter;
@@ -93,20 +93,18 @@ function encode(phrase) {
   }
   return phraseEncode;
 }
-console.log(encode('hi there!'));
-function decode() {
+function decode(phrase) {
   let phraseDecode = '';
   for (let letter of phrase) {
     if (encodeDictionary[letter]) {
-    phraseDecode += encodeDictionary[letter];
+      phraseDecode += encodeDictionary[letter];
     }
     else {
       phraseDecode += letter;
     }
   }
-  return phraseDcode;
+  return phraseDecode;
 }
-console.log(encode('h3 th2r2!'));
 module.exports = {
   calcArea,
   catAndMouse,
