@@ -38,8 +38,8 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (cat1 < cat2) {
     return ('cat1');
-  } 
-  if (cat1 > cat2){
+  }
+  if (cat1 > cat2) {
     return ('cat2');
   }
 }
@@ -57,9 +57,8 @@ function fizzBuzz(numeros) {
     }
   }
   for (let index = 0;index <= numeros.length - 1;index += 1) {
-    troca(array,index);
+    troca(codificado,index);
   }
-  
   return (codificado);
 }
 function encode(frase) {
