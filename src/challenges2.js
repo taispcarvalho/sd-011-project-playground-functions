@@ -25,12 +25,16 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA > lineB + lineC || lineA < Math.abs(lineB - lineC) || lineB > lineA + lineC || lineB < Math.abs(lineA - lineC) || lineC > lineA + lineB || lineC < Math.abs(lineA - lineB)) {
+  if (lineA > lineB + lineC || lineA < Math.abs(lineB - lineC)) {
     return false;
+  } else if (lineC > lineA + lineB || lineC < Math.abs(lineA - lineB)) {
+    return false;
+  } else if (lineC > lineA + lineB || lineC < Math.abs(lineA - lineB)) {
+    return false;
+  } else {
+    return true;
   }
-  return true;
 }
-console.log(triangleCheck(28, 14, 14));
 
 // Desafio 13
 function hydrate() {

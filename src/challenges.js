@@ -19,7 +19,7 @@ console.log(splitSentence('Vivian Maria Braga'));
 
 // Desafio 4
 function concatName(names) {
-  return `${names[names.length - 1], }` `${names[0]}`;
+  return `${names[names.length - 1], ${names[0]}`;
 }
 console.log(concatName(['Vivian', 'Maria', 'Braga']));
 
