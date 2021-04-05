@@ -63,7 +63,14 @@ function fizzBuzz(entrada) {
 
 // Desafio 9
 function encode(frase) {
-  return frase.replace(/(a|e|i|o|u)/gi, /(1|2|3|4|5)/);
+  for (let index = 0; index < frase.length; index += 1) {
+    frase = frase.replace('a', '1');
+    frase = frase.replace('e', '2');
+    frase = frase.replace('i', '3');
+    frase = frase.replace('o', '4');
+    frase = frase.replace('u', '5');
+  }
+  return frase;
 }
 
 function decode() {
