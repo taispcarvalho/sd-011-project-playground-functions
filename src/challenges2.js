@@ -18,37 +18,37 @@ function techList(array, name) {
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Alan'));
 
 // Desafio 11
-function arraySize (array) {
-}
+function arraySize(array) {
 
-function repeats (numbers, array) {
+
+function repeats(numbers, array) {
   let count = 0;
   for (let thirdIndex = 0; thirdIndex < array.length; thirdIndex += 1) {
     if (array[thirdIndex] === numbers) {
       count += 1;
     }
   }
-  return count
+  return count;
 }
 
-function arrayNumber (array) {
+function arrayNumber(array) {
   let number = true;
   for (let secondIndex = 0; secondIndex < array.length; secondIndex += 1) {
     if (array[secondIndex] < 0 || array[secondIndex] > 9 || repeats(array[secondIndex], array) >= 3) {
       number = false;
     }
   }
-  return number
+  return number;
 }
 
 function formatNumber(array) {
-let str = array.join('');
-return `(${str.substring(0, 2)}) ${str.substring(2, 7)}-${str.substring(7)}`;
+  let str = array.join('');
+  return `(${str.substring(0, 2)}) ${str.substring(2, 7)}-${str.substring(7)}`;
 }
 
 function generatePhoneNumber(array) {
   let numberPhone = formatNumber(array);
-  if (array.length != 11) {
+  if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   if (arrayNumber(array) === false) {
@@ -69,8 +69,8 @@ function triangleCheck(lineA, lineB, lineC) {
   if (Math.abs(lineA) < lineC - lineB || Math.abs(lineB) < lineC - lineA || Math.abs(lineC) < lineB - lineA) {
     return false;
   }
-    return true;
-  }
+  return true;
+}
 
 console.log(triangleCheck(10, 14, 8));
 
