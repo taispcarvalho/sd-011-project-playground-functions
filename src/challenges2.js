@@ -58,17 +58,16 @@ function generatePhoneNumber(numberArray) {
 
 // Desafio 12
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+// para diminuir a complexidade do meu código,comparei com o codigo do colega vitor cardoso
+// https://github.com/tryber/sd-011-project-playground-functions/pull/77/files
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < (lineB + lineC) && Math.abs(lineA) > lineB && lineC) {
-    return true;
+  let lines1 = Math.abs(lineA + lineB);
+  let lines2 = Math.abs(lineA - lineB);
+  let value = false;
+  if (lineC < lines1 && lineC > lines2) {
+  value = true;
   }
-  if (lineB < (lineA + lineC) && Math.abs(lineB) > lineA && lineC) {
-    return true;
-  }
-  if (lineC < (lineA + lineB) && Math.abs(lineC) > lineA && lineB) {
-    return true;
-  }
-  return false;
+  return value;
 }
 
 // Desafio 13
