@@ -48,10 +48,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let cond2 = Math.abs(lineA - lineC) < lineB < lineA + lineC;
   let cond3 = Math.abs(lineA - lineB) < lineC < lineA + lineB;
   return cond1 && cond2 && cond3;
-
-// | b - c | < a < b + c
-// | a - c | < b < a + c
-// | a - b | < c < a + b
+}
 
 // Desafio 13
 function hydrate() {
