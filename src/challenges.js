@@ -71,28 +71,27 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 
 function secondFizzBuzz(numbers) {
-    let text = 0;
-    if (numbers % 15 === 0) {
-      text = 'fizzBuzz';
-    } else if (numbers % 3 === 0) {
-      text = 'fizz';
-    } else if (numbers % 5 === 0) {
-      text = 'buzz';
-    } else {
-      text = ('bug');
-    }
-    return text;
+  let text = 0;
+  if (numbers % 15 === 0) {
+    text = 'fizzBuzz';
+  } else if (numbers % 3 === 0) {
+    text = 'fizz';
+  } else if (numbers % 5 === 0) {
+    text = 'buzz';
+  } else {
+    text = ('bug');
+  }
+  return text;
 }
 
 function fizzBuzz(array) {
   let result = [];
-  for (let index = 0; index < array.length; index += 1) {
+  for(let index = 0; index < array.length; index += 1) {
 
-    result.push (secondFizzBuzz(array[index]));
+    result.push(secondFizzBuzz(array[index]));
   }
   return result;
 }
-
 
 // Desafio 9
 function encode() {
