@@ -79,11 +79,48 @@ function generatePhoneNumber(numbers) {
   
   return phoneOrganizer(numbers);
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+// Função auxiliar
+function sumFace(lineA, lineB, lineC) {
+  if (lineA + lineB > lineC) {
+    return true;
+  }
+
+  if (lineB + lineC > lineA) {
+    return true;
+  }
+
+  if (lineA + lineC > lineB) {
+    return true;
+  }
+
+  return false;
+}
+
+//Função auxiliar
+function diFace(lineA, lineB, lineC) {
+  if (Math.abs(lineA - lineB) < lineC) {
+    return true;
+  }
+
+  if (Math.abs(lineB - lineC) < lineA) {
+    return true;
+  }
+
+  if (Math.abs(lineA - lineC) < lineB) {
+    return true;
+  }
+
+  return false;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  if (!sumFace(lineA, lineB, lineC) || !diFace(lineA, lineB, lineC)) {
+    return false;
+  }
+
+  return true;
 }
 
 // Desafio 13
