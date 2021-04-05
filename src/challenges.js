@@ -105,6 +105,8 @@ function decode(phrase) {
   }
   return phraseDecode;
 }
+console.log(decode('h3 th2r2!'));
+console.log(encode('hi there!'));
 module.exports = {
   calcArea,
   catAndMouse,
