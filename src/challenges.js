@@ -16,6 +16,9 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(name) {
+  for (let index = 0; index <= name.length; index++) {
+    return name.toString ((index = name.length - 1) + (index = 0))
+  }  
   let stringName = name[name.length - 1] + ',' + name[0];
   return stringName.toString();
 }
