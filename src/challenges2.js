@@ -20,7 +20,7 @@ function orderList(arrayOfObjects) {
 }
 
 function techList(array, name) {
-  if (array.length === 0){
+  if (array.length === 0) {
     return 'Vazio!';
   }
   let techObjects = [];
