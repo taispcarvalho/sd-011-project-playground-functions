@@ -49,7 +49,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-funcion numFizzBuzz(numero) {
+function numFizzBuzz(numero) {
   if (numero % 15 === 0) {
     return 'fizzBuzz';
   } if (numero % 3 === 0) {
@@ -69,7 +69,6 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-
 function encode(string) {
   let encryptoDictionary = { a: 1, e: 2, i: 3, o: 4, u: 5, } 
   let encodeString = '';
