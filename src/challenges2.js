@@ -95,8 +95,12 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  lineA = Math.abs(lineA);
+  lineB = Math.abs(lineB);
+  lineC = Math.abs(lineC);
+
+  return lineA + lineB > lineC && lineC + lineB > lineA && lineC + lineA > lineB;
 }
 
 // Desafio 13
