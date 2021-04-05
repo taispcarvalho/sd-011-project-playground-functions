@@ -19,8 +19,11 @@ function splitSentence(frase) {
 
 // Desafio 4 - ok - verificar
 function concatName(array) {
-  let string = array[array.length - 1].concat(', ' + array[0]);
-  return string;
+  let nome = array[0];
+  let ultimoNome = array[array.length - 1];
+  let resNome = `${ultimoNome}, ${nome}`;
+
+  return resNome;
 }
 
 // Desafio 5 - ok
