@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(num1, num2) {
-  return num1 && num2
+  return num1 && num2;
 }
 
 console.log(compareTrue(true, true));
@@ -110,82 +110,82 @@ function fizzBuzz(array) {
   return array;
 }
 
-  console.log(fizzBuzz([2, 15, 7, 9, 45]));
-  console.log(fizzBuzz([2, 9]));
-  console.log(fizzBuzz([9, 25]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([2, 9]));
+console.log(fizzBuzz([9, 25]));
 
-  // Desafio 9
-  function encode(string) {
-    let encodedMessage = '';
+// Desafio 9
+function encode(string) {
+  let encodedMessage = '';
 
-    for (let index = 0; index < string.length; index += 1) {
-      if (string[index].toLowerCase() === string[index]) {
-        switch (string[index]) {
-          case 'a':
-            encodedMessage += '1';
-            break;
-          case 'e':
-            encodedMessage += '2';
-            break;
-          case 'i':
-            encodedMessage += '3';
-            break;
-          case 'o':
-            encodedMessage += '4';
-            break;
-          case 'u':
-            encodedMessage += '5';
-            break;
-          default:
-            encodedMessage += string[index];
-        }
-      } else {
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index].toLowerCase() === string[index]) {
+      switch (string[index]) {
+      case 'a':
+        encodedMessage += '1';
+        break;
+      case 'e':
+        encodedMessage += '2';
+        break;
+      case 'i':
+        encodedMessage += '3';
+        break;
+      case 'o':
+        encodedMessage += '4';
+        break;
+      case 'u':
+        encodedMessage += '5';
+        break;
+      default:
         encodedMessage += string[index];
       }
+    } else {
+      encodedMessage += string[index];
     }
-    return encodedMessage;
   }
+  return encodedMessage;
+}
 
-  console.log(encode('hi, there'));
+console.log(encode('hi, there'));
 
-  function decode(number) {
-    let decodedMessage = '';
+function decode(number) {
+  let decodedMessage = '';
 
-    for (let index = 0; index < number.length; index += 1) {
-      switch (number[index]) {
-        case '1':
-          decodedMessage += 'a';
-          break;
-        case '2':
-          decodedMessage += 'e';
-          break;
-        case '3':
-          decodedMessage += 'i';
-          break;
-        case '4':
-          decodedMessage += 'o';
-          break;
-        case '5':
-          decodedMessage += 'u';
-          break;
-        default:
-          decodedMessage += number[index];
-      }
+  for (let index = 0; index < number.length; index += 1) {
+    switch (number[index]) {
+    case '1':
+      decodedMessage += 'a';
+      break;
+    case '2':
+      decodedMessage += 'e';
+      break;
+    case '3':
+      decodedMessage += 'i';
+      break;
+    case '4':
+      decodedMessage += 'o';
+      break;
+    case '5':
+      decodedMessage += 'u';
+      break;
+    default:
+      decodedMessage += number[index];
     }
-    return decodedMessage;
   }
+  return decodedMessage;
+}
 
-  console.log(decode('h3, th2r2'));
+console.log(decode('h3, th2r2'));
 
-  module.exports = {
-    calcArea,
-    catAndMouse,
-    compareTrue,
-    concatName,
-    decode,
-    encode,
-    fizzBuzz,
-    footballPoints,
-    highestCount,
-    splitSentence,
-  };
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
+};
