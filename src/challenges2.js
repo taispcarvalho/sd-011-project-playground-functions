@@ -11,7 +11,8 @@ function techList(tech, name) {
   return result;
 }
 // Desafio 11
-// let vetor = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1,];
+let vetor = [9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1];
+
 function checkSize (array) {
   if (array.length !== 11){
     return false;
@@ -32,12 +33,13 @@ function checkArray (array) {
         count += 1;
       }
     }
+
   count = 0;
   if (count >= 3) {
     return false;
   }
-  return true;
   }
+  return true;
 }
 
 function generatePhoneNumber (vetor){
@@ -52,7 +54,7 @@ function generatePhoneNumber (vetor){
   let lastFour = `-${vetor[7]}${vetor[8]}${vetor[9]}${vetor[10]}`;
   return `${ddd}${firstFive}${lastFour}`;
 }
-// console.log(generatePhoneNumber(vetor));
+console.log(generatePhoneNumber(vetor));
 
 // Desafio 12
 function triangleCheck() {
