@@ -20,7 +20,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins*3) + ties;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
@@ -33,7 +33,7 @@ function highestCount(numbers) {
       count += 1;
     }
   }
-  return count
+  return count;
 }
 
 // Desafio 7
