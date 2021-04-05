@@ -66,16 +66,15 @@ function fizzBuzz(array) {
   let arr = [];
   for(let index = 0; index < arr.length; index += 1 ){
     if(array[index] % 3 === 0 && array[index] % 5 != 0){
-      arr.push('fizz')
+      return 'fizz'
     }else if(array[index] % 3 != 0 && array[index] % 5 === 0){
-      arr.push('buzz')
+      return 'buzz'
     }else if(array[index] % 3 === 0 && array[index] % 5 === 0){
-      arr.push('fizzBuzz')
+      return 'fizzBuzz'
     }else if(array[index] % 3 != 0 && array[index] % 5 != 0){
-      arr.push('bug!')
+      return 'bug!'
     }
   }
-  return arr
 }
 
 // Desafio 9
