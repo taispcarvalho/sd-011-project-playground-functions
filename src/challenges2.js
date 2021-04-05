@@ -12,7 +12,7 @@ function techList(techName, devName) {
     }
   }
   if (technologies.length === 0) {
-    return 'Empty!';
+    return 'Vazio!';
   }
   return technologies;
 }
