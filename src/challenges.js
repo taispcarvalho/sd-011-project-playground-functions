@@ -9,7 +9,7 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 console.log(calcArea(5, 10));
-
+git
 // Desafio 3
 // https://www.w3schools.com/jsref/jsref_split.asp //
 function splitSentence(sentence) {
@@ -21,7 +21,6 @@ console.log(splitSentence('Vivian Maria Braga'));
 function concatName(names) {
   return names[names.length - 1] + ', ' + names[0];
 }
-
 console.log(concatName(['Vivian', 'Maria', 'Braga']));
 
 // Desafio 5
