@@ -102,7 +102,7 @@ function fizzBuzz(arrayNumbers) {
 
 // Desafio 9
 function encode(sentence) {
-  let chars = { 
+  let chars = {
     a: '1',
     e: '2',
     i: '3',
@@ -110,13 +110,13 @@ function encode(sentence) {
     u: '5',
   };
 
-  sentence = sentence.replace(/[aeiou]/g, () => chars[i]);
+  sentence = sentence.replace(/[aeiou]/g, (i) => chars[i]);
 
   return sentence;
 }
 
 function decode(sentence) {
-  let chars = { 
+  let chars = {
     1: 'a',
     2: 'e',
     3: 'i',
@@ -124,7 +124,7 @@ function decode(sentence) {
     5: 'u',
   };
 
-  sentence = sentence.replace(/[12345]/g, () => chars[i]);
+  sentence = sentence.replace(/[12345]/g, (i) => chars[i]);
 
   return sentence;
 }
