@@ -30,8 +30,6 @@ function concatName(names) {
   let concat = `${first} ${last}`;
   return concat;
 }
-let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-concatName(names);
 // Desafio 5
 function footballPoints() {
   // seu código aqui
