@@ -13,16 +13,18 @@ function splitSentence(myString) {
   return myString;
 }
 // Desafio 4
-let myArray = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName(myArray) {
   let firstIten = myArray[0];
-  let lastIten = myArray[myArray.length-1];
+  let lastIten = myArray[myArray.length - 1];
   let newArray = `${lastIten}, ${firstIten}`;
+  return newArray;
 }
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins*3)+ties;
 }
+footballPoints(0, 0);
+
 
 // Desafio 6
 function highestCount() {
