@@ -91,24 +91,24 @@ function fizzBuzz(param1) {
 // Desafio 9
 function encode(letters) {
   for (let index = 0; index < letters.length; index += 1) {
-  letters = letters.replace ('a', 1);
-  letters = letters.replace ('e', 2);
-  letters = letters.replace ('i', 3);
-  letters = letters.replace ('o', 4);
-  letters = letters.replace ('u', 5);
+    letters = letters.replace('a', 1);
+    letters = letters.replace('e', 2);
+    letters = letters.replace('i', 3);
+    letters = letters.replace('o', 4);
+    letters = letters.replace('u', 5);
   }
   return letters;
 }
- // console.log(encode('hi there!'));
+// console.log(encode('hi there!'));
 
 function decode(numbers) {
   // seu código aqui
   for (let index = 0; index < numbers.length; index += 1) {
- numbers = numbers.replace (1, 'a');
- numbers = numbers.replace (2, 'e');
- numbers = numbers.replace (3, 'i');
- numbers = numbers.replace ( 4,'o') ;
- numbers = numbers.replace (5, 'u');
+   numbers = numbers.replace(1, 'a');
+   numbers = numbers.replace(2, 'e');
+   numbers = numbers.replace(3, 'i');
+   numbers = numbers.replace(4, 'o') ;
+   numbers = numbers.replace(5, 'u');
   }
   return numbers;
 }
