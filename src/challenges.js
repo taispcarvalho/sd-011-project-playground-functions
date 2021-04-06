@@ -79,9 +79,9 @@ function fizzBuzz(arrayNumber) {
       string = 'buzz';
     }
   }
-  let numbers = [];
-  numbers = string.push(numbers);
-  return numbers;
+  let num = [];
+  num = string.push(num);
+  return num;
 }
 let arrayNumber = [2, 15, 7, 9, 45];
 fizzBuzz(arrayNumber);
