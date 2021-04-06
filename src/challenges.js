@@ -79,8 +79,8 @@ function fizzBuzz(arrayNumber) {
     } else if (arrayNumber[index] % 5 === 0) {
       string = 'buzz';
     }
+    number.push(string);
   }
-  number.push(string);
   return number;
 }
 let arrayNumber = [2, 15, 7, 9, 45];
