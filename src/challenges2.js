@@ -16,8 +16,7 @@ function techList(array, name) {
   }
 }
 let array = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-let name = 'lucas';
-techList(array, name);
+techList(array);
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
