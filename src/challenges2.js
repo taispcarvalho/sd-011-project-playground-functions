@@ -10,7 +10,7 @@ function techList(techies, name) {
 // Desafio 11
 function generatePhoneNumber(arr) {
   if (arr.length !== 11) return 'Array com tamanho incorreto.';
-  if (/-|\d\d|(.).*\1.*\1/.test(arr.join(','))) {
+  if (/-|\d\d|(\d).*\1.*\1/.test(arr.join(','))) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   return arr.join('').replace(/(..)(.{5})(.{4})/g, '($1) $2-$3');
