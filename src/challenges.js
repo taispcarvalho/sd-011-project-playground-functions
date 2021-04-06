@@ -80,7 +80,8 @@ function fizzBuzz(arrayNumber) {
     }
   }
   let numbers = [];
-  return string.push(numbers);
+  numbers = string.push(numbers);
+  return numbers;
 }
 let arrayNumber = [2, 15, 7, 9, 45];
 fizzBuzz(arrayNumber);
