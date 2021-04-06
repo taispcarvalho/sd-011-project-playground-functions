@@ -20,25 +20,27 @@ console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName() {
   let nome = ['Rafael', 'Batista', 'de', 'Oliveira'];
-  let myarr = (nome[3]) + ',' + (nome[0]);
-  console.log(myarr);
+  let last = nome[nome.length-1];
+  let first = nome[0];
+  let lastfirst = (last + ',' +  first);
+  return(lastfirst);
 }
-concatName();
+console.log(concatName());
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3 + ties * 1);
 }
-console.log(footballPoints(1,2));
+console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount() {
 
 }
 
-function catAndMouse(mouse, cat1, cat2) {
+function catAndMouse(mouse, cat1, cat2) {  
   if (mouse < cat2 && cat2 > cat1) {
-    return ('cat1');
+    console.log('cat1');
   } else if (cat1 === cat2) {
     return ('os gatos trombam e o rato foge');
   } else {
@@ -50,7 +52,7 @@ console.log(catAndMouse(0, 6, 12));
 // Desafio 8
 
 function fizzBuzz() {
-  let numeros  = [7, 9];
+  let numeros = [7, 9];
   for (let index = 0; index < numeros.length; index ++) {    
     if ((numeros[index] % 3) === 0 && ((numeros[index] % 5) === 0)) {
       return (numeros[index],'fizzBuzz');
@@ -72,6 +74,14 @@ function encode() {
 function decode() {
   // seu código aqui
 }
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < (lineB + lineC) && lineB < (lineA+lineB) && lineC < (lineA+lineB)) {
+    return true;
+  } else {
+  }
+  return false;
+}
+console.log(triangleCheck(10,14,8 ));
 
 module.exports = {
   calcArea,
@@ -84,4 +94,5 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   splitSentence,
+  triangleCheck,
 }
