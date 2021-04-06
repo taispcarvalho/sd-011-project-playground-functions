@@ -10,7 +10,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return [string.split (" ")];
+  return string.split (" ");
 }
 
 // Desafio 4
@@ -28,8 +28,15 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = 0;
+  for (let i = 1; i <= wins; i += 1) {
+    pontos += 3;
+  }
+  for (let j = 1; j <= ties; j += 1) {
+    pontos += 1;
+  }
+  return pontos;
 }
 
 // Desafio 6
