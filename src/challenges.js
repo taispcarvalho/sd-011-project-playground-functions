@@ -32,8 +32,8 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(maximNumber) {
   maximNumber.sort();
-    let high = [];
-    let count = 0;
+  let high = [];
+  let count = 0;
   for (let index = 0; index < maximNumber.length; index += 1) {
     high = Math.max(...maximNumber);
     if (maximNumber[index] === high) {
@@ -44,22 +44,24 @@ function highestCount(maximNumber) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let winner = 0;
-  if (mouse - cat1 > mouse - cat2) {
-    winner = 'cat2';
-  } else if (mouse - cat1 < mouse - cat2) {
-    winner = 'cat1';
+  let cat1Mouse = Math.abs(cat1 - mouse)
+  let cat2Mouse = Math.abs(cat2 - mouse)
+
+  if (cat1Mouse === cat2Mouse) {
+    return 'os gatos trombam e o rato foge';
+  } else if (cat1Mouse < cat2Mouse) {
+    return 'cat1';
   } else {
-    winner = 'os gatos trombam e o rato foge';
-  } return winner;
-} // console.log(catAndMouse(5, 2, 2));
+    return 'cat2';
+  }  
+} // console.log(catAndMouse(0, 6, 12));
 
 // Desafio 8
 function returnString(numbers) {
   let string = 0;
   if (numbers % 15 === 0) {
     string = 'fizzbuzz';
-  } if (numbers % 5 === 0) {
+  } else if (numbers % 5 === 0) {
     string = 'buzz';
   } else if (numbers % 3 === 0) {
     string = 'fizz';
@@ -77,13 +79,33 @@ function fizzBuzz(stringArray) {
 
 // Desafio 9
 function encode() {
-
-}
-
+  // let characters = {
+  //  a: 1,
+   // e: 2,
+  //  i: 3,
+  //  o: 4,
+  //  u: 5,
+ // };
+ // for (let key in characters) {
+  //  if (characters.hasOwnProperty.call(characters, key)) {
+  //    phrase[key] = characters[key];
+ //   }
+//  }
+} // console.log(encode("hi there!"));
 function decode() {
-  // seu código aqui
+  // let codereverse = {
+  //  1: a,
+  //  2: e,
+  //  3: i,
+  //  4: o,
+  //  5: u,
+  // };
+  //for (let key in codereverse) {
+  //if (codereverse.hasOwnProperty.call(codereverse, key)) {
+    //  reversePhrase[key] = codereverse[key];      
+ //   }
+//  }
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
