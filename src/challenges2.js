@@ -17,38 +17,59 @@ return listaCompleta;
 function generatePhoneNumber(phoneArray) {
   lenPhone = phoneArray.length;
   count = 0;
+
+
   if (lenPhone != 11){
     return "Array com tamanho incorreto."
   }
-  for (n in lenPhone){
-    if (lenPhone[n] === lenPhone[n]){
-      count += 1
-    } else if (count > 3){
-      return "não é possível gerar um número de telefone com esses valores"
-    } else if (lenPhone[n] < 0){
-      return "não é possível gerar um número de telefone com esses valores"
-    } else if (lenPhone[n] > 9){
-      return "não é possível gerar um número de telefone com esses valores"
+
+
+  for (n of phoneArray){
+    if (phoneArray[n] < 0 || phoneArray[n] > 9){
+      return 'não é possivel gerar um número de telefone com esses valores.'
     }
   }
-  convertedNumber = toNumber(phoneArray)
-  function toNumber(arrayPhone){
+
+  count = 0
+  foneNumber = [1, 9, 3, 4, 9, 6, 7, 8, 9, 0, 1];
+  for (mun in foneNumber){
+    for (let n1 = 1; n1 < foneNumber.length; n1 += 1){
+      console.log(foneNumber[n1])
+      // if (foneNumber[mun] === foneNumber[n1]){
+        
+      // }
+    }
+  }
+
+
+  if (count < 3){
+    convertedNumber = toNumber(phoneArray);
+  } else {
+    return 'não é possivel gerar um número de telefone com esses valores.';
+  }
+
+
+  function toNumber(arrayPhone) {
     arrayPhone.splice(0, 0, "(" );
     arrayPhone.splice(3, 0, ")" );
     arrayPhone.splice(9, 0, "-" );
-    completNumber = arrayPhone.toString()
+    completNumber = arrayPhone.toString();
     completNumber = completNumber.replace(/[,]+/g, '');
-    return completNumber
+    return completNumber;
   }
-  return convertedNumber
+  return convertedNumber;
 }
 
-foneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+foneNumber = [1, 9, 3, 4, 9, 6, 7, 8, 9, 0, 1];
 console.log(generatePhoneNumber(foneNumber));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < (lineB + lineC) && lineB < (lineA + lineC) && lineC < (lineA + lineB)){
+    return true
+  } else {
+    return false
+  }
 }
 
 // Desafio 13
