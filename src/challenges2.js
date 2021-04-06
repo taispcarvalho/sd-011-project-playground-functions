@@ -42,7 +42,7 @@ function realyIs(number) {
   }
   for (let index = 0; index < number.length; index += 1) {
     if (ifRepeat(number[index], number) || isEleven(number[index])) {
-      return 'Não é possível gerar um número de telefone com esses valores';
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 }
