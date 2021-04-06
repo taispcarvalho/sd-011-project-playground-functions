@@ -59,9 +59,9 @@ function fizzBuzz(numbers) {
       strings.push('buzz');
     } else if (num % 3 === 0) {
       strings.push('fizz');
-    } else { 
+    } else {
       strings.push('bug!');
-   }
+    }
   }
   return strings;
 }
