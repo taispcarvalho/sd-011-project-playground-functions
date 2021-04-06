@@ -88,7 +88,6 @@ function encode(phrase) {
 function decode(phrase) {
   let decodedPhrase = ''
   for (let letter of phrase) {
-    
     if (letter === '1') {
       decodedPhrase += 'a'
     } else if (letter === '2') {
@@ -103,7 +102,7 @@ function decode(phrase) {
       decodedPhrase += letter
     }
   }
-  return encodedPhrase
+  return decodedPhrase
 }
 
 module.exports = {
