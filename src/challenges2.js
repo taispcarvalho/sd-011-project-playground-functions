@@ -30,13 +30,12 @@ function techList(techs, name) {
 // Desafio 11
 function generatePhoneNumber(phoneNumber) {
   let answer = '';
-  let stringNumber = '';
 
-  if (checkPhoneNumberLenght(phoneNumber) === false) {
-    answer = 'Array com tamanho incorreto';
-  } else if (checkPhoneNumberDigits(phoneNumber) === false || checkPhoneNumberRepetitions(phoneNumber) === false) {
-    answer = 'Não é possível gerar um número de telefone com esses valores.'
-  } else if (checkPhoneNumberLenght(phoneNumber) === true && checkPhoneNumberDigits(phoneNumber) === true && checkPhoneNumberRepetitions(phoneNumber) === true) {
+  if (numberCheck(phoneNumber) !== 'ok') {
+    answer = numberCheck(phoneNumber);
+  } else {
+    let stringNumber = '';
+
     for (let number of phoneNumber) {
       stringNumber += number;
     }
@@ -44,7 +43,7 @@ function generatePhoneNumber(phoneNumber) {
     stringNumber = stringNumber.replace(/(\d{2})?(\d{5})?(\d{4})/, '($1) $2-$3');
     answer = stringNumber;
   }
- 
+
   return answer;
 }
 
@@ -103,6 +102,20 @@ function checkPhoneNumberRepetitions(phoneNumber) {
   }
 
   return isValid;
+}
+
+function numberCheck(phoneNumber) {
+  let answer = '';
+
+  if (checkPhoneNumberLenght(phoneNumber) === false) {
+    answer = 'Array com tamanho incorreto';
+  } else if (checkPhoneNumberDigits(phoneNumber) === false || checkPhoneNumberRepetitions(phoneNumber) === false) {
+    answer = 'Não é possível gerar um número de telefone com esses valores.'
+  } else {
+    answer = 'ok';
+  }
+ 
+  return answer;
 }
 
 // Desafio 12
