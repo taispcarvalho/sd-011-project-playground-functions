@@ -15,10 +15,10 @@ function techList(techArray, name) {
 }
 
 // Desafio 11
-function repeatedDigit(digit, arrayPhone) {
+function repeatedDigit(number, arrayPhone) {
   let repated = 0;
   for (let index = 0; index < arrayPhone.length; index += 1) {
-    if (arrayPhone[index] === digit) {
+    if (arrayPhone[index] === number) {
       repated += 1;
     }
   }
