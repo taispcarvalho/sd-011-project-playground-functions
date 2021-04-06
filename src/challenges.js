@@ -80,8 +80,10 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(arrayEncode) {
+  for (let index = 0; index < arrayEncode.lenght; index += 1) {
+    
+  }
 }
 function decode() {
   // seu código aqui
