@@ -18,8 +18,8 @@ function generatePhoneNumber() {
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA + lineB > lineC && lineB + lineC > lineA && lineA + lineC > lineB) {
-    return true;
+  if (lineA <= 0 || lineB <= 0 || lineC <= 0) {
+    return false;
   }
   if (Math.abs(lineB - lineC) < lineA && Math.abs(lineA - lineC) < lineB
 && Math.abs(lineA - lineB) < lineC) {
@@ -30,18 +30,13 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(orderString) {
   let countArray = orderString.match(/\d+/g);
-
   countArray = countArray.map((count) => parseInt(count, 10));
-
   let totalCount = countArray.reduce((accumulator, currentValue) => accumulator + currentValue);
-
   if (totalCount === 1) {
     return '1 copo de água';
   }
-
-  return `${totalCount} copos de água`;
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
+console.log(hydrate('1 cachaça'));
 module.exports = {
   generatePhoneNumber,
   techList,
