@@ -4,34 +4,35 @@ function techList(wantToLearn, name) {
   let myDevTechs = [];
 
   if (wantToLearn.length > 0 ) {
-    for (let techs of wantToLearn){
+    let sortedTechs = wantToLearn.sort();
+    for (let techs of sortedTechs){      
 			let object = {
 				tech: techs, 
 				name: name, 
 			}
 			myDevTechs.push(object);
 		}
-				    
-    return myDevTechs.sort((a,b) => (a.wantToLearn > b.wantToLearn ? 1 : -1));
+
+    return myDevTechs;
   }
 
   return 'Vazio!'
 }  
 
 
-console.log(techList(['React', 'Python', 'PHP', 'Express'], 'Gustavo'));
+console.log(techList([], 'Gustavo'));
 
 // Desafio 11
-function generatePhoneNumber(numbers) {
+function ifNumberIsCorret(value) {
   
 }
-// let newPhoneNumber = (array) => {
-//   let digits = array.match(/^(\d{2})(\d{5})(\d{4})$/)
-    
-//     if (digits) {
-//       return '(' + match[1] + ') ' + match[2] + '-' + match[3]
-//     } 
-// }
+
+
+
+function generatePhoneNumber(phone) {
+  
+  
+}
 
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
