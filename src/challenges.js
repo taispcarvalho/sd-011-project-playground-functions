@@ -20,10 +20,8 @@ function splitSentence(sentence) {
 // Desafio 4
 
 function concatName(sentence) {
-  for (let index in sentence) {
-    return(sentence[sentence.lenght - 1, sentence[0]]);
-    break;
-  }
+  let result = [sentence[sentence.length - 1], sentence[0]];
+  return result;
 }
 
 // Desafio 5
