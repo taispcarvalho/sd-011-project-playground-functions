@@ -19,7 +19,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(stringArray) {
-  let fullName = `${array[array.length - 1]}, ${array[0]}`;
+  let fullName = `${stringArray[stringArray.length - 1]}, ${stringArray[0]}`;
   return fullName;
 }
 
@@ -75,6 +75,7 @@ function responseFizzBuzz(numberArray) {
 
 function fizzBuzz(numberArray) {
   let phrase = [];
+
   for (let index = 0; index < numberArray.length; index += 1) {
     phrase.push(responseFizzBuzz(numberArray[index]));
   }
