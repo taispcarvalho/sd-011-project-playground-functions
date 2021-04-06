@@ -79,8 +79,9 @@ function errorNumber(array) {
   }
   return validationError;
 }
-function repeatedNumber(array) {
+/* function repeatedNumber(array) {
   // Função feita com consulta a https://dev.to/huyddo/find-duplicate-or-repeat-elements-in-js-array-3cl3.
+  // Não utilizada por ter achado uma solução melhor
   let numbers = {};
   for (let index = 0; index < array.length; index += 1) {
     if (numbers[array[index]]) {
@@ -95,8 +96,9 @@ function repeatedNumber(array) {
       return true;
     }
   }
-}
+} */
 function repeatedNumber(array, number) {
+  // Função criada com o auxilio do magnifico Julio Filizzola - turma 11
   let repeat = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === number) {
