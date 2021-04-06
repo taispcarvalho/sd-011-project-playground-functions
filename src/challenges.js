@@ -25,9 +25,9 @@ console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(string) {
-  let lastItem = string[string.length -1].toString();
+  let lastItem = string[string.length - 1].toString();
   let firstItem = string[0].toString();
-  let item = ( `${lastItem}, ${firstItem}`);
+  let item = (`${lastItem}, ${firstItem}`);
   return item;
 }  
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -47,20 +47,14 @@ console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(numbers) { 
-  let highestNumber = 0;
   let countHighestNumberAppears = 0;
+  numbers.sort(function (a,b) {return b - a});
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index]> highestNumber ) {
-      highestNumber = numbers[index];
-    } 
-  }
-// Contar o número de vezes que o maior valor aparece.
-for(let index = 0; index < numbers.length; index += 1) {
-    if(numbers[index] === highestNumber){
+    if (numbers[0] === numbers[index]){
       countHighestNumberAppears += 1;
     }
-    return countHighestNumberAppears;
   }
+  return countHighestNumberAppears;
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
