@@ -11,3 +11,26 @@
     <script></script>
 </body>
 </html>
+
+
+else if (mouse - cat1 < 0){
+    distCat1 = mouse - cat1 * (-1);
+  }
+  else {
+    distCat1 = mouse - cat1;
+  }
+  
+  if (mouse - cat2 < 0){
+    distCat2 = mouse - cat2 * (-1);
+  }
+  
+  else {
+    distCat2 = mouse - cat2;
+  }
+  if (distCat1 > distCat2){
+    return "cat2";
+  }
+  else {
+   return "cat1";
+  }
+  }
