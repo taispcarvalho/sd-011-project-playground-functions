@@ -22,7 +22,7 @@ function concatName() {
   let nome = ['Rafael', 'Batista', 'de', 'Oliveira'];
   let last = nome[nome.length-1];
   let first = nome[0];
-  let lastfirst = (last + ',' +  first);
+  let lastfirst = (last + ', ' +  first);
   return(lastfirst);
 }
 console.log(concatName());
