@@ -5,10 +5,12 @@ function techList(technologies, name) {
   if (technologies.length === 0) return 'Vazio!';
 
   for (let index = 0; index < technologies.length; index += 1) {
-    arrayOfTechonlogies.push(technologies[index], name);
+    arrayOfTechonlogies.push({ tech: technologies[index], name });
   }
   return arrayOfTechonlogies;
 }
+let list = ['Unix', 'bash', 'git', 'Javascript', 'MongoDB'];
+console.log(techList(list, 'Dário'));
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -31,9 +33,6 @@ function hydrate(string) {
   }
   return waterCups;
 }
-
-let string = '1 cachaça, 5 cervejas e 1 copo de vinho';
-console.log(hydrate(string));
 
 module.exports = {
   generatePhoneNumber,
