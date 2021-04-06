@@ -20,10 +20,10 @@ function techList(arrayTech, names) {
 function numbersZeroNine(numArray) {
   for (let index = 0; index < numArray.length; index += 1) {
     if (numArray[index] < 0 || numArray[index] > 9) {
-      return true;
+      return false;
     }
   }
-  return false;
+  return true;
 }
 function numbersOccurrence(numArray) {
   let count = 0;
