@@ -30,11 +30,11 @@ function generatePhoneNumber(phoneArray) {
 
   let numero;
   let count = 0;
-   for(let index = 0; index < foneNumber.length; index +=1){ 
-      numero = foneNumber[index]
+   for(let index = 0; index < phoneArray.length; index +=1){ 
+      numero = phoneArray[index]
       count = 0
-      for(let index2 = 0; index2 < foneNumber.length; index2 +=1){
-         if(numero === foneNumber[index2]){
+      for(let index2 = 0; index2 < phoneArray.length; index2 +=1){
+         if(numero === phoneArray[index2]){
            count += 1;
            if (count >= 3) {
             return "não é possível gerar um número de telefone com esses valores"
