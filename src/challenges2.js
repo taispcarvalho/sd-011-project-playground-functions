@@ -7,7 +7,7 @@ function techList(array, name) {
   } else {
     let guarda = [];
     array = array.sort();
-    for (let index = 0; index <= array.length; index += 1) {
+    for (let index = 0; index < array.length; index += 1) {
       guardaValor.push(
         { tech: array[index], name },
       );
