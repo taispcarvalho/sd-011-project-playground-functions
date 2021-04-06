@@ -51,7 +51,10 @@ function formatPhoneNumber(arrPhone) {
 function generatePhoneNumber(arrPhone) {
   // seu código aqui
   // Devo retornar uma variável contendo uma string do numero de telefone devidamente formatado
-  // Preciso validar a função
+  // Validação de tamanho de array
+  if (arrPhone.length !== 11) {
+    return 'Array com tamanho incorreto.'
+  }
   return formatDdd(arrPhone) + formatPhoneNumber(arrPhone);
 }
 
