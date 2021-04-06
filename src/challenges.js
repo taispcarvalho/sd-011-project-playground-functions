@@ -18,8 +18,9 @@ function splitSentence(sentence) {
 /** source https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split */
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(stringArray) {
+  let fullName = `${array[array.length - 1]}, ${array[0]}`;
+  return fullName;
 }
 
 // Desafio 5
