@@ -50,7 +50,7 @@ function generatePhoneString(arrayPhoneNumber) {
     return arrayPhoneNumber;
   }
 
-  let phoneNumberString = `(${arrayPhoneNumber[0]}${arrayPhoneNumber[1]}) `;
+  let phoneNumberString = `(${arrayPhoneNumber[0]}${arrayPhoneNumber[1]})`;
 
   for (let i = 2; i < 7; i += 1) {
     phoneNumberString += arrayPhoneNumber[i];
