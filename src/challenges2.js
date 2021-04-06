@@ -66,12 +66,12 @@ function generatePhoneString(arrayPhoneNumber) {
 
 function generatePhoneNumber(arrayPhoneNumber) {
   if (arrayPhoneNumber.length !== 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   }
   if (invalidDigit(arrayPhoneNumber) && hasThreeOrMoreRepeats(arrayPhoneNumber)) {
     return generatePhoneString(arrayPhoneNumber);
   }
-  return "não é possível gerar um número de telefone com esses valores";
+  return 'não é possível gerar um número de telefone com esses valores';
 }
 
 // Desafio 12
@@ -85,10 +85,20 @@ function triangleCheck(lineA, lineB, lineC) {
   let checkSideC = triangleCheckSide(lineC, lineA, lineB);
   return checkSideA || checkSideB || checkSideC;
 }
-
+// sites consultados para o Desafio 13:
+// https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript
+// https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+// https://www.codegrepper.com/code-examples/javascript/get+all+integers+inside+a+string+js
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(boozeString) {
+  let numberArray = boozeString.match(/\d+/g);
+  numberArray = numberArray.map((i)=>parseInt(i,10));
+  let numberSum = numberArray.reduce((acc,value) => acc + value);
+
+  if (numberSum === 1) {
+    return '1 copo de água';
+  }
+  return `${numberSum} copos de água`;
 }
 
 module.exports = {
