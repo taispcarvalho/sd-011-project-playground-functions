@@ -3,15 +3,12 @@ function techList(techNames, name) {
   if (techNames.length === 0) {
     return 'Vazio!';
   };
-  const techs = techNames.sort().map((tech) => ({ tech, name }));
-    return techs;
-  };
+  return techNames.sort().map((tech) => ({ tech, name }));
+};
 
 // Desafio 11
-function checkNumbers (numbers) {
-  const numberRepeat = arrayOfNumbers.map((number) => {
-    let count = 0;
-    numbers;
+/* function checkNumbers (numbers) {
+  let count = 0;
       for (let index in arrayOfNumbers) {
         if (number === arrayOfNumbers[index]) {
         count += 1;
@@ -19,7 +16,6 @@ function checkNumbers (numbers) {
       return count;
     }
 
-  return numberRepeat
   for (let index in arrayOfNumbers) {
     if (number == arrayOfNumbers[index])
     count +=1;
@@ -48,30 +44,30 @@ function generatePhoneNumber(arrayOfNumbers) {
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 8, 9, 0, 1]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 11, 7, 8, 9, 0, 1]));
-console.log(generatePhoneNumber([1, 2, 5, 5, 5, 5, 5, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 5, 5, 5, 5, 5, 8, 9, 0, 1])); */
     
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  const checkSumA = lineB + lineC;
-  const checkDiffA = Math.abs(lineB - lineC);
-  const checkSumB = lineA + lineC;
-  const checkDiffB = Math.abs(lineA - lineC);
-  const checkSumC = lineB + lineA;
-  const checkDiffC = Math.abs(lineB - lineA);
 
-  if (checkSumA && checkDiffA) {
-    return true;
-  }
-  if (checkSumB && checkDiffB) {
-    return true;
-  }
-  if (checkSumC && checkDiffC) {
-    return true;
+function checkSides (A, B, C) {
+  const sumLines = B + C;
+  const diffLines = Math.abs(B - C);
+  if (A < sumLines && A > diffLines) {
+  return true;
   }
   return false;
-}
-console.log(triangleCheck(10, 14, 8));
-
+  }
+  
+  function triangleCheck(lineA, lineB, lineC) {
+  const checkLineA = checkSides(lineA, lineB, lineC);
+  const checkLineB = checkSides(lineA, lineB, lineC);
+  const checkLineC = checkSides(lineA, lineB, lineC);
+  if (checkLineA && checkLineB && checkLineC) {
+  return true;
+  }
+  return false;
+  }
+  console.log(triangleCheck(10, 14, 8));
+  
 // Desafio 13
 function hydrate() {
   // seu código aqui
