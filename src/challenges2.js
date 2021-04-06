@@ -71,9 +71,9 @@ function triangleCheck(lineA, lineB, lineC) {
   let linesTriangle = [lineA, lineB, lineC];
   linesTriangle.sort((a, b) => b - a);
   if (linesTriangle[0] + linesTriangle[1] < linesTriangle[2]) {
-    return true;
+    return false;
   }
-  return false;
+  return true;
 }
 // Desafio 13
 function hydrate(string) {
