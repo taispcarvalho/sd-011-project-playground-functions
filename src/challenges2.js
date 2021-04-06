@@ -202,7 +202,7 @@ function extractNumbers(string) {
   let drinkList = string.match(/\d+/g);
   let numberList = [];
   for (let number of drinkList) {
-    numberList.push(parseInt(number));
+    numberList.push(parseInt(number, 10));
   }
   return numberList;
 }
