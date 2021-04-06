@@ -16,8 +16,6 @@ return listaCompleta;
 // Desafio 11
 function generatePhoneNumber(phoneArray) {
   lenPhone = phoneArray.length;
-  count = 0;
-
 
   if (lenPhone != 11){
     return "Array com tamanho incorreto."
@@ -30,17 +28,20 @@ function generatePhoneNumber(phoneArray) {
     }
   }
 
-  count = 0
-  foneNumber = [1, 9, 3, 4, 9, 6, 7, 8, 9, 0, 1];
-  for (mun in foneNumber){
-    for (let n1 = 1; n1 < foneNumber.length; n1 += 1){
-      console.log(foneNumber[n1])
-      // if (foneNumber[mun] === foneNumber[n1]){
-        
-      // }
-    }
-  }
-
+  let numero;
+  let count = 0;
+   for(let index = 0; index < foneNumber.length; index +=1){ 
+      numero = foneNumber[index]
+      count = 0
+      for(let index2 = 0; index2 < foneNumber.length; index2 +=1){
+         if(numero === foneNumber[index2]){
+           count += 1;
+           if (count >= 3) {
+            return('não é possivel gerar um número de telefone com esses valores.');
+         }
+        }
+      }
+    }  
 
   if (count < 3){
     convertedNumber = toNumber(phoneArray);
@@ -59,9 +60,6 @@ function generatePhoneNumber(phoneArray) {
   }
   return convertedNumber;
 }
-
-foneNumber = [1, 9, 3, 4, 9, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(foneNumber));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
