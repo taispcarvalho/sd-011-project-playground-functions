@@ -61,8 +61,10 @@ function generatePhoneNumber(fone) {
   }
 }
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let partA = lineA < lineB + lineC;
+  let partB = lineA > Math.abs(lineB - lineC);
+  return partA && partB;
 }
 
 // Desafio 13
