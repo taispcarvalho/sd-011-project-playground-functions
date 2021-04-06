@@ -46,18 +46,43 @@ function limitNumbers(list) {
 // console.log(limitNumbers([1, 2, 3, 4, 11, 6, 7, 8, 9, 0, 1]));
 // console.log(limitNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1]));
 
+// function repeatedNumber(list) {
+//   let repeated = false;
+//   for (let index = 0; index < list.length; index += 1) {
+//     let count = 0;
+//     for (let number = index + 1; number <= list.length; number += 1) {
+//       if (count === 2) {
+//         repeated = true;
+//         break;
+//       } else if (list[index] === list[number]) {
+//         count += 1;
+//       }
+//     }
+//   }
+//   return repeated;
+// }
+// console.log(repeatedNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+// console.log(repeatedNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(repeatedNumber([1, 2, 3, 4, 5, 5, 7, 8, 9, 0, 1]));
+// console.log(repeatedNumber([1, 2, 3, 4, 4, 4, 7, 8, 9, 0, 1]));
+
+function countNumbers(number, array) {
+  let count = 0;
+  for (let index = 1; index < array.length; index += 1){
+    if (number === array[index]) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
 function repeatedNumber(list) {
   let repeated = false;
-
-  for (let index = 0; index < list.length; index += 1) {
-    let count = 0;
-    for (let number = index + 1; number <= list.length; number += 1) {
-      if (count === 2) {
-        repeated = true;
-        break;
-      } else if (list[index] === list[number]) {
-        count += 1;
-      }
+    for (let index = 0; index < list.length; index += 1) {
+    let counter = countNumbers(list[index], list);
+    if (counter === 3) {
+      repeated = true;
+      break
     }
   }
   return repeated;
@@ -98,11 +123,11 @@ function generatePhoneNumber(array) {
   }
   return phoneNumber;
 }
-// console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 5, 5, 8, 9, 0, 1]));
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 19, 0, 1]));
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1]));
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 5, 5, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 19, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1]));
 
 // Desafio 12
 
