@@ -31,12 +31,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 console.log(triangleCheck(10, 14, 8));
 
+// Auxiliary function challenge 13
+/* This function I get on the website https://stackoverflow.com/questions/20169217/how-to-write-isnumber-in-javascript */
+function isNumber (n) {
+  return Number(n) === n;
+}
+
 // Desafio 13
 function hydrate(liquor = 0, beer = 0, wine = 0) {
   let drinkWater = 0;
   let drinks = liquor + beer + wine;
   for (let index = 0; index < drinks; index += 1) {
-    drinkWater = drinks;
+    if (isNumber(drinks)) {
+      drinkWater = drinks;
+    }
   }
   if (drinkWater > 1) {
     drinkWater += ' copos de água';
