@@ -18,15 +18,14 @@ function generatePhoneNumber() {
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA + lineB > lineC && lineB + lineC > lineA && lineA + lineC > lineB) {
+  if(lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
     return true;
-  }
-  if (Math.abs(lineB - lineC) < lineA && Math.abs(lineA - lineC) < lineB
-  && Math.abs(lineA - lineB) < lineC) {
+  } else if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA -lineB)) {
     return true;
+  } else {
+    return false;
   }
-  return false;
-}
+} 
 // Desafio 13
 function hydrate() {
   // seu código aqui
