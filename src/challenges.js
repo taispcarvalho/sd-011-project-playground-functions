@@ -31,7 +31,7 @@ function highestCount(numbersArray) {
   let greatest = numbersArray[numbersArray.lenght - 1];
   let counter = 0;
 
-  for (let count = numbersArray.lenght -1; count >= 0; count -= 1) {
+  for (let count = numbersArray.lenght - 1; count >= 0; count -= 1) {
     if (greatest === numbersArray[count]) {
       counter += 1;
     }
