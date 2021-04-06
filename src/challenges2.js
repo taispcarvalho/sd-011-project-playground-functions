@@ -19,7 +19,9 @@ function techList(tech, name) {
 
 // Desafio 11
 // https://learnersbucket.com/examples/javascript/how-to-format-phone-number-in-javascript/
-function more3 (numberArray, x) {
+// para divinuir a complexidade do meu código, comparei com de colegas no github
+// https://github.com/tryber/sd-011-project-playground-functions/pull/160/files
+function more3(numberArray, x) {
   let counts = 0;
   for (let i = 0; i <= numberArray.length; i += 1) {
     if (numberArray[i] === x) {
@@ -31,7 +33,7 @@ function more3 (numberArray, x) {
 
 function byNineNumber(numberArray) {
   for (let i of numberArray) {
-    if ( i < 0 || i > 9 || more3(numberArray, i) >=3) {
+    if ( i < 0 || i > 9 || more3(numberArray, i) >= 3) {
       return false;
     }
   }
@@ -40,12 +42,12 @@ function byNineNumber(numberArray) {
 function generatePhoneNumber(numberArray) {
   if (numberArray.length !== 11) {
     return `${'Array com tamanho incorreto.'}`;
-  } else if (byNineNumber(numberArray) === false) {
+  }
+  if (byNineNumber(numberArray) === false) {
     return `${'não é possível gerar um número de telefone com esses valores'}`;
-  }  // Filter only numbers from the input
-  let cleaned = `${(numberArray)}`.replace(/\D/g, '');
-  // Check if the input is of correct length
-  let match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/);
+  }  
+  let cleaned = `${(numberArray)}`.replace(/\D/g, ''); // Filter only numbers from the input
+  let match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/); // Check if the input is of correct length
   if (match) {
     return `(${match[1]}) ${match[2]}-${match[3]}`;
   }
