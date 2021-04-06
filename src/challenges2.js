@@ -13,11 +13,20 @@ function auxiliar(y) {
   return Math.max.apply(null, Object.values(counts));
 }
 
+// Função aux2 Desafio 11
+function auxiliar2(z) {
+  for (let index = 0; index < z.length; index += 1) {
+    if (z[index] < 0 || z[index] > 9) {
+      return false;
+    }
+  }
+}
+
 // Desafio 11
 function generatePhoneNumber(x) {
   if (x.length !== 11) return 'Array com tamanho incorreto.';
   for (let index = 0; index < x.length; index += 1) {
-    if (auxiliar(x) >= 3 || x[index] < 0 || x[index] > 9) {
+    if (auxiliar(x) >= 3 || auxiliar2(x) === false) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
