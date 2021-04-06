@@ -21,11 +21,11 @@ function techList(tech, name) {
 // https://learnersbucket.com/examples/javascript/how-to-format-phone-number-in-javascript/
 function phoneNumber(numberArray) {
   // Filter only numbers from the input
-  let cleaned = `${('' + numberArray).replace(/\D/g, '')}`;
+  let cleaned = `${(numberArray)}`.replace(/\D/g, '');
   // Check if the input is of correct length
   let match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/);
   if (match) {
-    return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+    return `(${match[1]}) ${match[2]}-${match[3]}`;
   }
   return numberArray;
 }
@@ -55,7 +55,7 @@ function generatePhoneNumber(numberArray) {
   numberArray = phoneNumber(numberArray);
   return numberArray;
 }
-console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]))
+
 // Desafio 12
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 // para diminuir a complexidade do meu código,comparei com o codigo do colega vitor cardoso
