@@ -1,14 +1,16 @@
 // Desafio 10
 function techList(techNames, name) {
-  if (techNames.length === 0) {
+  if (techNames === 0) {
     return 'Vazio!';
-  };
-  return techNames.sort().map((tech) => ({ tech, name }));
-};
+  }
+  const techs = techNames.sort().map((tech) => ({ tech, name }));
+    return techs;
+  }
 
 // Desafio 11
-/* function checkNumbers (numbers) {
-  let count = 0;
+function checkNumbers (numbers) {
+  const numberRepeat = arrayOfNumbers.map((number) => {
+    let count = 0;
       for (let index in arrayOfNumbers) {
         if (number === arrayOfNumbers[index]) {
         count += 1;
@@ -16,6 +18,7 @@ function techList(techNames, name) {
       return count;
     }
 
+  return numberRepeat
   for (let index in arrayOfNumbers) {
     if (number == arrayOfNumbers[index])
     count +=1;
@@ -39,35 +42,24 @@ function generatePhoneNumber(arrayOfNumbers) {
   if (arrayOfNumbers.length !== 11) { 
     return 'Array com tamanho incorreto.'
   }
-}
+};
   
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 8, 9, 0, 1]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 11, 7, 8, 9, 0, 1]));
-console.log(generatePhoneNumber([1, 2, 5, 5, 5, 5, 5, 8, 9, 0, 1])); */
+console.log(generatePhoneNumber([1, 2, 5, 5, 5, 5, 5, 8, 9, 0, 1]));
     
 // Desafio 12
+function triangleCheck(lineA, lineB, lineC) {
+  const checkSum = lineA < lineB + lineC;
+  const checkDiff = lineA > Math.abs(lineB - lineC);
+  return checkSum && checkDiff;
+};
+  
+console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(1, 1, 5));
 
-function checkSides (A, B, C) {
-  const sumLines = B + C;
-  const diffLines = Math.abs(B - C);
-  if (A < sumLines && A > diffLines) {
-  return true;
-  }
-  return false;
-  }
-  
-  function triangleCheck(lineA, lineB, lineC) {
-  const checkLineA = checkSides(lineA, lineB, lineC);
-  const checkLineB = checkSides(lineA, lineB, lineC);
-  const checkLineC = checkSides(lineA, lineB, lineC);
-  if (checkLineA && checkLineB && checkLineC) {
-  return true;
-  }
-  return false;
-  }
-  console.log(triangleCheck(10, 14, 8));
-  
+
 // Desafio 13
 function hydrate() {
   // seu código aqui
