@@ -40,7 +40,7 @@ function checkRepeatNumbers(numbers) {
 }
 function lastStep(numbers) {
   if (checkArray(numbers) === false) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   } if (checkNumbers(numbers) === false || checkRepeatNumbers(numbers) === false) {
     return 'não é possivel gerar um número de telefone com esses valores';
   }
@@ -71,9 +71,9 @@ function triangleCheck(lineA, lineB, lineC) {
   let linesTriangle = [lineA, lineB, lineC];
   linesTriangle.sort((a, b) => b - a);
   if (linesTriangle[0] + linesTriangle[1] < linesTriangle[3]) {
-    return false;
+    return true;
   }
-  return true;
+  return false;
 }
 // Desafio 13
 function hydrate(string) {
