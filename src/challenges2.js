@@ -94,11 +94,11 @@ function techList(techs, name) {
 //   } else {
 //     answer = 'ok';
 //   }
- 
+
 //   return answer;
 // }
 
-function generatePhoneNumber(phoneNumber) {
+function generatePhoneNumber() {
   // let answer = '';
 
   // if (numberCheck(phoneNumber) !== 'ok') {
