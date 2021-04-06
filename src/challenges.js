@@ -6,28 +6,28 @@ console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height / 2
+  return base * height/2
 }
-// console.log(calcArea(51, 1));
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(originalString) { 
   return originalString.split(' ');
 }
-// console.log(splitSentence('vamo que vamo'));
+console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
 function concatName(stringExterna) {
   let arrai = stringExterna;
   return arrai[arrai.length-1] + ', ' + arrai[0]
 }
-    // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return wins * 3 + ties;
 }
-// console.log(footballPoints(0, 0));
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(arrayDeNumeros) {
@@ -84,18 +84,27 @@ console.log(fizzBuzz([9, 25]));
 function encode(string) {
   let newString = string; 
   for (index of string) {
-    newString = newString.replace(/a/g, '1');
-    newString = newString.replace(/e/g, '2');
-    newString = newString.replace(/i/g, '3');
-    newString = newString.replace(/o/g, '4');
-    newString = newString.replace(/u/g, '5');
+    newString = newString.replace('a', '1');
+    newString = newString.replace('e', '2');
+    newString = newString.replace('i', '3');
+    newString = newString.replace('o', '4');
+    newString = newString.replace('u', '5');
   }
   return newString;
 }
-console.log(encode("hai thara cum ovo deeeeeeeepascoau"));
-function decode() {
-  // seu código aqui
+console.log(encode("hi there!"));
+function decode(string) {
+  let newString = string;  
+  for (let index of string) {
+    newString = newString.replace('1', 'a');
+    newString = newString.replace('2', 'e');
+    newString = newString.replace('3', 'i');
+    newString = newString.replace('4', 'o');
+    newString = newString.replace('5', 'u');
+  }
+  return newString;
 }
+console.log(decode("h3 th2r2"));
 module.exports = {
   calcArea,
   catAndMouse,
