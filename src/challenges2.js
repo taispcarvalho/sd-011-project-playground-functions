@@ -1,22 +1,22 @@
 // Desafio 10
 function techList(tech, name) {
+  if (tech.length < 1) {
+    return 'Vazio';
+  }
+  
   let ordenedNames = tech.sort();
   let list = [];
   let listTec = {};
-  
-  if ( tech.length <= 0) {
-    return 'Vazio';
-  } else {
     for (let index = 0; index < tech.length; index += 1) {
       listTec = {
         tech: ordenedNames[index],
         name: `${name}`,
       }
       list.push(listTec)
+
     }
+    return list
   }
-  return list
-}
 /* console.table(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Antonio")); */
 // Desafio 11
 function generatePhoneNumber() {
