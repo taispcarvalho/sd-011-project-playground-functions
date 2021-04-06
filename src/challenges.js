@@ -60,24 +60,24 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function calcFizzBuzz(number) {
-  if (number % 5 === 0 && number % 3 === 0) {
+function calcFizzBuzz(numberArray) {
+  if (numberArray % 5 === 0 && numberArray % 3 === 0) {
     return 'fizzBuzz';
   }
-  if (number % 3 === 0) {
+  if (numberArray % 3 === 0) {
     return 'fizz';
   }
-  if (number % 5 === 0) {
+  if (numberArray % 5 === 0) {
     return 'buzz';
   }
   return 'bug!';
 }
-function fizzBuzz(number) {
-  let frase = [];
-  for (let indice = 0; indice < number.length; indice += 1) {
-    frase.push(calcFizzBuzz(number[indice]));
+function fizzBuzz(numberArray) {
+  let phrase = [];
+  for (let index = 0; index < numberArray.length; index += 1) {
+    phrase.push(calcFizzBuzz(numberArray[indice]));
   }
-  return frase;
+  return phrase;
 }
 
 // Desafio 9
