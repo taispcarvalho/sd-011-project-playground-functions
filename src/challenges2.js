@@ -73,8 +73,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(waterString) {
+  sum = 0
+  checkNum = /\d+/g;
+  onlyNum = waterString.match(checkNum)
+
+  for (let n = 0; n < onlyNum.length; n += 1){
+    integer = parseInt(onlyNum[n])
+    sum += integer
+  }
+  if (sum > 1){
+    console.log(sum + " copos de água")
+  } else {
+    console.log(sum + " copo de água")
+  }
 }
 
 module.exports = {
