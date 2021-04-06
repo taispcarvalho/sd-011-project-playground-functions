@@ -18,13 +18,13 @@ function generatePhoneNumber(phoneArray) {
   lenPhone = phoneArray.length;
 
   if (lenPhone != 11){
-    return "Array com tamanho incorreto."
+    return "Array com tamanho incorreto"
   }
 
 
   for (n of phoneArray){
     if (phoneArray[n] < 0 || phoneArray[n] > 9){
-      return 'não é possivel gerar um número de telefone com esses valores.'
+      return 'não é possivel gerar um número de telefone com esses valores'
     }
   }
 
@@ -37,7 +37,7 @@ function generatePhoneNumber(phoneArray) {
          if(numero === foneNumber[index2]){
            count += 1;
            if (count >= 3) {
-            return('não é possivel gerar um número de telefone com esses valores.');
+            return('não é possivel gerar um número de telefone com esses valores');
          }
         }
       }
@@ -46,7 +46,7 @@ function generatePhoneNumber(phoneArray) {
   if (count < 3){
     convertedNumber = toNumber(phoneArray);
   } else {
-    return 'não é possivel gerar um número de telefone com esses valores.';
+    return 'não é possivel gerar um número de telefone com esses valores';
   }
 
 
