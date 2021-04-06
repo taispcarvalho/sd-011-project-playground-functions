@@ -1,11 +1,11 @@
 // Desafio 1
-function compareTrue(valueA, valueB) {
+function compareTrue(valueA, valueB){
 
-  if( valueA == true && valueB == true){
+  if (valueA === true && valueB === true){
     return true;
   }
-    else{
-      return false;
+  {
+  return false;
     }
   }
 
@@ -18,9 +18,9 @@ function calcArea(base, height) {
 
 }
 
-console.log(calcArea(10,50));
-console.log(calcArea(5,2));
-console.log(calcArea(51,1));
+console.log(calcArea(10, 50));
+console.log(calcArea(5, 2));
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(string) {
