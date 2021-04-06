@@ -54,6 +54,7 @@ function generatePhoneNumber(phoneArray) {
     arrayPhone.splice(0, 0, "(" );
     arrayPhone.splice(3, 0, ")" );
     arrayPhone.splice(9, 0, "-" );
+    arrayPhone.splice(4, 0, " " );
     completNumber = arrayPhone.toString();
     completNumber = completNumber.replace(/[,]+/g, '');
     return completNumber;
