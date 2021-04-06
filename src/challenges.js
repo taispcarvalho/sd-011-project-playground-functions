@@ -56,17 +56,17 @@ highestNumber([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distan1 = Math.abs(cat1 - mouse);
-  let distan2 = Math.abs(cat2 - mouse);
-  if (distan1 === distan2) {
-    return 'os gatos trombam e o rato foge'
+  let distan1 = Math.abs(mouse - cat1);
+  let distan2 = Math.abs(mouse - cat2);
+  if (distan1 < distan2) {
+    return "cat1";
   } else if (distan1 > distan2) {
-    return 'cat1'
+    return "cat2";
   } else {
-    return 'cat2'
+    return "os gatos trombam e o rato foge";
   }
 }
-catAndMouse(10, 13, 12);
+catAndMouse(13, 10, 11);
 
 // Desafio 8
 function fizzBuzz() {
