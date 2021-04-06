@@ -65,21 +65,22 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(0, 7, 6));
 // Desafio 8
 
-function fizzBuzz() {
-  let numeros = [7, 9];
+function fizzBuzz(numeros) {
+  let newarray = [] 
   for (let index = 0; index < numeros.length; index ++) {    
-    if ((numeros[index] % 3) === 0 && ((numeros[index] % 5) === 0)) {
-      return (numeros[index],'fizzBuzz');
+    if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
+      newarray.push('fizzBuzz');
     }else if ((numeros[index] % 3) === 0 ) {
-      return (numeros[index],'fizz');
+      newarray.push('fizz');
     }else if ((numeros[index] % 5) === 0 ) {
-      return (numeros[index],'buzz');
+      newarray.push('buzz');
     }else if ((numeros[index] % 5) != 0 && ((numeros[index] % 5) != 0)) {
-      return (numeros[index],'bug');
+      newarray.push('bug!');
     }
   }
+  return newarray;
 }
-console.log(fizzBuzz());
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
@@ -109,4 +110,4 @@ module.exports = {
   footballPoints,
   splitSentence,
   triangleCheck,
-}
+};
