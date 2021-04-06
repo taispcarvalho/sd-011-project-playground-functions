@@ -17,8 +17,6 @@ function techList(techArray, name) {
 
 // Desafio 11
 
-let testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-
 function maxRepeat(value1, value2) {
   if (value1 > value2) {
     value2 = value1;
@@ -40,8 +38,6 @@ function numberRepeats(array) {
   }
   return max;
 }
-
-console.log(numberRepeats(testArray));
 
 function rangeNumbersValidator(numbersArray) {
   for (let index = 0; index < numbersArray.length; index += 1) {
