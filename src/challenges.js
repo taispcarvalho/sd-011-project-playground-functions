@@ -67,15 +67,15 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 // Desafio 8
-function numero(numeroArray) {
+function numero(number) {
   let string = 0;
-  if (numeroArray % 15 === 0) {
+  if (number % 15 === 0) {
     string = 'fizzBuzz';
   }
-  if (numeroArray % 3 === 0) {
+  if (number % 3 === 0) {
     string = 'fizz';
   }
-  if (numeroArray % 5 === 0) {
+  if (number % 5 === 0) {
     string = 'buzz';
   } else {
     string = 'bug!';
