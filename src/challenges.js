@@ -59,10 +59,10 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numberArray) {
   if (numberArray % 5 === 0 && numberArray % 3 === 0) {
     return 'fizzBuzz';
-  } 
+  }
   if (numberArray % 3 === 0) {
     return 'fizz';
   }
@@ -74,19 +74,16 @@ function fizzBuzz() {
 
 function indexFizzBuzz(numberArray) {
   let phrase = [];
-  for(let index = 0; index < number.length; index += 1) {
-    phrase.push(fizzBuzz(number[index]));
+  for (let index = 0; index < number.length; index += 1) {
+    phrase.push(fizzBuzz(numberArray[index]));
   }
-  return phrase
+  return phrase;
 }
-
-
 
 // Desafio 9
 function encode(numberArray) {
  
 }
-
 
 function decode() {
   // seu código aqui
