@@ -17,7 +17,7 @@ console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(' ')
+  return string.split(' ');
 }
 console.log(splitSentence('go Trybe'));
 console.log(splitSentence('Vamo que Vamo'));
@@ -25,14 +25,14 @@ console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(string) {
-    let lastItem = string[string.length -1].toString();
-    let firstItem= string[0].toString();
-    let item = ( `${lastItem}, ${firstItem}`);
+  let lastItem = string[string.length -1].toString();
+  let firstItem = string[0].toString();
+  let item = ( `${lastItem}, ${firstItem}`);
   return item;
 }  
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-console.log(concatName( ['foguete', 'não', 'tem', 'ré']));
-console.log(concatName( ['captain', 'my', 'captain']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -41,48 +41,47 @@ function footballPoints(wins, ties) {
   let countScore = winsScore + tiesScore;
   return countScore;
 }
-console.log(footballPoints(14,8));
-console.log(footballPoints(1,2));
-console.log(footballPoints(0,0));
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(numbers) { 
   let highestNumber = 0;
   let countHighestNumberAppears = 0;
-  for(let index =0; index < numbers.length; index += 1) {
-    if(numbers[index]> highestNumber ){
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index]> highestNumber ) {
       highestNumber = numbers[index];
-    }
+    } 
   }
-  //Contar o número de vezes que o maior valor aparece.
-for(let index =0; index < numbers.length; index +=1  ) {
+// Contar o número de vezes que o maior valor aparece.
+for(let index = 0; index < numbers.length; index += 1) {
     if(numbers[index] === highestNumber){
-    countHighestNumberAppears += 1;
-  }
+      countHighestNumberAppears += 1;
+    }
     return countHighestNumberAppears;
+  }
 }
-}
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanceMouseCat1 = Math.abs(mouse - cat1);
   let distanceMouseCat2 = Math.abs(mouse - cat2);
-  if(distanceMouseCat1<distanceMouseCat2) {
+  if (distanceMouseCat1 < distanceMouseCat2) {
     return 'cat1';
-  }else if(distanceMouseCat1 > distanceMouseCat2){
+  } else if (distanceMouseCat1 > distanceMouseCat2) {
     return 'cat2';
-  }else {
-    return 'os gatos trombam e o rato foge'
   }
+  return 'os gatos trombam e o rato foge';
 }
-console.log(catAndMouse(4,1,2));
-console.log(catAndMouse(18,12,6));
-console.log(catAndMouse(4,2,2));
+console.log(catAndMouse(4, 1, 2));
+console.log(catAndMouse(18, 12, 6));
+console.log(catAndMouse(4, 2, 2));
 
 // Desafio 8
 function dividers(number) {
-  if(number % 15 === 0){
+  if (number % 15 === 0) {
     return 'fizzBuzz';
   }
   if(number % 3 === 0){
@@ -96,12 +95,12 @@ function dividers(number) {
 
 function fizzBuzz(numbers) {
  let array = [];
- for(let number of numbers){
-   array.push(dividers(number))
- }
+  for (let number of numbers) {
+    array.push(dividers(number));
+  }
  return array;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
@@ -120,8 +119,8 @@ function decode(string) {
   string = string.replace(/5/g, 'u');
   return string;
 }
-console.log(encode('hi there!'))
-console.log(decode('h3 th2r2!'))
+console.log(encode('hi there!'));
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
