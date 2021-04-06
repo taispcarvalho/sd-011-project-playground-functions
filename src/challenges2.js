@@ -96,6 +96,22 @@ function repeatedNumber(array) {
     }
   }
 }
+function repeatedNumber(array, number) {
+  let repeat = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === number) {
+      repeat += 1;
+    }
+  }
+  return repeat;
+}
+function compareNumber(array) {
+  for ( let number of array) {
+    if (repeatedNumber(array, number) > 2) {
+      return true
+    }
+  }
+}
 
 function doNumber(array) {
   let phoneNumber = '(';
@@ -122,16 +138,16 @@ function generatePhoneNumber(array) {
   if (errorArrayLength(array)) {
     return msgLength;
   }
-  if (errorNumber(array) || repeatedNumber(array)) {
+  if (errorNumber(array) || compareNumber(array)) {
     return msgNumber;
   }
   return doNumber(array);
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1])); // Menor que zero.
-console.log(generatePhoneNumber([1, 2, 13, 4, 5, 6, 7, 8, 9, 0, 1])); // maior que 9.
+console.log(generatePhoneNumber([1, 2, 13, 4, 5, 6, 7, 8, 9, 0, 1])); // maior que 9. */
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 7, 7, 0, 1])); // repete numero.
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // Retornar (12) 34567-8901.
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // Retornar (12) 34567-8901. 
 
 // Desafio 12
 /* Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
