@@ -84,9 +84,26 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let regex = /\d+/g;
+  let matches = string.match(regex).map(Number);
+  let somaMatches = 0;
+  let resultado = '';
+
+  for (let index = 0; index < matches.length; index += 1) {
+    somaMatches += matches[index];
+  }
+  if (somaMatches === 1) {
+    resultado = `${somaMatches} copo de água`;
+  } else {
+    resultado = `${somaMatches} copos de água`;
+  }
+
+  return resultado;
 }
+
+let teste = '1 copo de catuaba, 1 cervejas e 1 copo de vinho';
+console.log(hydrate(teste));
 
 module.exports = {
   generatePhoneNumber,
