@@ -18,12 +18,8 @@ function generatePhoneNumber() {
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA + lineB > lineC) {
-    if (lineB + lineC > lineA) {
-      if (lineA + lineC > lineB) {
-        return true;
-      }
-    }
+  if (lineA + lineB > lineC && lineB + lineC > lineA && lineA + lineC > lineB) {
+    return true;
   }
   if (Math.abs(lineB - lineC) < lineA && Math.abs(lineA - lineC) < lineB
 && Math.abs(lineA - lineB) < lineC) {
@@ -31,7 +27,6 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-console.log(triangleCheck(10, 14, 8));
 // Desafio 13
 function hydrate() {
   // seu código aqui
