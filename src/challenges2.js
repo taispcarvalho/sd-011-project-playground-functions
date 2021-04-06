@@ -71,7 +71,7 @@ function generatePhoneNumber(arrayPhoneNumber) {
   if (invalidDigit(arrayPhoneNumber) && hasThreeOrMoreRepeats(arrayPhoneNumber)) {
     return generatePhoneString(arrayPhoneNumber);
   }
-  return 'não é possível gerar um número de telefone com esses valores.';
+  return 'não é possível gerar um número de telefone com esses valores';
 }
 
 // Desafio 12
