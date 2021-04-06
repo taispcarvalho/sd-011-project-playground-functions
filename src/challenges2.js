@@ -9,44 +9,58 @@ function techList(skills, name) {
   for (let index = 0; index < skills.length; index += 1) {
     packageSkills.push({
       tech: skills[index],
-      name: name,
+      name,
     });
   }
   return packageSkills;
 }
 
 // Desafio 11
-function validatorPhoneNumber(fone) {
-  let repeatCaracter = 1;
+function phone(fone) {
+  let repeatCaracter = 0;
+  for (let index in fone) {
+    repeatCaracter = 0;
+    for (let index2 in fone) {
+      if (fone[index] === fone[index2]) {
+        repeatCaracter += 1;
+      }
+    }
+  }
+  return repeatCaracter;
+}
+function repeatPhone(fone) {
+  let repeatCaracter2 = phone(fone);
+  if (repeatCaracter2 >= 3) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  if (repeatCaracter2 < 3) {
+    return true;
+  }
+}
+function validateSimple(fone) {
   if (fone.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for (let index = 0; index < fone.length; index += 1) {
-    if (fone[index] === fone[index + 1]) {
-      repeatCaracter += 1;
+  for (let index in fone) {
+    if (fone[index] < 0 || fone[index] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
-  }
-  if (repeatCaracter >= 3) {
-    return 'não é possível gerar um número de telefone com esses valores';
   }
   return true;
 }
 
 function generatePhoneNumber(fone) {
-  for (let index in fone) {
-    if (fone[index] < 0 || fone[index] > 9) {
-      fone = 'não é possível gerar um número de telefone com esses valores';
-    }
-  }
-  if (validatorPhoneNumber(fone) === true) {
-    fone = `(${fone[0]}${fone[1]}) `
+  if (repeatPhone(fone) === true && validateSimple(fone) === true) {
+    return `(${fone[0]}${fone[1]}) `
       + `${fone[2]}${fone[3]}${fone[4]}${fone[5]}${fone[6]}-`
       + `${fone[7]}${fone[8]}${fone[9]}${fone[10]}`;
-    return fone;
+  } if (repeatPhone(fone) !== true) {
+    return repeatPhone(fone);
+  } if (validateSimple(fone) !== true) {
+    return validateSimple(fone);
   }
-  return validatorPhoneNumber(fone);
 }
-
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
