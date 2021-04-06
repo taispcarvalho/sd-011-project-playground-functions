@@ -45,20 +45,29 @@ function highestCount(arrayOfNumbers) {
   return repeteations;
 }
 
+function checkNegativeNumber(cat) {
+  if (cat < 0) {
+    return cat *= -1;
+  }
+  return cat;
+}
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Distance = cat1 - mouse;
   let cat2Distance = cat2 - mouse;
 
+  cat1Distance = checkNegativeNumber(cat1Distance);
+  cat2Distance = checkNegativeNumber(cat2Distance);
+
   if (cat1Distance < cat2Distance) {
     return 'cat1';
   } else if (cat1Distance === cat2Distance) {
     return 'os gatos trombam e o rato foge';
-  } else {
-    return 'cat2';
   }
+  return 'cat2';
 }
-
+console.log(catAndMouse(3, 1, 6));
 // Desafio 8
 function fizzBuzz(numbersArray) {
   let response = [];

@@ -1,16 +1,17 @@
 // Desafio 10
 function techList(technologies, name) {
+  let orderedTechs = technologies.sort();
   let arrayOfTechonlogies = [];
 
-  if (technologies.length === 0) return 'Vazio!';
+  if (orderedTechs.length === 0) return 'Vazio!';
 
-  for (let index = 0; index < technologies.length; index += 1) {
-    arrayOfTechonlogies.push({ tech: technologies[index], name });
+  for (let index = 0; index < orderedTechs.length; index += 1) {
+    arrayOfTechonlogies.push({ tech: orderedTechs[index], name });
   }
   return arrayOfTechonlogies;
 }
-let list = ['Unix', 'bash', 'git', 'Javascript', 'MongoDB'];
-console.log(techList(list, 'Dário'));
+let list = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+console.log(techList(list, 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber() {
