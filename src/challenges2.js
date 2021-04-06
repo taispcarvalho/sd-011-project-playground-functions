@@ -19,16 +19,45 @@ function techList(arrTech, nameDev) {
   // 5 - retornar o array de obejtos
   return arrObj;
 }
-// TESTA A FUNÇÃO
-// let arrTech = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-// let arrTech = [];
-// let nameDev = 'Edu';
-// console.log(techList(arrTech, nameDev));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function formatDdd(arrPhone) {
+  // pegar os dois primeiros numeros e colocar dentro de parêntesis
+  let ddd = '(';
+  for (let index = 0; index < 2; index += 1) {
+    ddd += arrPhone[index];
+  }
+  ddd += ') ';
+  return ddd;
 }
+
+function formatPhoneNumber(arrPhone) {
+  // Devo juntar os 5 numeros após o ddd
+  let numPart1 = '';
+  let separator = '-';
+  let numPart2 = '';
+  for (let index = 2; index < 7; index += 1) {
+    numPart1 += arrPhone[index];
+  }
+  // Devo juntar os 4 ultimos numeros numeros
+  for (let index = 7; index < arrPhone.length; index += 1) {
+    numPart2 += arrPhone[index];
+  }
+  // Devo colocar um separador entre os conjuntos de numeros
+  let numberPhone = numPart1 + separator + numPart2;
+  return numberPhone;
+}
+
+function generatePhoneNumber(arrPhone) {
+  // seu código aqui
+  // Devo retornar uma variável contendo uma string do numero de telefone devidamente formatado
+  // Preciso validar a função
+  return formatDdd(arrPhone) + formatPhoneNumber(arrPhone);
+}
+
+let arrPhoneO = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+
+console.log(generatePhoneNumber(arrPhoneO));
 
 // Desafio 12
 function triangleCheck() {
