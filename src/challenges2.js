@@ -15,9 +15,10 @@ function techList(techArray, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(){
-  
+function generatePhoneNumber() {
+  // seu código aqui
 }
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
