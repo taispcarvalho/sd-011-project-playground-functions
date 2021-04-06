@@ -41,19 +41,19 @@ function checkNumbers(telNumbers) {
 
 function generatePhoneNumber(telNumbers) {
   let numberTel = 0;
-  if (checkrepet(telNumbers) === true || checkNumbers(telNumbers) === true) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  } else if (telNumbers.length !== 11) {
+  if (telNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
+  } else if (checkrepet(telNumbers) === true || checkNumbers(telNumbers) === true || telNumbers == '') {
+    return 'não é possível gerar um número de telefone com esses valores';
   } else {
     numberTel = '(' + telNumbers[0] + telNumbers[1] + ') ' + telNumbers[2] + telNumbers[3] + telNumbers[4] + telNumbers[5] + telNumbers[6] + '-' + telNumbers[7] + telNumbers[8] + telNumbers[9] + telNumbers[10];
   }
   return numberTel;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-console.log(checkNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-console.log(checkrepet([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
+console.log(checkNumbers([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
+console.log(checkrepet([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
