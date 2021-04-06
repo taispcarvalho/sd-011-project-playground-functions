@@ -71,17 +71,17 @@ function encode(phrase) {
   let encodedPhrase = '';
   for (let letter of phrase) {
     if (letter === 'a') {
-    encodedPhrase += '1';
+      encodedPhrase += '1';
     } else if (letter === 'e') {
-    encodedPhrase += '2';
+      encodedPhrase += '2';
     } else if (letter === 'i') {
-    encodedPhrase += '3';
+      encodedPhrase += '3';
     } else if (letter === 'o') {
-    encodedPhrase += '4';
+      encodedPhrase += '4';
     } else if (letter === 'u') {
-    encodedPhrase += '5';
+      encodedPhrase += '5';
     } else {
-    encodedPhrase += letter;
+      encodedPhrase += letter;
     }
   }
   return encodedPhrase;
