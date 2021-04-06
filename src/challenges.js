@@ -18,14 +18,13 @@ function splitSentence(nome) {
 console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName() {
-  let nome = ['Rafael', 'Batista', 'de', 'Oliveira'];
+function concatName(nome) {  
   let last = nome[nome.length-1];
   let first = nome[0];
   let lastfirst = (last + ', ' +  first);
   return(lastfirst);
 }
-console.log(concatName());
+console.log(concatName(['alberto','silva','candido']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -34,21 +33,36 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(1, 2));
 
 // Desafio 6
-function highestCount() {
-
+function highestCount(valor) {
+  let contador = 0;
+  let maior = 0;
+  for (let index = 0; index < valor.length; index++) {
+    if (valor[index] > maior) {
+      maior = valor[index];
+    }
+  }
+  for (let i = 0; i < valor.length; i++) {
+    if (valor[i] === maior) {
+      contador +=1;
+    }       
+  }
+  return contador;
 }
+console.log(highestCount([9,5,10,4,20,40,2,40,7,40]));
+
 
 function catAndMouse(mouse, cat1, cat2) {  
-  if (mouse < cat2 && cat2 > cat1) {
-    console.log('cat1');
-  } else if (cat1 === cat2) {
-    return ('os gatos trombam e o rato foge');
+  let distanciagato1 = Math.abs(cat1 - mouse)
+  let distanciagato2 = Math.abs(cat2 - mouse)
+    if (distanciagato1 < distanciagato2) {
+      return 'cat1';
+  } else if (distanciagato2 < distanciagato1) {
+    return 'cat2';
   } else {
-    return ('cat2');
+    return 'os gatos trombam e o rato foge';
   }
 }
-console.log(catAndMouse(0, 6, 12));
-
+console.log(catAndMouse(0, 7, 6));
 // Desafio 8
 
 function fizzBuzz() {
