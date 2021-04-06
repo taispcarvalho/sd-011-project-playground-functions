@@ -33,7 +33,10 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(array) {
-  return array.length, array[0];
+  let lastItem = array[array.length - 1];
+  let firstItem = array[0];
+  let itens = lastItem + ', ' + firstItem;
+  return itens;
 }
 
 // Desafio 5
