@@ -60,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function returnString(numbers) {
   let string = 0;
   if (numbers % 15 === 0) {
-    string = 'fizzbuzz';
+    string = 'fizzBuzz';
   } else if (numbers % 5 === 0) {
     string = 'buzz';
   } else if (numbers % 3 === 0) {
@@ -75,36 +75,14 @@ function fizzBuzz(stringArray) {
     finalResult.push(returnString(stringArray[index]));
   }
   return finalResult;
-} // console.log(fizzBuzz([2, 15, 7, 9, 45]));
+} // console.log(fizzBuzz([7, 9]));
 
 // Desafio 9
 function encode() {
-  // let characters = {
-  //  a: 1,
-   // e: 2,
-  //  i: 3,
-  //  o: 4,
-  //  u: 5,
- // };
- // for (let key in characters) {
-  //  if (characters.hasOwnProperty.call(characters, key)) {
-  //    phrase[key] = characters[key];
- //   }
-//  }
-} // console.log(encode("hi there!"));
+
+}
 function decode() {
-  // let codereverse = {
-  //  1: a,
-  //  2: e,
-  //  3: i,
-  //  4: o,
-  //  5: u,
-  // };
-  //for (let key in codereverse) {
-  //if (codereverse.hasOwnProperty.call(codereverse, key)) {
-    //  reversePhrase[key] = codereverse[key];      
- //   }
-//  }
+
 }
 module.exports = {
   calcArea,
