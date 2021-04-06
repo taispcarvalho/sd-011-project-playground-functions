@@ -73,7 +73,7 @@ function numero(numeroArray) {
     string = 'fizzBuzz';
   }
   if (numeroArray % 5 !== 1) {
-    string = 'bunn';
+    string = 'buzz';
   }
   if (numeroArray % 3 !== 1) {
     string = 'fizz';
