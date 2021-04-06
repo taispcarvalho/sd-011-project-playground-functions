@@ -20,28 +20,28 @@ function splitSentence(sentence) {
 // Desafio 4
 
 function concatName(anyArray) {
-// return ([anyArray[anyArray.length - 1], anyArray[0]]);
-// ESSA FUNCIONA PARA OBJETO
+// return ([anyArray[anyArray.length - 1], anyArray[0]]); // ESSA FUNCIONA PARA OBJETO
 
-// Desafio 5
-function footballPoints(wins, ties) {
-  return ((wins + ties) * 3)
-};
 
-// Desafio 6
-function highestCount(anyNumberArray) {
-  let higherNumber = 0;
-  let repetitions = 0;
-  for (let anyNumber of anyNumberArray) {
-    if (anyNumber > higherNumber) {
-      higherNumber = anyNumber;
-    }
-    if (higherNumber === anyNumber) {
-      repetitions += 1;
-    }
-  }
-  return repetitions;
-}
+// // Desafio 5
+// function footballPoints(wins, ties) {
+//   return ((wins + ties) * 3)
+// };
+
+// // Desafio 6
+// function highestCount(anyNumberArray) {
+//   let higherNumber = 0;
+//   let repetitions = 0;
+//   for (let anyNumber of anyNumberArray) {
+//     if (anyNumber > higherNumber) {
+//       higherNumber = anyNumber;
+//     }
+//     if (higherNumber === anyNumber) {
+//       repetitions += 1;
+//     }
+//   }
+//   return repetitions;
+// }
 
 // Desafio 7
 function catAndMouse() {
