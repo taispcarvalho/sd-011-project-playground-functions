@@ -34,9 +34,7 @@ function ifRepeat(number, phone) {
 }
 // Functions to check if the length is more than eleven digits
 function isEleven(number) {
-  if (number < 0 || number > 9) {
-    return true;
-  }
+  return number < 0 || number > 9;
 }
 function realyIs(number) {
   if (number.length !== 11) {
@@ -55,8 +53,8 @@ function generatePhoneNumber(phone) {
   }
   let phoneNumber = '(';
   for (let number = 0; number < phone.length; number += 1) {
-    if (phoneNumber === 3) {
-      phoneNumber += ')';
+    if (phoneNumber.length === 3) {
+      phoneNumber += ') ';
     } else if (phoneNumber.length === 10) {
       phoneNumber += '-';
     }
@@ -64,7 +62,7 @@ function generatePhoneNumber(phone) {
   }
   return phoneNumber;
 }
-console.log(generatePhoneNumber(48999023248));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
