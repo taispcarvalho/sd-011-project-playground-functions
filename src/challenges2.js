@@ -22,9 +22,22 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-
+function triangleCheck(lineA, lineB, lineC) {
+  let check = 0;
+  let valorAbs = Math.abs(lineA - lineB - lineC);
+  let sumAeB = lineA + lineB;
+  let sumBeC = lineB + lineC;
+  let sumAeC = lineA + lineC;
+  if ((lineA < sumBeC || lineB < sumAeC || lineC < sumAeB) && (lineA > valorAbs || lineB > valorAbs || lineC > valorAbs)) {
+    check = true;
+  } else if (lineA > sumBeC || lineB > sumAeC || lineC > sumAeB) {
+    check = false;
+  } else if (lineA < valorAbs || lineB < valorAbs || lineC < valorAbs) {
+    check = false;
+  }
+  return check;
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate(drinks) {
