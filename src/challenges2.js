@@ -16,7 +16,6 @@ function techList(techArray, name) {
 }
 
 // Desafio 11
-
 function maxRepeat(value1, value2) {
   if (value1 > value2) {
     value2 = value1;
@@ -55,7 +54,7 @@ function generatePhoneNumber(numbersArray) {
     return 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < numbersArray.length; index += 1) {
-    if (rangeNumbersValidator(numbersArray) || numberRepeats(numbersArray) >= 3) {
+    if (rangeNumbersValidator(numbersArray) || numberRepeats(numbersArray) >= 2) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
