@@ -18,33 +18,32 @@ function splitSentence(sentence) {
 /** source https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split */
 
 // Desafio 4
+function concatName() {
+  // seu código aqui
+}
 
-// function concatName(anyArray) {
-// return ([anyArray[anyArray.length - 1], anyArray[0]]); // ESSA FUNCIONA PARA OBJETO
+// Desafio 5
+function footballPoints(wins, ties) {
+  return ((wins + ties) * 3);
+}
 
-
-// // Desafio 5
-// function footballPoints(wins, ties) {
-//   return ((wins + ties) * 3)
-// };
-
-// // Desafio 6
-// function highestCount(anyNumberArray) {
-//   let higherNumber = 0;
-//   let repetitions = 0;
-//   for (let anyNumber of anyNumberArray) {
-//     if (anyNumber > higherNumber) {
-//       higherNumber = anyNumber;
-//     }
-//     if (higherNumber === anyNumber) {
-//       repetitions += 1;
-//     }
-//   }
-//   return repetitions;
-// }
+// Desafio 6
+function highestCount(anyNumberArray) {
+  let higherNumber = 0;
+  let repetitions = 0;
+  for (let anyNumber of anyNumberArray) {
+    if (anyNumber > higherNumber) {
+      higherNumber = anyNumber;
+    }
+    if (higherNumber === anyNumber) {
+      repetitions += 1;
+    }
+  }
+  return repetitions;
+}
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+function catAndMouse() {
   // seu código aqui
 }
 
