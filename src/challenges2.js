@@ -38,12 +38,13 @@ function checkNumbers(telNumbers) {
     }
   }
 }
+
 function generatePhoneNumber(telNumbers) {
   let numberTel = 0;
-  if (telNumbers.length !== 11 && checkNumbers(telNumbers) === false) {
-    return 'Array com tamanho incorreto.';
-  } else if (checkrepet(telNumbers) === true || checkNumbers(telNumbers) === true) {
+  if (checkrepet(telNumbers) === true || checkNumbers(telNumbers) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
+  } else if (telNumbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
   } else {
     numberTel = '(' + telNumbers[0] + telNumbers[1] + ') ' + telNumbers[2] + telNumbers[3] + telNumbers[4] + telNumbers[5] + telNumbers[6] + '-' + telNumbers[7] + telNumbers[8] + telNumbers[9] + telNumbers[10];
   }
