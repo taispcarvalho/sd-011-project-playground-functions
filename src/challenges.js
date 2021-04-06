@@ -2,8 +2,7 @@
 function compareTrue(diaUtil, haveraAula) {
   if (diaUtil && haveraAula === true) {
     return true;
-}
-console.log(compareTrue(true, true));
+} console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -11,18 +10,23 @@ function calcArea(base, height) {
 } console.log(calcArea(5, 6));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(stringSentence) {
+  arraySentence = stringSentence.split(' ');
+  return arraySentence;
+} console.log(splitSentence('vqv trybe'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+let arrays = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+function concatName(names) {
+  let primeiroNome = names[0];
+  let ultimoNome = names[names.length - 1];
+  let concatenacao = (ultimoNome + ', ') + primeiroNome;
+  return concatenacao;
+} console.log(concatName(arrays));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
