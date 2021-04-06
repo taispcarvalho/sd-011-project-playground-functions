@@ -60,13 +60,32 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  if (if numberArray % 5 === 0 && numberArray % 3 === 0) {
+    return 'fizzBuzz';
+  } 
+  if (numberArray % 3 === 0) {
+    return 'fizz';
+  }
+  if (numberArray % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug';
+}
+
+function indexFizzBuzz(numberArray) {
+  let phrase = [];
+  for(let index = 0; index < number.length; index += 1) {
+    phrase.push(fizzBuzz(number[index]));
+  }
+  return phrase
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(numberArray) {
+ 
 }
+
+
 function decode() {
   // seu código aqui
 }
