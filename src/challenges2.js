@@ -23,21 +23,23 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let check = 0;
-  let valorAbs = Math.abs(lineA - lineB - lineC);
+  let check = true;
+  let AbsAeB = Math.abs(lineA - lineB);
+  let AbsBeC = Math.abs(lineB - lineC);
+  let AbsAeC = Math.abs(lineA - lineC);
   let sumAeB = lineA + lineB;
   let sumBeC = lineB + lineC;
   let sumAeC = lineA + lineC;
-  if ((lineA < sumBeC || lineB < sumAeC || lineC < sumAeB) && (lineA > valorAbs || lineB > valorAbs || lineC > valorAbs)) {
+  if ((sumBeC > lineA > AbsBeC || sumAeC > lineB > AbsAeC || sumAeB > lineC > AbsAeB)) {
     check = true;
   } else if (lineA > sumBeC || lineB > sumAeC || lineC > sumAeB) {
     check = false;
-  } else if (lineA < valorAbs || lineB < valorAbs || lineC < valorAbs) {
+  } else if (lineA < AbsBeC || lineB < AbsAeC || lineC < AbsAeB) {
     check = false;
   }
   return check;
 }
-console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(16, 20, 30));
 
 // Desafio 13
 function hydrate(drinks) {
