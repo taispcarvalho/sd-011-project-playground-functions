@@ -3,7 +3,7 @@ function techList(array, name) {
   // seu código aqui
   let guardaValor;
   if (array.length === 0) {
-    guardaValor = 'Vazio';
+    guardaValor = 'Vazio!!';
   } else {
     let guarda = [];
     array = array.sort();
