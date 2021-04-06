@@ -19,7 +19,8 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(value) {
   let end = value.length - 1;
-  let name = value[end] + ', ' + value[0];
+  let comma = ', '
+  let name = value[end] + comma + value[0];
   return name;
 }
 // console.log(concatName(['foguete', 'não', 'tem', 'ré']));
@@ -74,51 +75,84 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 // console.log(catAndMouse(1, 0, 3));
 
-function fizz(number) {
-  let numberOrFizz;
+// function fizz(number) {
+//   let numberOrFizz;
 
-  if (number % 3 === 0) {
-    numberOrFizz = true;
+//   if (number % 3 === 0) {
+//     numberOrFizz = true;
+//   } else {
+//     numberOrFizz = false;
+//   }
+//   return numberOrFizz;
+// }
+// // console.log(fizz(41));
+
+// function buzz(number) {
+//   let numberOrBuzz;
+
+//   if (number % 5 === 0) {
+//     numberOrBuzz = true;
+//   } else {
+//     numberOrBuzz = false;
+//   }
+//   return numberOrBuzz;
+// }
+// // console.log(buzz(41));
+
+// // Desafio 8
+// function fizzBuzz(list) {
+//   let resultFizzBuzz = [];
+//   let comma = ',  ';
+//   for (let index of list) {
+//     let isFizzBuzz = fizz(index) + comma + buzz(index);
+//     switch (isFizzBuzz) {
+//       case 'true, true':
+//         resultFizzBuzz.push('fizzBuzz');
+//         break;
+//       case 'true, false':
+//         resultFizzBuzz.push('fizz');
+//         break;
+//       case 'false, true':
+//         resultFizzBuzz.push('buzz');
+//         break;
+//       default:
+//         resultFizzBuzz.push('bug!');
+//     }
+//   }
+//   return resultFizzBuzz;
+// }
+// console.log(fizzBuzz([7, 9]));
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
+function numberFizzBuzz(number) {
+  let resultFizzBuzz;
+  if (number % 3 === 0 && number % 5 === 0) {
+    resultFizzBuzz = 'fizzBuzz';
+  } else if (number % 3 === 0) {
+    resultFizzBuzz = 'fizz';
+  } else if (number % 5 === 0) {
+    resultFizzBuzz = 'buzz';
   } else {
-    numberOrFizz = false;
-  }
-  return numberOrFizz;
-}
-// console.log(fizz(41));
-
-function buzz(number) {
-  let numberOrBuzz;
-
-  if (number % 5 === 0) {
-    numberOrBuzz = true;
-  } else {
-    numberOrBuzz = false;
-  }
-  return numberOrBuzz;
-}
-// console.log(buzz(41));
-
-// Desafio 8
-function fizzBuzz(list) {
-  let resultFizzBuzz = [];
-
-  for (let index of list) {
-    let isFizzBuzz = fizz(index) + '' + buzz(index);
-    switch (isFizzBuzz) {
-      case 'truetrue':
-        resultFizzBuzz.push('fizzBuzz');
-        break;
-      case 'truefalse':
-        resultFizzBuzz.push('fizz');
-        break;
-      case 'falsetrue':
-        resultFizzBuzz.push('buzz');
-        break;
-      default:
-        resultFizzBuzz.push('bug!');
-    }
+    resultFizzBuzz = number;
   }
   return resultFizzBuzz;
+}
+// console.log(numberFizzBuzz(3));
+// console.log(numberFizzBuzz(5));
+// console.log(numberFizzBuzz(15));
+// console.log(numberFizzBuzz(8));
+
+function fizzBuzz(list) {
+  let arrayFizzBuzz = [];
+  for (let index = 0; index < list.length; index += 1) {
+    let testFizzBuzz = numberFizzBuzz(list[index]);
+      if (isNaN(testFizzBuzz)){
+        arrayFizzBuzz.push(testFizzBuzz);
+      } else {
+        arrayFizzBuzz.push('bug!');
+      }
+  }
+  return arrayFizzBuzz;
 }
 // console.log(fizzBuzz([7, 9]));
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
