@@ -55,11 +55,12 @@ function fizzBuzz(numbers) {
   for (let num of numbers) {
     if (num % 3 === 0 && num % 5 === 0) {
       strings.push('fizzBuzz');
-    } else if (num % 5 === 0) {
-      strings.push('buzz');
+    }   else if (num % 5 === 0) {
+        strings.push('buzz');
     } else if (num % 3 === 0) {
-      strings.push('fizz');
-    } else { strings.push('bug!');
+        strings.push('fizz');
+    } else { 
+        strings.push('bug!');
    }
   }
   return strings;
@@ -71,15 +72,15 @@ function encode(phrase) {
   for (let letter of phrase) {
     if (letter === 'a') {
       encodedPhrase += '1';
-    } else if (letter === 'e') {
+      } else if (letter === 'e') {
       encodedPhrase += '2';
-    } else if (letter === 'i') {
+      } else if (letter === 'i') {
       encodedPhrase += '3';
-    } else if (letter === 'o') {
+      } else if (letter === 'o') {
       encodedPhrase += '4';
-    } else if (letter === 'u') {
+      } else if (letter === 'u') {
       encodedPhrase += '5';
-    } else {
+      } else {
       encodedPhrase += letter;
     }
   }
