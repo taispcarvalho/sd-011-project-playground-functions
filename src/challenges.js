@@ -19,20 +19,19 @@ function splitSentence(sentence) {
 
 // Desafio 4
 
-// function concatName(anyArray) {
-//   return ([anyArray[anyArray.length - 1], anyArray[0]]); 
+function concatName(anyArray) {
+// return ([anyArray[anyArray.length - 1], anyArray[0]]);
 // ESSA FUNCIONA PARA OBJETO
-
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return((win + ties) * 3)
-}
+  return ((wins + ties) * 3)
+};
 
 // Desafio 6
 function highestCount(anyNumberArray) {
-  let higherNumber = 0
-  let repetitions = 0
+  let higherNumber = 0;
+  let repetitions = 0;
   for (let anyNumber of anyNumberArray) {
     if (anyNumber > higherNumber) {
       higherNumber = anyNumber;
@@ -41,7 +40,7 @@ function highestCount(anyNumberArray) {
       repetitions += 1;
     }
   }
-  return repetitions
+  return repetitions;
 }
 
 // Desafio 7
