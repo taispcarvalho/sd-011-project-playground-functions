@@ -24,22 +24,24 @@ function concatName() {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return ((wins + ties) * 3);
+  return wins * 3 + ties;
 }
 
 // Desafio 6
-function highestCount(anyNumberArray) {
-  let higherNumber = 0;
-  let repetitions = 0;
-  for (let anyNumber of anyNumberArray) {
-    if (anyNumber > higherNumber) {
-      higherNumber = anyNumber;
-    }
-    if (higherNumber === anyNumber) {
-      repetitions += 1;
-    }
+function getHighestNumber(numberArray) {
+  let highestNumber = numberArray[0];
+  for (let number of numberArray) {
+    if (number > highestNumber) highestNumber = number;
   }
-  return repetitions;
+  return highestNumber;
+}
+function highestCount(numberArray) {
+  let highest = getHighestNumber(numberArray);
+  let count = 0;
+  for (let number of numberArray) {
+    if (number === highest) count += 1;
+  }
+  return count;
 }
 
 // Desafio 7
