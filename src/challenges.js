@@ -89,12 +89,29 @@ fizzBuzz([7, 9]);
 fizzBuzz([9, 25]);
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  for (let frases of frase) {
+    frase = frase.replace(/a/g, 1);
+    frase = frase.replace(/e/g, 2);
+    frase = frase.replace(/i/g, 3);
+    frase = frase.replace(/o/g, 4);
+    frase = frase.replace(/u/g, 5);
+  }
+  return frase;
 }
-function decode() {
-  // seu código aqui
+encode('Felipe')
+
+function decode(frase) {
+  for (let frases of frase) {
+    frase = frase.replace(/1/g, 'a');
+    frase = frase.replace(/2/g, 'e');
+    frase = frase.replace(/3/g, 'i');
+    frase = frase.replace(/4/g, 'o');
+    frase = frase.replace(/5/g, 'u');
+  }
+  return frase;
 }
+decode('F2l3p2')
 
 module.exports = {
   calcArea,
