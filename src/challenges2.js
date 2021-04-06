@@ -33,7 +33,7 @@ function more3(numberArray, x) {
 
 function byNineNumber(numberArray) {
   for (let i of numberArray) {
-    if ( i < 0 || i > 9 || more3(numberArray, i) >= 3) {
+    if (i < 0 || i > 9 || more3(numberArray, i) >= 3) {
       return false;
     }
   }
@@ -45,7 +45,7 @@ function generatePhoneNumber(numberArray) {
   }
   if (byNineNumber(numberArray) === false) {
     return `${'não é possível gerar um número de telefone com esses valores'}`;
-  }  
+  }
   let cleaned = `${(numberArray)}`.replace(/\D/g, ''); // Filter only numbers from the input
   let match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/); // Check if the input is of correct length
   if (match) {
