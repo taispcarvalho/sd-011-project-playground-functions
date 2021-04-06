@@ -101,10 +101,31 @@ console.log(catAndMouse(18,12,6));
 console.log(catAndMouse(4,2,2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function dividers(number){
+  if(number % 3 === 0){
+    return 'fizz';
+  }
+  
+  if(number % 5 === 0){
+    return 'buzz';
+  }
+
+  if(number % 15 === 0){
+    return 'fizzBuzz';
+  }
+
+  return 'bug!';
+
 }
 
+function fizzBuzz(numbers) {
+ let array = [];
+ for(let number of numbers){
+   array.push(dividers(number))
+ }
+ return array;
+}
+console.log(fizzBuzz([2,15,7]))
 // Desafio 9
 function encode() {
   // seu código aqui
