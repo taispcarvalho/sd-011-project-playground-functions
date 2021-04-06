@@ -17,8 +17,44 @@ function techList(arrayTech, names) {
 }
 
 // Desafio 11
-
+function numbersZeroNine(numArray) {
+  for (let index = 0; index < numArray.length; index += 1) {
+    if (numArray[index] < 0 || numArray[index] > 9) {
+      return false;
+    }
+  }
+  return true;
+}
+function numberRepeat(numArray, number) {
+  let count = 0;
+  for (let index = 0; index < numArray.length; index += 1) {
+    if (numArray[index] === number) {
+      count += 1;
+    }
+  }
+  return count;
+}
+function numbersOccurrenceThree(numArray) {
+  for (let index = 0; index < numArray.length; index += 1) {
+    let count = numberRepeat(numArray[index]);
+    if (count >= 3) {
+      return false;
+    }
+  }
+  return true;
+}
 function generatePhoneNumber(numArray) {
+  if (numArray.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (numbersZeroNine(numArray) || numbersOccurrenceThree(numArray)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  if (numArray.length === 11) {
+    return `(${numArray[0]}${numArray[1]}) `
+      + `${numArray[2]}${numArray[3]}${numArray[4]}${numArray[5]}${numArray[6]}-`
+      + `${numArray[7]}${numArray[8]}${numArray[9]}${numArray[10]}`;
+  }
 }
 
 // Desafio 12
