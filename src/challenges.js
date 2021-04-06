@@ -71,7 +71,7 @@ function numero(numeroArray) {
   let string = 0;
   if (numeroArray % 15 === 0) {
     string = 'fizzBuzz';
-  } 
+  }
   if (numeroArray % 3 === 0) {
     string = 'fizz';
   }
