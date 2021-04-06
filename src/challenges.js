@@ -105,6 +105,15 @@ function catAndMouse(mouse, cat1, cat2) {
   Retorne as strings ['bug!', 'fizz'] quando é passado os parâmetros [7, 9] para função fizzBuzz
   Retorne as strings ['fizz', 'buzz'] quando é passado os parâmetros [9, 25] para função fizzBuzz
 */
+
+function validation(array) {
+
+}
+
+function buzz() {
+
+}
+
 function fizzBuzz(array) {
   let game = [];
   for (let index = 0; index < array.length; index += 1) {

@@ -125,7 +125,7 @@ function generatePhoneNumber(array) {
   if (errorNumber(array) || repeatedNumber(array)) {
     return msgNumber;
   }
-  return doNumber (array);
+  return doNumber(array);
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1])); // Menor que zero.
@@ -145,7 +145,7 @@ console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // Retornar
  Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas
  Retorne true quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas */
 
-function sideCheck(lineA,lineB,lineC) {
+function sideCheck(lineA, lineB, lineC) {
   // Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois
   let test = true;
   if (lineA > (lineB + lineC) || lineB > (lineC + lineA) || lineC > (lineA + lineB)) {
@@ -154,7 +154,7 @@ function sideCheck(lineA,lineB,lineC) {
   return test;
 }
 
-function diferenceBetweenCheck(lineA,lineB,lineC) {
+function diferenceBetweenCheck(lineA, lineB, lineC) {
   // Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas
   let test = true;
   if (lineA < Math.abs((lineB - lineC))) {
@@ -169,8 +169,8 @@ function diferenceBetweenCheck(lineA,lineB,lineC) {
   return test;
 }
 
-function triangleCheck(lineA,lineB,lineC) {
-  return sideCheck(lineA,lineB,lineC) && diferenceBetweenCheck(lineA,lineB,lineC);  
+function triangleCheck(lineA, lineB, lineC) {
+  return sideCheck(lineA, lineB, lineC) && diferenceBetweenCheck(lineA, lineB, lineC);  
 }
 /* console.log(triangleCheck(10,14,8));
 console.log(triangleCheck(100,14,8));
