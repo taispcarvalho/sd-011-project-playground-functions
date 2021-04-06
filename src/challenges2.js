@@ -37,13 +37,14 @@ function countRepeatedNumber(num, arrayPhoneNumber) {
 function hasThreeOrMoreRepeats(arrayPhoneNumber) {
   let count = 0;
   for (let num of arrayPhoneNumber) {
-    let count = countRepeatedNumber(num, arrayPhoneNumber);
+    count = countRepeatedNumber(num, arrayPhoneNumber);
     if (count > 2) {
       return false;
     }
   }
   return true;
 }
+
 function generatePhoneString(arrayPhoneNumber) {
   if (typeof arrayPhoneNumber === 'string') {
     return arrayPhoneNumber;
@@ -75,7 +76,7 @@ function generatePhoneNumber(arrayPhoneNumber) {
 
 // Desafio 12
 function triangleCheckSide(a, b, c) {
-  return a < b + c && Math.abs(b -c);
+  return a < b + c && a > Math.abs(b - c);
 }
 
 function triangleCheck(lineA, lineB, lineC) {

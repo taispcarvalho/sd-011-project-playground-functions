@@ -70,11 +70,11 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode(string) {
-  let encryptoDictionary = { a: 1, e: 2, i: 3, o: 4, u: 5 }; 
+  let encryptoDictionary = { a: 1, e: 2, i: 3, o: 4, u: 5 };
   let encodeString = '';
   for (let char of string) {
     if (encryptoDictionary[char]) {
-      encodeString += encryptoDictionary[char]; 
+      encodeString += encryptoDictionary[char];
     } else {
       encodeString += char;
     }
