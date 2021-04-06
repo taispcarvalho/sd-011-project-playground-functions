@@ -8,7 +8,7 @@ function techList(technologiesList, name) {
   for (let technology of technologiesList) {
     newList.push({
       tech: technology,
-      name: name,
+      name,
     });
   }
   return newList;
