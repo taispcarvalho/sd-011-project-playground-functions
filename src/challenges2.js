@@ -41,8 +41,8 @@ function checkRepeatNumbers(numbers) {
 function lastStep(numbers) {
   if (checkArray(numbers) === false) {
     return 'Array com tamanho incorreto.';
-  } if (checkNumbers(numbers) === false || checkRepeatNumbers(numbers) === false) {
-    return 'não é possivel gerar um número de telefone com esses valores';
+  } if (checkNumbers(numbers) === false && checkRepeatNumbers(numbers) === false) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
   return true;
 }
