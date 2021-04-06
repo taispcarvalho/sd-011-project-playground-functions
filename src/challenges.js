@@ -102,6 +102,12 @@ console.log(catAndMouse(4,2,2));
 
 // Desafio 8
 function dividers(number){
+  
+
+  if(number % 15 === 0){
+    return 'fizzBuzz';
+  }
+  
   if(number % 3 === 0){
     return 'fizz';
   }
@@ -110,9 +116,6 @@ function dividers(number){
     return 'buzz';
   }
 
-  if(number % 15 === 0){
-    return 'fizzBuzz';
-  }
 
   return 'bug!';
 
@@ -125,7 +128,7 @@ function fizzBuzz(numbers) {
  }
  return array;
 }
-console.log(fizzBuzz([2,15,7]))
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 9
 function encode() {
   // seu código aqui
