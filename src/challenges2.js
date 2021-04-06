@@ -8,12 +8,11 @@ function techList(techArray, name) {
   for (let index = 0; index < techArray.length; index += 1) {
     technologyList.push({
       tech: techArray[index],
-      name: name,
+      name,
     });
   }
   return technologyList;
 }
-
 
 // Desafio 11
 function generatePhoneNumber() {
