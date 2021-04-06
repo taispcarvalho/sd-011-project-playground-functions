@@ -102,6 +102,8 @@ function encode(string) {
     } else {
       novaString = novaString + string[i];
     }
+  }
+  return novaString;
 }
 function decode(string) {
   let novaString = "";
