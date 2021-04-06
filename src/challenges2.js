@@ -1,23 +1,8 @@
 // Desafio 10
-function techList(array, name) {
+function techList() {
   // seu código aqui
-  let guardaValor;
-  if (array.length === 0) {
-    guardaValor = 'Vazio!!';
-  } else {
-    let guarda = [];
-    array = array.sort();
-    for (let index = 0; index < array.length; index += 1) {
-      guarda.push(
-        { tech: array[index], name },
-      );
-    }
-    guardaValor = guarda;
-  }
-  return array;
+
 }
-let array = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-techList(array);
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
