@@ -53,7 +53,7 @@ function generatePhoneNumber(numeros) {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {\
+function triangleCheck(lineA, lineB, lineC) {
   let resultado = false;
   let somaDasMedidas = Math.abs(lineB + lineC);
   let diferenca = Math.abs(lineB - lineC);
@@ -75,7 +75,6 @@ function hydrate(string) {
   }
   return `${numbers} copos de água`;
 }
-
 
 module.exports = {
   generatePhoneNumber,
