@@ -37,8 +37,9 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebidas, agua) {
+  let regex = /[0-9]/g;
+  return agua = bebidas.match(regex);
 }
 
 module.exports = {
