@@ -48,6 +48,7 @@ function highestCount(array) {
     if (array[index] === maior)
     cont += 1;
   }
+  return cont;
 }
 
 // Desafio 7
