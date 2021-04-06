@@ -38,8 +38,8 @@ function highestCount(numbers) {
       highestNumber = numbers[index];
     }
   }
-  for (let index2 = 0; index2 < numbers.lenght; index2 += 1) {
-    if (numbers[index2] === highestNumber) {
+  for (let index = 0; index < numbers.lenght; index += 1) {
+    if (numbers[index] === highestNumber) {
       repeatedNumber += 1;
     }
   }
@@ -50,16 +50,16 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(cat1 - mouse);
   let distanceCat2 = Math.abs(cat2 - mouse);
-  let result = ' ';
 
-  if (distanceCat1 > distanceCat2) {
-    result = 'cat1';
-  } else if (distanceCat1 < distanceCat2) {
-    result = 'cat2';
-  } else {
-    result = 'os gatos trombam e o rato foge';
+  if ((distanceCat1) > (distanceCat2)) {
+    return 'cat1';
   }
-  return result;
+  if ((distanceCat1) < (distanceCat2)) {
+    return 'cat2';
+  }
+  if (distanceCat1 === distanceCat2) {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
