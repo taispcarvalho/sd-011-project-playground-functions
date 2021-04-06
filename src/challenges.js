@@ -47,21 +47,17 @@ function highestCount(numberArray) {
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
-  let cat1distance = Math.abs(cat1 - mouse);
-  let cat2distance = Math.abs(cat2 - mouse);
-  let result = '';
-
-  if (cat2distance < cat1distance) {
-    result = 'cat2';
-  } else if (cat2distance > cat1distance) {
-    result = 'cat1';
-  } else {
-    result = 'os gatos trombam e o rato foge';
+  let cat1Distance = Math.abs(mouse - cat1);
+  let cat2Distance = Math.abs(mouse - cat2);
+  if (cat1Distance === cat2Distance) {
+    return 'os gatos trombam e o rato foge';
   }
-  return result;
+  if (cat1Distance < cat2Distance) {
+    return 'cat1';
+  }
+  return 'cat2';
 }
 // A Tamires deu a dica no plantão que simplificou em 200% o desafio.
-
 
 // Desafio 8
 function calcFizzBuzz(numberArray) {
