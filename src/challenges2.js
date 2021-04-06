@@ -5,15 +5,16 @@ function techList(array, name) {
   if (array.length === 0) {
     guardaValor = 'Vazio';
   } else {
-    guardaValor = [];
+    let guarda = [];
     array = array.sort();
-    for (let index = 0; index < array.length; index += 1) {
+    for (let index = 0; index <= array.length; index += 1) {
       guardaValor.push(
         { tech: array[index], name },
       );
     }
-    return array;
+    guardaValor = guarda;
   }
+  return array;
 }
 let array = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
 techList(array);
