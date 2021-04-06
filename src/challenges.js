@@ -70,20 +70,20 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode(string) {
-  let encryptoDictionary = { a:1, e:2, i:3, o:4, u:5 }; 
+  let encryptoDictionary = { a: 1, e: 2, i: 3, o: 4, u: 5 }; 
   let encodeString = '';
   for (let char of string) {
     if (encryptoDictionary[char]) {
-    encodeString += encryptoDictionary[char]; 
-      } else {
-    encodeString += char;
+      encodeString += encryptoDictionary[char]; 
+    } else {
+      encodeString += char;
     }
   }
   return encodeString;
 }
 
 function decode(string) {
-  let decryptoDictionary = { 1:'a', 2:'e', 3:'i', 4:'o',5:'u' };
+  let decryptoDictionary = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   let decodeString = '';
   for (let char of string) {
     if (parseInt(char, 10) > 0 && parseInt(char, 10) < 6) {
