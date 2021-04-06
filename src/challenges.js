@@ -67,15 +67,16 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let catWinner;
-  if (mouse - cat1 > mouse - cat2) {
+  if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
     catWinner = 'cat2';
-  } else if (mouse - cat1 < mouse - cat2) {
+  } else if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     catWinner = 'cat1';
   } else {
     catWinner = 'Os gatos trombam e o rato foge.';
   }
   return catWinner;
 }
+console.log(catAndMouse(0, 3, 2));
 
 // Desafio 8
 function fizzBuzz() {
