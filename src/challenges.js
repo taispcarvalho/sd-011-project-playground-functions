@@ -1,10 +1,6 @@
 // Desafio 1
 function compareTrue(number1, number2) {
-  if (number1 === true && number2 === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return number1 && number2;
 }
 
 // Desafio 2
@@ -30,20 +26,17 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numbers) {
-  let highestNumber = 0;
-  let repeatedNumber = 0;
-  for (let index = 0; index < numbers.lenght; index += 1) {
-    if (numbers[index] > highestNumber) {
-      highestNumber = numbers[index];
+function highestCount(numbersArray) {
+  numbersArray.sort();
+  let greatest = numbersArray[numbersArray.lenght - 1];
+  let counter = 0;
+
+  for (let count = numbersArray.lenght -1; count >= 0; count -= 1) {
+    if (greatest === numbersArray[count]) {
+      counter += 1;
     }
   }
-  for (let index = 0; index < numbers.lenght; index += 1) {
-    if (numbers[index] === highestNumber) {
-      repeatedNumber += 1;
-    }
-  }
-  return repeatedNumber;
+  return counter;
 }
 
 // Desafio 7
@@ -53,25 +46,28 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if ((distanceCat1) > (distanceCat2)) {
     return 'cat1';
-  }
-  if ((distanceCat1) < (distanceCat2)) {
+  } else if ((distanceCat1) < (distanceCat2)) {
     return 'cat2';
-  }
-  if (distanceCat1 === distanceCat2) {
+  } else {
     return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
-function fizzBuzz(arrayNumber) {
-  function chekingFizzBuzz(randomNumber) {
-    if (randomNumber % 3 === 0 && randomNumber % 5 === 0) { return 'fizzBuzz'; }
-    if (randomNumber % 3 === 0) { return 'fizz'; }
-    if (randomNumber % 5 === 0) { return 'buzz'; }
-    return 'bug!';
+function chekingFizzBuzz(randomNumber) {
+  if (randomNumber % 3 === 0 && randomNumber % 5 === 0) {
+    return 'fizzBuzz';
   }
-
-  let arrayBuzz;
+  if (randomNumber % 3 === 0) {
+    return 'fizz';
+  }
+  if (randomNumber % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+function fizzBuzz(arrayNumber) {
+  let arrayBuzz = [];
   for (let index = 0; index < arrayNumber.lenght; index += 1) {
     arrayBuzz.push(chekingFizzBuzz(arrayNumber[index]));
   }
