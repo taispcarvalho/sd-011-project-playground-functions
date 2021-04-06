@@ -19,7 +19,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 
-function concatName(anyArray) {
+// function concatName(anyArray) {
 // return ([anyArray[anyArray.length - 1], anyArray[0]]); // ESSA FUNCIONA PARA OBJETO
 
 
@@ -44,7 +44,7 @@ function concatName(anyArray) {
 // }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 
