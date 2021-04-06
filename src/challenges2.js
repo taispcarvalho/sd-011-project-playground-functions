@@ -54,7 +54,6 @@ function techList(techArray, name) {
 }
 /* console.log(techList([],"Lucas")); */
 /* console.log(techList(['React','Jest', 'HTML', 'CSS', 'JavaScript'],'Lucas')); */
-
 // Desafio 11
 /* Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando    parênteses, traços e espaços.
   Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], generatePhoneNumber deverá retornar (12) 34567-8901.
@@ -108,9 +107,9 @@ function repeatedNumber(array, number) {
   return repeat;
 }
 function compareNumber(array) {
-  for ( let number of array) {
+  for (let number of array) {
     if (repeatedNumber(array, number) > 2) {
-      return true
+      return true;
     }
   }
 }
@@ -147,9 +146,9 @@ function generatePhoneNumber(array) {
 }
 /* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8])); // Tamanho incorreto.
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1])); // Menor que zero.
-console.log(generatePhoneNumber([1, 2, 13, 4, 5, 6, 7, 8, 9, 0, 1])); // maior que 9. 
+console.log(generatePhoneNumber([1, 2, 13, 4, 5, 6, 7, 8, 9, 0, 1])); // maior que 9.
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 7, 7, 0, 1])); // repete numero.
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // Retornar (12) 34567-8901.  */
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // Retornar (12) 34567-8901. */
 
 // Desafio 12
 /* Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
