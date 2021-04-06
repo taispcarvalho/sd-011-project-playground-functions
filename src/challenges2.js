@@ -48,18 +48,50 @@ function formatPhoneNumber(arrPhone) {
   return numberPhone;
 }
 
+function checkItensPhoneNum(arrPhone) {
+  let validation = true;
+  for (let index = 0; index < arrPhone.length; index += 1) {
+    if (arrPhone[index] < 0) {
+      validation = false;
+    }
+    if (arrPhone[index] > 9) {
+      validation = false;
+    }
+  }
+  return validation;
+}
+
+function checkRepeatPhoneNum(arrPhone) {
+  let validation = true;
+  for (let index = 0; index < arrPhone.length; index += 1) {
+    let contNum = arrPhone[index];
+    let contNumRepeat = 0;
+    for (let index2 = 0; index2 < arrPhone.length; index2 += 1) {
+      let contNum2 = arrPhone[index2];
+      if (contNum === contNum2) {
+        contNumRepeat += 1;
+      }
+      if (contNumRepeat >= 3) {
+        validation = false;
+      }
+    }
+  }
+  return validation;
+}
+
 function generatePhoneNumber(arrPhone) {
   // seu código aqui
   // Devo retornar uma variável contendo uma string do numero de telefone devidamente formatado
-  // Validação de tamanho de array
   if (arrPhone.length !== 11) {
-    return 'Array com tamanho incorreto.'
+    return 'Array com tamanho incorreto.';
   }
-  return formatDdd(arrPhone) + formatPhoneNumber(arrPhone);
+  if (checkRepeatPhoneNum(arrPhone) && checkItensPhoneNum(arrPhone)) {
+    return formatDdd(arrPhone) + formatPhoneNumber(arrPhone);
+  }
+  return 'não é possível gerar um número de telefone com esses valores';
 }
 
-let arrPhoneO = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-
+let arrPhoneO = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2];
 console.log(generatePhoneNumber(arrPhoneO));
 
 // Desafio 12
