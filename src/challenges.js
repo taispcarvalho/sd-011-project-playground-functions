@@ -59,7 +59,7 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz(numberArray) {
+function responseFizzBuzz(numberArray) {
   if (numberArray % 5 === 0 && numberArray % 3 === 0) {
     return 'fizzBuzz';
   }
@@ -72,10 +72,10 @@ function fizzBuzz(numberArray) {
   return 'bug';
 }
 
-function indexFizzBuzz(numberArray) {
+function fizzBuzz(numberArray) {
   let phrase = [];
   for (let index = 0; index < number.length; index += 1) {
-    phrase.push(fizzBuzz(numberArray[index]));
+    phrase.push(responseFizzBuzz(numberArray[index]));
   }
   return phrase;
 }
