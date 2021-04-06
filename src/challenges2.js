@@ -21,8 +21,8 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineA + lineB > lineC && lineB + lineC > lineA && lineA + lineC > lineB) {
     return true;
   }
-  if (Math.abs(lineB - lineC) < lineA && Math.abs(lineA - lineC) < lineB 
-&& Math.abs(lineA - lineB) < lineC) {
+  if (Math.abs(lineB - lineC) < lineA && Math.abs(lineA - lineC) < lineB
+  && Math.abs(lineA - lineB) < lineC) {
     return true;
   }
   return false;
