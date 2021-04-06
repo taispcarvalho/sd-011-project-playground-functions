@@ -75,7 +75,7 @@ function encode(string) {
   string = string.replace(/u/g, '5');
   return string
 }
-function decode() {
+function decode(string) {
   string = string.replace(/1/g, 'a');
   string = string.replace(/2/g, 'e');
   string = string.replace(/3/g, 'i');
