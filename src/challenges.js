@@ -69,14 +69,14 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function numero(numeroArray) {
   let string = 0;
-  if (numeroArray % 15 !== 1) {
+  if (numeroArray % 15 === 0) {
     string = 'fizzBuzz';
-  }
-  if (numeroArray % 5 !== 1) {
-    string = 'buzz';
-  }
-  if (numeroArray % 3 !== 1) {
+  } 
+  if (numeroArray % 3 === 0) {
     string = 'fizz';
+  }
+  if (numeroArray % 5 === 0) {
+    string = 'buzz';
   } else {
     string = 'bug!';
   }
