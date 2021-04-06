@@ -28,10 +28,20 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(orderString) {
+  let countArray = orderString.match(/\d+/g);
 
+  countArray = countArray.map((count) => parseInt(count, 10));
+
+  let totalCount = countArray.reduce((accumulator, currentValue) => accumulator + currentValue);
+
+  if (totalCount === 1) {
+    return '1 copo de água';
+  }
+
+  return `${totalCount} copos de água`;
+}
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
 module.exports = {
   generatePhoneNumber,
   techList,
