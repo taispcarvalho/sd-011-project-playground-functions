@@ -19,7 +19,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(value) {
   let end = value.length - 1;
-  let comma = ', '
+  let comma = ', ';
   let name = value[end] + comma + value[0];
   return name;
 }
@@ -146,16 +146,16 @@ function fizzBuzz(list) {
   let arrayFizzBuzz = [];
   for (let index = 0; index < list.length; index += 1) {
     let testFizzBuzz = numberFizzBuzz(list[index]);
-      if (isNaN(testFizzBuzz)){
-        arrayFizzBuzz.push(testFizzBuzz);
-      } else {
-        arrayFizzBuzz.push('bug!');
-      }
+    if (Number.isNaN(Number(testFizzBuzz))) {
+      arrayFizzBuzz.push(testFizzBuzz);
+    } else {
+      arrayFizzBuzz.push('bug!');
+    }
   }
   return arrayFizzBuzz;
 }
-// console.log(fizzBuzz([7, 9]));
-// console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 function letterNumber(letter) {
   let options = {
