@@ -21,8 +21,16 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let checkLadoA = lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
+  let checkLadoB = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
+  let checkLadoC = lineC < lineB + lineA && lineC > Math.abs(lineB - lineA);
+
+  if (checkLadoA === true && checkLadoB === true && checkLadoC === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
