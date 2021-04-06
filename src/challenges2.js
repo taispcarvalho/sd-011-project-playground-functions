@@ -16,15 +16,15 @@ function techList(techNamesArr, nomeAluno) {
 
 // Desafio 11
 function invalidDigit(arrayPhoneNumber) {
-  for (let num of arrayPhoneNumber){
-    if (num < 0 || num > 9){
+  for (let num of arrayPhoneNumber) {
+    if (num < 0 || num > 9) {
       return false;
     }
   }
   return true;
 }
 
-function countRepeatedNumber(num,arrayPhoneNumber) {
+function countRepeatedNumber(num, arrayPhoneNumber) {
   let counts = 0;
   for (let key in arrayPhoneNumber) {
     if (arrayPhoneNumber[key] === num) {
@@ -74,14 +74,15 @@ function generatePhoneNumber(arrayPhoneNumber) {
 }
 
 // Desafio 12
-function triangleCheck(lineA, libeB, lineC) {
-  let checkSideA = lineA < libeB + lineC && lineA > Math.abs(lineB - lineC);
-  let checkSideB = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
-  let checkSideC = lineC < lineB + lineC && lineC > Math.abs(lineB - lineA);
-  if (checkSideA === true && checkSideB === true && checkSideC === true ) {
-    return true;
-  }
-  return false;
+function triangleCheckSide(a, b, c) {
+  return a < b + c && Math.abs(b -c);
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let checkSideA = triangleCheckSide(lineA, lineB, lineC);
+  let checkSideB = triangleCheckSide(lineB, lineA, lineC);
+  let checkSideC = triangleCheckSide(lineC, lineA, lineB);
+  return checkSideA || checkSideB || checkSideC;
 }
 
 // Desafio 13
