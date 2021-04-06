@@ -25,7 +25,7 @@ function phoneNumber(numberArray) {
   // Check if the input is of correct length
   let match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/);
   if (match) {
-    return '(' + `${match[1]}` + ') ' + `${match[2]}` + '-' + `${match[3]}`;
+    return '(' + match[1] + ') ' + match[2] + '-' + match[3];
   }
   return numberArray;
 }
@@ -65,7 +65,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let lines2 = Math.abs(lineA - lineB);
   let value = false;
   if (lineC < lines1 && lineC > lines2) {
-  value = true;
+    value = true;
   }
   return value;
 }
