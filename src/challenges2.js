@@ -8,7 +8,7 @@ function techList(array, name) {
     let guarda = [];
     array = array.sort();
     for (let index = 0; index < array.length; index += 1) {
-      guardaValor.push(
+      guarda.push(
         { tech: array[index], name },
       );
     }
