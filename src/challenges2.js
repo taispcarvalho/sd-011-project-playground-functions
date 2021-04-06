@@ -21,6 +21,9 @@ function techList(array, name) {
 
 // Desafio 11
 function checkRequirements(array) {
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
   for (let index = 0; index < array.length; index += 1) {
     let contador = 0;
     for (let index2 = 0; index2 < array.length; index2 += 1) {
@@ -48,6 +51,7 @@ function generatePhoneNumber(array) {
     } else if (index === 1) {
       resultado += array[index];
       resultado += ')';
+      resultado += ' ';
     } else if (index === 2) {
       resultado += array[index];
       resultado += array[index + 1];
