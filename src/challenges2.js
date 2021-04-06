@@ -32,6 +32,7 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
+// On this challenge I found some sources in Developer mozilla and W3schools websites.
 function hydrate(drinks) {
   drinks = drinks.replace(/\D/g, '');
   let drinkWater = 0;
