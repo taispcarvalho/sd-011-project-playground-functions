@@ -67,14 +67,16 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 // Desafio 8
-function numero(number) {
+function numero(numeroArray) {
   let string = 0;
-  if (number % 15 === 0) {
+  if (numeroArray % 15 === 0) {
     string = 'fizzBuzz';
-  } else if (number % 3 === 0) {
+  }
+  if (numeroArray % 5 === 0) {
+    string = 'bunn';
+  }
+  if (numeroArray % 3 === 0) {
     string = 'fizz';
-  } else if (number % 5 === 0) {
-    string = 'buzz';
   } else {
     string = 'bug!';
   }
@@ -93,6 +95,7 @@ fizzBuzz(arrayNumber);
 // Desafio 9
 function encode() {
   // seu código aqui
+
 }
 function decode() {
   // seu código aqui
