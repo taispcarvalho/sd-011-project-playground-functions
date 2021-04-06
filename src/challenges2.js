@@ -3,7 +3,10 @@ function techList(array, name) {
   let newArray = [];
   array = array.sort();
   for (let index = 0; index < array.length; index += 1) {
-    newArray.push({tech: array[index], name: name,});
+    newArray.push({
+      tech: array[tech],
+      name: name,
+    });
   }
   return newArray;
 }
