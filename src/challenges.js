@@ -56,11 +56,11 @@ function catAndMouse() {
 //   }
 //   if (cat1distance == cat2distance) {
 //     return 'os gatos trombam e o rato foge';
-// }// 
+}
 
 // Desafio 8
 function fizzBuzz() {
-  if (if numberArray % 5 === 0 && numberArray % 3 === 0) {
+  if (numberArray % 5 === 0 && numberArray % 3 === 0) {
     return 'fizzBuzz';
   } 
   if (numberArray % 3 === 0) {
@@ -79,6 +79,8 @@ function indexFizzBuzz(numberArray) {
   }
   return phrase
 }
+
+
 
 // Desafio 9
 function encode(numberArray) {
