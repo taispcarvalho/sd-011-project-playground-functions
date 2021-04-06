@@ -22,7 +22,7 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
   let linesTriangle = [lineA, lineB, lineC];
-  linesTriangle.sort((a, b) => b - b);
+  linesTriangle.sort((a, b) => b - a);
   if (linesTriangle[0] + linesTriangle[1] < linesTriangle[3]) {
     return false;
   }
