@@ -69,7 +69,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumber) {
   // seu código aqui
-  let string = 'bug';
+  let string = 'bug!';
   let numberArray = [];
   for (let index = 0; index < arrayNumber.length; index += 1) {
     if (arrayNumber[index] % 15 === 0) {
