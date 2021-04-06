@@ -66,26 +66,31 @@ function fizzBuzz(arrayFizzBuzz) {
   }
   return arrayString;
 }
- 
-// Desafio 9
-function encode(phase) {
- /*  let phaseLetter = phase.split();
 
-  console.log(phaseLetter)
-  let switchLetter = {
-    a: '1',
-    e: '2',
-    i: '3',
-    o: '4',
-    u: '5',
+// Desafio 9
+function encode(word) {
+  for (index of word) {
+    word = word.replace(/a/gi, 1);
+    word = word.replace(/e/gi, 2);
+    word = word.replace(/i/gi, 3);
+    word = word.replace(/o/gi, 4);
+    word = word.replace(/u/gi, 5);
   }
-  for (let index = 0; index < phase.length; index += 1) {
-    console.log(switchLetter[index]); 
+  return word
+}
+/* console.log(encode("hi there!")); */
+
+function decode(reverseWord) {
+  for (index of reverseWord) {
+    reverseWord = reverseWord.replace(/1/gi, 'a');
+    reverseWord = reverseWord.replace(/2/gi, 'e');
+    reverseWord = reverseWord.replace(/3/gi, 'i');
+    reverseWord = reverseWord.replace(/4/gi, 'o');
+    reverseWord = reverseWord.replace(/5/gi, 'u');
   }
- */
+  return reverseWord
 }
-function decode() {
-}
+/* console.log(decode("h3 th2r2!")); */
 
 module.exports = {
   calcArea,

@@ -7,17 +7,18 @@ function techList(tech, name) {
   let ordenedNames = tech.sort();
   let list = [];
   let listTec = {};
-    for (let index = 0; index < tech.length; index += 1) {
+    for (index in tech) {
       listTec = {
         tech: ordenedNames[index],
         name: `${name}`,
       }
+      /* console.log(ordenedNames[index]) */
       list.push(listTec)
 
     }
     return list
   }
-/* console.table(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Antonio")); */
+console.table(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Antonio"));/*  */
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
