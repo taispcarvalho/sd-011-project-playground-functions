@@ -28,34 +28,34 @@ function repeatedDigit(digit, arrayPhone) {
 function validDigit(arrayPhone) {
   let valid = true;
   for (let index = 0; index < arrayPhone.length; index += 1) {
-    if (arrayPhone[index] < 0 || arrayPhone[index] > 9 || repeatedDigit(arrayPhone[index], arrayPhone) >= 3) {
+    let repated3 = repeatedDigit(arrayPhone[index], arrayPhone) >= 3;
+    let smaller = arrayPhone[index] < 0;
+    let bigger = arrayPhone[index] > 9;
+    if (smaller || bigger || repated3) {
       valid = false;
     }
   }
   return valid;
 }
 
-function Phone(arrayPhone){
-
-  let phone = '(xx) xxxxx - xxxx';
+function Phone(arrayPhone) {
+  let phone = '(xx) xxxxx-xxxx';
   arrayPhone.forEach((item) => {
-    phone = phone.replace('x',item);
+    phone = phone.replace('x', item);
   });
   return phone;
 }
 
-function generatePhoneNumber(arrayPhone){
+function generatePhoneNumber(arrayPhone) {
   let phone = Phone(arrayPhone);
-  if(arrayPhone.length !== 11) {
+  if (arrayPhone.length !== 11) {
     return 'Array com tamanho incorreto';
   }
-  if(validDigit(arrayPhone) === false){
+  if (validDigit(arrayPhone) === false) {
     return 'não é possivel gerar um número de telefone com esses valores';
   }
   return phone;
 }
-
-
 
 // Desafio 12
 function triangleCheck() {
