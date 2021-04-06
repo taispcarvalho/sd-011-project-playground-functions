@@ -17,8 +17,12 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let check = string.match(/\d+/g).length;
+  if (check === 1) {
+    return `${check} copo de água`;
+  }
+  return `${check} copos de água`;
 }
 
 module.exports = {
