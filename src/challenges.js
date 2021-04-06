@@ -19,9 +19,8 @@ function splitSentence(sentence) {
 
 // Desafio 4
 
-function concatName(sentence) {
-  let result = [sentence[sentence.length - 1], sentence[0]];
-  return result;
+function concatName(anyArray) {
+  return = [anyArray[anyArray.length - 1], anyArray[0]]
 }
 
 // Desafio 5
