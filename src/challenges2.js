@@ -4,7 +4,7 @@ function techList(technologiesList, name) {
     return 'Vazio!';
   }
   technologiesList = technologiesList.sort();
-  newList = []
+  let newList = []
   for (let technology of technologiesList) {
     newList.push({
       tech: technology,
