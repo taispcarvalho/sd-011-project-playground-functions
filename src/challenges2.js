@@ -56,11 +56,15 @@ function hydrate(string) {
   let myNumbers = string.match(regex);
   let result = 0;
   for (let i = 0; i < myNumbers.length; i += 1) {
-    result = result + parseInt(myNumbers[i]);
+    result += parseInt(myNumbers[i], 10);
   }
-  return result + ' copos de água';
+  let copoPalavra = 'copo';
+  if (result > 1) {
+    copoPalavra = 'copos';
+  }
+  return result + ' ' + copoPalavra + ' de água';
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+console.log(hydrate('1 cachaça, 0 cervejas e 0 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
