@@ -74,15 +74,15 @@ function responseFizzBuzz(numberArray) {
 
 function fizzBuzz(numberArray) {
   let phrase = [];
-  for (let index = 0; index < number.length; index += 1) {
+  for (let index = 0; index < numberArray.length; index += 1) {
     phrase.push(responseFizzBuzz(numberArray[index]));
   }
   return phrase;
 }
 
 // Desafio 9
-function encode(numberArray) {
- 
+function encode() {
+  //
 }
 
 function decode() {
