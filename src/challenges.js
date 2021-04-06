@@ -72,7 +72,7 @@ console.log(catAndMouse(100, 102, 101));
 
 // Desafio 8
 function checkNumber(numberArray) {
-  if (numberArray % 15) {
+  if (numberArray % 15 === 0) {
     return 'fizzBuzz';
   } if (numberArray % 3 === 0) {
     return 'fizz';
