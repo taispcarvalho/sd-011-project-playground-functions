@@ -21,7 +21,7 @@ function generatePhoneNumber(x) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  return x.join('').replace(/^(\d\d)(\d{5})(\d{4}).*/, '($1) $2-$3');
+  return x.join('').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
 }
 
 // Desafio 12
@@ -35,9 +35,9 @@ function hydrate(string) {
   let count = 0;
   check.forEach((element) => { count += Number(element); });
   if (count === 1) {
-    return `'${count} copo de água'`;
+    return `${count} copo de água`;
   }
-  return `'${count} copos de água'`;
+  return `${count} copos de água`;
 }
 
 module.exports = {
