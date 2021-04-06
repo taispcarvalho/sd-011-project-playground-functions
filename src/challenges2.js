@@ -53,13 +53,19 @@ function generatePhoneNumber(numeros) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {\
+  let resultado = false;
+  let somaDasMedidas = Math.abs(lineB + lineC);
+  let diferenca = Math.abs(lineB - lineC);
+  if (lineA > diferenca && lineA < somaDasMedidas) {
+    resultado = true;
+  }
+  return resultado;
 }
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+  
 }
 
 module.exports = {
