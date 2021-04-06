@@ -1,5 +1,5 @@
 // Desafio 10
-techNames = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let techNames = ["React", "Jest", "HTML", "CSS", "JavaScript"];
 let name = "Lucas";
 function techList(techNames, name) {
   if (techNames.length <= 0) {
@@ -8,15 +8,14 @@ function techList(techNames, name) {
   let arrayAux = [];
   techNames = techNames.sort();
   for (let index = 0; index < techNames.length; index += 1) {
-      arrayAux.push({
-      tech: techNames[index],
-      name,
+    arrayAux.push({
+    tech: techNames[index],
+    name,
     });
   }
   return arrayAux;
 }
 console.log(techList(techNames, name));
-
 // Desafio 11
 function generatePhoneNumber() {
 }
