@@ -10,18 +10,18 @@ function compareTrue(number1, number2) {
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
-  console.log(area);
+  return area;
 }
 
 // Desafio 3
 function splitSentence(sentence) {
-  let splitSentence = sentence.split('');
-  return splitSentence;
+  let newSentence = sentence.split('');
+  return newSentence;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  let concatName;
 }
 
 // Desafio 5
