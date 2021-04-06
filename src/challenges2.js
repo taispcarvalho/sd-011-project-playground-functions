@@ -16,7 +16,15 @@ function techList(techArray, name) {
 }
 
 // Desafio 11
-let arrayTest = [1, 3, 3, 3, 3, 3, 3, 4, 4, 0];
+
+let testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+
+function maxRepeat(value1, value2) {
+  if (value1 > value2) {
+    value2 = value1;
+  }
+  return value2;
+}
 
 function numberRepeats(array) {
   let freq = 0;
@@ -27,12 +35,13 @@ function numberRepeats(array) {
       freq += 1;
     } else {
       freq = 0;
-    } if (freq > max) {
-      max = freq;
     }
+    max = maxRepeat(freq, max);
   }
   return max;
 }
+
+console.log(numberRepeats(testArray));
 
 function rangeNumbersValidator(numbersArray) {
   for (let index = 0; index < numbersArray.length; index += 1) {
@@ -56,8 +65,6 @@ function generatePhoneNumber(numbersArray) {
   }
   return `(${dddNumber}) ${firsPartNumber}-${secondPartNumber}`;
 }
-
-console.log(numberRepeats(arrayTest));
 
 // Desafio 12
 function linesSum(lineA, lineB, lineC) {
