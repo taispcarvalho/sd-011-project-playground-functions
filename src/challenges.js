@@ -75,7 +75,7 @@ function calcFizzBuzz(numberArray) {
 function fizzBuzz(numberArray) {
   let phrase = [];
   for (let index = 0; index < numberArray.length; index += 1) {
-    phrase.push(calcFizzBuzz(numberArray[indice]));
+    phrase.push(calcFizzBuzz(numberArray[index]));
   }
   return phrase;
 }
