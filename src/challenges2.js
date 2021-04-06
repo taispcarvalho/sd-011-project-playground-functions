@@ -21,22 +21,26 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineA <= 0 || lineB <= 0 || lineC <= 0) {
     return false;
   }
-  if (Math.abs(lineB - lineC) < lineA && Math.abs(lineA - lineC) < lineB
-&& Math.abs(lineA - lineB) < lineC) {
-    return true;
+  let linesTriangle = [lineA, lineB, lineC];
+  linesTriangle.sort((a, b) => b - b);
+  if (linesTriangle[0] + linesTriangle[1] < linesTriangle[3]) {
+    return false;
   }
-  return false;
+  return true;
 }
 // Desafio 13
-function hydrate(orderString) {
-  let countArray = orderString.match(/\d+/g);
-  countArray = countArray.map((count) => parseInt(count, 10));
-  let totalCount = countArray.reduce((accumulator, currentValue) => accumulator + currentValue);
-  if (totalCount === 1) {
-    return '1 copo de água';
+function hydrate(string) {
+  let reduction = /\d+/g;
+  let quantity = string.match(reduction).map(Number);
+  let count = 0;
+  for (let index of quantity) {
+    count += index;
   }
+  if (count > 1) {
+    return `${count} copos de água`;
+  }
+  return `${count} copo de água`;
 }
-console.log(hydrate('1 cachaça'));
 module.exports = {
   generatePhoneNumber,
   techList,
