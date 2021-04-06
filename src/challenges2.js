@@ -1,18 +1,16 @@
 // Desafio 10
 function techList(techies, name) {
   if (!techies.length) return 'Vazio!';
-  return [...techies]
-    .sort()
-    .reduce((acc, cur) => {
-      acc.push({ tech: cur, name });
-      return acc;
-    }, []);
+  return [...techies].sort().reduce((acc, cur) => {
+    acc.push({ tech: cur, name });
+    return acc;
+  }, []);
 }
 
 // Desafio 11
 function generatePhoneNumber(arr) {
   if (arr.length !== 11) return 'Array com tamanho incorreto.';
-  if (arr.some((value) => value < 0 || value > 9 || arr.filter((x) => x === value).length > 2)) {
+  if (/-|\d\d|(.).*\1.*\1/.test(arr.join(','))) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   return arr.join('').replace(/(..)(.{5})(.{4})/g, '($1) $2-$3');
@@ -20,7 +18,7 @@ function generatePhoneNumber(arr) {
 
 // Função Auxiliar da triangleCheck
 function triangleCheckLine(a, b, c) {
-  return a < (b + c) && a > Math.abs(b - c);
+  return a < b + c && a > Math.abs(b - c);
 }
 
 // Desafio 12
@@ -33,7 +31,9 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(str) {
-  let waterCups = str.match(/\d+/g).reduce((acc, cur) => acc + parseInt(cur, 10), 0);
+  let waterCups = str
+    .match(/\d+/g)
+    .reduce((acc, cur) => acc + parseInt(cur, 10), 0);
   return `${waterCups} ${waterCups < 2 ? 'copo' : 'copos'} de água`;
 }
 
