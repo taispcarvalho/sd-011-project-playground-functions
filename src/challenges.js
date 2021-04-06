@@ -9,18 +9,36 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let words = [];
+  let word = '';
+
+  for (let index = 0; index < frase.length; index += 1) {
+    let letter = frase[index];
+
+    if (letter !== ' ') {
+      word += letter;
+    } else if (word !== '') {
+      words.push(word);
+      word = '';
+    }
+  }
+
+  if (word !== '') {
+    words.push(word);
+  }
+
+  return words;
 }
 
 // Desafio 4
 function concatName(array) {
-  return array.length , array[0];
+  return array.length, array[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + ties;
+  return wins * 3 + ties;
 }
 
 // Desafio 6
@@ -31,9 +49,9 @@ function highestCount() {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let catWinner;
-  if (mouse - cat1 > mouse - cat2){
+  if (mouse - cat1 > mouse - cat2) {
     catWinner = 'cat2';
-  } else if (mouse - cat1 < mouse - cat2){
+  } else if (mouse - cat1 < mouse - cat2) {
     catWinner = 'cat1';
   } else {
     catWinner = 'Os gatos trombam e o rato foge.';
