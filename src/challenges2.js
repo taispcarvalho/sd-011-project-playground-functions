@@ -92,8 +92,8 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(boozeString) {
   let numberArray = boozeString.match(/\d+/g);
-  numberArray = numberArray.map((i)=>parseInt(i,10));
-  let numberSum = numberArray.reduce((acc,value) => acc + value);
+  numberArray = numberArray.map((i) => parseInt(i, 10));
+  let numberSum = numberArray.reduce((acc, value) => acc + value);
 
   if (numberSum === 1) {
     return '1 copo de água';
