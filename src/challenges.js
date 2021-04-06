@@ -2,6 +2,9 @@
 function compareTrue(diaUtil, haveraAula) {
   if (diaUtil && haveraAula === true) {
     return true;
+  } else {
+    return false;
+  }
 } console.log(compareTrue(true, true));
 
 // Desafio 2
