@@ -1,22 +1,24 @@
 // Desafio 10
 function techList(techNames, name) {
-if (techNames.length === 0) {
-  return 'Vazio!';
-}
-const techList = techNames.sort().map((tech) => ({tech, name}));
-  return techList;
-}
+  if (techNames.length === 0) {
+    return 'Vazio!';
+  };
+  const techs = techNames.sort().map((tech) => ({ tech, name }));
+    return techs;
+  };
 
 // Desafio 11
 function checkNumbers (numbers) {
   const numberRepeat = arrayOfNumbers.map((number) => {
     let count = 0;
-    for (let index in arrayOfNumbers) {
-      if (number == arrayOfNumbers[index])
-      count +=1;
+    numbers;
+      for (let index in arrayOfNumbers) {
+        if (number === arrayOfNumbers[index]) {
+        count += 1;
+      }
+      return count;
     }
-    return count;
-  })
+
   return numberRepeat
   for (let index in arrayOfNumbers) {
     if (number == arrayOfNumbers[index])
@@ -24,7 +26,6 @@ function checkNumbers (numbers) {
   }
   return checkNumbers;
 }
-
 
 function generatePhoneNumber(arrayOfNumbers) {
   let telefone = [];
@@ -59,15 +60,15 @@ function triangleCheck(lineA, lineB, lineC) {
   const checkDiffC = Math.abs(lineB - lineA);
 
   if (checkSumA && checkDiffA) {
-    return true
-  };
-  if (checkSumB && checkDiffB) {
-    return true
-  };
-  if (checkSumC && checkDiffC) {
-    return true
+    return true;
   }
-  return false
+  if (checkSumB && checkDiffB) {
+    return true;
+  }
+  if (checkSumC && checkDiffC) {
+    return true;
+  }
+  return false;
 }
 console.log(triangleCheck(10, 14, 8));
 
