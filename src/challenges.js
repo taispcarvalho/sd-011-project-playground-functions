@@ -81,18 +81,19 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   let resultFizzBuzz = [];
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 5 || numbers[index] % 3 === 0) {
-      resultFizzBuzz = resultFizzBuzz + 'fizzBuzz';
+    if (numbers[index] % 5 === 0 || numbers[index] % 3 === 0) {
+      resultFizzBuzz.push('fizzBuzz');
     } else if (numbers[index] % 5 === 0) {
-      resultFizzBuzz = resultFizzBuzz + 'buzz';
+      resultFizzBuzz.push('buzz');
     } else if (numbers[index] % 3 === 0) {
-      resultFizzBuzz = resultFizzBuzz + 'fizz';
+      resultFizzBuzz.push('fizz');
     } else {
-      resultFizzBuzz = resultFizzBuzz + 'bug!';
+      resultFizzBuzz.push('bug!');
     }
   }
   return resultFizzBuzz;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
