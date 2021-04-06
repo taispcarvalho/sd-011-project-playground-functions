@@ -68,7 +68,7 @@ function limitNumbers(list) {
 
 function countNumbers(number, array) {
   let count = 0;
-  for (let index = 1; index < array.length; index += 1){
+  for (let index = 1; index < array.length; index += 1) {
     if (number === array[index]) {
       count += 1;
     }
@@ -78,11 +78,11 @@ function countNumbers(number, array) {
 
 function repeatedNumber(list) {
   let repeated = false;
-    for (let index = 0; index < list.length; index += 1) {
+  for (let index = 0; index < list.length; index += 1) {
     let counter = countNumbers(list[index], list);
     if (counter === 3) {
       repeated = true;
-      break
+      break;
     }
   }
   return repeated;
