@@ -18,7 +18,7 @@ function generatePhoneNumber(phoneArray) {
   lenPhone = phoneArray.length;
 
   if (lenPhone != 11){
-    return "Array com tamanho incorreto"
+    return "Array com tamanho incorreto."
   }
 
 
