@@ -54,7 +54,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzzValidator(value) {
   let encodedString = '';
   if (value % 15 === 0) {
-    encodedString += 'fizBuzz';
+    encodedString += 'fizzBuzz';
   } else if (value % 5 === 0) {
     encodedString += 'buzz';
   } else if (value % 3 === 0) {
@@ -74,6 +74,8 @@ function fizzBuzz(array) {
   }
   return newArray;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(word) {
