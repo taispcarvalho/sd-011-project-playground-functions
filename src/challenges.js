@@ -10,13 +10,13 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(' ');  
+  return string.split(' '); 
 }
 
 // Desafio 4
 function concatName(array) {
   let space = '';
-  return space.concat(array[array.length-1] + ', ' + array[0]);
+  return space.concat(array[array.length-1], ', ', array[0]);
 }
 
 // Desafio 5
@@ -38,71 +38,71 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(cat1 - mouse); let distanceCat2 = Math.abs(cat2 - mouse);
-  let winnerCat
+  let winnerCat;
   if (distanceCat1 > distanceCat2) {
-    winnerCat = 'cat2'
+    winnerCat = 'cat2';
   } else if (distanceCat2 > distanceCat1) {
     winnerCat = 'cat1';
   } else if (distanceCat1 === distanceCat2) {
-    winnerCat =  'os gatos trombam e o rato foge';
+    winnerCat = 'os gatos trombam e o rato foge';
   }
   return winnerCat;
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  let strings = []
+  let strings = [];
   for (let num of numbers) {
     if (num % 3 === 0 && num % 5 === 0) {
-      strings.push("fizzBuzz")
+      strings.push("fizzBuzz");
     } else if (num % 5 === 0) {
-      strings.push("buzz")
+      strings.push("buzz");
     } else if (num % 3 === 0) {
-      strings.push("fizz")
+      strings.push("fizz");
     } else { strings.push("bug!")}
   }
-  return strings
+  return strings;
 }
 
 // Desafio 9
 function encode(phrase) {
-  let encodedPhrase = ''
+  let encodedPhrase = '';
   for (let letter of phrase) {
     if (letter === 'a') {
-      encodedPhrase += '1'
+      encodedPhrase += '1';
     } else if (letter === 'e') {
-      encodedPhrase += '2'
+      encodedPhrase += '2';
     } else if (letter === 'i') {
-      encodedPhrase += '3'
+      encodedPhrase += '3';
     } else if (letter === 'o') {
-      encodedPhrase += '4'
+      encodedPhrase += '4';
     } else if (letter === 'u') {
-      encodedPhrase += '5'
+      encodedPhrase += '5';
     } else {
-      encodedPhrase += letter
+      encodedPhrase += letter;
     }
   }
-  return encodedPhrase
+  return encodedPhrase;
 }
 
 function decode(phrase) {
-  let decodedPhrase = ''
+  let decodedPhrase = '';
   for (let letter of phrase) {
     if (letter === '1') {
-      decodedPhrase += 'a'
+      decodedPhrase += 'a';
     } else if (letter === '2') {
-      decodedPhrase += 'e'
+      decodedPhrase += 'e';
     } else if (letter === '3') {
-      decodedPhrase += 'i'
+      decodedPhrase += 'i';
     } else if (letter === '4') {
-      decodedPhrase += 'o'
+      decodedPhrase += 'o';
     } else if (letter === '5') {
-      decodedPhrase += 'u'
+      decodedPhrase += 'u';
     } else {
-      decodedPhrase += letter
+      decodedPhrase += letter;
     }
   }
-  return decodedPhrase
+  return decodedPhrase;
 }
 
 module.exports = {
