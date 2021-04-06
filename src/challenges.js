@@ -70,7 +70,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayNumber) {
   // seu código aqui
   let string = 'bug';
-  let number = [];
+  let number = [''];
   for (let index = 0; index < arrayNumber.length; index += 1) {
     if (arrayNumber[index] % 15 === 0) {
       string = 'fizzBuzz';
