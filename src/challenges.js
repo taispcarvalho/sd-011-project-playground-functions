@@ -71,11 +71,9 @@ function numero(number) {
   let string = 0;
   if (number % 15 === 0) {
     string = 'fizzBuzz';
-  }
-  if (number % 3 === 0) {
+  } else if (number % 3 === 0) {
     string = 'fizz';
-  }
-  if (number % 5 === 0) {
+  } else if (number % 5 === 0) {
     string = 'buzz';
   } else {
     string = 'bug!';
