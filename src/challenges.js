@@ -81,11 +81,23 @@ function fizzBuzz(arrayNumber) {
 // Desafio 9
 function encode(arrayEncode) {
   for (let index = 0; index < arrayEncode.lenght; index += 1) {
-    
+    arrayEncode = arrayEncode.replace('a', '1');
+    arrayEncode = arrayEncode.replace('e', '2');
+    arrayEncode = arrayEncode.replace('i', '3');
+    arrayEncode = arrayEncode.replace('o', '4');
+    arrayEncode = arrayEncode.replace('u', '5');
   }
+  return arrayEncode;
 }
-function decode() {
-  // seu código aqui
+function decode(arrayDecode) {
+  for (let index = 0; index < arrayDecode.lenght; index += 1) {
+    arrayDecode = arrayDecode.replace('1', 'a');
+    arrayDecode = arrayDecode.replace('2', 'e');
+    arrayDecode = arrayDecode.replace('3', 'i');
+    arrayDecode = arrayDecode.replace('4', 'o');
+    arrayDecode = arrayDecode.replace('5', 'u');
+  }
+  return arrayDecode;
 }
 
 module.exports = {
