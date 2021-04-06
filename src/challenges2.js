@@ -19,8 +19,52 @@ function techList(techName, devName) {
 console.log(techList(['Java', 'Js'], ['Roge']));
 
 // Desafio 11
-function generatePhoneNumber() {
+// Function to check if the number repeat more than 3 times
+function ifRepeat(number, phone) {
+  let repeat = 0;
+  for (let index = 0; index < phone.length; index += 1) {
+    if (number === phone[index]) {
+      repeat += 1;
+    }
+    if (repeat >= 3) {
+      return true;
+    }
+  }
+  return false;
 }
+// Functions to check if the length is more than eleven digits
+function isEleven(number) {
+  if (number < 0 || number > 9) {
+    return true;
+  }
+}
+function realyIs(number) {
+  if (number.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index = 0; index < number.length; index += 1) {
+    if (ifRepeat(number[index], number) || isEleven(number[index])) {
+      return 'Não é possível gerar um número de telefone com esses valores';
+    }
+  }
+}
+// Desafio 11
+function generatePhoneNumber(phone) {
+  if (realyIs(phone)) {
+    return realyIs(phone);
+  }
+  let phoneNumber = '(';
+  for (let number = 0; number < phone.length; number += 1) {
+    if (phoneNumber === 3) {
+      phoneNumber += ')';
+    } else if (phoneNumber.length === 10) {
+      phoneNumber += '-';
+    }
+    phoneNumber += phone[number];
+  }
+  return phoneNumber;
+}
+console.log(generatePhoneNumber(48999023248));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
