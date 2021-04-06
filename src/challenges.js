@@ -5,7 +5,7 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, height) {
- return (base * height) / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -14,8 +14,8 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return array.length , array[0];
 }
 
 // Desafio 5
