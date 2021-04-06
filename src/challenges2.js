@@ -27,14 +27,14 @@ function generatePhoneNumber() {
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA > lineB + lineC || lineA < Math.abs(lineB - lineC)) {
     return false;
-  } else if (lineB > lineA + lineC || lineB < Math.abs(lineA - lineC)) {
+  } if (lineB > lineA + lineC || lineB < Math.abs(lineA - lineC)) {
     return false;
-  } else if (lineC > lineA + lineB || lineC < Math.abs(lineA - lineB)) {
+  } if (lineC > lineA + lineB || lineC < Math.abs(lineA - lineB)) {
     return false;
-  } 
+  }
   return true;
 }
-console.log(triangleCheck(14, 14, 30))
+console.log(triangleCheck(14, 14, 14));
 
 // Desafio 13
 function hydrate() {
