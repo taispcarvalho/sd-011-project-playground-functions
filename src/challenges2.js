@@ -1,6 +1,6 @@
 // Desafio 10
-let techNames = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-let name = "Lucas";
+let techNames = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+let name = 'Lucas';
 function techList(techNames, name) {
   if (techNames.length <= 0) {
     return 'Vazio!';
