@@ -14,13 +14,12 @@ function techList(techNames, name) {
   return arrayAux;
 }
 // Desafio 11
-let numbers = [1, 2, 3, 5, 6, 7, 8, 9, 0, 1];
 function checkArray(numbers) {
   if (numbers.lenght === 11) {
     return false;
   }
 }
-function  checkNumbers (numbers) {
+function checkNumbers(numbers) {
   let status = true;
   for (let index = 0; index < 11; index += 1) {
     if (numbers[index] < 0 || numbers[index] > 9) {
@@ -29,11 +28,11 @@ function  checkNumbers (numbers) {
   }
   return status;
 }
-function checkRepeatNumbers (numbers) {
+function checkRepeatNumbers(numbers) {
   let status = true;
   let aux = [...numbers].sort();
-  for (let index = 0; index < 11; index +=1) {
-    if (aux[index] === aux[index +1] && (aux[index] === aux[index + 2])){
+  for (let index = 0; index < 11; index += 1) {
+    if (aux[index] === aux[index + 1] && (aux[index] === aux[index + 2])) {
       status = false;
     }
   }
@@ -64,7 +63,6 @@ function generatePhoneNumber(numbers) {
   }
   return lastStep(numbers);
 }
-console.log(generatePhoneNumber(numbers));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA <= 0 || lineB <= 0 || lineC <= 0) {
