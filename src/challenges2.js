@@ -6,9 +6,22 @@ function techList(arrTech, lame) {
   return arr2;
 }
 
+// Função aux Desafio 11
+function auxiliar(y) {
+  let counts = {};
+  y.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
+  return Math.max.apply(null, Object.values(counts));
+}
+
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(x) {
+  if (x.length !== 11) return 'Array com tamanho incorreto.';
+  for (let index = 0; index < x.length; index += 1) {
+    if (auxiliar(x) >= 3 || x[index] < 0 || x[index] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return x.join('').replace(/^(\d\d)(\d{5})(\d{4}).*/, '($1) $2-$3');
 }
 
 // Desafio 12
@@ -18,11 +31,13 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  let check = string.match(/\d+/g).length;
-  if (check === 1) {
-    return `${check} copo de água`;
+  let check = string.match(/\d+/g);
+  let count = 0;
+  check.forEach((element) => { count += Number(element); });
+  if (count === 1) {
+    return `'${count} copo de água'`;
   }
-  return `${check} copos de água`;
+  return `'${count} copos de água'`;
 }
 
 module.exports = {
