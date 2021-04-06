@@ -51,46 +51,26 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
-// Desafio 8
-function fizzValidator(value) {
-  if (value % 3 === 0 && value % 5 !== 0) {
-    return true;
-  }
-  return false;
-}
-
-function buzzValidator(value) {
-  if (value % 5 === 0 && value % 3 !== 0) {
-    return true;
-  }
-  return false;
-}
-
 function fizzBuzzValidator(value) {
-  if (value % 3 === 0 && value % 5 === 0) {
-    return true;
+  let encodedString = '';
+  if (value % 15 === 0) {
+    encodedString += 'fizBuzz';
+  } else if (value % 5 === 0) {
+    encodedString += 'buzz';
+  } else if (value % 3 === 0) {
+    encodedString += 'fizz';
+  } else {
+    encodedString += 'bug!';
   }
-  return false;
+  return encodedString;
 }
 
-function fizzBuzzInvalidator(value) {
-  if (value % 5 !== 0 && value % 3 !== 0) {
-    return true;
-  }
-}
-
+// Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
   for (let index = 0; index < array.length; index += 1) {
-    if (fizzValidator(array[index]) === true) {
-      newArray.push('fizz');
-    } if (buzzValidator(array[index]) === true) {
-      newArray.push('buzz');
-    } if (fizzBuzzValidator(array[index]) === true) {
-      newArray.push('fizzBuzz');
-    } if (fizzBuzzInvalidator(array[index]) === true) {
-      newArray.push('bug!');
-    }
+    let fizzBuzzReturn = fizzBuzzValidator(array[index]);
+    newArray.push(fizzBuzzReturn);
   }
   return newArray;
 }

@@ -8,7 +8,7 @@ function techList(techArray, name) {
   for (let index = 0; index < sortedArray.length; index += 1) {
     let object = {
       tech: techArray[index],
-      name: name,
+      name,
     };
     arrayOfObjects.push(object);
   }
@@ -16,14 +16,14 @@ function techList(techArray, name) {
 }
 
 // Desafio 11
-let arrayTest = [1, 3, 3, 4, 3, 6, 7, 4, 4, 0];
+let arrayTest = [1, 3, 3, 3, 3, 3, 3, 4, 4, 0];
 
-function NumberRepeats(numbersArray) {
+function numberRepeats(array) {
   let freq = 0;
   let max = 0;
-  numbersArray = numbersArray.sort();
-  for (let index = 0; index < numbersArray.length; index += 1) {
-    if (numbersArray[index] === numbersArray[index + 1]) {
+  array = array.sort();
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === array[index + 1]) {
       freq += 1;
     } else {
       freq = 0;
@@ -33,6 +33,15 @@ function NumberRepeats(numbersArray) {
   }
   return max;
 }
+
+function rangeNumbersValidator(numbersArray) {
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] < 0 || numbersArray[index] > 9) {
+      return true;
+    }
+  }
+}
+
 function generatePhoneNumber(numbersArray) {
   let dddNumber = numbersArray.slice(0, 2).map(String).join('');
   let firsPartNumber = numbersArray.slice(2, 7).map(String).join('');
@@ -41,14 +50,14 @@ function generatePhoneNumber(numbersArray) {
     return 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < numbersArray.length; index += 1) {
-    if (numbersArray[index] < 0 || numbersArray[index] > 9 || NumberRepeats(numbersArray) >= 3) {
+    if (rangeNumbersValidator(numbersArray) || numberRepeats(numbersArray) >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   return `(${dddNumber}) ${firsPartNumber}-${secondPartNumber}`;
 }
 
-console.log(NumberRepeats(arrayTest));
+console.log(numberRepeats(arrayTest));
 
 // Desafio 12
 function linesSum(lineA, lineB, lineC) {
