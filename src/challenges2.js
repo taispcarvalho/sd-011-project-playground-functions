@@ -170,7 +170,7 @@ function diferenceBetweenCheck(lineA, lineB, lineC) {
 }
 
 function triangleCheck(lineA, lineB, lineC) {
-  return sideCheck(lineA, lineB, lineC) && diferenceBetweenCheck(lineA, lineB, lineC);  
+  return sideCheck(lineA, lineB, lineC) && diferenceBetweenCheck(lineA, lineB, lineC);
 }
 /* console.log(triangleCheck(10,14,8));
 console.log(triangleCheck(100,14,8));
