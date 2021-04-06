@@ -105,31 +105,27 @@ function catAndMouse(mouse, cat1, cat2) {
   Retorne as strings ['bug!', 'fizz'] quando é passado os parâmetros [7, 9] para função fizzBuzz
   Retorne as strings ['fizz', 'buzz'] quando é passado os parâmetros [9, 25] para função fizzBuzz
 */
-
-function validation(array) {
-
+function validationfizzBuzz(number) {
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  if (number % 5 === 0) {
+    return'buzz';
+  }
+  if (number% 15 === 0) {
+    return 'fizzBuzz';
+  }
+  return 'bug!';
 }
-
-function buzz() {
-
-}
-
 function fizzBuzz(array) {
   let game = [];
-  for (let index = 0; index < array.length; index += 1) {
-    game[index] = 'bug!';
-    if (array[index] % 3 === 0) {
-      game[index] = 'fizz';
-    } else if (array[index] % 5 === 0) {
-      game[index] = 'buzz';
-    }
-    if (array[index] % 15 === 0) {
-      game[index] = 'fizzBuzz';
-    }
+  for (let number of array) {
+    game.push(validationfizzBuzz(number));
   }
   return game;
 }
-/* console.log(fizzBuzz([2, 15, 7, 9, 45])); */
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 /* Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
