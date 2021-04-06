@@ -10,8 +10,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(' ');
-  
+  return string.split(' ');  
 }
 
 // Desafio 4
@@ -64,13 +63,47 @@ function fizzBuzz(numbers) {
   }
   return strings
 }
-console.log(fizzBuzz([3, 3, 6, 5, 15, 7]))
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let encodedPhrase = ''
+  for (let letter of phrase) {
+    if (letter === 'a') {
+      encodedPhrase += '1'
+    } else if (letter === 'e') {
+      encodedPhrase += '2'
+    } else if (letter === 'i') {
+      encodedPhrase += '3'
+    } else if (letter === 'o') {
+      encodedPhrase += '4'
+    } else if (letter === 'u') {
+      encodedPhrase += '5'
+    } else {
+      encodedPhrase += letter
+    }
+  }
+  return encodedPhrase
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase) {
+  let decodedPhrase = ''
+  for (let letter of phrase) {
+    
+    if (letter === '1') {
+      decodedPhrase += 'a'
+    } else if (letter === '2') {
+      decodedPhrase += 'e'
+    } else if (letter === '3') {
+      decodedPhrase += 'i'
+    } else if (letter === '4') {
+      decodedPhrase += 'o'
+    } else if (letter === '5') {
+      decodedPhrase += 'u'
+    } else {
+      decodedPhrase += letter
+    }
+  }
+  return encodedPhrase
 }
 
 module.exports = {
