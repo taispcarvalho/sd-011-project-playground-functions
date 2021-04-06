@@ -10,13 +10,13 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(' '); 
+  return string.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
   let space = '';
-  return space.concat(array[array.length-1], ', ', array[0]);
+  return space.concat(array[array.length - 1], ', ', array[0]);
 }
 
 // Desafio 5
@@ -54,12 +54,13 @@ function fizzBuzz(numbers) {
   let strings = [];
   for (let num of numbers) {
     if (num % 3 === 0 && num % 5 === 0) {
-      strings.push("fizzBuzz");
+      strings.push('fizzBuzz');
     } else if (num % 5 === 0) {
-      strings.push("buzz");
+      strings.push('buzz');
     } else if (num % 3 === 0) {
-      strings.push("fizz");
-    } else { strings.push("bug!")}
+      strings.push('fizz');
+    } else { strings.push('bug!');
+   }
   }
   return strings;
 }
