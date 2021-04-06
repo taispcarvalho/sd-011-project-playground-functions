@@ -81,8 +81,7 @@ function fizzBuzz(arrayNumber) {
     }
     number.push(string);
   }
-  let absolute = number;
-  return absolute;
+  return number;
 }
 let arrayNumber = [2, 15, 7, 9, 45];
 fizzBuzz(arrayNumber);
