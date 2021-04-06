@@ -48,27 +48,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  
-  function checkDivisions(value) {
-    if(value % 15 === 0){
-       return 'fizzBuzz';
-     }
-    if(value % 3 === 0){
-       return 'fizz';
-    }
-    if( value % 5 === 0 ){
-      return 'buzz';
-    }
-    return 'bug!';
+function checkDivisions(value) {
+  if (value % 15 === 0) {
+    return 'fizzBuzz';
   }
-  function fizzBuzz(numbers) {
-    let results = [];
-    for (let index = 0; index < numbers.length; index += 1){
-      results.push(checkDivisions(numbers[index]));
-    }
-    return results;
+  if (value % 3 === 0) {
+    return 'fizz';
   }
+  if (value % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+function fizzBuzz(numbers) {
+  let results = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    results.push(checkDivisions(numbers[index]));
+  }
+  return results;
 }
 
 // Desafio 9
