@@ -56,16 +56,15 @@ highestNumber([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let juiz = 'zero';
-  if (cat1 < cat2) {
-    juiz = 'cat1'
-  } else if (cat1 > cat2) {
-    juiz = 'cat2'
+  let distan1 = Math.abs(cat1 - mouse);
+  let distan2 = Math.abs(cat2 - mouse);
+  if (distan1 === distan2) {
+    return 'os gatos trombam e o rato foge'
+  } else if (distan1 > distan2) {
+    return 'cat1'
   } else {
-    juiz = 'os gatos trombam e o rato foge'
+    return 'cat2'
   }
-  console.log(juiz);
-  return juiz;
 }
 catAndMouse(10, 13, 12);
 
