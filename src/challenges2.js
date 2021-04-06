@@ -83,9 +83,9 @@ function hydrate(waterString) {
     sum += integer
   }
   if (sum > 1){
-    return console.log(sum + " copos de água")
+    return sum + " copos de água"
   } else {
-    return console.log(sum + " copo de água")
+    return sum + " copo de água"
   }
 }
 
