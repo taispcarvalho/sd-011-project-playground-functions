@@ -87,9 +87,29 @@ return "[" + resultado + "]";
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let letras = "hi there";
+function encode(letras) {
+  for (let index = 0; index < letras.length; index += 1){
+    if (letras[index] === 'a'){
+      letras[index] = 1;
+    }
+    else if (letras[index] === 'e'){
+      letras[index] = 2;
+    }
+    else if (letras[index] === 'i'){
+      letras[index] = 3;
+    }
+    else if (letras[index] === 'o'){
+      letras[index] = 4;
+    }
+    else if (letras[index] === 'u'){
+      letras[index] = 5;
+    }
+  }
 }
+
+console.log(encode(letras));
+
 function decode() {
   // seu código aqui
 }
