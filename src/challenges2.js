@@ -14,54 +14,50 @@ function techList(techNames, name) {
   return arrayAux;
 }
 // Desafio 11
-function checkArray(numbers) {
-  if (numbers.lenght === 11) {
-    return false;
-  }
+function checkLength(numbers) {
+  return (numbers.length === 11);
 }
 function checkNumbers(numbers) {
-  let status = true;
   for (let index = 0; index < 11; index += 1) {
     if (numbers[index] < 0 || numbers[index] > 9) {
-      status = false;
+      return false;
     }
   }
-  return status;
+  return true;
 }
 function checkRepeatNumbers(numbers) {
-  let status = true;
   let aux = [...numbers].sort();
   for (let index = 0; index < 11; index += 1) {
     if (aux[index] === aux[index + 1] && (aux[index] === aux[index + 2])) {
-      status = false;
+      return false;
     }
   }
-  return status;
+  return true;
 }
-function lastStep(numbers) {
-  if (checkArray(numbers) === false) {
-    return 'Array com tamanho incorreto';
-  } else if (checkNumbers(numbers) === false || checkRepeatNumbers(numbers) === false) {
+function finalStep(numbers) {
+  if (checkLength(numbers) === false) {
+    return 'Array com tamanho incorreto.';
+  } if (checkNumbers(numbers) === false || checkRepeatNumbers(numbers) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   return true;
 }
-function phone(numbers) {
-  let phoneNumber = `(${numbers[0]}${numbers[1]}) `;
+function phoneNumberGenerator(numbers) {
+  let phone = `(${numbers[0]}${numbers[1]}) `;
   for (let index = 2; index < 7; index += 1) {
-    phoneNumber += numbers[index];
+    phone += numbers[index];
   }
-  phoneNumber += '-';
+  phone += '-';
   for (let index = 7; index < 11; index += 1) {
-    phoneNumber += numbers[index];
+    phone += numbers[index];
   }
-  return phoneNumber;
+  return phone;
 }
 function generatePhoneNumber(numbers) {
-  if (lastStep(numbers) === true) {
-    return phone(numbers);
+  if (finalStep(numbers) === true) {
+    return phoneNumberGenerator(numbers);
   }
-  return lastStep(numbers);
+  return finalStep(numbers);
 }
 // Desafio 12
 function linesVerify(lineA, lineB, lineC) {
