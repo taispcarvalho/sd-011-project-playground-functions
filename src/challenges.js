@@ -66,8 +66,24 @@ else {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+//array = [3, 5, 15, 7];
+function fizzBuzz(array) {
+  let resultado;
+for (let index = 0; index < array.length; index += 1){
+  if (array[index] % 3 === 0 && array[index] % 5 === 0){
+    resultado += "fizzBuzz,";
+  }
+  else if (array[index] % 3 === 0){
+    resultado += "fizz,";
+  }
+  else if (array[index] % 5 === 0){
+    resultado += "buzz,";
+  }
+  else {
+    resultado += "bug!";
+  }
+}
+return resultado;
 }
 
 // Desafio 9
