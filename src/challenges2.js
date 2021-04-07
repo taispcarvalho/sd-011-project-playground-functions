@@ -41,7 +41,7 @@ function checkRepeatNumbers(numbers) {
 function lastStep(numbers) {
   if (checkArray(numbers) === false) {
     return 'Array com tamanho incorreto';
-  } if (checkNumbers(numbers) === false || checkRepeatNumbers(numbers) === false) {
+  } else if (checkNumbers(numbers) === false || checkRepeatNumbers(numbers) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   return true;
@@ -71,7 +71,7 @@ function linesVerify(lineA, lineB, lineC) {
   return false;
 }
 function absoluteValue(lineA, lineB, lineC) {
-  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) 
+  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC)
 && lineC > Math.abs(lineA - lineB)) {
     return true;
   }
