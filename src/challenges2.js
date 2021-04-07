@@ -1,13 +1,16 @@
 // Desafio 10
 function techList(array, name) {
   let newArray = [];
-  array = array.sort();
-  for (let index = 0; index < array.length; index += 1) {
+  for (let index of array) {
     newArray.push({
-      tech: array[tech],
+      tech: index,
       name: name,
-    });
+    })
   }
+  newArray.sort(function(a, b) {
+    return a.tech < b.tech ? -1 : a.tech > b.tech ? 1 : 0;
+  });
+  console.log(newArray);
   return newArray;
 }
 techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Felipe');
