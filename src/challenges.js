@@ -67,23 +67,25 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 //array = [3, 5, 15, 7];
 function fizzBuzz(array) {
-  let resultado;
+  let resultado = [];
 for (let index = 0; index < array.length; index += 1){
   if (array[index] % 3 === 0 && array[index] % 5 === 0){
-    resultado += " fizzBuzz";
+    resultado.push("fizzBuzz");
   }
   else if (array[index] % 3 === 0){
-    resultado += "fizz, ";
+    resultado.push("fizz");
   }
   else if (array[index] % 5 === 0){
-    resultado += "buzz, ";
+    resultado.push("buzz");
   }
   else {
-    resultado += "bug! ";
+    resultado.push("bug!");
   }
 }
-return "[" + resultado + "]";
+return resultado;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 let letras = "hi there";
