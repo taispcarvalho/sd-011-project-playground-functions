@@ -64,14 +64,15 @@ function generatePhoneNumber(numbers) {
   return lastStep(numbers);
 }
 // Desafio 12
-function linesVerify (lineA, lineB, lineC) {
+function linesVerify(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineB < lineC + lineA && lineC < lineB + lineA) {
     return true;
   }
   return false;
 }
-function absoluteValue (lineA, lineB, lineC) {
-  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+function absoluteValue(lineA, lineB, lineC) {
+  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) 
+&& lineC > Math.abs(lineA - lineB)) {
     return true;
   }
   return false;
