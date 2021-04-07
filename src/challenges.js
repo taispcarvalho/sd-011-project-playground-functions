@@ -48,7 +48,7 @@ console.log(footballPoints(0, 0));
 // Desafio 6
 function highestCount(numbers) { 
   let countHighestNumberAppears = 0;
-  numbers.sort(function (a,b) {return b - a});
+  numbers.sort(function (a, b) { return b - a });
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[0] === numbers[index]){
       countHighestNumberAppears += 1;
