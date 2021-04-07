@@ -71,19 +71,19 @@ function fizzBuzz(array) {
   let resultado;
 for (let index = 0; index < array.length; index += 1){
   if (array[index] % 3 === 0 && array[index] % 5 === 0){
-    resultado += "fizzBuzz,";
+    resultado += " fizzBuzz";
   }
   else if (array[index] % 3 === 0){
-    resultado += "fizz,";
+    resultado += "fizz, ";
   }
   else if (array[index] % 5 === 0){
-    resultado += "buzz,";
+    resultado += "buzz, ";
   }
   else {
-    resultado += "bug!";
+    resultado += "bug! ";
   }
 }
-return resultado;
+return "[" + resultado + "]";
 }
 
 // Desafio 9
