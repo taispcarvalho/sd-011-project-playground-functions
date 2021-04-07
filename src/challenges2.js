@@ -40,8 +40,8 @@ function checkRepeatNumbers(numbers) {
 }
 function lastStep(numbers) {
   if (checkArray(numbers) === false) {
-    return 'Array com tamanho incorreto.';
-  } if (checkNumbers(numbers) === false && checkRepeatNumbers(numbers) === false) {
+    return 'Array com tamanho incorreto';
+  } if (checkNumbers(numbers) === false || checkRepeatNumbers(numbers) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   return true;
@@ -64,16 +64,23 @@ function generatePhoneNumber(numbers) {
   return lastStep(numbers);
 }
 // Desafio 12
+function linesVerify (lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineB < lineC + lineA && lineC < lineB + lineA) {
+    return true;
+  }
+  return false;
+}
+function absoluteValue (lineA, lineB, lineC) {
+  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+    return true;
+  }
+  return false;
+}
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA <= 0 || lineB <= 0 || lineC <= 0) {
-    return false;
+  if (linesVerify(lineA, lineB, lineC) === true && absoluteValue(lineA, lineB, lineC) === true) {
+    return true;
   }
-  let linesTriangle = [lineA, lineB, lineC];
-  linesTriangle.sort((a, b) => b - a);
-  if (linesTriangle[0] + linesTriangle[1] < linesTriangle[2]) {
-    return false;
-  }
-  return true;
+  return false;
 }
 // Desafio 13
 function hydrate(string) {
