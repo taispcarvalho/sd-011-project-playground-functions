@@ -85,35 +85,31 @@ for (let index = 0; index < array.length; index += 1){
 return resultado;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 
 // Desafio 9
-let letras = "hi there";
+
 function encode(letras) {
-  for (let index = 0; index < letras.length; index += 1){
-    if (letras[index] === 'a'){
-      letras[index] = 1;
-    }
-    else if (letras[index] === 'e'){
-      letras[index] = 2;
-    }
-    else if (letras[index] === 'i'){
-      letras[index] = 3;
-    }
-    else if (letras[index] === 'o'){
-      letras[index] = 4;
-    }
-    else if (letras[index] === 'u'){
-      letras[index] = 5;
-    }
-  }
+  letras = letras.replace(/a/g, '1');
+  letras = letras.replace(/e/g, '2');
+  letras = letras.replace(/i/g, '3');
+  letras = letras.replace(/o/g, '4');
+  letras = letras.replace(/u/g, '5');
+  return letras;
+
+}
+
+function decode(frases) {
+  frases = frases.replace(/1/g, 'a');
+  frases = frases.replace(/2/g, 'e');
+  frases = frases.replace(/3/g, 'i');
+  frases = frases.replace(/4/g, 'o');
+  frases = frases.replace(/5/g, 'u');
+  return frases;
 }
 
 console.log(encode(letras));
-
-function decode() {
-  // seu código aqui
-}
+console.log(decode(frases));
 
 module.exports = {
   calcArea,
