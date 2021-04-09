@@ -85,10 +85,7 @@ for (let index = 0; index < array.length; index += 1){
 return resultado;
 }
 
-
-
 // Desafio 9
-
 function encode(letras) {
   letras = letras.replace(/a/g, '1');
   letras = letras.replace(/e/g, '2');
@@ -107,9 +104,6 @@ function decode(frases) {
   frases = frases.replace(/5/g, 'u');
   return frases;
 }
-
-console.log(encode(letras));
-console.log(decode(frases));
 
 module.exports = {
   calcArea,
